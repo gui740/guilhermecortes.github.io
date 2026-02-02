@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Cortes | Videomaker & Social Media</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #1c1c1c, #000 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* ELEMENTOS DECORATIVOS (VIDEO / PUBLICIDADE) */
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ff0057;
+            filter: blur(120px);
+            opacity: 0.3;
+            top: -50px;
+            left: -50px;
+        }
+
+        .glow.blue {
+            background: #00e0ff;
+            top: auto;
+            bottom: -80px;
+            left: auto;
+            right: -80px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 520px;
+            width: 100%;
+        }
+
+        /* FOTO */
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            background: linear-gradient(135deg, #ff0057, #00e0ff);
+            padding: 3px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #000;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.8;
+            margin: 10px 0 30px;
+        }
+
+        /* TAGS (PUBLICIDADE / VIDEO) */
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #ffffff30;
+            backdrop-filter: blur(10px);
+            opacity: 0.9;
+        }
+
+        /* BOTÕES */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-cv {
+            background: linear-gradient(135deg, #ff0057, #ff7a00);
+            color: #000;
+        }
+
+        .btn-portfolio {
+            background: linear-gradient(135deg, #00e0ff, #6a00ff);
+            color: #000;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        footer {
+            margin-top: 45px;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ELEMENTOS DE FUNDO -->
+    <div class="glow"></div>
+    <div class="glow blue"></div>
+
+    <div class="container">
+
+        <!-- FOTO -->
+        <div class="profile-pic">
+            <!-- Substitua pela sua foto -->
+            <img src="sua-foto.jpg" alt="Guilherme Cortes">
+        </div>
+
+        <h1>Guilherme Cortes</h1>
+        <h2>Videomaker • Social Media • Publicitário</h2>
+
+        <!-- TAGS DE IDENTIDADE -->
+        <div class="tags">
+            <div class="tag">🎬 Storytelling Visual</div>
+            <div class="tag">📱 Conteúdo para Redes</div>
+            <div class="tag">🎯 Branding & Publicidade</div>
+            <div class="tag">📸 Produção Audiovisual</div>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="buttons">
+            <a href="https://link-do-seu-curriculo.com" target="_blank" class="btn btn-cv">
+                ▶ Currículo Profissional
+            </a>
+
+            <a href="https://link-do-seu-portfolio.com" target="_blank" class="btn btn-portfolio">
+                🎬 Portfólio Criativo
+            </a>
+        </div>
+
+        <footer>
+            Criatividade • Estratégia • Impacto Visual
+        </footer>
+    </div>
+
+</body>
+</html>
