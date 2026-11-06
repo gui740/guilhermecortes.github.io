@@ -38,7 +38,8 @@ VELOCIDADE_TERROR = 1.0
 TOM_ZE = 1.3              # +4,5 semitons (Piper)
 
 # Gemini TTS
-GEMINI_MODELO = "gemini-2.5-flash-preview-tts"
+# a cota gratuita é de ~10 falas/dia POR MODELO: quando uma acaba, passa para a próxima
+GEMINI_MODELOS = ["gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts"]
 GEMINI_VOZ_ZE = "Puck"
 GEMINI_VOZ_TERROR = "Algenib"
 GEMINI_ESTILO_ZE = "Say fast and excitedly, like a hyperactive cartoon mascot on a kids TV show: "
@@ -123,60 +124,91 @@ def _chave_gemini():
     return k
 
 
-def _cache_path(texto, tipo):
+def _cache_path(texto, tipo, modelo):
     voz = GEMINI_VOZ_ZE if tipo == "ze" else GEMINI_VOZ_TERROR
     estilo = GEMINI_ESTILO_ZE if tipo == "ze" else GEMINI_ESTILO_TERROR
-    h = hashlib.sha1(("%s|%s|%s%s" % (GEMINI_MODELO, voz, estilo, texto)).encode()).hexdigest()[:16]
+    h = hashlib.sha1(("%s|%s|%s%s" % (modelo, voz, estilo, texto)).encode()).hexdigest()[:16]
     return os.path.join(CACHE_GEMINI, "%s_%s.wav" % (tipo, h)), voz, estilo + texto
 
 
+def _em_cache(texto, tipo):
+    for m in GEMINI_MODELOS:
+        c = _cache_path(texto, tipo, m)[0]
+        if os.path.exists(c):
+            return c
+    return None
+
+
 _ultima_chamada = [0.0]
+_sem_cota = set()   # modelos cuja cota diária acabou nesta execução
+
+
+def _baixar(texto, tipo, modelo, chave):
+    """Gera a fala com um modelo. Retorna o caminho do cache, "COTA" ou None."""
+    caminho, voz, prompt = _cache_path(texto, tipo, modelo)
+    os.makedirs(CACHE_GEMINI, exist_ok=True)
+    body = {"contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {"responseModalities": ["AUDIO"],
+                                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voz}}}}}
+    url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % modelo
+    for tentativa in range(6):
+        espera = 21.0 - (time.time() - _ultima_chamada[0])   # cota gratuita: poucas req/min
+        if espera > 0:
+            time.sleep(espera)
+        _ultima_chamada[0] = time.time()
+        req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                     headers={"Content-Type": "application/json", "x-goog-api-key": chave})
+        try:
+            d = json.load(urllib.request.urlopen(req, timeout=180))
+            b = base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+            break
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode("utf-8", "replace")
+            if e.code == 429 and "PerDay" in msg:
+                print("  cota diária do %s acabou." % modelo)
+                return "COTA"
+            if e.code in (429, 500, 503) and tentativa < 5:
+                print("  gemini %d, tentando de novo em 30s..." % e.code)
+                time.sleep(30)
+                continue
+            print("  gemini falhou: %d %s" % (e.code, msg[:200]))
+            return None
+        except Exception as e:
+            print("  gemini falhou:", e)
+            return None
+    else:
+        return None
+    if b[:4] == b"RIFF":
+        with wave.open(io.BytesIO(b)) as w:
+            sr, b = w.getframerate(), w.readframes(w.getnframes())
+    else:
+        sr = 24000
+    with wave.open(caminho, "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes(b)
+    print("  voz gerada (%s): %s" % (modelo, texto[:50]))
+    return caminho
 
 
 def _gemini(texto, tipo, chave):
     """Fala do Gemini TTS a 48 kHz (com cache em disco). Retorna None se falhar."""
-    caminho, voz, prompt = _cache_path(texto, tipo)
-    if not os.path.exists(caminho):
+    caminho = _em_cache(texto, tipo)
+    if caminho is None:
         if not chave:
             return None
-        os.makedirs(CACHE_GEMINI, exist_ok=True)
-        body = {"contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"responseModalities": ["AUDIO"],
-                                     "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voz}}}}}
-        url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % GEMINI_MODELO
-        for tentativa in range(8):
-            espera = 21.0 - (time.time() - _ultima_chamada[0])   # cota gratuita: poucas req/min
-            if espera > 0:
-                time.sleep(espera)
-            _ultima_chamada[0] = time.time()
-            req = urllib.request.Request(url, data=json.dumps(body).encode(),
-                                         headers={"Content-Type": "application/json", "x-goog-api-key": chave})
-            try:
-                d = json.load(urllib.request.urlopen(req, timeout=180))
-                b = base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
-                break
-            except urllib.error.HTTPError as e:
-                msg = e.read()[:200]
-                if e.code in (429, 500, 503) and tentativa < 7:
-                    print("  gemini %d, tentando de novo em 30s..." % e.code)
-                    time.sleep(30)
-                    continue
-                print("  gemini falhou: %d %s" % (e.code, msg))
-                return None
-            except Exception as e:
-                print("  gemini falhou:", e)
-                return None
-        if b[:4] == b"RIFF":
-            with wave.open(io.BytesIO(b)) as w:
-                sr, b = w.getframerate(), w.readframes(w.getnframes())
-        else:
-            sr = 24000
-        with wave.open(caminho, "wb") as w:
-            w.setnchannels(1)
-            w.setsampwidth(2)
-            w.setframerate(sr)
-            w.writeframes(b)
-        print("  voz gerada:", texto[:50])
+        for m in GEMINI_MODELOS:
+            if m in _sem_cota:
+                continue
+            r = _baixar(texto, tipo, m, chave)
+            if r == "COTA":
+                _sem_cota.add(m)
+                continue
+            caminho = r
+            break
+        if caminho is None:
+            return None
     with wave.open(caminho) as w:
         sr = w.getframerate()
         x = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float64) / 32768
@@ -192,7 +224,7 @@ def _usa_gemini():
     if _chave_gemini():
         return True
     # sem chave: usa o cache se TODAS as falas já estiverem lá
-    return all(os.path.exists(_cache_path(t, tipo)[0]) for t, _, _, tipo, _, _ in roteiro())
+    return all(_em_cache(t, tipo) for t, _, _, tipo, _, _ in roteiro())
 
 
 # ------------------------------------------------------------------ DSP
@@ -276,7 +308,7 @@ def gerar():
     gem = _usa_gemini()
     voz = None
     if gem:
-        print("  narração: Gemini TTS (%s / %s, %s)" % (GEMINI_VOZ_ZE, GEMINI_VOZ_TERROR, GEMINI_MODELO))
+        print("  narração: Gemini TTS (%s / %s)" % (GEMINI_VOZ_ZE, GEMINI_VOZ_TERROR))
     else:
         try:
             from piper import PiperVoice
