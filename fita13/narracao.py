@@ -39,7 +39,9 @@ TOM_ZE = 1.3              # +4,5 semitons (Piper)
 
 # Gemini TTS
 # a cota gratuita é de ~10 falas/dia POR MODELO: quando uma acaba, passa para a próxima
-GEMINI_MODELOS = ["gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts"]
+# (os modelos 3.x leem a direção de estilo em voz alta, então recebem só o texto)
+GEMINI_MODELOS = ["gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts",
+                  "gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts"]
 GEMINI_VOZ_ZE = "Puck"
 GEMINI_VOZ_TERROR = "Algenib"
 GEMINI_ESTILO_ZE = "Say fast and excitedly, like a hyperactive cartoon mascot on a kids TV show: "
@@ -68,7 +70,7 @@ def roteiro():
     r.append(("Vamos visitar? O Arsenal está sempre de portas abertas!",
               C.FALA_FINAL_INICIO + 0.1, C.T_CORR - C.FALA_FINAL_INICIO - 0.15, "ze", 0, "fita"))
     # a transformação: a voz do Zé vira a voz de terror
-    r.append(("O Arsenal... nunca parou... de trabalhar.", C.T_CORR + 0.4, 2.6, "terror", 0.0, "fita"))
+    r.append(("O Arsenal... nunca parou... de trabalhar.", C.T_CORR + 0.4, 4.5, "terror", 0.0, "fita"))
     r.append(("Arsenal de Guerra. Aviso aos visitantes. Leia até o fim.",
               C.T_REGRAS + 0.15, C.REGRAS_INTRO_DUR - 0.25, "terror", 0.0, "livre"))
     falas_regras = [
@@ -127,6 +129,8 @@ def _chave_gemini():
 def _cache_path(texto, tipo, modelo):
     voz = GEMINI_VOZ_ZE if tipo == "ze" else GEMINI_VOZ_TERROR
     estilo = GEMINI_ESTILO_ZE if tipo == "ze" else GEMINI_ESTILO_TERROR
+    if not modelo.startswith("gemini-2.5"):
+        estilo = ""
     h = hashlib.sha1(("%s|%s|%s%s" % (modelo, voz, estilo, texto)).encode()).hexdigest()[:16]
     return os.path.join(CACHE_GEMINI, "%s_%s.wav" % (tipo, h)), voz, estilo + texto
 

@@ -1,6 +1,6 @@
 # FITA 13: O ARSENAL
 
-Vídeo analog horror vertical (1080x1920, 30 fps, ~98 s): imagem, ícones, efeitos VHS e áudio gerados por código, com narração do Zé Canhãozinho e fotos reais do Arsenal (licenças livres).
+Vídeo analog horror vertical (1080x1920, 30 fps, ~112 s): imagem, ícones, efeitos VHS e áudio gerados por código, com narração do Zé Canhãozinho e fotos reais do Arsenal (licenças livres).
 
 ```
 python render.py --preview   # 1 PNG por cena em saida/preview/
