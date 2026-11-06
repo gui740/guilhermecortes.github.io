@@ -38,14 +38,15 @@ random.seed(SEED)
 # ------------------------------------------------------------------ linha do tempo
 # Tudo é relativo: cada bloco começa onde o anterior termina. As durações dos
 # cartões e das regras foram escolhidas para caber a narração do Zé Canhãozinho.
-T_PATRIMONIO = 5.0
-OLA_T = 5.5
-CARTOES_INICIO = 8.0
-CARTOES_DUR = [4.7, 4.6, 4.9, 7.2, 4.8]
+T_PATRIMONIO = 4.0
+OLA_T = 4.4
+CARTOES_INICIO = 6.6
+CARTOES_DUR = [4.6, 3.4, 4.6]
 CARTOES_T = [round(CARTOES_INICIO + sum(CARTOES_DUR[:i]), 3) for i in range(len(CARTOES_DUR))]
 FALA_FINAL_INICIO = round(CARTOES_T[-1] + CARTOES_DUR[-1], 3)
 T_CORR = round(FALA_FINAL_INICIO + 4.3, 3)  # a fita começa a estragar
-T_REGRAS = T_CORR + 6.0
+DUR_CORR = 5.0
+T_REGRAS = T_CORR + DUR_CORR
 REGRAS_INTRO_DUR = 5.1
 REGRAS_INICIO = round(T_REGRAS + REGRAS_INTRO_DUR, 3)
 REGRAS_DUR = [5.3, 5.8, 5.7, 6.4, 6.6, 2.6, 2.8]
@@ -89,11 +90,11 @@ def rampa(t, a, b):
 # ------------------------------------------------------------------ abertura
 AZUL_VCR = (16, 36, 196)
 ABERTURA_AZUL_FIM = 1.0
-ETIQUETA_T = 3.0                       # flash de 2 frames
+ETIQUETA_T = 2.5                       # flash de 2 frames
 ETIQUETA_TXT = ["ARSENAL —", "NÃO GRAVAR", "POR CIMA"]
 CANAL_TXT = "CANAL 13 — PORTO — CUIABÁ MT"
 EMISSAO_TXT = "EMISSÃO EXPERIMENTAL"
-TOM_TESTE = (ABERTURA_AZUL_FIM, 4.9)   # 1 kHz nas barras
+TOM_TESTE = (ABERTURA_AZUL_FIM, T_PATRIMONIO - 0.1)   # 1 kHz nas barras
 
 
 def timestamp(t):
@@ -106,18 +107,16 @@ def timestamp(t):
 TITULO = ["CONHEÇA SEU", "PATRIMÔNIO"]
 CARTOES = [
     ("pergaminho", "1818: DOM JOÃO VI ORDENA O REAL TREM DE GUERRA"),
-    ("coluna", "ESTILO NEOCLÁSSICO • MUROS ALTOS • VARANDA EM VOLTA DO PÁTIO"),
-    ("canhao", "GUERRA DO PARAGUAI: AQUI CONSERTAVAM ARMAS DOS DOIS LADOS"),
     ("martelo", "1842–1899: MENINOS APRENDIZES TRABALHAVAM NAS FORJAS"),
     ("chave", "1984: TOMBADO. HOJE O PRÉDIO DESCANSA."),
 ]
 FALA_OLA = "OLÁ! EU SOU O ZÉ CANHÃOZINHO!"
-FALA_OLA_T = (OLA_T, 7.8)
+FALA_OLA_T = (OLA_T, CARTOES_INICIO - 0.1)
 FALA_FINAL = "VAMOS VISITAR? O ARSENAL ESTÁ SEMPRE DE PORTAS ABERTAS!"
 FALA_FINAL_T = (FALA_FINAL_INICIO, T_CORR + 1.6)   # continua (glitchando) na corrupção
 CARTAO_CORROMPIDO = "O ARSENAL NUNCA PAROU DE TRABALHAR."
-MORPH_T = (T_CORR + 0.8, T_CORR + 4.2)
-SUBLIMINAR_T = T_CORR + 4.0            # 2 frames
+MORPH_T = (T_CORR + 0.6, T_CORR + 3.4)
+SUBLIMINAR_T = T_CORR + 3.4            # 2 frames
 SUBLIMINAR_TXT = "QUANTOS CANHÕES TEM NO PÁTIO?"
 
 # Intervalos em que o mascote "fala" (boca + blips de voz)
@@ -176,7 +175,7 @@ BPM = 120.0
 
 def taxa_fita(t):
     t = np.asarray(t, dtype=np.float64)
-    p = np.clip((t - T_CORR) / 6.0, 0.0, 1.0)
+    p = np.clip((t - T_CORR) / DUR_CORR, 0.0, 1.0)
     base = 1.0 - 0.62 * p ** 1.4
     wow = (0.004 + 0.07 * p ** 1.2) * np.sin(2 * np.pi * 0.55 * t)
     flutter = (0.002 + 0.02 * p) * np.sin(2 * np.pi * 6.3 * t + 1.3)
@@ -308,7 +307,7 @@ def intensidade(t):
     if nome == "abertura" and t < ABERTURA_AZUL_FIM:
         return 0.12
     if nome == "corrupcao":
-        k = 0.38 + 0.42 * rampa(t, T_CORR, T_CORR + 5.5)
+        k = 0.38 + 0.42 * rampa(t, T_CORR, T_CORR + DUR_CORR - 0.5)
         if SUBLIMINAR_T <= t < SUBLIMINAR_T + 2.0 / FPS:
             k = 1.0
     if nome == "patio":

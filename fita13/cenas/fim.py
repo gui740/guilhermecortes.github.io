@@ -23,7 +23,7 @@ def cena(t, fi):
             y += 60
         y += 22
         for ln in C.CREDITOS_FOTOS:
-            y = bloco_centro(d, W // 2, y, ln, 11, (170, 170, 170), maxw=330, entre=4)
+            y = bloco_centro(d, W // 2, y, ln, 13, (175, 175, 175), maxw=340, entre=4)
         return img
     rng = rng_frame(fi, 8)
     n = rng.random((H, W)).astype(np.float32) * 55 * (0.7 + 0.3 * rng.random((H, 1)))
@@ -34,7 +34,7 @@ def cena(t, fi):
     if T >= C.FIM_APRENDIZ_T:
         frase = "ATÉ AMANHÃ, APRENDIZ."
         if rng.random() < 0.3:
-            frase = "".join(ch if rng.random() > 0.2 else "█#%?"[int(rng.integers(0, 4))] for ch in frase)
+            frase = "".join(ch if rng.random() > 0.2 else "#%?@"[int(rng.integers(0, 4))] for ch in frase)
         dx = int(rng.integers(-4, 5))
         y = 318 + int(rng.integers(-1, 2))
         texto(d, (W // 2 + dx - 3, y), frase, 17, (255, 0, 0), anchor="ma")

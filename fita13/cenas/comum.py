@@ -33,10 +33,14 @@ for _p in ["/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf",
         break
 
 
+# fontes "pixel" estreitas (como a VT323) precisam de corpo maior para o mesmo tamanho visual
+ESCALA_FONTE = 1.4 if FONTE and "vt323" in os.path.basename(FONTE).lower() else 1.0
+
+
 @lru_cache(maxsize=64)
 def fonte(size):
     if FONTE:
-        return ImageFont.truetype(FONTE, size)
+        return ImageFont.truetype(FONTE, int(round(size * ESCALA_FONTE)))
     try:
         return ImageFont.load_default(size)
     except TypeError:

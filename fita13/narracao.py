@@ -38,15 +38,19 @@ VELOCIDADE_TERROR = 1.0
 TOM_ZE = 1.3              # +4,5 semitons (Piper)
 
 # Gemini TTS
-# a cota gratuita é de ~10 falas/dia POR MODELO: quando uma acaba, passa para a próxima
-# (os modelos 3.x leem a direção de estilo em voz alta, então recebem só o texto)
-GEMINI_MODELOS = ["gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts",
-                  "gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts"]
+# A cota gratuita é de ~10 falas/dia POR MODELO: quando uma acaba, passa para a próxima.
+# Os modelos 3.x leem a direção de estilo em voz alta, então recebem só o texto.
+# Todas as requisições fixam languageCode pt-BR (sem isso algumas falas saíam em espanhol).
+GEMINI_MODELOS = {
+    "ze": ["gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts", "gemini-3.1-flash-tts-preview"],
+    "terror": ["gemini-3.8-flash-lite-tts", "gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview"],
+}
+GEMINI_IDIOMA = "pt-BR"
 GEMINI_VOZ_ZE = "Puck"
 GEMINI_VOZ_TERROR = "Algenib"
 GEMINI_ESTILO_ZE = "Say fast and excitedly, like a hyperactive cartoon mascot on a kids TV show: "
 GEMINI_ESTILO_TERROR = "Say in a deep, gravelly, menacing voice, at a brisk pace without long pauses: "
-TOM_ZE_GEMINI = 1.08      # o Puck já é animado; só um toque mais agudo
+TOM_ZE_GEMINI = 1.15      # o Puck já é animado; um toque mais agudo, de mascote
 CACHE_GEMINI = os.path.join(C.BASE_DIR, "assets", "narracao_gemini")
 
 
@@ -59,10 +63,7 @@ def roteiro():
     r = [("Olá! Eu sou o Zé Canhãozinho!", C.OLA_T, 2.3, "ze", 0, "fita")]
     falas_cartoes = [
         "Mil oitocentos e dezoito: Dom João Sexto ordena o Real Trem de Guerra!",
-        "Estilo neoclássico, muros altos, e uma varanda em volta do pátio!",
-        "Na Guerra do Paraguai, aqui consertavam armas dos dois lados!",
-        "De mil oitocentos e quarenta e dois a mil oitocentos e noventa e nove, "
-        "meninos aprendizes trabalhavam nas forjas!",
+        "Aqui, meninos aprendizes trabalhavam nas forjas!",
         "Mil novecentos e oitenta e quatro: tombado. Hoje, o prédio descansa.",
     ]
     for i, txt in enumerate(falas_cartoes):
@@ -71,7 +72,7 @@ def roteiro():
               C.FALA_FINAL_INICIO + 0.1, C.T_CORR - C.FALA_FINAL_INICIO - 0.15, "ze", 0, "fita"))
     # a transformação: a voz do Zé vira a voz de terror
     r.append(("O Arsenal... nunca parou... de trabalhar.", C.T_CORR + 0.4, 4.5, "terror", 0.0, "fita"))
-    r.append(("Arsenal de Guerra. Aviso aos visitantes. Leia até o fim.",
+    r.append(("Aviso aos visitantes. Leia até o fim.",
               C.T_REGRAS + 0.15, C.REGRAS_INTRO_DUR - 0.25, "terror", 0.0, "livre"))
     falas_regras = [
         "Conte os canhões do pátio ao entrar. Conte de novo ao sair.",
@@ -131,12 +132,12 @@ def _cache_path(texto, tipo, modelo):
     estilo = GEMINI_ESTILO_ZE if tipo == "ze" else GEMINI_ESTILO_TERROR
     if not modelo.startswith("gemini-2.5"):
         estilo = ""
-    h = hashlib.sha1(("%s|%s|%s%s" % (modelo, voz, estilo, texto)).encode()).hexdigest()[:16]
+    h = hashlib.sha1(("%s|%s|%s|%s%s" % (modelo, voz, GEMINI_IDIOMA, estilo, texto)).encode()).hexdigest()[:16]
     return os.path.join(CACHE_GEMINI, "%s_%s.wav" % (tipo, h)), voz, estilo + texto
 
 
 def _em_cache(texto, tipo):
-    for m in GEMINI_MODELOS:
+    for m in GEMINI_MODELOS[tipo]:
         c = _cache_path(texto, tipo, m)[0]
         if os.path.exists(c):
             return c
@@ -153,7 +154,8 @@ def _baixar(texto, tipo, modelo, chave):
     os.makedirs(CACHE_GEMINI, exist_ok=True)
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"responseModalities": ["AUDIO"],
-                                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voz}}}}}
+                                 "speechConfig": {"languageCode": GEMINI_IDIOMA,
+                                                  "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voz}}}}}
     url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % modelo
     for tentativa in range(6):
         espera = 21.0 - (time.time() - _ultima_chamada[0])   # cota gratuita: poucas req/min
@@ -202,7 +204,7 @@ def _gemini(texto, tipo, chave):
     if caminho is None:
         if not chave:
             return None
-        for m in GEMINI_MODELOS:
+        for m in GEMINI_MODELOS[tipo]:
             if m in _sem_cota:
                 continue
             r = _baixar(texto, tipo, m, chave)

@@ -35,7 +35,7 @@ def _fundo(T, c):
     mask = Image.new("L", (W, H), 0)
     md = ImageDraw.Draw(mask)
     cx, cy = W / 2, 330
-    giro = (min(T, C.T_CORR + c * 2) - 5.0) * 0.35
+    giro = (min(T, C.T_CORR + c * 2) - C.T_PATRIMONIO) * 0.35
     n = 18
     for i in range(n):
         a0 = giro + i * 2 * math.pi / n
@@ -273,13 +273,13 @@ def _cartao(img, nome_icone, txt, frames_desde, corrompido=False, rng=None, cor_
 
 def _titulo(img, T, c, rng):
     d = desenho(img)
-    entrada = ease((T - 5.0) / 0.5)
+    entrada = ease((T - C.T_PATRIMONIO) / 0.5)
     y = int(64 - (1 - entrada) * 80)
-    if T - 5.0 < 0.8:
-        y += int(math.sin((T - 5.0) * 18) * 4 * (1 - entrada))
+    if T - C.T_PATRIMONIO < 0.8:
+        y += int(math.sin((T - C.T_PATRIMONIO) * 18) * 4 * (1 - entrada))
     for i, ln in enumerate(C.TITULO):
         if c > 0.2 and rng.random() < c * 0.25:
-            ln = "".join(ch if rng.random() > 0.15 else "█" for ch in ln)
+            ln = "".join(ch if rng.random() > 0.15 else "#" for ch in ln)
         texto(d, (W // 2, y + i * 30), ln, 26, lerp_cor((255, 252, 214), (200, 190, 170), c),
               sombra=lerp_cor((150, 40, 0), (40, 0, 0), c), off=(3, 3), anchor="ma")
 
@@ -295,7 +295,7 @@ def _morph(prog, rng):
         if i < k:
             out.append(dst[i])
         elif i < k + 3 and prog > 0:
-            out.append("#@%&?█0X"[int(rng.integers(0, 8))])
+            out.append("#@%&?$0X"[int(rng.integers(0, 8))])
         else:
             out.append(src[i])
     return "".join(out).strip()
@@ -305,10 +305,10 @@ def _morph(prog, rng):
 def desenhar(T, fi):
     rng = rng_frame(fi, 1)
     tc = C.T_CORR
-    c_masc = rampa(T, tc + 0.4, tc + 3.6)
-    c_fundo = rampa(T, tc + 0.4, tc + 5.5)
-    noite = rampa(T, tc + 0.3, tc + 2.8)
-    janelas = int(rampa(T, tc + 2.0, tc + 5.6) * 12)
+    c_masc = rampa(T, tc + 0.3, tc + 2.9)
+    c_fundo = rampa(T, tc + 0.3, tc + C.DUR_CORR - 0.5)
+    noite = rampa(T, tc + 0.2, tc + 2.3)
+    janelas = int(rampa(T, tc + 1.6, tc + C.DUR_CORR - 0.3) * 12)
 
     if C.SUBLIMINAR_T <= T < C.SUBLIMINAR_T + 2.0 / FPS:
         img = nova((0, 0, 0))
@@ -319,7 +319,7 @@ def desenhar(T, fi):
     img = _fundo(T, c_fundo)
     _titulo(img, T, c_fundo, rng)
     # fachada entra com cortina
-    rev = ease((T - 5.2) / 0.6)
+    rev = ease((T - C.T_PATRIMONIO - 0.2) / 0.6)
     if rev > 0:
         _fachada(img, noite, janelas, fi)
         if rev < 1:
@@ -342,7 +342,7 @@ def desenhar(T, fi):
             _cartao(img, nome, txt, fr - 0.0, corrompido=False, rng=rng)
 
     # mascote quicando no ritmo da música
-    entra = ease((T - 5.2) / 0.45)
+    entra = ease((T - C.T_PATRIMONIO - 0.2) / 0.45)
     pos = C.musica_pos(T)
     beat = 60.0 / C.BPM
     quique = abs(math.sin(math.pi * pos / beat)) * 7 * (1 - 0.6 * c_masc)
