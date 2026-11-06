@@ -41,19 +41,19 @@ random.seed(SEED)
 T_PATRIMONIO = 5.0
 OLA_T = 5.5
 CARTOES_INICIO = 8.0
-CARTOES_DUR = [3.1, 3.2, 2.9, 4.8, 3.4]
+CARTOES_DUR = [3.9, 4.1, 3.7, 6.2, 4.4]
 CARTOES_T = [round(CARTOES_INICIO + sum(CARTOES_DUR[:i]), 3) for i in range(len(CARTOES_DUR))]
 FALA_FINAL_INICIO = round(CARTOES_T[-1] + CARTOES_DUR[-1], 3)
-T_CORR = round(FALA_FINAL_INICIO + 2.7, 3)  # a fita começa a estragar
+T_CORR = round(FALA_FINAL_INICIO + 3.4, 3)  # a fita começa a estragar
 T_REGRAS = T_CORR + 6.0
-REGRAS_INTRO_DUR = 3.0
+REGRAS_INTRO_DUR = 4.1
 REGRAS_INICIO = round(T_REGRAS + REGRAS_INTRO_DUR, 3)
-REGRAS_DUR = [2.7, 3.2, 3.2, 3.8, 3.4, 2.4, 2.8]
+REGRAS_DUR = [3.6, 4.4, 4.3, 5.2, 4.7, 2.6, 2.8]
 REGRAS_T = [round(REGRAS_INICIO + sum(REGRAS_DUR[:i]), 3) for i in range(len(REGRAS_DUR))]
 T_ALERTA = round(REGRAS_T[-1] + REGRAS_DUR[-1], 3)
 T_PATIO = T_ALERTA + 12.0
 T_FIM = T_PATIO + 8.0
-DURACAO = T_FIM + 6.0
+DURACAO = T_FIM + 6.8
 N_FRAMES = int(round(DURACAO * FPS))
 
 BLOCOS = [
@@ -273,7 +273,7 @@ PATIO_TS = "03:13:13"
 # ------------------------------------------------------------------ fim
 FIM_PRETO = T_FIM + 0.5
 FIM_APRENDIZ_T = FIM_PRETO + 1.0
-FIM_CARTAO = T_FIM + 2.6
+FIM_CARTAO = T_FIM + 3.4
 FIM_AZUL = DURACAO - 10.0 / FPS
 FICCAO_TXT = ("OBRA DE FICÇÃO. FATOS HISTÓRICOS REAIS; EVENTOS SOBRENATURAIS "
               "INVENTADOS. SEM RELAÇÃO COM O SESC.")

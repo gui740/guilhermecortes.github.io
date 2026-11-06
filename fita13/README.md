@@ -1,6 +1,6 @@
 # FITA 13: O ARSENAL
 
-Vídeo analog horror vertical (1080x1920, 30 fps, ~85 s): imagem, ícones, efeitos VHS e áudio gerados por código, com narração do Zé Canhãozinho e fotos reais do Arsenal (licenças livres).
+Vídeo analog horror vertical (1080x1920, 30 fps, ~98 s): imagem, ícones, efeitos VHS e áudio gerados por código, com narração do Zé Canhãozinho e fotos reais do Arsenal (licenças livres).
 
 ```
 python render.py --preview   # 1 PNG por cena em saida/preview/
@@ -14,7 +14,7 @@ Sem Piper/sem internet, o vídeo sai com "blips" de voz no lugar da narração.
 - `config.py` — tempos, textos, `HANDLE` do canal (troque ou deixe `""`), seed 1987.
 - `eventos.py` — lista de falhas (estática, tracking, drop-outs, glitches) compartilhada entre vídeo e áudio (salva em `saida/eventos.json`).
 - `cenas/` — uma função por bloco: `cena(t, frame_idx) -> PIL.Image 360x640`.
-- `narracao.py` — roteiro falado e voz de mascote (Piper + reamostragem; o tom sobe a cada regra). Velocidade em `VELOCIDADE`.
+- `narracao.py` — roteiro falado: voz do Zé (aguda, pitch-shift WSOLA sem acelerar) e voz de terror nas regras (grave, camada uma oitava abaixo, eco; mais grave a cada regra). Velocidades em `VELOCIDADE_ZE`/`VELOCIDADE_TERROR`.
 - `fx_vhs.py` — pipeline VHS; `icones.py` — ícones pixel-art 16x16; `audio.py` — síntese de áudio.
 - `assets/fonts/*.ttf` — opcional, fonte estilo VCR OSD (senão usa DejaVu Sans Mono Bold).
 - `assets/fotos/` — `fachada.jpg` e `varanda.jpg` são fotos reais do Wikimedia Commons (créditos em `assets/fotos/CREDITOS.txt` e no cartão final). Dá para trocar por fotos próprias, e também adicionar `patio.jpg` e `porao.jpg`.
