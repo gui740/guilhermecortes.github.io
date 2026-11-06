@@ -60,7 +60,7 @@ def roteiro():
     faixa "fita": passa pela mesma fita que a música (desafina/desacelera na corrupção)
     faixa "livre": por cima, sem wow
     """
-    r = [("Olá! Eu sou o Zé Canhãozinho!", C.OLA_T, 2.3, "ze", 0, "fita")]
+    r = [("Olá, criançada! Eu sou o Zé... Canhãozinho!", C.OLA_T, C.CARTOES_INICIO - C.OLA_T - 0.1, "ze", 0, "fita")]
     falas_cartoes = [
         "Mil oitocentos e dezoito: Dom João Sexto ordena o Real Trem de Guerra!",
         "Aqui, meninos aprendizes trabalhavam nas forjas!",

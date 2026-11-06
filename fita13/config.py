@@ -40,16 +40,16 @@ random.seed(SEED)
 # cartões e das regras foram escolhidas para caber a narração do Zé Canhãozinho.
 T_PATRIMONIO = 4.0
 OLA_T = 4.4
-CARTOES_INICIO = 6.6
-CARTOES_DUR = [4.6, 3.4, 4.6]
+CARTOES_INICIO = 8.6
+CARTOES_DUR = [4.8, 3.7, 5.3]
 CARTOES_T = [round(CARTOES_INICIO + sum(CARTOES_DUR[:i]), 3) for i in range(len(CARTOES_DUR))]
 FALA_FINAL_INICIO = round(CARTOES_T[-1] + CARTOES_DUR[-1], 3)
-T_CORR = round(FALA_FINAL_INICIO + 4.3, 3)  # a fita começa a estragar
+T_CORR = round(FALA_FINAL_INICIO + 3.6, 3)  # a fita começa a estragar
 DUR_CORR = 5.0
 T_REGRAS = T_CORR + DUR_CORR
-REGRAS_INTRO_DUR = 5.1
+REGRAS_INTRO_DUR = 3.8
 REGRAS_INICIO = round(T_REGRAS + REGRAS_INTRO_DUR, 3)
-REGRAS_DUR = [5.3, 5.8, 5.7, 6.4, 6.6, 2.6, 2.8]
+REGRAS_DUR = [4.7, 5.5, 5.6, 7.3, 6.3, 2.5, 2.8]
 REGRAS_T = [round(REGRAS_INICIO + sum(REGRAS_DUR[:i]), 3) for i in range(len(REGRAS_DUR))]
 T_ALERTA = round(REGRAS_T[-1] + REGRAS_DUR[-1], 3)
 T_PATIO = T_ALERTA + 12.0
@@ -110,7 +110,7 @@ CARTOES = [
     ("martelo", "1842–1899: MENINOS APRENDIZES TRABALHAVAM NAS FORJAS"),
     ("chave", "1984: TOMBADO. HOJE O PRÉDIO DESCANSA."),
 ]
-FALA_OLA = "OLÁ! EU SOU O ZÉ CANHÃOZINHO!"
+FALA_OLA = "OLÁ, CRIANÇADA! EU SOU O ZÉ CANHÃOZINHO!"
 FALA_OLA_T = (OLA_T, CARTOES_INICIO - 0.1)
 FALA_FINAL = "VAMOS VISITAR? O ARSENAL ESTÁ SEMPRE DE PORTAS ABERTAS!"
 FALA_FINAL_T = (FALA_FINAL_INICIO, T_CORR + 1.6)   # continua (glitchando) na corrupção
@@ -278,9 +278,9 @@ FICCAO_TXT = ("OBRA DE FICÇÃO. FATOS HISTÓRICOS REAIS; EVENTOS SOBRENATURAIS 
               "INVENTADOS. SEM RELAÇÃO COM O SESC.")
 # créditos das fotos reais (licenças livres do Wikimedia Commons)
 CREDITOS_FOTOS = [
-    "FOTO DA FACHADA: MATEUS HIDALGO, CC BY-SA 2.5 BR",
-    "FOTO DA VARANDA: PRBURLEY, CC BY 4.0",
-    "VIA WIKIMEDIA COMMONS",
+    "FACHADA: MATEUS HIDALGO, CC BY-SA 2.5 BR",
+    "VARANDA: PRBURLEY, CC BY 4.0",
+    "FOTOS VIA WIKIMEDIA COMMONS",
 ]
 
 # ------------------------------------------------------------------ fotos
