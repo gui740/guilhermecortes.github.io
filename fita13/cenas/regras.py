@@ -20,7 +20,7 @@ def _fundo(i):
         if ft is not None:
             arr = np.asarray(ft.convert("L")).astype(np.float32)[..., None] / 255.0
             base = np.array(MARINHO, np.float32)
-            arr = base + arr * np.array([30, 34, 60], np.float32)
+            arr = base * 0.7 + arr * np.array([45, 52, 95], np.float32)
             img = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8))
     return img
 
@@ -48,8 +48,8 @@ def cena(t, fi):
             texto(d, (W // 2, 360), C.LEIA, 18, (255, 255, 255), anchor="ma")
         return img
 
-    i = min(len(C.REGRAS) - 1, int((T - C.REGRAS_INICIO) // C.REGRA_DUR))
-    t0 = C.REGRAS_INICIO + i * C.REGRA_DUR
+    i = C.indice_em(T, C.REGRAS_T)
+    t0 = C.REGRAS_T[i]
     img = _fundo(i)
     d = desenho(img)
     _cabecalho(d)

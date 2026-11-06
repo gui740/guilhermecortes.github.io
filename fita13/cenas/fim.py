@@ -17,9 +17,13 @@ def cena(t, fi):
     if T >= C.FIM_CARTAO:
         img = nova((8, 8, 10))
         d = desenho(img)
-        y = bloco_centro(d, W // 2, 200, C.FICCAO_TXT, 16, (240, 240, 240), maxw=320, entre=8)
+        y = bloco_centro(d, W // 2, 150, C.FICCAO_TXT, 16, (240, 240, 240), maxw=320, entre=8)
         if C.HANDLE:
-            texto(d, (W // 2, y + 40), C.HANDLE, 20, (255, 255, 255), anchor="ma")
+            texto(d, (W // 2, y + 26), C.HANDLE, 20, (255, 255, 255), anchor="ma")
+            y += 60
+        y += 22
+        for ln in C.CREDITOS_FOTOS:
+            y = bloco_centro(d, W // 2, y, ln, 11, (170, 170, 170), maxw=330, entre=4)
         return img
     rng = rng_frame(fi, 8)
     n = rng.random((H, W)).astype(np.float32) * 55 * (0.7 + 0.3 * rng.random((H, 1)))

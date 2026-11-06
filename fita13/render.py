@@ -23,12 +23,13 @@ from cenas.comum import contorno, desenho, quadrado_stop, triangulo_play  # noqa
 
 PREVIEWS = [
     ("01_abertura_azul", 0.5), ("02_abertura_barras", 2.2), ("03_abertura_etiqueta", C.ETIQUETA_T),
-    ("04_patrimonio_intro", 6.6), ("05_patrimonio_cartao", 12.0), ("06_patrimonio_balao", 23.0),
-    ("07_corrupcao", 27.4), ("08_corrupcao_subliminar", C.SUBLIMINAR_T),
-    ("09_regras_intro", 30.9), ("10_regras", 43.0), ("11_regras_7", 49.4),
-    ("12_alerta", 57.4), ("13_patio", 65.0), ("14_patio_final", 69.5),
-    ("15_patio_negativo", C.PATIO_NEGATIVO_T), ("16_fim", 72.0), ("17_fim_cartao", 73.6),
-    ("18_fim_stop", 74.8),
+    ("04_patrimonio_intro", 6.6), ("05_patrimonio_cartao", C.CARTOES_T[1] + 2.0),
+    ("06_patrimonio_balao", C.FALA_FINAL_INICIO + 1.5),
+    ("07_corrupcao", C.T_CORR + 3.4), ("08_corrupcao_subliminar", C.SUBLIMINAR_T),
+    ("09_regras_intro", C.T_REGRAS + 1.0), ("10_regras", C.REGRAS_T[3] + 3.0), ("11_regras_7", C.REGRAS_T[6] + 2.5),
+    ("12_alerta", C.T_ALERTA + 7.4), ("13_patio", C.T_PATIO + 3.0), ("14_patio_final", C.T_PATIO + 7.5),
+    ("15_patio_negativo", C.PATIO_NEGATIVO_T), ("16_fim", C.FIM_APRENDIZ_T + 0.4), ("17_fim_cartao", C.FIM_CARTAO + 1.5),
+    ("18_fim_stop", C.DURACAO - 0.2),
 ]
 
 
@@ -46,7 +47,7 @@ def desenhar_osd(img, t):
         quadrado_stop(d, 18, 68, 14, branco)
         contorno(d, (40, 64), "STOP", 18, branco)
         contorno(d, (C.W - 18, 64), "SP", 18, branco, anchor="ra")
-    if (C.ABERTURA_AZUL_FIM <= t < 50.0 and not (C.SUBLIMINAR_T <= t < C.SUBLIMINAR_T + 0.07)) \
+    if (C.ABERTURA_AZUL_FIM <= t < C.T_ALERTA and not (C.SUBLIMINAR_T <= t < C.SUBLIMINAR_T + 0.07)) \
             or C.FIM_PRETO <= t < C.FIM_CARTAO:
         contorno(d, (16, 512), C.timestamp(t), 13, branco)
     return img
@@ -87,6 +88,10 @@ def preview():
     pasta = os.path.join(C.SAIDA_DIR, "preview")
     os.makedirs(pasta, exist_ok=True)
     idx = eventos.indexar(eventos.gerar())
+    if C.carregar_env_boca() is None:
+        import audio
+        print("Gerando narração (para a boca do mascote)...")
+        audio.narracao_processada()
     for nome, t in PREVIEWS:
         fi = int(round(t * C.FPS))
         est = Estado()
@@ -102,7 +107,7 @@ def video():
     ev = eventos.gerar()
     eventos.salvar(ev)
     idx = eventos.indexar(ev)
-    print("Sintetizando áudio...")
+    print("Sintetizando narração e áudio...")
     audio.gerar(C.ARQUIVO_AUDIO, ev)
     print("Áudio pronto (%.1fs). Renderizando %d frames..." % (time.time() - t0, C.N_FRAMES))
     cmd = ["ffmpeg", "-y", "-loglevel", "error",

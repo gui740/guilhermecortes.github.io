@@ -17,9 +17,9 @@ from .comum import (bloco_centro, desenho, ease, foto, fonte, gradiente_v, largu
 
 rampa = C.rampa
 
-PAINEL = (14, 128, 346, 272)       # fachada
-CARD_Y = 284
-MASC = (92, 452)                   # centro do mascote
+PAINEL = (14, 128, 346, 300)       # fachada
+CARD_Y = 312
+MASC = (92, 470)                   # centro do mascote
 _G1 = gradiente_v(W, H, (255, 214, 90), (245, 120, 30))
 _G2 = gradiente_v(W, H, (255, 236, 140), (255, 160, 60))
 _rng_fixo = np.random.default_rng(C.SEED + 11)
@@ -35,7 +35,7 @@ def _fundo(T, c):
     mask = Image.new("L", (W, H), 0)
     md = ImageDraw.Draw(mask)
     cx, cy = W / 2, 330
-    giro = (min(T, 24.0 + c * 2) - 5.0) * 0.35
+    giro = (min(T, C.T_CORR + c * 2) - 5.0) * 0.35
     n = 18
     for i in range(n):
         a0 = giro + i * 2 * math.pi / n
@@ -60,15 +60,8 @@ def _fachada(img, noite, janelas_acesas, fi):
     d = desenho(img)
     ft = foto("fachada", pw, ph)
     if ft is not None:
-        arr = np.asarray(ft).astype(np.float32)
-        arr = arr * (1 - 0.75 * noite) + np.array([10, 10, 40], np.float32) * noite
-        img.paste(Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8)), (x0, y0))
-        if janelas_acesas:
-            rng = rng_frame(fi, 5)
-            for j in range(janelas_acesas):
-                jx = x0 + 20 + (j * 27) % (pw - 40)
-                d.rectangle([jx, y0 + ph * 0.55, jx + 8, y0 + ph * 0.7],
-                            fill=(255, int(130 + 40 * rng.random()), 30))
+        arr = _foto_noite(ft, noite, janelas_acesas, fi)
+        img.paste(Image.fromarray(arr), (x0, y0))
     else:
         ceu = gradiente_v(pw, ph, lerp_cor((80, 160, 235), (6, 6, 22), noite),
                           lerp_cor((190, 228, 252), (40, 18, 40), noite))
@@ -139,6 +132,52 @@ def _fachada(img, noite, janelas_acesas, fi):
     d.rectangle([x0 - 1, y0 - 1, x1 + 1, y1 + 1], outline=(255, 250, 230), width=1)
 
 
+def _caixas_foto():
+    import json
+    import os
+    p = os.path.join(C.FOTOS_DIR, "fachada_janelas.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+
+_CAIXAS = _caixas_foto()
+
+
+def _foto_noite(ft, noite, janelas_acesas, fi):
+    """Foto real da fachada: o céu azul vira noite e as janelas acendem em laranja de forja."""
+    arr = np.asarray(ft).astype(np.float32)
+    h, w = arr.shape[:2]
+    if noite > 0:
+        lum = arr.mean(axis=2, keepdims=True)
+        # céu (azul saturado) escurece mais que o prédio
+        ceu = np.clip((arr[..., 2:3] - arr[..., 0:1] - 40) / 60, 0, 1)
+        noturno = lum * np.array([0.35, 0.33, 0.55], np.float32) * (1 - ceu) + \
+            np.array([8, 6, 22], np.float32) * ceu
+        arr = arr * (1 - noite) + noturno * noite
+    if janelas_acesas:
+        rng = rng_frame(fi, 5)
+        caixas = []
+        if _CAIXAS:
+            caixas = [b for b in _CAIXAS["janelas"]] + [_CAIXAS["portao"]]
+        else:  # foto do usuário sem mapa de janelas: faixa genérica
+            caixas = [[0.1 + 0.16 * j, 0.6, 0.18 + 0.16 * j, 0.85] for j in range(6)]
+        n = min(len(caixas), max(1, int(janelas_acesas / 12 * len(caixas) + 0.5)))
+        ordem = [0, 3, 5, 1, 4, 2, 6, 7, 8, 9][:len(caixas)]
+        for k in ordem[:n]:
+            if k >= len(caixas):
+                continue
+            bx0, by0, bx1, by1 = caixas[k]
+            xa, xb, ya, yb = int(bx0 * w), int(bx1 * w), int(by0 * h), int(by1 * h)
+            reg = arr[ya:yb, xa:xb]
+            lum = reg.mean(axis=2, keepdims=True)
+            escuro = np.clip((150 - lum) / 120, 0, 1)        # o vão escuro acende, a grade fica
+            fogo = np.array([255, 120 + 50 * rng.random(), 25], np.float32)
+            arr[ya:yb, xa:xb] = reg * (1 - escuro) + fogo * escuro
+    return np.clip(arr, 0, 255).astype(np.uint8)
+
+
 # ------------------------------------------------------------------ mascote
 def _mascote(img, cx, cy, s, boca, c):
     d = desenho(img)
@@ -199,7 +238,7 @@ def _mascote(img, cx, cy, s, boca, c):
 
 def _balao(img, txt, rng=None, glitch=0.0):
     d = desenho(img)
-    x0, y0, x1 = 168, 378, 350
+    x0, y0, x1 = 168, 400, 350
     linhas = quebrar(txt, 13, x1 - x0 - 16)
     y1 = y0 + 12 + len(linhas) * 17
     d.polygon([(x0 + 4, y1 - 14), (x0 - 18, y1 + 14), (x0 + 22, y1 - 2)], fill=(0, 0, 0))
@@ -265,10 +304,11 @@ def _morph(prog, rng):
 # ------------------------------------------------------------------ cenas
 def desenhar(T, fi):
     rng = rng_frame(fi, 1)
-    c_masc = rampa(T, 24.4, 27.6)
-    c_fundo = rampa(T, 24.4, 29.5)
-    noite = rampa(T, 24.3, 26.8)
-    janelas = int(rampa(T, 26.0, 29.6) * 12)
+    tc = C.T_CORR
+    c_masc = rampa(T, tc + 0.4, tc + 3.6)
+    c_fundo = rampa(T, tc + 0.4, tc + 5.5)
+    noite = rampa(T, tc + 0.3, tc + 2.8)
+    janelas = int(rampa(T, tc + 2.0, tc + 5.6) * 12)
 
     if C.SUBLIMINAR_T <= T < C.SUBLIMINAR_T + 2.0 / FPS:
         img = nova((0, 0, 0))
@@ -289,8 +329,8 @@ def desenhar(T, fi):
 
     # cartões
     if T >= C.CARTOES_INICIO:
-        i = min(len(C.CARTOES) - 1, int((T - C.CARTOES_INICIO) // C.CARTAO_DUR))
-        t0 = C.CARTOES_INICIO + i * C.CARTAO_DUR
+        i = C.indice_em(T, C.CARTOES_T)
+        t0 = C.CARTOES_T[i]
         nome, txt = C.CARTOES[i]
         fr = (T - t0) * FPS
         if i == len(C.CARTOES) - 1 and T >= C.MORPH_T[0]:
@@ -316,7 +356,7 @@ def desenhar(T, fi):
     if C.FALA_OLA_T[0] <= T < C.FALA_OLA_T[1]:
         _balao(img, C.FALA_OLA)
     elif C.FALA_FINAL_T[0] <= T < C.FALA_FINAL_T[1]:
-        g = rampa(T, 24.3, 25.5) * 0.6
+        g = rampa(T, tc + 0.3, tc + 1.5) * 0.6
         if not (g > 0.3 and rng.random() < 0.2):
             _balao(img, C.FALA_FINAL, rng, g)
     return img

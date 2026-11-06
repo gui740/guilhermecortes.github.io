@@ -1,0 +1,15 @@
+Fotos reais usadas no vídeo (Wikimedia Commons, licenças livres):
+
+fachada.jpg
+  "Sesc Arsenal8.jpg" — autor: Mateus Hidalgo — licença CC BY-SA 2.5 BR
+  https://commons.wikimedia.org/wiki/File:Sesc_Arsenal8.jpg
+  Alterações: recortada e reduzida; banner de evento e placa do portão cobertos com
+  a própria grade do portão; teto de um carro estacionado removido.
+  (Esta versão alterada é distribuída sob a mesma licença CC BY-SA 2.5 BR.)
+
+varanda.jpg
+  "SESC Arsenal--Arsenal de Guerra Cuiabá 2024-3559.jpg" — autor: Prburley — licença CC BY 4.0
+  https://commons.wikimedia.org/wiki/File:SESC_Arsenal--Arsenal_de_Guerra_Cuiab%C3%A1_2024-3559.jpg
+  Alterações: recortada para 9:16 e reduzida.
+
+fachada_janelas.json: posição das janelas/portão na fachada.jpg (para acender à noite).

@@ -49,7 +49,7 @@ def cena(t, fi):
     d.line([0, 488, W, 488], fill=(255, 255, 255))
     d.line([0, 522, W, 522], fill=(255, 255, 255))
     larg = largura(C.ALERTA_CRAWL, 16)
-    x = W - ((T - 50.4) * 78) % (larg + W)
+    x = W - ((T - C.T_ALERTA - 0.4) * 78) % (larg + W)
     texto(d, (x, 496), C.ALERTA_CRAWL, 16, (255, 255, 255))
 
     # pop-ups de canto

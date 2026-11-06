@@ -1,5 +1,5 @@
 """Síntese de todo o áudio da fita com numpy -> saida/audio.wav (48 kHz, estéreo, 16 bits)."""
-import struct
+import os
 import wave
 
 import numpy as np
@@ -123,7 +123,7 @@ def aplicar_fita(src):
     y = np.interp(idx, np.arange(len(src)), src)
     fade = np.ones(n)
     fade[:int(0.05 * SR)] = np.linspace(0, 1, int(0.05 * SR))
-    fim = (tt > 29.0)
+    fim = (tt > C.T_REGRAS - 1.0)
     fade[fim] = np.linspace(1, 0.2, fim.sum())
     return y * fade
 
@@ -179,8 +179,37 @@ def martelada(rng, distante=True):
     return out
 
 
+# ------------------------------------------------------------------ narração
+def narracao_processada():
+    """Gera a narração, passa a faixa do mascote pela fita e salva o envelope da boca.
+
+    Retorna {"fita": voz já com wow/queda de pitch, "livre": voz das regras} ou None.
+    """
+    import narracao
+    f = narracao.gerar()
+    if f is None:
+        if os.path.exists(C.ARQUIVO_ENV_BOCA):
+            os.remove(C.ARQUIVO_ENV_BOCA)
+        return None
+    a = C.MUSICA_T[0]
+    proc = np.zeros(N)
+    y = aplicar_fita(f["fita"][int(a * SR):])
+    proc[int(a * SR):int(a * SR) + len(y)] = y[:N - int(a * SR)]
+    f["fita"] = proc
+    np.save(C.ARQUIVO_ENV_BOCA, narracao.envelope_boca(proc))
+    C.carregar_env_boca()
+    est = np.stack([proc + f["livre"]] * 2, axis=1)
+    est = est / (np.abs(est).max() + 1e-9) * 0.9
+    with wave.open(C.ARQUIVO_NARRACAO, "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(SR)
+        w.writeframes((est * 32767).astype("<i2").tobytes())
+    return f
+
+
 # ------------------------------------------------------------------ montagem
-def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
+def gerar(caminho=C.ARQUIVO_AUDIO, ev=None, narr="auto"):
     rng = np.random.default_rng(C.SEED)
     if ev is None:
         import eventos
@@ -196,17 +225,23 @@ def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
     tom[e0:e1] = 0
     mono[i0:i1] += tom
 
-    # música com wow & flutter
-    mono_m = aplicar_fita(musica())
-    _somar(mono, C.MUSICA_T[0], mono_m, 0.9)
+    if narr == "auto":
+        narr = narracao_processada()
 
-    # voz do mascote (blips sincronizados com a boca)
+    # música com wow & flutter (mais baixa quando há narração por cima)
+    mono_m = aplicar_fita(musica())
+    _somar(mono, C.MUSICA_T[0], mono_m, 0.9 if narr is None else 0.32)
+
+    if narr is not None:
+        # narração: voz do Zé (passou pela fita) + voz das regras, cada vez mais aguda
+        mono += narr["fita"] * 0.5 + narr["livre"] * 0.42
+    # sem narração: voz do mascote em blips sincronizados com a boca
     escala = [0, 2, 4, 7, 9, 12]
-    for j, (fa, fb, sils) in enumerate(C.SILABAS):
+    for j, (fa, fb, sils) in enumerate(C.SILABAS if narr is None else []):
         r = np.random.default_rng(C.SEED + j)
         for s in sils:
             f = _midi(84 + escala[int(r.integers(0, len(escala)))])
-            if s >= 24.0:
+            if s >= C.T_CORR:
                 f *= float(C.taxa_fita(s)) * 0.7
                 _somar(mono, s, blip(f, 0.09), 0.2)
             else:
@@ -220,7 +255,7 @@ def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
     for i in range(len(C.REGRAS)):
         ts, cps = C.regra_digitacao(i)
         txt = C.regra_texto_digitado(i)
-        fim_regra = C.REGRAS_INICIO + (i + 1) * C.REGRA_DUR
+        fim_regra = C.REGRAS_T[i] + C.REGRAS_DUR[i]
         for k, ch in enumerate(txt):
             tc = ts + k / cps
             if tc >= fim_regra:
@@ -229,16 +264,16 @@ def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
                 _somar(mono, tc, clique(rng), 0.28 if ch != "█" else 0.4)
 
     # marteladas de forja: baixinhas nas regras, mais altas no pátio
-    t = 33.0
-    while t < 69.7:
-        if t < 50:
-            g = 0.04 + 0.05 * (t - 33) / 17
-        elif t < 62:
+    t = C.T_REGRAS + 3.0
+    while t < C.T_FIM - 0.3:
+        if t < C.T_ALERTA:
+            g = 0.035 + 0.045 * (t - C.T_REGRAS) / (C.T_ALERTA - C.T_REGRAS)
+        elif t < C.T_PATIO:
             g = 0.07
         else:
-            g = 0.12 + 0.2 * (t - 62) / 8
-        _somar(mono, t, martelada(rng, distante=t < 62), g)
-        t += rng.uniform(1.1, 2.6) if t < 62 else rng.uniform(0.7, 1.5)
+            g = 0.12 + 0.2 * (t - C.T_PATIO) / (C.T_FIM - C.T_PATIO)
+        _somar(mono, t, martelada(rng, distante=t < C.T_PATIO), g)
+        t += rng.uniform(1.3, 2.8) if t < C.T_PATIO else rng.uniform(0.7, 1.5)
 
     # alerta 853 + 960 Hz em pulsos
     a, b = C.ALERTA_TOM_T
@@ -253,14 +288,14 @@ def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
     mono[i0:i1] += alerta * on + chiado
 
     # pátio: drone grave crescendo + stinger
-    a, b = 62.0, C.PATIO_STINGER_T
+    a, b = C.T_PATIO, C.PATIO_STINGER_T
     i0, i1 = int(a * SR), int(b * SR)
     seg = tt[i0:i1]
-    cres = ((seg - a) / (b - a)) ** 1.5
+    cres = np.clip((seg - a) / (b - a), 0, 1) ** 1.5
     drone = (np.sin(2 * np.pi * 45 * seg) + 0.8 * np.sin(2 * np.pi * 52.3 * seg)
              + 0.3 * np.sin(2 * np.pi * 90 * seg + np.sin(2 * np.pi * 0.3 * seg)))
     mono[i0:i1] += drone * (0.06 + 0.32 * cres)
-    m = int((70.0 - C.PATIO_STINGER_T) * SR)
+    m = int((C.T_FIM - C.PATIO_STINGER_T) * SR)
     st_t = _t(m)
     saw = 2 * ((110 * st_t) % 1) - 1
     stinger = np.tanh(4 * (saw + 0.9 * rng.uniform(-1, 1, m) + np.sin(2 * np.pi * 61 * st_t)))
@@ -327,7 +362,7 @@ def gerar(caminho=C.ARQUIVO_AUDIO, ev=None):
     est = est / (np.abs(est).max() + 1e-9) * 10 ** (-1 / 20)   # pico -1 dBFS
 
     # silêncio absoluto: telas azuis do VCR e corte para preto
-    for a, b in [(0.0, C.ABERTURA_AZUL_FIM), (70.0, C.FIM_PRETO), (C.FIM_AZUL, C.DURACAO)]:
+    for a, b in [(0.0, C.ABERTURA_AZUL_FIM), (C.T_FIM, C.FIM_PRETO), (C.FIM_AZUL, C.DURACAO)]:
         est[int(a * SR):int(b * SR)] = 0
     # pequenas rampas nas bordas do silêncio para não estalar
     r = int(0.004 * SR)

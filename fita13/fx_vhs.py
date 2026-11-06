@@ -107,11 +107,11 @@ def scanlines(img, k):
 
 def ruido(img, k, rng):
     """4. Grão gaussiano + neve esparsa."""
-    g = rng.standard_normal((H, W, 1), dtype=np.float32) * (3 + 10 * k)
-    c = rng.standard_normal((H // 2, W // 4, 3), dtype=np.float32) * (2 + 5 * k)
+    g = rng.standard_normal((H, W, 1), dtype=np.float32) * (2 + 6 * k)
+    c = rng.standard_normal((H // 2, W // 4, 3), dtype=np.float32) * (1 + 3 * k)
     c = np.repeat(np.repeat(c, 2, axis=0), 4, axis=1)
     img = img + g + c
-    n = int(500 * k * k)
+    n = int(220 * k * k)
     if n:
         ys = rng.integers(0, H, n)
         xs = rng.integers(0, W - 2, n)
@@ -122,12 +122,12 @@ def ruido(img, k, rng):
 
 def jitter(img, k, t, rng):
     """5. Cada linha deslocada por onda + ruído suave, com picos ocasionais."""
-    s = (0.9 * k * np.sin(_YF * 0.045 + t * 9.0)
-         + 0.5 * k * np.sin(_YF * 0.31 + t * 23.0)
-         + 1.6 * k * _suave1d(rng.standard_normal(H).astype(np.float32), 4))
-    if rng.random() < 0.07 * k:
+    s = (0.55 * k * np.sin(_YF * 0.045 + t * 9.0)
+         + 0.3 * k * np.sin(_YF * 0.31 + t * 23.0)
+         + 1.0 * k * _suave1d(rng.standard_normal(H).astype(np.float32), 4))
+    if rng.random() < 0.04 * k:
         y0 = int(rng.integers(0, H - 20))
-        s[y0:y0 + int(rng.integers(3, 18))] += rng.uniform(5, 16) * (1 if rng.random() < .5 else -1)
+        s[y0:y0 + int(rng.integers(3, 14))] += rng.uniform(4, 10) * (1 if rng.random() < .5 else -1)
     return desloc_linhas(img, s)
 
 
@@ -188,7 +188,7 @@ def glitch_forte(img, tipo, prog, rng):
         img = img.copy()
         for _ in range(int(rng.integers(3, 8))):
             y0 = int(rng.integers(0, H - 10))
-            h = int(rng.integers(6, 60))
+            h = min(int(rng.integers(6, 60)), H - y0)
             dx = int(rng.integers(-80, 80))
             img[y0:y0 + h] = hshift(img[y0:y0 + h], dx)
             if rng.random() < 0.4:

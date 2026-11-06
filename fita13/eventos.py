@@ -46,7 +46,7 @@ def gerar():
 
     # --- barras de tracking rolando
     rolagens = {"abertura": 1, "patrimonio": 1, "corrupcao": 2, "regras": 4,
-                "alerta": 2, "patio": 2}
+                "alerta": 2, "patio": 2}  # regras: rolagem esporádica
     for nome, ini, fim in C.BLOCOS:
         n = rolagens.get(nome, 0)
         for j in range(n):
@@ -66,7 +66,7 @@ def gerar():
         k = C.intensidade(t)
         if k <= 0.15:
             continue
-        if rng.random() < 0.015 + 0.07 * k * k:
+        if rng.random() < 0.01 + 0.045 * k * k:
             for _ in range(int(rng.integers(1, 4))):
                 ev["dropouts"].append([f, int(rng.integers(0, C.H)), int(rng.integers(0, C.W - 20)),
                                        int(rng.integers(8, 70))])
@@ -76,12 +76,11 @@ def gerar():
     quantos = {"patrimonio": 1, "corrupcao": 6, "regras": 2, "alerta": 3, "patio": 3}
     for nome, ini, fim in C.BLOCOS:
         n = quantos.get(nome, 0)
-        lo = 24.0 if nome != "corrupcao" else 24.4
         for _ in range(n):
             for _try in range(30):
-                t0 = rng.uniform(max(ini, lo if nome == "corrupcao" else ini) + 0.3, fim - 0.4)
-                if nome == "patrimonio":
-                    t0 = rng.uniform(20.5, 23.5)  # um só, já anunciando o fim
+                t0 = rng.uniform(ini + (0.7 if nome == "corrupcao" else 0.3), fim - 0.4)
+                if nome == "patrimonio":  # um só, já anunciando o fim
+                    t0 = rng.uniform(C.T_CORR - 3.5, C.T_CORR - 0.5)
                 f0 = int(t0 * C.FPS)
                 tipo = tipos[int(rng.integers(0, len(tipos)))]
                 dur = {"blocos": int(rng.integers(2, 6)), "congelar": int(rng.integers(4, 9)),
