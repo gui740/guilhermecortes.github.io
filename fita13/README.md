@@ -7,7 +7,12 @@ python render.py --preview   # 1 PNG por cena em saida/preview/
 python render.py             # vídeo completo em saida/fita13_arsenal.mp4
 ```
 
-Requisitos: Python 3.10+, numpy, Pillow, ffmpeg no PATH e, para a narração, `pip install piper-tts`.
+Requisitos: Python 3.10+, numpy, Pillow, ffmpeg no PATH.
+
+Narração: usa o **Gemini TTS** (Google AI Studio) quando há chave em `GEMINI_API_KEY`
+(ou o caminho de um arquivo com a chave em `GEMINI_API_KEY_FILE`). As falas geradas ficam em
+`assets/narracao_gemini/`; com elas lá, o render não precisa mais da chave. Para regerar uma voz,
+apague o arquivo correspondente. Sem Gemini, a reserva é o Piper (`pip install piper-tts`).
 Na primeira execução a voz pt-BR do Piper (`pt_BR-faber-medium`, ~60 MB) é baixada para `assets/vozes/`.
 Sem Piper/sem internet, o vídeo sai com "blips" de voz no lugar da narração.
 

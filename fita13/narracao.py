@@ -1,4 +1,10 @@
-"""Narração (TTS local com Piper, voz pt-BR "faber").
+"""Narração do vídeo.
+
+Motor de voz:
+* Gemini TTS (Google AI Studio), se houver chave em GEMINI_API_KEY (ou um arquivo
+  em GEMINI_API_KEY_FILE). Cada fala é gerada UMA vez e guardada em
+  assets/narracao_gemini/ — renders seguintes não gastam cota nem precisam da chave.
+* Piper (TTS local, voz pt-BR "faber") como reserva.
 
 Duas vozes, ambas na velocidade natural da fala (sem acelerar):
 
@@ -11,8 +17,13 @@ Duas vozes, ambas na velocidade natural da fala (sem acelerar):
 Se o Piper ou o modelo de voz não estiverem disponíveis (e não der para baixar),
 retorna None e o áudio cai de volta nos "blips" de voz.
 """
+import base64
+import hashlib
 import io
+import json
 import os
+import time
+import urllib.error
 import urllib.request
 import wave
 
@@ -24,7 +35,16 @@ VOZ = "pt_BR-faber-medium"
 VOZ_URL = "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/"
 VELOCIDADE_ZE = 0.92      # length_scale do Piper (1 = natural; menor = um pouco mais rápido)
 VELOCIDADE_TERROR = 1.0
-TOM_ZE = 1.3              # +4,5 semitons
+TOM_ZE = 1.3              # +4,5 semitons (Piper)
+
+# Gemini TTS
+GEMINI_MODELO = "gemini-2.5-flash-preview-tts"
+GEMINI_VOZ_ZE = "Puck"
+GEMINI_VOZ_TERROR = "Algenib"
+GEMINI_ESTILO_ZE = "Say fast and excitedly, like a hyperactive cartoon mascot on a kids TV show: "
+GEMINI_ESTILO_TERROR = "Say in a deep, gravelly, menacing voice, at a brisk pace without long pauses: "
+TOM_ZE_GEMINI = 1.08      # o Puck já é animado; só um toque mais agudo
+CACHE_GEMINI = os.path.join(C.BASE_DIR, "assets", "narracao_gemini")
 
 
 def roteiro():
@@ -95,6 +115,86 @@ def _sintetizar(voz, texto, length_scale):
     return np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x)
 
 
+def _chave_gemini():
+    k = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    arq = os.environ.get("GEMINI_API_KEY_FILE")
+    if not k and arq and os.path.exists(arq):
+        k = open(arq).read().strip()
+    return k
+
+
+def _cache_path(texto, tipo):
+    voz = GEMINI_VOZ_ZE if tipo == "ze" else GEMINI_VOZ_TERROR
+    estilo = GEMINI_ESTILO_ZE if tipo == "ze" else GEMINI_ESTILO_TERROR
+    h = hashlib.sha1(("%s|%s|%s%s" % (GEMINI_MODELO, voz, estilo, texto)).encode()).hexdigest()[:16]
+    return os.path.join(CACHE_GEMINI, "%s_%s.wav" % (tipo, h)), voz, estilo + texto
+
+
+_ultima_chamada = [0.0]
+
+
+def _gemini(texto, tipo, chave):
+    """Fala do Gemini TTS a 48 kHz (com cache em disco). Retorna None se falhar."""
+    caminho, voz, prompt = _cache_path(texto, tipo)
+    if not os.path.exists(caminho):
+        if not chave:
+            return None
+        os.makedirs(CACHE_GEMINI, exist_ok=True)
+        body = {"contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"responseModalities": ["AUDIO"],
+                                     "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voz}}}}}
+        url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % GEMINI_MODELO
+        for tentativa in range(8):
+            espera = 21.0 - (time.time() - _ultima_chamada[0])   # cota gratuita: poucas req/min
+            if espera > 0:
+                time.sleep(espera)
+            _ultima_chamada[0] = time.time()
+            req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                         headers={"Content-Type": "application/json", "x-goog-api-key": chave})
+            try:
+                d = json.load(urllib.request.urlopen(req, timeout=180))
+                b = base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+                break
+            except urllib.error.HTTPError as e:
+                msg = e.read()[:200]
+                if e.code in (429, 500, 503) and tentativa < 7:
+                    print("  gemini %d, tentando de novo em 30s..." % e.code)
+                    time.sleep(30)
+                    continue
+                print("  gemini falhou: %d %s" % (e.code, msg))
+                return None
+            except Exception as e:
+                print("  gemini falhou:", e)
+                return None
+        if b[:4] == b"RIFF":
+            with wave.open(io.BytesIO(b)) as w:
+                sr, b = w.getframerate(), w.readframes(w.getnframes())
+        else:
+            sr = 24000
+        with wave.open(caminho, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(sr)
+            w.writeframes(b)
+        print("  voz gerada:", texto[:50])
+    with wave.open(caminho) as w:
+        sr = w.getframerate()
+        x = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float64) / 32768
+    # apara silêncio no começo/fim
+    ativo = np.where(np.abs(x) > 0.02)[0]
+    if len(ativo):
+        x = x[max(0, ativo[0] - int(0.03 * sr)):ativo[-1] + int(0.08 * sr)]
+    n = int(len(x) * C.SR / sr)
+    return np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x)
+
+
+def _usa_gemini():
+    if _chave_gemini():
+        return True
+    # sem chave: usa o cache se TODAS as falas já estiverem lá
+    return all(os.path.exists(_cache_path(t, tipo)[0]) for t, _, _, tipo, _, _ in roteiro())
+
+
 # ------------------------------------------------------------------ DSP
 def _reamostrar(x, fator):
     """fator > 1 encurta (tom sobe); < 1 alonga (tom desce)."""
@@ -145,16 +245,16 @@ def _norm(y):
     return y / (np.abs(y).max() + 1e-9)
 
 
-def voz_ze(x):
-    y = mudar_tom(x, TOM_ZE)
+def voz_ze(x, tom=TOM_ZE):
+    y = mudar_tom(x, tom)
     y = y - 0.5 * np.convolve(y, np.ones(11) / 11, mode="same")   # menos grave: alto-falante de TV
     y = np.tanh(_norm(y) * 1.4) / np.tanh(1.4)
     return _norm(y)
 
 
-def voz_terror(x, k):
+def voz_terror(x, k, base_grave=False):
     """k 0..1: quanto mais alto, mais grave e mais suja."""
-    tom = 0.78 - 0.12 * k
+    tom = (0.9 - 0.12 * k) if base_grave else (0.78 - 0.12 * k)
     base = _norm(mudar_tom(x, tom))
     sub = _norm(mudar_tom(x, tom * 0.5))                       # uma oitava abaixo
     v = base * 0.85 + sub * (0.35 + 0.3 * k)
@@ -173,21 +273,42 @@ def voz_terror(x, k):
 # ------------------------------------------------------------------ montagem
 def gerar():
     """Retorna {"fita": array, "livre": array} (48 kHz, duração total) ou None."""
-    try:
-        from piper import PiperVoice
-        voz = PiperVoice.load(_modelo())
-    except Exception as e:  # sem Piper / sem rede
-        print("  narração indisponível (%s); usando blips de voz." % e)
-        return None
+    gem = _usa_gemini()
+    voz = None
+    if gem:
+        print("  narração: Gemini TTS (%s / %s, %s)" % (GEMINI_VOZ_ZE, GEMINI_VOZ_TERROR, GEMINI_MODELO))
+    else:
+        try:
+            from piper import PiperVoice
+            voz = PiperVoice.load(_modelo())
+            print("  narração: Piper (%s)" % VOZ)
+        except Exception as e:  # sem Piper / sem rede
+            print("  narração indisponível (%s); usando blips de voz." % e)
+            return None
+    chave = _chave_gemini()
     n = int(C.DURACAO * C.SR)
     faixas = {"fita": np.zeros(n), "livre": np.zeros(n)}
     for texto, t0, slot, tipo, k, faixa in roteiro():
-        ls = VELOCIDADE_ZE if tipo == "ze" else VELOCIDADE_TERROR
-        x = _sintetizar(voz, texto, ls)
-        dur = len(x) / C.SR
-        if dur > slot:  # não coube: só um pouquinho mais rápido (nunca menos que 0.85)
-            x = _sintetizar(voz, texto, max(0.85, ls * slot / dur))
-        y = voz_ze(x) if tipo == "ze" else voz_terror(x, k)
+        x = _gemini(texto, tipo, chave) if gem else None
+        if x is not None:
+            dur = len(x) / C.SR
+            if dur > slot:  # não coube: comprime de leve sem mudar o tom (máx. 15%)
+                fator = max(slot / dur, 1 / 1.15)
+                x = wsola(x, fator)
+                if len(x) / C.SR > slot + 0.05:
+                    print("  aviso: fala passa do tempo de tela (%.2fs > %.2fs): %s"
+                          % (len(x) / C.SR, slot, texto[:40]))
+            y = voz_ze(x, TOM_ZE_GEMINI) if tipo == "ze" else voz_terror(x, k, base_grave=True)
+        else:
+            if voz is None:
+                from piper import PiperVoice
+                voz = PiperVoice.load(_modelo())
+            ls = VELOCIDADE_ZE if tipo == "ze" else VELOCIDADE_TERROR
+            x = _sintetizar(voz, texto, ls)
+            dur = len(x) / C.SR
+            if dur > slot:  # não coube: só um pouquinho mais rápido (nunca menos que 0.85)
+                x = _sintetizar(voz, texto, max(0.85, ls * slot / dur))
+            y = voz_ze(x) if tipo == "ze" else voz_terror(x, k)
         i0 = int(t0 * C.SR)
         m = min(len(y), n - i0)
         faixas[faixa][i0:i0 + m] += y[:m]
