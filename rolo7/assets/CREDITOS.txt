@@ -1,0 +1,49 @@
+ROLO 7: A CASA DA ESQUINA — créditos de terceiros
+=====================================================
+
+FONTES (baixadas do repositório oficial github.com/google/fonts)
+-----------------------------------------------------------------
+VT323 Regular — Peter Hull
+  https://raw.githubusercontent.com/google/fonts/main/ofl/vt323/VT323-Regular.ttf
+  Licença: SIL Open Font License 1.1 (fonts/VT323-OFL.txt)
+
+IBM Plex Mono Regular e Bold — IBM Corp.
+  https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/
+  Licença: SIL Open Font License 1.1 (fonts/IBMPlexMono-OFL.txt)
+
+Special Elite Regular — Astigmatic (Brian J. Bonislawsky)
+  https://raw.githubusercontent.com/google/fonts/main/apache/specialelite/SpecialElite-Regular.ttf
+  Licença: Apache License 2.0 (fonts/SpecialElite-LICENSE.txt)
+  Obs.: no Google Fonts esta família está sob Apache 2.0, não OFL; também é uma licença livre
+  que permite uso comercial.
+
+VOZ SINTETIZADA (TTS offline, gerada localmente)
+-----------------------------------------------------------------
+Motor: eSpeak NG 1.51 — https://github.com/espeak-ng/espeak-ng — GPL-3.0
+  (a licença vale para o programa; o áudio que ele gera não fica sob a GPL)
+Voz: MBROLA "br4" (português do Brasil, feminina), pacote Ubuntu mbrola-br4
+  https://github.com/mbrola/mbrola-voices
+  Licença da base de difones (Faculté Polytechnique de Mons / Serpro): uso permitido com o
+  programa MBROLA; a base não pode ser vendida nem embutida em produto vendido sem autorização
+  do Serpro. Este projeto só usa a base para sintetizar a fala e não a redistribui.
+  Para não depender dela, defina VOZ_MOTOR = "espeak" em config.py (voz pt-br+f3 do eSpeak NG).
+Por que não Piper: o servidor dos modelos de voz (huggingface.co) estava bloqueado na rede
+deste ambiente de render.
+
+EFEITOS SONOROS E MÚSICA
+-----------------------------------------------------------------
+Nenhum arquivo externo. O Freesound não estava acessível na rede deste ambiente, então tudo foi
+sintetizado por código em audio.py: chiado de fita, zumbido de 60 Hz, cliques e motor do
+gravador, tema de órgão, valsa de piano, copos tilintando, goteira com eco, porta batendo,
+drone, máquina de escrever, bipes, fita arrebentando (flap) e rebobinar.
+Se você baixar SFX CC0 para assets/sfx/, registre aqui a URL, o autor e a licença de cada um.
+
+IMAGENS
+-----------------------------------------------------------------
+Nenhuma foto. O casarão, o gravador, o corredor, as silhuetas e os ícones são desenhados por
+código. Nenhum rosto, imagem ou voz de pessoa real.
+
+PERSONAGENS
+-----------------------------------------------------------------
+"Professora Celeste" e "Canal 9" são fictícios. O nome real da professora Ana Maria do Couto
+("May", 1925–1971) aparece só no cartão final de homenagem.
