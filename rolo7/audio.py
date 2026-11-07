@@ -143,12 +143,18 @@ def mixar(roteiro, total, eventos, falas):
 
     # abertura: estática e tom de alerta de dois tons
     por("sfx", ruido_estatica(rng, 0.35), 0.0, 0.8)
-    cab = seg["cabecalho"]
-    n = seg_(1.25)
+    cab = seg["fita"]
+    n = seg_(0.85)
     tt = np.arange(n) / SR
     alerta = (np.sin(2 * np.pi * 853 * tt) + np.sin(2 * np.pi * 960 * tt)) * 0.5 * env_adsr(n, 0.01, 0.05)
     por("ui", np.tanh(alerta * 1.5).astype(np.float32), cab["t0"] + 0.05, 0.22)
-    por("voz", V.transmissao(falas["intro"], 1), cab["t_voz"], 1.0)
+    por("voz", V.transmissao(falas["intro1"], 1), cab["t_voz"], 1.0)
+    al = seg["alvo"]
+    por("sfx", ruido_estatica(rng, 2 / C.FPS + 0.03), al["t0"] - 0.02, 0.7)
+    por("sfx", impacto(rng, 1.6, 44), al["t0"], 0.55)
+    por("voz", V.transmissao(falas["intro2"], 2), al["t_voz"], 1.0)
+    # bipe de "objetivo" quando o marcador aparece
+    por("ui", np.concatenate([tom(660, 0.08, harm=(1, .3)), tom(990, 0.12, harm=(1, .3))]) * 0.4, al["t0"] + 0.45, 0.6)
 
     # regras
     for s in regras:

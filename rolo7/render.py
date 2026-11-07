@@ -89,7 +89,8 @@ def preparar():
     import voz
     print("» falas (Gemini TTS, com cache)…")
     falas = voz.gerar_todas()
-    falas["intro"] = roteiro.cortar_intro(falas["intro"])
+    for k in ("intro1", "intro2"):
+        falas[k] = roteiro.encurtar_pausas(falas[k])
     rot, total = roteiro.montar(falas)
     ev = gerar_eventos(rot)
     print("» mixando áudio…")

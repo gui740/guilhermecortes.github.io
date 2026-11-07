@@ -32,8 +32,13 @@ FX_FINAL = 0.95
 
 # ---------------------------------------------------------------- textos
 EMISSORA = "CANAL 9  ·  CUIABÁ"
-CABECALHO = ["AVISO AOS MORADORES", "DO BAIRRO BANDEIRANTES"]
+CABECALHO = ["INSTRUÇÕES AO VIGIA NOTURNO", "BAIRRO BANDEIRANTES"]
 SUBCABECALHO = "LEIA ATÉ O FIM"
+
+# introdução (fita de treinamento do vigia)
+FITA = ["FITA DE TREINAMENTO Nº 7", "VIGILÂNCIA NOTURNA", "BAIRRO BANDEIRANTES", "TURNO: 22:00 — 06:00"]
+ALVO = "CASARÃO BANDEIRANTES"
+OBJETIVO = "OBJETIVO: COMPLETAR A RONDA"
 
 REGRAS = [
     "SE SÓ A LUZ DA COZINHA ESTIVER ACESA, PODE PASSAR. É JANTAR.",
@@ -48,8 +53,8 @@ REGRA7_EXTRA = "SE VOCÊ ESTÁ VENDO ISTO, ALGUÉM LIGOU."
 
 # falas (o que a locutora lê; texto natural, não caixa alta)
 FALAS = {
-    "intro": "Aviso aos moradores do bairro Bandeirantes. Se você passar pela casa da esquina "
-             "depois das dez da noite, siga estas instruções.",
+    "intro1": "Você é o novo vigia noturno do bairro Bandeirantes.",
+    "intro2": "Esta é a casa da esquina. Durante a ronda, siga estas regras.",
     "regra1": "Regra um. Se só a luz da cozinha estiver acesa, pode passar. É jantar.",
     "regra2": "Regra dois. Se todas as luzes estiverem acesas, atravesse a rua. A festa não é para você.",
     "regra3": "Regra três. Se ouvir copos brindando, não conte quantos. Você vai contar um a mais.",

@@ -9,20 +9,26 @@ import config as C
 SR = C.SR
 
 
-def cortar_intro(x):
-    """Usa só a primeira frase da intro ("Aviso aos moradores do bairro Bandeirantes.")."""
-    e = np.array([np.sqrt(np.mean(x[i:i + 480] ** 2)) for i in range(0, len(x), 480)])
-    silencio = e < 0.012
-    ini = int(1.4 * SR / 480)
-    run = 0
-    for k in range(ini, len(e)):
-        run = run + 1 if silencio[k] else 0
-        if run >= int(0.28 * SR / 480):
-            fim = (k - run + 1) * 480 + int(0.12 * SR)
-            y = x[:fim].copy()
-            y[-1200:] *= np.linspace(1, 0, 1200)
-            return y
-    return x
+def encurtar_pausas(x, max_pausa=0.38):
+    """Encurta silêncios internos longos para a introdução ficar rápida."""
+    blk = 480
+    e = np.array([np.sqrt(np.mean(x[i:i + blk] ** 2)) for i in range(0, len(x), blk)])
+    sil = e < 0.012
+    manter = np.ones(len(e), bool)
+    k, lim = 0, int(max_pausa * SR / blk)
+    while k < len(e):
+        if sil[k]:
+            j = k
+            while j < len(e) and sil[j]:
+                j += 1
+            if j - k > lim and k > 0 and j < len(e):
+                meio = k + lim // 2
+                manter[meio:meio + (j - k - lim)] = False
+            k = j
+        else:
+            k += 1
+    partes = [x[i * blk:(i + 1) * blk] for i in range(len(e)) if manter[i]]
+    return np.concatenate(partes).astype(np.float32)
 
 
 def montar(falas):
@@ -37,7 +43,10 @@ def montar(falas):
         return seg[-1]
 
     add(0.35, "abre")
-    add(1.45 + dur["intro"] + 0.55, "cabecalho", voz="intro", t_voz=0.35 + 1.45)
+    f = add(0.7 + dur["intro1"] + 0.3, "fita")
+    f["t_voz"] = f["t0"] + 0.7
+    al = add(0.35 + dur["intro2"] + 0.6, "alvo")
+    al["t_voz"] = al["t0"] + 0.35
     for k in range(1, 8):
         d = 0.35 + dur[f"regra{k}"] + 0.75
         s = add(d, "regra", n=k, voz=f"regra{k}", t_voz=0.35)
@@ -58,7 +67,6 @@ def montar(falas):
     add(0.55, "preto")
     if C.INCLUIR_CARTAO_HISTORIA:
         add(C.CARTAO_DUR, "cartao")
-    seg[1]["t_voz"] = seg[1]["t0"] + 1.45
     return seg, t
 
 

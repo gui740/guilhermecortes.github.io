@@ -1,9 +1,9 @@
 # ROLO 7: A CASA DA ESQUINA
 
-Analog horror em formato de aviso de emergência de TV, gerado por código (vertical 1080x1920, 30 fps, ~73 s).
+Analog horror em formato de fita de treinamento do novo vigia noturno, gerado por código (vertical 1080x1920, 30 fps, ~78 s).
 Inspirado na lenda urbana do "Casarão Assombrado" do bairro Bandeirantes, em Cuiabá-MT.
 
-Estrutura: aviso de emergência, 7 regras lidas pela locutora (cada tela dura o tempo da leitura),
+Estrutura: etiqueta da fita ("você é o novo vigia noturno"), câmera mirando o casarão com marcador de objetivo, 7 regras lidas pela locutora (cada tela dura o tempo da leitura),
 cortes curtos de câmera de segurança da casa, fim no corredor e cartão de homenagem/ficção.
 
 ## Requisitos

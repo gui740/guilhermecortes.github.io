@@ -72,17 +72,64 @@ def _topo(d):
 
 
 # ====================================================================== telas de aviso
-def tela_cabecalho(s, t, i):
-    img = Image.new("RGB", (W, H), AZUL)
+def tela_fita(s, t, i):
+    """Etiqueta da fita de treinamento do vigia."""
+    img = Image.new("RGB", (W, H), (8, 8, 10))
     o, d = _camada()
-    d.text((W / 2, C.SEGURO_TOPO + 8), C.EMISSORA, font=fonte("b", 24), fill=(205, 210, 225, 255), anchor="ma")
-    # faixa de alerta
-    d.rectangle([0, 300, W, 312], fill=(230, 230, 230, 255))
-    y = centralizado(d, C.CABECALHO, 352, fonte("b", 34), BRANCO)
-    d.rectangle([0, y + 26, W, y + 38], fill=(230, 230, 230, 255))
-    if t - s["t0"] > 1.2:
-        centralizado(d, [C.SUBCABECALHO], y + 80, fonte("b", 30), (220, 220, 220, 255))
-    return _meta(img, C.FX_AVISO, "aviso", o)
+    tl = t - s["t0"]
+    # OSD de VCR
+    y0 = C.SEGURO_TOPO + 8
+    fm = fonte("mono", 28)
+    d.polygon([(28, y0 + 4), (28, y0 + 26), (46, y0 + 15)], fill=BRANCO)
+    d.text((56, y0), "PLAY", font=fm, fill=BRANCO)
+    d.text((W - 28, y0), "SP", font=fm, fill=BRANCO, anchor="ra")
+    # etiqueta de papel
+    x0, x1, ya, yb = 36, W - 36, 300, 610
+    d.rectangle([x0, ya, x1, yb], fill=(226, 220, 200, 255))
+    d.rectangle([x0, ya, x1, ya + 22], fill=(170, 40, 34, 255))
+    d.rectangle([x0, yb - 14, x1, yb], fill=(170, 40, 34, 255))
+    tinta = (24, 24, 30, 255)
+    d.text((W / 2, ya + 48), C.FITA[0], font=fonte("mono", 26), fill=tinta, anchor="ma")
+    d.line([(x0 + 24, ya + 88), (x1 - 24, ya + 88)], fill=tinta, width=2)
+    if tl > 0.25:
+        centralizado(d, C.FITA[1:3], ya + 114, fonte("b", 36), tinta, sombra=False)
+    if tl > 0.6:
+        d.text((W / 2, ya + 240), C.FITA[3], font=fonte("mono", 28), fill=(150, 30, 26, 255), anchor="ma")
+    return _meta(img, C.FX_AVISO, "tv", o)
+
+
+def tela_alvo(s, t, i):
+    """Câmera da fachada com marcador de objetivo, estilo game."""
+    tl = t - s["t0"]
+    base = Image.new("RGB", (D.W, D.H))
+    D.casa_fachada(base, todas_acesas=False, vulto=False)
+    # aproximação lenta na casa
+    z = 1.0 + 0.10 * min(1.0, tl / max(0.1, s["t1"] - s["t0"]))
+    cw, ch = 280 / z, 498 / z
+    cx, cy = 180, 315
+    img = base.crop((cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)).resize((W, H), Image.BILINEAR)
+    o = _osd_cftv(1, "FACHADA", t)
+    d = ImageDraw.Draw(o)
+    if tl > 0.4:
+        amarelo = (255, 214, 64, 255)
+        bx0, by0, bx1, by1 = 34, 300, W - 34, 640
+        if int(tl * 4) % 2 == 0 or tl > 1.6:     # pisca ao aparecer
+            L = 34
+            for (x, y, sx, sy) in ((bx0, by0, 1, 1), (bx1, by0, -1, 1), (bx0, by1, 1, -1), (bx1, by1, -1, -1)):
+                d.line([(x, y), (x + sx * L, y)], fill=amarelo, width=5)
+                d.line([(x, y), (x, y + sy * L)], fill=amarelo, width=5)
+            fl = fonte("b", 34)
+            w = fl.getlength(C.ALVO)
+            d.rectangle([W / 2 - w / 2 - 14, by0 - 66, W / 2 + w / 2 + 14, by0 - 18], fill=(0, 0, 0, 190))
+            d.text((W / 2, by0 - 60), C.ALVO, font=fl, fill=amarelo, anchor="ma")
+            d.polygon([(W / 2 - 12, by0 - 12), (W / 2 + 12, by0 - 12), (W / 2, by0 + 4)], fill=amarelo)
+    if tl > 1.4:
+        fo = fonte("b", 28)
+        w = fo.getlength(C.OBJETIVO)
+        d.rectangle([W / 2 - w / 2 - 14, 690, W / 2 + w / 2 + 14, 734], fill=(0, 0, 0, 190))
+        d.text((W / 2, 696), C.OBJETIVO, font=fo, fill=(240, 240, 240, 255), anchor="ma")
+    est = 0.7 if tl < 2 / C.FPS else 0.0
+    return _meta(img, C.FX_CFTV - 0.15, "cftv", o, estat=est)
 
 
 def tela_regra(s, t, i):
@@ -180,8 +227,10 @@ def cena(t, i):
     tipo = s["tipo"]
     if tipo == "abre":
         return _meta(Image.new("RGB", (W, H), AZUL), C.FX_AVISO, "aviso", estat=1.0)
-    if tipo == "cabecalho":
-        return tela_cabecalho(s, t, i)
+    if tipo == "fita":
+        return tela_fita(s, t, i)
+    if tipo == "alvo":
+        return tela_alvo(s, t, i)
     if tipo == "regra":
         return tela_regra(s, t, i)
     if tipo == "cftv":
