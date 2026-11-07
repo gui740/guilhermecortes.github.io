@@ -1,13 +1,14 @@
-"""ROLO 7: A CASA DA ESQUINA — render procedural de analog horror.
+"""ROLO 7: A CASA DA ESQUINA — analog horror procedural (aviso de emergência).
 
-    python render.py              # vídeo final
-    python render.py --preview    # 1 PNG por cena em saida/preview/
-    python render.py --preview --t 12.3 45   # PNGs de tempos específicos
+    GEMINI_API_KEY=... python render.py      # vídeo final
+    python render.py --preview               # 1 PNG por tela em saida/preview/
+    python render.py --preview --t 12 40     # PNGs de tempos específicos
+
+As falas ficam em cache em saida/voz/; depois de geradas, a chave não é mais necessária.
 """
 import argparse
 import multiprocessing as mp
 import subprocess
-import sys
 import time
 
 import numpy as np
@@ -16,89 +17,65 @@ from PIL import Image
 import config as C
 import fx_vhs as FX
 
-sys.path.insert(0, str(C.RAIZ))
+ROT = []
+EVENTOS = []
 
 
-# ------------------------------------------------------------ eventos de glitch (vídeo + áudio)
-def gerar_eventos():
+def gerar_eventos(roteiro):
+    """Glitches (vídeo e áudio usam a mesma lista). Poucos nas telas de texto, mais no CFTV."""
     rng = np.random.default_rng(C.SEED)
     ev = []
 
     def add(t, nf, tipo):
         ev.append({"f0": int(round(t * C.FPS)), "nf": int(nf), "tipo": tipo})
 
-    # aleatórios, densidade proporcional à intensidade do bloco
-    zonas = [(C.B2[0] + 1, C.B2[1], 0.3), (C.B3[0], C.B3[1], 0.6), (C.B4[0], C.B4[1], 0.45),
-             (C.B5[0], C.B5[1], 0.8), (C.B6[0], C.T_FITA_ARREBENTA, 1.0)]
-    for a, b, dens in zonas:
-        t = a + rng.exponential(2.5 / dens)
-        while t < b - 0.2:
-            if rng.random() < 0.18 * dens:
-                add(t, rng.integers(1, 3), rng.choice(["blocos", "repete", "rola"]))
-            else:
-                add(t, rng.integers(2, 5), "dropout")
-            t += rng.exponential(2.8 / dens) + 0.4
-    # fixos (roteiro)
-    add(C.B3[0], 3, "misto")           # pulo de fita
-    add(C.T_RETA - 0.05, 3, "rola")
-    add(C.T_PORTA, 2, "blocos")
-    add(60.0, 2, "blocos")
-    add(62.5, 2, "repete")
-    add(64.3, 2, "misto")
-    add(C.T_FITA_ARREBENTA, 3, "blocos")
-    add(C.T_CONGELA + 2 / C.FPS, 2, "inverte")   # congela e inverte cores 2 frames
-    add(C.T_REGRA7_EXTRA, 2, "blocos")
-    # nada de glitch nos cartões limpos nem no preto
-    ev = [e for e in ev if not (C.T_PRETO * C.FPS - 1 <= e["f0"] < C.B6[1] * C.FPS)
-          and e["f0"] < C.T_VERDADE * C.FPS]
+    for s in roteiro:
+        if s["tipo"] == "regra":
+            # um drop-out curto no fim de algumas regras, depois que a voz terminou
+            if rng.random() < 0.6:
+                add(s["t1"] - rng.uniform(0.2, 0.5), rng.integers(2, 4), "dropout")
+            if s["n"] == 7:
+                add(s["t_extra"], 3, "blocos")
+                t = s["t_extra"] + 0.6
+                while t < s["t1"] - 0.2:
+                    add(t, rng.integers(1, 3), rng.choice(["blocos", "repete", "dropout"]))
+                    t += rng.uniform(0.35, 0.8)
+        elif s["tipo"] == "cftv":
+            add(s["t0"] + rng.uniform(0.3, 0.6), 2, rng.choice(["blocos", "dropout"]))
+            if s["var"] == "perto":
+                add(s["t0"], 2, "misto")
+                add(s["t1"] - 0.2, 3, "inverte")
     ev.sort(key=lambda e: e["f0"])
     return ev
 
 
-def _ativos(eventos, i):
-    return [e for e in eventos if e["f0"] <= i < e["f0"] + e["nf"]]
-
-
-def _estatica_transicao(i):
-    for t0, fa, fd in C.TRANSICOES:
-        f0 = int(round(t0 * C.FPS))
-        if f0 - fa <= i < f0 + fd:
-            return 1.0 if (i - (f0 - fa)) not in (0, fa + fd - 1) else 0.8
-    return 0.0
-
-
-# ------------------------------------------------------------ um quadro
-_EVENTOS = []
-
-
-def _init(eventos):
-    global _EVENTOS
-    _EVENTOS = eventos
-
-
-def quadro(i, eventos=None):
+def _init(rot, ev):
+    global ROT, EVENTOS
     import cenas
-    eventos = _EVENTOS if eventos is None else eventos
+    ROT, EVENTOS = rot, ev
+    cenas.ROTEIRO[:] = rot
+
+
+def quadro(i):
+    import cenas
     rng = np.random.default_rng([C.SEED, i, 77])
-    evs = _ativos(eventos, i)
-    i_cena = i - 1 if any(e["tipo"] == "repete" for e in evs) else i
+    evs = [e for e in EVENTOS if e["f0"] <= i < e["f0"] + e["nf"]]
+    ic = i - 1 if any(e["tipo"] == "repete" for e in evs) else i
     t = i / C.FPS
-    img = cenas.cena(i_cena / C.FPS, i_cena)
+    img = cenas.cena(ic / C.FPS, ic)
     info = img.info
-    estat = max(_estatica_transicao(i), info.get("estat", 0.0))
-    arr = FX.aplicar(np.asarray(img.convert("RGB")), info.get("fx", 0.3), t, rng,
-                     info.get("grade", "tv"), [e for e in evs if e["tipo"] != "repete"], estat)
-    osd = info.get("osd")
-    if osd is not None and estat < 0.9:
-        o = np.asarray(osd).astype(np.float32)
-        a = o[..., 3:4] / 255.0
-        cor = o[..., :3].copy()
-        cor[..., 0] = np.roll(cor[..., 0], 1, axis=1)      # OSD com pouquíssimo efeito
-        arr = (arr * (1 - a) + cor * a).astype(np.uint8)
+    fx = info.get("fx", 0.3)
+    estat = info.get("estat", 0.0)
+    arr = FX.aplicar(np.asarray(img.convert("RGB")), fx, t, rng, info.get("grade", "tv"),
+                     [e for e in evs if e["tipo"] != "repete"], estat)
+    camada = info.get("texto")
+    if camada is not None and estat < 0.9:
+        arr = FX.compor_texto(arr, camada, rng, fx)
+        if any(e["tipo"] == "inverte" for e in evs):
+            arr = 255 - arr
     out = Image.fromarray(arr).resize((C.OUT_W, C.OUT_H), Image.BILINEAR)
-    hires = info.get("hires")
-    if hires and estat < 0.5:
-        hires(out)
+    if info.get("hires"):
+        info["hires"](out)
     return out
 
 
@@ -106,71 +83,61 @@ def _bytes(i):
     return quadro(i).tobytes()
 
 
-# ------------------------------------------------------------ principal
-def preparar_audio(eventos):
+def preparar():
     import audio
+    import roteiro
     import voz
-    print("» gerando vozes (TTS offline)…")
+    print("» falas (Gemini TTS, com cache)…")
     falas = voz.gerar_todas()
+    falas["intro"] = roteiro.cortar_intro(falas["intro"])
+    rot, total = roteiro.montar(falas)
+    ev = gerar_eventos(rot)
     print("» mixando áudio…")
-    return audio.mixar(eventos, falas)
-
-
-def preview(eventos, tempos=None):
-    import cenas
-    pasta = C.SAIDA / "preview"
-    pasta.mkdir(parents=True, exist_ok=True)
-    if tempos:
-        alvos = [(f"t_{t:06.2f}", t) for t in tempos]
-    else:
-        meio = [3.2, 15.5, 27.0, 34.0, 61.0, 68.5, 77.5]
-        alvos = list(zip(cenas.NOMES, meio))
-    for nome, t in alvos:
-        img = quadro(int(round(t * C.FPS)), eventos)
-        p = pasta / f"{nome}.png"
-        img.save(p)
-        print("  ", p)
-
-
-def render_final(eventos, audio_wav):
-    C.SAIDA.mkdir(parents=True, exist_ok=True)
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-stats",
-           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{C.OUT_W}x{C.OUT_H}", "-r", str(C.FPS), "-i", "-",
-           "-i", str(audio_wav),
-           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "192k",
-           "-t", f"{C.DURACAO:.3f}", "-movflags", "+faststart", str(C.ARQUIVO_FINAL)]
-    ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    n = C.N_FRAMES
-    procs = max(1, mp.cpu_count() - 1)
-    with mp.get_context("fork").Pool(procs, initializer=_init, initargs=(eventos,)) as pool:
-        for k, b in enumerate(pool.imap(_bytes, range(n), chunksize=6)):
-            ff.stdin.write(b)
-            if k % 150 == 0:
-                print(f"\r  quadro {k}/{n}", end="", flush=True)
-    ff.stdin.close()
-    ff.wait()
-    print()
-    if ff.returncode != 0:
-        raise SystemExit("ffmpeg falhou")
+    wav = audio.mixar(rot, total, ev, falas)
+    return rot, total, ev, wav
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--preview", action="store_true")
-    ap.add_argument("--t", type=float, nargs="*", help="tempos para o preview")
-    ap.add_argument("--sem-audio", action="store_true", help="reaproveita saida/audio.wav")
+    ap.add_argument("--t", type=float, nargs="*")
     a = ap.parse_args()
     t0 = time.time()
-    eventos = gerar_eventos()
-    wav = C.SAIDA / "audio.wav"
-    if not (a.sem_audio and wav.exists()):
-        wav = preparar_audio(eventos)
+    rot, total, ev, wav = preparar()
+    _init(rot, ev)
+    n = int(round(total * C.FPS))
     if a.preview:
-        preview(eventos, a.t)
+        pasta = C.SAIDA / "preview"
+        pasta.mkdir(parents=True, exist_ok=True)
+        if a.t:
+            alvos = [(f"t_{x:06.2f}", x) for x in a.t]
+        else:
+            alvos = []
+            for k, s in enumerate(rot):
+                if s["tipo"] in ("abre", "preto"):
+                    continue
+                tm = s.get("t_extra", s["t0"]) + min(1.5, (s["t1"] - s.get("t_extra", s["t0"])) * 0.6)
+                nome = s["tipo"] + (f"_{s['n']}" if "n" in s else "") + (f"_{s['var']}" if "var" in s else "")
+                alvos.append((f"{k:02d}_{nome}", tm))
+        for nome, tm in alvos:
+            p = pasta / f"{nome}.png"
+            quadro(int(round(tm * C.FPS))).save(p)
+            print("  ", p)
     else:
-        print(f"» renderizando {C.N_FRAMES} quadros ({C.DURACAO:.1f} s)…")
-        render_final(eventos, wav)
+        print(f"» renderizando {n} quadros ({total:.1f} s)…")
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-stats",
+               "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{C.OUT_W}x{C.OUT_H}", "-r", str(C.FPS), "-i", "-",
+               "-i", str(wav), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+               "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "192k",
+               "-t", f"{total:.3f}", "-movflags", "+faststart", str(C.ARQUIVO_FINAL)]
+        ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+        with mp.get_context("fork").Pool(max(1, mp.cpu_count() - 1), initializer=_init, initargs=(rot, ev)) as pool:
+            for k, b in enumerate(pool.imap(_bytes, range(n), chunksize=6)):
+                ff.stdin.write(b)
+        ff.stdin.close()
+        ff.wait()
+        if ff.returncode:
+            raise SystemExit("ffmpeg falhou")
         print(f"✔ arquivo final: {C.ARQUIVO_FINAL}")
     print(f"⏱ tempo de render: {time.time() - t0:.1f} s")
 

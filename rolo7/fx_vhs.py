@@ -64,9 +64,9 @@ def scanlines(a, i):
 
 # 4
 def grao(a, i, rng):
-    n = rng.standard_normal((H, W, 1)).astype(np.float32) * (0.025 + 0.06 * i)
+    n = rng.standard_normal((H, W, 1)).astype(np.float32) * (0.012 + 0.04 * i)
     a = a + n
-    neve = rng.random((H, W)) < (0.0005 + 0.004 * i)
+    neve = rng.random((H, W)) < (0.0002 + 0.0018 * i)
     a[neve] = 0.95
     return a
 
@@ -134,6 +134,9 @@ def grade(a, tipo, t, i):
         mono = y * np.array([0.78, 1.0, 0.82], np.float32)
         a = mono * 0.86 + a * 0.14
         a = 0.03 + a * 0.97
+    elif tipo == "aviso":    # azul de transmissão, levemente lavado
+        a = y + (a - y) * (0.9 + 0.05 * np.sin(t * 0.4))
+        a = 0.03 + a * 0.95
     elif tipo == "fria":
         a = y + (a - y) * s * 0.9
         a = a * np.array([0.92, 0.98, 1.08], np.float32)
@@ -152,7 +155,7 @@ def crt(a, i):
 
 # 10
 def dropouts(a, i, rng, extra=0):
-    n = rng.poisson(0.3 * i) + extra
+    n = rng.poisson(0.15 * i) + extra
     if n == 0:
         return a
     a = a.copy()
@@ -187,8 +190,8 @@ def glitch_forte(a, rng, tipo="blocos"):
 
 # 12
 def estatica(rng, forca=1.0, t=0.0):
-    n = rng.random((H, W // 2)).astype(np.float32)
-    n = np.repeat(n, 2, axis=1)[..., None].repeat(3, -1)
+    n = rng.random((H, W // 3)).astype(np.float32)
+    n = np.repeat(n, 3, axis=1)[..., None].repeat(3, -1)
     linhas = (rng.random((H, 1, 1)) * 0.5 + 0.5).astype(np.float32)
     n = n * linhas
     pos = int(H - ((t * 400) % H))
@@ -224,8 +227,22 @@ def aplicar(img_u8, i, t, rng, tipo="tv", eventos=(), estat=0.0):
     return (np.clip(a, 0, 1) * 255).astype(np.uint8)
 
 
-def osd_suave(arr, rng):
-    """OSD recebe pouco efeito: leve desalinhamento de croma e jitter mínimo."""
-    a = arr.astype(np.float32)
-    a[..., 0] = np.roll(a[..., 0], 1, axis=1)
-    return np.clip(a, 0, 255).astype(np.uint8)
+def compor_texto(arr, camada, rng, i):
+    """Texto/OSD por cima dos efeitos, com tratamento leve para continuar legível:
+    croma desalinhado 1-2 px, leve borrão horizontal, scanlines e tremor mínimo por linha."""
+    o = np.asarray(camada).astype(np.float32) / 255.0
+    a = o[..., 3:4]
+    cor = o[..., :3]
+    a = uniform_filter1d(a, 2, axis=1)
+    cor = uniform_filter1d(cor, 2, axis=1)
+    d = 1 + int(i > 0.6)
+    cor[..., 0] = np.roll(cor[..., 0], d, axis=1)
+    cor[..., 2] = np.roll(cor[..., 2], -d, axis=1)
+    desloc = np.where(rng.random(H) < 0.03 + 0.1 * i, rng.integers(-2, 3, H), 0)
+    cor = deslocar_linhas(cor, desloc)
+    a = deslocar_linhas(a, desloc)
+    cor[1::2] *= 0.9
+    cor = cor + rng.standard_normal((H, W, 1)).astype(np.float32) * 0.03
+    base = arr.astype(np.float32) / 255.0
+    out = base * (1 - a) + np.clip(cor, 0, 1) * a
+    return (np.clip(out, 0, 1) * 255).astype(np.uint8)

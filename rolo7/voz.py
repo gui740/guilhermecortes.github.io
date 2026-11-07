@@ -1,7 +1,18 @@
-"""Gera as falas da Professora Celeste (fictícia) com TTS offline e aplica tratamento de fita."""
+"""Falas da locutora (fictícia). Gemini TTS com cache em saida/voz/; fallback espeak-ng.
+
+A chave vem de GEMINI_API_KEY (variável de ambiente) e nunca é gravada em arquivo.
+"""
+import base64
+import hashlib
+import io
+import json
+import os
 import shutil
 import subprocess
 import tempfile
+import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 import numpy as np
@@ -14,139 +25,144 @@ DIR = C.SAIDA / "voz"
 SR = C.SR
 
 
-def _motor():
+# ------------------------------------------------------------ motores
+def _gemini(texto):
+    chave = os.environ.get("GEMINI_API_KEY")
+    if not chave:
+        return None
+    for modelo in [C.TTS_MODELO] + C.TTS_RESERVA:
+        r = _gemini_modelo(texto, chave, modelo)
+        if r is not None:
+            return r
+    raise SystemExit("Cota diária do Gemini TTS esgotada em todos os modelos. Tente amanhã.")
+
+
+def _gemini_modelo(texto, chave, modelo):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
+    corpo = {"contents": [{"parts": [{"text": texto}]}],
+             "generationConfig": {"responseModalities": ["AUDIO"],
+                                  "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": C.TTS_VOZ}}}}}
+    for tentativa in range(6):
+        req = urllib.request.Request(url, data=json.dumps(corpo).encode(),
+                                     headers={"Content-Type": "application/json", "x-goog-api-key": chave})
+        try:
+            r = json.load(urllib.request.urlopen(req, timeout=300))
+            parte = r["candidates"][0]["content"]["parts"][0]["inlineData"]
+            dados = base64.b64decode(parte["data"])
+            if dados[:4] == b"RIFF":
+                x, sr = sf.read(io.BytesIO(dados), dtype="float32")
+            else:  # PCM 16 bits cru, 24 kHz
+                x, sr = np.frombuffer(dados, np.int16).astype(np.float32) / 32768, 24000
+            return x, sr
+        except urllib.error.HTTPError as e:
+            corpo_erro = e.read().decode(errors="ignore")
+            if e.code == 429 and "PerDay" in corpo_erro:
+                print(f"  (cota diária de {modelo} esgotada, tentando outro modelo)")
+                return None
+            if e.code in (429, 500, 503) and tentativa < 5:
+                espera = 2 ** tentativa * 5
+                print(f"  (TTS {e.code}, nova tentativa em {espera}s)")
+                time.sleep(espera)
+                continue
+            raise SystemExit(f"Gemini TTS falhou: {e.code} {corpo_erro[:300]}")
+        except (TimeoutError, urllib.error.URLError):
+            if tentativa < 5:
+                time.sleep(5)
+                continue
+            raise
+
+
+def _espeak(texto):
     if not shutil.which("espeak-ng"):
-        raise SystemExit("espeak-ng não encontrado. Instale: apt-get install espeak-ng mbrola-br4")
-    if C.VOZ_MOTOR == "mbrola" and shutil.which("mbrola"):
-        r = subprocess.run(["espeak-ng", "-v", C.VOZ_MBROLA, "-q", "teste"], capture_output=True)
-        if r.returncode == 0:
-            return C.VOZ_MBROLA
-    return C.VOZ_ESPEAK
-
-
-def tts(texto, velocidade=135, pitch=None, voz=None):
-    voz = voz or _motor()
-    pitch = C.VOZ_PITCH if pitch is None else pitch
+        raise SystemExit("Sem GEMINI_API_KEY e sem espeak-ng: não há como gerar a voz.")
     with tempfile.TemporaryDirectory() as td:
         p = Path(td) / "f.wav"
-        subprocess.run(["espeak-ng", "-v", voz, "-s", str(velocidade), "-p", str(pitch),
-                        "-g", "4", "-w", str(p), texto], check=True, capture_output=True)
-        x, sr = sf.read(p, dtype="float32")
+        subprocess.run(["espeak-ng", "-v", "pt-br+f3", "-s", "140", "-w", str(p), texto],
+                       check=True, capture_output=True)
+        return sf.read(p, dtype="float32")
+
+
+def tts(texto):
+    r = _gemini(texto)
+    motor = "gemini"
+    if r is None:
+        r, motor = _espeak(texto), "espeak"
+    x, sr = r
     if x.ndim > 1:
         x = x.mean(1)
     g = np.gcd(sr, SR)
     x = resample_poly(x, SR // g, sr // g).astype(np.float32)
-    # apara silêncio
     env = np.abs(x) > 0.01
     if env.any():
         a, b = np.argmax(env), len(x) - np.argmax(env[::-1])
-        x = x[max(0, a - 800):b + 1600]
-    return x / (np.abs(x).max() + 1e-9) * 0.9
+        x = x[max(0, a - 600):b + 2400]
+    return x / (np.abs(x).max() + 1e-9) * 0.9, motor
 
 
-def tts_ajustado(texto, dur_max, vel=135):
-    """Acelera o TTS até caber em dur_max segundos."""
-    while True:
-        x = tts(texto, vel)
-        if len(x) / SR <= dur_max or vel > 200:
-            return x, vel
-        vel += 6
+def gerar_todas():
+    DIR.mkdir(parents=True, exist_ok=True)
+    falas = {}
+    for nome, texto in C.FALAS.items():
+        h = hashlib.sha1(f"{C.TTS_VOZ}|{texto}".encode()).hexdigest()[:10]
+        p = DIR / f"{nome}_{h}.wav"
+        if p.exists():
+            falas[nome], _ = sf.read(p, dtype="float32")
+            continue
+        x, motor = tts(texto)
+        if motor == "gemini":   # só guarda em cache o que veio do Gemini
+            sf.write(p, x, SR)
+        print(f"  voz {nome:7s} {len(x) / SR:5.2f}s ({motor})")
+        falas[nome] = x
+    return falas
 
 
 # ------------------------------------------------------------ tratamento
-def passa_banda(x, lo=300, hi=3400, ordem=4):
-    sos = butter(ordem, [lo, hi], btype="band", fs=SR, output="sos")
-    return sosfilt(sos, x).astype(np.float32)
+def _f(x, f, tipo, ordem=2):
+    return sosfilt(butter(ordem, f, btype=tipo, fs=SR, output="sos"), x).astype(np.float32)
 
 
-def passa_baixa(x, hi, ordem=4):
-    sos = butter(ordem, hi, btype="low", fs=SR, output="sos")
-    return sosfilt(sos, x).astype(np.float32)
-
-
-def wow_flutter(x, wow=0.0025, flutter=0.0006, rng=None, fase=0.0):
-    """Atraso variável: modulação lenta de pitch (wow) e rápida (flutter)."""
+def wow(x, prof=0.0008, seed=0):
     n = len(x)
     t = np.arange(n) / SR
-    rng = rng or np.random.default_rng(C.SEED)
-    d = (wow * np.sin(2 * np.pi * 0.55 * t + fase) + wow * 0.5 * np.sin(2 * np.pi * 0.23 * t + 1.3 * fase)
-         + flutter * np.sin(2 * np.pi * 6.3 * t)) * SR
+    d = (prof * np.sin(2 * np.pi * 0.5 * t + seed) + prof * 0.3 * np.sin(2 * np.pi * 6.1 * t)) * SR
     idx = np.clip(np.arange(n) - d - d.min(), 0, n - 1)
     return np.interp(idx, np.arange(n), x).astype(np.float32)
 
 
 def mudar_tom(x, semitons):
-    """Fita lenta: abaixa o tom e desacelera juntos (reamostragem)."""
     if semitons == 0:
         return x
-    fator = 2 ** (-semitons / 12)          # >1 = mais longo/grave
+    fator = 2 ** (semitons / 12)
     n = int(len(x) * fator)
     return np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x).astype(np.float32)
 
 
-def reverb_sala(x, dur=0.35, mix=0.22, rng=None):
-    rng = rng or np.random.default_rng(C.SEED + 1)
+def sala(x, dur=0.5, mix=0.12, seed=0):
+    rng = np.random.default_rng(C.SEED + seed)
     n = int(dur * SR)
     ir = rng.standard_normal(n).astype(np.float32) * np.exp(-np.linspace(0, 7, n)).astype(np.float32)
-    ir = passa_baixa(ir, 4000)
-    ir[0] = 0
-    w = fftconvolve(x, ir)[: len(x) + n]
+    ir = _f(ir, 3500, "low")
+    w = fftconvolve(x, ir)
     w = w / (np.abs(w).max() + 1e-9) * np.abs(x).max()
-    out = np.zeros(len(x) + n, np.float32)
+    out = np.zeros(len(w), np.float32)
     out[: len(x)] += x
-    out[: len(w)] += mix * w
-    return out
+    return out + mix * w
 
 
-def tratar_fita(x, corr=0.0, semitons=0.0, seed=0, reverb=True):
-    """Fita de rolo antiga. corr 0..1 aumenta wow e picotes."""
-    rng = np.random.default_rng(C.SEED + seed)
-    x = mudar_tom(x, semitons)
-    x = wow_flutter(x, wow=0.0018 + 0.012 * corr, flutter=0.0005 + 0.001 * corr, rng=rng, fase=seed)
-    x = passa_banda(x)
-    x = np.tanh(x * (1.8 + 1.5 * corr)) / np.tanh(1.8 + 1.5 * corr)
-    if reverb:
-        x = reverb_sala(x, rng=rng)
-    if corr > 0.2:  # picotes de drop-out
-        n = len(x)
-        for _ in range(int(corr * 6)):
-            a = int(rng.integers(0, max(1, n - 4000)))
-            b = a + int(rng.integers(600, 3500))
-            x[a:b] *= rng.uniform(0.0, 0.25)
-    chiado = passa_banda(rng.standard_normal(len(x)).astype(np.float32), 2000, 9000, 2) * 0.012
-    return (x * 0.85 + chiado).astype(np.float32)
+def transmissao(x, seed=0):
+    """Locução de TV/rádio de época: banda limitada, leve saturação, pouco wow. A voz continua clara."""
+    x = wow(x, 0.0007, seed)
+    x = _f(x, 140, "high")
+    x = _f(x, 6500, "low", 4)
+    x = np.tanh(x * 1.6) / np.tanh(1.6)
+    return sala(x, 0.45, 0.10, seed)
 
 
-def lado_b(x):
-    """Inverte e desacelera ~15%."""
-    return mudar_tom(x[::-1].copy(), 12 * np.log2(1.15))
-
-
-# ------------------------------------------------------------ geração
-def gerar_todas(forcar=False):
-    """Gera (ou reaproveita) os WAV brutos de cada fala. Retorna dict nome -> array."""
-    DIR.mkdir(parents=True, exist_ok=True)
-    falas = {}
-    alvo = {
-        "fala_a": (C.FALA_A, C.FALA_A_MAX),
-        "fala_b": (C.FALA_B, 2.4),
-        "voltar": (C.FALA_VOLTAR, 1.0),
-        "quem": (C.FALA_QUEM, 1.4),
-    }
-    for i, linha in enumerate(C.LADO_B):
-        alvo[f"ladob_{i}"] = (linha.capitalize(), 2.2)
-    motor = _motor()
-    for nome, (texto, dmax) in alvo.items():
-        p = DIR / f"{nome}.wav"
-        if p.exists() and not forcar:
-            falas[nome], _ = sf.read(p, dtype="float32")
-            continue
-        x, vel = tts_ajustado(texto, dmax)
-        sf.write(p, x, SR)
-        print(f"  voz {nome:9s} {len(x)/SR:5.2f}s  vel={vel}  ({motor})")
-        falas[nome] = x
-    return falas
-
-
-if __name__ == "__main__":
-    gerar_todas(forcar=True)
+def corrompida(x, semitons=-3, seed=0):
+    """Fim do vídeo: fita lenta, mais grave e abafada."""
+    x = mudar_tom(x, -semitons)
+    x = wow(x, 0.004, seed)
+    x = _f(x, 300, "high")
+    x = _f(x, 2800, "low", 4)
+    x = np.tanh(x * 2.4) / np.tanh(2.4)
+    return sala(x, 1.4, 0.35, seed)

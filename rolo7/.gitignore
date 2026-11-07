@@ -1,4 +1,5 @@
 __pycache__/
 saida/*
 !saida/preview/
+!saida/voz/
 !saida/rolo7_casa_da_esquina_leve.mp4
