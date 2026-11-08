@@ -112,6 +112,28 @@ def orgao(t0, t1, notas, baixo, passo, velocidade, ganho_curva, rng):
     return out * ganho_curva(tt).astype(np.float32)
 
 
+def gemido(rng, dur, f0, aspero=False):
+    """Gemido grave e longo do bicho (dente de serra com formantes, abafado)."""
+    n = int(dur * SR)
+    t = _t(n)
+    f = f0 * (1 + 0.06 * np.sin(2 * np.pi * 0.7 * t) - 0.08 * t / dur)
+    fase = np.cumsum(f / SR)
+    x = 2 * (fase % 1) - 1
+    if aspero:
+        x = x + 0.6 * rng.normal(0, 1, n) * (np.sin(2 * np.pi * fase) > 0)
+    x = _filtro(x.astype(np.float32), "band", [50, 420], 2) + _filtro(x.astype(np.float32), "band", [500, 900], 2) * 0.4
+    env = np.sin(np.pi * np.clip(t / dur, 0, 1)) ** 0.7
+    return (x * env / (np.abs(x).max() + 1e-9)).astype(np.float32)
+
+
+def onda_quebrando(rng, dur):
+    n = int(dur * SR)
+    t = _t(n)
+    x = _filtro(rng.normal(0, 1, n).astype(np.float32), "band", [150, 3500])
+    env = np.minimum(1, t / 0.05) * np.exp(-t / (dur * 0.45))
+    return (x * env / 3).astype(np.float32)
+
+
 def ruido_rosa(n, rng):
     b = rng.normal(0, 1, n).astype(np.float32)
     b = _filtro(b, "low", 1200, 1) * 0.6 + b * 0.08
@@ -119,7 +141,7 @@ def ruido_rosa(n, rng):
 
 
 # ---------------------------------------------------------------------------
-def gera_mix(voz, eventos):
+def gera_mix(voz, rio, eventos):
     dur = C.DURACAO
     M = Mix(dur)
     rng = M.rng
@@ -135,24 +157,39 @@ def gera_mix(voz, eventos):
     M.m += (chiado + zumbido) * nivel_base
 
     # --- abertura --------------------------------------------------------------
-    M.add(0.0, clunk(rng), 0.6)
-    M.add(C.T_PLAY_FIM, tom(1000, C.BLOCOS[0][2] - C.T_PLAY_FIM, ataque=0.002), 0.22)
+    # --- gancho: o rio à noite e o Minhocão rompendo a superfície -------------
+    ng = int(C.T_GANCHO_FIM * SR)
+    tg = _t(ng)
+    agua_g = _filtro(ruido_rosa(ng, rng), "band", [120, 1600]) * 0.8
+    grilos_g = np.sin(2 * np.pi * 4700 * tg) * (np.sin(2 * np.pi * 31 * tg) > 0.2) * \
+        (np.sin(2 * np.pi * 2.2 * tg) > 0.3) * (tg < 0.35)
+    M.add(0.0, (agua_g * 0.3 + grilos_g * 0.05).astype(np.float32))
+    M.add(0.0, gemido(rng, 1.9, 44), 0.35)                 # corpo subindo
+    M.add(0.02, onda_quebrando(rng, 1.4), 0.5)              # água escorrendo do corpo
+    M.add(2.0, onda_quebrando(rng, 1.0), 0.7)               # cabeça rompe a água
+    M.add(3.05, gemido(rng, 0.95, 36, aspero=True), 0.75)   # boca abrindo
+    sobe = tom(60, 0.45) * np.linspace(0, 1, int(0.45 * SR)) ** 2
+    M.add(3.55, sobe.astype(np.float32), 0.5)
+    # --- barras: tom de 1 kHz ---------------------------------------------------
+    M.add(C.T_GANCHO_FIM, clunk(rng), 0.4)
+    M.add(C.T_GANCHO_FIM, tom(1000, C.BLOCOS[1][2] - C.T_GANCHO_FIM, ataque=0.002), 0.2)
     s = M.faixa(C.T_ETIQUETA, C.T_ETIQUETA + 2 / C.FPS)
     M.m[s] = rng.normal(0, 0.3, M.m[s].shape).astype(np.float32)
 
     # --- vinheta + cama de órgão; desafina e desacelera no bloco 3 --------------
     notas = [0, 4, 7, 4, 5, 9, 7, None, 4, 7, 12, 7, 9, 5, 7, None]
     baixo = [-12, -5, -7, -5]
-    vel = lambda tt: np.where(tt < 20.0, 1.0, np.clip(1 - (tt - 20.0) / 3.2, 0.25, 1.0))
+    tb0, tb3 = C.BLOCOS[2][1], C.BLOCOS[3][1]
+    vel = lambda tt: np.where(tt < tb3, 1.0, np.clip(1 - (tt - tb3) / 3.0, 0.25, 1.0))
     def ganho(tt):
-        g = np.where(tt < 9.0, 0.45, 0.10)
-        g = np.where(tt < 6.15, 0.45 * np.clip((tt - 6.0) / 0.15, 0, 1), g)
-        g = np.where(tt >= 20.0, 0.22, g)
+        g = np.where(tt < C.T_VINHETA_FIM, 0.45, 0.09)
+        g = np.where(tt < tb0 + 0.1, 0.45 * np.clip((tt - tb0) / 0.1, 0, 1), g)
+        g = np.where(tt >= tb3, 0.22, g)
         return g
-    M.add(6.0, orgao(6.0, 22.6, notas, baixo, 0.2, vel, ganho, rng), 1.0)
+    M.add(tb0, orgao(tb0, tb3 + 2.6, notas, baixo, 0.2, vel, ganho, rng), 1.0)
     # desafino: segunda voz fora do tom no bloco 3
-    M.add(20.0, orgao(20.0, 22.6, notas, baixo, 0.2,
-                      lambda tt: vel(tt) * 0.97, lambda tt: np.full_like(tt, 0.12), rng), 1.0)
+    M.add(tb3, orgao(tb3, tb3 + 2.6, notas, baixo, 0.2,
+                     lambda tt: vel(tt) * 0.97, lambda tt: np.full_like(tt, 0.12), rng), 1.0)
 
     # --- ícones com bipe -------------------------------------------------------
     from cenas.comum import CTX
@@ -183,15 +220,15 @@ def gera_mix(voz, eventos):
         if p < C.T_CRIATURA_SONAR + 1.0:
             M.add(p + 0.11, ping, 0.06)
     tc0 = C.T_CRIATURA_SONAR
-    nn = int((59.0 - tc0) * SR)
+    nn = int((C.T_MARGEM - tc0) * SR)
     tt = _t(nn)
     eco = (np.sin(2 * np.pi * 55 * tt) + 0.6 * np.sin(2 * np.pi * 56.3 * tt) + 0.3 * np.sin(2 * np.pi * 110.5 * tt))
     eco *= np.clip(tt / 3.0, 0, 1) ** 1.5 * np.minimum(1, (tt[-1] - tt) / 0.05)
     M.add(tc0, eco.astype(np.float32), 0.38)
 
     # --- margem: ambiente do rio ----------------------------------------------
-    c0, c1, c2, c3 = C.T_CORTES_MARGEM
-    t_fim_m = 66.0
+    c0, c1, c2, c3, c4 = C.T_CORTES_MARGEM
+    t_fim_m = C.T_CONTATO
     nn = int((t_fim_m - c0) * SR)
     tt = _t(nn)
     agua = ruido_rosa(nn, rng)
@@ -237,6 +274,7 @@ def gera_mix(voz, eventos):
     onda = _filtro(rng.normal(0, 1, no).astype(np.float32), "low", 900) * \
         np.sin(np.pi * np.clip(_t(no) / 0.9, 0, 1)) ** 2
     M.add(c1 + 0.75, onda * np.minimum(1, (c2 - c1 - 0.75 - _t(no)) * 50).clip(0, 1), 0.5)
+    M.add(c1, gemido(rng, 1.9, 40), 0.25)
     nr = int(0.7 * SR)
     tr = _t(nr)
     ranger = 2 * ((np.cumsum(40 + 35 * np.sin(2 * np.pi * 1.3 * tr)) / SR) % 1) - 1
@@ -252,13 +290,17 @@ def gera_mix(voz, eventos):
         timpacto = c3 + atraso + np.sqrt(2 * (margem.Y_AGUA1 - 8 - y) / 900)
         ns = int(0.3 * SR)
         sp = _filtro(rng.normal(0, 1, ns).astype(np.float32), "band", [300, 2800]) * _env(ns, 0.003, 0.08)
-        M.add(timpacto, sp, 0.35 * min(1, (66.0 - timpacto) * 5))
+        M.add(timpacto, sp, 0.35 * max(0, min(1, (c4 - timpacto) * 5)))
     terra = _filtro(rng.normal(0, 1, nb).astype(np.float32), "band", [1500, 6000]) * \
         (rng.random(nb) < 0.02) * _env(nb, 0.3, 0.6)
     M.add(c3 + 0.2, terra.astype(np.float32) * np.minimum(1, (tb[-1] - tb) / 0.02), 0.5)
+    # corte 5: a cabeça sobe na frente da lua — água despencando + gemido grave
+    M.add(c4, onda_quebrando(rng, 1.6), 0.6)
+    M.add(c4 + 0.1, gemido(rng, 1.8, 38), 0.4)
+    M.add(c4 + 1.3, gemido(rng, 0.7, 33, aspero=True), 0.8)
 
     # --- contato: órgão de tubos debaixo d'água --------------------------------
-    t0c, t1c = 66.0, C.T_PRETO
+    t0c, t1c = C.T_CONTATO, C.T_PRETO
     nc = int((t1c - t0c) * SR)
     tc = _t(nc)
     f0 = 36.7 * (1 + 0.01 * np.sin(2 * np.pi * 0.07 * tc))
@@ -270,7 +312,8 @@ def gera_mix(voz, eventos):
     resp = 0.55 + 0.45 * np.sin(2 * np.pi * tc / 3.4 - np.pi / 2) ** 2  # "respiração" do rio
     drone = _filtro((drone * resp).astype(np.float32), "low", 380)
     drone *= np.clip(tc / 0.8, 0, 1)
-    M.add(t0c, drone.astype(np.float32), 0.55)
+    M.add(t0c, drone.astype(np.float32), 0.45)
+    M.m += rio * 0.75
 
     # --- fim -----------------------------------------------------------------
     M.add(C.T_FIM_TEXTO + 0.1, orgao(0, 1.4, [7, 4, 0, None], [-12], 0.25,
@@ -298,7 +341,7 @@ def gera_mix(voz, eventos):
                 np.sin(2 * np.pi * 55 * _t(ln)).astype(np.float32) * 0.4
 
     # --- silêncio absoluto no corte para preto ---------------------------------
-    sil = M.faixa(C.T_PRETO, C.BLOCOS[-2][2])
+    sil = M.faixa(C.T_PRETO, C.T_FIM)
 
     # estéreo: chiado descorrelacionado nas laterais
     lat = _filtro(rng.normal(0, 1, n).astype(np.float32), "high", 3000) * 0.006

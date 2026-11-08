@@ -2,6 +2,7 @@
 import numpy as np
 
 import config as C
+import criatura
 from .comum import CTX, VT, fonte, nova, desenho, caixa_texto, quebra
 
 
@@ -9,6 +10,16 @@ def cena(t, i):
     img = nova((0, 0, 0))
     if t >= C.T_PRETO:
         return img
+    # nos últimos segundos, a cabeça dele se aproxima no escuro, atrás da onda
+    tl = t - (C.T_CONTATO + 3.6)
+    if tl > 0:
+        z = 1 + tl * 0.45
+        u = np.linspace(0, 1, 50)
+        esp = np.stack([180 + 12 * np.sin(u * 3 + t), C.H + 80 - (C.H + 80 - 250) * u], 1)
+        esp = (esp - esp[-1]) * z + esp[-1]
+        cam = criatura.desenha(esp, lambda v: 40 * z * (0.8 + 0.3 * v), img.size, fase=t * 10,
+                               boca=min(1, tl / 2), escuro=min(0.35, tl * 0.25), luz=(0, -1))
+        img.paste(cam, (0, 0), cam)
     d = desenho(img)
     onda = CTX.get("onda")
     yc = 300

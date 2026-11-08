@@ -4,12 +4,13 @@ from PIL import Image, ImageDraw, ImageFilter
 
 import config as C
 import icones
+import criatura
 from .comum import VT, fonte, desenho, texto, rng_frame
 
 Y_AGUA0, Y_AGUA1 = 262, 472     # faixa do rio
 LUA = (252, 118)
 X_BARR = 286                    # barranco à direita
-HORAS = ["03:40:12", "03:41:37", "03:43:05", "03:44:51"]
+HORAS = ["03:40:12", "03:41:37", "03:43:05", "03:44:51", "03:46:20"]
 
 _rng0 = np.random.default_rng(C.SEED)
 _ARVORES = [(x, 228 + _rng0.integers(-14, 10), _rng0.integers(10, 26)) for x in range(-10, C.W + 20, 14)]
@@ -75,10 +76,13 @@ def barranco(d, t, faltando=0.0):
     # parede de terra à direita
     topo = 318
     poly = [(X_BARR, Y_AGUA1), (X_BARR + 8, topo + 30), (X_BARR + 4, topo), (C.W, topo - 8), (C.W, Y_AGUA1)]
-    d.polygon(poly, fill=g(58))
-    for k in range(10):
-        x = X_BARR + 10 + k * 7
-        d.line([x, topo + 4, x - 3, Y_AGUA1], fill=g(46))
+    d.polygon(poly, fill=g(40))
+    for k in range(22):
+        x = X_BARR + 8 + k * 3.3
+        d.line([x, topo + 4 + (k * 7) % 11, x - 3 + (k % 3), Y_AGUA1], fill=g(30 + (k * 13) % 18))
+    for k in range(12):
+        y = topo + 14 + k * 12
+        d.line([X_BARR + 6, y, C.W, y + (k % 3) - 1], fill=g(33))
     for k in range(0, 76, 3):
         d.line([X_BARR + 4 + k, topo, X_BARR + 2 + k, topo - 6 - (k * 7) % 9], fill=g(16))
 
@@ -127,8 +131,18 @@ def canoa(img, d, cx, cy, ang=0.0, virada=False):
     img.paste(cap, (int(cx - cap.width / 2), int(cy - cap.height / 2)), cap)
 
 
-def corcova(d, t, tc, rng):
-    """Corcova longa e escura passando sob a superfície (maior que a tela)."""
+def corcova(img, d, t, tc, rng):
+    """Corcova longa, anelada, passando rente à superfície (maior que a tela)."""
+    yc = 392
+    x0 = -420 + tc * 170
+    esp = criatura.arco(x0, x0 + 900, yc + 34, 70, deriva=tc * 2)
+    cam = criatura.desenha(esp, 24, img.size, fase=tc * 120, cabeca=False)
+    criatura.compoe(img, cam, yc, submerso=0.25, cor_agua=(26, 26, 26))
+    d = desenho(img)
+    onda_margem(d, tc, rng)
+
+
+def corcova_antiga(d, t, tc, rng):
     yc = 392
     vel = 150.0
     desloc = tc * vel
@@ -154,7 +168,10 @@ def corcova(d, t, tc, rng):
     for k in range(0, len(xs), 3):
         if 1 < amp[k] < 8:
             d.line([xs[k] - 3, yc + 4, xs[k] + 3, yc + 4], fill=g(150))
-    # onda batendo na margem
+    onda_margem(d, tc, rng)
+
+
+def onda_margem(d, tc, rng):
     onda = np.clip((tc - 0.8) / 0.4, 0, 1)
     if onda > 0:
         yw = Y_AGUA1 - 6 - 18 * np.sin(np.pi * onda)
@@ -199,6 +216,34 @@ def desmoronamento(img, d, t, tc, rng):
             d.ellipse([cx - r, cy - r * 0.7, cx + r, cy + r * 0.7], fill=g(90 - 40 * poeira))
 
 
+def revelacao(img, t, tc, rng):
+    """Corte final: a cabeça e o pescoço sobem na frente da lua."""
+    d = desenho(img)
+    sub = min(1.0, tc / 1.3)
+    sub = 1 - (1 - sub) ** 2.2
+    yb = 440
+    yh = yb - 340 * sub
+    u = np.linspace(0, 1, 70)
+    xs = 236 + 22 * np.sin(u * 3.2 + tc * 1.5) * u + 14 * u
+    ys = yb + 60 - (yb + 60 - yh) * u
+    esp = np.stack([xs, ys], 1)
+    boca = np.clip((tc - 1.35) / 0.4, 0, 1)
+    cam = criatura.desenha(esp, lambda v: 17 + 7 * v, img.size, fase=tc * 25, boca=boca,
+                           luz=(0.35, -0.9))
+    # anéis de água em volta da base
+    for k in range(4):
+        rr = ((tc * 40 + k * 18) % 72) + 10
+        d.ellipse([236 - rr * 1.6, yb - rr * 0.25, 236 + rr * 1.6, yb + rr * 0.25], outline=g(120 - rr))
+    criatura.compoe(img, cam, yb, submerso=0.2, cor_agua=(26, 26, 26))
+    d = desenho(img)
+    if tc < 1.3:
+        for k in range(10):
+            x = 226 + k * 3
+            yy = yh + 20 + ((tc * 300 + k * 41) % max(10, yb - yh - 20))
+            d.line([x, yy, x, yy + 7], fill=g(190))
+    canoa(img, d, 110, 404, ang=-3 + np.sin(t * 1.2), virada=True)
+
+
 def cena(t, i):
     rng = rng_frame(i, 31)
     c, tc = corte_atual(t)
@@ -211,7 +256,8 @@ def cena(t, i):
         canoa(img, d, 160, 446, ang=1.5 * np.sin(t * 1.6))
         d.line([(110, 456), (118, 470), (112, 482)], fill=g(60))
     elif c == 1:
-        corcova(d, t, tc, rng)
+        corcova(img, d, t, tc, rng)
+        d = desenho(img)
         bob = 1.5 + 9 * np.clip((tc - 0.7) / 0.4, 0, 1)
         canoa(img, d, 160, 446 - 3 * np.sin(tc * 9) * (bob / 9), ang=bob * np.sin(tc * 7))
         d.line([(110, 456), (118, 470), (112, 482)], fill=g(60))
@@ -219,8 +265,12 @@ def cena(t, i):
         canoa(img, d, 200 + tc * 12, 404, ang=-4 + np.sin(t * 1.2), virada=True)
         # corda solta pendurada na estaca
         d.line([(111, 456), (124, 474), (132, 470)], fill=g(60))
-    else:
+    elif c == 3:
         desmoronamento(img, d, t, tc, rng)
+        d.line([(111, 456), (124, 474), (132, 470)], fill=g(60))
+    else:
+        revelacao(img, t, tc, rng)
+        d = desenho(img)
         d.line([(111, 456), (124, 474), (132, 470)], fill=g(60))
     margem_perto(d, t, rng)
     # leve desfoque de câmera barata
@@ -244,7 +294,7 @@ def osd(t, i, img):
     texto(d, (C.W - 56, C.SAFE_TOP + 2), "REC", f, (230, 255, 230), sombra=(0, 0, 0))
     texto(d, (16, C.SAFE_BOTTOM - 28), "IV  ·  LP", f, (230, 255, 230), sombra=(0, 0, 0))
     if c >= 1 and (i // 7) % 2 == 0:
-        nome = "alerta" if c != 2 else "serpente"
+        nome = "alerta" if c not in (2, 4) else "minhocao"
         icones.cola_icone(img, nome, C.W - 30, C.SAFE_BOTTOM - 22, 26)
 
 

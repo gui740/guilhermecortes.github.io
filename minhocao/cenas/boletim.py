@@ -4,6 +4,7 @@ from PIL import Image, ImageDraw
 
 import config as C
 import icones
+import criatura
 from .comum import (CTX, VT, fonte, nova, desenho, texto, centro, quebra,
                     caixa_texto, embaralha, rng_frame, caminho_rio)
 
@@ -33,19 +34,19 @@ def vinheta(t, i):
         pts = [(x, y0 + 4 * np.sin(x * 0.08 + t * 3 + k)) for x in range(0, C.W + 4, 4)]
         d.line(pts, fill=(120, 200, 210) if k % 2 == 0 else (60, 150, 170), width=3)
     # título deslizando
-    dt = t - 6.0
-    x_off = int(max(0, 1 - dt / 0.6) * -C.W)
+    dt = t - C.BLOCOS[2][1]
+    x_off = int(max(0, 1 - dt / 0.35) * -C.W)
     f1 = fonte(VT, 56)
     f2 = fonte(VT, 26)
     texto(d, (C.W // 2 + x_off + 3, 196 + 3), "BOLETIM", f1, (10, 30, 40), ancora="ma")
     texto(d, (C.W // 2 + x_off, 196), "BOLETIM", f1, (255, 220, 60), ancora="ma")
     texto(d, (C.W // 2 - x_off + 3, 246 + 3), "DO RIO", f1, (10, 30, 40), ancora="ma")
     texto(d, (C.W // 2 - x_off, 246), "DO RIO", f1, (255, 220, 60), ancora="ma")
-    if dt > 0.8:
+    if dt > 0.4:
         d.rectangle([40, 316, C.W - 40, 346], fill=(250, 245, 230))
         centro(d, 318, "— " + C.SUBTITULO + " —", f2, (22, 84, 96))
     # peixinho atravessando
-    px = -60 + (dt / 3.0) * (C.W + 120)
+    px = -60 + (dt / 1.4) * (C.W + 120)
     peixinho(img, px, 440, t)
     peixinho(img, C.W - px * 0.7, 490, t + 1, escala=2)
     return img
@@ -66,24 +67,38 @@ def desenha_mapa(img, t, i, corrupcao=0.0):
     if corrupcao > 0:
         rng = rng_frame(i, 5)
         n = len(pts)
-        prog = np.clip((t - 21.4) / 4.0, 0, 1)
+        prog = np.clip((t - 18.0) / 4.0, 0, 1)
         a = int(n * (0.5 - 0.6 * prog))
         b = int(n * (0.5 + 0.6 * prog))
         a, b = max(0, a), min(n, b)
         if b - a > 2:
             seg = pts[a:b].copy()
-            seg[:, 0] += 5 * np.sin(np.linspace(0, 9, len(seg)) + t * 4)
+            seg[:, 0] += 6 * np.sin(np.linspace(0, 9, len(seg)) + t * 4)
             seg[:, 1] += 3
-            lw = 22 + int(3 * np.sin(t * 3))
-            d.line([tuple(p) for p in seg], fill=(14, 16, 12), width=lw, joint="curve")
-            # o traço continua para fora do mapa
+            # o corpo continua para fora do mapa: maior que o próprio rio
             if prog > 0.6:
-                d.line([(seg[0][0], seg[0][1]), (seg[0][0] - 10, y0 - 4)], fill=(14, 16, 12), width=lw)
-                d.line([(seg[-1][0], seg[-1][1]), (seg[-1][0] + 6, y1 + 4)], fill=(14, 16, 12), width=lw)
+                seg = np.vstack([[seg[0][0] - 10, y0 - 20], seg, [seg[-1][0] + 6, y1 + 20]])
+            cam = criatura.desenha(seg, 11 + 1.5 * np.sin(t * 3), img.size, fase=t * 40,
+                                   cabeca=False, escuro=0.8)
+            img.paste(cam, (0, 0), cam)
+            d = desenho(img)
     # o rio
     cor_rio = AZUL_RIO if corrupcao < 0.5 else (60, 90, 120)
     d.line([tuple(p) for p in pts], fill=cor_rio, width=9, joint="curve")
     d.line([tuple(p) for p in pts], fill=(150, 200, 240), width=2)
+    # correnteza animada (traços descendo o rio)
+    for k in range(0, len(pts) - 6, 24):
+        j = int(k + (t * 60) % 24)
+        if j + 5 < len(pts):
+            d.line([tuple(pts[j]), tuple(pts[j + 5])], fill=(235, 250, 255), width=2)
+    if corrupcao == 0:
+        jb = int((1 - ((t - 6.8) / 20) % 1) * 300) + 40
+        bx, by = pts[min(jb, len(pts) - 1)]
+        ic = icones.icone_escalado("canoa", 20)
+        img.paste(ic, (int(bx - 10), int(by - 16)), ic)
+    # rosa dos ventos
+    texto(d, (x1 - 20, y0 + 6), "N", fonte(VT, 20), (250, 240, 200), ancora="ma")
+    d.polygon([(x1 - 20, y0 + 24), (x1 - 25, y0 + 36), (x1 - 15, y0 + 36)], fill=(250, 240, 200))
     # córrego do Pari entrando pela margem esquerda (oeste)... e lugares
     lugares = [
         ("GUIA", 0.06, +1, "igreja"),
@@ -96,6 +111,8 @@ def desenha_mapa(img, t, i, corrupcao=0.0):
     for nome, s, lado, ic in lugares:
         px, py = pts[int(s * (len(pts) - 1))]
         mx = px + lado * 16
+        pr = 3 + 2 * (0.5 + 0.5 * np.sin(t * 5 + s * 9))
+        d.ellipse([mx - pr - 2, py - pr - 2, mx + pr + 2, py + pr + 2], outline=(250, 230, 80))
         d.ellipse([mx - 3, py - 3, mx + 3, py + 3], fill=(250, 230, 80), outline=(0, 0, 0))
         lbl = nome
         if corrupcao > 0.5 and rng.random() < 0.15:
@@ -195,13 +212,12 @@ def mapa(t, i):
     img = nova(PETROLEO)
     cabecalho(img, t)
     desenha_mapa(img, t, i)
-    nivel = 5.6 + 0.6 * np.clip((t - C.T_VINHETA_FIM) / 9.0, 0, 1)
+    nivel = 5.6 + 0.6 * np.clip((t - C.T_VINHETA_FIM) / 9.0, 0, 1) + 0.05 * np.sin(t * 2)
     regua(img, t, i, f"{nivel:.1f}".replace(".", ",") + " M", nivel)
     icones_boletim(img, t, i)
     _, s = fala_atual("boletim", t)
     if s:
         legenda(img, s)
-    peixinho(img, ((t - 9) * 40) % (C.W + 60) - 50, 504, t, escala=1)
     return img
 
 
@@ -216,7 +232,8 @@ def cena_fora_script(t, i):
     rng = rng_frame(i, 1)
     img = nova((18, 60, 70))
     cabecalho(img, t, corrompido=t > C.T_VOZ_CORRECAO)
-    desenha_mapa(img, t, i, corrupcao=0.4 + 0.6 * np.clip((t - 21) / 3, 0, 1))
+    d0 = desenho(img)
+    desenha_mapa(img, t, i, corrupcao=0.4 + 0.6 * np.clip((t - 18) / 3, 0, 1))
     # régua disparando
     txt, val = "8,4 M", 8.4
     for tt, v in C.T_REGUA:
@@ -231,9 +248,9 @@ def cena_fora_script(t, i):
     regua(img, t, i, txt, val, alerta=True)
     icones_boletim(img, t, i, corrompido=True)
     # serpente piscando sobre a Barra do Pari
-    if t > 23.0 and (i // 5) % 2 == 0:
+    if t > 19.6 and (i // 5) % 2 == 0:
         px, py = caminho_rio()[int(0.36 * 399)]
-        icones.cola_icone(img, "serpente", px - 2, py - 22, 34, rng=rng, tremer=1)
+        icones.cola_icone(img, "minhocao", px - 2, py - 26, 40, rng=rng, tremer=1)
     _, s = fala_atual("lenta", t)
     if s:
         legenda(img, s, (230, 230, 230))

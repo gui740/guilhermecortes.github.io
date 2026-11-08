@@ -14,7 +14,7 @@ _yy, _xx = np.mgrid[0:H, 0:W].astype(np.float32)
 _nx = (_xx - W / 2) / (W / 2)
 _ny = (_yy - H / 2) / (H / 2)
 _r2 = _nx ** 2 + _ny ** 2
-_K = 0.035
+_K = 0.025
 _sx = (_nx * (1 + _K * _r2)) * (W / 2) + W / 2
 _sy = (_ny * (1 + _K * _r2)) * (H / 2) + H / 2
 _fora = (_sx < 0) | (_sx > W - 1) | (_sy < 0) | (_sy > H - 1)
@@ -24,10 +24,10 @@ _x0 = _sx.astype(np.int32)
 _y0 = _sy.astype(np.int32)
 _fx = (_sx - _x0)[..., None]
 _fy = (_sy - _y0)[..., None]
-_VINHETA = np.clip(1.0 - 0.55 * _r2 ** 1.3, 0.0, 1.0).astype(np.float32)[..., None]
+_VINHETA = np.clip(1.0 - 0.28 * _r2 ** 1.5, 0.0, 1.0).astype(np.float32)[..., None]
 _VINHETA[_fora] = 0
 _SCAN = np.ones((H, 1, 1), np.float32)
-_SCAN[1::2] = 0.84
+_SCAN[1::2] = 0.93
 _COLS = np.arange(W)
 
 
@@ -76,7 +76,7 @@ def gradua(img, modo):
         img = lum * np.array([0.25, 1.0, 0.35], np.float32) + np.array([0.0, 0.03, 0.01], np.float32)
     elif modo == "noturna":
         lum = img.mean(-1, keepdims=True)
-        lum = np.clip((lum - 0.04) * 1.25, 0, 1) ** 0.85
+        lum = np.clip((lum - 0.02) * 1.5, 0, 1) ** 0.75
         img = lum * np.array([0.72, 1.0, 0.78], np.float32) + np.array([0.02, 0.05, 0.03], np.float32)
     elif modo == "frio":
         lum = img.mean(-1, keepdims=True)
@@ -108,9 +108,9 @@ def aplica(img, k, modo, i, rng):
         img[..., 2] = np.roll(img[..., 2], -s, axis=1)
 
     # 5. jitter horizontal por linha (com picos)
-    offs = rng.normal(0, 0.5 + 1.6 * k, H)
+    offs = rng.normal(0, 0.3 + 1.0 * k, H)
     offs = uniform_filter1d(offs, 9)
-    if rng.random() < 0.08 + 0.25 * k:
+    if rng.random() < 0.03 + 0.15 * k:
         y0 = rng.integers(0, H - 20)
         hgt = rng.integers(3, 18)
         offs[y0:y0 + hgt] += rng.normal(0, 4 + 10 * k)
@@ -122,18 +122,18 @@ def aplica(img, k, modo, i, rng):
     offs[-9:] += np.linspace(4, 18, 9) * (0.6 + k)
     img = _desloca_linhas(img, np.round(offs))
 
-    vis_banda = (0.15 + 0.6 * k) * banda[:, None]
+    vis_banda = (0.05 + 0.3 * k) * banda[:, None]
     img = img * (1 - 0.25 * vis_banda[..., None]) + \
         vis_banda[..., None] * rng.random((H, W, 1), dtype=np.float32) * 0.7
-    img[-9:] = img[-9:] * 0.6 + rng.random((9, W, 1), dtype=np.float32) * 0.35
+    img[-9:] = img[-9:] * 0.75 + rng.random((9, W, 1), dtype=np.float32) * 0.2
 
     # 4. grão + neve
-    img = img + rng.normal(0, 0.02 + 0.07 * k, (H, W, 1)).astype(np.float32)
-    neve = rng.random((H, W)) < (0.0008 + 0.006 * k)
+    img = img + rng.normal(0, 0.006 + 0.022 * k, (H, W, 1)).astype(np.float32)
+    neve = rng.random((H, W)) < (0.00005 + 0.0006 * k)
     img[neve] = 0.95
 
     # 10. drop-outs (riscos brancos)
-    for _ in range(rng.poisson(0.4 + 2.5 * k)):
+    for _ in range(rng.poisson(0.05 + 0.6 * k)):
         yy = rng.integers(0, H)
         xx = rng.integers(0, W)
         ln = rng.integers(8, 70)
@@ -151,7 +151,7 @@ def leve(img, rng):
     u = uniform_filter1d(u, 3, axis=1)
     v = uniform_filter1d(v, 3, axis=1)
     img = _yuv2rgb(y, u, v)
-    img = img + rng.normal(0, 0.012, (H, W, 1)).astype(np.float32)
+    img = img + rng.normal(0, 0.004, (H, W, 1)).astype(np.float32)
     return np.clip(img, 0, 1).astype(np.float32)
 
 
@@ -183,7 +183,7 @@ def estatica(rng, i):
     base = rng.random((H, W // 2), dtype=np.float32)
     base = np.repeat(base, 2, axis=1)
     linhas = rng.random((H, 1), dtype=np.float32) * 0.35
-    img = np.clip(base * 0.85 + linhas, 0, 1)
+    img = np.clip(base * 0.7 + linhas * 0.8, 0, 1)
     yb = int((i * 37) % H)
     img[max(0, yb - 14):yb + 14] = img[max(0, yb - 14):yb + 14] * 0.4 + 0.5
     img = np.repeat(img[..., None], 3, axis=2)

@@ -12,15 +12,15 @@ FONTES (SIL Open Font License 1.1 — textos em assets/fonts/OFL_*.txt)
   https://fonts.google.com/specimen/Share+Tech+Mono
   https://github.com/google/fonts/tree/main/ofl/sharetechmono
 
-VOZ (TTS offline)
-- Motor: Piper (piper-tts 1.8, licença GPL-3.0) — https://github.com/OHF-Voice/piper1-gpl
-- Modelo: pt_BR-faber-medium — https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR/faber/medium
-  MODEL_CARD: dataset "faber" sob CC0 (https://github.com/OHF-Voice/voice-datasets).
-  ATENÇÃO: o card informa que o modelo foi ajustado (fine-tune) a partir da voz
-  en_US "lessac", cujo dataset de origem (Blizzard 2013) tem licença restrita a uso
-  não comercial. Para uso comercial, troque por espeak-ng (GPL-3.0; fallback já
-  implementado em voz.py) ou por outra voz com licença comercial explícita.
-- Fallback: espeak-ng -v pt-br (GPL-3.0) — https://github.com/espeak-ng/espeak-ng
+VOZ
+- Principal: Gemini TTS (modelo gemini-3.8-flash-tts, voz pré-definida "Charon"),
+  Google AI Studio — https://ai.google.dev/gemini-api/docs/speech-generation
+  Uso sujeito aos Termos da Gemini API (https://ai.google.dev/gemini-api/terms).
+  A chave é lida de GEMINI_API_KEY / GEMINI_API_KEY_FILE e nunca é versionada.
+- Fallback offline: Piper (piper-tts, GPL-3.0) com pt_BR-faber-medium
+  (https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR/faber/medium).
+  Dataset CC0, mas ajustado a partir da voz "lessac" (licença não comercial).
+- Último recurso: espeak-ng -v pt-br (GPL-3.0).
 
 EFEITOS SONOROS
 - Nenhuma amostra externa foi usada. Todos os sons (chiado de fita, zumbido 60 Hz,
@@ -39,3 +39,14 @@ IMAGENS
 
 FOLCLORE
 - Minhocão do Pari: lenda do folclore cuiabano, nascida na Barra do Pari (Cuiabá-MT).
+
+PESQUISA SOBRE A LENDA (base das regras)
+- Portal Amazônia — Lenda do "Minhocão", o terror dos pescadores no Rio Cuiabá
+  https://portalamazonia.com/cultura/lenda-do-minhocao-o-terror-dos-pescadores-no-rio-cuiaba/
+- HNT — Minhocão do Pari, uma lenda de mais de 100 anos (dois poços fundos, canoas
+  batendo na margem, sumiço na enchente de 1974)
+  https://www.hnt.com.br/cuiabanalia/minhocao-do-pari-uma-lenda-de-mais-de-100-anos-que-continua-viva-na-memoria/30538
+- Almanaque Cuiabá — A aterrorizante lenda do Minhocão do Pari (ondas, barrancos, igreja matriz)
+  https://almanaquecuiaba.com.br/39335-2/
+- Outras Lendas — Minhocão do Pari (corpo anelado, cego, guiado por vibrações, três fios de cabelo)
+  https://outraslendas.com.br/minhocao-do-pari/

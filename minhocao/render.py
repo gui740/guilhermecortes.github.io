@@ -34,31 +34,32 @@ def monta_eventos():
         ev.append({"tipo": "glitch", "t": t, "dur": frames / FPS, "sub": sub})
 
     # transições: estática + barra de tracking
-    est(C.T_PLAY_FIM, 4)
-    est(6.0, 6)
-    est(28.0, 8)
-    est(52.0, 8)
-    est(59.0, 6)
+    est(C.T_GANCHO_FIM, 4)
+    est(C.BLOCOS[2][1], 4)
+    est(C.T_REGRAS_INI, 8)
+    for a, _ in C.T_REGRA[1:]:
+        est(a, 3)
+    est(C.T_REGRA_FINAL, 3)
+    est(C.T_SONAR, 8)
+    est(C.T_MARGEM, 6)
     for tc in C.T_CORTES_MARGEM[1:]:
         est(tc, 4)
-    est(66.0, 10)
-    est(73.0, 6)
+    est(C.T_CONTATO, 10)
+    est(C.T_FIM, 6)
     est(C.T_CARTAO_REAL, 4)
     # glitches fortes pontuais
-    gl(20.0, 3, "blocos")
-    gl(22.1, 2, "repete")
-    gl(23.15, 3, "blocos")
-    gl(24.95, 2, "rola")
-    gl(26.1, 1, "inverte")
-    from cenas import regras
-    gl(regras.t_1968() - 0.05, 3, "rola")
-    gl(51.0, 2, "blocos")
-    gl(55.85, 2, "blocos")
-    gl(57.1, 3, "rola")
-    gl(61.9, 2, "repete")
-    gl(65.4, 2, "inverte")
-    gl(68.9, 3, "blocos")
-    gl(70.9, 2, "rola")
+    gl(17.0, 3, "blocos")
+    gl(18.9, 2, "repete")
+    gl(19.8, 3, "blocos")
+    gl(21.3, 2, "rola")
+    gl(22.4, 1, "inverte")
+    gl(C.T_1968 - 0.05, 3, "rola")
+    gl(C.T_SONAR + 3.7, 2, "blocos")
+    gl(C.T_SONAR + 4.8, 3, "rola")
+    gl(C.T_CORTES_MARGEM[1] + 1.0, 2, "repete")
+    gl(C.T_CORTES_MARGEM[3] + 1.1, 1, "inverte")
+    gl(C.T_CONTATO + 2.9, 3, "blocos")
+    gl(C.T_CONTATO + 4.9, 2, "rola")
     # subliminar (2 frames)
     ev.append({"tipo": "subliminar", "t": C.T_SUBLIMINAR1, "dur": 2 / FPS, "texto": C.SUBLIMINAR1})
     # glitches do "ELE CONTA AS CANOAS."
@@ -130,10 +131,9 @@ class Renderizador:
                 arr = fx_vhs.glitch(arr, rng, "blocos")
         if osd is not None and modo != "preto":
             pil = para_pil(arr)
-            camada = Image.new("RGB", pil.size, (0, 0, 0))
+            camada = Image.new("RGBA", pil.size, (0, 0, 0, 0))
             osd(t, i, camada)
-            mascara = Image.fromarray((np.asarray(camada).max(-1) > 8).astype(np.uint8) * 255, "L")
-            pil.paste(camada, (0, 0), mascara)
+            pil.paste(camada, (0, 0), camada)
             arr = fx_vhs.leve(para_np(pil), rng)
         self.anterior = arr
         return para_pil(arr)
@@ -148,10 +148,10 @@ def prepara_audio(eventos):
     import voz
     import audio
     print("» voz (TTS + rádio AM)...")
-    faixa_voz, tempos = voz.gera_voz(int(C.DURACAO * C.SR))
+    faixa_voz, faixa_rio, tempos = voz.gera_voz(int(C.DURACAO * C.SR))
     CTX["voz"] = tempos
     print("» mixagem...")
-    st, mono = audio.gera_mix(faixa_voz, eventos)
+    st, mono = audio.gera_mix(faixa_voz, faixa_rio, eventos)
     CTX["onda"] = mono
     arq = C.SAIDA / "audio_mix.wav"
     audio.salva(st, arq)

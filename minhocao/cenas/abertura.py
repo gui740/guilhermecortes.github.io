@@ -49,8 +49,6 @@ def etiqueta():
 
 
 def cena(t, i):
-    if t < C.T_PLAY_FIM:
-        return tela_vcr(nova(AZUL_VCR), "PLAY")
     if C.T_ETIQUETA <= t < C.T_ETIQUETA + 2 / C.FPS:
         return etiqueta()
     img = nova()
@@ -61,7 +59,7 @@ def cena(t, i):
 
 
 def osd(t, i, img):
-    if t < C.T_PLAY_FIM or C.T_ETIQUETA <= t < C.T_ETIQUETA + 2 / C.FPS:
+    if C.T_ETIQUETA <= t < C.T_ETIQUETA + 2 / C.FPS:
         return
     d = desenho(img)
     f = fonte(VT, 26)

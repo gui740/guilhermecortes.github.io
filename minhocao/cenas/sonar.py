@@ -10,7 +10,7 @@ X0, X1 = 14, 346
 Y_SUP, Y_BASE = 176, 476        # superfície (0 m) e base do gráfico
 PROF_MAX = 10.0                 # metros na base do gráfico
 VEL = 55.0                      # px/s de rolagem
-T0, T1 = 52.0, 59.0
+T0, T1 = C.T_SONAR, C.T_MARGEM
 
 
 def tempos_ping():
@@ -64,7 +64,7 @@ def cena(t, i):
     abaixo = (ys >= yb + 5) & (ys < Y_BASE) & ~sem_fundo[None, :]
     a[:, X0:X1] += abaixo * (rng.random((H, X1 - X0)) < 0.25) * 0.35
     # peixes (arquinhos) antes da criatura
-    for tf, prof in [(51.6, 2.2), (52.4, 1.6), (53.0, 2.8), (53.3, 3.1)]:
+    for tf, prof in [(T0 - 0.4, 2.2), (T0 + 0.4, 1.6), (T0 + 1.0, 2.8), (T0 + 1.3, 3.1)]:
         dx = (tau - tf) * VEL
         m = np.abs(dx) < 6
         yy = _m2y(prof) + (dx / 6) ** 2 * 3
@@ -118,12 +118,12 @@ def cena(t, i):
         d.ellipse([X1 - 16, Y_SUP - 38, X1 - 6, Y_SUP - 28], fill=(160, 255, 170))
     texto(d, (X1 - 60, Y_SUP - 40), "PING", fonte(STM, 14), (60, 200, 90))
     texto(d, (16, Y_BASE + 8), "FUNDO", fonte(STM, 16), (60, 200, 90))
-    texto(d, (16, Y_BASE + 26), "BARRA DO PARI  03:38", fonte(STM, 16), (60, 200, 90))
+    texto(d, (16, Y_BASE + 26), "POÇO DO PARI  03:38", fonte(STM, 16), (60, 200, 90))
     # pop-up de canto
-    if t > 55.0 and (i // 6) % 2 == 0:
-        nome = "alerta" if (i // 24) % 2 == 0 else "serpente"
-        icones.cola_icone(img, nome, C.W - 34, Y_BASE + 26, 30, int((t - 55) * C.FPS),
-                          corrompido=nome == "serpente")
+    if t > T0 + 3.0 and (i // 6) % 2 == 0:
+        nome = "alerta" if (i // 24) % 2 == 0 else "minhocao"
+        icones.cola_icone(img, nome, C.W - 34, Y_BASE + 26, 30, int((t - T0 - 3) * C.FPS),
+                          corrompido=False)
     return img
 
 

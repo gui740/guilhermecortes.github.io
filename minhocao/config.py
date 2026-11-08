@@ -24,54 +24,105 @@ SAFE_TOP = 62
 SAFE_BOTTOM = H - 108  # 532
 
 # --------------------------------------------------------------------------
+# Voz (TTS). Ordem de preferência: Gemini (Google AI Studio) -> Piper -> espeak-ng
+# A chave vem da variável de ambiente GEMINI_API_KEY (nunca versionada).
+# --------------------------------------------------------------------------
+TTS_GEMINI_MODELO = "gemini-3.8-flash-tts"
+TTS_GEMINI_VOZ = "Charon"
+
+# --------------------------------------------------------------------------
+# Regras: (ícone, texto da cartela, duração da cartela em s)
+# Cada regra amarrada a um elemento da lenda do Minhocão do Pari.
+# --------------------------------------------------------------------------
+REGRAS = [
+    ("peixe", "NA PIRACEMA O RIO É DELE. O MINHOCÃO GUARDA OS PEIXES E VIRA A CANOA DE QUEM PESCA.", 4.2),
+    ("cego", "ELE É CEGO. ELE SENTE A VIBRAÇÃO. NÃO BATA O REMO NO CASCO. DESLIGUE O MOTOR.", 4.0),
+    ("tronco", "TRONCO PRETO, LISO E ANELADO NÃO É TRONCO. SÃO AS COSTAS DELE. NÃO PISE.", 4.0),
+    ("redemoinho", "NÃO PESQUE NOS DOIS POÇOS FUNDOS DO PARI. É ALI QUE ELE DORME.", 3.8),
+    ("canoa", "CANOAS AMARRADAS BATENDO UMA NA OUTRA SEM VENTO? ELE ESTÁ EMBAIXO. VÁ PARA CASA.", 4.2),
+    ("barranco", "BARRANCO CAINDO SEM CHUVA É ELE PASSANDO. SAIA DA MARGEM.", 3.6),
+    ("igreja", "ELE ESTÁ PRESO SOB A IGREJA MATRIZ POR TRÊS FIOS DE CABELO DE NOSSA SENHORA. DOIS JÁ ARREBENTARAM.", 5.2),
+]
+# Versões faladas pelo locutor (pontuação para o TTS)
+REGRAS_FALA = [
+    "Regra um. Na piracema, o rio é dele. O Minhocão guarda os peixes, e vira a canoa de quem pesca.",
+    "Regra dois. Ele é cego. Ele sente a vibração. Não bata o remo no casco. Desligue o motor.",
+    "Regra três. Tronco preto, liso e anelado não é tronco. São as costas dele. Não pise.",
+    "Regra quatro. Não pesque nos dois poços fundos do Pari. É ali que ele dorme.",
+    "Regra cinco. Canoas amarradas batendo uma na outra, sem vento? Ele está embaixo. Vá para casa.",
+    "Regra seis. Barranco caindo sem chuva é ele passando. Saia da margem.",
+    "Regra sete. Ele está preso sob a igreja matriz, por três fios de cabelo de Nossa Senhora. Dois já arrebentaram.",
+]
+REGRA_FINAL = "NUNCA REFORME A IGREJA."
+REGRA_FINAL_FALA = "Nunca reforme a igreja."
+REGRA_1968 = "JÁ DERRUBARAM UMA EM 1968."
+
+# --------------------------------------------------------------------------
 # Linha do tempo (blocos). (nome, início, fim)
 # --------------------------------------------------------------------------
-T_PLAY_FIM = 1.2
+T_GANCHO_FIM = 4.0
+T_REGRAS_INI = 24.0
+T_REGRAS0 = T_REGRAS_INI + 0.2
+_t = T_REGRAS0
+T_REGRA = []
+for _ic, _tx, _d in REGRAS:
+    T_REGRA.append((_t, _t + _d))
+    _t += _d
+T_REGRA_FINAL = _t + 0.1
+T_1968 = T_REGRA_FINAL + 1.6
+T_REGRAS_FIM = round(T_1968 + 2.0, 2)
+
+T_SONAR = T_REGRAS_FIM
+T_MARGEM = T_SONAR + 6.5
+T_CORTES_MARGEM = [T_MARGEM + k * 2.0 for k in range(5)]
+T_CONTATO = T_MARGEM + 10.4
+T_PRETO = T_CONTATO + 6.2
+T_FIM = T_PRETO + 0.6
+
 BLOCOS = [
-    ("abertura", 0.0, 6.0),
-    ("boletim", 6.0, 20.0),
-    ("fora_script", 20.0, 28.0),
-    ("regras", 28.0, 52.0),
-    ("sonar", 52.0, 59.0),
-    ("margem", 59.0, 66.0),
-    ("contato", 66.0, 73.0),
-    ("fim", 73.0, 81.0),
+    ("gancho", 0.0, T_GANCHO_FIM),
+    ("abertura", T_GANCHO_FIM, 5.4),
+    ("boletim", 5.4, 17.0),
+    ("fora_script", 17.0, T_REGRAS_INI),
+    ("regras", T_REGRAS_INI, T_REGRAS_FIM),
+    ("sonar", T_SONAR, T_MARGEM),
+    ("margem", T_MARGEM, T_CONTATO),
+    ("contato", T_CONTATO, T_FIM),
+    ("fim", T_FIM, T_FIM + 8.3),
 ]
 DURACAO = BLOCOS[-1][2]
 
 # Sub-tempos ---------------------------------------------------------------
-T_ETIQUETA = 5.40            # flash de 2 frames
-T_VINHETA_FIM = 9.0          # vinheta -> mapa
-T_VOZ1 = 9.4                 # início da fala do locutor (bloco 2)
-T_REGUA = [(20.0, "8,4"), (21.6, "11,7"), (23.2, None)]  # None = embaralhado
-T_VOZ_LENTA = 20.6           # "boa... pescaria..."
-T_VOZ_CORRECAO = 23.5        # "Correção. ..."
-T_SUBLIMINAR1 = 27.62
+T_VOZ_GANCHO = 0.5
+T_ETIQUETA = 5.05            # flash de 2 frames
+T_VINHETA_FIM = 6.8          # vinheta -> mapa
+T_VOZ1 = 7.0                 # início da fala do locutor (bloco 2)
+SLOT_VOZ1 = 9.6              # cabe até ~16,6 s
+T_REGUA = [(17.0, "8,4"), (18.4, "11,7"), (19.8, None)]  # None = embaralhado
+T_VOZ_LENTA = 17.5
+T_VOZ_CORRECAO = 20.4
+T_SUBLIMINAR1 = 23.45
 
-T_REGRAS0 = 29.0             # primeira regra
-DT_REGRA = 2.85              # ~3 s por regra
-CPS_REGRA = 46.0             # caracteres por segundo da máquina de escrever
-T_1968_ATRASO = 1.0          # depois que a regra 7 termina de digitar
-
-T_SONAR_LEITURAS = [(52.0, "4 M"), (54.6, "12 M"), (55.9, "37 M"), (57.1, "---")]
-T_CRIATURA_SONAR = 53.6
-T_CORTES_MARGEM = [59.0, 60.75, 62.5, 64.25]
+T_SONAR_LEITURAS = [(T_SONAR, "4 M"), (T_SONAR + 2.5, "12 M"), (T_SONAR + 3.7, "37 M"), (T_SONAR + 4.8, "---")]
+T_CRIATURA_SONAR = T_SONAR + 1.4
 
 T_LEGENDAS = [
-    (66.4, "[SOM NÃO IDENTIFICADO — LEITO DO RIO]"),
-    (68.0, "O RIO É DOS PEIXES ATÉ A ÁGUA BAIXAR."),
-    (70.0, "VOLTE EM FEVEREIRO."),
+    (T_CONTATO + 0.3, "[SOM NÃO IDENTIFICADO — POÇO DO PARI]"),
+    (T_CONTATO + 1.6, "O RIO É DOS PEIXES ATÉ A ÁGUA BAIXAR."),
+    (T_CONTATO + 4.0, "VOLTE EM FEVEREIRO."),
 ]
-T_PRETO = 72.4               # silêncio absoluto + preto (0,6 s)
 
-T_FIM_TEXTO = 73.0
-T_CARTAO_REAL = 74.6         # 4 s limpos
-T_CARTAO_FICCAO = 78.6       # 2 s
-T_STOP = 80.6                # ■ STOP + tela azul ~10 frames
+T_FIM_TEXTO = T_FIM
+T_CARTAO_REAL = T_FIM + 1.6       # 4 s limpos
+T_CARTAO_FICCAO = T_CARTAO_REAL + 4.0
+T_STOP = T_CARTAO_FICCAO + 2.0    # ■ STOP + tela azul ~10 frames
 
 # --------------------------------------------------------------------------
 # Textos
 # --------------------------------------------------------------------------
+GANCHO_FALA = "Se você pesca no Rio Cuiabá... não pule este aviso."
+GANCHO = ["SE VOCÊ PESCA NO RIO CUIABÁ,", "NÃO PULE ESTE AVISO."]
+
 EMISSORA = ["TV RIBEIRINHA", "CANAL 6", "CUIABÁ MT"]
 TIMESTAMP = "SEX 15 MAR 1974 05:12"
 ETIQUETA = "BOLETIM — NÃO EXIBIR"
@@ -94,30 +145,22 @@ SUBLIMINAR1 = "ELE NÃO FOI EMBORA NA ENCHENTE."
 
 CABECALHO_REGRAS = ["SERVIÇO DE AVISOS AOS PESCADORES", "RIO CUIABÁ"]
 LEIA = "LEIA ATÉ O FIM"
-REGRAS = [
-    ("peixe", "É PIRACEMA. O RIO ESTÁ FECHADO. QUEM PESCA AGORA, PESCA PARA ELE."),
-    ("tronco", "NÃO PISE EM TRONCO SUBMERSO. SE O TRONCO RESPIRAR, NÃO CORRA. FIQUE PARADO ATÉ ELE AFUNDAR."),
-    ("tronco_vermelho", "TRONCO QUE BOIA CONTRA A CORRENTEZA NÃO É TRONCO."),
-    ("barranco", "SE O BARRANCO CAIR SEM CHUVA, AFASTE A CANOA DA MARGEM. ELE ESTÁ ALARGANDO O RIO."),
-    ("redemoinho", "REBOJO PERTO DA GUIA: NÃO REME PARA FORA. REME PARA TRÁS."),
-    ("estrela", "PINTE ESTRELAS NO CASCO E LEVE CACHAÇA. NÃO É PARA ELE. É PARA OS OUTROS DO RIO."),
-    ("igreja", "REGRA 7: NUNCA REFORME A IGREJA."),
-]
-REGRA_1968 = "JÁ DERRUBARAM UMA EM 1968."
+
+FALA_CONTATO = "O rio é dos peixes até a água baixar. Volte em fevereiro."
 
 FIM = ["FIM DO BOLETIM.", "BOA NOITE, CUIABÁ."]
-FIM_GLITCH = "ELE CONTA AS CANOAS."
+FIM_GLITCH = "FALTA UM FIO."
 
 CARTAO_REAL = [
-    "O MINHOCÃO DO PARI É UMA LENDA DO FOLCLORE CUIABANO, NASCIDA NA BARRA DO PARI.",
+    "O MINHOCÃO DO PARI É UMA LENDA DO FOLCLORE CUIABANO, NASCIDA NA BARRA DO PARI. DIZEM QUE ELE SUMIU NA ENCHENTE DE 1974.",
     "A PIRACEMA É REAL: DURANTE O DEFESO, A PESCA É PROIBIDA NOS RIOS DE MATO GROSSO "
     "PARA PROTEGER A REPRODUÇÃO DOS PEIXES. CONSULTE AS DATAS NA SEMA-MT.",
 ]
 CARTAO_FICCAO = "OBRA DE FICÇÃO."
 
-# Intensidade VHS por bloco (seção 5 do roteiro)
+# Intensidade VHS por bloco (mais limpa que a v1, a pedido)
 FX_INTENSIDADE = {
-    "abertura": 0.4, "boletim": 0.3, "fora_script": 0.5, "regras": 0.5,
-    "sonar": 0.75, "margem": 0.75, "contato": 0.9, "fim": 0.5,
-    "glitch": 1.0, "cartao": 0.1,
+    "gancho": 0.35, "abertura": 0.3, "boletim": 0.15, "fora_script": 0.3, "regras": 0.2,
+    "sonar": 0.35, "margem": 0.35, "contato": 0.45, "fim": 0.3,
+    "glitch": 0.9, "cartao": 0.05,
 }
