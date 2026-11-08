@@ -28,20 +28,32 @@ SAFE_BOTTOM = H - 108  # 532
 # A chave vem da variável de ambiente GEMINI_API_KEY (nunca versionada).
 # --------------------------------------------------------------------------
 TTS_GEMINI_MODELO = "gemini-3.8-flash-tts"
+# Free tier: ~10 falas/dia por modelo. Ao estourar, passa para o próximo (mesma voz).
+TTS_GEMINI_RESERVA = ["gemini-2.5-flash-preview-tts", "gemini-3.1-flash-tts-preview",
+                      "gemini-3.8-flash-lite-tts"]
+# Modelo preferido por grupo de falas (mantém cada grupo com o mesmo timbre).
+# Só o texto é enviado: instruções de estilo no prompt são lidas em voz alta por
+# alguns modelos. O estilo (grave, rádio AM, voz do rio) é feito no voz.py.
+TTS_MODELO_GRUPO = {
+    "locutor": "gemini-3.8-flash-lite-tts",
+    "regras": "gemini-3.1-flash-tts-preview",
+    "especial": "gemini-2.5-flash-preview-tts",
+}
 TTS_GEMINI_VOZ = "Charon"
 
 # --------------------------------------------------------------------------
 # Regras: (ícone, texto da cartela, duração da cartela em s)
 # Cada regra amarrada a um elemento da lenda do Minhocão do Pari.
 # --------------------------------------------------------------------------
+# Durações das cartelas = voz.duracoes_regras() (fala cabe com no máx. 1,25x)
 REGRAS = [
-    ("peixe", "NA PIRACEMA O RIO É DELE. O MINHOCÃO GUARDA OS PEIXES E VIRA A CANOA DE QUEM PESCA.", 4.2),
-    ("cego", "ELE É CEGO. ELE SENTE A VIBRAÇÃO. NÃO BATA O REMO NO CASCO. DESLIGUE O MOTOR.", 4.0),
-    ("tronco", "TRONCO PRETO, LISO E ANELADO NÃO É TRONCO. SÃO AS COSTAS DELE. NÃO PISE.", 4.0),
-    ("redemoinho", "NÃO PESQUE NOS DOIS POÇOS FUNDOS DO PARI. É ALI QUE ELE DORME.", 3.8),
-    ("canoa", "CANOAS AMARRADAS BATENDO UMA NA OUTRA SEM VENTO? ELE ESTÁ EMBAIXO. VÁ PARA CASA.", 4.2),
-    ("barranco", "BARRANCO CAINDO SEM CHUVA É ELE PASSANDO. SAIA DA MARGEM.", 3.6),
-    ("igreja", "ELE ESTÁ PRESO SOB A IGREJA MATRIZ POR TRÊS FIOS DE CABELO DE NOSSA SENHORA. DOIS JÁ ARREBENTARAM.", 5.2),
+    ("peixe", "NA PIRACEMA O RIO É DELE. O MINHOCÃO GUARDA OS PEIXES E VIRA A CANOA DE QUEM PESCA.", 6.04),
+    ("cego", "ELE É CEGO. ELE SENTE A VIBRAÇÃO. NÃO BATA O REMO NO CASCO. DESLIGUE O MOTOR.", 4.7),
+    ("tronco", "TRONCO PRETO, LISO E ANELADO NÃO É TRONCO. SÃO AS COSTAS DELE. NÃO PISE.", 5.44),
+    ("redemoinho", "NÃO PESQUE NOS DOIS POÇOS FUNDOS DO PARI. É ALI QUE ELE DORME.", 4.07),
+    ("canoa", "CANOAS AMARRADAS BATENDO UMA NA OUTRA SEM VENTO? ELE ESTÁ EMBAIXO. VÁ PARA CASA.", 4.82),
+    ("barranco", "BARRANCO CAINDO SEM CHUVA É ELE PASSANDO. SAIA DA MARGEM.", 3.8),
+    ("igreja", "ELE ESTÁ PRESO SOB A IGREJA MATRIZ POR TRÊS FIOS DE CABELO DE NOSSA SENHORA. DOIS JÁ ARREBENTARAM.", 6.07),
 ]
 # Versões faladas pelo locutor (pontuação para o TTS)
 REGRAS_FALA = [
@@ -108,8 +120,8 @@ T_CRIATURA_SONAR = T_SONAR + 1.4
 
 T_LEGENDAS = [
     (T_CONTATO + 0.3, "[SOM NÃO IDENTIFICADO — POÇO DO PARI]"),
-    (T_CONTATO + 1.6, "O RIO É DOS PEIXES ATÉ A ÁGUA BAIXAR."),
-    (T_CONTATO + 4.0, "VOLTE EM FEVEREIRO."),
+    (T_CONTATO + 1.0, "O RIO É DOS PEIXES ATÉ A ÁGUA BAIXAR."),
+    (T_CONTATO + 3.4, "VOLTE EM FEVEREIRO."),
 ]
 
 T_FIM_TEXTO = T_FIM

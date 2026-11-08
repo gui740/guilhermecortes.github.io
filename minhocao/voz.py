@@ -25,18 +25,9 @@ import config as C
 MODELO_PIPER = C.ASSETS / "voz" / "pt_BR-faber-medium.onnx"
 CACHE = C.SAIDA / "cache_voz"
 
-ESTILO_LOCUTOR = ("Fale em português do Brasil como um locutor de rádio AM dos anos 70, "
-                  "voz masculina grave, simpática e tranquila, ritmo firme: ")
-ESTILO_GANCHO = ("Fale em português do Brasil, voz masculina grave, baixa e tensa, quase um sussurro "
-                 "urgente, como um aviso sério: ")
-ESTILO_LENTO = ("Fale em português do Brasil muito devagar, arrastado e sem emoção, "
-                "como uma fita perdendo velocidade: ")
-ESTILO_SECO = ("Fale em português do Brasil, voz masculina grave, seca, fria e direta, "
-               "sem nenhuma simpatia: ")
-ESTILO_REGRA = ("Fale em português do Brasil como um aviso oficial de emergência, voz masculina grave, "
-                "monótona e solene, ritmo constante: ")
-ESTILO_RIO = ("Fale em português do Brasil, voz masculina muito grave, lenta e profunda, "
-              "como se viesse do fundo de um rio: ")
+ESTILO_LOCUTOR = ESTILO_LENTO = ESTILO_SECO = "locutor"
+ESTILO_GANCHO = ESTILO_RIO = "especial"
+ESTILO_REGRA = "regras"
 
 
 # ---------------------------------------------------------------------------
@@ -50,14 +41,32 @@ def _chave_gemini():
     return k
 
 
-def _gemini(texto, estilo, arq):
+_ESGOTADOS = set()
+
+
+def _gemini(texto, grupo, arq):
+    pref = C.TTS_MODELO_GRUPO.get(grupo, C.TTS_GEMINI_MODELO)
+    ordem = [pref] + [m for m in [C.TTS_GEMINI_MODELO] + C.TTS_GEMINI_RESERVA if m != pref]
+    for modelo in ordem:
+        if modelo in _ESGOTADOS:
+            continue
+        r = _gemini_modelo(texto, arq, modelo)
+        if r == "esgotado":
+            print(f"  cota diária de {modelo} esgotada; tentando o próximo modelo")
+            _ESGOTADOS.add(modelo)
+            continue
+        return r
+    return False
+
+
+def _gemini_modelo(texto, arq, modelo):
     chave = _chave_gemini()
     if not chave:
         return False
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
-           f"{C.TTS_GEMINI_MODELO}:generateContent")
+           f"{modelo}:generateContent")
     corpo = {
-        "contents": [{"parts": [{"text": estilo + texto}]}],
+        "contents": [{"parts": [{"text": texto}]}],
         "generationConfig": {
             "responseModalities": ["AUDIO"],
             "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": C.TTS_GEMINI_VOZ}}},
@@ -76,9 +85,13 @@ def _gemini(texto, estilo, arq):
             else:  # PCM 16-bit mono 24 kHz
                 x, sr = np.frombuffer(raw, "<i2").astype(np.float32) / 32768, 24000
             sf.write(str(arq), x, sr)
+            print(f"    ok ({modelo}, {len(x) / sr:.1f}s)")
             return True
         except urllib.error.HTTPError as e:
-            msg = e.read().decode()[:200]
+            msg = e.read().decode()
+            if e.code == 429 and "PerDay" in msg:
+                return "esgotado"
+            msg = msg[:200]
             if e.code in (429, 500, 503):
                 espera = 8 * (tentativa + 1)
                 print(f"  gemini {e.code}, tentando de novo em {espera}s...")
@@ -116,7 +129,7 @@ def sintetiza(texto, estilo):
     """Devolve o caminho do WAV (com cache por conteúdo)."""
     CACHE.mkdir(parents=True, exist_ok=True)
     tem_chave = bool(_chave_gemini())
-    chave = hashlib.sha1(f"{C.TTS_GEMINI_MODELO}|{C.TTS_GEMINI_VOZ}|{estilo}|{texto}|{tem_chave}".encode()).hexdigest()[:16]
+    chave = hashlib.sha1(f"v2|{C.TTS_GEMINI_VOZ}|{estilo}|{texto}|{tem_chave}".encode()).hexdigest()[:16]
     arq = CACHE / f"{chave}.wav"
     if arq.exists():
         return arq
@@ -176,6 +189,23 @@ def atempo(x, fator):
                         "-af", ",".join(filtros), "-f", "f32le", "-"],
                        input=x.astype(np.float32).tobytes(), capture_output=True, check=True)
     return np.frombuffer(p.stdout, np.float32).copy()
+
+
+def corta_prefixo(x, ini_min=0.5, ini_max=1.3, pausa_min=0.35):
+    """Remove o "Regra N." falado: corta na 1ª pausa longa logo no começo."""
+    bloco = int(0.01 * C.SR)
+    n = len(x) // bloco
+    v = np.sqrt((x[: n * bloco].reshape(n, bloco) ** 2).mean(1)) > 0.02
+    ini = int(np.argmax(v))
+    s = None
+    for i in range(ini, min(n, ini + int(ini_max / 0.01) + 80)):
+        if not v[i] and s is None:
+            s = i
+        elif v[i] and s is not None:
+            if (i - s) * 0.01 >= pausa_min and ini_min <= (s - ini) * 0.01 <= ini_max:
+                return x[max(0, i - 3) * bloco:]
+            s = None
+    return x
 
 
 def cabe(x, slot):
@@ -248,7 +278,7 @@ def gera_voz(n_amostras):
     clipes = [apara(_carrega(sintetiza(txt, ESTILO_LOCUTOR))) for txt, _ in C.FALAS_BOLETIM]
     gap = 0.28
     total = sum(len(c) for c in clipes) / C.SR + gap * (len(clipes) - 1)
-    fator = max(1.0, total / C.SLOT_VOZ1)
+    fator = max(1.0, total / (C.SLOT_VOZ1 - 0.4))
     t = C.T_VOZ1
     for (txt, _), c in zip(C.FALAS_BOLETIM, clipes):
         c = radio_am(atempo(c, fator), rng)
@@ -257,15 +287,18 @@ def gera_voz(n_amostras):
         t = fim + gap
 
     # repetição lenta e grave, com picotes
-    x = clipe(C.FALA_LENTA, ESTILO_LENTO, 2.4 / 1.30)
-    x = radio_am(muda_tom(x, -4.5), rng, wow=3.0, picote=0.1)
+    x = apara(_carrega(sintetiza(C.FALA_LENTA, ESTILO_LENTO)), max_pausa=0.5)
+    x = muda_tom(x, -4.5)
+    if len(x) / C.SR < 2.2:  # arrasta a fita
+        x = atempo(x, max(0.55, len(x) / C.SR / 2.3))
+    x = radio_am(cabe(x, 2.4), rng, wow=3.0, picote=0.1)
     fim = coloca(x, C.T_VOZ_LENTA, 0.85)
     tempos["lenta"].append((C.T_VOZ_LENTA, fim, C.FALA_LENTA))
 
     # correção, seca
     clipes = [apara(_carrega(sintetiza(txt, ESTILO_SECO))) for txt in C.FALA_CORRECAO]
     slot = C.T_SUBLIMINAR1 - C.T_VOZ_CORRECAO - 0.1
-    total = sum(len(c) for c in clipes) / C.SR / 1.12 + 0.2 * 2
+    total = sum(len(c) for c in clipes) / C.SR * 1.123 + 0.2 * 2
     fator = max(1.0, total / slot)
     t = C.T_VOZ_CORRECAO
     for txt, c in zip(C.FALA_CORRECAO, clipes):
@@ -277,10 +310,10 @@ def gera_voz(n_amostras):
     # regras, uma por cartela
     for k, fala in enumerate(C.REGRAS_FALA):
         a, b = C.T_REGRA[k]
-        x = clipe(fala, ESTILO_REGRA, b - a - 0.35)
+        x = cabe(apara(corta_prefixo(_carrega(sintetiza(fala, ESTILO_REGRA)))), b - a - 0.3)
         x = radio_am(x, rng, wow=0.5, banda=(200, 4200), drive=1.8)
-        fim = coloca(x, a + 0.15, 0.85)
-        tempos["regras"].append((a + 0.15, fim, fala))
+        fim = coloca(x, a + 0.2, 0.85)
+        tempos["regras"].append((a + 0.2, fim, fala))
     x = clipe(C.REGRA_FINAL_FALA, ESTILO_SECO, C.T_1968 - C.T_REGRA_FINAL - 0.2)
     x = radio_am(muda_tom(x, -1.5), rng, wow=0.8, banda=(200, 4200))
     fim = coloca(x, C.T_REGRA_FINAL + 0.1, 0.95)
@@ -288,9 +321,9 @@ def gera_voz(n_amostras):
 
     # a voz do rio (contato)
     t0 = C.T_LEGENDAS[1][0]
-    slot = (C.T_PRETO - t0 - 0.9) / 1.5
+    slot = (C.T_PRETO - t0 - 0.7) / 1.335
     x = clipe(C.FALA_CONTATO, ESTILO_RIO, slot)
-    x = voz_do_rio(muda_tom(x, -7.0), rng)
+    x = voz_do_rio(muda_tom(x, -5.0), rng)
     fim = coloca(x, t0, 1.0, rio)
     tempos["contato"].append((t0, fim, C.FALA_CONTATO))
     return faixa, rio, tempos
@@ -301,3 +334,12 @@ if __name__ == "__main__":
     for k, v in tp.items():
         for ini, fim, txt in v:
             print(f"{k:9s} {ini:6.2f}-{fim:6.2f}  {txt}")
+
+
+def duracoes_regras(acel=1.25):
+    """Duração sugerida de cada cartela para a fala caber com no máximo `acel`x."""
+    out = []
+    for fala in C.REGRAS_FALA:
+        x = apara(corta_prefixo(_carrega(sintetiza(fala, ESTILO_REGRA))))
+        out.append(round(max(3.8, len(x) / C.SR / acel + 0.5), 2))
+    return out
