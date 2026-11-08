@@ -1,0 +1,41 @@
+CRÉDITOS E LICENÇAS — "AVISO AOS PESCADORES: RIO CUIABÁ"
+=========================================================
+
+FONTES (SIL Open Font License 1.1 — textos em assets/fonts/OFL_*.txt)
+- VT323 — Peter Hull
+  https://fonts.google.com/specimen/VT323
+  https://github.com/google/fonts/tree/main/ofl/vt323
+- IBM Plex Mono Bold — IBM Corp.
+  https://fonts.google.com/specimen/IBM+Plex+Mono
+  https://github.com/google/fonts/tree/main/ofl/ibmplexmono
+- Share Tech Mono — Carrois Type Design
+  https://fonts.google.com/specimen/Share+Tech+Mono
+  https://github.com/google/fonts/tree/main/ofl/sharetechmono
+
+VOZ (TTS offline)
+- Motor: Piper (piper-tts 1.8, licença GPL-3.0) — https://github.com/OHF-Voice/piper1-gpl
+- Modelo: pt_BR-faber-medium — https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR/faber/medium
+  MODEL_CARD: dataset "faber" sob CC0 (https://github.com/OHF-Voice/voice-datasets).
+  ATENÇÃO: o card informa que o modelo foi ajustado (fine-tune) a partir da voz
+  en_US "lessac", cujo dataset de origem (Blizzard 2013) tem licença restrita a uso
+  não comercial. Para uso comercial, troque por espeak-ng (GPL-3.0; fallback já
+  implementado em voz.py) ou por outra voz com licença comercial explícita.
+- Fallback: espeak-ng -v pt-br (GPL-3.0) — https://github.com/espeak-ng/espeak-ng
+
+EFEITOS SONOROS
+- Nenhuma amostra externa foi usada. Todos os sons (chiado de fita, zumbido 60 Hz,
+  tom de 1 kHz, órgão eletrônico, máquina de escrever, bipes, água do rio, sapos,
+  grilos, motor de rabeta, madeira rangendo, onda, desmoronamento, sonar e o drone
+  do "contato") são sintetizados por código em audio.py. Autoria própria; podem
+  ser considerados CC0.
+
+IMAGENS
+- Nenhuma foto ou vídeo de terceiros. Rio, margens, canoa, mapa, ícones e a
+  criatura são desenhados por código (numpy/Pillow). A pasta assets/fotos/ (opcional)
+  só deve conter fotos do próprio usuário.
+- "TV Ribeirinha — Canal 6" e o "Serviço de Avisos aos Pescadores" são fictícios.
+  A menção à SEMA-MT no cartão final é apenas uma orientação informativa ao público
+  (sem logo ou identidade visual do órgão).
+
+FOLCLORE
+- Minhocão do Pari: lenda do folclore cuiabano, nascida na Barra do Pari (Cuiabá-MT).
