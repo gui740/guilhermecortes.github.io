@@ -1,0 +1,6 @@
+build/
+vo/tests/
+vo/lines38/
+vo/lite/
+*.mp4
+__pycache__/

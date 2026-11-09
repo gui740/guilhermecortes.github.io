@@ -24,3 +24,22 @@ Tempos são alvo; o ajuste fino vem da duração real da voz.
 Legendas: palavra por palavra, fonte pixel grande, faixa entre ~28% e ~70% da altura (fora da UI do Reels), palavra ativa em amarelo/vermelho. Marca: "@terroremmatogrosso" pequena no topo, abaixo da HUD.
 
 Total de narração: ~165 palavras, ritmo lento com pausas → ~55–60 s de voz.
+
+---
+## Versão final renderizada (70,8 s)
+Cortes feitos para caber em ~70 s (TTS ficou mais lento que o previsto):
+- Removida a fala "Ele pegou a lamparina e entrou no mato." (a imagem mostra).
+- L05 termina em "…nem calcanhar." / L12 termina em "…O umbigo." (o card de BOSS mostra "UMBIGO BRANCO").
+- Gancho reforçado: texto grande palavra-a-palavra desde o frame 0 + olho vermelho refletido na poça da pegada (0,6 s) + "NÃO RESPONDE" com tremor.
+- Voz: Gemini `gemini-3.8-flash-lite-tts`, voz Enceladus, take único cortado por linha (cota diária do 3.8 Flash esgotou), pausas comprimidas e +15% de velocidade. Grito "Ô, compadreee!": voz Algenib com eco e pan.
+
+Tempos finais: build/timing.json (gerado por src/timeline.py).
+
+## Como reproduzir
+```
+export GEMINI_API_KEY=...          # nunca salvar em arquivo
+TTS_MODEL=gemini-3.8-flash-lite-tts TEMPO=1.15 python3 src/vo.py   # narração + alinhamento
+python3 src/timeline.py && python3 src/audio.py
+python3 src/render.py --out build/video.mp4
+ffmpeg -i build/video.mp4 -i build/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest pe_de_garrafa.mp4
+```
