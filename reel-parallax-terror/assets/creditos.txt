@@ -1,0 +1,167 @@
+CRÉDITOS E ORIGEM DOS ARQUIVOS — Reel '3 filmes de terror que ninguém te indicou' (@talking_horror)
+
+IMAGENS USADAS NO VÍDEO
+(stills/pôsteres: material promocional dos filmes obtido via The Movie Database — TMDB;
+ direitos reservados aos respectivos produtores/distribuidores de Possum (2018), Calvaire (2004) e Hagazussa (2017).
+ Este produto usa a API/imagens do TMDB mas não é endossado nem certificado pelo TMDB.)
+
+  [possum] maurice   <- backdrop_3lt332ZgnoNwZ5xFLDeHv66qoHs.jpg
+      https://image.tmdb.org/t/p/original/3lt332ZgnoNwZ5xFLDeHv66qoHs.jpg
+      TMDB movie/472269 backdrops
+  [possum] philip2   <- backdrop_4NBJ96tywsom53Ax2z8ncRIAbvQ.jpg
+      https://image.tmdb.org/t/p/original/4NBJ96tywsom53Ax2z8ncRIAbvQ.jpg
+      TMDB movie/472269 backdrops
+  [possum] casa      <- backdrop_65mPgkfC6cCKUktc2R5qWkEsqxX.jpg
+      https://image.tmdb.org/t/p/original/65mPgkfC6cCKUktc2R5qWkEsqxX.jpg
+      TMDB movie/472269 backdrops
+  [possum] campo     <- backdrop_8lV22mZEWRZKDcselLnnbLSsW8c.jpg
+      https://image.tmdb.org/t/p/original/8lV22mZEWRZKDcselLnnbLSsW8c.jpg
+      TMDB movie/472269 backdrops
+  [possum] arvores   <- backdrop_dBNNSdC5iVgAAgWemGRo56p6Qvw.jpg
+      https://image.tmdb.org/t/p/original/dBNNSdC5iVgAAgWemGRo56p6Qvw.jpg
+      TMDB movie/472269 backdrops
+  [possum] philip    <- backdrop_k3hvqloQwDDuK0llur8ezF3BZJ6.jpg
+      https://image.tmdb.org/t/p/original/k3hvqloQwDDuK0llur8ezF3BZJ6.jpg
+      TMDB movie/472269 backdrops
+  [possum] cozinha   <- backdrop_waqRfS67xI0gWeftWnYpMr8uUy0.jpg
+      https://image.tmdb.org/t/p/original/waqRfS67xI0gWeftWnYpMr8uUy0.jpg
+      TMDB movie/472269 backdrops
+  [possum] boneco    <- backdrop_yB70SrspWic4RM8yi1w27FDSvIN.jpg
+      https://image.tmdb.org/t/p/original/yB70SrspWic4RM8yi1w27FDSvIN.jpg
+      TMDB movie/472269 backdrops
+  [possum] poster    <- poster_5QOFKSpE7KacBriU95fxG6hmmvr.jpg
+      https://image.tmdb.org/t/p/original/5QOFKSpE7KacBriU95fxG6hmmvr.jpg
+      TMDB movie/472269 posters
+  [calvaire] vermelho  <- backdrop_6PKtrsAGNKOFKbdRkdKlKQLQInT.jpg
+      https://image.tmdb.org/t/p/original/6PKtrsAGNKOFKbdRkdKlKQLQInT.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] morador3  <- backdrop_969YfPvSEP16jwDhWKCVpJldlYo.jpg
+      https://image.tmdb.org/t/p/original/969YfPvSEP16jwDhWKCVpJldlYo.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] bar       <- backdrop_cnpLMKfmbO913fNYGvov0W8cvy1.jpg
+      https://image.tmdb.org/t/p/original/cnpLMKfmbO913fNYGvov0W8cvy1.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] morador1  <- backdrop_gzHPrOvpIlPfpJLLg9gocJo7Jiz.jpg
+      https://image.tmdb.org/t/p/original/gzHPrOvpIlPfpJLLg9gocJo7Jiz.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] floresta  <- backdrop_lHtyO3AAf47yThC5m4fnjKrqyKk.jpg
+      https://image.tmdb.org/t/p/original/lHtyO3AAf47yThC5m4fnjKrqyKk.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] morador2  <- backdrop_sg4Zyms6r4QC7jLYEFtdNWF7mqQ.jpg
+      https://image.tmdb.org/t/p/original/sg4Zyms6r4QC7jLYEFtdNWF7mqQ.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] bartel    <- backdrop_uFT0sfYDKXkxHKfl2rb1Ocvhqe4.jpg
+      https://image.tmdb.org/t/p/original/uFT0sfYDKXkxHKfl2rb1Ocvhqe4.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] marc      <- backdrop_wiVg6TlmQcYyja0bTsmwvVWkd8o.jpg
+      https://image.tmdb.org/t/p/original/wiVg6TlmQcYyja0bTsmwvVWkd8o.jpg
+      TMDB movie/12517 backdrops
+  [calvaire] poster    <- poster_vFQOoXIBZP1cokmy8ow7yKKrXVZ.jpg
+      https://image.tmdb.org/t/p/original/vFQOoXIBZP1cokmy8ow7yKKrXVZ.jpg
+      TMDB movie/12517 posters
+  [hagazussa] albrun    <- backdrop_1SiVLeZshZ1gwnK1AYLVs6SnPUm.jpg
+      https://image.tmdb.org/t/p/original/1SiVLeZshZ1gwnK1AYLVs6SnPUm.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] neve      <- backdrop_2vhN6x1ncq8W6FqStH5yCeq91NB.jpg
+      https://image.tmdb.org/t/p/original/2vhN6x1ncq8W6FqStH5yCeq91NB.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] pantano   <- backdrop_7w4mNLYnDu6AGahWotORA7RZoET.jpg
+      https://image.tmdb.org/t/p/original/7w4mNLYnDu6AGahWotORA7RZoET.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] capela    <- backdrop_avEgV62phRPs3b7WySnYNMgnzRP.jpg
+      https://image.tmdb.org/t/p/original/avEgV62phRPs3b7WySnYNMgnzRP.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] caveira   <- backdrop_jSK7nnPkXdcX9AImcWKDTC9Y76g.jpg
+      https://image.tmdb.org/t/p/original/jSK7nnPkXdcX9AImcWKDTC9Y76g.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] albrun2   <- backdrop_pTwszyM19HUp34zsK1wzK9SLoku.jpg
+      https://image.tmdb.org/t/p/original/pTwszyM19HUp34zsK1wzK9SLoku.jpg
+      TMDB movie/466565 backdrops
+  [hagazussa] poster    <- poster_cVgKE5dLmjBDnzU602fzogcSKMo.jpg
+      https://image.tmdb.org/t/p/original/cVgKE5dLmjBDnzU602fzogcSKMo.jpg
+      TMDB movie/466565 posters
+  [calvaire] van       <- van.jpg
+      https://commons.wikimedia.org/wiki/File:Volkswagen_Type_2_T2b_Campmobile_(22247114423).jpg
+      Wikimedia Commons, CC BY 2.0, autor: Jeremy from Sydney, Australia
+  [hagazussa] cabana    <- cabana.jpg
+      https://commons.wikimedia.org/wiki/File:Bodental_Ogrisalm_01_2008.JPG
+      Wikimedia Commons, CC BY-SA 3.0, autor: Joadl
+  [hagazussa] cabra     <- cabra.jpg
+      https://commons.wikimedia.org/wiki/File:Bunte_Deutsche_Edelziege_1.jpg
+      Wikimedia Commons, CC BY-SA 4.0, autor: Sciencia58
+  [hagazussa] cabra2    <- cabra2.jpg
+      https://commons.wikimedia.org/wiki/File:Erzgebirgsziege_mit_Kitz.JPG
+      Wikimedia Commons, CC0, autor: Klaaschwotzer
+  [possum] mala      <- mala.jpg
+      https://commons.wikimedia.org/wiki/File:Belber_Suitcase.jpg
+      Wikimedia Commons, CC BY-SA 4.0, autor: Sandrine Z
+
+IMAGENS BAIXADAS E NÃO USADAS (ficaram em assets/raw/ como alternativa)
+  [possum] backdrop_16B59iq7J1UfujZL0hDf3QNJD7m.jpg  https://image.tmdb.org/t/p/original/16B59iq7J1UfujZL0hDf3QNJD7m.jpg
+  [possum] backdrop_1qE6ZiCCitEAgSMOC1C4HnX5W5l.jpg  https://image.tmdb.org/t/p/original/1qE6ZiCCitEAgSMOC1C4HnX5W5l.jpg
+  [possum] backdrop_4yJe0Wb9kuzUdSt0hbl60ykAJmX.jpg  https://image.tmdb.org/t/p/original/4yJe0Wb9kuzUdSt0hbl60ykAJmX.jpg
+  [possum] backdrop_9Aa9tTAzzplNNSsaeXIzmZ51hPf.jpg  https://image.tmdb.org/t/p/original/9Aa9tTAzzplNNSsaeXIzmZ51hPf.jpg
+  [possum] backdrop_bfydPYcpcdZ2qexMT5Bq6XKQtBk.jpg  https://image.tmdb.org/t/p/original/bfydPYcpcdZ2qexMT5Bq6XKQtBk.jpg
+  [possum] backdrop_cWUEI0jd2rsJrJM4sLlqLaVeVGe.jpg  https://image.tmdb.org/t/p/original/cWUEI0jd2rsJrJM4sLlqLaVeVGe.jpg
+  [possum] backdrop_cxHsshAFm8jQppQXapSZn8LQX7B.jpg  https://image.tmdb.org/t/p/original/cxHsshAFm8jQppQXapSZn8LQX7B.jpg
+  [possum] poster_1PsTxr1qy5UV4N1TwCDVooyRq3.jpg  https://image.tmdb.org/t/p/original/1PsTxr1qy5UV4N1TwCDVooyRq3.jpg
+  [possum] poster_3wiOryJr9TwwpFfi9u3uzkpqGHV.jpg  https://image.tmdb.org/t/p/original/3wiOryJr9TwwpFfi9u3uzkpqGHV.jpg
+  [possum] poster_6M5G6ibzR5yxRBjbh1UiP7a1bmM.jpg  https://image.tmdb.org/t/p/original/6M5G6ibzR5yxRBjbh1UiP7a1bmM.jpg
+  [possum] poster_723DYGvaEjVS4ZiAXPa1qe8cCTB.jpg  https://image.tmdb.org/t/p/original/723DYGvaEjVS4ZiAXPa1qe8cCTB.jpg
+  [possum] poster_8cCKPl8w2dqKNLCJG3MYA1tZcyE.jpg  https://image.tmdb.org/t/p/original/8cCKPl8w2dqKNLCJG3MYA1tZcyE.jpg
+  [possum] poster_8oNNlJWi50KSd4bXJMaSOquIctE.jpg  https://image.tmdb.org/t/p/original/8oNNlJWi50KSd4bXJMaSOquIctE.jpg
+  [possum] poster_cpKCXdtQ5eoojDpNGxdNfBYKC6w.jpg  https://image.tmdb.org/t/p/original/cpKCXdtQ5eoojDpNGxdNfBYKC6w.jpg
+  [possum] poster_da2i4GxsSeJcqCVsoSk4UAJbKBC.jpg  https://image.tmdb.org/t/p/original/da2i4GxsSeJcqCVsoSk4UAJbKBC.jpg
+  [possum] poster_kPKRxNDCUx43cUyuDdU4e2Iy1eB.jpg  https://image.tmdb.org/t/p/original/kPKRxNDCUx43cUyuDdU4e2Iy1eB.jpg
+  [possum] poster_qJa22pIG722lh8NIWtCarKmkj6N.jpg  https://image.tmdb.org/t/p/original/qJa22pIG722lh8NIWtCarKmkj6N.jpg
+  [possum] poster_y59V8yEKGy8fkKweNUwEfM2a6aB.jpg  https://image.tmdb.org/t/p/original/y59V8yEKGy8fkKweNUwEfM2a6aB.jpg
+  [calvaire] backdrop_5suQx9AspA3OZPNbBDnoFsT5pSz.jpg  https://image.tmdb.org/t/p/original/5suQx9AspA3OZPNbBDnoFsT5pSz.jpg
+  [calvaire] backdrop_bFNzKfwwME1R52pQFB25Wosu4Fp.jpg  https://image.tmdb.org/t/p/original/bFNzKfwwME1R52pQFB25Wosu4Fp.jpg
+  [calvaire] backdrop_cW9N09HSNmhYQLqtouuh7LiKWLn.jpg  https://image.tmdb.org/t/p/original/cW9N09HSNmhYQLqtouuh7LiKWLn.jpg
+  [calvaire] backdrop_gTzvKwomhsV2rSL78gyFh0vcWmt.jpg  https://image.tmdb.org/t/p/original/gTzvKwomhsV2rSL78gyFh0vcWmt.jpg
+  [calvaire] backdrop_sjn7br7NOinOFaFwtMycCRV8uuO.jpg  https://image.tmdb.org/t/p/original/sjn7br7NOinOFaFwtMycCRV8uuO.jpg
+  [calvaire] backdrop_uS0scJP83eU0tgyb7GNRSgBkJHa.jpg  https://image.tmdb.org/t/p/original/uS0scJP83eU0tgyb7GNRSgBkJHa.jpg
+  [hagazussa] backdrop_1TfjsxCWCs4M8ay7vE2LWX57x4z.jpg  https://image.tmdb.org/t/p/original/1TfjsxCWCs4M8ay7vE2LWX57x4z.jpg
+  [hagazussa] backdrop_2HDb02wDFJUMO8b5Akxid8Aa7X6.jpg  https://image.tmdb.org/t/p/original/2HDb02wDFJUMO8b5Akxid8Aa7X6.jpg
+  [hagazussa] backdrop_4ioXfbRTllE0YsZsBlr7fBTUr4l.jpg  https://image.tmdb.org/t/p/original/4ioXfbRTllE0YsZsBlr7fBTUr4l.jpg
+  [hagazussa] backdrop_52bXmXtdX9z1NbVvtySP6zfyPak.jpg  https://image.tmdb.org/t/p/original/52bXmXtdX9z1NbVvtySP6zfyPak.jpg
+  [hagazussa] backdrop_5p5gpRZsBmPtZtVZ3nWux3xe6JK.jpg  https://image.tmdb.org/t/p/original/5p5gpRZsBmPtZtVZ3nWux3xe6JK.jpg
+  [hagazussa] backdrop_ase4rfs0t4yUOQDFhPxCyTgusi5.jpg  https://image.tmdb.org/t/p/original/ase4rfs0t4yUOQDFhPxCyTgusi5.jpg
+  [hagazussa] backdrop_bGZepSKm6LskDPkvvmaBARJ9wB7.jpg  https://image.tmdb.org/t/p/original/bGZepSKm6LskDPkvvmaBARJ9wB7.jpg
+  [hagazussa] backdrop_fZzxbjur32Qe7PBQByymHs8dgro.jpg  https://image.tmdb.org/t/p/original/fZzxbjur32Qe7PBQByymHs8dgro.jpg
+  [hagazussa] backdrop_o9leVjDLeXtBQYGdEyxfWO1sSvA.jpg  https://image.tmdb.org/t/p/original/o9leVjDLeXtBQYGdEyxfWO1sSvA.jpg
+  [hagazussa] backdrop_pvhkvjATXdsIKftJ8JBjbEH8fLu.jpg  https://image.tmdb.org/t/p/original/pvhkvjATXdsIKftJ8JBjbEH8fLu.jpg
+  [hagazussa] backdrop_rl9Iqz1e5VYuX6IofKJewNH9CRi.jpg  https://image.tmdb.org/t/p/original/rl9Iqz1e5VYuX6IofKJewNH9CRi.jpg
+  [hagazussa] poster_2XW0ksu5jwOyNwQbGgdQDJxq5pi.jpg  https://image.tmdb.org/t/p/original/2XW0ksu5jwOyNwQbGgdQDJxq5pi.jpg
+  [hagazussa] poster_7OUnBCT0q4zhI9wOzRRCHzQil0I.jpg  https://image.tmdb.org/t/p/original/7OUnBCT0q4zhI9wOzRRCHzQil0I.jpg
+  [hagazussa] poster_8UxSOTqZ88ypJrTtHGA4sTtcnRH.jpg  https://image.tmdb.org/t/p/original/8UxSOTqZ88ypJrTtHGA4sTtcnRH.jpg
+  [hagazussa] poster_etlTaP7P8DbZrKNPU9C067srzMP.jpg  https://image.tmdb.org/t/p/original/etlTaP7P8DbZrKNPU9C067srzMP.jpg
+  [hagazussa] poster_mNf9F2Cn5Fr2n4VZ9gIcLAPp7fT.jpg  https://image.tmdb.org/t/p/original/mNf9F2Cn5Fr2n4VZ9gIcLAPp7fT.jpg
+  [hagazussa] poster_nIR3hv8btlcTJAeERXGvgjROcVe.jpg  https://image.tmdb.org/t/p/original/nIR3hv8btlcTJAeERXGvgjROcVe.jpg
+  [hagazussa] poster_nctAxNlF5OySirWJojHkwEMoCEj.jpg  https://image.tmdb.org/t/p/original/nctAxNlF5OySirWJojHkwEMoCEj.jpg
+  [hagazussa] poster_qTEheTibAiektkZPJQBnvWGLrC7.jpg  https://image.tmdb.org/t/p/original/qTEheTibAiektkZPJQBnvWGLrC7.jpg
+  [hagazussa] poster_qxUiwpRKagcNHFlly5IpcbX0QPI.jpg  https://image.tmdb.org/t/p/original/qxUiwpRKagcNHFlly5IpcbX0QPI.jpg
+  [hagazussa] poster_xjHcp5H7SxT4XyqIGMUR5EXmRX5.jpg  https://image.tmdb.org/t/p/original/xjHcp5H7SxT4XyqIGMUR5EXmRX5.jpg
+  [hagazussa] poster_y4zYxyHxvJhMHhmOLhznpn4N24F.jpg  https://image.tmdb.org/t/p/original/y4zYxyHxvJhMHhmOLhznpn4N24F.jpg
+  [hagazussa] poster_zAMtCldAGTN8KAr2hpi0uJ99qoN.jpg  https://image.tmdb.org/t/p/original/zAMtCldAGTN8KAr2hpi0uJ99qoN.jpg
+  [possum] casa.jpg  https://commons.wikimedia.org/wiki/File:Derelict_Old_House_(33298565995).jpg
+
+NARRAÇÃO
+  Gemini TTS (Google AI Studio), modelo gemini-2.5-flash-preview-tts, voz pré-pronta 'Enceladus'.
+  Pós-processamento: pausas > 0,45s encurtadas e atempo 1,2x (scripts/ajustar_narracao.py). Originais em assets/narracao/bruto/.
+  Testes de voz (Charon, Algenib, Enceladus, Orus) em out/testes-voz/ — gerados com gemini-3.8-flash-tts.
+
+TRILHA E EFEITOS SONOROS
+  Sintetizados proceduralmente em código (scripts/sfx.py) — sem direitos de terceiros.
+  assets/trilha/drone.wav (drone sombrio sem vocal), assets/sfx/{papel,fita,caneta,rasgo,queda,whoosh,batida}.wav
+  (Pixabay bloqueou acesso automatizado com 403 e Freesound exige chave de API.)
+
+FONTES (Google Fonts, SIL Open Font License)
+  Anton, Bebas Neue, Permanent Marker, Caveat, Inter, Special Elite — assets/fonts/
+
+TEXTURAS
+  Papel, fita, rasgos, setas, barbantes, rabiscos, montanhas, pinheiros e névoa: gerados em código (SVG/CSS).
+  Granulação de filme: scripts/texturas.py -> assets/textura/grao_*.png
+
+RECORTES
+  rembg (modelo isnet-general-use) via scripts/recortar.py; borda branca por dilatação do alpha.

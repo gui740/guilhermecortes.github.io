@@ -1,0 +1,129 @@
+{
+  "_doc": "nome -> arquivo em assets/raw/<filme>/. tipo: recorte (gera _recorte.png com borda branca + _fundo.png), fundo (só _fundo.png), foto (polaroide/still sem recorte, só redimensiona)",
+  "possum": {
+    "poster": {
+      "src": "poster_5QOFKSpE7KacBriU95fxG6hmmvr.jpg",
+      "tipo": "foto"
+    },
+    "philip": {
+      "src": "backdrop_k3hvqloQwDDuK0llur8ezF3BZJ6.jpg",
+      "tipo": "recorte"
+    },
+    "philip2": {
+      "src": "backdrop_4NBJ96tywsom53Ax2z8ncRIAbvQ.jpg",
+      "tipo": "recorte"
+    },
+    "maurice": {
+      "src": "backdrop_3lt332ZgnoNwZ5xFLDeHv66qoHs.jpg",
+      "tipo": "recorte"
+    },
+    "boneco": {
+      "src": "backdrop_yB70SrspWic4RM8yi1w27FDSvIN.jpg",
+      "tipo": "foto"
+    },
+    "mala": {
+      "src": "mala.jpg",
+      "tipo": "recorte"
+    },
+    "campo": {
+      "src": "backdrop_8lV22mZEWRZKDcselLnnbLSsW8c.jpg",
+      "tipo": "fundo"
+    },
+    "arvores": {
+      "src": "backdrop_dBNNSdC5iVgAAgWemGRo56p6Qvw.jpg",
+      "tipo": "fundo"
+    },
+    "casa": {
+      "src": "backdrop_65mPgkfC6cCKUktc2R5qWkEsqxX.jpg",
+      "tipo": "foto"
+    },
+    "cozinha": {
+      "src": "backdrop_waqRfS67xI0gWeftWnYpMr8uUy0.jpg",
+      "tipo": "foto"
+    }
+  },
+  "calvaire": {
+    "poster": {
+      "src": "poster_vFQOoXIBZP1cokmy8ow7yKKrXVZ.jpg",
+      "tipo": "foto"
+    },
+    "marc": {
+      "src": "backdrop_wiVg6TlmQcYyja0bTsmwvVWkd8o.jpg",
+      "tipo": "recorte"
+    },
+    "bartel": {
+      "src": "backdrop_uFT0sfYDKXkxHKfl2rb1Ocvhqe4.jpg",
+      "tipo": "recorte"
+    },
+    "morador1": {
+      "src": "backdrop_gzHPrOvpIlPfpJLLg9gocJo7Jiz.jpg",
+      "tipo": "recorte"
+    },
+    "morador2": {
+      "src": "backdrop_sg4Zyms6r4QC7jLYEFtdNWF7mqQ.jpg",
+      "tipo": "foto"
+    },
+    "morador3": {
+      "src": "backdrop_969YfPvSEP16jwDhWKCVpJldlYo.jpg",
+      "tipo": "recorte"
+    },
+    "van": {
+      "src": "van.jpg",
+      "tipo": "recorte"
+    },
+    "floresta": {
+      "src": "backdrop_lHtyO3AAf47yThC5m4fnjKrqyKk.jpg",
+      "tipo": "fundo"
+    },
+    "vermelho": {
+      "src": "backdrop_6PKtrsAGNKOFKbdRkdKlKQLQInT.jpg",
+      "tipo": "fundo"
+    },
+    "bar": {
+      "src": "backdrop_cnpLMKfmbO913fNYGvov0W8cvy1.jpg",
+      "tipo": "foto"
+    }
+  },
+  "hagazussa": {
+    "poster": {
+      "src": "poster_cVgKE5dLmjBDnzU602fzogcSKMo.jpg",
+      "tipo": "foto"
+    },
+    "albrun": {
+      "src": "backdrop_1SiVLeZshZ1gwnK1AYLVs6SnPUm.jpg",
+      "tipo": "recorte"
+    },
+    "albrun2": {
+      "src": "backdrop_pTwszyM19HUp34zsK1wzK9SLoku.jpg",
+      "tipo": "recorte"
+    },
+    "caveira": {
+      "src": "backdrop_jSK7nnPkXdcX9AImcWKDTC9Y76g.jpg",
+      "tipo": "recorte"
+    },
+    "cabra": {
+      "src": "cabra.jpg",
+      "tipo": "recorte"
+    },
+    "cabra2": {
+      "src": "cabra2.jpg",
+      "tipo": "recorte"
+    },
+    "cabana": {
+      "src": "cabana.jpg",
+      "tipo": "foto"
+    },
+    "neve": {
+      "src": "backdrop_2vhN6x1ncq8W6FqStH5yCeq91NB.jpg",
+      "tipo": "fundo"
+    },
+    "capela": {
+      "src": "backdrop_avEgV62phRPs3b7WySnYNMgnzRP.jpg",
+      "tipo": "fundo"
+    },
+    "pantano": {
+      "src": "backdrop_7w4mNLYnDu6AGahWotORA7RZoET.jpg",
+      "tipo": "foto"
+    }
+  }
+}
