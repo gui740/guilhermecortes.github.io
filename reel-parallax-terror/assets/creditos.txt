@@ -81,8 +81,8 @@ IMAGENS USADAS NO VÍDEO
       https://image.tmdb.org/t/p/original/cVgKE5dLmjBDnzU602fzogcSKMo.jpg
       TMDB movie/466565 posters
   [calvaire] van       <- van.jpg
-      https://commons.wikimedia.org/wiki/File:Volkswagen_Type_2_T2b_Campmobile_(22247114423).jpg
-      Wikimedia Commons, CC BY 2.0, autor: Jeremy from Sydney, Australia
+      https://commons.wikimedia.org/wiki/File:Volkswagen_(Typ_2_-_T2)_(4173966123).jpg
+      Wikimedia Commons, CC BY 2.0, autor: Spanish Coches
   [hagazussa] cabana    <- cabana.jpg
       https://commons.wikimedia.org/wiki/File:Bodental_Ogrisalm_01_2008.JPG
       Wikimedia Commons, CC BY-SA 3.0, autor: Joadl
