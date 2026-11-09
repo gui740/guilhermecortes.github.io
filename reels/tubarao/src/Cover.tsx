@@ -6,7 +6,7 @@ import {BODY, C, HEAD, textShadow} from './theme';
 
 /** Capa 1080x1920. Texto concentrado no recorte 3:4 do grid (y 240–1680). */
 export const Cover: React.FC = () => {
-  const posters = ['tubarao.jpg', 'meg.jpg', 'sena.jpg'];
+  const posters = ['dofundo.jpg', 'medo2.jpg', 'sena.jpg'];
   return (
     <AbsoluteFill style={{background: C.abyss}}>
       <Ocean />

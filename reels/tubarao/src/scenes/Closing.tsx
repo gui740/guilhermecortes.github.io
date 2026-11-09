@@ -19,7 +19,7 @@ export const Spielberg: React.FC = () => {
         style={{fontFamily: HEAD, fontSize: 130, lineHeight: 1.02, color: C.white, textShadow}}
       />
       <WordsIn
-        text="Ele diz lamentar a matança de tubarões que veio depois do livro e do filme."
+        text="O diretor de Tubarão (1975) diz lamentar a matança de tubarões que veio depois do filme."
         start={18}
         every={2}
         style={{fontFamily: BODY, fontWeight: 800, fontSize: 52, lineHeight: 1.2, color: C.foam, marginTop: 36}}

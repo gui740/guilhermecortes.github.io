@@ -6,6 +6,7 @@ export type Pin = {
   lat: number;
   label: string;
   kind: 'story' | 'filmed';
+  labelPos?: 'side' | 'below' | 'above';
 };
 
 export type Stream = {logo: string; name: string};
@@ -13,6 +14,7 @@ export type Stream = {logo: string; name: string};
 export type Movie = {
   tag: string;
   title: string;
+  subtitle?: string;
   year: number;
   poster: string;
   curiosity: string;
@@ -31,51 +33,54 @@ export type Movie = {
 
 export const MOVIES: Movie[] = [
   {
-    tag: '1/3 · O CLÁSSICO · PRAIA',
-    title: 'TUBARÃO',
-    year: 1975,
-    poster: 'tubarao.jpg',
-    curiosity:
-      'O tubarão mecânico vivia quebrando. Spielberg teve que esconder o bicho.',
-    counter: {prefix: 'US$ ', value: 490, decimals: 0, suffix: ' MI'},
+    tag: '1/3 · CULT DOS ANOS 90 · MAR ABERTO',
+    title: 'DO FUNDO DO MAR',
+    year: 1999,
+    poster: 'dofundo.jpg',
+    curiosity: 'Gravado nos tanques que James Cameron construiu pra Titanic.',
+    counter: {prefix: 'US$ ', value: 164.6, decimals: 1, suffix: ' MI'},
     counterLabel: 'de bilheteria no mundo',
-    counterNote: 'custou cerca de US$ 7 mi',
+    counterNote: 'custou US$ 60 mi',
     map: {
-      center: [-71.2, 41.6],
-      scale: 5200,
-      pins: [{lon: -70.61, lat: 41.39, label: "MARTHA'S VINEYARD", kind: 'filmed'}],
+      center: [-117.3, 32.6],
+      scale: 2600,
+      pins: [{lon: -117.06, lat: 32.36, label: 'ROSARITO, MÉXICO', kind: 'filmed'}],
       legend: {
-        story: 'Amity: a ilha não existe',
-        filmed: "Martha's Vineyard (EUA)",
-      },
-    },
-    streams: [{logo: 'amazontelecine.png', name: 'Telecine · Prime Video Channels'}],
-  },
-  {
-    tag: '2/3 · ANOS 2010 · MAR ABERTO',
-    title: 'MEGATUBARÃO',
-    year: 2018,
-    poster: 'meg.jpg',
-    curiosity:
-      'A Warner construiu tanques gigantes na Nova Zelândia só pra ele.',
-    counter: {prefix: 'US$ ', value: 529, decimals: 0, suffix: ' MI'},
-    counterLabel: 'de bilheteria no mundo',
-    counterNote: 'mais que Tubarão (sem contar a inflação) 💀',
-    map: {
-      center: [142, -9],
-      scale: 640,
-      pins: [
-        {lon: 109.5, lat: 18.25, label: 'SANYA, CHINA', kind: 'story'},
-        {lon: 174.76, lat: -36.85, label: 'AUCKLAND, NZ', kind: 'filmed'},
-      ],
-      legend: {
-        story: 'costa da China (Sanya)',
-        filmed: '94% na Nova Zelândia',
+        story: 'base isolada no meio do oceano',
+        filmed: 'Rosarito, México (tanques de Titanic)',
       },
     },
     streams: [
       {logo: 'max.png', name: 'HBO Max'},
-      {logo: 'amazonuniversalplus.png', name: 'Universal+ · Prime Video Channels'},
+      {logo: 'amazonhbomax.png', name: 'HBO Max · Prime Video Channels'},
+    ],
+  },
+  {
+    tag: '2/3 · ANOS 2010 · CIDADE MAIA SUBMERSA',
+    title: 'MEDO PROFUNDO',
+    subtitle: 'O SEGUNDO ATAQUE',
+    year: 2019,
+    poster: 'medo2.jpg',
+    curiosity: 'A cidade maia submersa? Montada em tanques na Inglaterra.',
+    counter: {prefix: 'US$ ', value: 47.6, decimals: 1, suffix: ' MI'},
+    counterLabel: 'de bilheteria no mundo',
+    counterNote: 'custou US$ 12 mi: quase 4x o orçamento',
+    map: {
+      center: [-40, 35],
+      scale: 400,
+      pins: [
+        {lon: -89.0, lat: 20.6, label: 'YUCATÁN', kind: 'story', labelPos: 'above'},
+        {lon: -0.53, lat: 51.55, label: 'INGLATERRA', kind: 'filmed'},
+        {lon: -69.45, lat: 18.43, label: 'REP. DOMINICANA', kind: 'filmed', labelPos: 'below'},
+      ],
+      legend: {
+        story: 'Yucatán, México',
+        filmed: 'tanques na Inglaterra e no Caribe',
+      },
+    },
+    streams: [
+      {logo: 'amazontelecine.png', name: 'Telecine · Prime Video Channels'},
+      {logo: 'amazonlionsgateplus.png', name: 'Lionsgate+ · Prime Video Channels'},
     ],
   },
   {

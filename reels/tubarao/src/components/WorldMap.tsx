@@ -58,20 +58,16 @@ export const WorldMap: React.FC<{
     easing: Easing.out(Easing.cubic),
   });
 
-  let arc: string | null = null;
-  let arcLen = 0;
-  if (pts.length === 2) {
-    const [a, b] = pts;
-    const mx = (a[0] + b[0]) / 2;
-    const my = (a[1] + b[1]) / 2;
-    const dx = b[0] - a[0];
-    const dy = b[1] - a[1];
-    const d = Math.hypot(dx, dy);
-    const cx = mx - (dy / d) * d * 0.28;
-    const cy = my + (dx / d) * d * 0.28;
-    arc = `M${a[0]},${a[1]} Q${cx},${cy} ${b[0]},${b[1]}`;
-    arcLen = d * 1.25;
-  }
+  // arcos da locação da história (pin 0) até cada locação de filmagem
+  const arcs = pts.slice(1).map(([bx, by]) => {
+    const [ax, ay] = pts[0];
+    const dx = bx - ax;
+    const dy = by - ay;
+    const d = Math.hypot(dx, dy) || 1;
+    const cx = (ax + bx) / 2 - dy * 0.28;
+    const cy = (ay + by) / 2 + dx * 0.28;
+    return {d: `M${ax},${ay} Q${cx},${cy} ${bx},${by}`, len: d * 1.25};
+  });
 
   return (
     <svg width={width} height={height} style={{display: 'block'}}>
@@ -95,19 +91,20 @@ export const WorldMap: React.FC<{
           <path key={i} d={path(ft) ?? ''} fill="#1f5864" stroke="rgba(170,235,240,0.7)" strokeWidth={1} />
         ))}
       </g>
-      {arc ? (
+      {arcs.map((a, i) => (
         <path
-          d={arc}
+          key={i}
+          d={a.d}
           fill="none"
           stroke={C.white}
           strokeWidth={4}
-          strokeDasharray={`${arcLen} ${arcLen}`}
-          strokeDashoffset={arcLen * (1 - lineP)}
+          strokeDasharray={`${a.len} ${a.len}`}
+          strokeDashoffset={a.len * (1 - lineP)}
           strokeLinecap="round"
           opacity={0.9}
           style={{filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.6))'}}
         />
-      ) : null}
+      ))}
       {pins.map((p, i) => {
         const [x, y] = pts[i];
         const col = p.kind === 'filmed' ? C.bloodBright : C.white;
@@ -119,9 +116,9 @@ export const WorldMap: React.FC<{
             <circle r={14 + ((pulse + 0.5) % 1) * 46} fill="none" stroke={col} strokeWidth={2} opacity={1 - ((pulse + 0.5) % 1)} />
             <circle r={13} fill={col} stroke="#000" strokeWidth={3} />
             <text
-              x={labelLeft ? -26 : 26}
-              y={10}
-              textAnchor={labelLeft ? 'end' : 'start'}
+              x={p.labelPos === 'below' || p.labelPos === 'above' ? 0 : labelLeft ? -26 : 26}
+              y={p.labelPos === 'below' ? 52 : p.labelPos === 'above' ? -30 : 10}
+              textAnchor={p.labelPos === 'below' || p.labelPos === 'above' ? 'middle' : labelLeft ? 'end' : 'start'}
               fontFamily={BODY}
               fontWeight={900}
               fontSize={30}

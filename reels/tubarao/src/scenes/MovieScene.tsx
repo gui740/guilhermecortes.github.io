@@ -18,7 +18,7 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
     easing: Easing.in(Easing.cubic),
   });
   const mapIn = spring({frame: f - SWITCH, fps, config: {damping: 16, mass: 0.8}});
-  const titleSize = Math.min(168, Math.round(1640 / m.title.length));
+  const titleSize = m.subtitle ? 112 : Math.min(150, Math.round(1640 / m.title.length));
   const kenburns = interpolate(f, [0, 130], [1.0, 1.08]);
 
   return (
@@ -45,11 +45,16 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
       >
         <Tag>{m.tag}</Tag>
         <div style={{display: 'flex', alignItems: 'baseline', gap: 18, marginTop: 8, whiteSpace: 'nowrap'}}>
-          <div style={{fontFamily: HEAD, fontSize: titleSize, lineHeight: 1.02, color: C.white, textShadow}}>{m.title}</div>
+          <div style={{fontFamily: HEAD, fontSize: titleSize, lineHeight: 1.02, color: C.white, textShadow}}>
+            {m.title}
+          </div>
           <div style={{fontFamily: HEAD, fontSize: Math.max(56, titleSize * 0.42), color: C.bloodBright, textShadow}}>
             {m.year}
           </div>
         </div>
+        {m.subtitle ? (
+          <div style={{fontFamily: HEAD, fontSize: 48, lineHeight: 1, color: C.foam, marginTop: -2, textShadow}}>{m.subtitle}</div>
+        ) : null}
       </div>
 
       {/* FASE 1: pôster + curiosidade + número */}
