@@ -5,11 +5,15 @@ import {BODY, C, HEAD, textShadow} from '../theme';
 import {Counter, StreamBadge, Tag, WordsIn} from '../components/bits';
 import {WorldMap} from '../components/WorldMap';
 
-const SWITCH = 122; // frame em que o mapa entra
 
-export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
+export const MovieScene: React.FC<{m: Movie; dur: number}> = ({m, dur}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
+  // tudo sincronizado com a narração (data.ts → cues, em segundos)
+  const cC = Math.round(m.cues.curiosity * fps);
+  const cN = Math.round(m.cues.numbers * fps);
+  const cP = Math.round(m.cues.platform * fps);
+  const SWITCH = cN - 6; // mapa entra quando a voz chega no número
   const head = spring({frame: f - 4, fps, config: {damping: 13, mass: 0.6}});
   const poster = spring({frame: f - 8, fps, config: {damping: 15, mass: 0.8}});
   const out = interpolate(f, [SWITCH - 6, SWITCH + 8], [0, 1], {
@@ -19,7 +23,9 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
   });
   const mapIn = spring({frame: f - SWITCH, fps, config: {damping: 16, mass: 0.8}});
   const titleSize = m.subtitle ? 112 : Math.min(150, Math.round(1640 / m.title.length));
-  const kenburns = interpolate(f, [0, 130], [1.0, 1.08]);
+  const kenburns = interpolate(f, [0, SWITCH], [1.0, 1.08], {extrapolateRight: 'clamp'});
+  const counterOut = interpolate(f, [cP - 10, cP], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  void dur;
 
   return (
     <AbsoluteFill>
@@ -57,7 +63,7 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
         ) : null}
       </div>
 
-      {/* FASE 1: pôster + curiosidade + número */}
+      {/* FASE 1: pôster + curiosidade */}
       <div style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, transform: `translateX(${-out * 1100}px)`, opacity: 1 - out}}>
         <div
           style={{
@@ -83,57 +89,21 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
               fontSize: 28,
               letterSpacing: 4,
               color: C.bloodBright,
-              opacity: interpolate(f, [14, 20], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+              opacity: interpolate(f, [cC - 8, cC - 2], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
             }}
           >
             BASTIDOR 💀
           </div>
           <WordsIn
             text={m.curiosity}
-            start={18}
-            every={2}
+            start={cC - 2}
+            every={3}
             style={{fontFamily: BODY, fontWeight: 800, fontSize: 46, lineHeight: 1.16, color: C.white, marginTop: 10, textShadow}}
           />
         </div>
-        <div style={{position: 'absolute', left: 60, right: 150, top: 1150}}>
-          <Counter
-            to={m.counter.value}
-            decimals={m.counter.decimals}
-            prefix={m.counter.prefix}
-            suffix={m.counter.suffix}
-            start={40}
-            duration={38}
-            size={190}
-          />
-          <div
-            style={{
-              fontFamily: BODY,
-              fontWeight: 800,
-              fontSize: 44,
-              color: C.white,
-              marginTop: 4,
-              opacity: interpolate(f, [52, 60], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-              textShadow,
-            }}
-          >
-            {m.counterLabel}
-          </div>
-          <div
-            style={{
-              fontFamily: BODY,
-              fontWeight: 500,
-              fontSize: 34,
-              color: C.foam,
-              marginTop: 8,
-              opacity: interpolate(f, [70, 78], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-            }}
-          >
-            {m.counterNote}
-          </div>
-        </div>
       </div>
 
-      {/* FASE 2: mapa + onde assistir */}
+      {/* FASE 2: mapa + número + onde assistir */}
       {f >= SWITCH - 2 ? (
         <>
           <div
@@ -185,8 +155,44 @@ export const MovieScene: React.FC<{m: Movie}> = ({m}) => {
               </div>
             </div>
           </div>
+          <div style={{position: 'absolute', left: 60, right: 150, top: 1175, opacity: 1 - counterOut, transform: `translateX(${-counterOut * 900}px)`}}>
+          <Counter
+            to={m.counter.value}
+            decimals={m.counter.decimals}
+            prefix={m.counter.prefix}
+            suffix={m.counter.suffix}
+            start={cN}
+            duration={45}
+            size={170}
+          />
+          <div
+            style={{
+              fontFamily: BODY,
+              fontWeight: 800,
+              fontSize: 44,
+              color: C.white,
+              marginTop: 4,
+              opacity: interpolate(f, [cN + 10, cN + 18], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+              textShadow,
+            }}
+          >
+            {m.counterLabel}
+          </div>
+          <div
+            style={{
+              fontFamily: BODY,
+              fontWeight: 500,
+              fontSize: 34,
+              color: C.foam,
+              marginTop: 8,
+              opacity: interpolate(f, [cN + 30, cN + 38], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+            }}
+          >
+            {m.counterNote}
+          </div>
+        </div>
           <div style={{position: 'absolute', left: 60, right: 150, top: 1180}}>
-            <StreamBadge streams={m.streams} start={SWITCH + 58} />
+            <StreamBadge streams={m.streams} start={cP} />
           </div>
         </>
       ) : null}

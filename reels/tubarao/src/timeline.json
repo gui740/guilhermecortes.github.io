@@ -1,0 +1,14 @@
+{
+  "_comment": "Blocos do Reel em frames (30fps): [início, duração]. Casados com a narração em velocidade natural (audio/narracao.json). Lido pelo Remotion e pelos scripts de áudio.",
+  "fps": 30,
+  "total": 2100,
+  "narrationOffset": 0.35,
+  "hook": [0, 180],
+  "data": [180, 285],
+  "m1": [465, 380],
+  "m2": [845, 405],
+  "m3": [1250, 355],
+  "spielberg": [1605, 125],
+  "brasil": [1730, 200],
+  "cta": [1930, 170]
+}

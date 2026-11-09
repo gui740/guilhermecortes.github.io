@@ -29,6 +29,8 @@ export type Movie = {
     legend: {story: string; filmed: string};
   };
   streams: Stream[];
+  // momentos (segundos desde o início do bloco) em que a narração fala de cada coisa
+  cues: {curiosity: number; numbers: number; platform: number};
 };
 
 export const MOVIES: Movie[] = [
@@ -50,6 +52,7 @@ export const MOVIES: Movie[] = [
         filmed: 'Rosarito, México (tanques de Titanic)',
       },
     },
+    cues: {curiosity: 1.75, numbers: 6.65, platform: 10.85},
     streams: [
       {logo: 'max.png', name: 'HBO Max'},
       {logo: 'amazonhbomax.png', name: 'HBO Max · Prime Video Channels'},
@@ -78,6 +81,7 @@ export const MOVIES: Movie[] = [
         filmed: 'tanques na Inglaterra e no Caribe',
       },
     },
+    cues: {curiosity: 3.25, numbers: 7.85, platform: 10.75},
     streams: [
       {logo: 'amazontelecine.png', name: 'Telecine · Prime Video Channels'},
       {logo: 'amazonlionsgateplus.png', name: 'Lionsgate+ · Prime Video Channels'},
@@ -104,19 +108,13 @@ export const MOVIES: Movie[] = [
         filmed: 'tanque em Alicante (Espanha)',
       },
     },
+    cues: {curiosity: 4.6, numbers: 7.5, platform: 9.9},
     streams: [{logo: 'netflix.png', name: 'Netflix'}],
   },
 ];
 
-// Linha do tempo (frames a 30fps) — 43s no total
-export const T = {
-  hook: [0, 75],
-  data: [75, 135],
-  m1: [210, 255],
-  m2: [465, 255],
-  m3: [720, 255],
-  spielberg: [975, 90],
-  brasil: [1065, 90],
-  cta: [1155, 135],
-} as const;
-export const TOTAL = 1290;
+// Linha do tempo (frames a 30fps) — 45s no total, casada com a narração
+import timeline from './timeline.json';
+type Block = readonly [number, number];
+export const T = timeline as unknown as Record<'hook' | 'data' | 'm1' | 'm2' | 'm3' | 'spielberg' | 'brasil' | 'cta', Block>;
+export const TOTAL = timeline.total;

@@ -86,3 +86,11 @@ Na tela o número aparece como "~80 milhões" porque é estimativa. O "65" vem m
 ## 5. Imagens
 - Pôsteres: imagens oficiais de divulgação, pegas do CDN do JustWatch (images.justwatch.com), 718×1024. Os três pôsteres que o JustWatch tem são as artes internacionais, em inglês ("Deep Blue Sea", "47 Meters Down: Uncaged", "Under Paris"). O título nacional aparece grande na tela.
 - Logos dos serviços: ícones do JustWatch, 166×166.
+
+---
+
+## 6. Áudio
+- **Narração:** Google Gemini TTS (API do Google AI Studio), voz "Charon", português do Brasil. Uma tomada única com o modelo `gemini-3.8-flash-tts`; só o gancho foi gerado à parte, com o `gemini-2.5-flash-preview-tts` na mesma voz. Os arquivos originais estão em `audio/fonte/`. O texto de cada fala está em `audio/narracao.json` e bate com o que aparece na tela.
+- **Trilha:** composição original sintetizada em código (`audio/trilha.py`), sem samples e sem direitos de terceiros. Tentei o Lyria, o gerador de música do Google, mas a chave está no plano grátis, que tem cota zero para ele.
+- **Efeitos:** sintetizados (`audio/sfx.py`).
+- **Mix:** a trilha abaixa sozinha sob a voz (sidechain), e o mix final fica em cerca de -15 LUFS e true peak de -1,5 dB.

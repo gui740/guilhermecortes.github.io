@@ -1,10 +1,18 @@
-"""Gera efeitos sonoros sutis (sonar, água, batida grave) sincronizados com o Reel.
-Uso: python3 tools/sfx.py out/sfx_opcional.wav"""
-import sys, wave
+"""Gera efeitos sonoros sutis (sonar, água, batida grave) sincronizados com src/timeline.json.
+Uso: python3 audio/sfx.py out/sfx.wav"""
+import json, os, re, sys, wave
 import numpy as np
 
-SR = 44100
-DUR = 43.0
+HERE = os.path.dirname(os.path.abspath(__file__))
+TL = json.load(open(os.path.join(HERE, '..', 'src', 'timeline.json')))
+CUES = [float(x) for x in re.findall(r'numbers: ([0-9.]+)', open(os.path.join(HERE, '..', 'src', 'data.ts')).read())]
+SR = 48000
+DUR = TL['total'] / TL['fps']
+
+
+def st(k):
+    return TL[k][0] / TL['fps']
+
 rng = np.random.default_rng(7)
 mix = np.zeros(int(SR * DUR))
 
@@ -64,20 +72,20 @@ def bite():
     return crunch + boom(0.5, 110)[:n] * 0.9
 
 
-# linha do tempo (segundos) — casa com src/data.ts
-for t in (0.0, 1.2):
+# linha do tempo — tudo derivado de src/timeline.json
+for t in (0.0, 1.4):
     add(sonar(), t, 0.22)
-add(boom(), 0.0, 0.55)
-for t in (2.17, 23.67, 38.17):          # barbatana atravessando
-    add(whoosh(), t, 0.35)
-for t in (6.6, 32.1):                   # mergulho
-    add(dive(), t, 0.45)
-for t in (15.2, 35.2):                  # mordida
-    add(bite(), t, 0.5)
-add(boom(1.2, 60), 5.57, 0.4)            # "quem devia ter medo de quem?"
-for start in (7.0, 15.5, 24.0):          # pins do mapa
-    add(sonar(1350, 1.2), start + 5.5, 0.16)
-add(boom(1.8, 55), 38.5, 0.6)            # CTA
+add(boom(), 0.0, 0.5)
+for k in ('data', 'm3', 'cta'):              # barbatana atravessando (corte no meio)
+    add(whoosh(), st(k) - 0.36, 0.35)
+for k in ('m1', 'spielberg'):                # mergulho
+    add(dive(), st(k) - 0.4, 0.45)
+for k in ('m2', 'brasil'):                   # mordida
+    add(bite(), st(k) - 0.3, 0.5)
+add(boom(1.2, 60), st('data') + 232 / 30, 0.35)   # "quem devia ter medo de quem?"
+for k, c in zip(('m1', 'm2', 'm3'), CUES):   # pins do mapa
+    add(sonar(1350, 1.2), st(k) + c + 1.1, 0.14)
+add(boom(1.8, 55), st('cta'), 0.55)          # CTA
 
 mix = np.tanh(mix * 1.2) * 0.85
 fade = int(0.5 * SR); mix[-fade:] *= np.linspace(1, 0, fade)

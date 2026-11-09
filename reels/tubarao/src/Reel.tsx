@@ -36,13 +36,13 @@ export const Reel: React.FC = () => {
           <DataScene />
         </S>
         <S at={T.m1}>
-          <MovieScene m={MOVIES[0]} />
+          <MovieScene m={MOVIES[0]} dur={T.m1[1]} />
         </S>
         <S at={T.m2}>
-          <MovieScene m={MOVIES[1]} />
+          <MovieScene m={MOVIES[1]} dur={T.m2[1]} />
         </S>
         <S at={T.m3}>
-          <MovieScene m={MOVIES[2]} />
+          <MovieScene m={MOVIES[2]} dur={T.m3[1]} />
         </S>
         <S at={T.spielberg}>
           <Spielberg />

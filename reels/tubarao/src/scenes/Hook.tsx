@@ -6,11 +6,11 @@ import {Fin, useIn} from '../components/bits';
 /** 0–2,5s: gancho com sonar pulsando e barbatana rondando */
 export const Hook: React.FC = () => {
   const f = useCurrentFrame();
-  const p2 = useIn(6, 12);
-  const p3 = useIn(16, 12);
-  const p4 = useIn(30, 9);
-  const jitter = f > 32 && f < 52 ? (random(`j${f}`) - 0.5) * 14 : 0;
-  const finX = interpolate(f, [0, 75], [1100, -380]);
+  const p2 = useIn(40, 12);
+  const p3 = useIn(80, 12);
+  const p4 = useIn(112, 9);
+  const jitter = f > 114 && f < 134 ? (random(`j${f}`) - 0.5) * 14 : 0;
+  const finX = interpolate(f, [0, 180], [1100, -380]);
   return (
     <AbsoluteFill>
       {/* sonar */}
@@ -104,7 +104,7 @@ export const Hook: React.FC = () => {
                 top: '52%',
                 height: 18,
                 background: C.blood,
-                transform: `scaleX(${interpolate(f, [44, 52], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}) rotate(-3deg)`,
+                transform: `scaleX(${interpolate(f, [126, 134], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}) rotate(-3deg)`,
                 transformOrigin: 'left',
               }}
             />

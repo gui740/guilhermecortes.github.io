@@ -50,7 +50,7 @@ export const Brasil: React.FC = () => {
         E AQUI NO BRASIL?
       </div>
       <div style={{display: 'flex', alignItems: 'center', gap: 26, marginTop: 20}}>
-        <Counter to={84} start={6} duration={26} size={230} color={C.bloodBright} />
+        <Counter to={84} start={40} duration={26} size={230} color={C.bloodBright} />
         <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 40, lineHeight: 1.15, color: C.white}}>
           incidentes com
           <br />

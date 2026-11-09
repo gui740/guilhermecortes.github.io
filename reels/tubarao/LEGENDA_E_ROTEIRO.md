@@ -33,17 +33,19 @@ Escolhi a **A**: mais específica, mais engraçada e com o direct escrito na fra
 
 ---
 
-## Roteiro final (43s, 30fps)
+## Roteiro final (1:10, 30fps): tela + narração
 
-| Tempo | Bloco | Na tela | Transição de saída |
-|---|---|---|---|
-| 0:00–0:02,5 | GANCHO | "3 FILMES PRA VOCÊ NUNCA MAIS ENTRAR NO MAR ~~TRANQUILO~~ 🩸", com sonar pulsando e barbatana rondando | barbatana corta a tela |
-| 0:02,5–0:07 | DADO | "VILÃO, É? OLHA OS NÚMEROS:" e duas barras: 65 mordidas (2025) contra ~80 MILHÕES de tubarões mortos/ano. Depois: "QUEM DEVIA TER MEDO DE QUEM? 💀" | mergulho |
-| 0:07–0:15,5 | FILME 1 | Do Fundo do Mar (1999): pôster, "Gravado nos tanques que James Cameron construiu pra Titanic", contador US$ 164,6 MI, mapa com zoom até Rosarito (México), selo HBO Max | mordida + glitch |
-| 0:15,5–0:24 | FILME 2 | Medo Profundo: O Segundo Ataque (2019): pôster, "A cidade maia submersa? Montada em tanques na Inglaterra", US$ 47,6 MI (custou 12), mapa Yucatán (história) → Inglaterra e Rep. Dominicana (filmagem), selo Telecine + Lionsgate+ | barbatana |
-| 0:24–0:32,5 | FILME 3 | Sob as Águas do Sena (2024): pôster, curiosidade, 102,3 MI de views, mapa Paris (história) → Alicante (tanque), selo Netflix | mergulho |
-| 0:32,5–0:35,5 | FECHAMENTO | "ATÉ O SPIELBERG SE ARREPENDEU." O diretor de Tubarão lamenta a matança de tubarões que veio depois do filme (BBC, 2022) | mordida |
-| 0:35,5–0:38,5 | BRASIL | "E AQUI NO BRASIL?", contador 84 incidentes em PE desde 1992, mapa de Recife/Jaboatão, "a placa na praia não é enfeite" | barbatana |
-| 0:38,5–0:43 | CTA | "MANDA NO DIRECT DAQUELE AMIGO QUE NADA ATÉ A BOIA 🩸" e o botão "SEGUIR @talking_horror" | fim |
+Narração: voz **Charon** do Google (Gemini TTS), em velocidade natural. Trilha original sintetizada, que abaixa sozinha quando a voz entra.
+
+| Tempo | Bloco | Narração | Na tela | Transição |
+|---|---|---|---|---|
+| 0:00–0:06 | GANCHO | "Três filmes pra você nunca mais entrar no mar tranquilo." | "3 FILMES PRA VOCÊ NUNCA MAIS ENTRAR NO MAR ~~TRANQUILO~~ 🩸" entrando junto com a fala; sonar e barbatana | barbatana |
+| 0:06–0:15,5 | DADO | "Vilão, é? Sessenta e cinco mordidas no mundo em 2025. E a gente mata uns oitenta milhões de tubarões por ano." | "VILÃO, É? OLHA OS NÚMEROS:"; a barra do 65 sobe quando a voz fala o 65, a de ~80 MILHÕES quando ela fala o 80; "QUEM DEVIA TER MEDO DE QUEM? 💀" | mergulho |
+| 0:15,5–0:28 | FILME 1 | "Do Fundo do Mar, de noventa e nove. Gravado nos tanques que o James Cameron construiu pra Titanic. Custou sessenta milhões e faturou quase cento e sessenta e cinco. Tá na HBO Max." | pôster + curiosidade; depois o mapa até Rosarito, o contador US$ 164,6 MI e o selo HBO Max, cada um no momento em que é falado | mordida |
+| 0:28–0:41,5 | FILME 2 | "Medo Profundo: O Segundo Ataque. Cidade maia submersa? Montada em tanques na Inglaterra. Faturou quase quatro vezes o que custou. Tá no Telecine e no Lionsgate Plus." | pôster + curiosidade; mapa Yucatán → Inglaterra / Rep. Dominicana; US$ 47,6 MI; selo Telecine + Lionsgate+ | barbatana |
+| 0:41,5–0:53,5 | FILME 3 | "Sob as Águas do Sena. Tubarão no meio de Paris. O triatlo foi gravado num tanque na Espanha. Mais de cem milhões de views na Netflix." | pôster + curiosidade; mapa Paris → Alicante; 102,3 MI de views; selo Netflix | mergulho |
+| 0:53,5–0:57,5 | SPIELBERG | "Até o Spielberg se arrependeu da matança que veio depois." | "ATÉ O SPIELBERG SE ARREPENDEU." | mordida |
+| 0:57,5–1:04,5 | BRASIL | "E aqui? Oitenta e quatro incidentes em Pernambuco desde noventa e dois. Respeita a placa." | contador 84; mapa de Recife/Jaboatão; "a placa na praia não é enfeite" | barbatana |
+| 1:04,5–1:10 | CTA | "Manda pro amigo que nada até a boia. E segue o Talking Horror pra parte dois." | "MANDA NO DIRECT DAQUELE AMIGO QUE NADA ATÉ A BOIA 🩸" + botão "SEGUIR @talking_horror" | fim |
 
 Zonas seguras: nada importante nos 260px de cima, nos 360px de baixo nem nos 150px da direita.

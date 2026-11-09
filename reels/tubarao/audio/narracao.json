@@ -1,0 +1,23 @@
+{
+  "_comment": "Narração: voz Charon do Google (Gemini TTS). Cada fala é recortada da tomada gravada (in/out em segundos) e entra no início do bloco + narrationOffset (src/timeline.json). Velocidade natural, sem aceleração.",
+  "voice": "Charon",
+  "take": "fonte/take_gemini-3.8-flash-tts_Charon.wav",
+  "segments": [
+    {"id": "hook",      "block": "hook",      "src": "fonte/hook_gemini-2.5-flash-preview-tts_Charon.wav", "in": 0.40, "out": 5.10, "offset": 0.15,
+     "text": "Três filmes pra você nunca mais entrar no mar tranquilo."},
+    {"id": "dado",      "block": "data",      "in": 0.00,  "out": 8.95,
+     "text": "Vilão, é? Sessenta e cinco mordidas no mundo em dois mil e vinte e cinco. E a gente mata uns oitenta milhões de tubarões por ano."},
+    {"id": "filme1",    "block": "m1",        "in": 9.90,  "out": 21.62,
+     "text": "Do Fundo do Mar, de noventa e nove. Gravado nos tanques que o James Cameron construiu pra Titanic. Custou sessenta milhões e faturou quase cento e sessenta e cinco. Tá na HBO Max."},
+    {"id": "filme2",    "block": "m2",        "in": 22.15, "out": 34.90,
+     "text": "Medo Profundo: O Segundo Ataque. Cidade maia submersa? Montada em tanques na Inglaterra. Faturou quase quatro vezes o que custou. Tá no Telecine e no Lionsgate Plus."},
+    {"id": "filme3",    "block": "m3",        "in": 35.45, "out": 45.00,
+     "text": "Sob as Águas do Sena. Tubarão no meio de Paris. O triatlo foi gravado num tanque na Espanha. Mais de cem milhões de views na Netflix."},
+    {"id": "spielberg", "block": "spielberg", "in": 45.50, "out": 48.75,
+     "text": "Até o Spielberg se arrependeu da matança que veio depois."},
+    {"id": "brasil",    "block": "brasil",    "in": 49.25, "out": 55.10,
+     "text": "E aqui? Oitenta e quatro incidentes em Pernambuco desde noventa e dois. Respeita a placa."},
+    {"id": "cta",       "block": "cta",       "in": 55.70, "out": 60.68,
+     "text": "Manda pro amigo que nada até a boia. E segue o Talking Horror pra parte dois."}
+  ]
+}

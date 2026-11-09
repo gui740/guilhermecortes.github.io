@@ -6,15 +6,15 @@ import {Counter, useIn, WordsIn} from '../components/bits';
 /** 2,5–7s: mini-gráfico de contraste (ISAF 2025 x Worm et al. 2024) */
 export const DataScene: React.FC = () => {
   const f = useCurrentFrame();
-  const b1 = useIn(14, 14);
-  const b2 = useIn(40, 18);
-  const w2 = interpolate(f, [44, 80], [0, 850], {
+  const b1 = useIn(50, 14);
+  const b2 = useIn(172, 18);
+  const w2 = interpolate(f, [178, 214], [0, 850], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
     easing: Easing.out(Easing.exp),
   });
-  const shake = f > 78 && f < 92 ? (random(`s${f}`) - 0.5) * 16 : 0;
-  const end = useIn(92, 10);
+  const shake = f > 212 && f < 226 ? (random(`s${f}`) - 0.5) * 16 : 0;
+  const end = useIn(232, 10);
   return (
     <AbsoluteFill style={{padding: '300px 150px 0 60px'}}>
       <WordsIn
@@ -33,7 +33,7 @@ export const DataScene: React.FC = () => {
         </div>
         <div style={{display: 'flex', alignItems: 'center', gap: 22, marginTop: 14}}>
           <div style={{width: 14, height: 80, background: C.white, borderRadius: 4}} />
-          <Counter to={65} start={18} duration={22} size={140} />
+          <Counter to={65} start={56} duration={24} size={140} />
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export const DataScene: React.FC = () => {
           />
         </div>
         <div style={{marginTop: 12}}>
-          <Counter to={80} start={44} duration={36} size={140} prefix="~" suffix=" MILHÕES" />
+          <Counter to={80} start={178} duration={36} size={140} prefix="~" suffix=" MILHÕES" />
         </div>
       </div>
 
