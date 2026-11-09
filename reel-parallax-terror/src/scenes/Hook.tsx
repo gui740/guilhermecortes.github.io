@@ -55,9 +55,9 @@ export const Hook: React.FC = () => {
   return (
     <AbsoluteFill style={{background: '#120b07', overflow: 'hidden'}}>
       <AbsoluteFill style={{transformOrigin: `${alvo.x}px ${alvo.y}px`, transform: `translate(${(540 - alvo.x) * ps}px, ${(960 - alvo.y) * ps}px) scale(${1 + ps * 2.7}) rotate(${-alvo.rot * ps}deg)`}}>
-        <Camera de={{x: -24, y: 18, z: 0}} ate={{x: 22, y: -26, z: 0.1}} dur={C.duracao}>
+        <Camera de={{x: -40, y: 30, z: 0}} ate={{x: 36, y: -36, z: 0.12}} dur={C.duracao} punches={[t.titulo + 4]}>
           <ParallaxLayer fator={0.2} dolly={1}>
-            <PaperBackground tom="#2b1d13" />
+            <PaperBackground tom="#46321f" />
           </ParallaxLayer>
           <ParallaxLayer fator={0.5} dolly={0.3}>
             <Jornal x={170} y={300} w={330} h={420} rot={-12} manchete="DESAPARECIDO" op={0.32} />
@@ -73,8 +73,8 @@ export const Hook: React.FC = () => {
             {POLAROIDES.map((p, i) => (
               <Tape key={i} x={p.x + rnd('tx' + i, -20, 20)} y={p.y - PW * 0.6 - 4} w={130} h={42} rot={p.rot + rnd('tr' + i, -12, 12)} delay={t.polas[i] + 9} seed={'tg' + i} />
             ))}
-            <HandArrow de={{x: 905, y: 760}} ate={{x: 640, y: 940}} curva={-70} delay={t.seta} dur={16} seed="hk" />
-            <Scribble tipo="sublinhado" x={540} y={735} w={520} delay={t.circulo} dur={12} seed="hs" />
+            <HandArrow de={{x: 930, y: 790}} ate={{x: 650, y: 960}} curva={-70} delay={t.seta} dur={16} seed="hk" />
+            <Scribble tipo="sublinhado" x={540} y={800} w={560} delay={t.circulo} dur={12} seed="hs" />
           </ParallaxLayer>
         </Camera>
       </AbsoluteFill>

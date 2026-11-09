@@ -47,9 +47,9 @@ export const Hagazussa: React.FC = () => {
   const t = tlHagazussa();
   return (
     <AbsoluteFill style={{background: '#0c1014', overflow: 'hidden'}}>
-      <Camera de={{x: -20, y: 30, z: 0}} ate={{x: 26, y: -20, z: 0.13}} dur={C.duracao}>
+      <Camera de={{x: -45, y: 45, z: 0}} ate={{x: 50, y: -35, z: 0.17}} dur={C.duracao} punches={[t.ficha]}>
         <ParallaxLayer fator={0.12} dolly={1}>
-          <PaperBackground img="hagazussa/neve_fundo.jpg" imgOpacity={0.55} tom="#1a2026" imgFiltro="grayscale(0.6) contrast(1.05) brightness(0.55)" />
+          <PaperBackground img="hagazussa/neve_fundo.jpg" imgOpacity={0.55} tom="#1a2026" imgFiltro="grayscale(0.4) contrast(1.05) brightness(0.75)" />
         </ParallaxLayer>
         <ParallaxLayer fator={0.25} dolly={0.8}>
           <Montanhas base={1180} altura={520} cor="#5b6875" neve="#c9d1d8" seed="m1" picos={4} />

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {rnd} from './util';
 import {F} from './fonts';
+import {staticFile} from 'remotion';
 
 /** Faixa de névoa que desliza devagar (barata de renderizar: só gradientes). */
 export const Nevoa: React.FC<{y: number; h?: number; op?: number; vel?: number; cor?: string}> = ({y, h = 380, op = 0.35, vel = 0.4, cor = '215,220,225'}) => {
@@ -61,7 +62,7 @@ export const Pinheiros: React.FC<{seed: string; cor?: string; escala?: number; l
 
 /** Recorte de jornal velho (texto falso em barras + manchete). */
 export const Jornal: React.FC<{x: number; y: number; w: number; h: number; rot: number; manchete: string; op?: number}> = ({x, y, w, h, rot, manchete, op = 0.55}) => (
-  <div style={{position: 'absolute', left: x, top: y, width: w, height: h, transform: `translate(-50%,-50%) rotate(${rot}deg)`, background: '#cfc3a6', opacity: op, padding: 16, boxSizing: 'border-box', boxShadow: '4px 8px 10px rgba(0,0,0,0.5)', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', left: x, top: y, width: w, height: h, transform: `translate(-50%,-50%) rotate(${rot}deg)`, background: `url(${staticFile('textura/papel.jpg')}) center/cover`, opacity: op, padding: 16, boxSizing: 'border-box', boxShadow: '4px 8px 10px rgba(0,0,0,0.5)', overflow: 'hidden'}}>
     <div style={{fontFamily: F.titulo, fontSize: w * 0.12, color: '#1c1610', lineHeight: 1, marginBottom: 10}}>{manchete}</div>
     {Array.from({length: Math.floor((h - w * 0.12 - 30) / 16)}, (_, i) => (
       <div key={i} style={{height: 7, marginBottom: 9, background: 'rgba(30,24,18,0.45)', width: `${70 + ((i * 37) % 30)}%`}} />
@@ -71,7 +72,7 @@ export const Jornal: React.FC<{x: number; y: number; w: number; h: number; rot: 
 
 /** Verso de polaroide (papel), para as polaroides "viradas pra baixo". */
 export const VersoPolaroide: React.FC<{w: number; marca?: string}> = ({w, marca}) => (
-  <div style={{width: w, height: w * 1.2, background: 'linear-gradient(135deg, #d9cdb0, #c4b48d)', position: 'relative', boxShadow: 'inset 0 0 30px rgba(80,50,20,0.35)'}}>
+  <div style={{width: w, height: w * 1.2, background: `linear-gradient(135deg, rgba(217,205,176,0.35), rgba(170,145,100,0.45)), url(${staticFile('textura/papel.jpg')}) center/cover`, position: 'relative', boxShadow: 'inset 0 0 30px rgba(80,50,20,0.35)'}}>
     <div style={{position: 'absolute', inset: 14, border: '2px dashed rgba(90,60,30,0.25)'}} />
     {marca ? <div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: F.marker, fontSize: w * 0.42, color: 'rgba(139,0,0,0.85)', transform: 'rotate(-8deg)'}}>{marca}</div> : null}
   </div>

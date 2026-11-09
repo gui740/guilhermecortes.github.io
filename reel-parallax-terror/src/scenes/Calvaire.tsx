@@ -38,9 +38,9 @@ export const Calvaire: React.FC = () => {
   const t = tlCalvaire();
   return (
     <AbsoluteFill style={{background: '#0b0d0c', overflow: 'hidden'}}>
-      <Camera de={{x: 26, y: -10, z: 0}} ate={{x: -28, y: 24, z: 0.12}} dur={C.duracao}>
+      <Camera de={{x: 50, y: -24, z: 0}} ate={{x: -50, y: 40, z: 0.16}} dur={C.duracao} punches={[t.ficha]}>
         <ParallaxLayer fator={0.2} dolly={1}>
-          <PaperBackground img="calvaire/floresta_fundo.jpg" imgOpacity={0.75} tom="#161b1a" imgFiltro="grayscale(0.5) contrast(1.15) brightness(0.7)" />
+          <PaperBackground img="calvaire/floresta_fundo.jpg" imgOpacity={0.75} tom="#161b1a" imgFiltro="grayscale(0.3) contrast(1.1) brightness(0.88)" />
         </ParallaxLayer>
         <ParallaxLayer fator={0.32} dolly={0.6}>
           <Nevoa y={820} h={520} op={0.28} vel={0.35} />
@@ -72,7 +72,7 @@ export const Calvaire: React.FC = () => {
           <RedString de={{x: 160, y: 960}} ate={ALVO} delay={t.fios + 8} seed="cf3" />
           <RedString de={{x: 930, y: 1000}} ate={ALVO} delay={t.fios + 12} seed="cf4" />
           <Scribble tipo="circulo" x={250} y={640} w={420} h={330} delay={t.circBartel} seed="cc1" />
-          <Annotation texto="ninguém aqui é normal" x={540} y={1300} rot={-3} delay={t.nota} tamanho={54} />
+          <Annotation texto="ninguém aqui é normal" x={395} y={1318} rot={-3} delay={t.nota} tamanho={46} />
           <Scribble tipo="x" x={800} y={1170} w={150} h={110} delay={t.xBar} dur={10} seed="cx" />
           <Tape x={800} y={1040} w={120} rot={8} delay={t.bar + 8} seed="cbt" />
         </ParallaxLayer>

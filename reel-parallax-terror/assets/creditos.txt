@@ -147,14 +147,19 @@ IMAGENS BAIXADAS E NÃO USADAS (ficaram em assets/raw/ como alternativa)
   [possum] casa.jpg  https://commons.wikimedia.org/wiki/File:Derelict_Old_House_(33298565995).jpg
 
 NARRAÇÃO
-  Gemini TTS (Google AI Studio), modelo gemini-2.5-flash-preview-tts, voz pré-pronta 'Enceladus'.
-  Pós-processamento: pausas > 0,45s encurtadas e atempo 1,2x (scripts/ajustar_narracao.py). Originais em assets/narracao/bruto/.
-  Testes de voz (Charon, Algenib, Enceladus, Orus) em out/testes-voz/ — gerados com gemini-3.8-flash-tts.
+  Gemini TTS (Google AI Studio), modelo gemini-2.5-flash-preview-tts, voz pré-pronta 'Zubenelgenubi', languageCode pt-BR.
+  Roteiro inteiro gerado numa chamada só (fala contínua) e dividido por cena com Whisper (scripts/narracao.py). Sem cortes/aceleração.
+  Comparativo em out/testes-voz/: Zubenelgenubi (escolhida), Charon, e a versão antiga (Enceladus) para referência.
 
-TRILHA E EFEITOS SONOROS
-  Sintetizados proceduralmente em código (scripts/sfx.py) — sem direitos de terceiros.
-  assets/trilha/drone.wav (drone sombrio sem vocal), assets/sfx/{papel,fita,caneta,rasgo,queda,whoosh,batida}.wav
-  (Pixabay bloqueou acesso automatizado com 403 e Freesound exige chave de API.)
+TRILHA
+  "Hitman" — Kevin MacLeod (incompetech.com)
+  Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/
+  https://incompetech.com/music/royalty-free/mp3-royaltyfree/Hitman.mp3  (usada a partir de 0:50)
+  >>> CC BY exige crédito: coloque a linha acima na legenda/descrição do post. <<<
+
+EFEITOS SONOROS
+  Sintetizados proceduralmente em código (scripts/sfx.py) — sem direitos de terceiros:
+  assets/sfx/{papel,fita,caneta,rasgo,queda,whoosh,batida}.wav
 
 FONTES (Google Fonts, SIL Open Font License)
   Anton, Bebas Neue, Permanent Marker, Caveat, Inter, Special Elite — assets/fonts/
@@ -164,4 +169,5 @@ TEXTURAS
   Granulação de filme: scripts/texturas.py -> assets/textura/grao_*.png
 
 RECORTES
-  rembg (modelo isnet-general-use) via scripts/recortar.py; borda branca por dilatação do alpha.
+  rembg com BiRefNet (birefnet-portrait p/ pessoas, birefnet-general-lite p/ objetos/animais) via scripts/recortar.py;
+  contorno de tesoura, base rasgada, gradação por filme, grão, vinco e textura de papel gerados no próprio script.

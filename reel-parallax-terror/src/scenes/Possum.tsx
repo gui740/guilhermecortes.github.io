@@ -72,9 +72,9 @@ export const Possum: React.FC = () => {
   const t = tlPossum();
   return (
     <AbsoluteFill style={{background: '#100a07', overflow: 'hidden'}}>
-      <Camera de={{x: -32, y: 22, z: 0}} ate={{x: 30, y: -26, z: 0.12}} dur={C.duracao}>
+      <Camera de={{x: -55, y: 36, z: 0}} ate={{x: 50, y: -40, z: 0.16}} dur={C.duracao} punches={[t.ficha]}>
         <ParallaxLayer fator={0.2} dolly={1}>
-          <PaperBackground img="possum/campo_fundo.jpg" imgOpacity={0.85} tom="#22170f" imgFiltro="grayscale(0.25) sepia(0.25) contrast(1.1) brightness(0.8)" />
+          <PaperBackground img="possum/campo_fundo.jpg" imgOpacity={0.85} tom="#3a2a1c" imgFiltro="sepia(0.2) contrast(1.08) brightness(0.95)" />
         </ParallaxLayer>
         <ParallaxLayer fator={0.5} dolly={0.3}>
           <Cutout src="possum/casa.jpg" tipo="rasgado" aspecto={1.6} x={300} y={612} w={500} rot={-4} delay={t.casa} seed="pcasa" />

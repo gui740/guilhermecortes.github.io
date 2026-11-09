@@ -63,7 +63,7 @@ export const Outro: React.FC = () => {
   return (
     <AbsoluteFill style={{background: '#0d0907', overflow: 'hidden'}}>
       <AbsoluteFill style={{transform: `translateY(${dy}px) scale(${z})`, transformOrigin: '540px 760px'}}>
-        <PaperBackground tom="#24180f" escala={1.3} />
+        <PaperBackground tom="#3d2b1d" escala={1.3} />
         <Card id="possum" frame={CENAS.possum.saida - 1}><Possum /></Card>
         <Card id="calvaire" frame={CENAS.calvaire.saida - 1}><Calvaire /></Card>
         {f >= TRANSICAO ? <Card id="hagazussa" frame={CENAS.hagazussa.duracao - 1}><Hagazussa /></Card> : null}

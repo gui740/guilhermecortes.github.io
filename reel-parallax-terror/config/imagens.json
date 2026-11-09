@@ -7,15 +7,18 @@
     },
     "philip": {
       "src": "backdrop_k3hvqloQwDDuK0llur8ezF3BZJ6.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "philip2": {
       "src": "backdrop_4NBJ96tywsom53Ax2z8ncRIAbvQ.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "maurice": {
       "src": "backdrop_3lt332ZgnoNwZ5xFLDeHv66qoHs.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "boneco": {
       "src": "backdrop_yB70SrspWic4RM8yi1w27FDSvIN.jpg",
@@ -23,7 +26,8 @@
     },
     "mala": {
       "src": "mala.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "objeto"
     },
     "campo": {
       "src": "backdrop_8lV22mZEWRZKDcselLnnbLSsW8c.jpg",
@@ -49,15 +53,18 @@
     },
     "marc": {
       "src": "backdrop_wiVg6TlmQcYyja0bTsmwvVWkd8o.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "bartel": {
       "src": "backdrop_uFT0sfYDKXkxHKfl2rb1Ocvhqe4.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "morador1": {
       "src": "backdrop_gzHPrOvpIlPfpJLLg9gocJo7Jiz.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "morador2": {
       "src": "backdrop_sg4Zyms6r4QC7jLYEFtdNWF7mqQ.jpg",
@@ -65,11 +72,13 @@
     },
     "morador3": {
       "src": "backdrop_969YfPvSEP16jwDhWKCVpJldlYo.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "van": {
       "src": "van.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "objeto"
     },
     "floresta": {
       "src": "backdrop_lHtyO3AAf47yThC5m4fnjKrqyKk.jpg",
@@ -91,23 +100,28 @@
     },
     "albrun": {
       "src": "backdrop_1SiVLeZshZ1gwnK1AYLVs6SnPUm.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "albrun2": {
       "src": "backdrop_pTwszyM19HUp34zsK1wzK9SLoku.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "pessoa"
     },
     "caveira": {
       "src": "backdrop_jSK7nnPkXdcX9AImcWKDTC9Y76g.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "objeto"
     },
     "cabra": {
       "src": "cabra.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "objeto"
     },
     "cabra2": {
       "src": "cabra2.jpg",
-      "tipo": "recorte"
+      "tipo": "recorte",
+      "modelo": "objeto"
     },
     "cabana": {
       "src": "cabana.jpg",

@@ -3,10 +3,10 @@ import {AbsoluteFill, Img, staticFile} from 'remotion';
 
 /** Cartolina/kraft queimado escuro: cor base + manchas (feTurbulence baixa freq.) + fibra/grão (alta freq.) + vinheta. */
 export const PaperBackground: React.FC<{tom?: string; img?: string; imgOpacity?: number; imgFiltro?: string; escala?: number}> = ({
-  tom = '#2a1c13',
+  tom = '#3d2b1d',
   img,
   imgOpacity = 0.5,
-  imgFiltro = 'grayscale(0.35) sepia(0.3) contrast(1.1) brightness(0.62)',
+  imgFiltro = 'grayscale(0.25) sepia(0.25) contrast(1.08) brightness(0.8)',
   escala = 1.25,
 }) => (
   <AbsoluteFill style={{background: tom, transform: `scale(${escala})`}}>
@@ -25,6 +25,6 @@ export const PaperBackground: React.FC<{tom?: string; img?: string; imgOpacity?:
       <rect width="1080" height="1920" filter="url(#manchas)" />
       <rect width="1080" height="1920" filter="url(#fibra)" />
     </svg>
-    <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 60% at 50% 45%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.9) 100%)'}} />
+    <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 60% at 50% 45%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.3) 78%, rgba(0,0,0,0.65) 100%)'}} />
   </AbsoluteFill>
 );

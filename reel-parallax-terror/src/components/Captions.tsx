@@ -7,8 +7,8 @@ import {prog} from './util';
 
 /** Palavras-chave que aparecem em vermelho. */
 const CHAVE = new Set([
-  'tres', 'terror', 'motivo', 'possum', 'mala', 'boneco', 'aranha', 'gente', 'volta', 'pior', 'sujo',
-  'calvaire', 'educado', 'demais', 'vila', 'danca', 'esqueceu', 'hagazussa', 'bruxa', 'alpes', 'quinze',
+  'tres', 'terror', 'motivo', 'possum', 'mala', 'boneco', 'aranha', 'volta', 'pior', 'sujo',
+  'calvaire', 'educado', 'demais', 'vila', 'danca', 'hagazussa', 'bruxa', 'alpes', 'quinze',
   'enlouquecer', 'sozinha', 'sozinho', 'cabras', 'amigo', 'tudo',
 ]);
 const limpa = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Sintetiza a trilha (drone sombrio, sem vocal) e os efeitos sonoros do reel.
+"""Sintetiza os efeitos sonoros do reel (e, opcionalmente, um drone sombrio: python3 scripts/sfx.py --drone).
 Tudo gerado proceduralmente (numpy/scipy) => livre de direitos.
-Saídas: assets/trilha/drone.wav, assets/sfx/{papel,fita,caneta,rasgo,queda,whoosh,batida}.wav"""
+Saídas: assets/sfx/{papel,fita,caneta,rasgo,queda,whoosh,batida}.wav"""
 import numpy as np, pathlib, wave
 from scipy import signal
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -91,6 +91,8 @@ def batida():         # impacto grave para o título / CTA
     return np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, .002, .45) + .3 * lp(rng.standard_normal(n), 300) * env(n, .001, .1)
 
 if __name__ == "__main__":
-    salvar(ROOT / "assets" / "trilha" / "drone.wav", drone())
+    import sys
+    if "--drone" in sys.argv:  # a trilha atual é assets/trilha/hitman.mp3
+        salvar(ROOT / "assets" / "trilha" / "drone.wav", drone())
     for nome, fn in [("papel", papel), ("fita", fita), ("caneta", caneta), ("rasgo", rasgo), ("queda", queda), ("whoosh", whoosh), ("batida", batida)]:
         salvar(ROOT / "assets" / "sfx" / f"{nome}.wav", fn(), stereo=True)

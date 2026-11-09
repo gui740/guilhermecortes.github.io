@@ -2,3 +2,4 @@ node_modules/
 out/*.pcm
 *.tmp.*
 .DS_Store
+__pycache__/

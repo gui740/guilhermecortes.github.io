@@ -3,7 +3,7 @@
 //
 //  Como funciona:
 //   • A duração de cada cena vem AUTOMATICAMENTE da narração (src/data/narracao.json,
-//     gerado por scripts/narracao.py + scripts/ajustar_narracao.py).
+//     gerado por scripts/narracao.py).
 //   • Cena = [entrada/transição] + [narração] + [respiro] (+ extra manual) + [saída/transição]
 //   • Cenas vizinhas se sobrepõem durante a TRANSICAO (a saída de uma é a entrada da outra).
 //
@@ -15,7 +15,7 @@ export const LARGURA = 1080;
 export const ALTURA = 1920;
 
 /** Respiro (s) depois da narração de cada cena, antes da transição começar. */
-export const RESPIRO_S = 0.5;
+export const RESPIRO_S = 0.4;
 
 /** Duração (frames) das transições: câmera seguindo a seta, papel rasgando, zoom-out do mural. 18 = 0,6s */
 export const TRANSICAO = 18;

@@ -17,3 +17,18 @@ for i in range(8):
         x = rng.integers(0, 540); a[:, x:x + 1] = np.clip(a[:, x:x + 1].astype(int) + 60, 0, 255)
     Image.fromarray(a).save(out / f"grao_{i}.png", optimize=True)
 print("ok")
+
+# ---- papel envelhecido (fundo das polaroides, fichas, impressos) ----
+def _ruido(h, w, escalas, seed):
+    r = np.random.default_rng(seed); o = np.zeros((h, w), np.float32)
+    for s, a in escalas:
+        n = r.standard_normal((h // s + 2, w // s + 2)).astype(np.float32)
+        o += a * np.array(Image.fromarray(n).resize((w, h), Image.BICUBIC))
+    return o / np.abs(o).max()
+H = W = 1024
+fib = _ruido(H, W, ((1, .35), (3, .35), (12, .3)), 11)
+man = _ruido(H, W, ((90, .7), (220, .3)), 12)
+base = np.array([238, 230, 212], np.float32)
+img = base[None, None, :] * (1 + 0.045 * fib[..., None]) - np.clip(man, 0, 1)[..., None] * np.array([18, 24, 40], np.float32)
+Image.fromarray(np.clip(img, 0, 255).astype(np.uint8)).save(out / "papel.jpg", quality=90)
+print("ok papel")
