@@ -103,6 +103,21 @@ export const Cut: React.FC<{ name: string; h: number; cx: number; bottom: number
   );
 };
 
+/** Miniatura em moldura circular (o recorte nunca fica com a base cortada à mostra) */
+export const Badge: React.FC<{ name: string; cx: number; cy: number; r: number; at: number; bg: string; zoom?: number; dx?: number; dy?: number }> = ({ name, cx, cy, r, at, bg, zoom = 1.12, dx = 0, dy = 0 }) => {
+  const f = useCurrentFrame();
+  if (f < at) return null;
+  const m = CUT[name];
+  const p = backOut(clamp01((f - at + 1) / 6));
+  const step = Math.floor(f / 4);
+  const h = 2 * r * zoom, w = (h * m.w) / m.h;
+  return (
+    <div style={{ position: "absolute", left: cx - r, top: cy - r, width: 2 * r, height: 2 * r, borderRadius: "50%", overflow: "hidden", background: bg, transform: `scale(${0.6 + 0.4 * p}) rotate(${Math.sin(step * 3.7) * 1.2}deg)`, filter: p < 1 ? `blur(${(1 - p) * 8}px)` : undefined }}>
+      <Img src={staticFile(`cut/${name}.png`)} style={{ position: "absolute", width: w, height: h, left: r - w / 2 + dx * r + Math.sin(step * 12.9) * 3, top: 2 * r - h + dy * r + 4 }} />
+    </div>
+  );
+};
+
 /** Estrela de pontas amarela (atrás do recorte, na revelação do título) */
 export const Star: React.FC<{ cx: number; cy: number; r: number; at: number; points?: number; color?: string }> = ({ cx, cy, r, at, points = 18, color = C.yellow }) => {
   const f = useCurrentFrame();

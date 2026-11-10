@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile, useCurrentFrame, interpolate } from "remotion";
 import { C, FAM, SAFE, SAFE_W, W, H } from "./theme";
-import { BigNum, Bookmark, Caption, Cut, DashedLink, Grid, Logo, Plane, Row, Stack, Star, Viewfinder, Word, clamp01, outCubic, useScene } from "./kit";
+import { Badge, BigNum, Bookmark, Caption, Cut, DashedLink, Grid, Logo, Plane, Row, Stack, Star, Viewfinder, Word, clamp01, outCubic, useScene } from "./kit";
 
 export type WFn = (line: string, i: number) => number;
 type P = { w: WFn };
@@ -38,7 +38,7 @@ export const H1: React.FC<{ fr: number[]; extra?: { t: string; at: number } }> =
       <Grid at={s} color={C.gray} />
       <Cut name="gon_grupo" h={600} cx={500} bottom={1935} at={s + 5} from="bottom" />
       {k < 10 ? (
-        <Img src={staticFile("cut/blair_olhos2.png")} style={{ position: "absolute", left: cross, top: 900, width: 1100, filter: "url(#hblur)", opacity: 0.95 }} />
+        <Img src={staticFile("cut/blair_olhos.png")} style={{ position: "absolute", left: cross, top: 880, width: 1000, filter: "url(#hblur)", opacity: 0.95 }} />
       ) : null}
       <Viewfinder at={fr[1]} />
       <Stack>
@@ -74,8 +74,8 @@ export const GanchoC: React.FC<{ fr: number[] }> = ({ fr }) => {
   return (
     <>
       <Grid at={s} color={C.black} max={0.16} />
-      <Star cx={520} cy={1470} r={470} at={fr[7]} />
-      <Cut name="blair_olhos2" h={640} cx={520} bottom={1800} at={s} from="left" />
+      <Star cx={520} cy={1500} r={500} at={fr[7]} />
+      <Cut name="blair_olhos" h={800} cx={520} bottom={1965} at={s} from="left" />
       <Viewfinder at={fr[2]} color={C.black} />
       <Stack>
         <Row toks={[{ t: "esse", at: fr[0] }, { t: "filme", at: fr[1] }]} />
@@ -98,8 +98,8 @@ export const F3: React.FC<P & { phone: React.ReactNode }> = ({ w, phone }) => {
   return (
     <>
       {phone}
-      <Star cx={520} cy={1400} r={520} at={t} />
-      <Cut name="blair_olhos2" h={660} cx={520} bottom={1730} at={t} />
+      <Star cx={520} cy={1450} r={520} at={t} />
+      <Cut name="blair_olhos" h={860} cx={520} bottom={1965} at={t} />
       <Title num="3" numAt={w("f3a", 0)} numColor={C.red}>
         <Row toks={[{ t: "A", at: t, font: "serif", rel: 0.5 }, { t: "Bruxa", at: w("f3b", 1), font: "serif" }]} gap={0.05} />
         <Row toks={[{ t: "de", at: w("f3b", 2), font: "serif", rel: 0.5 }, { t: "Blair", at: w("f3b", 3), font: "serif" }]} gap={0.05} mt={-10} />
@@ -112,8 +112,8 @@ export const F3c: React.FC<P> = ({ w }) => {
   return (
     <>
       {/* recorte duplicado: cópia pequena ao fundo, grande na frente */}
-      <Cut name="blair_medo" h={470} cx={770} bottom={1420} at={s + 3} opacity={0.55} rot={6} />
-      <Cut name="blair_medo" h={1000} cx={400} bottom={1990} at={s} from="bottom" rot={-3} />
+      <Cut name="blair_medo" h={620} cx={800} bottom={1965} at={s + 3} opacity={0.5} from="right" />
+      <Cut name="blair_medo" h={1060} cx={400} bottom={1975} at={s} from="bottom" />
       <Stack>
         <Row toks={[{ t: "juraram", at: w("f3c", 0) }]} />
         <Row toks={[{ t: "que", at: w("f3c", 1), font: "serif", rel: 0.42 }, { t: "era", at: w("f3c", 2), font: "serif", rel: 0.42 }, { t: "real", at: w("f3c", 3), hi: true }]} gap={0.05} mt={-4} />
@@ -121,7 +121,7 @@ export const F3c: React.FC<P> = ({ w }) => {
     </>
   );
 };
-const Where: React.FC<{ rows: React.ReactNode; cut: string; label: string; logo: "netflix" | "primevideo" | "hbomax"; logoW: number; logoAt: number; ink: string; logoColor: string; id: string }> = ({ rows, cut, label, logo, logoW, logoAt, ink, logoColor, id }) => {
+const Where: React.FC<{ rows: React.ReactNode; cut: string; label: string; logo: "netflix" | "primevideo" | "hbomax"; logoW: number; logoAt: number; ink: string; logoColor: string; id: string; bdx?: number }> = ({ rows, cut, label, logo, logoW, logoAt, ink, logoColor, id, bdx = 0 }) => {
   const { s } = useScene();
   const ar = { netflix: 3.7, primevideo: 3.18, hbomax: 1.386 }[logo];
   const lh = logoW / ar;
@@ -132,8 +132,8 @@ const Where: React.FC<{ rows: React.ReactNode; cut: string; label: string; logo:
         {rows}
         <Row toks={[{ t: label, at: s + 2, font: "serif", color: ink }]} max={112} mt={16} />
       </Stack>
-      <Star cx={300} cy={1090} r={245} at={s + 1} points={14} />
-      <Cut name={cut} h={400} cx={300} bottom={1290} at={s + 1} from="left" />
+      <Star cx={300} cy={1090} r={255} at={s + 1} points={14} />
+      <Badge name={cut} cx={300} cy={1090} r={170} at={s + 1} bg={C.gray} dx={bdx} />
       <DashedLink id={id} d={`M 540 1010 C 780 960, 900 1080, ${lx + logoW * 0.6} ${ly - 28}`} at={logoAt - 5} color={ink} />
       <Logo name={logo} w={logoW} x={lx} y={ly} color={logoColor} at={logoAt} />
     </>
@@ -147,8 +147,8 @@ export const M1: React.FC<P> = ({ w }) => {
   const { s } = useScene();
   return (
     <>
-      <Cut name="demo_host" h={640} cx={520} bottom={1700} at={s} sil />
-      <Q x={430} y={1130} at={w("m1", 1)} size={360} color={C.red} />
+      <Cut name="demo_host" h={800} cx={520} bottom={1965} at={s} sil from="bottom" />
+      <Q x={430} y={1260} at={w("m1", 1)} size={360} color={C.red} />
       <Stack>
         <Row toks={[{ t: "o", at: w("m1", 0), small: true }, { t: "próximo", at: w("m1", 1) }]} gap={0.05} />
         <Row toks={[{ t: "é", at: w("m1", 2), small: true }, { t: "pior", at: w("m1", 3), hi: true }]} gap={0.05} max={400} />
@@ -189,14 +189,14 @@ export const F2c: React.FC<P> = ({ w }) => {
   );
 };
 export const F2d: React.FC<P> = ({ w }) => (
-  <Where id="l2" cut="demo_menina" label="Entrevista com o Demônio" logo="hbomax" logoW={350} logoAt={w("f2d", 1)} ink={C.white} logoColor={C.white}
+  <Where id="l2" cut="demo_host" label="Entrevista com o Demônio" logo="hbomax" logoW={350} logoAt={w("f2d", 1)} ink={C.white} logoColor={C.white}
     rows={<Row toks={[{ t: "na", at: w("f2d", 0), small: true }, { t: "HBO", at: w("f2d", 1) }, { t: "Max", at: w("f2d", 2) }]} gap={0.06} />} />
 );
 export const S1: React.FC<P> = ({ w }) => {
   const { s } = useScene();
   return (
     <>
-      <Cut name="blair_medo" h={600} cx={330} bottom={1960} at={s} from="bottom" />
+      <Cut name="blair_medo" h={640} cx={330} bottom={1970} at={s} from="bottom" />
       <Plane x={610} y={1290} s={250} at={w("s1", 0)} color={C.yellow} />
       <Stack>
         <Row toks={[{ t: "manda", at: w("s1", 0) }]} max={360} />
@@ -228,8 +228,8 @@ export const F1c: React.FC<P> = ({ w }) => {
   const blink = Math.floor((f - s) / 6) % 2 === 0;
   return (
     <>
-      <Cut name="gon_predio" h={640} cx={520} bottom={1900} at={s} from="bottom" />
-      <Cut name="gon_grupo" h={330} cx={560} bottom={1930} at={w("f1c", 2)} from="right" />
+      <Cut name="gon_predio" h={720} cx={390} bottom={1965} at={s} from="bottom" drift={0.03} />
+      <Cut name="gon_grupo" h={340} cx={420} bottom={1965} at={w("f1c", 2)} from="right" />
       <Viewfinder at={w("f1c", 0)} color={C.black} />
       <Stack>
         <Row toks={[{ t: "live", at: w("f1c", 0), hi: true }, { t: "num", at: w("f1c", 1), small: true }]} width={520} max={300} gap={0.06} />
@@ -249,9 +249,9 @@ export const F1d: React.FC<P> = ({ w }) => (
 /* ───────────── CTAs ───────────── */
 export const C1: React.FC<P> = ({ w }) => (
   <>
-    <Cut name="blair_medo" h={360} cx={225} bottom={1500} at={w("c1", 1)} />
-    <Cut name="demo_host" h={430} cx={520} bottom={1500} at={w("c1", 2)} />
-    <Cut name="gon_medo" h={380} cx={790} bottom={1500} at={w("c1", 4)} />
+    <Badge name="blair_medo" cx={215} cy={1330} r={140} at={w("c1", 1)} bg={C.gray} />
+    <Badge name="demo_host" cx={505} cy={1330} r={140} at={w("c1", 2)} bg={C.gray} />
+    <Badge name="gon_medo" cx={795} cy={1330} r={140} at={w("c1", 4)} bg={C.gray} />
     <Bookmark x={720} y={SAFE.top + 20} h={250} at={w("c1", 0)} fillAt={w("c1", 0) + 7} stroke={C.white} fill={C.yellow} />
     <Stack>
       <Row toks={[{ t: "salva", at: w("c1", 0), hi: true }]} width={610} />
@@ -266,9 +266,9 @@ export const C2: React.FC<P> = ({ w }) => {
   const shake = f >= two ? Math.sin((f - two) * 2.4) * Math.max(0, 14 - (f - two)) : 0;
   const strike = outCubic(clamp01((f - two + 1) / 5));
   const cols = [
-    { n: "3", cut: "blair_medo", cx: 215, h: 300 },
-    { n: "2", cut: "demo_host", cx: 510, h: 330 },
-    { n: "1", cut: "gon_medo", cx: 800, h: 300 },
+    { n: "3", cut: "blair_medo", cx: 215 },
+    { n: "2", cut: "demo_host", cx: 505 },
+    { n: "1", cut: "gon_medo", cx: 795 },
   ];
   return (
     <>
@@ -278,14 +278,14 @@ export const C2: React.FC<P> = ({ w }) => {
       </Stack>
       {cols.map((c, i) => (
         <div key={i} style={{ position: "absolute", left: 0, top: 0, width: W, height: H, transform: i === 1 ? `translateX(${shake}px)` : undefined }}>
-          <Cut name={c.cut} h={c.h} cx={c.cx} bottom={1340} at={w("c2", 3) + i * 2} />
-          <BigNum n={c.n} at={w("c2", 3) + i * 2} size={250} x={c.cx - 110} y={985} color={C.black} />
+          <Badge name={c.cut} cx={c.cx} cy={1210} r={135} at={w("c2", 3) + i * 2} bg={C.yellow} />
+          <BigNum n={c.n} at={w("c2", 3) + i * 2} size={190} x={c.cx - 150} y={985} color={C.black} />
         </div>
       ))}
       {f >= two ? (
         <svg width={W} height={H} style={{ position: "absolute" }}>
-          <line x1={370} y1={1320} x2={370 + 290 * strike} y2={1320 - 330 * strike} stroke={C.red} strokeWidth={26} strokeLinecap="round" />
-          <line x1={370} y1={990} x2={370 + 290 * strike} y2={990 + 330 * strike} stroke={C.red} strokeWidth={26} strokeLinecap="round" />
+          <line x1={370} y1={1345} x2={370 + 270 * strike} y2={1345 - 270 * strike} stroke={C.red} strokeWidth={26} strokeLinecap="round" />
+          <line x1={370} y1={1075} x2={370 + 270 * strike} y2={1075 + 270 * strike} stroke={C.red} strokeWidth={26} strokeLinecap="round" />
         </svg>
       ) : null}
       <Caption color={C.gray} bg={C.black} y={1395} chunks={[{ t: "o 2", at: w("c2", 4) }, { t: "nem devia", at: w("c2", 6) }, { t: "tá aqui", at: w("c2", 8) }]} />
@@ -297,7 +297,7 @@ export const C3: React.FC<P> = ({ w }) => {
   return (
     <>
       <Grid at={s} color={C.gray} max={0.3} />
-      <Cut name="blair_olhos2" h={560} cx={520} bottom={1900} at={s} from="bottom" />
+      <Cut name="blair_olhos" h={640} cx={520} bottom={1965} at={s} from="bottom" />
       <Stack>
         <Row toks={[{ t: "segue", at: w("c3", 0) }]} max={400} />
         <Row toks={[{ t: "@talking_horror", at: w("c3", 2), font: "serif", hi: true }]} mt={6} />

@@ -38,14 +38,8 @@
     },
     {
      "recorte": "public/cut/blair_medo.png",
-     "arquivo_original": "assets/raw/blair/backdrop_10.jpg",
-     "url": "https://image.tmdb.org/t/p/original/otizJuUqGNUPq1wuB7QveMLoEZN.jpg",
-     "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
-    },
-    {
-     "recorte": "public/cut/blair_olhos2.png",
-     "arquivo_original": "assets/raw/blair/backdrop_7.jpg",
-     "url": "https://image.tmdb.org/t/p/original/bAemQZumJz7ky102nPcXEdzrrRD.jpg",
+     "arquivo_original": "assets/raw/blair/backdrop_9.jpg",
+     "url": "https://image.tmdb.org/t/p/original/4kSBmvbzdU2xM0t0JLbRozWWIc9.jpg",
      "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
     }
    ]
@@ -78,12 +72,6 @@
      "recorte": "public/cut/demo_host.png",
      "arquivo_original": "assets/raw/demonio/backdrop_2.jpg",
      "url": "https://image.tmdb.org/t/p/original/4yrOyO3N55XazHQXXYoqiiPQd40.jpg",
-     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
-    },
-    {
-     "recorte": "public/cut/demo_camera.png",
-     "arquivo_original": "assets/raw/demonio/backdrop_6.jpg",
-     "url": "https://image.tmdb.org/t/p/original/1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg",
      "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
     },
     {
@@ -148,8 +136,8 @@
     },
     {
      "recorte": "public/cut/gon_predio.png",
-     "arquivo_original": "assets/raw/gonjiam/backdrop_11.jpg",
-     "url": "https://image.tmdb.org/t/p/original/ir3roSTcQKTBQsoHwofEdpfnJnv.jpg",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_2.jpg",
+     "url": "https://image.tmdb.org/t/p/original/r8xOpEymLQrgMLKHk5oultzMxyQ.jpg",
      "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
     }
    ]
@@ -205,5 +193,6 @@
   "Anton",
   "Playfair Display Italic",
   "Inter Bold"
- ]
+ ],
+ "recorte": "rembg com modelo BiRefNet-general + limpeza de máscara (remove pedaços soltos, fecha furos, suaviza contorno); P&B alto contraste + granulado + retícula em scripts/make_cutouts.py"
 }
