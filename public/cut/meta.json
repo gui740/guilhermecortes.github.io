@@ -9,6 +9,26 @@
   "h": 750,
   "src": "assets/raw/blair/backdrop_9.jpg"
  },
+ "blair_lanterna": {
+  "w": 600,
+  "h": 720,
+  "src": "assets/raw/blair/backdrop_10.jpg"
+ },
+ "demo_palco": {
+  "w": 894,
+  "h": 806,
+  "src": "assets/raw/demonio/backdrop_3.jpg"
+ },
+ "gon_camera": {
+  "w": 572,
+  "h": 675,
+  "src": "assets/raw/gonjiam/backdrop_10.jpg"
+ },
+ "gon_escuro": {
+  "w": 1500,
+  "h": 721,
+  "src": "assets/raw/gonjiam/backdrop_6.jpg"
+ },
  "demo_host": {
   "w": 596,
   "h": 798,

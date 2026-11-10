@@ -18,5 +18,19 @@ export const makeW = (tl: TL) => {
     /** frame da i-ésima palavra da frase */
     w: (id: string, i: number) => wf(tl.words[L[id].w0 + i].t),
     words: (id: string) => tl.words.slice(L[id].w0, L[id].w1),
+    /** legenda automática: 1 a 3 palavras por vez, na hora da fala */
+    cap: (...ids: string[]) => {
+      const out: { t: string; at: number }[] = [];
+      for (const id of ids) {
+        let cur: string[] = [], at = 0;
+        for (const x of tl.words.slice(L[id].w0, L[id].w1)) {
+          if (cur.length && (cur.length >= 3 || (cur.join(" ") + " " + x.w).length > 15)) { out.push({ t: cur.join(" "), at }); cur = []; }
+          if (!cur.length) at = wf(x.t);
+          cur.push(x.w.toLowerCase());
+        }
+        if (cur.length) out.push({ t: cur.join(" "), at });
+      }
+      return out;
+    },
   };
 };

@@ -10,7 +10,7 @@
    "titulo_original": "The Blair Witch Project",
    "ano": 1999,
    "streaming": "Netflix",
-   "historia_real": "Divulgado em 1999 como filmagem verdadeira; o site do filme e o IMDb listavam os atores como desaparecidos.",
+   "historia_real": "Divulgado em 1999 como filmagem verdadeira; o site do filme tratava os três estudantes como desaparecidos de verdade.",
    "fontes": [
     {
      "tipo": "JustWatch BR",
@@ -41,6 +41,12 @@
      "arquivo_original": "assets/raw/blair/backdrop_9.jpg",
      "url": "https://image.tmdb.org/t/p/original/4kSBmvbzdU2xM0t0JLbRozWWIc9.jpg",
      "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/blair_lanterna.png",
+     "arquivo_original": "assets/raw/blair/backdrop_10.jpg",
+     "url": "https://image.tmdb.org/t/p/original/otizJuUqGNUPq1wuB7QveMLoEZN.jpg",
+     "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
     }
    ]
   },
@@ -52,7 +58,7 @@
    "ano": 2023,
    "ano_lancamento_br": 2024,
    "streaming": "HBO Max (Max)",
-   "historia_real": "Montado como a fita master 'recuperada' de um talk show de 1977 transmitido ao vivo.",
+   "historia_real": "Montado como a fita 'recuperada' de um talk show transmitido ao vivo na noite de Halloween de 1977.",
    "fontes": [
     {
      "tipo": "JustWatch BR",
@@ -68,6 +74,12 @@
    "obs": "O JustWatch também lista Netflix, mas a página do título na Netflix devolveu 404 a partir do IP dos EUA, então o vídeo cita só a HBO Max.",
    "tmdb": "https://www.themoviedb.org/movie/938614",
    "imagens": [
+    {
+     "recorte": "public/cut/demo_palco.png",
+     "arquivo_original": "assets/raw/demonio/backdrop_3.jpg",
+     "url": "https://image.tmdb.org/t/p/original/joVjOD0BD7eK6xCIsRw6TKijBch.jpg",
+     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
+    },
     {
      "recorte": "public/cut/demo_host.png",
      "arquivo_original": "assets/raw/demonio/backdrop_2.jpg",
@@ -95,7 +107,7 @@
    "titulo_original": "Gonjiam: Haunted Asylum",
    "ano": 2018,
    "streaming": "Prime Video",
-   "historia_real": "Filmado como uma live de terror dentro da história do Hospital Psiquiátrico de Gonjiam, lugar real na Coreia do Sul que a CNN listou entre os mais assustadores do mundo.",
+   "historia_real": "Filmado como uma live de terror, com câmeras presas no rosto do elenco, dentro da história do Hospital Psiquiátrico de Gonjiam, que existiu de verdade na Coreia do Sul.",
    "fontes": [
     {
      "tipo": "JustWatch BR",
@@ -116,6 +128,18 @@
    "confirmacao_pendente": true,
    "tmdb": "https://www.themoviedb.org/movie/508642",
    "imagens": [
+    {
+     "recorte": "public/cut/gon_camera.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_10.jpg",
+     "url": "https://image.tmdb.org/t/p/original/52ObmU78PcAPM0FpFE3ZL5jbFib.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/gon_escuro.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_6.jpg",
+     "url": "https://image.tmdb.org/t/p/original/x1j5VVU4ypEx1hM0PDYGwCJvwtS.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    },
     {
      "recorte": "public/cut/gon_medo.png",
      "arquivo_original": "assets/raw/gonjiam/backdrop_1.jpg",

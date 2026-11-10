@@ -9,34 +9,43 @@ const tl = TLS.main;
 const A = makeW(tl);
 const w = A.w;
 type Def = { id: string; line: string; bg: Bg; whipIn?: boolean; whipOut?: boolean; zoomOut?: boolean; exit?: boolean; render: (ctx: { s: number; e: number }) => React.ReactNode };
+const P = { w, cap: A.cap };
 const defs: Def[] = [
-  { id: "h1", line: "h1", bg: "black", render: () => <S.H1 fr={[0, 1, 2, 3, 4, 5, 6].map((i) => w("h1", i))} /> },
-  { id: "h2", line: "h2", bg: "red", zoomOut: true, exit: false, render: () => <S.H2 rows={S.h2Rows(w)} qAt={w("h2", 1)} /> },
-  { id: "f3", line: "f3a", bg: "gray", render: () => null },
-  { id: "f3c", line: "f3c", bg: "black", render: () => <S.F3c w={w} /> },
-  { id: "f3d", line: "f3d", bg: "red", whipOut: true, exit: false, render: () => <S.F3d w={w} /> },
-  { id: "m1", line: "m1", bg: "gray", whipIn: true, whipOut: true, exit: false, render: () => <S.M1 w={w} /> },
-  { id: "f2", line: "f2a", bg: "black", whipIn: true, render: () => <S.F2 w={w} /> },
-  { id: "f2c", line: "f2c", bg: "gray", render: () => <S.F2c w={w} /> },
-  { id: "f2d", line: "f2d", bg: "red", whipOut: true, exit: false, render: () => <S.F2d w={w} /> },
-  { id: "s1", line: "s1", bg: "black", whipIn: true, whipOut: true, exit: false, render: () => <S.S1 w={w} /> },
-  { id: "f1", line: "f1a", bg: "red", whipIn: true, render: () => <S.F1 w={w} /> },
-  { id: "f1c", line: "f1c", bg: "gray", render: () => <S.F1c w={w} /> },
-  { id: "f1d", line: "f1d", bg: "black", render: () => <S.F1d w={w} /> },
-  { id: "c1", line: "c1", bg: "red", render: () => <S.C1 w={w} /> },
-  { id: "c2", line: "c2", bg: "gray", render: () => <S.C2 w={w} /> },
-  { id: "c3", line: "c3", bg: "black", render: () => <S.C3 w={w} /> },
+  { id: "h1", line: "h1", bg: "black", render: () => <S.H1 fr={[0, 1, 2, 3, 4, 5, 6, 7].map((i) => w("h1", i))} /> },
+  { id: "h2", line: "h2", bg: "red", zoomOut: true, exit: false, render: () => <S.H2 rows={S.h2Rows(w)} qAt={w("h2", 2)} /> },
+  { id: "a", line: "a1", bg: "gray", render: () => null },
+  { id: "a3", line: "a3", bg: "black", render: () => <S.A3 {...P} /> },
+  { id: "a4", line: "a4", bg: "red", render: () => <S.A4 {...P} /> },
+  { id: "a5", line: "a5", bg: "gray", render: () => <S.A5 {...P} /> },
+  { id: "a6", line: "a6", bg: "black", render: () => <S.A6 {...P} /> },
+  { id: "a7", line: "a7", bg: "red", whipOut: true, exit: false, render: () => <S.A7 {...P} /> },
+  { id: "m1", line: "m1", bg: "gray", whipIn: true, whipOut: true, exit: false, render: () => <S.M1 {...P} /> },
+  { id: "b", line: "b1", bg: "black", whipIn: true, render: () => <S.B {...P} /> },
+  { id: "b3", line: "b3", bg: "gray", render: () => <S.B3 {...P} /> },
+  { id: "b4", line: "b4", bg: "red", render: () => <S.B4 {...P} /> },
+  { id: "b5", line: "b5", bg: "black", render: () => <S.B5 {...P} /> },
+  { id: "b6", line: "b6", bg: "gray", render: () => <S.B6 {...P} /> },
+  { id: "b7", line: "b7", bg: "red", whipOut: true, exit: false, render: () => <S.B7 {...P} /> },
+  { id: "s1", line: "s1", bg: "black", whipIn: true, whipOut: true, exit: false, render: () => <S.S1 {...P} /> },
+  { id: "c", line: "c1", bg: "red", whipIn: true, render: () => <S.Cn {...P} /> },
+  { id: "c4", line: "c4", bg: "gray", render: () => <S.C4 {...P} /> },
+  { id: "c5", line: "c5", bg: "black", render: () => <S.C5 {...P} /> },
+  { id: "c6", line: "c6", bg: "gray", render: () => <S.C6 {...P} /> },
+  { id: "c7", line: "c7", bg: "black", render: () => <S.C7 {...P} /> },
+  { id: "e1", line: "e1", bg: "red", render: () => <S.E1 {...P} /> },
+  { id: "e2", line: "e2", bg: "gray", render: () => <S.E2 {...P} /> },
+  { id: "e4", line: "e4", bg: "black", render: () => <S.E4 {...P} /> },
 ];
 export const REEL_FRAMES = EVENTS.main.frames;
 const starts = defs.map((d, i) => (i === 0 ? 0 : sceneStart(A.line(d.line).t)));
 const scenes = defs.map((d, i) => ({ ...d, s: starts[i], e: i + 1 < defs.length ? starts[i + 1] : REEL_FRAMES }));
 const H2S = scenes[1];
-// a cena f3 recebe a cena anterior congelada dentro de um celular (transição zoom)
+// a cena do nº 3 recebe a cena anterior congelada dentro de um celular (transição zoom)
 scenes[2].render = ({ s }) => (
-  <S.F3
-    w={w}
+  <S.A
+    {...P}
     phone={
-      <Phone at={s} tx={590} ty={1330} w={440} leave={w("f3b", 0) - 4}>
+      <Phone at={s} tx={590} ty={1330} w={440} leave={w("a2", 0) - 4}>
         <Freeze frame={H2S.e - 5}>
           <SceneCtx.Provider value={{ s: H2S.s, e: H2S.e, bg: "red", exit: false }}>
             <AbsoluteFill style={{ background: C.red }}>{H2S.render(H2S)}</AbsoluteFill>

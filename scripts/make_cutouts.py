@@ -7,6 +7,10 @@ from scipy import ndimage as ndi
 PICKS = {
     "blair_olhos":  ("assets/raw/blair/backdrop_6.jpg", {}),
     "blair_medo":   ("assets/raw/blair/backdrop_9.jpg", {"crop_left": 0.375}),  # tira o galho solto à esquerda
+    "blair_lanterna": ("assets/raw/blair/backdrop_10.jpg", {}),
+    "demo_palco":   ("assets/raw/demonio/backdrop_3.jpg", {}),
+    "gon_camera":   ("assets/raw/gonjiam/backdrop_10.jpg", {}),
+    "gon_escuro":   ("assets/raw/gonjiam/backdrop_6.jpg", {}),
     "demo_host":    ("assets/raw/demonio/backdrop_2.jpg", {}),
     "demo_grito":   ("assets/raw/demonio/backdrop_4.jpg", {}),
     "demo_menina":  ("assets/raw/demonio/backdrop_5.jpg", {}),
