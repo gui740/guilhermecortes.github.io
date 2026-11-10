@@ -359,7 +359,7 @@ export const C6: React.FC<P> = ({ w, cap }) => {
       <Viewfinder at={w("c6", 4)} color={C.black} />
       <Stack>
         <Row toks={[{ t: "cada", at: w("c6", 0), font: "serif" }, { t: "um", at: w("c6", 1), font: "serif" }, { t: "com uma", at: w("c6", 2), small: true, rel: 0.5 }]} gap={0.07} max={130} />
-        <Row toks={[{ t: "câmera", at: w("c6", 4), hi: true }]} mt={6} />
+        <Row toks={[{ t: "câmera", at: w("c6", 4), hi: true }]} mt={34} />
         <Row toks={[{ t: "no", at: w("c6", 5), small: true }, { t: "rosto", at: w("c6", 6) }]} gap={0.05} mt={2} />
       </Stack>
       <Cap chunks={cap("c6")} />

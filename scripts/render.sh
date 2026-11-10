@@ -3,7 +3,8 @@
 set -e
 cd "$(dirname "$0")/.."
 BROWSER=${BROWSER_EXECUTABLE:-/opt/pw-browsers/chromium}
-[ "$1" = "--tts" ] && python3 scripts/tts.py
+# --tts: gera de novo a voz (precisa de GEMINI_API_KEY no ambiente), confere e alinha as palavras
+if [ "$1" = "--tts" ]; then python3 scripts/gemini_tts.py; python3 scripts/check_vo.py; python3 scripts/align_words.py; fi
 python3 scripts/assemble_vo.py
 python3 scripts/make_events.py
 python3 scripts/make_audio.py

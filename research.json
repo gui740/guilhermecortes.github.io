@@ -210,7 +210,8 @@
   }
  ],
  "audio": {
-  "narracao": "edge-tts pt-BR-AntonioNeural, frase a frase, timestamps por palavra (WordBoundary)",
+  "narracao": "Gemini TTS (gemini-3.8-flash-tts, voz Charon) via Google AI Studio, gerada por blocos; cada bloco é transcrito e comparado com o roteiro (scripts/check_vo.py)",
+  "timestamps_por_palavra": "alinhamento DTW contra uma referência edge-tts com WordBoundary (scripts/align_words.py)",
   "trilha_e_sfx": "sintetizados em scripts/make_audio.py (originais, sem material de terceiros)"
  },
  "fontes_tipograficas": [
