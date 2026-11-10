@@ -1,0 +1,209 @@
+{
+ "verificado_em": "2026-11-10",
+ "metodo": "JustWatch Brasil (API pública, country=BR, somente ofertas FLATRATE/assinatura) + página do título no site do próprio streaming.",
+ "ressalva": "A sessão de render roda com IP dos EUA. A página da HBO Max tem URL própria do Brasil (/br/pt) e confirma o catálogo BR. Netflix e Prime Video servem o catálogo pelo IP: as páginas oficiais abaixo confirmam que o título existe no serviço, mas a disponibilidade NO BRASIL desses dois vem do JustWatch BR (e de matérias brasileiras citadas). Abra os dois links no celular antes de postar.",
+ "filmes": [
+  {
+   "posicao": 3,
+   "papel": "todo mundo reconhece",
+   "titulo_br": "A Bruxa de Blair",
+   "titulo_original": "The Blair Witch Project",
+   "ano": 1999,
+   "streaming": "Netflix",
+   "historia_real": "Divulgado em 1999 como filmagem verdadeira; o site do filme e o IMDb listavam os atores como desaparecidos.",
+   "fontes": [
+    {
+     "tipo": "JustWatch BR",
+     "url": "https://www.justwatch.com/br/filme/a-bruxa-de-blair",
+     "resultado": "Netflix (assinatura)"
+    },
+    {
+     "tipo": "site do streaming",
+     "url": "https://www.netflix.com/br/title/18957965",
+     "resultado": "página do título ativa (HTTP 200), sinopse em português"
+    },
+    {
+     "tipo": "imprensa BR",
+     "url": "https://www.omelete.com.br/filmes/netflix-10-melhores-filmes-de-terror/",
+     "resultado": "lista o filme no catálogo da Netflix (mai/2026)"
+    }
+   ],
+   "tmdb": "https://www.themoviedb.org/movie/2667",
+   "imagens": [
+    {
+     "recorte": "public/cut/blair_olhos.png",
+     "arquivo_original": "assets/raw/blair/backdrop_6.jpg",
+     "url": "https://image.tmdb.org/t/p/original/hSLJKdgzRRvVTOHTwr1qafHpw4n.jpg",
+     "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/blair_medo.png",
+     "arquivo_original": "assets/raw/blair/backdrop_10.jpg",
+     "url": "https://image.tmdb.org/t/p/original/otizJuUqGNUPq1wuB7QveMLoEZN.jpg",
+     "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/blair_olhos2.png",
+     "arquivo_original": "assets/raw/blair/backdrop_7.jpg",
+     "url": "https://image.tmdb.org/t/p/original/bAemQZumJz7ky102nPcXEdzrrRD.jpg",
+     "pagina": "https://www.themoviedb.org/movie/2667/images/backdrops"
+    }
+   ]
+  },
+  {
+   "posicao": 2,
+   "papel": "recente / em alta",
+   "titulo_br": "Entrevista com o Demônio",
+   "titulo_original": "Late Night with the Devil",
+   "ano": 2023,
+   "ano_lancamento_br": 2024,
+   "streaming": "HBO Max (Max)",
+   "historia_real": "Montado como a fita master 'recuperada' de um talk show de 1977 transmitido ao vivo.",
+   "fontes": [
+    {
+     "tipo": "JustWatch BR",
+     "url": "https://www.justwatch.com/br/filme/late-night-with-the-devil",
+     "resultado": "HBO Max (assinatura); também aparece Netflix"
+    },
+    {
+     "tipo": "site do streaming",
+     "url": "https://www.hbomax.com/br/pt/movie/c4de542a-33b9-4ad2-b17d-700b42a3e843",
+     "resultado": "página BR 'Assista Entrevista com O Demônio | HBO Max' (HTTP 200)"
+    }
+   ],
+   "obs": "O JustWatch também lista Netflix, mas a página do título na Netflix devolveu 404 a partir do IP dos EUA, então o vídeo cita só a HBO Max.",
+   "tmdb": "https://www.themoviedb.org/movie/938614",
+   "imagens": [
+    {
+     "recorte": "public/cut/demo_host.png",
+     "arquivo_original": "assets/raw/demonio/backdrop_2.jpg",
+     "url": "https://image.tmdb.org/t/p/original/4yrOyO3N55XazHQXXYoqiiPQd40.jpg",
+     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/demo_camera.png",
+     "arquivo_original": "assets/raw/demonio/backdrop_6.jpg",
+     "url": "https://image.tmdb.org/t/p/original/1q6Cx3RqP2Tq7WHGr32hKqrWafm.jpg",
+     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/demo_grito.png",
+     "arquivo_original": "assets/raw/demonio/backdrop_4.jpg",
+     "url": "https://image.tmdb.org/t/p/original/wutHj5BS0jpHVea32XSEUgiSl0T.jpg",
+     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/demo_menina.png",
+     "arquivo_original": "assets/raw/demonio/backdrop_5.jpg",
+     "url": "https://image.tmdb.org/t/p/original/2gAeTtLa9T81VHVqzl71py18H18.jpg",
+     "pagina": "https://www.themoviedb.org/movie/938614/images/backdrops"
+    }
+   ]
+  },
+  {
+   "posicao": 1,
+   "papel": "quase ninguém viu",
+   "titulo_br": "Gonjiam: Manicômio Assombrado",
+   "titulo_original": "Gonjiam: Haunted Asylum",
+   "ano": 2018,
+   "streaming": "Prime Video",
+   "historia_real": "Filmado como uma live de terror dentro da história do Hospital Psiquiátrico de Gonjiam, lugar real na Coreia do Sul que a CNN listou entre os mais assustadores do mundo.",
+   "fontes": [
+    {
+     "tipo": "JustWatch BR",
+     "url": "https://www.justwatch.com/br/filme/gonjiam-haunted-asylum",
+     "resultado": "Amazon Prime Video (assinatura)"
+    },
+    {
+     "tipo": "site do streaming",
+     "url": "https://www.primevideo.com/detail?gti=amzn1.dv.gti.23943c11-d691-4565-8b1d-33fac11daefe",
+     "resultado": "página do título existe ('Gonjiam: Hospital Maldito'); território servido = EUA, onde aparece indisponível. NÃO confirma o Brasil."
+    },
+    {
+     "tipo": "imprensa BR",
+     "url": "https://www.adorocinema.com/filmes/filme-263298/",
+     "resultado": "lista Amazon Prime Video (out/2025)"
+    }
+   ],
+   "confirmacao_pendente": true,
+   "tmdb": "https://www.themoviedb.org/movie/508642",
+   "imagens": [
+    {
+     "recorte": "public/cut/gon_medo.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_1.jpg",
+     "url": "https://image.tmdb.org/t/p/original/2kXSxx8PqkoGkfgaGJg1OVhUPg6.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/gon_grupo.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_3.jpg",
+     "url": "https://image.tmdb.org/t/p/original/dMvDaoT9RGFL8ld5YFb451JY1X9.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/gon_close.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_4.jpg",
+     "url": "https://image.tmdb.org/t/p/original/1shThFMiYTh8NjsonH6VfekjpGm.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    },
+    {
+     "recorte": "public/cut/gon_predio.png",
+     "arquivo_original": "assets/raw/gonjiam/backdrop_11.jpg",
+     "url": "https://image.tmdb.org/t/p/original/ir3roSTcQKTBQsoHwofEdpfnJnv.jpg",
+     "pagina": "https://www.themoviedb.org/movie/508642/images/backdrops"
+    }
+   ]
+  }
+ ],
+ "logos": [
+  {
+   "streaming": "netflix",
+   "file": "assets/raw/logos/netflix.svg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Netflix%202015%20logo.svg",
+   "page": "https://commons.wikimedia.org/wiki/File:Netflix_2015_logo.svg"
+  },
+  {
+   "streaming": "primevideo",
+   "file": "assets/raw/logos/primevideo.svg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prime%20Video%20logo%20%282024%29.svg",
+   "page": "https://commons.wikimedia.org/wiki/File:Prime_Video_logo_%282024%29.svg"
+  },
+  {
+   "streaming": "hbomax",
+   "file": "assets/raw/logos/hbomax.svg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO%20Max%20%282025%29.svg",
+   "page": "https://commons.wikimedia.org/wiki/File:HBO_Max_%282025%29.svg"
+  }
+ ],
+ "descartados": [
+  {
+   "titulo": "Atividade Paranormal",
+   "motivo": "disponível (Prime Video), mas ficou de fora para dar lugar a um título recente"
+  },
+  {
+   "titulo": "Cuidado com Quem Chama (Host)",
+   "motivo": "Prime Video no JustWatch; reserva para o nº 1"
+  },
+  {
+   "titulo": "Marcas da Maldição",
+   "motivo": "Netflix; reserva (muito visto, não cabe no 'quase ninguém viu')"
+  },
+  {
+   "titulo": "As Fitas de Poughkeepsie",
+   "motivo": "Prime Video, mas imagens pesadas demais para público amplo"
+  },
+  {
+   "titulo": "A Visita / Cloverfield / REC 1",
+   "motivo": "sem assinatura nos 5 grandes ou só aluguel"
+  }
+ ],
+ "audio": {
+  "narracao": "edge-tts pt-BR-AntonioNeural, frase a frase, timestamps por palavra (WordBoundary)",
+  "trilha_e_sfx": "sintetizados em scripts/make_audio.py (originais, sem material de terceiros)"
+ },
+ "fontes_tipograficas": [
+  "Anton",
+  "Playfair Display Italic",
+  "Inter Bold"
+ ]
+}

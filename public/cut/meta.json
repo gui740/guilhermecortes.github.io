@@ -1,0 +1,57 @@
+{
+ "blair_olhos": {
+  "w": 819,
+  "h": 670,
+  "src": "assets/raw/blair/backdrop_6.jpg"
+ },
+ "blair_medo": {
+  "w": 542,
+  "h": 654,
+  "src": "assets/raw/blair/backdrop_10.jpg"
+ },
+ "blair_olhos2": {
+  "w": 1138,
+  "h": 812,
+  "src": "assets/raw/blair/backdrop_7.jpg"
+ },
+ "demo_host": {
+  "w": 600,
+  "h": 799,
+  "src": "assets/raw/demonio/backdrop_2.jpg"
+ },
+ "demo_camera": {
+  "w": 1314,
+  "h": 803,
+  "src": "assets/raw/demonio/backdrop_6.jpg"
+ },
+ "demo_grito": {
+  "w": 893,
+  "h": 828,
+  "src": "assets/raw/demonio/backdrop_4.jpg"
+ },
+ "demo_menina": {
+  "w": 659,
+  "h": 747,
+  "src": "assets/raw/demonio/backdrop_5.jpg"
+ },
+ "gon_medo": {
+  "w": 883,
+  "h": 844,
+  "src": "assets/raw/gonjiam/backdrop_1.jpg"
+ },
+ "gon_grupo": {
+  "w": 1460,
+  "h": 826,
+  "src": "assets/raw/gonjiam/backdrop_3.jpg"
+ },
+ "gon_close": {
+  "w": 804,
+  "h": 686,
+  "src": "assets/raw/gonjiam/backdrop_4.jpg"
+ },
+ "gon_predio": {
+  "w": 1247,
+  "h": 844,
+  "src": "assets/raw/gonjiam/backdrop_11.jpg"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "netflix": {
+  "file": "assets/raw/logos/netflix.svg",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Netflix%202015%20logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Netflix_2015_logo.svg"
+ },
+ "primevideo": {
+  "file": "assets/raw/logos/primevideo.svg",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prime%20Video%20logo%20%282024%29.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Prime_Video_logo_%282024%29.svg"
+ },
+ "hbomax": {
+  "file": "assets/raw/logos/hbomax.svg",
+  "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO%20Max%20%282025%29.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:HBO_Max_%282025%29.svg"
+ }
+}
