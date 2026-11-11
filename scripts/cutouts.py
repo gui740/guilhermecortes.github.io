@@ -3,6 +3,7 @@ Saída: public/cut/<nome>.png (com contorno branco fino estilo adesivo) e public
 import sys, numpy as np
 from PIL import Image, ImageEnhance, ImageFilter
 from rembg import remove, new_session
+from scipy import ndimage
 
 RAW = "assets/img/raw/"
 JOBS = {  # nome: (arquivo, crop relativo (l,t,r,b))
@@ -60,12 +61,15 @@ for i, name in enumerate(only):
     if max(im.size) > 1800: im.thumbnail((1800, 1800), Image.LANCZOS)
     cut = remove(im, session=sess, post_process_mask=True)
     am = np.asarray(cut.split()[-1])
-    from scipy import ndimage
     lab, n = ndimage.label(am > 60)
     if n > 1:
         sizes = ndimage.sum(np.ones_like(am), lab, range(1, n+1))
         keep = [i+1 for i, sz in enumerate(sizes) if sz >= 0.08*sizes.max()]
         am = np.where(np.isin(lab, keep), am, 0).astype(np.uint8)
+    # preenche buracos internos (barriga/coração vazados) e torna o miolo 100% opaco
+    solid = ndimage.binary_fill_holes(am > 40)
+    core = ndimage.binary_erosion(solid, iterations=3)
+    am = np.where(core, 255, np.where(solid, np.maximum(am, 0), 0)).astype(np.uint8)
     alpha = Image.fromarray(am).filter(ImageFilter.GaussianBlur(0.8))
     bbox = alpha.point(lambda v: 255 if v > 20 else 0).getbbox()
     tex = texture(im, seed=i)
