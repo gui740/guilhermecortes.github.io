@@ -50,6 +50,10 @@ AVISO = [
 ]
 HANDLE = '@terroremmatogrosso'
 
+# gancho de abertura (antes da tela de título) — para prender nos 3 primeiros segundos
+HOOK_LINE = 'E se o Celso resolvesse se vingar?'
+HOOK_MIN = 3.0
+
 # glitches (início base, duração, força 0..1)
 GLITCHES = [(0.0, 0.35, 0.8), (4.55, 0.2, 0.5), (19.5, 0.9, 1.0), (20.6, 0.25, 0.6),
             (25.0, 0.4, 0.7), (31.0, 0.35, 0.8), (34.7, 0.35, 0.9), (45.25, 0.2, 0.8),
@@ -317,9 +321,17 @@ class Timeline:
                 self.mode = 'narração inteira (não detectei 9 falas), fator %.2f' % f
         for (s0, _, _), r in zip(LINES, real_starts):
             self.knots.append((s0, r))
-        self.real_starts, self.real_ends = real_starts, real_ends
+        # gancho: tudo começa depois dele
+        self.hook_audio = None
+        self.hook = HOOK_MIN
+        gp = os.path.join(ASSETS, 'narracao_gancho.wav')
+        if use_narration and os.path.exists(gp):
+            self.hook_audio = _ffmpeg_load(gp)
+            self.hook = max(HOOK_MIN, len(self.hook_audio) / SR + 0.9)
+        self.real_starts = [r + self.hook for r in real_starts]
+        self.real_ends = [r + self.hook for r in real_ends]
         last_shift = real_starts[-1] - LINES[-1][0]
-        self.duration = BASE_END + max(0.0, last_shift)
+        self.duration = self.hook + BASE_END + max(0.0, last_shift)
         kb = np.array([k[0] for k in self.knots])
         kr = np.array([k[1] for k in self.knots])
         self._kb, self._kr = kb, kr
@@ -347,16 +359,30 @@ class Timeline:
 
     # tempo base -> real e inverso
     def to_real(self, tb):
+        """tempo base (roteiro) -> tempo real do vídeo (inclui o gancho)."""
         kb, kr = self._kb, self._kr
+        if tb < 0:
+            return self.hook + tb
         if tb >= kb[-1]:
-            return tb + (kr[-1] - kb[-1])
-        return float(np.interp(tb, kb, kr))
+            return self.hook + tb + (kr[-1] - kb[-1])
+        return self.hook + float(np.interp(tb, kb, kr))
 
     def to_base(self, tr):
+        """tempo real -> tempo base. Negativo = dentro do gancho."""
         kb, kr = self._kb, self._kr
+        tr = tr - self.hook
+        if tr < 0:
+            return tr
         if tr >= kr[-1]:
             return tr - (kr[-1] - kb[-1])
         return float(np.interp(tr, kr, kb))
+
+    def hook_marks(self):
+        """Momentos (tempo real) em que entram as 3 partes do gancho e o flash da boca."""
+        d = len(self.hook_audio) / SR if self.hook_audio is not None else 2.4
+        words = [0.25 + d * f for f in (0.0, 0.38, 0.68)]
+        flash = min(self.hook - 0.35, 0.25 + d + 0.1)
+        return words, flash
 
     def subtitles_at(self, tr):
         for (s, e, (_, _, txt)) in zip(self.real_starts, self.real_ends, LINES):

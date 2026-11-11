@@ -2,7 +2,7 @@
 
 Vídeo vertical para o Reels do **@terroremmatogrosso**: terror retrô 8/16-bit em estilo fliperama dos anos 80, com tela CRT (scanlines, curvatura leve, aberração cromática, bloom), glitch e ruído VHS.
 
-- **Entrega:** `output/celso_a_vinganca_do_parque.mp4` (1080x1920, 30 fps, H.264 High + AAC 192k, ~70 s)
+- **Entrega:** `output/celso_a_vinganca_do_parque.mp4` (1080x1920, 30 fps, H.264 High + AAC 192k, ~75 s com gancho e narração)
 - **Trilha sem narração:** `output/trilha_sem_narracao.wav` (música + SFX, para mixar num editor, se preferir)
 - **Frames-chave:** `output/previews/` (`00_contato.png` é a folha com todos)
 
@@ -57,6 +57,20 @@ Quando há um PNG em `assets/`, o render usa ele no lugar do gerado: remove o ch
 
 ## Narração
 
+A narração atual foi gerada com o TTS do Gemini (Google AI Studio), voz **Algenib**, modelo
+`gemini-2.5-flash-preview-tts`: `assets/narracao.wav` (roteiro) + `assets/narracao_gancho.wav` (gancho).
+Para gerar de novo (outra voz, por exemplo):
+
+```bash
+export GEMINI_API_KEY=sua_chave      # nunca coloque a chave em arquivo do repositório
+python3 src/gerar_narracao.py --voz Algenib      # outras vozes: Charon, Fenrir, Enceladus, Orus...
+python3 src/render.py
+```
+
+O script faz só 2 pedidos (roteiro inteiro + gancho), porque a cota gratuita é de 10 pedidos por dia por modelo.
+
+Para usar uma gravação sua:
+
 1. Grave o texto de `assets/narracao.txt` (Google AI Studio) e salve como **`assets/narracao.wav`** (qualquer taxa de amostragem, mono ou estéreo).
 2. Rode `python3 src/render.py`.
 
@@ -65,10 +79,11 @@ Se a detecção errar, crie `assets/narracao_marcas.txt` com 9 números (um por 
 
 Sem `narracao.wav`, o vídeo usa os tempos do roteiro e mantém as legendas na tela.
 
-## Cenas (tempos sem narração)
+## Cenas (tempos do roteiro, contados depois do gancho; com narração as cenas esticam para acompanhar a voz)
 
 | tempo | cena |
 |---|---|
+| gancho (~5 s) | "E SE O CELSO RESOLVESSE SE VINGAR?" palavra por palavra sobre a lagoa vermelha, com o Celso abrindo a boca e um flash subliminar do jumpscare |
 | 0–5 s | Tela de título arcade, "PRESS START", ficha (moeda) |
 | 5–15 s | LEVEL 1 – DIA: parallax, Celso respirando, capivara e coraçãozinho, HUD com a paciência em 100% |
 | 15–25 s | Visitantes rindo, puxão no rabo, freeze + "!!" + glitch, paciência cai a 0%, "VOCÊ IRRITOU O MORADOR ERRADO.", Celso some na lagoa |

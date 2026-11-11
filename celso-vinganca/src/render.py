@@ -528,6 +528,51 @@ def walk_cycle(t, fps=8):
     return [0, 1, 2, 1][int(t * fps) % 4]
 
 
+def scene_gancho(cv, A, tb, post):
+    """Gancho de abertura: 'E SE O CELSO RESOLVESSE SE VINGAR?' sobre a lagoa vermelha."""
+    hl = getattr(A, 'hook', T.HOOK_MIN)
+    t = tb + hl                       # 0 .. hl
+    cam = 150 + t * 6
+    wc = world()
+    lamps = park_scene(wc, A, cam, 31.5 + t, night=True, show=1.0, red=1.0, fog=0.8,
+                       lamp_fn=lambda k: 0.0 if (k + int(t * 7)) % 3 == 0 else 1.0)
+    # Celso na pista, de boca abrindo e fechando, olhos acesos
+    fr = 4 if (t % 0.7) < 0.35 else 3
+    blit(wc, A.celso[fr], VX + 30 - t * 3, VIS_GROUND + 10 - 58,
+         tint=night_tint(VX + 120, lamps, (0.6, 0.5, 0.7)), glow_eyes=True)
+    crop(cv, wc)
+    # push-in lento (zoom nearest)
+    z = 1.0 + 0.18 * ease_io(t / hl)
+    ys = ((np.arange(VH) - VH * 0.55) / z + VH * 0.55).astype(int).clip(0, VH - 1)
+    xs = ((np.arange(VW) - VW / 2) / z + VW / 2).astype(int).clip(0, VW - 1)
+    cv[:] = cv[ys][:, xs]
+    # escurece o topo para o texto
+    for y in range(0, 150):
+        k = clamp(1 - y / 150) * 0.75
+        cv[y] *= (1 - k)
+    wt, flash = A.hook_marks
+    words = [('E SE O CELSO', wt[0], WHITE, 2), ('RESOLVESSE', wt[1], WHITE, 3), ('SE VINGAR?', wt[2], RED, 4)]
+    y = 46
+    for w, t0, col, pref in words:
+        if t >= t0:
+            pop = ease_out_bounce((t - t0) / 0.3)
+            sc = fit_scale(A, w, VW - 6, pref)
+            if col == RED and int(t * 6) % 2:
+                col = (200, 10, 20)
+            text_center(cv, A, w, y - (1 - pop) * 20, col, sc, BLACK, DRED, cx=VW / 2)
+            if t - t0 < 0.12:
+                post['shake'] = 3
+            y += 13 * sc + 4
+        else:
+            y += 13 * pref + 4
+    # 2 frames da boca em tela cheia (flash subliminar)
+    if flash <= t < flash + 2 / 30:
+        cv[:] = A.jump[1]['rgb']
+        post['shake'] = 5
+    if t > hl - 0.25:
+        post['static'] = clamp((t - (hl - 0.25)) / 0.25) * 0.7
+
+
 def scene_title(cv, A, tb, post):
     cv[:] = (4, 2, 10)
     for (x, y, ph) in A.stars:
@@ -882,12 +927,14 @@ def scene_aviso(cv, A, tb, post):
     post['aviso'] = tb - 63.0
 
 
-SCENE_FN = {'titulo': scene_title, 'level1': scene_level1, 'puxao': scene_puxao, 'noite': scene_noite,
+SCENE_FN = {'gancho': scene_gancho, 'titulo': scene_title, 'level1': scene_level1, 'puxao': scene_puxao, 'noite': scene_noite,
             'perseguicao': scene_chase, 'jumpscare': scene_jumpscare, 'gameover': scene_gameover,
             'aviso': scene_aviso}
 
 
 def scene_at(tb):
+    if tb < 0:
+        return 'gancho'
     for name, a, b in T.SCENES:
         if a <= tb < b:
             return name
@@ -897,6 +944,11 @@ def scene_at(tb):
 # ======================================================================= glitch VHS (nativo)
 def glitch_strength(tb, rng_frame):
     s = 0.0
+    if tb < 0:
+        t = tb + _G['A'].hook if 'A' in _G else 1
+        wt, fl = _G['A'].hook_marks
+        if t < 0.25 or wt[2] <= t < wt[2] + 0.15 or fl <= t < fl + 0.1:
+            s = 0.8
     for (t0, d, k) in T.GLITCHES:
         if t0 <= tb < t0 + d:
             u = (tb - t0) / d
@@ -1054,6 +1106,8 @@ def _init():
     _G['crt'] = CRT()
     _G['ov'] = Overlay()
     _G['tl'] = T.Timeline()
+    _G['A'].hook = _G['tl'].hook
+    _G['A'].hook_marks = _G['tl'].hook_marks()
 
 
 def render_frame(fi):
@@ -1126,7 +1180,7 @@ def render_bytes(fi):
 
 
 # ======================================================================= main
-PREVIEW_TIMES = [('01_titulo', 2.2), ('02_level1_capivara', 11.6), ('03_puxao_rabo', 19.35),
+PREVIEW_TIMES = [('00_gancho', -0.9), ('01_titulo', 2.2), ('02_level1_capivara', 11.6), ('03_puxao_rabo', 19.35),
                  ('04_freeze', 20.9), ('05_irritou', 22.4), ('06_noite_show', 29.0), ('07_noite_vermelha', 33.4),
                  ('08_perseguicao', 41.0), ('09_pau_crack', 45.33), ('10_perseguicao_final', 50.0),
                  ('11_jumpscare', 52.5), ('12_gameover', 60.0), ('13_aviso', 69.0)]

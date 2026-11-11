@@ -458,6 +458,25 @@ def render(tl, out_mix, out_music=None):
         sfx.add(R(59.2 + k * 0.5), sfx_blip(n('C5') + k * 2, 0.05, 0.12), 1.0)
     sfx.add(R(63.0), sfx_glitch(0.25), 0.4)
 
+    # gancho de abertura (0 .. hook): drone, coração, impactos nas palavras, flash
+    hk = tl.hook
+    d = hk
+    dr = osc('saw', 55, d) * 0.25 + osc('sq', 58.3, d, 0.5) * 0.08 + osc('tri', 110, d) * 0.3
+    tt = np.arange(len(dr)) / SR
+    dr *= np.clip(tt / 0.3, 0, 1) * np.clip((d - tt) / 0.2, 0, 1)
+    mus.add(0.0, dr, 0.9)
+    for k in np.arange(0.0, hk - 0.3, 0.75):
+        mus.add(k, kick(0.9), 1.0)
+        mus.add(k + 0.2, kick(0.55), 1.0)
+    sfx.add(0.0, sfx_glitch(0.25), 0.8)
+    wt, flash = tl.hook_marks()
+    for t0, m in zip(wt, (n('A3'), n('A#3'), n('A2'))):
+        hit = osc('sq', midi(m), 0.35, 0.5, f_end=midi(m) * 0.5) * env(int(0.35 * SR), 0.002, 0.3, 0.1, 0.03)
+        sfx.add(t0, hit, 0.5)
+        sfx.add(t0, snare(0.6), 1.0)
+    sfx.add(flash, sfx_jumpscare()[:int(0.25 * SR)], 0.7)
+    sfx.add(hk - 0.3, noise(0.3, 1) * np.linspace(0, 0.5, int(0.3 * SR)), 0.6)
+
     music = mus.x * 0.55
     effects = sfx.x * 0.7
     N = int(dur * SR)
@@ -476,6 +495,11 @@ def render(tl, out_mix, out_music=None):
             i = int(tl.real_starts[0] * SR)
             j = min(N, i + len(x))
             voice[i:j] += x[:j - i]
+        if tl.hook_audio is not None:
+            g = tl.hook_audio
+            i = int(0.25 * SR)
+            j = min(N, i + len(g))
+            voice[i:j] += g[:j - i] * (np.abs(x).max() / (np.abs(g).max() + 1e-9))
         pk = np.abs(voice).max()
         if pk > 0:
             voice *= 0.9 / pk
