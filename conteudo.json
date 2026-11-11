@@ -1,0 +1,101 @@
+{
+  "campanha": "Assédio eleitoral — MPT e TRT em Mato Grosso",
+  "fonte": "assets/slides/01.jpg … 08.jpg",
+  "observacao": "Transcrição literal do carrossel. Em cada frase, 'negrito', 'sublinhado' e 'italico' listam os trechos com esse estilo no slide. Elementos da interface do Instagram (\"2/8\", ícone de perfil) foram descartados.",
+  "slides": [
+    {
+      "slide": 1,
+      "frases": [
+        { "texto": "A eleição acabou, mas o assédio eleitoral, não!", "negrito": ["eleição", "assédio", "eleitoral"], "sublinhado": ["não"], "italico": ["!"] },
+        { "texto": "Foi vítima de ameaças ou represálias no trabalho por causa do seu voto? Denuncie!", "negrito": ["vítima", "ameaças", "represálias", "trabalho", "voto"], "sublinhado": ["Denuncie"], "italico": ["!"] }
+      ],
+      "na_foto": ["Lista de boicote"],
+      "etiquetas": ["IMAGEM ILUSTRATIVA"],
+      "selo": "MPT + TRT · MATO GROSSO"
+    },
+    {
+      "slide": 2,
+      "frases": [
+        { "texto": "Demissões, ameaças, retaliações", "negrito": ["Demissões,", "ameaças,", "retaliações"], "sublinhado": [], "italico": [] },
+        { "texto": "ou qualquer tipo de coação motivada pelo voto dos trabalhadores configura assédio eleitoral!", "negrito": ["coação motivada pelo voto", "assédio eleitoral"], "sublinhado": ["qualquer tipo"], "italico": ["!"] }
+      ],
+      "etiquetas": ["© COM INFORMAÇÕES DA SECOM PGT"],
+      "graficos": ["círculo rosa com X"]
+    },
+    {
+      "slide": 3,
+      "frases": [
+        { "texto": "O MPT em Mato Grosso e o TRT em Mato Grosso continuam recebendo denúncias, tanto em relação às práticas ilegais durante a campanha, quanto em relação à conduta após o resultado", "negrito": ["MPT", "Mato Grosso", "TRT", "Mato Grosso", "práticas ilegais", "conduta"], "sublinhado": ["continuam", "durante", "após"], "italico": ["em", "em"] }
+      ],
+      "etiquetas": ["© COM INFORMAÇÕES DA SECOM PGT"]
+    },
+    {
+      "slide": 4,
+      "frases": [
+        { "texto": "Ninguém é obrigado a contar em quem votou", "negrito": ["Ninguém é obrigado a contar em quem votou"], "sublinhado": [], "italico": [] },
+        { "texto": "E ninguém pode perder o emprego, deixar de ser contratado ou sofrer represália pela escolha que fez", "negrito": ["perder o emprego, deixar de ser contratado", "represália"], "sublinhado": [], "italico": [] }
+      ],
+      "na_foto": ["COMPROVANTE DE VOTAÇÃO", "ELEIÇÕES GERAIS"],
+      "etiquetas": ["IMAGEM ILUSTRATIVA", "© COM INFORMAÇÕES DA SECOM PGT"],
+      "selo": "MPT + TRT · MATO GROSSO",
+      "graficos": ["círculo verde com check"]
+    },
+    {
+      "slide": 5,
+      "frases": [
+        { "texto": "Sofreu ou presenciou? Denuncie!", "negrito": ["Sofreu", "presenciou? Denuncie!"], "sublinhado": [], "italico": [] },
+        { "texto": "Guarde provas: prints de tela, áudios, mensagens e nomes de testemunhas", "negrito": ["Guarde provas"], "sublinhado": [], "italico": [] },
+        { "texto": "Sua denúncia também pode ser feita de forma anônima e/ou sigilosa!", "negrito": ["Sua denúncia também pode ser feita de forma anônima e/ou sigilosa"], "sublinhado": [], "italico": ["!"] }
+      ],
+      "etiquetas": ["© COM INFORMAÇÕES DA SECOM PGT"],
+      "graficos": ["círculo verde com check"]
+    },
+    {
+      "slide": 6,
+      "frases": [
+        { "texto": "Como denunciar", "negrito": ["Como denunciar"], "sublinhado": [], "italico": [] },
+        { "texto": "Trabalhadores que tenham conhecimento de situações que possam caracterizar assédio eleitoral podem procurar o MPT. A identidade do denunciante é preservada", "negrito": ["Trabalhadores", "assédio eleitoral", "MPT", "preservada"], "sublinhado": [], "italico": [] },
+        { "texto": "As denúncias podem ser encaminhadas pelo canal específico do MPT", "negrito": ["MPT"], "sublinhado": [], "italico": [] },
+        { "texto": "mpt.mp.br/assedio-eleitoral", "negrito": ["mpt.mp.br/assedio-eleitoral"], "sublinhado": [], "italico": [], "destaque": "tarja amarela" },
+        { "texto": "Em Mato Grosso, também é possível entrar em contato via telefone", "negrito": ["Mato Grosso", "telefone"], "sublinhado": [], "italico": [] }
+      ],
+      "url": "mpt.mp.br/assedio-eleitoral",
+      "telefones": [
+        { "cidade": "Cuiabá", "numero": "65 3613-9100" },
+        { "cidade": "Rondonópolis", "numero": "66 3411-6800" },
+        { "cidade": "Sinop", "numero": "66 3520-0100" }
+      ],
+      "na_foto": ["MPT"],
+      "selo": "MPT + TRT · MATO GROSSO"
+    },
+    {
+      "slide": 7,
+      "frases": [
+        { "texto": "“O combate ao assédio eleitoral é uma das frentes de atuação do MPT. Estamos atentos às situações que possam comprometer a liberdade de escolha de trabalhadores e orientamos que eventuais denúncias sejam encaminhadas ao órgão.”", "negrito": ["combate", "assédio eleitoral", "MPT", "liberdade de escolha", "denúncias"], "sublinhado": ["atentos", "trabalhadores"], "italico": [] },
+        { "texto": "Thaylise Zaffani, procuradora-chefe do MPT-MT", "negrito": ["Thaylise Zaffani", "MPT-MT"], "sublinhado": [], "italico": ["do"] }
+      ]
+    },
+    {
+      "slide": 8,
+      "frases": [
+        { "texto": "Liberdade política no trabalho é direito! MPT e TRT em Mato Grosso seguem atentos e atuando!", "negrito": ["Liberdade política", "trabalho", "MPT", "TRT em Mato Grosso"], "sublinhado": ["atentos", "atuando"], "italico": ["!", "!"] },
+        { "texto": "Se você foi vítima de assédio eleitoral, denuncie em mpt.mp.br", "negrito": ["mpt.mp.br"], "sublinhado": [], "italico": [] }
+      ],
+      "url": "mpt.mp.br",
+      "etiquetas": ["SEDE DO MPT-MT, EM CUIABÁ"]
+    }
+  ],
+  "fotos": {
+    "mao_celular": "slide 1 — mão com celular (lista de boicote)",
+    "chefe": "slide 2 — chefe apontando",
+    "funcionario": "slide 2 — funcionário à mesa",
+    "celular_mesa": "slide 3 — celular sobre a mesa",
+    "mao_comprovante": "slide 4 — mão com comprovante de votação",
+    "celular_audio": "slide 5 — celular com áudio",
+    "mao_apontando": "slide 6 — mão apontando",
+    "agente_mpt": "slide 6 — agente de costas com colete MPT",
+    "procuradora": "slide 7 — procuradora com microfone",
+    "urna": "slide 7 — urna",
+    "predio": "slide 8 — prédio-sede do MPT-MT, em Cuiabá"
+  }
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Reel — Assédio eleitoral (MPT + TRT · Mato Grosso)</title>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<style>
+:root{--ink:#111111;--cream:#EAE7DC;--pink:#EBCFC9;--green:#DDE3BF;--yellow:#F6DA5E;--gray:#D4D1C7}
+html,body{margin:0;background:#000}
+*{box-sizing:border-box}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cream);font-family:'Red Hat Display',sans-serif;color:var(--ink);--fg:var(--ink)}
+#stage[data-bg=black]{--fg:var(--cream)}
+.shot{position:absolute;inset:0;overflow:hidden;background:var(--cream);color:var(--ink);transform-origin:50% 60%}
+.shot.black{background:var(--ink);color:var(--cream)}
+.shot.yellow{background:var(--yellow)}
+.shot>*{position:absolute}
+/* texto */
+.t{font-weight:300;line-height:1.02;letter-spacing:-.035em;transform-origin:0 50%;left:70px}
+.ln{display:flex;align-items:baseline;white-space:nowrap;gap:.2em}
+.t.r .ln{justify-content:flex-end}
+.w{display:inline-block;position:relative;font-weight:300;font-size:.8em}
+.w.b{font-weight:800;font-size:1em}
+.w.l{font-size:.56em;letter-spacing:-.02em}
+.w.glue{margin-left:-.17em}
+.w.it,.w i{font-style:italic}
+.w i{font-weight:300}
+.ul{position:absolute;left:0;right:0;bottom:-.03em;height:.075em;background:currentColor;transform-origin:0 50%}
+.tarja{position:absolute;left:-3%;right:-3%;top:16%;bottom:4%;background:var(--cream);transform-origin:100% 50%}
+.strike{position:absolute;left:-14px;right:-14px;top:52%;height:.13em;background:currentColor;transform-origin:0 50%}
+.mono{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
+/* gráficos */
+.cx,.ck{border-radius:50%;background:var(--pink)}
+.cx::before,.cx::after{content:"";position:absolute;left:50%;top:50%;width:62%;height:11%;background:var(--cream);margin:-5.5% 0 0 -31%;transform:rotate(45deg)}
+.cx::after{transform:rotate(-45deg)}
+.ck{background:var(--green)} .ck svg{width:100%;height:100%}
+.selo svg{width:100%;height:100%;display:block}
+.tag{display:inline-block;background:var(--gray);font-weight:400;font-size:38px;padding:8px 20px 10px;letter-spacing:.01em}
+.num{font-weight:800;font-size:92px;letter-spacing:-.035em;line-height:1.05;white-space:nowrap}
+.bar{background:var(--yellow)}
+/* fotos */
+.ph{left:0;top:0;transform-origin:0 0}
+.ph img{position:absolute;display:block}
+.scr{position:absolute;overflow:hidden}
+.scr>*{position:absolute}
+.bub{border-radius:14px;background:#E6E2D7}
+.row{display:flex;align-items:center;gap:10px;height:37px;position:relative!important}
+.dot{width:19px;height:19px;border-radius:50%;background:var(--pink);flex:none}
+.bl{height:11px;border-radius:3px;background:#111;opacity:.42;filter:blur(3.2px)}
+.bars{display:flex;align-items:center;gap:3px;height:40px}
+.bars b{width:3px;height:36px;background:#111;border-radius:2px}
+/* camadas globais */
+.ov{position:absolute;inset:0;z-index:500;pointer-events:none}
+#ht{background:var(--fg);-webkit-mask-repeat:no-repeat}
+#sp{background:var(--fg);opacity:.75}
+#gr{mix-blend-mode:overlay;opacity:.62}
+#gr2{opacity:.07}
+.lab{position:absolute;z-index:400;right:147px;writing-mode:vertical-rl;transform:rotate(180deg);font:400 19px 'Space Mono',monospace;letter-spacing:.1em;color:var(--fg);white-space:nowrap}
+#pushhand{position:absolute;z-index:300;left:0;top:0;width:560px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><filter id="hblur" x="-20%" width="140%"><feGaussianBlur stdDeviation="34 0"/></filter></svg>
+<div id="stage">
+
+<!-- ============ CENA 1 — "A eleição acabou. Mas o assédio eleitoral… não." ============ -->
+<section class="shot" data-from="0" data-to="c1c-0.10">
+  <div class="t" data-say="c1a" data-fit="800" style="top:330px;font-size:176px;transform:rotate(-4deg)">~A *eleição | acabou,</div>
+  <div class="t" data-say="c1b" data-fit="800" style="top:690px;font-size:176px;transform:rotate(-4deg)">~mas ~o *assédio | *eleitoral,</div>
+  <div class="ph" style="width:713px;height:937px" data-at="c1b-0.05" data-fx="up" data-dist="500" data-poses="0 44 1560 1.15"><img src="../assets/recortes/mao_celular.png"></div>
+</section>
+<section class="shot" data-ht="B" data-from="c1c-0.10" data-to="c2a-0.12" data-sfxat="boom@c1c">
+  <div class="t" data-say="c1c" style="top:560px;left:110px;font-size:400px;transform:rotate(-4deg)">*_não +/!</div>
+</section>
+
+<!-- ============ CENA 2 — "Foi vítima de ameaças ou represálias no trabalho por causa do seu voto? Denuncie." ============ -->
+<section class="shot" data-lab="il" data-from="c2a-0.12" data-to="c2b-0.10">
+  <div class="t" data-say="c2a" data-fit="800" style="top:285px;font-size:118px;transform:rotate(-3deg)">~Foi *vítima ~de | *ameaças ~ou | *represálias | ~no *trabalho | ~por ~causa ~do ~seu *voto?</div>
+  <div class="ph" style="width:713px;height:937px" data-at="c2a-0.12" data-fx="up" data-dist="420" data-poses="c2a-0.12 44 850 1.15; c2a:5-0.03 -193 885 1.7; c2a:8-0.03 150 900 1.3">
+    <img src="../assets/recortes/mao_celular.png">
+    <div class="scr" style="left:262px;top:128px;width:340px;height:530px;background:#D5CEC1;transform:rotate(.4deg)">
+      <div class="bub" style="left:20px;top:16px;width:268px;height:372px;padding:14px 16px">
+        <div style="font:500 25px 'Red Hat Display';letter-spacing:-.01em;margin-bottom:9px;position:relative" data-at="c2a:0+0.15" data-fx="fade">Lista de boicote</div>
+        <div class="row" data-at="c2a:1" data-fx="pop" data-sfx="pop"><i class="dot"></i><i class="bl" style="width:150px"></i></div>
+        <div class="row" data-at="c2a:1+0.3" data-fx="pop"><i class="dot"></i><i class="bl" style="width:120px"></i></div>
+        <div class="row" data-at="c2a:1+0.6" data-fx="pop" data-sfx="pop"><i class="dot"></i><i class="bl" style="width:165px"></i></div>
+        <div class="row" data-at="c2a:1+0.9" data-fx="pop"><i class="dot"></i><i class="bl" style="width:95px"></i></div>
+        <div class="row" data-at="c2a:1+1.2" data-fx="pop" data-sfx="pop"><i class="dot"></i><i class="bl" style="width:140px"></i></div>
+        <div class="row" data-at="c2a:1+1.5" data-fx="pop"><i class="dot"></i><i class="bl" style="width:110px"></i></div>
+        <div class="row" data-at="c2a:1+1.8" data-fx="pop" data-sfx="pop"><i class="dot"></i><i class="bl" style="width:155px"></i></div>
+        <div class="row" data-at="c2a:1+2.1" data-fx="pop"><i class="dot"></i><i class="bl" style="width:130px"></i></div>
+      </div>
+      <div class="bub" style="left:96px;top:404px;width:226px;height:92px;background:var(--green);padding:16px" data-at="c2a:10" data-fx="pop" data-sfx="pop">
+        <i class="bl" style="display:block;width:170px;margin-bottom:11px"></i><i class="bl" style="display:block;width:190px;margin-bottom:11px"></i><i class="bl" style="display:block;width:90px"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="shot" data-ht="B" data-lab="il" data-from="c2b-0.10" data-to="c3a-0.10">
+  <div class="t" data-say="c2b" data-fit="790" style="top:400px;font-size:210px;transform:rotate(-4deg)">*_Denuncie!</div>
+  <div class="ph" style="width:713px;height:937px" data-poses="c2b-0.10 470 1130 0.86"><img src="../assets/recortes/mao_celular.png"></div>
+  <div class="selo" style="left:90px;top:880px;width:330px;height:330px" data-at="c2b+0.36" data-fx="stamp" data-base="rotate(-14deg)" data-sfx="stamp"></div>
+</section>
+
+<!-- ============ CENA 3 — "Demissões, ameaças, retaliações, ou qualquer tipo de coação… configura assédio eleitoral." ============ -->
+<section class="shot black" data-lab="il secom" data-from="c3a-0.10" data-to="c3b-0.06">
+  <div class="cx" style="left:70px;top:296px;width:112px;height:112px" data-at="c3a:0-0.03" data-fx="stamp" data-sfx="impact"></div>
+  <div class="cx" style="left:130px;top:436px;width:112px;height:112px" data-at="c3a:1-0.03" data-fx="stamp" data-sfx="impact"></div>
+  <div class="cx" style="left:190px;top:576px;width:112px;height:112px" data-at="c3a:2-0.03" data-fx="stamp" data-sfx="impact"></div>
+  <div class="t" data-say="c3a:0" style="top:290px;left:205px;font-size:98px">*Demissões,</div>
+  <div class="t" data-say="c3a:1" style="top:430px;left:265px;font-size:98px">*ameaças,</div>
+  <div class="t" data-say="c3a:2" style="top:570px;left:325px;font-size:98px">*retaliações</div>
+  <div class="ph" style="width:1119px;height:855px" data-poses="c3a-0.10 -130 900 1.2">
+    <img src="../assets/recortes/funcionario.png" style="left:0;top:255px" data-at="c3a:0+0.12" data-fx="left" data-dist="900">
+    <img src="../assets/recortes/chefe.png" style="left:532px;top:0" data-at="c3a:1-0.03" data-fx="right" data-dist="900">
+  </div>
+</section>
+<section class="shot black" data-ht="B" data-lab="il secom" data-from="c3b-0.06" data-to="c3b:11-0.06">
+  <div class="t" data-say="c3b" data-fit="800" style="top:285px;font-size:108px">~ou _qualquer _tipo ~de | *coação | *motivada | *pelo *voto | ~dos trabalhadores | configura</div>
+  <div class="ph" style="width:1119px;height:855px" data-poses="c3b-0.06 -702 935 1.75; c3b:6-0.03 -40 520 1.9; c3b:10-0.03 -420 940 1.5">
+    <img src="../assets/recortes/funcionario.png" style="left:0;top:255px"><img src="../assets/recortes/chefe.png" style="left:532px;top:0">
+  </div>
+</section>
+<section class="shot" data-lab="il secom" data-exit="burst" data-from="c3b:11-0.06" data-to="c4a-0.16" data-sfxat="impact@c3b:11">
+  <div class="cx" style="left:560px;top:560px;width:430px;height:430px" data-at="c3b:12" data-fx="stamp"></div>
+  <div class="t" data-say="c3b:11" data-fit="770" style="top:320px;font-size:230px;transform:rotate(-4deg)">*assédio | *eleitoral!</div>
+  <div class="ph" style="width:1119px;height:855px" data-poses="c3b:11-0.06 -90 965 1.12">
+    <img src="../assets/recortes/funcionario.png" style="left:0;top:255px"><img src="../assets/recortes/chefe.png" style="left:532px;top:0">
+  </div>
+</section>
+
+<!-- ============ CENA 4 — "O MPT e o TRT em Mato Grosso continuam recebendo denúncias: …durante… após…" ============ -->
+<section class="shot" data-ht="B" data-lab="il secom" data-from="c4a-0.16" data-to="c4b-0.06" data-sfx="whoosh">
+  <div class="ph" style="width:1179px;height:874px" data-poses="c4a-0.16 -3870 -880 6; c4a-0.16 -250 885 1.2 0.5; c4a:8-0.03 -640 935 1.6"><img src="../assets/recortes/celular_mesa.png"></div>
+  <div class="t" data-say="c4a" data-fit="800" style="top:285px;font-size:124px;transform:rotate(-3deg)">~O *MPT ~e ~o *TRT | ~/em *Mato *Grosso | _continuam | recebendo | *denúncias</div>
+</section>
+<section class="shot" data-lab="il secom" data-exit="whipL" data-from="c4b-0.06" data-to="c5a-0.16" data-sfxat="whoosh@c5a-0.33">
+  <div class="t" data-say="c4b:0" data-fit="800" style="top:285px;font-size:104px">~tanto ~das *práticas | *ilegais</div>
+  <div class="t" data-say="c4b:4" style="top:560px;font-size:92px">*_DURANTE</div>
+  <div class="t" data-say="c4b:5" style="top:668px;font-size:58px">a campanha</div>
+  <div style="left:70px;top:770px;width:26px;height:26px;border-radius:50%;background:var(--ink)" data-at="c4b:4" data-fx="pop"></div>
+  <div style="left:96px;top:779px;width:760px;height:0;border-top:8px dashed var(--ink)" data-at="c4b:4+0.1" data-fx="wipe" data-dur="1.7" data-sfxat="tick@c4b:4+0.15,tick@c4b:4+0.5,tick@c4b:4+0.85,tick@c4b:4+1.2,tick@c4b:4+1.55,tick@c4b:10"></div>
+  <div style="left:856px;top:770px;width:26px;height:26px;border-radius:50%;background:var(--ink)" data-at="c4b:10" data-fx="pop"></div>
+  <div class="t r" data-say="c4b:7" style="top:826px;left:auto;right:216px;font-size:92px;transform-origin:100% 50%">~quanto ~da *conduta</div>
+  <div class="t r" data-say="c4b:10" style="top:560px;left:auto;right:216px;font-size:92px;transform-origin:100% 50%">*_APÓS</div>
+  <div class="t r" data-say="c4b:11" style="top:668px;left:auto;right:216px;font-size:58px;transform-origin:100% 50%">o resultado</div>
+  <div class="ph" style="width:1179px;height:874px" data-poses="c4b-0.06 -80 1010 1.05; c4b:7-0.03 -520 985 1.45"><img src="../assets/recortes/celular_mesa.png"></div>
+</section>
+
+<!-- ============ CENA 5 — "Ninguém é obrigado a contar em quem votou. E ninguém pode perder o emprego…" ============ -->
+<section class="shot" data-ht="B" data-lab="il secom" data-enter="whipR" data-from="c5a-0.16" data-to="c5b-0.05">
+  <div class="ck" style="left:520px;top:1150px;width:600px;height:600px" data-at="c5a:4" data-fx="pop" data-sfx="pop_low"></div>
+  <div class="t" data-say="c5a" data-fit="800" style="top:300px;font-size:164px;transform:rotate(-4deg)">*Ninguém ~é | *obrigado | ~a *contar ~em | ~quem *votou</div>
+  <div class="ph" style="width:792px;height:532px" data-at="c5a:2-0.03" data-fx="up" data-dist="800" data-poses="c5a-0.16 -30 1200 1.36"><img src="../assets/recortes/mao_comprovante.png"></div>
+</section>
+<section class="shot" data-lab="il secom" data-from="c5b-0.05" data-to="c6a-0.10">
+  <div class="t" data-say="c5b:0" style="top:285px;font-size:112px">~E *ninguém ~pode</div>
+  <div class="t" data-say="c5b:3" style="top:430px;font-size:88px">*perder *o *emprego<s class="strike" data-at="c5b:5e-0.05" data-fx="draw" data-sfx="scratch" style="transform:rotate(-1.5deg)"></s></div>
+  <div class="t" data-say="c5b:6" style="top:545px;font-size:88px">*deixar *de *ser<s class="strike" data-at="c5b:9e-0.12" data-fx="draw" data-sfx="scratch" style="transform:rotate(-1.5deg)"></s></div>
+  <div class="t" data-say="c5b:9" style="top:640px;font-size:88px">*contratado<s class="strike" data-at="c5b:9e+0.03" data-fx="draw" style="transform:rotate(-1.5deg)"></s></div>
+  <div class="t" data-say="c5b:10" style="top:755px;font-size:88px">~ou ~sofrer *represália<s class="strike" data-at="c5b:12e-0.05" data-fx="draw" data-sfx="scratch" style="transform:rotate(-1.5deg);left:215px"></s></div>
+  <div class="t" data-say="c5b:13" style="top:880px;font-size:88px">~pela *escolha ~que ~fez</div>
+  <div class="ck" style="left:690px;top:870px;width:120px;height:120px" data-at="c5b:16" data-fx="pop"></div>
+  <div class="ph" style="width:792px;height:532px" data-poses="c5b-0.05 -560 1120 2.0; c5b:6-0.03 -30 1200 1.36; c5b:10-0.03 -330 1150 1.7; c5b:13-0.03 0 1300 1.2"><img src="../assets/recortes/mao_comprovante.png"></div>
+</section>
+
+<!-- ============ CENA 6 — "Sofreu ou presenciou? Denuncie. Guarde provas… anônima e sigilosa." ============ -->
+<section class="shot" data-ht="B" data-lab="il secom" data-from="c6a-0.10" data-to="c6c-0.06">
+  <div class="ck" style="left:-150px;top:760px;width:520px;height:520px" data-at="c6a:2" data-fx="pop"></div>
+  <div class="t" data-say="c6a" data-fit="800" style="top:290px;font-size:150px;transform:rotate(-4deg)">*Sofreu ~ou | *presenciou?</div>
+  <div class="t" data-say="c6b" data-fit="800" style="top:590px;font-size:180px;transform:rotate(-4deg)">*_Denuncie!</div>
+  <div class="ph" style="width:660px;height:719px" data-at="c6a-0.05" data-fx="up" data-dist="900" data-poses="c6a-0.10 180 1010 1.3; c6b-0.05 0 880 1.5"><img src="../assets/recortes/celular_audio.png"></div>
+</section>
+<section class="shot" data-lab="il secom" data-from="c6c-0.06" data-to="c6d-0.06">
+  <div class="t" data-say="c6c:0" data-fit="800" style="top:285px;font-size:120px;transform:rotate(-3deg)">*Guarde *provas:</div>
+  <div class="t" data-say="c6c:2" data-fit="800" style="top:440px;font-size:76px">prints ~de tela, áudios, | mensagens ~e nomes | ~de testemunhas</div>
+  <div class="ph" style="width:660px;height:719px" data-poses="c6c-0.06 -109 700 1.7; c6c:5-0.03 -190 700 1.9; c6c:8-0.03 -60 720 1.6">
+    <img src="../assets/recortes/celular_audio.png">
+    <div class="scr" style="left:234px;top:76px;width:294px;height:588px;background:#7C756C;transform:rotate(2.1deg);border-radius:0 0 26px 26px">
+      <div class="bub" style="left:16px;top:22px;width:120px;height:150px;background:#C9C1B3;padding:12px" data-at="c6c:2" data-fx="pop" data-sfx="shutter">
+        <i class="bl" style="display:block;width:80px;margin-bottom:12px"></i><i class="bl" style="display:block;width:96px;margin-bottom:12px"></i><i class="bl" style="display:block;width:60px;margin-bottom:12px"></i><i class="bl" style="display:block;width:90px;margin-bottom:12px"></i><i class="bl" style="display:block;width:70px"></i>
+      </div>
+      <div class="bub" style="left:150px;top:52px;width:120px;height:150px;background:#C9C1B3;padding:12px" data-at="c6c:4" data-fx="pop">
+        <i class="bl" style="display:block;width:90px;margin-bottom:12px"></i><i class="bl" style="display:block;width:70px;margin-bottom:12px"></i><i class="bl" style="display:block;width:96px;margin-bottom:12px"></i><i class="bl" style="display:block;width:50px"></i>
+      </div>
+      <div class="bub" style="left:16px;top:220px;width:262px;height:66px;background:#C9C1B3;display:flex;align-items:center;gap:10px;padding:0 14px" data-at="c6c:5" data-fx="pop" data-sfx="beep">
+        <i style="width:30px;height:30px;border-radius:50%;background:#111;flex:none;position:relative"><i style="position:absolute;left:11px;top:8px;border-left:11px solid #C9C1B3;border-top:7px solid transparent;border-bottom:7px solid transparent"></i></i>
+        <span class="bars" style="position:relative"></span>
+      </div>
+      <div class="bub" style="left:16px;top:302px;width:262px;height:84px;background:#C9C1B3;padding:16px" data-at="c6c:6" data-fx="pop" data-sfx="pop">
+        <i class="bl" style="display:block;width:200px;margin-bottom:11px"></i><i class="bl" style="display:block;width:220px;margin-bottom:11px"></i><i class="bl" style="display:block;width:120px"></i>
+      </div>
+      <div class="bub" style="left:16px;top:402px;width:262px;height:136px;background:#C9C1B3;padding:10px 14px" data-at="c6c:8" data-fx="pop" data-sfx="pop">
+        <div class="row"><i class="dot" style="background:#111;opacity:.55"></i><i class="bl" style="width:150px"></i></div>
+        <div class="row" data-at="c6c:9" data-fx="pop"><i class="dot" style="background:#111;opacity:.55"></i><i class="bl" style="width:120px"></i></div>
+        <div class="row" data-at="c6c:10" data-fx="pop"><i class="dot" style="background:#111;opacity:.55"></i><i class="bl" style="width:170px"></i></div>
+      </div>
+      <div style="inset:0;background:#EAE7DC" data-at="c6c:2" data-fx="flash"></div>
+    </div>
+  </div>
+</section>
+<section class="shot black" data-ht="B" data-lab="il secom" data-exit="push" data-from="c6d-0.06" data-to="c7a-0.06" data-sfxat="impact_low@c6d:4,whoosh@c7a-0.40">
+  <div class="t" data-say="c6d:0" style="top:300px;font-size:120px">~A denúncia ~pode ~ser</div>
+  <div class="t" data-say="c6d:4" data-fit="800" style="top:420px;font-size:190px">*#anônima</div>
+  <div class="t" data-say="c6d:5" style="top:610px;font-size:120px">~e</div>
+  <div class="t" data-say="c6d:6" data-fit="800" style="top:650px;left:120px;font-size:190px">*#sigilosa</div>
+  <div class="ph" style="width:660px;height:719px" data-poses="c6d-0.06 -20 1040 1.25"><img src="../assets/recortes/celular_audio.png"></div>
+</section>
+
+<!-- ============ CENA 7 — "Como denunciar: acesse mpt.mp.br/assedio-eleitoral. Em Mato Grosso, também dá pra ligar." ============ -->
+<section class="shot yellow" data-from="c7a-0.36" data-to="c7b-0.04">
+  <div class="t" data-say="c7a" data-fit="760" style="top:420px;left:110px;font-size:230px;line-height:.92;transform:rotate(-5deg)">*Como | *denunciar</div>
+  <div class="selo" style="left:560px;top:900px;width:320px;height:320px" data-at="c7a:1+0.3" data-fx="stamp" data-base="rotate(16deg)" data-sfx="stamp"></div>
+</section>
+<section class="shot" data-ht="B" data-from="c7b-0.04" data-to="c7c-0.06">
+  <div class="t" style="top:290px;font-size:74px;font-weight:800;transform:rotate(-4deg)">Como denunciar</div>
+  <div class="t" data-say="c7b:0" style="top:430px;font-size:150px">~acesse</div>
+  <div style="left:0;top:530px;width:1080px;height:420px;transform:rotate(-2deg);transform-origin:0 50%">
+    <div class="bar" style="position:absolute;left:40px;top:0;width:900px;height:190px;transform-origin:0 50%" data-at="c7b:1-0.12" data-fx="draw" data-sfx="whoosh"></div>
+    <div id="url1" style="position:absolute;left:70px;top:8px;font-weight:800;font-size:150px;letter-spacing:-.045em;white-space:nowrap;line-height:170px" data-at="c7b:1-0.04" data-fx="wipe" data-dur="0.9">mpt.mp.br/</div>
+    <div class="bar" style="position:absolute;left:40px;top:200px;width:900px;height:140px;transform-origin:0 50%" data-at="c7b:10-0.1" data-fx="draw" data-sfx="whoosh_s"></div>
+    <div id="url2" style="position:absolute;left:70px;top:206px;font-weight:800;font-size:97px;letter-spacing:-.04em;white-space:nowrap;line-height:124px" data-at="c7b:10" data-fx="wipe" data-dur="0.8">assedio-eleitoral</div>
+  </div>
+  <div id="urlm" class="mono" style="left:385px;top:1082px;font-weight:700;font-size:28px;text-transform:none;letter-spacing:.02em;transform-origin:0 50%" data-base="rotate(-2deg)" data-at="c7b:12" data-fx="word">mpt.mp.br/assedio-eleitoral</div>
+  <div class="ph" style="width:223px;height:132px" data-at="c7b:4" data-fx="left" data-dist="500" data-poses="c7b-0.04 -10 985 1.6"><img src="../assets/recortes/mao_apontando.png"></div>
+  <div class="ph" style="width:479px;height:652px" data-at="c7b:7" data-fx="right" data-dist="800" data-poses="c7b-0.04 535 1175 1.15"><img src="../assets/recortes/agente_mpt.png"></div>
+</section>
+<section class="shot" data-from="c7c-0.06" data-to="c8a-0.10">
+  <div style="left:0;top:270px;width:1080px;height:250px;transform:rotate(-2deg);transform-origin:0 50%">
+    <div class="bar" style="position:absolute;left:40px;top:0;width:900px;height:118px"></div>
+    <div id="url3" style="position:absolute;left:70px;top:4px;font-weight:800;font-size:96px;letter-spacing:-.045em;white-space:nowrap;line-height:108px">mpt.mp.br/</div>
+    <div class="bar" style="position:absolute;left:40px;top:124px;width:900px;height:118px"></div>
+    <div id="url4" style="position:absolute;left:70px;top:128px;font-weight:800;font-size:96px;letter-spacing:-.04em;white-space:nowrap;line-height:108px">assedio-eleitoral</div>
+  </div>
+  <div class="t" data-say="c7c" style="top:545px;font-size:84px">~Em *Mato *Grosso, | ~também ~dá ~pra *ligar</div>
+  <div style="left:70px;top:745px" data-at="c7c-0.04" data-fx="drop" data-sfx="click"><span class="tag">Cuiabá</span><div class="num" id="tel1">65 3613-9100</div></div>
+  <div style="left:70px;top:930px" data-at="c7c+0.22" data-fx="drop" data-sfx="click"><span class="tag">Rondonópolis</span><div class="num" id="tel2">66 3411-6800</div></div>
+  <div style="left:70px;top:1115px" data-at="c7c+0.48" data-fx="drop" data-sfx="click"><span class="tag">Sinop</span><div class="num" id="tel3">66 3520-0100</div></div>
+  <div class="ph" style="width:479px;height:652px" data-poses="c7c-0.06 610 1280 1.0"><img src="../assets/recortes/agente_mpt.png"></div>
+</section>
+
+<!-- ============ CENA 8 — citação da procuradora-chefe (slide 7) ============ -->
+<section class="shot" data-ht="B" data-from="c8a-0.10" data-to="c9a-0.10">
+  <div class="ph" style="width:580px;height:1372px" data-at="c8a-0.10" data-fx="right" data-dist="500" data-poses="c8a-0.10 520 560 1.0; c8a:5-0.03 462 410 1.1"><img src="../assets/recortes/procuradora.png"></div>
+  <div class="ph" style="width:700px;height:354px" data-at="c8a+0.2" data-fx="left" data-dist="700" data-poses="c8a-0.10 0 1570 1.0"><img src="../assets/recortes/urna.png"></div>
+  <div class="t" data-say="c8a" data-fit="455" style="top:300px;font-size:96px;line-height:1.06">“O *combate | ~ao *assédio | *eleitoral | ~é ~uma ~das frentes | ~de atuação | ~do *MPT.”</div>
+  <div class="t" style="top:960px;font-size:42px;line-height:1.22;letter-spacing:-.02em" data-at="c8a+0.1" data-fx="word"><b style="font-weight:800">Thaylise Zaffani</b>,<br>procuradora-chefe<br><i>do</i> <b style="font-weight:800">MPT-MT</b></div>
+</section>
+
+<!-- ============ CENA 9 — "Liberdade política no trabalho é direito. MPT e TRT em Mato Grosso seguem atentos e atuando." ============ -->
+<section class="shot" data-from="c9a-0.10" data-to="c9b-0.06">
+  <div class="ck" style="left:560px;top:830px;width:440px;height:440px" data-at="c9a:5" data-fx="pop" data-sfx="pop_low"></div>
+  <div class="t" data-say="c9a" data-fit="800" style="top:300px;font-size:176px;transform:rotate(-4deg)">*Liberdade | *política | ~no *trabalho | ~é *direito!</div>
+  <div class="ph" style="width:1179px;height:732px" data-at="c9a-0.10" data-fx="up" data-dist="500" data-poses="c9a-0.10 -50 1188 1.0"><img src="../assets/recortes/predio.png"></div>
+  <div class="mono" style="left:560px;top:1215px;font-size:20px;transform:rotate(-17deg)" data-at="c9a:1" data-fx="word">Sede do MPT-MT, em Cuiabá</div>
+</section>
+<section class="shot" data-ht="B" data-from="c9b-0.06" data-to="end+1">
+  <div class="ph" style="width:1179px;height:732px" data-poses="c9b-0.06 -420 1010 1.4"><img src="../assets/recortes/predio.png"></div>
+  <div class="t" data-say="c9b" data-fit="800" style="top:290px;font-size:132px;transform:rotate(-4deg)">*MPT ~e *TRT | ~em *Mato *Grosso | seguem _atentos | ~e _atuando!</div>
+  <div class="t" style="top:850px;font-size:39px;letter-spacing:-.02em;font-weight:300" data-at="c9b:6" data-fx="word">Se você foi vítima de assédio eleitoral,</div>
+  <div class="bar" style="left:40px;top:908px;width:800px;height:104px;transform-origin:0 50%" data-at="c9b:9+0.15" data-fx="draw" data-sfx="whoosh_s"></div>
+  <div id="url5" class="t" style="top:916px;font-size:70px;line-height:88px;white-space:nowrap" data-at="c9b:9+0.22" data-fx="wipe" data-dur="0.4">denuncie em <b style="font-weight:800">mpt.mp.br</b></div>
+  <div class="selo" style="left:640px;top:1040px;width:250px;height:250px;color:var(--ink)" data-at="c9b:9+0.55" data-fx="stamp" data-base="rotate(14deg)" data-sfx="stamp"></div>
+  <div class="mono" style="left:90px;top:1120px;font-size:20px;transform:rotate(-17deg)" data-at="c9b:2" data-fx="word">Sede do MPT-MT, em Cuiabá</div>
+</section>
+
+<!-- mão que empurra a cena 6 -->
+<div id="pushhand"><img src="../assets/recortes/mao_apontando.png" style="width:560px;display:block"></div>
+
+<!-- etiquetas verticais e texturas (sempre por cima) -->
+<div class="lab" id="lab-secom" style="top:270px">© COM INFORMAÇÕES DA SECOM <b>PGT</b></div>
+<div class="lab" id="lab-il" style="top:725px">IMAGEM ILUSTRATIVA</div>
+<div class="ov" id="ht"></div>
+<div class="ov" id="sp" style="-webkit-mask-size:100% 100%"></div>
+<div class="ov" id="gr2"></div>
+<div class="ov" id="gr"></div>
+</div>
+<script src="timeline.js"></script>
+<script src="reel.js"></script>
+</body>
+</html>
