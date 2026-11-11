@@ -282,8 +282,8 @@ add(impact(0.7), wtime(15, 5), 0.45); add(cash(), wtime(15, 6), 0.3)  # "5 vezes
 add(whoosh(0.8, up=True), wtime(16, 0), 0.25)                # linha tracejada se desenhando
 add(pop(), wtime(16, 5), 0.6)                                # "Brasil"
 add(heartbeat(), wtime(17, 4) - 0.1, 0.55)                   # "encarar?"
-add(click(), (B[18]["start"] + B[18]["words"][3]["f"] + 10) / 30, 0.8)  # clica em SEGUIR
-add(ding(), (B[18]["start"] + B[18]["words"][3]["f"] + 11) / 30, 0.25)
+add(click(), wtime(18, 4) - 0.02, 0.6)                      # clica em SEGUIR (entre "segue" e "Talking")
+add(ding(), wtime(18, 6) + 0.45, 0.25)                      # sino depois de "Horror"
 
 sfx = hp(sfx, 30)
 sf.write("build/sfx.wav", (sfx / np.abs(sfx).max() * 0.9).astype(np.float32), SR)
