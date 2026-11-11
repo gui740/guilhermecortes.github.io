@@ -18,7 +18,7 @@ fc = (
     f"[1:a]volume={gm}dB[m];"
     f"[m][vsc]sidechaincompress=threshold=0.03:ratio=6:attack=10:release=280:makeup=1[md];"
     f"[2:a]volume={gs}dB[s];"
-    f"[v][md][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.79:attack=2:release=60[o]"
+    f"[v][md][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.79:attack=2:release=60:level=disabled[o]"
 )
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", VOICE, "-i", "build/music.wav", "-i", "build/sfx.wav",
                 "-filter_complex", fc, "-map", "[o]", "-ar", "48000", "build/mix.wav"], check=True)
