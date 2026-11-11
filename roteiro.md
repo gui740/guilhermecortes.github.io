@@ -2,6 +2,8 @@
 
 **Fonte do roteiro:** o seu áudio `assets/narracao.m4a`, transcrito com Whisper large-v3. O texto é o que você falou. Só tirei os retakes: quando uma frase foi gravada duas vezes, ficou a última tomada.
 
+**Áudio:** voz com efeito mais grave (−3 semitons, formantes preservados, graves reforçados, compressão), trilha original de programa infantil animado (124 bpm: xilofone, glockenspiel, piano de brinquedo, baixo saltitante, palmas) que fica desafinada a partir de "mostra quem ele é de verdade" e tem tape-stop no "não era"; efeitos: whoosh em toda transição, pop nas palavras-chave, boing nas entradas do Buddy, riser + impacto + brilho + plateia infantil no título, TV ligando, caixa registradora no "dinheiro"/"5 milhões", clique da mãozinha, tesoura, borracha, buzina de brinquedo no "fofo", glitch, batimento cardíaco, sino ao seguir.
+
 **Duração final:** 38,5 s (voz acelerada 1,2x com correção de tom; silêncios acima de 200 ms cortados; pausas mantidas antes do título e antes do número).
 
 | Tempo | Fala (narração) | Na tela (resumo grande) | Checagem |
