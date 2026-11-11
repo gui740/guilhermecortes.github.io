@@ -1,0 +1,32 @@
+CELSO: A VINGANÇA DO PARQUE — ROTEIRO DA NARRAÇÃO
+(gravar no Google AI Studio; salvar como assets/narracao.wav)
+
+Em Cuiabá, no Parque das Águas, vive um morador antigo. Ele não paga aluguel, não incomoda ninguém… e divide a margem da lagoa com as capivaras. O nome dele é Celso.
+Mas um dia… alguém achou que seria engraçado puxar o rabo dele.
+E se o Celso resolvesse revidar?
+Quando o sol se põe e as luzes da lagoa se acendem… dizem que é melhor não correr pela pista sozinho.
+Porque o Celso não esquece.
+…Game over.
+
+---------------------------------------------------------------
+MOMENTO EM QUE CADA FALA ENTRA NO VÍDEO (segundos)
+Grave do jeito natural, com as pausas que quiser. O render detecta as
+9 falas pelas pausas de silêncio, coloca cada uma no seu momento abaixo
+e, se alguma fala for mais longa que o espaço dela, empurra as cenas
+seguintes (o vídeo fica um pouco mais longo, nunca corta a voz).
+Se a detecção errar, crie assets/narracao_marcas.txt com 9 números
+(um por linha) = segundo em que cada fala começa DENTRO DO ARQUIVO WAV.
+
+ 1  05.5  Em Cuiabá, no Parque das Águas, vive um morador antigo.
+ 2  09.2  Ele não paga aluguel, não incomoda ninguém… e divide a margem da lagoa com as capivaras.
+ 3  13.4  O nome dele é Celso.
+ 4  16.0  Mas um dia… alguém achou que seria engraçado puxar o rabo dele.
+ 5  22.3  E se o Celso resolvesse revidar?
+ 6  26.0  Quando o sol se põe e as luzes da lagoa se acendem…
+ 7  30.2  dizem que é melhor não correr pela pista sozinho.
+ 8  40.0  Porque o Celso não esquece.
+ 9  58.4  …Game over.
+
+Dica de voz: grave, pausada, tom de narrador de "causo" de terror;
+pausas bem marcadas entre as frases (≥ 0,5 s ajuda a detecção);
+"Game over" quase sussurrado.

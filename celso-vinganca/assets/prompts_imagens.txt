@@ -1,0 +1,52 @@
+CELSO: A VINGANÇA DO PARQUE — PROMPTS PARA IA DE IMAGEM
+Salve os resultados em ./assets com EXATAMENTE estes nomes:
+  celso_sheet.png  bg_dia.png  bg_noite.png  visitantes_sheet.png
+(opcionais: capivara_sheet.png, celso_jumpscare.png — veja notas no fim)
+O render remove o chroma verde, corta os frames e escala com nearest-neighbor.
+
+=====================================================================
+PROMPT 1 – CELSO  ->  celso_sheet.png
+=====================================================================
+16-bit pixel art sprite sheet of a Brazilian caiman (jacaré-do-pantanal, Caiman yacare), dark olive-green scaly back, pale yellow belly, side view, retro SNES/arcade horror game style, clean pixel edges, limited 24-color palette, no anti-aliasing, solid green chroma background #00FF00. 6 frames in a row: (1) idle resting calm with half-closed eyes, (2) walking frame A, (3) walking frame B, (4) head raised alert, (5) mouth wide open showing teeth, (6) only glowing red eyes and snout above dark water. Consistent character across frames, 128x64 px per frame, upscaled 8x nearest neighbor.
+
+=====================================================================
+PROMPT 2 – CENÁRIO DIA  ->  bg_dia.png
+=====================================================================
+16-bit pixel art background, vertical 9:16, urban park in Cuiabá Brazil "Parque das Águas": large calm lake with central fountain, red-brown walking track and bike lane around the lake, cerrado trees and palm trees, capybaras on the grass, modern government buildings far in the background, hot orange-blue tropical sky, retro arcade game look, parallax layers separated (sky / buildings / trees / lake / track).
+
+=====================================================================
+PROMPT 3 – CENÁRIO NOITE  ->  bg_noite.png
+=====================================================================
+Same park at night, 16-bit pixel art, dark purple-blue sky, lake reflecting colorful fountain light show (red, magenta, cyan), lamp posts along the walking track, eerie fog over the water, horror arcade mood, same composition as the day version.
+
+=====================================================================
+PROMPT 4 – VISITANTES  ->  visitantes_sheet.png
+=====================================================================
+16-bit pixel art sprite sheet, two generic young adult male park visitors in t-shirt and shorts, side view, frames: walking, reaching down, laughing, running scared, looking back terrified. Generic faces, retro arcade style, solid green chroma background #00FF00.
+
+---------------------------------------------------------------------
+NOTAS TÉCNICAS (acrescente ao prompt se a IA aceitar) — é assim que o
+render corta as imagens:
+
+* celso_sheet.png: 1 linha x 6 colunas de mesmo tamanho, jacaré virado
+  para a DIREITA, apoiado na mesma linha de chão em todos os frames.
+* visitantes_sheet.png: 2 linhas (linha 1 = visitante A, linha 2 =
+  visitante B) x 11 colunas de mesmo tamanho, virados para a DIREITA,
+  nesta ordem: walk1, walk2, walk3, reaching down, laugh1, laugh2,
+  run1, run2, run3, look-back1, look-back2.
+  (sugestão de texto extra: "2 rows x 11 equal cells, facing right,
+  order: walk 1-3, reaching down, laughing 1-2, running 1-3,
+  looking back terrified 1-2")
+* bg_dia.png / bg_noite.png: imagem vertical 9:16 única. Mantenha o
+  lago no meio da tela e a pista na faixa de ~57%–66% da altura
+  (é onde os personagens pisam). O render cria o parallax fatiando a
+  imagem em faixas horizontais.
+* opcionais:
+  - capivara_sheet.png: 1 linha x 3 colunas (andando A, andando B,
+    parada), virada para a DIREITA, fundo #00FF00.
+  - celso_jumpscare.png: 1 linha x 2 colunas, boca do jacaré de frente
+    em tela cheia (vertical), aberta e mais aberta, olhos vermelhos.
+    Prompt sugerido: "16-bit pixel art horror jumpscare, caiman jaws
+    wide open facing the camera filling a vertical 9:16 frame, rows of
+    white teeth, dark red throat, glowing red eyes, 2 frames side by
+    side (open / wider open), no anti-aliasing".
