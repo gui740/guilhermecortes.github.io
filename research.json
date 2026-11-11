@@ -1,0 +1,72 @@
+{
+  "consultado_em": "2026-11-11",
+  "observacao_rede": "Este ambiente só acessa alguns domínios diretamente (Wikipedia, TMDB, JustWatch). Os demais veículos foram consultados por busca na web (resumos + links), sem abrir a página inteira. Itens marcados como 'fonte_unica' ou 'nao_confirmado' NÃO devem ser tratados como fato.",
+  "filme": {
+    "titulo": "Buddy",
+    "ano": 2026,
+    "confirmado": "Sim: terror/comédia de Casper Kelly sobre Buddy, um unicórnio laranja que apresenta um programa infantil (TMDB id 1514026; IMDb tt37281055)",
+    "direcao": "Casper Kelly (criador do curta viral 'Too Many Cooks')",
+    "roteiro": "Casper Kelly e Jamie King",
+    "elenco": ["Cristin Milioti (Grace)", "Delaney Quinn (Freddy)", "Topher Grace (Ben)", "Keegan-Michael Key (voz do Buddy)", "Michael Shannon (voz de Willie)", "Patton Oswalt (voz de Strappy)", "Clint Howard (George)"],
+    "sinopse": "Crianças ficam presas dentro de 'It's Buddy!', um programa infantil surreal no estilo dos anos 90 apresentado por Buddy, um unicórnio laranja. Quando uma criança não segue as regras, o anfitrião mostra seu lado mais sombrio.",
+    "estreia_sundance": "22/01/2026, seção Midnight do Sundance Film Festival",
+    "estreia_eua": "28/08/2026 (Roadside Attractions e Saban Films); digital EUA 13/10/2026; Blu-ray/DVD 08/12/2026",
+    "classificacao_eua": "R (violência sangrenta, drogas, linguagem)",
+    "orcamento": "US$ 3 milhões",
+    "bilheteria": "Abertura ~US$ 5,36 mi em 1.258 salas (quase o dobro da projeção); total EUA/Canadá ~US$ 27 mi (The Numbers, até 09/11/2026)",
+    "recepcao": "Rotten Tomatoes 83–88% (varia por data/número de críticas); Metacritic 65–67",
+    "fontes": [
+      "https://en.wikipedia.org/wiki/Buddy_(2026_film)",
+      "https://www.themoviedb.org/movie/1514026-buddy",
+      "https://deadline.com/2026/08/indie-film-box-office-buddy-r-rated-horror-comedy-busts-out-1237062910/",
+      "https://www.the-numbers.com/movie/Buddy-(2026)",
+      "https://bloody-disgusting.com/movie/3965838/casper-kellys-buddy-doubles-box-office-projections-with-5-3-million-opening/",
+      "https://www.rottentomatoes.com/m/buddy_2026",
+      "https://screenanarchy.com/2026/01/sundance-2026-review-buddy-brings-childhood-horrors-to-unreal-life.html",
+      "https://www.sundance.org/blogs/buddy-turns-childhood-comfort-into-midnight-terror/"
+    ]
+  },
+  "curiosidades": [
+    {"id": 1, "fato": "Pais levaram crianças pequenas às sessões achando que era filme infantil (classificação R nos EUA)", "status": "confirmado (2+ fontes)", "fontes": ["https://www.dexerto.com/tv-movies/parents-are-taking-their-children-to-see-r-rated-horror-film-buddy-thinking-its-a-kids-movie-3406819/", "https://www.unilad.com/news/buddy-horror-movie-kids-mistake-869690-20260904", "https://www.aol.com/articles/barney-inspired-horror-movie-sparks-164713000.html", "https://www.omelete.com.br/filmes/buddy-conheca-filme-do-barney-de-terror-virou-hit-nos-eua"]},
+    {"id": 2, "fato": "Alguns pais teriam pedido reembolso", "status": "relatado por 2+ veículos, mas com base em posts de Reddit/redes; sem número oficial e um vídeo viral foi contestado", "fontes": ["https://www.wideopencountry.com/internet-filled-with-stories-of-parents-taking-kids-to-see-new-horror-film-about-kids-show/", "https://www.omelete.com.br/filmes/buddy-conheca-filme-do-barney-de-terror-virou-hit-nos-eua", "https://www.comicbasics.com/parents-keep-mistaking-this-r-rated-horror-movie-for-a-kids-film-and-the-reason-why-is-wild/"]},
+    {"id": 3, "fato": "Criançada chorando no meio da sessão", "status": "NAO_CONFIRMADO — não achei duas fontes dizendo que crianças choraram; as fontes falam em crianças (algumas com menos de 8 anos) na plateia e pais saindo às pressas", "fontes": ["https://www.wideopencountry.com/internet-filled-with-stories-of-parents-taking-kids-to-see-new-horror-film-about-kids-show/", "https://www.omelete.com.br/filmes/buddy-conheca-filme-do-barney-de-terror-virou-hit-nos-eua"]},
+    {"id": 4, "fato": "O filme 'nem teve trailer tradicional, só teasers curtinhos'", "status": "CONTRADITO — houve trailer oficial (Roadside/Saban) e trailer final, além de 3 teasers de 31–48s", "fontes": ["https://www.rottentomatoes.com/m/buddy_2026/videos", "https://www.joblo.com/buddy-new-trailer/", "https://www.youtube.com/watch?v=FF_CGDlNygY"]},
+    {"id": 5, "fato": "Custou 5 milhões de dólares", "status": "CONTRADITO — orçamento reportado é US$ 3 milhões", "fontes": ["https://en.wikipedia.org/wiki/Buddy_(2026_film)", "https://saturation.io/budgets/buddy-2026"]},
+    {"id": 6, "fato": "Rendeu mais de 5 vezes o custo só nos EUA", "status": "confirmado — ~US$ 27 mi nos EUA/Canadá contra US$ 3 mi de orçamento (~9x); mesmo usando 5 mi, 27/5 = 5,4x", "fontes": ["https://www.the-numbers.com/movie/Buddy-(2026)", "https://boxofficewatch.com/movies/buddy", "https://en.wikipedia.org/wiki/Buddy_(2026_film)"]},
+    {"id": 7, "fato": "Nasceu como 'filme de terror do Barney': produtores da BoulderLight procuraram Kelly com a ideia; Kelly chama de 'Barney horror movie'", "status": "confirmado (2+ fontes)", "fontes": ["https://bloody-disgusting.com/interviews/3930628/casper-kelly-buddy-interview/", "https://collider.com/buddy-movie-topher-grace-cristin-milioti-barney-inspiration-casper-kelly-too-many-cooks/", "https://en.wikipedia.org/wiki/Buddy_(2026_film)"]},
+    {"id": 8, "fato": "Keegan-Michael Key só dubla o Buddy; quem veste a fantasia é outro ator (Sergey Zhuravsky; 'Dark Buddy' por Jonathan Yurco)", "status": "confirmado (2+ fontes)", "fontes": ["https://wrkr.com/keegan-michael-key-michigan-actor-buddy/", "https://www.primetimer.com/features/buddy-cast-guide-meet-the-full-cast-and-characters-of-the-comedy-horror", "https://en.wikipedia.org/wiki/Buddy_(2026_film)"]},
+    {"id": 9, "fato": "Filmado em 25 dias em Ohio, com o 1º ato em proporção 4:3 e luz chapada para imitar TV dos anos 90", "status": "fonte_unica para o 4:3 (Wikipedia); set em palco de Cleveland confirmado pela IndieWire", "fontes": ["https://en.wikipedia.org/wiki/Buddy_(2026_film)", "https://www.indiewire.com/features/craft/buddy-production-design-making-of-puppets-1235213250/"]},
+    {"id": 10, "fato": "Abriu com quase o dobro da bilheteria projetada (US$ 5,36 mi vs ~2,5 mi)", "status": "confirmado (2+ fontes)", "fontes": ["https://deadline.com/2026/08/indie-film-box-office-buddy-r-rated-horror-comedy-busts-out-1237062910/", "https://bloody-disgusting.com/movie/3965838/casper-kellys-buddy-doubles-box-office-projections-with-5-3-million-opening/"]},
+    {"id": 11, "fato": "Ganhou sessões 'sing-along' (pra cantar junto) nos cinemas, mesmo sendo terror R", "status": "fonte_unica (Dread Central)", "fontes": ["https://www.dreadcentral.com/news/590106/yes-the-r-rated-horror-movie-buddy-is-getting-a-sing-along-release-in-theaters/"]},
+    {"id": 12, "fato": "Sony Pictures comprou os direitos internacionais em out/2026", "status": "confirmado (2+ fontes)", "fontes": ["https://deadline.com/2026/10/sony-buys-international-rights0sundance-horror-hit-buddy-1237144366/", "https://www.omelete.com.br/filmes/buddy-filme-sundance-horror-sony-adquire-direitos-internacionais"]}
+  ],
+  "onde_assistir_brasil": {
+    "status": "ainda sem data no Brasil",
+    "verificado_em": "2026-11-11",
+    "detalhes": "JustWatch Brasil: o título (id tm1933759) não tem nenhuma oferta no BR (consulta à API em 11/11/2026); nos EUA aparece para aluguel/compra (Apple TV, Amazon, Fandango at Home). Omelete: sem previsão no Brasil; Sony comprou direitos internacionais.",
+    "fontes": [
+      "https://www.justwatch.com/br (API apis.justwatch.com, node tm1933759, country BR: offers = [])",
+      "https://www.justwatch.com/us/movie/buddy-2026",
+      "https://www.omelete.com.br/filmes/buddy-filme-sundance-horror-sony-adquire-direitos-internacionais"
+    ]
+  },
+  "imagens": {
+    "fonte": "TMDB (pôsteres e stills oficiais do filme)",
+    "usadas": {
+      "buddy_wave": "https://image.tmdb.org/t/p/original/1OXfvQAvhhsnZEWXcCXn6i8kzlG.jpg",
+      "buddy_group": "https://image.tmdb.org/t/p/original/6hlAe9tIdpUIlLvyrxb5y6BFLN9.jpg",
+      "buddy_close": "https://image.tmdb.org/t/p/original/n7HFbOBJZsaCnBYPCXEViU2gObn.jpg",
+      "buddy_hug": "https://image.tmdb.org/t/p/original/oQFU9ncW1RLh4QRiIA0MHA92q4c.jpg",
+      "kids_scared": "https://image.tmdb.org/t/p/original/i8Y6RYLaeoYXP8ncDjyCpp5ttFv.jpg",
+      "kids_forest": "https://image.tmdb.org/t/p/original/pa5U0THGpqEmKf3R4LvuwBL5CbT.jpg",
+      "dark_buddy": "https://image.tmdb.org/t/p/original/464nqiPtcXCaIHnJcSIwKWQ3pFQ.jpg",
+      "girl_grab": "https://image.tmdb.org/t/p/original/94iCX0TLofZHqkrSah6TSlEfDVP.jpg",
+      "bunny": "https://image.tmdb.org/t/p/original/xvPqm419TsKtLkoMJq0SveEnd5W.jpg",
+      "buddy_point": "https://image.tmdb.org/t/p/original/cbJn9TSEQb5Lu1i3WP4SMrnnICI.jpg",
+      "buddy_tvpo": "https://image.tmdb.org/t/p/original/9qbbndIBH7j0AcoOEOfwzkSAyvZ.jpg"
+    },
+    "descartadas_por_gore": ["https://image.tmdb.org/t/p/original/2rI4aN6HzSRtdiBUaWie5lWbvH8.jpg (olho ensanguentado)", "https://image.tmdb.org/t/p/original/3UGyCtQ498UVGw1RxIIeU5zeKO1.jpg (machado com sangue)"],
+    "trailer": "Frames do trailer não foram usados: YouTube está bloqueado neste ambiente."
+  },
+  "trilha_e_efeitos": "Sintetizados do zero em scripts/make_audio.py (sem material de terceiros, sem trilha do filme)."
+}

@@ -1,0 +1,1926 @@
+{
+ "fps": 30,
+ "total": 1155,
+ "blocks": [
+  {
+   "bg": "G",
+   "cut": "buddy_wave",
+   "scale": "medium",
+   "enter": "cross",
+   "grid": true,
+   "start": 0,
+   "end": 65,
+   "words": [
+    {
+     "text": "Pais",
+     "f": -6,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "levaram",
+     "f": 20,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "os",
+     "f": 33,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "filhos",
+     "f": 35,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "pequenos",
+     "f": 43,
+     "role": "p",
+     "hl": false
+    },
+    {
+     "text": "pra",
+     "f": 58,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "ver",
+     "f": 62,
+     "role": "b",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_close",
+   "scale": "close",
+   "enter": "pop",
+   "cap": true,
+   "start": 65,
+   "end": 123,
+   "words": [
+    {
+     "text": "esse",
+     "f": 2,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "unicórnio",
+     "f": 7,
+     "role": "P",
+     "hl": false
+    },
+    {
+     "text": "no",
+     "f": 18,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "cinema",
+     "f": 23,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "e",
+     "f": 35,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "saíram",
+     "f": 43,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "de",
+     "f": 53,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "lá",
+     "f": 56,
+     "role": "x",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "R",
+   "cut": "buddy_point",
+   "scale": "small",
+   "enter": "pop",
+   "fx": "cursor",
+   "start": 123,
+   "end": 175,
+   "words": [
+    {
+     "text": "pedindo",
+     "f": 2,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "dinheiro",
+     "f": 14,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "de",
+     "f": 22,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "volta",
+     "f": 28,
+     "role": "B",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "buddy_close",
+   "scale": "small",
+   "enter": "pop",
+   "fx": "strike",
+   "start": 175,
+   "end": 241,
+   "words": [
+    {
+     "text": "Porque",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "isso",
+     "f": 15,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "aqui",
+     "f": 22,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "não",
+     "f": 28,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "é",
+     "f": 33,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "filme",
+     "f": 39,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "infantil",
+     "f": 44,
+     "role": "P",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "R",
+   "cut": "buddy_wave",
+   "scale": "medium",
+   "enter": "pop",
+   "fx": "star",
+   "title": true,
+   "burst": true,
+   "start": 241,
+   "end": 328,
+   "words": [
+    {
+     "text": "É",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "Buddy",
+     "f": 3,
+     "role": "T",
+     "hl": false
+    },
+    {
+     "text": "um",
+     "f": 26,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "dos",
+     "f": 29,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "filmes",
+     "f": 33,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "de",
+     "f": 42,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "terror",
+     "f": 43,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "mais",
+     "f": 51,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "comentados",
+     "f": 58,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "do",
+     "f": 75,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "ano",
+     "f": 79,
+     "role": "b",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "buddy_tvpo",
+   "scale": "tv",
+   "enter": "zoomout",
+   "fx": "tv",
+   "start": 328,
+   "end": 399,
+   "words": [
+    {
+     "text": "A",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "história",
+     "f": 9,
+     "role": "p",
+     "hl": false
+    },
+    {
+     "text": "um",
+     "f": 24,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "programa",
+     "f": 29,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "infantil",
+     "f": 36,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "dos",
+     "f": 49,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "anos",
+     "f": 53,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "90",
+     "f": 57,
+     "role": "P",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_hug",
+   "scale": "medium",
+   "enter": "pop",
+   "dup": true,
+   "start": 399,
+   "end": 489,
+   "words": [
+    {
+     "text": "Música",
+     "f": 2,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "cores",
+     "f": 19,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "e",
+     "f": 29,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "um",
+     "f": 38,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "unicórnio",
+     "f": 41,
+     "role": "p",
+     "hl": false
+    },
+    {
+     "text": "laranja",
+     "f": 51,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "ensinando",
+     "f": 60,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "sobre",
+     "f": 71,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "amizade",
+     "f": 77,
+     "role": "P",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "girl_grab",
+   "scale": "medium",
+   "enter": "whip",
+   "start": 489,
+   "end": 545,
+   "words": [
+    {
+     "text": "Até",
+     "f": 2,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "que",
+     "f": 12,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "uma",
+     "f": 19,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "criança",
+     "f": 23,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "se",
+     "f": 30,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "recusa",
+     "f": 35,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "a",
+     "f": 46,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "brincar",
+     "f": 48,
+     "role": "P",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "dark_buddy",
+   "scale": "close",
+   "enter": "whip",
+   "cap": true,
+   "start": 545,
+   "end": 598,
+   "words": [
+    {
+     "text": "e",
+     "f": 2,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "o",
+     "f": 5,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "Buddy",
+     "f": 8,
+     "role": "P",
+     "hl": false
+    },
+    {
+     "text": "mostra",
+     "f": 14,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "quem",
+     "f": 23,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "ele",
+     "f": 29,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "é",
+     "f": 35,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "de",
+     "f": 38,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "verdade",
+     "f": 42,
+     "role": "B",
+     "hl": true
+    }
+   ]
+  },
+  {
+   "bg": "R",
+   "cut": "kids_scared",
+   "scale": "medium",
+   "enter": "pop",
+   "start": 598,
+   "end": 638,
+   "words": [
+    {
+     "text": "E",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "como",
+     "f": 3,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "tanta",
+     "f": 7,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "gente",
+     "f": 13,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "caiu",
+     "f": 21,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "nessa",
+     "f": 31,
+     "role": "p",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_tvpo",
+   "scale": "small",
+   "enter": "pop",
+   "fx": "eraser",
+   "start": 638,
+   "end": 693,
+   "words": [
+    {
+     "text": "o",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "filme",
+     "f": 5,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "nem",
+     "f": 11,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "teve",
+     "f": 16,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "trailer",
+     "f": 24,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "tradicional",
+     "f": 32,
+     "role": "p",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "bunny",
+   "scale": "medium",
+   "enter": "whip",
+   "fx": "scissors",
+   "start": 693,
+   "end": 780,
+   "words": [
+    {
+     "text": "Só",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "teasers",
+     "f": 4,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "curtinhos",
+     "f": 14,
+     "role": "p",
+     "hl": false
+    },
+    {
+     "text": "mostrando",
+     "f": 32,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "o",
+     "f": 46,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "mundo",
+     "f": 49,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "fofo",
+     "f": 55,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "do",
+     "f": 68,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "unicórnio",
+     "f": 70,
+     "role": "p",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_wave",
+   "scale": "small",
+   "enter": "pop",
+   "swap": {
+    "at": 94,
+    "cut": "dark_buddy",
+    "scale": "medium",
+    "dup": true,
+    "atLocal": 2
+   },
+   "start": 780,
+   "end": 823,
+   "words": [
+    {
+     "text": "Parecia",
+     "f": 2,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "infantil",
+     "f": 7,
+     "role": "P",
+     "hl": false
+    },
+    {
+     "text": "não",
+     "f": 23,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "era",
+     "f": 31,
+     "role": "B",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "R",
+   "cut": "kids_forest",
+   "scale": "medium",
+   "enter": "whip",
+   "start": 823,
+   "end": 884,
+   "words": [
+    {
+     "text": "Resultado",
+     "f": 2,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "criançada",
+     "f": 16,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "chorando",
+     "f": 28,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "no",
+     "f": 39,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "meio",
+     "f": 43,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "da",
+     "f": 48,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "sessão",
+     "f": 52,
+     "role": "p",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_point",
+   "scale": "small",
+   "enter": "whip",
+   "fx": "num",
+   "start": 884,
+   "end": 950,
+   "words": [
+    {
+     "text": "E",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "o",
+     "f": 8,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "mais",
+     "f": 8,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "louco",
+     "f": 12,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "custou",
+     "f": 32,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "5",
+     "f": 42,
+     "role": "P",
+     "hl": true
+    },
+    {
+     "text": "milhões",
+     "f": 47,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "de",
+     "f": 56,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "dólares",
+     "f": 61,
+     "role": "p",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "R",
+   "cut": "buddy_group",
+   "scale": "medium",
+   "enter": "whip",
+   "dup": true,
+   "start": 950,
+   "end": 1028,
+   "words": [
+    {
+     "text": "e",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "já",
+     "f": 10,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "rendeu",
+     "f": 12,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "mais",
+     "f": 20,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "de",
+     "f": 23,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "5",
+     "f": 26,
+     "role": "P",
+     "hl": true
+    },
+    {
+     "text": "vezes",
+     "f": 31,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "isso",
+     "f": 39,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "só",
+     "f": 45,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "nos",
+     "f": 51,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "Estados",
+     "f": 56,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "Unidos",
+     "f": 62,
+     "role": "b",
+     "hl": false
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "buddy_wave",
+   "scale": "small",
+   "enter": "pop",
+   "fx": "dash",
+   "start": 1028,
+   "end": 1063,
+   "words": [
+    {
+     "text": "Ainda",
+     "f": 2,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "não",
+     "f": 6,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "tem",
+     "f": 9,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "data",
+     "f": 13,
+     "role": "B",
+     "hl": false
+    },
+    {
+     "text": "no",
+     "f": 18,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "Brasil",
+     "f": 22,
+     "role": "P",
+     "hl": true
+    }
+   ]
+  },
+  {
+   "bg": "K",
+   "cut": "buddy_close",
+   "scale": "close",
+   "enter": "pop",
+   "cap": true,
+   "start": 1063,
+   "end": 1105,
+   "words": [
+    {
+     "text": "Quando",
+     "f": 2,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "chegar",
+     "f": 3,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "você",
+     "f": 16,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "vai",
+     "f": 22,
+     "role": "x",
+     "hl": false
+    },
+    {
+     "text": "encarar",
+     "f": 27,
+     "role": "B",
+     "hl": true
+    }
+   ]
+  },
+  {
+   "bg": "G",
+   "cut": "buddy_wave",
+   "scale": "small",
+   "enter": "pop",
+   "handle": true,
+   "start": 1105,
+   "end": 1155,
+   "words": [
+    {
+     "text": "Comenta",
+     "f": 2,
+     "role": "B",
+     "hl": true
+    },
+    {
+     "text": "aí",
+     "f": 10,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "e",
+     "f": 13,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "segue",
+     "f": 18,
+     "role": "b",
+     "hl": false
+    },
+    {
+     "text": "o",
+     "f": 25,
+     "role": "s",
+     "hl": false
+    },
+    {
+     "text": "Talking",
+     "f": 28,
+     "role": "p",
+     "hl": false
+    },
+    {
+     "text": "Horror",
+     "f": 34,
+     "role": "P",
+     "hl": false
+    }
+   ]
+  }
+ ],
+ "words": [
+  {
+   "i": 0,
+   "raw": "Pais",
+   "t": 0.01,
+   "f": 0
+  },
+  {
+   "i": 1,
+   "raw": "levaram",
+   "t": 0.68,
+   "f": 20
+  },
+  {
+   "i": 2,
+   "raw": "os",
+   "t": 1.1,
+   "f": 33
+  },
+  {
+   "i": 3,
+   "raw": "filhos",
+   "t": 1.16,
+   "f": 35
+  },
+  {
+   "i": 4,
+   "raw": "pequenos",
+   "t": 1.42,
+   "f": 43
+  },
+  {
+   "i": 5,
+   "raw": "pra",
+   "t": 1.94,
+   "f": 58
+  },
+  {
+   "i": 6,
+   "raw": "ver",
+   "t": 2.08,
+   "f": 62
+  },
+  {
+   "i": 7,
+   "raw": "esse",
+   "t": 2.24,
+   "f": 67
+  },
+  {
+   "i": 8,
+   "raw": "unicórnio",
+   "t": 2.4,
+   "f": 72
+  },
+  {
+   "i": 9,
+   "raw": "no",
+   "t": 2.78,
+   "f": 83
+  },
+  {
+   "i": 10,
+   "raw": "cinema,",
+   "t": 2.92,
+   "f": 88
+  },
+  {
+   "i": 11,
+   "raw": "e",
+   "t": 3.34,
+   "f": 100
+  },
+  {
+   "i": 12,
+   "raw": "saíram",
+   "t": 3.61,
+   "f": 108
+  },
+  {
+   "i": 13,
+   "raw": "de",
+   "t": 3.94,
+   "f": 118
+  },
+  {
+   "i": 14,
+   "raw": "lá",
+   "t": 4.04,
+   "f": 121
+  },
+  {
+   "i": 15,
+   "raw": "pedindo",
+   "t": 4.18,
+   "f": 125
+  },
+  {
+   "i": 16,
+   "raw": "dinheiro",
+   "t": 4.58,
+   "f": 137
+  },
+  {
+   "i": 17,
+   "raw": "de",
+   "t": 4.82,
+   "f": 145
+  },
+  {
+   "i": 18,
+   "raw": "volta.",
+   "t": 5.04,
+   "f": 151
+  },
+  {
+   "i": 19,
+   "raw": "Porque",
+   "t": 5.9,
+   "f": 177
+  },
+  {
+   "i": 20,
+   "raw": "isso",
+   "t": 6.32,
+   "f": 190
+  },
+  {
+   "i": 21,
+   "raw": "aqui",
+   "t": 6.58,
+   "f": 197
+  },
+  {
+   "i": 22,
+   "raw": "não",
+   "t": 6.76,
+   "f": 203
+  },
+  {
+   "i": 23,
+   "raw": "é",
+   "t": 6.92,
+   "f": 208
+  },
+  {
+   "i": 24,
+   "raw": "filme",
+   "t": 7.12,
+   "f": 214
+  },
+  {
+   "i": 25,
+   "raw": "infantil.",
+   "t": 7.3,
+   "f": 219
+  },
+  {
+   "i": 26,
+   "raw": "É",
+   "t": 8.1,
+   "f": 243
+  },
+  {
+   "i": 27,
+   "raw": "Buddy,",
+   "t": 8.14,
+   "f": 244
+  },
+  {
+   "i": 28,
+   "raw": "um",
+   "t": 8.9,
+   "f": 267
+  },
+  {
+   "i": 29,
+   "raw": "dos",
+   "t": 9.0,
+   "f": 270
+  },
+  {
+   "i": 30,
+   "raw": "filmes",
+   "t": 9.14,
+   "f": 274
+  },
+  {
+   "i": 31,
+   "raw": "de",
+   "t": 9.44,
+   "f": 283
+  },
+  {
+   "i": 32,
+   "raw": "terror",
+   "t": 9.48,
+   "f": 284
+  },
+  {
+   "i": 33,
+   "raw": "mais",
+   "t": 9.74,
+   "f": 292
+  },
+  {
+   "i": 34,
+   "raw": "comentados",
+   "t": 9.98,
+   "f": 299
+  },
+  {
+   "i": 35,
+   "raw": "do",
+   "t": 10.52,
+   "f": 316
+  },
+  {
+   "i": 36,
+   "raw": "ano.",
+   "t": 10.66,
+   "f": 320
+  },
+  {
+   "i": 37,
+   "raw": "A",
+   "t": 10.99,
+   "f": 330
+  },
+  {
+   "i": 38,
+   "raw": "história,",
+   "t": 11.23,
+   "f": 337
+  },
+  {
+   "i": 39,
+   "raw": "um",
+   "t": 11.72,
+   "f": 352
+  },
+  {
+   "i": 40,
+   "raw": "programa",
+   "t": 11.91,
+   "f": 357
+  },
+  {
+   "i": 41,
+   "raw": "infantil",
+   "t": 12.12,
+   "f": 364
+  },
+  {
+   "i": 42,
+   "raw": "dos",
+   "t": 12.58,
+   "f": 377
+  },
+  {
+   "i": 43,
+   "raw": "anos",
+   "t": 12.7,
+   "f": 381
+  },
+  {
+   "i": 44,
+   "raw": "90.",
+   "t": 12.82,
+   "f": 385
+  },
+  {
+   "i": 45,
+   "raw": "Música,",
+   "t": 13.35,
+   "f": 401
+  },
+  {
+   "i": 46,
+   "raw": "cores",
+   "t": 13.92,
+   "f": 418
+  },
+  {
+   "i": 47,
+   "raw": "e",
+   "t": 14.26,
+   "f": 428
+  },
+  {
+   "i": 48,
+   "raw": "um",
+   "t": 14.56,
+   "f": 437
+  },
+  {
+   "i": 49,
+   "raw": "unicórnio",
+   "t": 14.68,
+   "f": 440
+  },
+  {
+   "i": 50,
+   "raw": "laranja",
+   "t": 15.0,
+   "f": 450
+  },
+  {
+   "i": 51,
+   "raw": "ensinando",
+   "t": 15.3,
+   "f": 459
+  },
+  {
+   "i": 52,
+   "raw": "sobre",
+   "t": 15.66,
+   "f": 470
+  },
+  {
+   "i": 53,
+   "raw": "amizade.",
+   "t": 15.86,
+   "f": 476
+  },
+  {
+   "i": 54,
+   "raw": "Até",
+   "t": 16.38,
+   "f": 491
+  },
+  {
+   "i": 55,
+   "raw": "que",
+   "t": 16.71,
+   "f": 501
+  },
+  {
+   "i": 56,
+   "raw": "uma",
+   "t": 16.94,
+   "f": 508
+  },
+  {
+   "i": 57,
+   "raw": "criança",
+   "t": 17.06,
+   "f": 512
+  },
+  {
+   "i": 58,
+   "raw": "se",
+   "t": 17.3,
+   "f": 519
+  },
+  {
+   "i": 59,
+   "raw": "recusa",
+   "t": 17.46,
+   "f": 524
+  },
+  {
+   "i": 60,
+   "raw": "a",
+   "t": 17.84,
+   "f": 535
+  },
+  {
+   "i": 61,
+   "raw": "brincar,",
+   "t": 17.9,
+   "f": 537
+  },
+  {
+   "i": 62,
+   "raw": "e",
+   "t": 18.24,
+   "f": 547
+  },
+  {
+   "i": 63,
+   "raw": "o",
+   "t": 18.35,
+   "f": 550
+  },
+  {
+   "i": 64,
+   "raw": "Buddy",
+   "t": 18.42,
+   "f": 553
+  },
+  {
+   "i": 65,
+   "raw": "mostra",
+   "t": 18.64,
+   "f": 559
+  },
+  {
+   "i": 66,
+   "raw": "quem",
+   "t": 18.92,
+   "f": 568
+  },
+  {
+   "i": 67,
+   "raw": "ele",
+   "t": 19.14,
+   "f": 574
+  },
+  {
+   "i": 68,
+   "raw": "é",
+   "t": 19.32,
+   "f": 580
+  },
+  {
+   "i": 69,
+   "raw": "de",
+   "t": 19.44,
+   "f": 583
+  },
+  {
+   "i": 70,
+   "raw": "verdade.",
+   "t": 19.56,
+   "f": 587
+  },
+  {
+   "i": 71,
+   "raw": "E",
+   "t": 20.0,
+   "f": 600
+  },
+  {
+   "i": 72,
+   "raw": "como",
+   "t": 20.02,
+   "f": 601
+  },
+  {
+   "i": 73,
+   "raw": "tanta",
+   "t": 20.16,
+   "f": 605
+  },
+  {
+   "i": 74,
+   "raw": "gente",
+   "t": 20.36,
+   "f": 611
+  },
+  {
+   "i": 75,
+   "raw": "caiu",
+   "t": 20.62,
+   "f": 619
+  },
+  {
+   "i": 76,
+   "raw": "nessa,",
+   "t": 20.98,
+   "f": 629
+  },
+  {
+   "i": 77,
+   "raw": "o",
+   "t": 21.32,
+   "f": 640
+  },
+  {
+   "i": 78,
+   "raw": "filme",
+   "t": 21.44,
+   "f": 643
+  },
+  {
+   "i": 79,
+   "raw": "nem",
+   "t": 21.64,
+   "f": 649
+  },
+  {
+   "i": 80,
+   "raw": "teve",
+   "t": 21.8,
+   "f": 654
+  },
+  {
+   "i": 81,
+   "raw": "trailer",
+   "t": 22.06,
+   "f": 662
+  },
+  {
+   "i": 82,
+   "raw": "tradicional.",
+   "t": 22.32,
+   "f": 670
+  },
+  {
+   "i": 83,
+   "raw": "Só",
+   "t": 23.18,
+   "f": 695
+  },
+  {
+   "i": 84,
+   "raw": "teasers",
+   "t": 23.24,
+   "f": 697
+  },
+  {
+   "i": 85,
+   "raw": "curtinhos",
+   "t": 23.56,
+   "f": 707
+  },
+  {
+   "i": 86,
+   "raw": "mostrando",
+   "t": 24.16,
+   "f": 725
+  },
+  {
+   "i": 87,
+   "raw": "o",
+   "t": 24.62,
+   "f": 739
+  },
+  {
+   "i": 88,
+   "raw": "mundo",
+   "t": 24.74,
+   "f": 742
+  },
+  {
+   "i": 89,
+   "raw": "fofo",
+   "t": 24.92,
+   "f": 748
+  },
+  {
+   "i": 90,
+   "raw": "do",
+   "t": 25.36,
+   "f": 761
+  },
+  {
+   "i": 91,
+   "raw": "unicórnio.",
+   "t": 25.44,
+   "f": 763
+  },
+  {
+   "i": 92,
+   "raw": "Parecia",
+   "t": 26.07,
+   "f": 782
+  },
+  {
+   "i": 93,
+   "raw": "infantil,",
+   "t": 26.22,
+   "f": 787
+  },
+  {
+   "i": 94,
+   "raw": "não",
+   "t": 26.76,
+   "f": 803
+  },
+  {
+   "i": 95,
+   "raw": "era.",
+   "t": 27.04,
+   "f": 811
+  },
+  {
+   "i": 96,
+   "raw": "Resultado,",
+   "t": 27.51,
+   "f": 825
+  },
+  {
+   "i": 97,
+   "raw": "criançada",
+   "t": 27.96,
+   "f": 839
+  },
+  {
+   "i": 98,
+   "raw": "chorando",
+   "t": 28.36,
+   "f": 851
+  },
+  {
+   "i": 99,
+   "raw": "no",
+   "t": 28.74,
+   "f": 862
+  },
+  {
+   "i": 100,
+   "raw": "meio",
+   "t": 28.88,
+   "f": 866
+  },
+  {
+   "i": 101,
+   "raw": "da",
+   "t": 29.04,
+   "f": 871
+  },
+  {
+   "i": 102,
+   "raw": "sessão.",
+   "t": 29.18,
+   "f": 875
+  },
+  {
+   "i": 103,
+   "raw": "E",
+   "t": 29.52,
+   "f": 886
+  },
+  {
+   "i": 104,
+   "raw": "o",
+   "t": 29.74,
+   "f": 892
+  },
+  {
+   "i": 105,
+   "raw": "mais",
+   "t": 29.74,
+   "f": 892
+  },
+  {
+   "i": 106,
+   "raw": "louco,",
+   "t": 29.88,
+   "f": 896
+  },
+  {
+   "i": 107,
+   "raw": "custou",
+   "t": 30.54,
+   "f": 916
+  },
+  {
+   "i": 108,
+   "raw": "5",
+   "t": 30.88,
+   "f": 926
+  },
+  {
+   "i": 109,
+   "raw": "milhões",
+   "t": 31.02,
+   "f": 931
+  },
+  {
+   "i": 110,
+   "raw": "de",
+   "t": 31.34,
+   "f": 940
+  },
+  {
+   "i": 111,
+   "raw": "dólares",
+   "t": 31.5,
+   "f": 945
+  },
+  {
+   "i": 112,
+   "raw": "e",
+   "t": 31.72,
+   "f": 952
+  },
+  {
+   "i": 113,
+   "raw": "já",
+   "t": 31.99,
+   "f": 960
+  },
+  {
+   "i": 114,
+   "raw": "rendeu",
+   "t": 32.08,
+   "f": 962
+  },
+  {
+   "i": 115,
+   "raw": "mais",
+   "t": 32.32,
+   "f": 970
+  },
+  {
+   "i": 116,
+   "raw": "de",
+   "t": 32.42,
+   "f": 973
+  },
+  {
+   "i": 117,
+   "raw": "5",
+   "t": 32.52,
+   "f": 976
+  },
+  {
+   "i": 118,
+   "raw": "vezes",
+   "t": 32.7,
+   "f": 981
+  },
+  {
+   "i": 119,
+   "raw": "isso",
+   "t": 32.96,
+   "f": 989
+  },
+  {
+   "i": 120,
+   "raw": "só",
+   "t": 33.18,
+   "f": 995
+  },
+  {
+   "i": 121,
+   "raw": "nos",
+   "t": 33.38,
+   "f": 1001
+  },
+  {
+   "i": 122,
+   "raw": "Estados",
+   "t": 33.52,
+   "f": 1006
+  },
+  {
+   "i": 123,
+   "raw": "Unidos.",
+   "t": 33.72,
+   "f": 1012
+  },
+  {
+   "i": 124,
+   "raw": "Ainda",
+   "t": 34.32,
+   "f": 1030
+  },
+  {
+   "i": 125,
+   "raw": "não",
+   "t": 34.46,
+   "f": 1034
+  },
+  {
+   "i": 126,
+   "raw": "tem",
+   "t": 34.56,
+   "f": 1037
+  },
+  {
+   "i": 127,
+   "raw": "data",
+   "t": 34.7,
+   "f": 1041
+  },
+  {
+   "i": 128,
+   "raw": "no",
+   "t": 34.88,
+   "f": 1046
+  },
+  {
+   "i": 129,
+   "raw": "Brasil.",
+   "t": 35.0,
+   "f": 1050
+  },
+  {
+   "i": 130,
+   "raw": "Quando",
+   "t": 35.5,
+   "f": 1065
+  },
+  {
+   "i": 131,
+   "raw": "chegar,",
+   "t": 35.54,
+   "f": 1066
+  },
+  {
+   "i": 132,
+   "raw": "você",
+   "t": 35.98,
+   "f": 1079
+  },
+  {
+   "i": 133,
+   "raw": "vai",
+   "t": 36.18,
+   "f": 1085
+  },
+  {
+   "i": 134,
+   "raw": "encarar?",
+   "t": 36.32,
+   "f": 1090
+  },
+  {
+   "i": 135,
+   "raw": "Comenta",
+   "t": 36.9,
+   "f": 1107
+  },
+  {
+   "i": 136,
+   "raw": "aí",
+   "t": 37.16,
+   "f": 1115
+  },
+  {
+   "i": 137,
+   "raw": "e",
+   "t": 37.26,
+   "f": 1118
+  },
+  {
+   "i": 138,
+   "raw": "segue",
+   "t": 37.44,
+   "f": 1123
+  },
+  {
+   "i": 139,
+   "raw": "o",
+   "t": 37.66,
+   "f": 1130
+  },
+  {
+   "i": 140,
+   "raw": "Talking",
+   "t": 37.76,
+   "f": 1133
+  },
+  {
+   "i": 141,
+   "raw": "Horror.",
+   "t": 37.96,
+   "f": 1139
+  }
+ ]
+}
