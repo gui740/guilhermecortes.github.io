@@ -1172,7 +1172,7 @@ def main():
     t0 = time.time()
     cmd = ['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', '%dx%d' % (FW, FH),
            '-r', str(T.FPS), '-i', '-', '-ss', '%.4f' % (f0 / T.FPS), '-i', wav,
-           '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '18',
+           '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '19', '-maxrate', '10M', '-bufsize', '20M',
            '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-level', '4.1', '-g', '60', '-bf', '2',
            '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',
            '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-shortest', '-movflags', '+faststart', args.out]
