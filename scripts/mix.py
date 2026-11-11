@@ -14,11 +14,11 @@ gm = (v - 12) - m
 gs = (v - 11) - s
 print(f"voz {v:.1f} | trilha {m:.1f} -> {gm:+.1f} dB | sfx {s:.1f} -> {gs:+.1f} dB")
 fc = (
-    f"[0:a]asplit=2[v][vsc];"
+    f"[0:a]apad=whole_dur=38.5,asplit=2[v][vsc];"
     f"[1:a]volume={gm}dB[m];"
     f"[m][vsc]sidechaincompress=threshold=0.03:ratio=6:attack=10:release=280:makeup=1[md];"
     f"[2:a]volume={gs}dB[s];"
-    f"[v][md][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.89:attack=3:release=60[o]"
+    f"[v][md][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.79:attack=2:release=60[o]"
 )
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", VOICE, "-i", "build/music.wav", "-i", "build/sfx.wav",
                 "-filter_complex", fc, "-map", "[o]", "-ar", "48000", "build/mix.wav"], check=True)
