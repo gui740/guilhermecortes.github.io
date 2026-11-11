@@ -67,7 +67,7 @@ python3 src/gerar_narracao.py --voz Algenib      # outras vozes: Charon, Fenrir,
 python3 src/render.py
 ```
 
-O script faz só 2 pedidos (roteiro inteiro + gancho), porque a cota gratuita é de 10 pedidos por dia por modelo.
+A narração é acelerada em 1,2x no render (`NARR_SPEED` em `src/timeline.py`, sem mudar o tom). O script faz só 2 pedidos (roteiro inteiro + gancho), porque a cota gratuita é de 10 pedidos por dia por modelo.
 
 Para usar uma gravação sua:
 

@@ -209,8 +209,13 @@ def step_times():
 
 
 # ---------------------------------------------------------------- narração
-def _ffmpeg_load(path, sr=SR):
-    cmd = ['ffmpeg', '-v', 'error', '-i', path, '-f', 's16le', '-ac', '1', '-ar', str(sr), '-']
+# velocidade da narração (1.0 = como foi gravada). atempo acelera sem mudar o tom da voz.
+NARR_SPEED = 1.2
+
+
+def _ffmpeg_load(path, sr=SR, speed=1.0):
+    af = ['-af', 'atempo=%.3f' % speed] if abs(speed - 1) > 1e-3 else []
+    cmd = ['ffmpeg', '-v', 'error', '-i', path] + af + ['-f', 's16le', '-ac', '1', '-ar', str(sr), '-']
     raw = subprocess.run(cmd, capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
 
@@ -294,7 +299,7 @@ class Timeline:
         real_starts = [l[0] for l in LINES]
         real_ends = [l[1] for l in LINES]
         if use_narration and os.path.exists(path):
-            x = _ffmpeg_load(path)
+            x = _ffmpeg_load(path, speed=NARR_SPEED)
             self.narr = x
             bounds = self._find_lines(x)
             if bounds:
@@ -326,7 +331,7 @@ class Timeline:
         self.hook = HOOK_MIN
         gp = os.path.join(ASSETS, 'narracao_gancho.wav')
         if use_narration and os.path.exists(gp):
-            self.hook_audio = _ffmpeg_load(gp)
+            self.hook_audio = _ffmpeg_load(gp, speed=NARR_SPEED)
             self.hook = max(HOOK_MIN, len(self.hook_audio) / SR + 0.9)
         self.real_starts = [r + self.hook for r in real_starts]
         self.real_ends = [r + self.hook for r in real_ends]
@@ -340,7 +345,7 @@ class Timeline:
         marks = os.path.join(ASSETS, 'narracao_marcas.txt')
         dur = len(x) / SR
         if os.path.exists(marks):
-            vals = [float(v.replace(',', '.')) for v in open(marks).read().split()]
+            vals = [float(v.replace(',', '.')) / NARR_SPEED for v in open(marks).read().split()]
             if len(vals) == len(LINES):
                 ends = vals[1:] + [dur]
                 segs = _speech_segments(x, SR, 0.25)
