@@ -1,0 +1,1026 @@
+{
+ "transitions": [
+  {
+   "at": 4.1,
+   "kind": "cross"
+  },
+  {
+   "at": 10.55,
+   "kind": "whip"
+  },
+  {
+   "at": 12.62,
+   "kind": "cross"
+  },
+  {
+   "at": 18.15,
+   "kind": "whip"
+  },
+  {
+   "at": 21.1,
+   "kind": "tv"
+  },
+  {
+   "at": 27.62,
+   "kind": "whip"
+  }
+ ],
+ "loop": 31.3,
+ "total": 32.35,
+ "blocks": [
+  {
+   "scene": "hook",
+   "from": 0,
+   "to": 2.02,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "Três",
+     "at": 0,
+     "hl": false
+    },
+    {
+     "t": "filmes",
+     "at": 0.28,
+     "hl": false
+    },
+    {
+     "t": "de",
+     "at": 0.58,
+     "hl": false
+    },
+    {
+     "t": "RITUAL",
+     "at": 0.68,
+     "hl": true
+    },
+    {
+     "t": "que",
+     "at": 0.96,
+     "hl": false
+    },
+    {
+     "t": "cê",
+     "at": 1.18,
+     "hl": false
+    },
+    {
+     "t": "NUNCA",
+     "at": 1.34,
+     "hl": false
+    },
+    {
+     "t": "VIU",
+     "at": 1.56,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "symbol@-1000",
+    "cut:p_fence@-760",
+    "smoke@-650",
+    "flames@-220",
+    "cut:a_robed@-90",
+    "dust@-150",
+    "forest"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "hook",
+   "from": 2.02,
+   "to": 4.1,
+   "bg": "black",
+   "toks": [
+    {
+     "t": "e",
+     "at": 2.08,
+     "hl": false
+    },
+    {
+     "t": "o",
+     "at": 2.2,
+     "hl": false
+    },
+    {
+     "t": "último",
+     "at": 2.32,
+     "hl": false
+    },
+    {
+     "t": "AMALDIÇOA",
+     "at": 2.58,
+     "hl": true
+    },
+    {
+     "t": "quem",
+     "at": 3.18,
+     "hl": false
+    },
+    {
+     "t": "ASSISTE",
+     "at": 3.32,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "symbol@-900",
+    "cut:p_temple@-760",
+    "smoke@-600",
+    "cut:i_face@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "e",
+   "from": 4.1,
+   "to": 5.58,
+   "bg": "red",
+   "toks": [
+    {
+     "t": "Errementari",
+     "at": 4.84,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "cut:p_village@-900",
+    "smoke@-750",
+    "star@-600",
+    "num@-480",
+    "cut:e_smith@-90",
+    "dust@-200",
+    "cut:fg_branches@260"
+   ],
+   "nums": [
+    {
+     "k": "star",
+     "at": 4.84
+    },
+    {
+     "k": "num",
+     "at": 4.2
+    }
+   ]
+  },
+  {
+   "scene": "e",
+   "from": 5.58,
+   "to": 7.55,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "um",
+     "at": 5.52,
+     "hl": false
+    },
+    {
+     "t": "FERREIRO",
+     "at": 5.66,
+     "hl": false
+    },
+    {
+     "t": "basco",
+     "at": 6.02,
+     "hl": false
+    },
+    {
+     "t": "mantém",
+     "at": 6.38,
+     "hl": false
+    },
+    {
+     "t": "o",
+     "at": 6.72,
+     "hl": false
+    },
+    {
+     "t": "DIABO",
+     "at": 6.82,
+     "hl": true
+    },
+    {
+     "t": "preso.",
+     "at": 7.16,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "cut:p_forest@-850",
+    "flames@-200",
+    "cut:e_mask@-90",
+    "dust@-180",
+    "cut:fg_fence@280"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "e",
+   "from": 7.55,
+   "to": 10.55,
+   "bg": "black",
+   "toks": [
+    {
+     "t": "falado",
+     "at": 7.62,
+     "hl": false
+    },
+    {
+     "t": "num",
+     "at": 7.9,
+     "hl": false
+    },
+    {
+     "t": "DIALETO",
+     "at": 8.06,
+     "hl": true
+    },
+    {
+     "t": "que",
+     "at": 8.5,
+     "hl": false
+    },
+    {
+     "t": "nem",
+     "at": 8.66,
+     "hl": false
+    },
+    {
+     "t": "existe",
+     "at": 8.8,
+     "hl": false
+    },
+    {
+     "t": "MAIS.",
+     "at": 9.16,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "cut:p_fence@-850",
+    "smoke@-700",
+    "cut:e_girl@-90",
+    "logo@-300",
+    "cut:poster_e@-300",
+    "dash@-300",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": [
+    {
+     "k": "logo",
+     "at": 9.8
+    }
+   ]
+  },
+  {
+   "scene": "two",
+   "from": 10.55,
+   "to": 12.62,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "ESTRANHO?",
+     "at": 10.66,
+     "hl": false
+    },
+    {
+     "t": "o",
+     "at": 11.36,
+     "hl": false
+    },
+    {
+     "t": "DOIS",
+     "at": 11.48,
+     "hl": false
+    },
+    {
+     "t": "é",
+     "at": 11.74,
+     "hl": false
+    },
+    {
+     "t": "PIOR.",
+     "at": 11.88,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "symbol@-1000",
+    "cut:p_church@-850",
+    "num@-480",
+    "cut:a_hood@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": [
+    {
+     "k": "num",
+     "at": 11.48
+    }
+   ]
+  },
+  {
+   "scene": "a",
+   "from": 12.62,
+   "to": 14.15,
+   "bg": "red",
+   "toks": [
+    {
+     "t": "Apóstolo",
+     "at": 12.7,
+     "hl": false
+    },
+    {
+     "t": "um",
+     "at": 13.36,
+     "hl": false
+    },
+    {
+     "t": "cara",
+     "at": 13.5,
+     "hl": false
+    },
+    {
+     "t": "INVADE",
+     "at": 13.68,
+     "hl": true
+    },
+    {
+     "t": "uma",
+     "at": 13.9,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "cut:p_moor@-900",
+    "star@-600",
+    "cut:a_dan@-90",
+    "dust@-180",
+    "cut:fg_branches@260"
+   ],
+   "nums": [
+    {
+     "k": "star",
+     "at": 12.7
+    }
+   ]
+  },
+  {
+   "scene": "a",
+   "from": 14.15,
+   "to": 16.02,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "ILHA",
+     "at": 14.2,
+     "hl": false
+    },
+    {
+     "t": "pra",
+     "at": 14.42,
+     "hl": false
+    },
+    {
+     "t": "resgatar",
+     "at": 14.54,
+     "hl": false
+    },
+    {
+     "t": "a",
+     "at": 14.86,
+     "hl": false
+    },
+    {
+     "t": "irmã",
+     "at": 15.04,
+     "hl": false
+    },
+    {
+     "t": "de",
+     "at": 15.3,
+     "hl": false
+    },
+    {
+     "t": "uma",
+     "at": 15.42,
+     "hl": false
+    },
+    {
+     "t": "SEITA.",
+     "at": 15.54,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "cut:p_moor@-820",
+    "cut:a_walkers@-480",
+    "smoke@-600",
+    "cut:a_hill@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "a",
+   "from": 16.02,
+   "to": 18.15,
+   "bg": "black",
+   "toks": [
+    {
+     "t": "do",
+     "at": 16.06,
+     "hl": false
+    },
+    {
+     "t": "diretor",
+     "at": 16.16,
+     "hl": false
+    },
+    {
+     "t": "de",
+     "at": 16.56,
+     "hl": false
+    },
+    {
+     "t": "THE RAID.",
+     "at": 16.76,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "symbol@-1000",
+    "smoke@-700",
+    "flames@-220",
+    "cut:a_robed@-90",
+    "logo@-300",
+    "cut:poster_a@-300",
+    "dash@-300",
+    "dust@-150"
+   ],
+   "nums": [
+    {
+     "k": "logo",
+     "at": 17.4
+    }
+   ]
+  },
+  {
+   "scene": "share",
+   "from": 18.15,
+   "to": 19.66,
+   "bg": "red",
+   "toks": [
+    {
+     "t": "MANDA",
+     "at": 18.28,
+     "hl": false
+    },
+    {
+     "t": "pro",
+     "at": 18.52,
+     "hl": false
+    },
+    {
+     "t": "AMIGO",
+     "at": 18.68,
+     "hl": true
+    },
+    {
+     "t": "que",
+     "at": 18.96,
+     "hl": false
+    },
+    {
+     "t": "vive",
+     "at": 19.2,
+     "hl": false
+    },
+    {
+     "t": "querendo",
+     "at": 19.36,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "cut:p_village@-880",
+    "smoke@-700",
+    "cut:a_book@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "share",
+   "from": 19.66,
+   "to": 21.1,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "ACAMPAR",
+     "at": 19.7,
+     "hl": false
+    },
+    {
+     "t": "no",
+     "at": 20.1,
+     "hl": false
+    },
+    {
+     "t": "meio",
+     "at": 20.26,
+     "hl": false
+    },
+    {
+     "t": "do",
+     "at": 20.42,
+     "hl": false
+    },
+    {
+     "t": "NADA.",
+     "at": 20.56,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "cut:p_forest@-850",
+    "tent@-380",
+    "flames@-380",
+    "cut:a_hill@-90",
+    "dust@-150",
+    "cut:fg_fence@280"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "i",
+   "from": 21.1,
+   "to": 23.66,
+   "bg": "black",
+   "toks": [
+    {
+     "t": "Marcas",
+     "at": 21.74,
+     "hl": false
+    },
+    {
+     "t": "da",
+     "at": 22.06,
+     "hl": false
+    },
+    {
+     "t": "Maldição,",
+     "at": 22.2,
+     "hl": false
+    },
+    {
+     "t": "de",
+     "at": 23.02,
+     "hl": false
+    },
+    {
+     "t": "TAIWAN.",
+     "at": 23.12,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "cut:p_temple@-900",
+    "smoke@-700",
+    "star@-600",
+    "num@-480",
+    "tv@-150",
+    "cut:i_lantern@-90",
+    "dust@-150"
+   ],
+   "nums": [
+    {
+     "k": "star",
+     "at": 21.74
+    },
+    {
+     "k": "num",
+     "at": 21.38
+    }
+   ]
+  },
+  {
+   "scene": "i",
+   "from": 23.66,
+   "to": 25.15,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "baseado",
+     "at": 23.74,
+     "hl": false
+    },
+    {
+     "t": "num",
+     "at": 24.18,
+     "hl": false
+    },
+    {
+     "t": "CASO",
+     "at": 24.34,
+     "hl": false
+    },
+    {
+     "t": "REAL,",
+     "at": 24.6,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "cut:p_temple@-850",
+    "cut:i_woman@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "i",
+   "from": 25.15,
+   "to": 27.62,
+   "bg": "red",
+   "toks": [
+    {
+     "t": "e",
+     "at": 25.18,
+     "hl": false
+    },
+    {
+     "t": "ele",
+     "at": 25.28,
+     "hl": false
+    },
+    {
+     "t": "te",
+     "at": 25.38,
+     "hl": false
+    },
+    {
+     "t": "pede",
+     "at": 25.5,
+     "hl": false
+    },
+    {
+     "t": "pra",
+     "at": 25.74,
+     "hl": false
+    },
+    {
+     "t": "REPETIR",
+     "at": 25.88,
+     "hl": false
+    },
+    {
+     "t": "a",
+     "at": 26.26,
+     "hl": false
+    },
+    {
+     "t": "REZA.",
+     "at": 26.38,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "symbol@-560",
+    "cut:i_hands@-90",
+    "logo@-300",
+    "cut:poster_i@-300",
+    "dash@-300",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": [
+    {
+     "k": "logo",
+     "at": 26.64
+    }
+   ]
+  },
+  {
+   "scene": "end",
+   "from": 27.62,
+   "to": 29.16,
+   "bg": "black",
+   "toks": [
+    {
+     "t": "cê",
+     "at": 27.7,
+     "hl": false
+    },
+    {
+     "t": "REPETIRIA",
+     "at": 27.94,
+     "hl": true
+    },
+    {
+     "t": "ou",
+     "at": 28.46,
+     "hl": false
+    },
+    {
+     "t": "FUGIA?",
+     "at": 28.6,
+     "hl": false
+    }
+   ],
+   "layers": [
+    "symbol@-900",
+    "smoke@-700",
+    "cut:i_face@-90",
+    "dust@-150",
+    "cut:fg_branches@260"
+   ],
+   "nums": []
+  },
+  {
+   "scene": "end",
+   "from": 29.16,
+   "to": 31.3,
+   "bg": "gray",
+   "toks": [
+    {
+     "t": "SEGUE",
+     "at": 29.24,
+     "hl": false
+    },
+    {
+     "t": "a",
+     "at": 29.44,
+     "hl": false
+    },
+    {
+     "t": "TALKING",
+     "at": 29.54,
+     "hl": false
+    },
+    {
+     "t": "HORROR.",
+     "at": 29.8,
+     "hl": true
+    }
+   ],
+   "layers": [
+    "grid@-1300",
+    "symbol@-1000",
+    "flames@-400",
+    "cut:poster_e@-260",
+    "cut:poster_i@-260",
+    "cut:poster_a@-90",
+    "dust@-150",
+    "cut:fg_fence@280"
+   ],
+   "nums": []
+  }
+ ],
+ "hooks": {
+  "A": [
+   {
+    "from": 0,
+    "to": 2.02,
+    "bg": "gray",
+    "toks": [
+     {
+      "t": "Três",
+      "at": 0,
+      "hl": false
+     },
+     {
+      "t": "filmes",
+      "at": 0.28,
+      "hl": false
+     },
+     {
+      "t": "de",
+      "at": 0.58,
+      "hl": false
+     },
+     {
+      "t": "RITUAL",
+      "at": 0.68,
+      "hl": true
+     },
+     {
+      "t": "que",
+      "at": 0.96,
+      "hl": false
+     },
+     {
+      "t": "cê",
+      "at": 1.18,
+      "hl": false
+     },
+     {
+      "t": "NUNCA",
+      "at": 1.34,
+      "hl": false
+     },
+     {
+      "t": "VIU",
+      "at": 1.56,
+      "hl": false
+     }
+    ]
+   },
+   {
+    "from": 2.02,
+    "to": 4.1,
+    "bg": "black",
+    "toks": [
+     {
+      "t": "e",
+      "at": 2.08,
+      "hl": false
+     },
+     {
+      "t": "o",
+      "at": 2.2,
+      "hl": false
+     },
+     {
+      "t": "último",
+      "at": 2.32,
+      "hl": false
+     },
+     {
+      "t": "AMALDIÇOA",
+      "at": 2.58,
+      "hl": true
+     },
+     {
+      "t": "quem",
+      "at": 3.18,
+      "hl": false
+     },
+     {
+      "t": "ASSISTE",
+      "at": 3.32,
+      "hl": false
+     }
+    ]
+   }
+  ],
+  "B": [
+   {
+    "from": 0,
+    "to": 1.5799999999999998,
+    "bg": "gray",
+    "toks": [
+     {
+      "t": "Se",
+      "at": 0,
+      "hl": false
+     },
+     {
+      "t": "cê",
+      "at": 0.14,
+      "hl": false
+     },
+     {
+      "t": "achou",
+      "at": 0.32,
+      "hl": false
+     },
+     {
+      "t": "MIDSOMMAR",
+      "at": 0.58,
+      "hl": true
+     },
+     {
+      "t": "PESADO,",
+      "at": 1,
+      "hl": false
+     }
+    ]
+   },
+   {
+    "from": 1.5799999999999998,
+    "to": 3.1,
+    "bg": "red",
+    "toks": [
+     {
+      "t": "a",
+      "at": 1.64,
+      "hl": false
+     },
+     {
+      "t": "gente",
+      "at": 1.72,
+      "hl": false
+     },
+     {
+      "t": "separou",
+      "at": 1.86,
+      "hl": false
+     },
+     {
+      "t": "COISA",
+      "at": 2.32,
+      "hl": false
+     },
+     {
+      "t": "PIOR",
+      "at": 2.5,
+      "hl": true
+     }
+    ]
+   }
+  ],
+  "C": [
+   {
+    "from": 0,
+    "to": 1.98,
+    "bg": "gray",
+    "toks": [
+     {
+      "t": "Três",
+      "at": 0,
+      "hl": false
+     },
+     {
+      "t": "VILAS",
+      "at": 0.3,
+      "hl": true
+     },
+     {
+      "t": "onde",
+      "at": 0.64,
+      "hl": false
+     },
+     {
+      "t": "cê",
+      "at": 0.76,
+      "hl": false
+     },
+     {
+      "t": "NUNCA",
+      "at": 1.06,
+      "hl": false
+     },
+     {
+      "t": "devia",
+      "at": 1.2,
+      "hl": false
+     },
+     {
+      "t": "ENTRAR,",
+      "at": 1.54,
+      "hl": false
+     }
+    ]
+   },
+   {
+    "from": 1.98,
+    "to": 3.4,
+    "bg": "black",
+    "toks": [
+     {
+      "t": "e",
+      "at": 2.04,
+      "hl": false
+     },
+     {
+      "t": "a",
+      "at": 2.12,
+      "hl": false
+     },
+     {
+      "t": "última",
+      "at": 2.2,
+      "hl": false
+     },
+     {
+      "t": "te",
+      "at": 2.42,
+      "hl": false
+     },
+     {
+      "t": "LEVA",
+      "at": 2.66,
+      "hl": true
+     },
+     {
+      "t": "JUNTO",
+      "at": 2.84,
+      "hl": false
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "guilhermecortes.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gui740/guilhermecortes.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gui740/guilhermecortes.github.io/issues"
+  },
+  "homepage": "https://github.com/gui740/guilhermecortes.github.io#readme",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.250",
+    "@remotion/cli": "^4.0.250",
+    "@remotion/renderer": "^4.0.250",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.250"
+  }
+}

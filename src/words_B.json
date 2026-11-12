@@ -1,0 +1,62 @@
+[
+{
+"w": "Se",
+"s": 0.0,
+"e": 0.14,
+"line": "hookB"
+},
+{
+"w": "cê",
+"s": 0.14,
+"e": 0.32,
+"line": "hookB"
+},
+{
+"w": "achou",
+"s": 0.32,
+"e": 0.58,
+"line": "hookB"
+},
+{
+"w": "Midsommar",
+"s": 0.58,
+"e": 1.0,
+"line": "hookB"
+},
+{
+"w": "pesado,",
+"s": 1.0,
+"e": 1.46,
+"line": "hookB"
+},
+{
+"w": "a",
+"s": 1.64,
+"e": 1.72,
+"line": "hookB"
+},
+{
+"w": "gente",
+"s": 1.72,
+"e": 1.86,
+"line": "hookB"
+},
+{
+"w": "separou",
+"s": 1.86,
+"e": 2.32,
+"line": "hookB"
+},
+{
+"w": "coisa",
+"s": 2.32,
+"e": 2.5,
+"line": "hookB"
+},
+{
+"w": "pior.",
+"s": 2.5,
+"e": 2.78,
+"line": "hookB"
+}
+]

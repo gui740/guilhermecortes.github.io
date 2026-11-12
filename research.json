@@ -1,0 +1,246 @@
+{
+ "gerado_em": "2026-11-12",
+ "metodo_disponibilidade": "Fonte 1: API GraphQL do JustWatch Brasil (country=BR, ofertas FLATRATE/ADS/FREE). Fonte 2: página pública do título na Netflix com caminho /br/ (preços em R$, título e sinopse em português). Observação: o rodapé dessas páginas exibia 'Netflix Estados Unidos', provavelmente por causa da geolocalização do servidor que fez a consulta; por isso, conferir no app antes de postar.",
+ "filmes": [
+  {
+   "posicao": 3,
+   "titulo_br": "Errementari: O Ferreiro e o Diabo",
+   "titulo_original": "Errementari",
+   "ano": 2017,
+   "ano_obs": "Estreia em Sitges em out/2017; lançamento comercial na Espanha em 02/03/2018 (JustWatch lista 2018).",
+   "pais": "Espanha (País Basco) / França",
+   "direcao": "Paul Urkijo Alijo",
+   "duracao_min": 98,
+   "premissa": "País Basco, 1843: um ferreiro recluso mantém um demônio preso na sua forja, até uma órfã aparecer por lá.",
+   "detalhe_que_fisga": "Foi rodado no dialeto basco de Álava, que já está extinto.",
+   "fatos": [
+    {
+     "fato": "Baseado na versão basca do conto 'O Ferreiro e o Diabo', recolhida pelo padre Joxemiel Barandiaran",
+     "fonte": "https://en.wikipedia.org/wiki/Errementari"
+    },
+    {
+     "fato": "Falado no dialeto alavês do basco, hoje extinto",
+     "fonte": "https://en.wikipedia.org/wiki/Errementari"
+    },
+    {
+     "fato": "Sinopse Netflix BR: 'Um ferreiro cruel tortura um demônio que ele culpa por sua desgraça'; baseado no folclore basco",
+     "fonte": "https://www.netflix.com/br/title/80239565"
+    }
+   ],
+   "onde_assistir": {
+    "servico": "Netflix",
+    "tipo": "assinatura (inclui plano com anúncios)",
+    "justwatch": "https://www.justwatch.com/br/filme/errementari",
+    "pagina_servico": "https://www.netflix.com/br/title/80239565",
+    "confirmacao_dupla": true,
+    "incerto": false
+   },
+   "imagens_tmdb": "https://www.themoviedb.org/movie/477033/images/backdrops",
+   "poster": "https://image.tmdb.org/t/p/original/ltpi1uLkvx2BKHWwbpMjqdAtdHn.jpg",
+   "stills_usadas": [
+    "https://image.tmdb.org/t/p/original/2HnptuDUrUwWarEqJ0UKpWmRbay.jpg",
+    "https://image.tmdb.org/t/p/original/cq5f3HHiNM9OoXxUnVR5M1Kqzpu.jpg",
+    "https://image.tmdb.org/t/p/original/lv3mfeaQVFjCxoKU8AwTT7GyuNA.jpg",
+    "https://image.tmdb.org/t/p/original/nSCEgpwC5PZ3wAdKxj7BnUFeyWJ.jpg",
+    "https://image.tmdb.org/t/p/original/xhoHM4zEY359isn59VeFJTdXejY.jpg"
+   ],
+   "stills_baixadas": [
+    "https://image.tmdb.org/t/p/original/2HnptuDUrUwWarEqJ0UKpWmRbay.jpg",
+    "https://image.tmdb.org/t/p/original/aEzgJI57ybubjUdTzPDqKzXiZzq.jpg",
+    "https://image.tmdb.org/t/p/original/cYxWqbdZ4XUz2EEKT0Zu7oXUSXS.jpg",
+    "https://image.tmdb.org/t/p/original/cq5f3HHiNM9OoXxUnVR5M1Kqzpu.jpg",
+    "https://image.tmdb.org/t/p/original/ffS9VpJLphZYU2RO40nBqcxecds.jpg",
+    "https://image.tmdb.org/t/p/original/ltpi1uLkvx2BKHWwbpMjqdAtdHn.jpg",
+    "https://image.tmdb.org/t/p/original/lv3mfeaQVFjCxoKU8AwTT7GyuNA.jpg",
+    "https://image.tmdb.org/t/p/original/nSCEgpwC5PZ3wAdKxj7BnUFeyWJ.jpg",
+    "https://image.tmdb.org/t/p/original/pymXjNByC7XLbQtPxGvtZ7I8DVF.jpg",
+    "https://image.tmdb.org/t/p/original/rkMyDPuIdUL0wzXoy22P4ewga4a.jpg",
+    "https://image.tmdb.org/t/p/original/sP3xtGBYcQejqkTn22aZz8c3U8v.jpg",
+    "https://image.tmdb.org/t/p/original/w1d8CPzSNpYiqtT1sIgXgJUKMya.jpg",
+    "https://image.tmdb.org/t/p/original/xKF1B9wlboAkg1Gz1Lxu5W2u7qh.jpg",
+    "https://image.tmdb.org/t/p/original/xhoHM4zEY359isn59VeFJTdXejY.jpg",
+    "https://image.tmdb.org/t/p/original/yc5jB83SkybWp4eLTEsu3swQWeG.jpg"
+   ]
+  },
+  {
+   "posicao": 2,
+   "titulo_br": "Apóstolo",
+   "titulo_original": "Apostle",
+   "ano": 2018,
+   "pais": "Reino Unido / EUA",
+   "direcao": "Gareth Evans",
+   "duracao_min": 129,
+   "premissa": "1905: um homem viaja até uma ilha isolada para resgatar a irmã, sequestrada por uma seita religiosa.",
+   "detalhe_que_fisga": "É do diretor de The Raid (no Brasil, 'Operação Invasão' / 'The Raid: Redenção').",
+   "fatos": [
+    {
+     "fato": "Dirigido, escrito e montado por Gareth Evans, diretor de The Raid (2011) e The Raid 2 (2014)",
+     "fonte": "https://en.wikipedia.org/wiki/Apostle_(film)"
+    },
+    {
+     "fato": "Descrito como 'Gothic folk horror'; filmado em cenário montado no Margam Park, País de Gales",
+     "fonte": "https://en.wikipedia.org/wiki/Apostle_(film)"
+    },
+    {
+     "fato": "Sinopse Netflix BR: 'Em 1905, durante a perigosa missão de resgate da irmã raptada, um homem se envolve com o sinistro culto religioso de uma ilha isolada'",
+     "fonte": "https://www.netflix.com/br/title/80158148"
+    },
+    {
+     "fato": "Título brasileiro de The Raid no JustWatch BR: 'The Raid: Redenção' (slug operacao-invasao)",
+     "fonte": "https://www.justwatch.com/br/filme/operacao-invasao"
+    }
+   ],
+   "onde_assistir": {
+    "servico": "Netflix",
+    "tipo": "assinatura (inclui plano com anúncios)",
+    "justwatch": "https://www.justwatch.com/br/filme/apostle",
+    "pagina_servico": "https://www.netflix.com/br/title/80158148",
+    "confirmacao_dupla": true,
+    "incerto": false
+   },
+   "imagens_tmdb": "https://www.themoviedb.org/movie/424121/images/backdrops",
+   "poster": "https://image.tmdb.org/t/p/original/rd269f2Yftxxam3EOJPYVwrvjIJ.jpg",
+   "stills_usadas": [
+    "https://image.tmdb.org/t/p/original/4BJi7377x2PJWna8vjORIDRyYha.jpg",
+    "https://image.tmdb.org/t/p/original/58EDJlVNVPpSuVIVA6zeaWhNYq6.jpg",
+    "https://image.tmdb.org/t/p/original/73iZGJA287epF2nf2UvSbjelvlK.jpg",
+    "https://image.tmdb.org/t/p/original/7Y567LQGQTb5IPbcqQKR8jtXnHB.jpg",
+    "https://image.tmdb.org/t/p/original/a3qsXYK0gtD0opgfkdpBc62UFeK.jpg",
+    "https://image.tmdb.org/t/p/original/dnU1fJ53p2TnaHQfLvqJr7Khmwu.jpg",
+    "https://image.tmdb.org/t/p/original/xvFwSLv9bMsXA2slpQhZA63YEA5.jpg"
+   ],
+   "stills_baixadas": [
+    "https://image.tmdb.org/t/p/original/4BJi7377x2PJWna8vjORIDRyYha.jpg",
+    "https://image.tmdb.org/t/p/original/58EDJlVNVPpSuVIVA6zeaWhNYq6.jpg",
+    "https://image.tmdb.org/t/p/original/6RCeXxIAxtuafAjN5suKXtCTZLo.jpg",
+    "https://image.tmdb.org/t/p/original/73iZGJA287epF2nf2UvSbjelvlK.jpg",
+    "https://image.tmdb.org/t/p/original/7Y567LQGQTb5IPbcqQKR8jtXnHB.jpg",
+    "https://image.tmdb.org/t/p/original/8e9dKkyWxA6XX0Nd2AVR3V4ifpW.jpg",
+    "https://image.tmdb.org/t/p/original/9laS3d3qAgdIW8fGUC2jA10Yop7.jpg",
+    "https://image.tmdb.org/t/p/original/a3qsXYK0gtD0opgfkdpBc62UFeK.jpg",
+    "https://image.tmdb.org/t/p/original/dbrZtHyhFlGDcmIi5pQ3NHVxdVn.jpg",
+    "https://image.tmdb.org/t/p/original/dnU1fJ53p2TnaHQfLvqJr7Khmwu.jpg",
+    "https://image.tmdb.org/t/p/original/eNFeCUGKwyXGYlLDGyYLDubZvf.jpg",
+    "https://image.tmdb.org/t/p/original/f2FPpZ1i4oFLWKIsnMYWdqBl5Hl.jpg",
+    "https://image.tmdb.org/t/p/original/li1w5oiyN4BTDFKOytZuBORospo.jpg",
+    "https://image.tmdb.org/t/p/original/r1mjuBCFdWhwYH11JuGC1Di0QlM.jpg",
+    "https://image.tmdb.org/t/p/original/rd269f2Yftxxam3EOJPYVwrvjIJ.jpg",
+    "https://image.tmdb.org/t/p/original/tvGTSdLjKJgFHTcF4x9HSxoTIgW.jpg",
+    "https://image.tmdb.org/t/p/original/uKYxtnc9LOf19yxobZzTeArWL2Q.jpg",
+    "https://image.tmdb.org/t/p/original/xvFwSLv9bMsXA2slpQhZA63YEA5.jpg"
+   ]
+  },
+  {
+   "posicao": 1,
+   "titulo_br": "Marcas da Maldição",
+   "titulo_original": "Incantation (咒)",
+   "ano": 2022,
+   "pais": "Taiwan",
+   "direcao": "Kevin Ko",
+   "duracao_min": 111,
+   "premissa": "Seis anos depois de quebrar um tabu religioso numa aldeia isolada, uma mãe tenta proteger a filha da maldição que caiu sobre elas.",
+   "detalhe_que_fisga": "É found footage e pede pra quem assiste memorizar um símbolo e repetir uma reza junto. Inspirado num caso real de 2005 em Kaohsiung.",
+   "fatos": [
+    {
+     "fato": "Inspirado num caso de 2005 no distrito de Gushan, Kaohsiung (família que acreditava estar possuída por divindades)",
+     "fonte": "https://en.wikipedia.org/wiki/Incantation_(film)"
+    },
+    {
+     "fato": "Insígnia e reza aparecem ao longo do filme para o espectador 'participar'",
+     "fonte": "https://en.wikipedia.org/wiki/Incantation_(film)"
+    },
+    {
+     "fato": "Filme de terror taiwanês de maior bilheteria da história",
+     "fonte": "https://en.wikipedia.org/wiki/Incantation_(film)"
+    },
+    {
+     "fato": "Sinopse Netflix BR: 'Seis anos atrás, Li Ronan quebrou um tabu religioso e foi amaldiçoada. Agora, ela precisa proteger a filha das consequências de seus atos.'",
+     "fonte": "https://www.netflix.com/br/title/81599888"
+    }
+   ],
+   "onde_assistir": {
+    "servico": "Netflix",
+    "tipo": "assinatura (inclui plano com anúncios)",
+    "justwatch": "https://www.justwatch.com/br/filme/incantation",
+    "pagina_servico": "https://www.netflix.com/br/title/81599888",
+    "confirmacao_dupla": true,
+    "incerto": false
+   },
+   "imagens_tmdb": "https://www.themoviedb.org/movie/864370/images/backdrops",
+   "poster": "https://image.tmdb.org/t/p/original/cWz28oGV3cSajWdziVQbqrYCmnX.jpg",
+   "stills_usadas": [
+    "https://image.tmdb.org/t/p/original/5j3YVzeo9gVGz36gJVl7PGekGPw.jpg",
+    "https://image.tmdb.org/t/p/original/6d1mHKcozT5AaZeI76ehJrBt0hr.jpg",
+    "https://image.tmdb.org/t/p/original/9ak0EWYGfbDtSGmr1WRYyIVM3pR.jpg",
+    "https://image.tmdb.org/t/p/original/bfjLEraeBQ9Er79QEJeHwQal6e9.jpg",
+    "https://image.tmdb.org/t/p/original/cEcz50ZFqSRgI0fqaNqVBYWCEm9.jpg"
+   ],
+   "stills_baixadas": [
+    "https://image.tmdb.org/t/p/original/11eJ9OWvXOmQoYYxFktJ0xvonU3.jpg",
+    "https://image.tmdb.org/t/p/original/5V8yjelCBbu2GMFL1WZwUuCcoJZ.jpg",
+    "https://image.tmdb.org/t/p/original/5j3YVzeo9gVGz36gJVl7PGekGPw.jpg",
+    "https://image.tmdb.org/t/p/original/6d1mHKcozT5AaZeI76ehJrBt0hr.jpg",
+    "https://image.tmdb.org/t/p/original/6f0yVY9NxTKD4FyqWhvUlG7KFiQ.jpg",
+    "https://image.tmdb.org/t/p/original/7x4J86NsOMb6o2IZ4fcW6sO4iV5.jpg",
+    "https://image.tmdb.org/t/p/original/9ak0EWYGfbDtSGmr1WRYyIVM3pR.jpg",
+    "https://image.tmdb.org/t/p/original/GN7X9oJ5zlwilTmaWLe2bGNMgn.jpg",
+    "https://image.tmdb.org/t/p/original/bfjLEraeBQ9Er79QEJeHwQal6e9.jpg",
+    "https://image.tmdb.org/t/p/original/cEcz50ZFqSRgI0fqaNqVBYWCEm9.jpg",
+    "https://image.tmdb.org/t/p/original/cHDFdIj6VZtZBqcvPWB7qW9p74g.jpg",
+    "https://image.tmdb.org/t/p/original/cWz28oGV3cSajWdziVQbqrYCmnX.jpg",
+    "https://image.tmdb.org/t/p/original/cg5xvUeMM5ApOHzR9M4e69L86xZ.jpg",
+    "https://image.tmdb.org/t/p/original/eCL3LXv1YQQd9ztWn9uIXpuSJy8.jpg",
+    "https://image.tmdb.org/t/p/original/eIUqEUsBYzD89cZXKpVsd5kEYct.jpg",
+    "https://image.tmdb.org/t/p/original/h3tpJXKsRcBVWuC2n6jIcogYOmZ.jpg",
+    "https://image.tmdb.org/t/p/original/hyYWUlmNxybkWr851RAT7cUfy7T.jpg",
+    "https://image.tmdb.org/t/p/original/kVuZXmbMZA9EZaEk3Ny5jSOOEwm.jpg",
+    "https://image.tmdb.org/t/p/original/kdCSEl5yLFh1y0REVehGLBKoXaO.jpg",
+    "https://image.tmdb.org/t/p/original/niuAd6x0yEHOs7eLjTQ9s5h15zs.jpg",
+    "https://image.tmdb.org/t/p/original/o8JpNNhs0p7lTrRrjLO53lJYxII.jpg",
+    "https://image.tmdb.org/t/p/original/oZowHE5AX9Vd47hv0SLFMg8ElO3.jpg",
+    "https://image.tmdb.org/t/p/original/oaQ47FSVLcj13YGm0zCjYON57dd.jpg",
+    "https://image.tmdb.org/t/p/original/qudtaoF0pPVRWhVv64V8j4regF8.jpg",
+    "https://image.tmdb.org/t/p/original/s5IHI2U3Qo7497SNc2HxAiMLLzA.jpg",
+    "https://image.tmdb.org/t/p/original/sJF3YBWcp4AkM6GZhl2G7Z7buvD.jpg",
+    "https://image.tmdb.org/t/p/original/vqEX1uF3Spl12rOACQ3gJ6j4MSR.jpg",
+    "https://image.tmdb.org/t/p/original/yFKGsrJCw3e8kumbfuVYvp4JREY.jpg"
+   ]
+  }
+ ],
+ "descartados": [
+  {
+   "titulo": "A Maldição da Bruxa (Hagazussa, Áustria/Alemanha 2017)",
+   "motivo": "JustWatch BR aponta Looke e Looke Amazon Channel, mas o site do Looke está fora da rede liberada nesta sessão, então não deu pra fazer a 2ª confirmação. Boa troca pra um próximo vídeo.",
+   "justwatch": "https://www.justwatch.com/br/filme/hagazussa"
+  },
+  {
+   "titulo": "A Médium (Rang Song, Tailândia 2021)",
+   "motivo": "JustWatch BR aponta Prime Video, mas a página do Prime Video respondeu fora do Brasil (preços em US$, 'indisponível'), então não deu pra confirmar.",
+   "justwatch": "https://www.justwatch.com/br/filme/the-medium"
+  },
+  {
+   "titulo": "Cordeiro (Dýrið, Islândia 2021)",
+   "motivo": "Tá no MUBI, mas é conhecido demais (A24)."
+  }
+ ],
+ "logos": {
+  "netflix": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+  "obs": "Recolorido para o vermelho da paleta (#F23B3B) sobre carvão/cinza, e para #EDEDED sobre vermelho."
+ },
+ "fontes_tipograficas": {
+  "Anton": "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf",
+  "Playfair Display Italic": "https://raw.githubusercontent.com/google/fonts/main/ofl/playfairdisplay/PlayfairDisplay-Italic%5Bwght%5D.ttf",
+  "Inter": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+  "licenca": "SIL Open Font License"
+ },
+ "audio": {
+  "narracao": "edge-tts, voz pt-BR-AntonioNeural (sem GEMINI_API_KEY nem ELEVENLABS_API_KEY no ambiente), frase a frase, 1.07x, silêncios >200ms cortados, exceto antes dos títulos",
+  "timestamps": "faster-whisper 'small', alinhado ao roteiro (src/words.json)",
+  "trilha_e_efeitos": "Sintetizados do zero em src/audio.py (drone, tambor grave, canto distante com formantes, whoosh, pop, vento, fogueira, sino, estática), então sem questão de direitos. Freesound e Pixabay estavam bloqueados na rede."
+ },
+ "trailers": "Não deu pra baixar os frames de trailer: YouTube está bloqueado na rede desta sessão. Usamos só stills oficiais do TMDB.",
+ "conferir_antes_de_postar": [
+  "Disponibilidade dos 3 títulos no app da Netflix BR (as páginas /br/ mostraram o título e preços em R$, mas o rodapé dizia 'Netflix Estados Unidos')",
+  "Ano do Errementari: 2017 (festival) ou 2018 (estreia comercial). No vídeo usamos 2017."
+ ]
+}

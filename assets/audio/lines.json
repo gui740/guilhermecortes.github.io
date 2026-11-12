@@ -1,0 +1,95 @@
+[
+ {
+  "id": "hook",
+  "text": "Três filmes de ritual que cê nunca viu, e o último amaldiçoa quem assiste.",
+  "rate": "+8%",
+  "pitch": "+0Hz"
+ },
+ {
+  "id": "t3",
+  "text": "Três:",
+  "rate": "+0%",
+  "pitch": "-2Hz",
+  "pause_before": true
+ },
+ {
+  "id": "n3",
+  "text": "Errementari.",
+  "rate": "-5%",
+  "pitch": "+0Hz"
+ },
+ {
+  "id": "p3",
+  "text": "Um ferreiro basco mantém o diabo preso.",
+  "rate": "+8%",
+  "pitch": "+0Hz"
+ },
+ {
+  "id": "d3",
+  "text": "Falado num dialeto que nem existe mais. Netflix.",
+  "rate": "+10%",
+  "pitch": "+2Hz"
+ },
+ {
+  "id": "l3",
+  "text": "Estranho? O dois é pior.",
+  "rate": "+4%",
+  "pitch": "-3Hz"
+ },
+ {
+  "id": "n2",
+  "text": "Apóstolo.",
+  "rate": "-5%",
+  "pitch": "+0Hz",
+  "pause_before": true
+ },
+ {
+  "id": "p2",
+  "text": "Um cara invade uma ilha pra resgatar a irmã de uma seita.",
+  "rate": "+10%",
+  "pitch": "+0Hz"
+ },
+ {
+  "id": "d2",
+  "text": "Do diretor de The Raid. Netflix.",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "share",
+  "text": "Manda pro amigo que vive querendo acampar no meio do nada.",
+  "rate": "+10%",
+  "pitch": "+2Hz"
+ },
+ {
+  "id": "t1",
+  "text": "E o um:",
+  "rate": "+0%",
+  "pitch": "-4Hz",
+  "pause_before": true
+ },
+ {
+  "id": "n1",
+  "text": "Marcas da Maldição, de Taiwan.",
+  "rate": "-3%",
+  "pitch": "-2Hz"
+ },
+ {
+  "id": "d1",
+  "text": "Baseado num caso real, e ele te pede pra repetir a reza. Netflix.",
+  "rate": "+8%",
+  "pitch": "-2Hz"
+ },
+ {
+  "id": "q",
+  "text": "Cê repetiria ou fugia?",
+  "rate": "+6%",
+  "pitch": "+3Hz"
+ },
+ {
+  "id": "cta",
+  "text": "Segue a Talking Horror.",
+  "rate": "+5%",
+  "pitch": "+0Hz"
+ }
+]
