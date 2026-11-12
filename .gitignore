@@ -3,3 +3,4 @@ out/_*
 out/_cs/
 assets/audio/lines/*.wav
 src/.dump.cjs
+src/__pycache__/

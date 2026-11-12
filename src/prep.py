@@ -36,6 +36,28 @@ def clean(m, thr=128, keep=1, close=5):
         if x > 0 and y > 0 and x + ww < w and y + hh < h and a < 0.02 * h * w: m[lab == i] = 255
     return cv2.GaussianBlur(m, (3, 3), 0)
 
+def clean_soft(m, keep=1, cut_bottom=None):
+    """máscara suave do BiRefNet -> alfa limpo: só os maiores componentes, sem buracos, borda anti-serrilhada."""
+    m = m.astype(np.float32)
+    hard = (m > 128).astype(np.uint8) * 255
+    hard = cv2.morphologyEx(hard, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    core = largest(hard, keep, 0.08)
+    inv = 255 - core; n, lab, st, _ = cv2.connectedComponentsWithStats((inv > 0).astype(np.uint8), 4)
+    h, w = core.shape
+    for i in range(1, n):
+        x, y, ww, hh, a = st[i]
+        if x > 0 and y > 0 and x + ww < w and y + hh < h and a < 0.03 * h * w: core[lab == i] = 255
+    zone = cv2.dilate(core, np.ones((15, 15), np.uint8)) > 0     # alfa suave só perto do núcleo
+    a = np.where(core > 0, 255, np.where(zone, m, 0))
+    a = np.where(a < 40, 0, a)
+    if cut_bottom: a[int(h * cut_bottom):] = 0
+    return cv2.GaussianBlur(a, (0, 0), 0.7).astype(np.uint8)
+
+def touches(m):
+    """quanto da máscara encosta em cada borda do quadro (fração da largura/altura)."""
+    b = m > 128; h, w = b.shape
+    return {'top': b[:3].any(0).mean(), 'left': b[:, :3].any(1).mean(), 'right': b[:, -3:].any(1).mean(), 'bottom': b[-3:].any(0).mean()}
+
 def halftone_tex(img, cell):
     """img BGR uint8 -> textura de revista: alto contraste, retícula 45°, granulado."""
     if COLOR:
@@ -72,13 +94,14 @@ def halftone_tex(img, cell):
 def paper(mask, border):
     """borda de papel recortado (levemente irregular) em volta da máscara."""
     if border <= 0: return mask, None
-    m = (mask > 100).astype(np.uint8) * 255
-    noise = cv2.GaussianBlur(rng.random(m.shape).astype(np.float32), (0, 0), 6)
-    noise = (noise - noise.min()) / (noise.max() - noise.min())
-    d = cv2.distanceTransform(255 - m, cv2.DIST_L2, 5)
-    edge = (d < border * (0.7 + 0.6 * noise)).astype(np.uint8) * 255
-    edge = cv2.GaussianBlur(edge, (3, 3), 0)
-    return edge, m
+    m = (mask > 127).astype(np.uint8) * 255
+    # contorno de tesoura: suaviza a silhueta (sem serrilhado) e dá borda de largura constante
+    sm = cv2.GaussianBlur(m.astype(np.float32), (0, 0), border * 0.8)
+    d = cv2.distanceTransform((255 - m), cv2.DIST_L2, 5)
+    edge = np.clip((border + 0.5 - d), 0, 1) * 255
+    edge = np.maximum(edge, (sm > 60) * 255.0)
+    edge = cv2.GaussianBlur(edge.astype(np.float32), (0, 0), 0.8)
+    return edge.astype(np.uint8), m
 
 def finish(img, mask, name, height, cell=None, border=7, pad=48, shadow=True, blur_variant=0, soften=0):
     """recorta pelo bbox, redimensiona para height, aplica textura e salva RGBA."""
@@ -146,40 +169,55 @@ def inpaint(img, hole, r=9):
 def m_rembg(key): return cv2.imread(f'{MASK}/{key}.png', cv2.IMREAD_GRAYSCALE)
 
 MAN = {}
-# ---------- figuras (rembg) ----------
-FIG = {  # nome: (still, máscara, altura final, keep, crop x-frac)
-    'e_smith': ('477033/2HnptuDU', 1250, 1, None),
-    'e_mask': ('477033/nSCEgpwC', 1150, 1, None),
-    'e_girl': ('477033/xhoHM4zE', 1050, 1, None),
-    'a_dan': ('424121/xvFwSLv9', 1150, 1, (0, 0.66)),
-    'a_hill': ('424121/4BJi7377', 1000, 1, (0.45, 1.0)),
-    'a_walkers': ('424121/4BJi7377', 420, 2, (0, 0.45)),
-    'a_hood': ('424121/7Y567LQG', 1050, 2, None),
-    'a_book': ('424121/58EDJlVN', 1150, 1, None),
-    'a_boat': ('424121/tvGTSdLj', 520, 1, None),
-    'i_face': ('864370/cEcz50ZF', 1150, 1, None),
-    'i_lantern': ('864370/5j3YVzeo', 1100, 1, None),
-    'i_hands': ('864370/6d1mHKco', 1050, 1, None),
-    'i_woman': ('864370/bfjLErae', 1100, 1, None),
-    'i_flash': ('864370/11eJ9OWv', 1000, 1, None),
-}
-MKEY = {'a_walkers': 'a_hill'}
-for name, (src, H, keep, crop) in FIG.items():
-    img = raw(src); m = m_rembg(MKEY.get(name, name))
-    if m.shape != img.shape[:2]: m = cv2.resize(m, (img.shape[1], img.shape[0]))
-    if name == 'i_hands': m[int(m.shape[0] * 0.80):] = 0
-    if crop:
-        w = img.shape[1]; z = np.zeros_like(m); a, b = int(crop[0] * w), int(crop[1] * w); z[:, a:b] = m[:, a:b]; m = z
-    m = clean(m, 110, keep)
-    finish(img, m, name, H, border=8)
+# ---------- figuras: máscaras BiRefNet (assets/masks_bf) ----------
+def m_bf(src):
+    d, p = src.split('/'); return cv2.imread(glob.glob(f'{ROOT}/assets/masks_bf/{d}_{p}*.png')[0], cv2.IMREAD_GRAYSCALE)
 
-# ---------- figuras por limiar ----------
-# Apóstolo: figura de braços abertos contra o fogo (silhueta) — o fogo vira chama chapada no React
-img = raw('424121/a3qsXYK0'); g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-from rembg import new_session, remove
-m = np.array(remove(Image.fromarray(img[..., ::-1]), session=new_session('isnet-general-use'), only_mask=True))
-fire = cv2.dilate((g > 120).astype(np.uint8), np.ones((1, 1), np.uint8))
-m = clean(m, 120, 1, 7); finish(img, m, 'a_robed', 1100, border=8)
+# silhuetas completas (nenhuma encosta no topo do quadro original = cabeça inteira)
+FIG = {  # nome: (still, altura final, componentes, recorte x (frac) ou None)
+    'e_smith': ('477033/2HnptuDU', 1250, 1, None),
+    'e_girl': ('477033/xhoHM4zE', 1050, 1, None),
+    'e_girl_up': ('477033/pymXjNBy', 1000, 1, None),
+    'a_dan': ('424121/xvFwSLv9', 1150, 1, None),
+    'a_book': ('424121/58EDJlVN', 1150, 1, None),
+    'a_hill': ('424121/4BJi7377', 1000, 1, (0.45, 1.0)),
+    'a_preacher': ('424121/dnU1fJ53', 700, 1, None),
+    'i_flash': ('864370/11eJ9OWv', 1050, 1, None),
+    'i_woman': ('864370/bfjLErae', 1100, 1, None),
+}
+for name, (src, H, keep, crop) in FIG.items():
+    img = raw(src); m = m_bf(src)
+    if m.shape != img.shape[:2]: m = cv2.resize(m, (img.shape[1], img.shape[0]))
+    if crop:
+        w = img.shape[1]; z = np.zeros_like(m); x0, x1 = int(crop[0] * w), int(crop[1] * w); z[:, x0:x1] = m[:, x0:x1]; m = z
+    m = clean_soft(m, keep)
+    t = touches(m)
+    print(f"  {name}: encosta topo={t['top']:.2f} esq={t['left']:.2f} dir={t['right']:.2f}")
+    finish(img, m, name, H, border=9)
+
+# caminhantes ao longe (Apóstolo): máscara antiga do isnet pega os dois; BiRefNet pegou só um pontinho
+img = raw('424121/4BJi7377'); m = m_rembg('a_hill')
+if m.shape != img.shape[:2]: m = cv2.resize(m, (img.shape[1], img.shape[0]))
+z = np.zeros_like(m); z[:, :int(0.45 * img.shape[1])] = m[:, :int(0.45 * img.shape[1])]
+finish(img, clean(z, 110, 2), 'a_walkers', 420, border=8)
+
+# figura de braços abertos diante do fogo: tira a corda fina que atravessa o quadro (abertura vertical)
+img = raw('424121/a3qsXYK0'); m = m_bf('424121/a3qsXYK0')
+hard = (m > 128).astype(np.uint8) * 255
+no_rope = cv2.morphologyEx(hard, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (1, 17)))
+no_rope = largest(no_rope, 1)
+m = np.where(cv2.dilate(no_rope, np.ones((9, 9), np.uint8)) > 0, m, 0).astype(np.uint8)
+finish(img, clean_soft(m, 1), 'a_robed', 1100, border=9)
+
+# recortes de revista (pedaço rasgado) para as imagens fortes cuja cabeça sai pelo topo do quadro original
+def clipping(src, name, box, H, rot_seed=0):
+    img = raw(src); h, w = img.shape[:2]
+    x0, y0, x1, y1 = [int(v) for v in (box[0] * w, box[1] * h, box[2] * w, box[3] * h)]
+    m = torn_rect((h, w), x0, y0, x1, y1, jag=10)
+    finish(img, m, name, H, border=12)
+clipping('864370/cEcz50ZF', 'i_face', (0.30, 0.0, 0.72, 0.95), 1050)    # rosto com escrituras
+clipping('477033/nSCEgpwC', 'e_mask', (0.14, 0.0, 0.62, 1.0), 1050)     # figura mascarada
+clipping('864370/poster', 'i_hands', (0.06, 0.04, 0.94, 0.70), 1000)    # mãos em mudra (arte do pôster, sem o título)
 
 # ---------- primeiro plano por limiar ----------
 # cerca de cruzes de madeira (Errementari) — escura contra a neblina

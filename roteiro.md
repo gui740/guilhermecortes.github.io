@@ -1,6 +1,6 @@
 # Roteiro: 3 folk horrors que cê nunca viu (@talking_horror)
 
-Reel vertical 1080x1920, 30fps, **32,35s** · narração 30,2s · **95 palavras**
+Reel vertical 1080x1920, 30fps, **31,05s** · narração 28,7s · **95 palavras** · voz: Gemini TTS (Sadachbia) · trilha: rock instrumental original
 
 ## Ganchos testados (escrevemos 5, ficamos com o A)
 
@@ -12,24 +12,24 @@ Reel vertical 1080x1920, 30fps, **32,35s** · narração 30,2s · **95 palavras*
 
 Por que o A: anuncia a contagem e o mais perturbador por último, e cria uma promessa que só se paga no nº 1 (o filme que "amaldiçoa quem assiste" é o que pede pra repetir a reza).
 
-## Narração final (com tempos reais do Whisper)
+## Narração final (Gemini TTS, tempos reais do Whisper)
 
 | tempo | parte | fala |
 |---|---|---|
 | 0,00 | gancho | Três filmes de ritual que cê nunca viu, e o último amaldiçoa quem assiste. |
-| 4,20 | nº 3 | Três: **Errementari.** |
-| 5,52 | premissa | Um ferreiro basco mantém o diabo preso. |
-| 7,62 | detalhe + onde | Falado num dialeto que nem existe mais. Netflix. |
-| 10,66 | ponte | Estranho? O dois é pior. |
-| 12,70 | nº 2 | **Apóstolo.** |
-| 13,36 | premissa | Um cara invade uma ilha pra resgatar a irmã de uma seita. |
-| 16,08 | detalhe + onde | Do diretor de The Raid. Netflix. |
-| 18,28 | envio | Manda pro amigo que vive querendo acampar no meio do nada. |
-| 21,20 | nº 1 | E o um: **Marcas da Maldição**, de Taiwan. |
-| 23,74 | detalhe + onde | Baseado num caso real, e ele te pede pra repetir a reza. Netflix. |
-| 27,70 | pergunta | Cê repetiria ou fugia? |
-| 29,24 | CTA | Segue a Talking Horror. |
-| 31,3–32,35 | loop | câmera recua e remonta o primeiro quadro → volta pro "Três filmes de ritual…" |
+| 4,54 | nº 3 | Três: Errementari. |
+| 5,90 | premissa | Um ferreiro basco mantém o diabo preso. |
+| 8,14 | detalhe + onde | Falado num dialeto que nem existe mais. Netflix. |
+| 10,60 | ponte | Estranho? O dois é pior. |
+| 12,58 | nº 2 | Apóstolo. |
+| 13,18 | premissa | Um cara invade uma ilha pra resgatar a irmã de uma seita. |
+| 15,94 | detalhe + onde | Do diretor de The Raid. Netflix. |
+| 17,74 | envio | Manda pro amigo que vive querendo acampar no meio do nada. |
+| 20,60 | nº 1 | E o um: Marcas da Maldição, de Taiwan. |
+| 22,98 | detalhe + onde | Baseado num caso real, e ele te pede pra repetir a reza. Netflix. |
+| 26,76 | pergunta | Cê repetiria ou fugia? |
+| 28,10 | CTA | Segue a Talking Horror. |
+| 30,00–31,05 | loop | câmera recua e remonta o primeiro quadro → volta pro "Três filmes de ritual…" |
 
 Pausas: só antes de cada título ("Três:", "Apóstolo", "E o um") ficou pausa maior que 200ms (≈350ms).
 

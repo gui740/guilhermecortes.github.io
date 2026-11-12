@@ -3,6 +3,8 @@
 import json, os, subprocess
 import numpy as np
 from scipy import signal
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from rock import rock
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = 48000
@@ -111,7 +113,13 @@ def build(L, voice_path, blocks, transitions, extra_whoosh, is_full):
     vref = rms_db(voice[np.abs(voice) > 0.02])  # nível da fala ativa
     # intensidade da trilha cresce até o nº 1
     inten = (lambda at: 0.7 + 0.3 * min(1, at / 27)) if is_full else (lambda at: 0.8)
-    mus = music(L, inten)
+    if is_full:
+        sh = next(b for b in blocks if b['scene'] == 'share')
+        nxt = [b for b in blocks if b['scene'] == 'i'][0]
+        marks = {'breakdown': (sh['from'], nxt['from']), 'big': nxt['from'], 'end': D['loop']}
+    else:
+        marks = {'end': L + 1}
+    mus = rock(L, marks)
     mus = norm_to(mus, vref, -18)               # trilha -18 dB em relação à voz
     # sidechain leve: abaixa 3 dB quando há voz
     ve = np.convolve(np.abs(voice), np.ones(2400) / 2400, 'same'); duck = 1 - 0.3 * np.clip(ve / (ve.max() * 0.25), 0, 1)
@@ -146,4 +154,4 @@ save(f'{ROOT}/assets/audio/mix_reel.wav', out)
 for k in 'ABC':
     v = f'{ROOT}/assets/audio/narracao.wav' if k == 'A' else f'{ROOT}/assets/audio/narracao_{k}.wav'
     hb = [dict(b, scene='hook', layers=['flames'] if i == 0 else []) for i, b in enumerate(D['hooks'][k])]
-    save(f'{ROOT}/assets/audio/mix_gancho_{k}.wav', build({'A': 4.1, 'B': 3.1, 'C': 3.4}[k], v, hb, [], [0.15], False))
+    save(f'{ROOT}/assets/audio/mix_gancho_{k}.wav', build({'A': 4.1, 'B': 3.95, 'C': 3.9}[k], v, hb, [], [0.15], False))

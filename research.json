@@ -234,13 +234,15 @@
   "licenca": "SIL Open Font License"
  },
  "audio": {
-  "narracao": "edge-tts, voz pt-BR-AntonioNeural (sem GEMINI_API_KEY nem ELEVENLABS_API_KEY no ambiente), frase a frase, 1.07x, silêncios >200ms cortados, exceto antes dos títulos",
+  "narracao": "Google AI Studio, gemini-3.8-flash-tts, voz Sadachbia, tomada única com direção de interpretação (criador de conteúdo de ~25 anos contando pra um amigo). 3 tomadas de 3 vozes (Puck, Fenrir, Sadachbia), escolhida a com 98,4% de fidelidade ao roteiro pelo Whisper. Acelerada 1,07x, silêncios >200ms cortados, pausa mantida antes de cada título. Ganchos B e C também no Gemini (mesma voz).",
   "timestamps": "faster-whisper 'small', alinhado ao roteiro (src/words.json)",
-  "trilha_e_efeitos": "Sintetizados do zero em src/audio.py (drone, tambor grave, canto distante com formantes, whoosh, pop, vento, fogueira, sino, estática), então sem questão de direitos. Freesound e Pixabay estavam bloqueados na rede."
+  "trilha": "Rock instrumental original composto por síntese em src/rock.py (guitarra Karplus-Strong em power chords com distorção e simulação de caixa, baixo, bateria sintetizada; 126 BPM, Mi menor com trítono). Sem direitos de terceiros. Lyria (música do Google) retornou cota zero no plano gratuito da chave; Freesound/Pixabay/Incompetech/OpenGameArt bloqueados na rede; Wikimedia limitou downloads (429).",
+  "efeitos": "Sintetizados em src/audio.py (whoosh, pop, vento, fogueira, sino, estática)."
  },
  "trailers": "Não deu pra baixar os frames de trailer: YouTube está bloqueado na rede desta sessão. Usamos só stills oficiais do TMDB.",
  "conferir_antes_de_postar": [
   "Disponibilidade dos 3 títulos no app da Netflix BR (as páginas /br/ mostraram o título e preços em R$, mas o rodapé dizia 'Netflix Estados Unidos')",
   "Ano do Errementari: 2017 (festival) ou 2018 (estreia comercial). No vídeo usamos 2017."
- ]
+ ],
+ "recortes": "Máscaras com BiRefNet (rembg 'birefnet-general'), alfa suave limpo e contorno de tesoura liso. Descartadas como silhueta as stills em que a cabeça sai pelo topo do quadro original; as três mais marcantes (rosto com escrituras, figura mascarada, mãos do pôster) viraram recorte de revista rasgado."
 }
