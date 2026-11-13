@@ -1,0 +1,56 @@
+TEODORA, A MOÇA DO CEMITÉRIO DA PIEDADE — narração (~40 s)
+Para o Google AI Studio (TTS). Voz sugerida: grave, calma, contadora de causo; fim das frases descendo.
+Marcações: [pausa curta] ≈ 0,3 s · [pausa] ≈ 0,6 s · [pausa longa] ≈ 1,5 s · palavras em MAIÚSCULAS = ênfase.
+Os tempos (em segundos) são os de src/timings.json; se o áudio sair diferente, edite só aquele arquivo.
+
+---------------------------------------------------------------
+TEXTO COM MARCAÇÕES (cole no AI Studio)
+---------------------------------------------------------------
+
+[00.0] Em Cuiabá, [pausa curta] tem uma moça que ainda sai pra dançar [pausa curta] todo CARNAVAL. [pausa]
+
+[04.2] Anos 40. [pausa curta] Baile no Clube Feminino, [pausa curta] centro da cidade. [pausa]
+
+[07.4] Um rapaz do Rio dançou a noite inteira com uma moça de vestido branco. [pausa curta]
+[10.6] O nome dela era [pausa curta] TEODORA. [pausa]
+
+[12.6] Começou a chover. [pausa curta]
+[14.6] Ele emprestou a CAPA [pausa curta] e chamou um táxi pra levar ela em casa. [pausa]
+
+[18.0] Ela pediu pra descer num lugar estranho: [pausa] o portão do Cemitério da PIEDADE. [pausa]
+
+[22.0] O portão [pausa curta] abriu sozinho. [pausa curta]
+[24.2] O taxista acelerou [pausa curta] e foi embora.
+
+[26.4] [pausa longa]   ← silêncio: a cor some, a marchinha arrasta e distorce
+
+[28.0] No dia seguinte, [pausa curta] o rapaz voltou [pausa curta] e pediu o livro de registros. [pausa]
+
+[31.2] Teodora [pausa curta] tinha morrido [pausa curta] havia CINCO ANOS. [pausa]
+
+[34.0] E em cima do túmulo dela... [pausa] estava a capa. [pausa curta] Dobrada. [pausa longa]
+
+[38.6] Se uma moça de branco te chamar pra dançar... [pausa] NÃO EMPRESTE A CAPA.
+
+[~44.0] fim
+
+---------------------------------------------------------------
+TEXTO LIMPO (sem marcações)
+---------------------------------------------------------------
+Em Cuiabá, tem uma moça que ainda sai pra dançar todo carnaval.
+Anos 40. Baile no Clube Feminino, centro da cidade.
+Um rapaz do Rio dançou a noite inteira com uma moça de vestido branco. O nome dela era Teodora.
+Começou a chover. Ele emprestou a capa e chamou um táxi pra levar ela em casa.
+Ela pediu pra descer num lugar estranho: o portão do Cemitério da Piedade.
+O portão abriu sozinho. O taxista acelerou e foi embora.
+No dia seguinte, o rapaz voltou e pediu o livro de registros.
+Teodora tinha morrido havia cinco anos.
+E em cima do túmulo dela... estava a capa, dobrada.
+Se uma moça de branco te chamar pra dançar... não empreste a capa.
+
+---------------------------------------------------------------
+PROMPT DE ESTILO SUGERIDO (AI Studio, campo "Style instructions")
+---------------------------------------------------------------
+Read in Brazilian Portuguese, in a low, intimate, slightly hoarse storyteller voice, like an old
+cuiabano telling a ghost story at night. Calm pace, small dramatic pauses, the last line almost
+whispered and then firm on "não empreste a capa".

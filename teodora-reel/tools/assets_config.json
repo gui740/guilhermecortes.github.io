@@ -1,0 +1,205 @@
+{
+ "_doc": "Cada item: key (nome usado no código), file (arquivo no Wikimedia Commons), crop [x0,y0,x1,y1] em frações da imagem, method: rembg | card | circle | engraving | texture, tone: bw | sepia | keep, outline (px de borda de papel), width (px do PNG final).",
+ "items": [
+  {
+   "key": "facade",
+   "file": "Fachada do Cemitério da Piedade - Cuiabá - 20240922102323.jpg",
+   "method": "card",
+   "tone": "bw",
+   "width": 1400
+  },
+  {
+   "key": "gate_close",
+   "file": "Fachada do Cemitério da Piedade Cuiabá Mato Grosso 2024-3829.jpg",
+   "method": "card",
+   "tone": "bw",
+   "width": 1200
+  },
+  {
+   "key": "cuiaba_old",
+   "file": "Praça da República com Catedral do Senhor Bom Jesus de Cuiabá (MT).tif",
+   "method": "card",
+   "tone": "sepia",
+   "width": 1280
+  },
+  {
+   "key": "cuiaba_rosario",
+   "file": "Igreja do Rosario (Cuiaba) - AGMT.jpg",
+   "method": "card",
+   "tone": "sepia",
+   "width": 1280
+  },
+  {
+   "key": "ballroom",
+   "file": "MardiGrasBall1930sWPA.jpeg",
+   "method": "card",
+   "tone": "bw",
+   "width": 941
+  },
+  {
+   "key": "couple1",
+   "file": "Louis Jordan, New York, N.Y., ca. July 1946 (William P. Gottlieb 04741).jpg",
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 900
+  },
+  {
+   "key": "couple2",
+   "file": "Couples at square dance, McIntosh County, Oklahoma LCCN2017877669.jpg",
+   "crop": [
+    0.36,
+    0.08,
+    0.8,
+    1.0
+   ],
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 900
+  },
+  {
+   "key": "rapaz",
+   "file": "Portrait of a man and a woman in formal attire (AM 80400-1).jpg",
+   "crop": [
+    0.0,
+    0.0,
+    0.56,
+    1.0
+   ],
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 800
+  },
+  {
+   "key": "rapaz_capa",
+   "file": "Man modeling trench coat, by Günther Krampf (Getty 104D8S).jpg",
+   "crop": [
+    0.17,
+    0.12,
+    0.83,
+    0.88
+   ],
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 900
+  },
+  {
+   "key": "rapaz_jornal",
+   "file": "Man in trench coat reading newspaper, by Günther Krampf (Getty 104D8M).jpg",
+   "crop": [
+    0.17,
+    0.12,
+    0.83,
+    0.88
+   ],
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 900
+  },
+  {
+   "key": "teodora_full",
+   "file": "Full length portrait of a bride (AM 79276-1).jpg",
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 900
+  },
+  {
+   "key": "teodora_face",
+   "file": "Portrait of bride (AM 79196-1).jpg",
+   "crop": [
+    0.12,
+    0.02,
+    0.92,
+    0.62
+   ],
+   "method": "card",
+   "tone": "bw",
+   "width": 1000
+  },
+  {
+   "key": "taxi",
+   "file": "1940s De Soto Custom Taxi (8115442721).jpg",
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 9,
+   "width": 1400
+  },
+  {
+   "key": "cat",
+   "file": "Théophile Alexandre Steinlen, Prochainement la très illustre Compagnie du Chat Noir (Poster for the Company of the Black Cat), 1896, NGA 166147.jpg",
+   "crop": [
+    0.07,
+    0.276,
+    0.55,
+    0.752
+   ],
+   "method": "dark",
+   "tone": "keep",
+   "outline": 7,
+   "width": 800
+  },
+  {
+   "key": "owl",
+   "file": "Amgueddfa Cymru - The Tawny Owl - 86684.jpeg",
+   "crop": [
+    0.12,
+    0.08,
+    0.9,
+    0.9
+   ],
+   "method": "rembg",
+   "tone": "sepia",
+   "outline": 8,
+   "width": 800
+  },
+  {
+   "key": "moon",
+   "file": "2014-08-10, full Moon near perigee.jpg",
+   "method": "circle",
+   "tone": "keep",
+   "width": 900
+  },
+  {
+   "key": "mask",
+   "file": "Black Venetian mask (4924949067).jpg",
+   "method": "rembg",
+   "tone": "keep",
+   "outline": 8,
+   "width": 900
+  },
+  {
+   "key": "angel",
+   "file": "Cemetery Angel 002 HDR.jpg",
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 0,
+   "width": 900
+  },
+  {
+   "key": "cross",
+   "file": "Cemetery cross of Saint-Julien-de-Malmont.jpg",
+   "crop": [
+    0.2,
+    0.15,
+    0.8,
+    0.98
+   ],
+   "method": "rembg",
+   "tone": "bw",
+   "outline": 0,
+   "width": 800
+  },
+  {
+   "key": "paper",
+   "file": "Free Stock Booklet Paper Texture Cards Invitations Menus Royal Memorabilia IM0223.jpg",
+   "method": "texture",
+   "tone": "paper",
+   "width": 1080
+  }
+ ]
+}

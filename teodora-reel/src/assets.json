@@ -1,0 +1,36 @@
+{
+ "facade": "assets/cut/facade.jpg",
+ "gate_close": "assets/cut/gate_close.jpg",
+ "cuiaba_old": "assets/cut/cuiaba_old.jpg",
+ "cuiaba_rosario": "assets/cut/cuiaba_rosario.jpg",
+ "ballroom": "assets/cut/ballroom.jpg",
+ "couple1": "assets/cut/couple1.png",
+ "couple2": "assets/cut/couple2.png",
+ "rapaz": "assets/cut/rapaz.png",
+ "rapaz_capa": "assets/cut/rapaz_capa.png",
+ "rapaz_jornal": "assets/cut/rapaz_jornal.png",
+ "teodora_full": "assets/cut/teodora_full.png",
+ "teodora_back": "assets/cut/teodora_back.png",
+ "teodora_face": "assets/cut/teodora_face.jpg",
+ "taxi": "assets/cut/taxi.png",
+ "cat": "assets/cut/cat.png",
+ "owl": "assets/cut/owl.png",
+ "moon": "assets/cut/moon.png",
+ "mask": "assets/cut/mask.png",
+ "angel": "assets/cut/angel.png",
+ "cross": "assets/cut/cross.png",
+ "paper": "assets/cut/paper.jpg",
+ "gate_bg": "assets/cut/gate_bg.jpg",
+ "gate_leaf": "assets/cut/gate_leaf.jpg",
+ "_gate": {
+  "w": 1140,
+  "h": 1290,
+  "door": [
+   290,
+   665,
+   725,
+   1290
+  ],
+  "leafW": 215
+ }
+}

@@ -1,0 +1,49 @@
+{
+  "_doc": "Todos os tempos em segundos. Edite 'start'/'end' de cada fala para sincronizar com a narração. As cenas seguem as falas (scene = id da cena em scenes.js). 'wordsAt' (opcional) = lista com o instante de cada palavra; sem ela, as palavras aparecem distribuídas entre start e start+revealDur. Palavra entre *asteriscos* = itálico dourado.",
+  "fps": 30,
+  "duration": 44.5,
+  "colorDrainStart": 26.4,
+  "colorDrainEnd": 28.0,
+  "tearDuration": 0.55,
+  "lines": [
+    { "id": "L1",  "scene": "gancho",    "start": 0.0,  "end": 4.2,  "text": "Em Cuiabá, tem uma moça que ainda sai pra dançar todo *carnaval*." },
+    { "id": "L2",  "scene": "clube",     "start": 4.2,  "end": 7.4,  "text": "Anos 40. Baile no *Clube Feminino*, centro da cidade." },
+    { "id": "L3a", "scene": "danca",     "start": 7.4,  "end": 10.6, "text": "Um rapaz do Rio dançou a *noite inteira* com uma moça de vestido branco." },
+    { "id": "L3b", "scene": "nome",      "start": 10.6, "end": 12.6, "text": "O nome dela era *Teodora*." },
+    { "id": "L4a", "scene": "chuva",     "start": 12.6, "end": 14.6, "text": "Começou a *chover*." },
+    { "id": "L4b", "scene": "taxi",      "start": 14.6, "end": 18.0, "text": "Ele emprestou a *capa* e chamou um táxi pra levar ela em casa." },
+    { "id": "L5",  "scene": "pedido",    "start": 18.0, "end": 22.0, "text": "Ela pediu pra descer num lugar estranho: o portão do Cemitério da *Piedade*." },
+    { "id": "L6a", "scene": "portao",    "start": 22.0, "end": 24.2, "text": "O portão abriu *sozinho*." },
+    { "id": "L6b", "scene": "fuga",      "start": 24.2, "end": 26.4, "text": "O taxista *acelerou* e foi embora." },
+    { "id": "P7",  "scene": "silencio",  "start": 26.4, "end": 28.0, "text": "" },
+    { "id": "L8",  "scene": "registros", "start": 28.0, "end": 31.2, "text": "No dia seguinte, o rapaz voltou e pediu o *livro de registros*." },
+    { "id": "L9",  "scene": "morta",     "start": 31.2, "end": 34.0, "text": "Teodora tinha morrido havia *cinco anos*." },
+    { "id": "L10", "scene": "tumulo",    "start": 34.0, "end": 38.6, "text": "E em cima do túmulo dela... estava a *capa*, dobrada." },
+    { "id": "L11", "scene": "prancha",   "start": 38.6, "end": 44.5, "text": "" }
+  ],
+  "prancha": {
+    "numero": "07",
+    "titulo": "LENDA Nº 07",
+    "subtitulo": "cemitério da piedade · cuiabá",
+    "fraseItalico": "Se uma moça de branco te chamar pra dançar...",
+    "fraseCaixaAlta": "NÃO EMPRESTE A CAPA.",
+    "fraseItalicoAt": 39.2,
+    "fraseCaixaAltaAt": 41.6
+  },
+  "audio": {
+    "_doc": "Marcas de efeitos sonoros (s). build_audio.py lê daqui.",
+    "musicStart": 0.0,
+    "musicWarpStart": 25.6,
+    "musicWarpEnd": 28.0,
+    "rainStart": 12.4,
+    "rainEnd": 26.4,
+    "engineStart": 15.2,
+    "engineAccelerate": 24.4,
+    "gateCreak": 22.1,
+    "droneStart": 21.0,
+    "thunder": 12.7,
+    "bookThud": 28.6,
+    "stingAt": 32.2,
+    "finalHit": 41.6
+  }
+}

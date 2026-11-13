@@ -1,0 +1,5 @@
+out/stems/
+out/*.mp4
+__pycache__/
+*.wav
+!out/audio_mix.wav
