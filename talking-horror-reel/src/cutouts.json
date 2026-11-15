@@ -1,0 +1,122 @@
+{
+ "th_fig": {
+  "w": 928,
+  "h": 1219,
+  "blur": false
+ },
+ "th_ghost": {
+  "w": 465,
+  "h": 916,
+  "blur": false
+ },
+ "th_house": {
+  "w": 751,
+  "h": 567,
+  "blur": false
+ },
+ "th_spirit": {
+  "w": 473,
+  "h": 814,
+  "blur": false
+ },
+ "th_leaf": {
+  "w": 1024,
+  "h": 714,
+  "blur": true
+ },
+ "th_bamboo": {
+  "w": 1024,
+  "h": 614,
+  "blur": true
+ },
+ "th_mount": {
+  "w": 1024,
+  "h": 460,
+  "blur": false
+ },
+ "th_lamp": {
+  "w": 268,
+  "h": 572,
+  "blur": false
+ },
+ "moon": {
+  "w": 534,
+  "h": 541,
+  "blur": false
+ },
+ "fm_fig": {
+  "w": 1110,
+  "h": 1194,
+  "blur": false
+ },
+ "fm_ghost": {
+  "w": 408,
+  "h": 896,
+  "blur": false
+ },
+ "fm_house": {
+  "w": 621,
+  "h": 494,
+  "blur": false
+ },
+ "fm_candles": {
+  "w": 480,
+  "h": 508,
+  "blur": true
+ },
+ "fm_palm": {
+  "w": 798,
+  "h": 341,
+  "blur": true
+ },
+ "moon2": {
+  "w": 670,
+  "h": 669,
+  "blur": false
+ },
+ "imp_fig": {
+  "w": 936,
+  "h": 923,
+  "blur": false
+ },
+ "imp_woman": {
+  "w": 491,
+  "h": 923,
+  "blur": false
+ },
+ "imp_house": {
+  "w": 1024,
+  "h": 628,
+  "blur": false
+ },
+ "imp_wayang": {
+  "w": 1024,
+  "h": 911,
+  "blur": false
+ },
+ "imp_shadow": {
+  "w": 607,
+  "h": 900,
+  "blur": true
+ },
+ "imp_gunungan": {
+  "w": 500,
+  "h": 893,
+  "blur": false
+ },
+ "imp_frond": {
+  "w": 923,
+  "h": 683,
+  "blur": true
+ },
+ "gong": {
+  "w": 771,
+  "h": 863,
+  "blur": false
+ },
+ "cloud": {
+  "w": 743,
+  "h": 347,
+  "blur": false
+ }
+}

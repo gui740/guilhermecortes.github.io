@@ -1,0 +1,7 @@
+node_modules/
+assets/raw/
+assets/audio/narr/
+out/_*
+out/reel_video.mp4
+out/preview_camera_raw.mp4
+*.log

@@ -1,0 +1,79 @@
+{
+  "consultado_em": "2026-11-15",
+  "observacoes_gerais": [
+    "A lista final (Quando a Morte Sussurra, Fortuna Maldita, Impetigore) foi definida pelo dono da página. Dois filmes são da Indonésia, então o gancho fala em 'três filmes, três maldições' e não em três países.",
+    "INCERTO: a confirmação dupla (JustWatch Brasil + página do próprio streaming) só é parcial. Esta sessão acessa a internet por um IP dos EUA: as páginas netflix.com/title/<id> abriram e trazem título e sinopse em pt-BR, mas mostram o catálogo dos EUA, não provam por si só a disponibilidade no Brasil. A fonte que afirma 'Brasil' é o JustWatch (country=BR). Vale abrir os dois títulos no app da Netflix antes de postar.",
+    "INCERTO: Impetigore NÃO está em assinatura no Brasil. No JustWatch BR aparece só para alugar/comprar na Apple TV; a página da Apple TV Brasil não pôde ser aberta daqui. O vídeo diz 'pra alugar na Apple TV'.",
+    "YouTube, Flickr direto, Unsplash, Pexels e Wikimedia (limite de requisições) ficaram bloqueados pela política de rede da sessão: não há frames de trailer; as fotos culturais vieram do Flickr via Openverse (licenças CC, ver assets/raw/ov/meta.json)."
+  ],
+  "filmes": [
+    {
+      "ordem": 1,
+      "titulo_brasil": "Quando a Morte Sussurra",
+      "titulo_original": "ธี่หยด (Tee Yod)",
+      "titulo_internacional": "Death Whisperer",
+      "ano": 2023,
+      "pais": "Tailândia",
+      "onde_se_passa": "Vila rural no distrito de Dan Makham Tia, província de Kanchanaburi, oeste da Tailândia, em 1972",
+      "premissa": "Numa aldeia remota, um espírito entra no corpo de uma jovem e o irmão mais velho lidera a família para tentar detê-lo.",
+      "lenda_ou_crenca": "Adaptação do romance 'Tee Yod', de Krittanon, publicado primeiro no fórum tailandês Pantip. O autor afirma que a história aconteceu com a família da mãe dele. É alegação do autor, sem verificação independente.",
+      "detalhe_que_fisga": "O sussurro 'tee yod' que se ouve à noite antes de a entidade agir; primeiro filme tailandês rodado inteiro para IMAX.",
+      "streaming_brasil": {"servico": "Netflix", "tipo": "assinatura", "status": "confirmado no JustWatch BR; página Netflix abre com título pt-BR (IP EUA) — INCERTO quanto à região"},
+      "fontes": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/tee-yod",
+        "streaming": "https://www.netflix.com/title/81757583",
+        "fatos": ["https://en.wikipedia.org/wiki/Death_Whisperer", "https://elcomercio.pe/mag/fama/que-ver-hoy-en-netflix-susurros-mortales-nnda-nnlt-noticia/", "https://mydramalist.com/756391-tee-yod?lang=pt-BR"],
+        "imagens": "https://www.themoviedb.org/movie/1134433/images/backdrops"
+      },
+      "incerto": ["'história real' é alegação do autor", "catálogo Netflix BR não verificável por IP dos EUA"]
+    },
+    {
+      "ordem": 2,
+      "titulo_brasil": "Fortuna Maldita",
+      "titulo_original": "Sebelum Iblis Menjemput",
+      "titulo_internacional": "May the Devil Take You",
+      "ano": 2018,
+      "pais": "Indonésia",
+      "onde_se_passa": "Antiga casa de campo (villa) abandonada da família, em área isolada da Indonésia. A região exata não é citada nas fontes; o pino no mapa (oeste de Java) é ilustrativo.",
+      "premissa": "Tentando entender a doença misteriosa do pai, uma jovem volta à velha casa dele e descobre uma verdade terrível sobre o passado.",
+      "lenda_ou_crenca": "Pesugihan: crença javanesa de obter riqueza por pacto com entidades sobrenaturais, que cobram um 'tumbal' (sacrifício). No filme, o pai enriqueceu por um pacto de magia negra.",
+      "detalhe_que_fisga": "Escrito e dirigido por Timo Tjahjanto; lançado internacionalmente pela Netflix em 2018; a crítica compara com Evil Dead.",
+      "streaming_brasil": {"servico": "Netflix", "tipo": "assinatura", "status": "confirmado no JustWatch BR; página Netflix abre com título 'Fortuna Maldita' (IP EUA) — INCERTO quanto à região"},
+      "fontes": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/may-the-devil-take-you",
+        "streaming": "https://www.netflix.com/title/81030893",
+        "fatos": ["https://en.wikipedia.org/wiki/May_the_Devil_Take_You", "https://godsandmonsters.info/babi-ngepet/", "https://premium.historia.id/en-historia-premium-articles/finding-fortune-from-nyai-blorong", "https://ulumuna.or.id/index.php/ujis/article/download/352/302"],
+        "imagens": "https://www.themoviedb.org/movie/524738/images/backdrops"
+      },
+      "incerto": ["local exato da história não informado", "o filme não usa a palavra 'pesugihan' nas fontes consultadas: a ligação é pela natureza do pacto (riqueza em troca de sacrifício)", "catálogo Netflix BR não verificável por IP dos EUA"]
+    },
+    {
+      "ordem": 3,
+      "titulo_brasil": "Impetigore",
+      "titulo_original": "Perempuan Tanah Jahanam",
+      "ano": 2019,
+      "pais": "Indonésia",
+      "onde_se_passa": "Vila fictícia e remota de Harjosari, em Java; filmado em Banyuwangi, Lumajang e Ijen (Java Oriental)",
+      "premissa": "Maya e a amiga Dini viajam até a vila ancestral de Maya atrás de uma herança, sem saber que os moradores a procuram.",
+      "lenda_ou_crenca": "Wayang kulit, o teatro de sombras javanês, e seus mestres (dalang) são parte central da história.",
+      "detalhe_que_fisga": "Dirigido por Joko Anwar; escolhido pela Indonésia para o Oscar de Filme Internacional (93ª edição); recorde de 17 indicações no Citra Awards, 6 vitórias.",
+      "streaming_brasil": {"servico": "Apple TV", "tipo": "aluguel/compra (NÃO é assinatura)", "status": "JustWatch BR lista só aluguel e compra na Apple TV; página da Apple TV não verificada"},
+      "fontes": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/impetigore",
+        "streaming": "NÃO VERIFICADO (tv.apple.com/br)",
+        "fatos": ["https://en.wikipedia.org/wiki/Impetigore"],
+        "imagens": "https://www.themoviedb.org/movie/572468/images/backdrops"
+      },
+      "incerto": ["fora do critério de assinatura: mantido por decisão do dono da página", "página da Apple TV Brasil não verificada"]
+    }
+  ],
+  "descartados": [
+    {"titulo": "Marcas da Maldição (Incantation, Taiwan)", "motivo": "já saiu na página"},
+    {"titulo": "Inang / The Womb (Indonésia)", "motivo": "trocado por Impetigore a pedido"},
+    {"titulo": "A Médium, Os Escravos de Satanás, Mimic (Prime Video)", "motivo": "página do Prime Video inacessível para confirmação dupla"}
+  ],
+  "mapa": "Natural Earth 1:50m Admin 0 Countries (domínio público) — https://github.com/nvkelso/natural-earth-vector",
+  "fontes_tipograficas": "Anton, Playfair Display, Inter, Noto Sans Thai (Google Fonts, OFL)",
+  "logos": "simple-icons (Netflix, Apple TV) — marcas dos respectivos donos",
+  "audio": "Narração: edge-tts pt-BR-AntonioNeural (+8%). Trilha e efeitos: sintetizados em scripts/audio.py (sem samples de terceiros)."
+}
