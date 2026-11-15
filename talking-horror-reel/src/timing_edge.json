@@ -1,0 +1,715 @@
+{
+ "duration": 35.83,
+ "segments": [
+  {
+   "id": "hook",
+   "text": "Três filmes, três maldições, e a última cê não assiste sozinho.",
+   "start": 0.0,
+   "end": 3.88
+  },
+  {
+   "id": "th1",
+   "text": "Primeira parada: Tailândia.",
+   "start": 4.16,
+   "end": 5.66
+  },
+  {
+   "id": "th2",
+   "text": "O autor jura que aconteceu na família dele: um sussurro de noite, e a irmã muda.",
+   "start": 5.9,
+   "end": 10.25
+  },
+  {
+   "id": "th3",
+   "text": "Quando a Morte Sussurra. Tá na Netflix.",
+   "start": 10.59,
+   "end": 12.96
+  },
+  {
+   "id": "send",
+   "text": "Manda pra quem acha que terror bom só vem de Hollywood.",
+   "start": 13.26,
+   "end": 15.92
+  },
+  {
+   "id": "fm1",
+   "text": "Agora a gente desce pra Indonésia.",
+   "start": 16.2,
+   "end": 17.86
+  },
+  {
+   "id": "fm2",
+   "text": "Existe o pesugihan: pacto de riqueza pago com sangue.",
+   "start": 18.1,
+   "end": 21.25
+  },
+  {
+   "id": "fm3",
+   "text": "Fortuna Maldita. Netflix também.",
+   "start": 21.59,
+   "end": 23.84
+  },
+  {
+   "id": "im1",
+   "text": "E sem sair da ilha:",
+   "start": 24.14,
+   "end": 25.37
+  },
+  {
+   "id": "im2",
+   "text": "Impetigore.",
+   "start": 25.69,
+   "end": 26.34
+  },
+  {
+   "id": "im3",
+   "text": "Uma herança, um teatro de sombras e uma vila que quer ela morta.",
+   "start": 26.56,
+   "end": 29.78
+  },
+  {
+   "id": "im4",
+   "text": "Pra alugar na Apple TV.",
+   "start": 30.02,
+   "end": 31.35
+  },
+  {
+   "id": "q",
+   "text": "Qual desses lugares cê não visitaria de jeito nenhum?",
+   "start": 31.67,
+   "end": 34.07
+  },
+  {
+   "id": "cta",
+   "text": "Segue a Talking Horror.",
+   "start": 34.29,
+   "end": 35.53
+  }
+ ],
+ "words": [
+  {
+   "w": "Três",
+   "s": 0.0,
+   "e": 0.28,
+   "seg": "hook"
+  },
+  {
+   "w": "filmes,",
+   "s": 0.28,
+   "e": 0.74,
+   "seg": "hook"
+  },
+  {
+   "w": "três",
+   "s": 0.88,
+   "e": 1.16,
+   "seg": "hook"
+  },
+  {
+   "w": "maldições,",
+   "s": 1.16,
+   "e": 1.68,
+   "seg": "hook"
+  },
+  {
+   "w": "e",
+   "s": 2.06,
+   "e": 2.12,
+   "seg": "hook"
+  },
+  {
+   "w": "a",
+   "s": 2.12,
+   "e": 2.22,
+   "seg": "hook"
+  },
+  {
+   "w": "última",
+   "s": 2.22,
+   "e": 2.46,
+   "seg": "hook"
+  },
+  {
+   "w": "cê",
+   "s": 2.46,
+   "e": 2.84,
+   "seg": "hook"
+  },
+  {
+   "w": "não",
+   "s": 2.84,
+   "e": 2.9,
+   "seg": "hook"
+  },
+  {
+   "w": "assiste",
+   "s": 2.9,
+   "e": 3.4,
+   "seg": "hook"
+  },
+  {
+   "w": "sozinho.",
+   "s": 3.4,
+   "e": 3.8,
+   "seg": "hook"
+  },
+  {
+   "w": "Primeira",
+   "s": 4.16,
+   "e": 4.5,
+   "seg": "th1"
+  },
+  {
+   "w": "parada:",
+   "s": 4.5,
+   "e": 4.92,
+   "seg": "th1"
+  },
+  {
+   "w": "Tailândia.",
+   "s": 5.1,
+   "e": 5.66,
+   "seg": "th1"
+  },
+  {
+   "w": "O",
+   "s": 5.9,
+   "e": 5.98,
+   "seg": "th2"
+  },
+  {
+   "w": "autor",
+   "s": 5.98,
+   "e": 6.22,
+   "seg": "th2"
+  },
+  {
+   "w": "jura",
+   "s": 6.22,
+   "e": 6.64,
+   "seg": "th2"
+  },
+  {
+   "w": "que",
+   "s": 6.64,
+   "e": 6.78,
+   "seg": "th2"
+  },
+  {
+   "w": "aconteceu",
+   "s": 6.78,
+   "e": 7.2,
+   "seg": "th2"
+  },
+  {
+   "w": "na",
+   "s": 7.2,
+   "e": 7.34,
+   "seg": "th2"
+  },
+  {
+   "w": "família",
+   "s": 7.34,
+   "e": 7.7,
+   "seg": "th2"
+  },
+  {
+   "w": "dele:",
+   "s": 7.7,
+   "e": 8.0,
+   "seg": "th2"
+  },
+  {
+   "w": "um",
+   "s": 8.24,
+   "e": 8.36,
+   "seg": "th2"
+  },
+  {
+   "w": "sussurro",
+   "s": 8.36,
+   "e": 8.86,
+   "seg": "th2"
+  },
+  {
+   "w": "de",
+   "s": 8.86,
+   "e": 8.92,
+   "seg": "th2"
+  },
+  {
+   "w": "noite,",
+   "s": 8.92,
+   "e": 9.2,
+   "seg": "th2"
+  },
+  {
+   "w": "e",
+   "s": 9.5,
+   "e": 9.58,
+   "seg": "th2"
+  },
+  {
+   "w": "a",
+   "s": 9.58,
+   "e": 9.66,
+   "seg": "th2"
+  },
+  {
+   "w": "irmã",
+   "s": 9.66,
+   "e": 9.92,
+   "seg": "th2"
+  },
+  {
+   "w": "muda.",
+   "s": 9.92,
+   "e": 10.22,
+   "seg": "th2"
+  },
+  {
+   "w": "Quando",
+   "s": 10.59,
+   "e": 10.75,
+   "seg": "th3"
+  },
+  {
+   "w": "a",
+   "s": 10.75,
+   "e": 10.91,
+   "seg": "th3"
+  },
+  {
+   "w": "Morte",
+   "s": 10.91,
+   "e": 11.15,
+   "seg": "th3"
+  },
+  {
+   "w": "Sussurra.",
+   "s": 11.15,
+   "e": 11.77,
+   "seg": "th3"
+  },
+  {
+   "w": "Tá",
+   "s": 11.91,
+   "e": 12.05,
+   "seg": "th3"
+  },
+  {
+   "w": "na",
+   "s": 12.05,
+   "e": 12.17,
+   "seg": "th3"
+  },
+  {
+   "w": "Netflix.",
+   "s": 12.17,
+   "e": 12.57,
+   "seg": "th3"
+  },
+  {
+   "w": "Manda",
+   "s": 13.26,
+   "e": 13.52,
+   "seg": "send"
+  },
+  {
+   "w": "pra",
+   "s": 13.52,
+   "e": 13.7,
+   "seg": "send"
+  },
+  {
+   "w": "quem",
+   "s": 13.7,
+   "e": 13.9,
+   "seg": "send"
+  },
+  {
+   "w": "acha",
+   "s": 13.9,
+   "e": 14.16,
+   "seg": "send"
+  },
+  {
+   "w": "que",
+   "s": 14.16,
+   "e": 14.36,
+   "seg": "send"
+  },
+  {
+   "w": "terror",
+   "s": 14.36,
+   "e": 14.64,
+   "seg": "send"
+  },
+  {
+   "w": "bom",
+   "s": 14.64,
+   "e": 14.96,
+   "seg": "send"
+  },
+  {
+   "w": "só",
+   "s": 14.96,
+   "e": 15.22,
+   "seg": "send"
+  },
+  {
+   "w": "vem",
+   "s": 15.22,
+   "e": 15.42,
+   "seg": "send"
+  },
+  {
+   "w": "de",
+   "s": 15.42,
+   "e": 15.56,
+   "seg": "send"
+  },
+  {
+   "w": "Hollywood.",
+   "s": 15.56,
+   "e": 15.8,
+   "seg": "send"
+  },
+  {
+   "w": "Agora",
+   "s": 16.2,
+   "e": 16.52,
+   "seg": "fm1"
+  },
+  {
+   "w": "a",
+   "s": 16.52,
+   "e": 16.68,
+   "seg": "fm1"
+  },
+  {
+   "w": "gente",
+   "s": 16.68,
+   "e": 16.82,
+   "seg": "fm1"
+  },
+  {
+   "w": "desce",
+   "s": 16.82,
+   "e": 17.2,
+   "seg": "fm1"
+  },
+  {
+   "w": "pra",
+   "s": 17.2,
+   "e": 17.32,
+   "seg": "fm1"
+  },
+  {
+   "w": "Indonésia.",
+   "s": 17.32,
+   "e": 17.86,
+   "seg": "fm1"
+  },
+  {
+   "w": "Existe",
+   "s": 18.1,
+   "e": 18.5,
+   "seg": "fm2"
+  },
+  {
+   "w": "o",
+   "s": 18.5,
+   "e": 18.56,
+   "seg": "fm2"
+  },
+  {
+   "w": "pesugihan:",
+   "s": 18.56,
+   "e": 19.04,
+   "seg": "fm2"
+  },
+  {
+   "w": "pacto",
+   "s": 19.26,
+   "e": 19.64,
+   "seg": "fm2"
+  },
+  {
+   "w": "de",
+   "s": 19.64,
+   "e": 19.72,
+   "seg": "fm2"
+  },
+  {
+   "w": "riqueza",
+   "s": 19.72,
+   "e": 20.18,
+   "seg": "fm2"
+  },
+  {
+   "w": "pago",
+   "s": 20.18,
+   "e": 20.66,
+   "seg": "fm2"
+  },
+  {
+   "w": "com",
+   "s": 20.66,
+   "e": 20.82,
+   "seg": "fm2"
+  },
+  {
+   "w": "sangue.",
+   "s": 20.82,
+   "e": 21.24,
+   "seg": "fm2"
+  },
+  {
+   "w": "Fortuna",
+   "s": 21.59,
+   "e": 22.05,
+   "seg": "fm3"
+  },
+  {
+   "w": "Maldita.",
+   "s": 22.05,
+   "e": 22.51,
+   "seg": "fm3"
+  },
+  {
+   "w": "Netflix",
+   "s": 22.69,
+   "e": 23.11,
+   "seg": "fm3"
+  },
+  {
+   "w": "também.",
+   "s": 23.11,
+   "e": 23.83,
+   "seg": "fm3"
+  },
+  {
+   "w": "E",
+   "s": 24.14,
+   "e": 24.24,
+   "seg": "im1"
+  },
+  {
+   "w": "sem",
+   "s": 24.24,
+   "e": 24.46,
+   "seg": "im1"
+  },
+  {
+   "w": "sair",
+   "s": 24.46,
+   "e": 24.84,
+   "seg": "im1"
+  },
+  {
+   "w": "da",
+   "s": 24.84,
+   "e": 25.04,
+   "seg": "im1"
+  },
+  {
+   "w": "ilha:",
+   "s": 25.04,
+   "e": 25.36,
+   "seg": "im1"
+  },
+  {
+   "w": "Impetigore.",
+   "s": 25.69,
+   "e": 26.29,
+   "seg": "im2"
+  },
+  {
+   "w": "Uma",
+   "s": 26.56,
+   "e": 26.7,
+   "seg": "im3"
+  },
+  {
+   "w": "herança,",
+   "s": 26.7,
+   "e": 27.1,
+   "seg": "im3"
+  },
+  {
+   "w": "um",
+   "s": 27.3,
+   "e": 27.36,
+   "seg": "im3"
+  },
+  {
+   "w": "teatro",
+   "s": 27.36,
+   "e": 27.78,
+   "seg": "im3"
+  },
+  {
+   "w": "de",
+   "s": 27.78,
+   "e": 27.9,
+   "seg": "im3"
+  },
+  {
+   "w": "sombras",
+   "s": 27.9,
+   "e": 28.36,
+   "seg": "im3"
+  },
+  {
+   "w": "e",
+   "s": 28.36,
+   "e": 28.48,
+   "seg": "im3"
+  },
+  {
+   "w": "uma",
+   "s": 28.48,
+   "e": 28.6,
+   "seg": "im3"
+  },
+  {
+   "w": "vila",
+   "s": 28.6,
+   "e": 28.92,
+   "seg": "im3"
+  },
+  {
+   "w": "que",
+   "s": 28.92,
+   "e": 29.04,
+   "seg": "im3"
+  },
+  {
+   "w": "quer",
+   "s": 29.04,
+   "e": 29.22,
+   "seg": "im3"
+  },
+  {
+   "w": "ela",
+   "s": 29.22,
+   "e": 29.38,
+   "seg": "im3"
+  },
+  {
+   "w": "morta.",
+   "s": 29.38,
+   "e": 29.78,
+   "seg": "im3"
+  },
+  {
+   "w": "Pra",
+   "s": 30.02,
+   "e": 30.14,
+   "seg": "im4"
+  },
+  {
+   "w": "alugar",
+   "s": 30.14,
+   "e": 30.44,
+   "seg": "im4"
+  },
+  {
+   "w": "na",
+   "s": 30.44,
+   "e": 30.68,
+   "seg": "im4"
+  },
+  {
+   "w": "Apple",
+   "s": 30.68,
+   "e": 30.96,
+   "seg": "im4"
+  },
+  {
+   "w": "TV.",
+   "s": 30.96,
+   "e": 31.22,
+   "seg": "im4"
+  },
+  {
+   "w": "Qual",
+   "s": 31.67,
+   "e": 31.79,
+   "seg": "q"
+  },
+  {
+   "w": "desses",
+   "s": 31.79,
+   "e": 32.01,
+   "seg": "q"
+  },
+  {
+   "w": "lugares",
+   "s": 32.01,
+   "e": 32.43,
+   "seg": "q"
+  },
+  {
+   "w": "cê",
+   "s": 32.43,
+   "e": 32.69,
+   "seg": "q"
+  },
+  {
+   "w": "não",
+   "s": 32.69,
+   "e": 32.75,
+   "seg": "q"
+  },
+  {
+   "w": "visitaria",
+   "s": 32.75,
+   "e": 33.31,
+   "seg": "q"
+  },
+  {
+   "w": "de",
+   "s": 33.31,
+   "e": 33.45,
+   "seg": "q"
+  },
+  {
+   "w": "jeito",
+   "s": 33.45,
+   "e": 33.69,
+   "seg": "q"
+  },
+  {
+   "w": "nenhum?",
+   "s": 33.69,
+   "e": 33.95,
+   "seg": "q"
+  },
+  {
+   "w": "Segue",
+   "s": 34.29,
+   "e": 34.61,
+   "seg": "cta"
+  },
+  {
+   "w": "a",
+   "s": 34.61,
+   "e": 34.71,
+   "seg": "cta"
+  },
+  {
+   "w": "Talking",
+   "s": 34.71,
+   "e": 35.01,
+   "seg": "cta"
+  },
+  {
+   "w": "Horror.",
+   "s": 35.01,
+   "e": 35.35,
+   "seg": "cta"
+  }
+ ]
+}

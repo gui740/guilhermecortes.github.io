@@ -1,6 +1,6 @@
 # Roteiro — Reel "Três filmes, três maldições" (@talking_horror)
 
-Duração: 37,0 s · 104 palavras · narração pt-BR (edge-tts AntonioNeural, +8%) · loop: a última frase emenda na primeira.
+Duração: 37,0 s · 104 palavras · narração pt-BR pelo Google AI Studio (Gemini TTS, voz Puck, tom animado) · loop: a última frase emenda na primeira.
 
 ## Ganchos escritos (5) — escolhido: nº 1
 1. **Três filmes, três maldições, e a última cê não assiste sozinho.** ← no reel (gancho A)
@@ -27,7 +27,7 @@ Duração: 37,0 s · 104 palavras · narração pt-BR (edge-tts AntonioNeural, +
 | 31,8 | Pergunta | Qual desses lugares cê não visitaria de jeito nenhum? | Sobe até ver as três paradas de cima |
 | 34,4 | CTA | Segue a Talking Horror. | Mergulha de volta no gongo (loop) |
 
-## Pronúncia usada no TTS
+## Pronúncia pedida ao TTS
 pesugihan → "pessuguírran" · Hollywood → "Róliud" · Impetigore → "Impetigór" · Apple TV → "Épol tivi" · Talking Horror → "Tóquin Rórror"
 
 ## Notas

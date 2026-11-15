@@ -1,4 +1,4 @@
-"""Mixagem: narração em primeiro plano + trilha de tensão (drone grave + timbres de gamelão/sino sintetizados, -18 dB)
+"""Mixagem: narração em primeiro plano + trilha de rock sintetizada (guitarra distorcida, baixo, bateria; ~-17 dB) com gongo nas pontas
 + efeitos sincronizados com a câmera (whoosh segue a velocidade, papel nos pop-ups, carimbo, sino por parada).
 Tudo sintetizado aqui (numpy) => 100% livre de direitos."""
 import json, os, sys
@@ -40,34 +40,105 @@ def reverb(x, wet=0.3, seed=1):
     ir = r.normal(0, 1, n) * np.exp(-np.arange(n) / (0.55 * SR)); ir = signal.lfilter(*signal.butter(2, 3500 / (SR / 2)), ir); ir /= np.sqrt((ir ** 2).sum())
     return x + wet * signal.fftconvolve(x, ir)[:len(x)]
 
-# ---------------- trilha ----------------
-music = np.zeros(N)
-# drone grave (ré) com batimento lento e respiração
-for f, a in ((36.7, 0.9), (55.0, 0.7), (73.4, 0.5), (110.3, 0.22), (146.9, 0.1)):
-    music += a * np.sin(2 * np.pi * f * t + 2.5 * np.sin(2 * np.pi * 0.07 * t + f)) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.11 * t + f * 0.1))
-air = signal.lfilter(*signal.butter(2, [180 / (SR / 2), 520 / (SR / 2)], 'band'), rng.normal(0, 1, N))
-music += 0.5 * air * (0.6 + 0.4 * np.sin(2 * np.pi * 0.05 * t))
-music *= 0.5
-# escala pélog (aprox.) sobre ré: figura esparsa de metalofone, mais densa nas paradas indonésias
-PELOG = [146.8, 158.5, 174.0, 207.0, 220.5, 235.0, 277.0]
-notes = []
-pat = [0, 3, 4, 2, 6, 4, 3, 1]
-tm = 1.2; i = 0
-while tm < DUR - 1.5:
-    dense = 17.5 < tm < 31.5
-    notes.append((tm, PELOG[pat[i % len(pat)]] * (2 if (i % 5 == 4) else 1), 0.5 if dense else 0.32))
-    tm += (0.62 if dense else 1.24) * (1 + 0.04 * np.sin(i)); i += 1
-mel = np.zeros(N)
-for at, f, g in notes: place(mel, metal(f, 2.6, GENDER, 0.9), at, g)
-# sininhos de templo (parada da Tailândia) e gongos de frase
-for at in (5.7, 7.9, 10.2, 12.3): place(mel, metal(1244.5 * (1 if at < 9 else 0.89), 2.5, BELL, 0.9, 0.6), at, 0.16)
-music += reverb(mel, 0.45, 2) * 0.55
+# ---------------- trilha: rock (guitarra distorcida + baixo + bateria), com gongo nas pontas p/ o loop ----------------
+BPM = 150.0; E8 = 60 / BPM / 2            # colcheia = 0,2 s ; compasso = 1,6 s
+D2, Eb2, F2, G2, Ab2 = 73.42, 77.78, 87.31, 98.0, 103.83
+
+def ks(f, dur, damp=0.996, bright=0.5, seed=0):
+    """corda dedilhada (Karplus-Strong)"""
+    r = np.random.default_rng(seed); n = int(dur * SR); L = int(SR / f)
+    buf = r.uniform(-1, 1, L); buf = signal.lfilter([1 - bright, bright], [1], buf)
+    y = np.zeros(n); y[:L] = buf
+    for i in range(L, n): y[i] = damp * 0.5 * (y[i - L] + y[i - L + 1])
+    return y
+
+def amp(x, gain=9.0, lp=4200):
+    x = signal.lfilter(*signal.butter(2, 110 / (SR / 2), 'high'), x)
+    y = np.tanh(gain * x) + 0.3 * np.tanh(gain * 2.5 * x)
+    y = signal.lfilter(*signal.butter(2, lp / (SR / 2)), y)
+    return signal.lfilter(*signal.butter(1, 1700 / (SR / 2), 'high'), y) * 0.35 + y * 0.8      # presença
+
+_chord = {}
+def chord(f, dur, mute=False):
+    key = (round(f, 1), round(dur, 2), mute)
+    if key not in _chord:
+        d = 0.985 if mute else 0.9975
+        x = ks(f, dur, d, 0.3 if mute else 0.6, 1) + ks(f * 1.4983, dur, d, 0.5, 2) + 0.7 * ks(f * 2, dur, d, 0.6, 3) + 0.5 * ks(f * 1.004, dur, d, 0.5, 4)
+        if mute: x = signal.lfilter(*signal.butter(2, 900 / (SR / 2)), x) * np.exp(-np.arange(len(x)) / (0.07 * SR)) * 2.2
+        y = amp(x / np.abs(x).max(), 7 if mute else 11)
+        f_ = int(0.012 * SR); y[-f_:] *= np.linspace(1, 0, f_)
+        _chord[key] = y
+    return _chord[key]
+
+def kick():
+    n = int(0.28 * SR); tt = np.arange(n) / SR
+    return np.sin(2 * np.pi * (48 * tt + 70 / 28 * (1 - np.exp(-tt * 28)))) * np.exp(-tt / 0.09) + 0.35 * rng.normal(0, 1, n) * np.exp(-tt / 0.004)
+def snare():
+    n = int(0.3 * SR); tt = np.arange(n) / SR
+    nz = signal.lfilter(*signal.butter(2, [900 / (SR / 2), 7000 / (SR / 2)], 'band'), rng.normal(0, 1, n)) * np.exp(-tt / 0.07)
+    return nz * 1.3 + 0.6 * np.sin(2 * np.pi * 190 * tt) * np.exp(-tt / 0.05)
+def hat(open_=False):
+    n = int((0.25 if open_ else 0.05) * SR); tt = np.arange(n) / SR
+    return signal.lfilter(*signal.butter(2, 7000 / (SR / 2), 'high'), rng.normal(0, 1, n)) * np.exp(-tt / (0.09 if open_ else 0.015))
+def crash():
+    n = int(1.8 * SR); tt = np.arange(n) / SR
+    return signal.lfilter(*signal.butter(2, 3500 / (SR / 2), 'high'), rng.normal(0, 1, n)) * np.exp(-tt / 0.5)
+def tom(f):
+    n = int(0.3 * SR); tt = np.arange(n) / SR
+    return np.sin(2 * np.pi * (f * tt + f * 0.5 / 20 * (1 - np.exp(-tt * 20)))) * np.exp(-tt / 0.1)
+def bass(f, dur):
+    n = int(dur * SR); tt = np.arange(n) / SR
+    y = signal.sawtooth(2 * np.pi * f * tt) * 0.6 + np.sin(2 * np.pi * f * tt)
+    y = signal.lfilter(*signal.butter(2, 420 / (SR / 2)), y) * np.minimum(1, tt / 0.005) * np.exp(-tt / 0.35)
+    return np.tanh(2 * y)
+
+stops = cam['stops']
+def section(tm):
+    """intensidade por trecho: gancho abafado -> voos com tambores -> paradas com banda cheia"""
+    if tm < 4.0: return 'hook'
+    for s in stops:
+        if s['ta'] - 0.2 <= tm < s['td']: return 'full'
+    return 'fly' if tm < DUR - 3.4 else 'end'
+
+RIFF_A = [D2, D2, D2, F2, D2, D2, Eb2, D2]
+RIFF_B = [D2, D2, D2, F2, D2, Ab2, G2, F2]
+gtr = np.zeros(N); bs = np.zeros(N); dr = np.zeros(N)
+nb = int(DUR / E8)
+for k in range(nb):
+    tm = 0.15 + k * E8; sec = section(tm); step = k % 8; bar = k // 8
+    root = (RIFF_B if bar % 4 == 3 else RIFF_A)[step]
+    if sec == 'hook':
+        place(gtr, chord(root, E8 * 0.95, True), tm, 0.75)
+        if step % 2 == 0: place(dr, kick(), tm, 0.7)
+        place(dr, hat(), tm, 0.16)
+    elif sec == 'full':
+        acc = step in (0, 3, 6)
+        place(gtr, chord(root, E8 * (1.9 if acc else 0.95), not acc), tm, 1.0 if acc else 0.7)
+        place(bs, bass(root / 2, E8 * 0.95), tm, 0.7)
+        if step in (0, 3, 5): place(dr, kick(), tm, 0.95)
+        if step in (2, 6): place(dr, snare(), tm, 0.8)
+        place(dr, hat(step == 7), tm, 0.2 if step % 2 == 0 else 0.13)
+    elif sec == 'fly':
+        if step in (0, 4): place(gtr, chord(root, E8 * 3.8), tm, 0.8)
+        place(bs, bass(root / 2, E8 * 0.95), tm, 0.6)
+        place(dr, tom([95, 95, 120, 95, 80, 80, 120, 150][step]), tm, 0.55)
+        if step in (0, 4): place(dr, kick(), tm, 0.9)
+        if step == 6: place(dr, snare(), tm, 0.6)
+    else:
+        if step == 0 and bar % 2 == 0: place(gtr, chord(D2, 3.0), tm, 0.9); place(dr, crash(), tm, 0.3)
+        if step in (0, 4): place(dr, kick(), tm, 0.7)
+        place(dr, hat(), tm, 0.12)
+for s in stops:                                              # viradas e pratos nas chegadas e nos títulos
+    for j, f in enumerate((150, 150, 120, 120, 95, 95, 80, 80)): place(dr, tom(f), s['ta'] - 0.8 + j * 0.1, 0.6)
+    place(dr, crash(), s['ta'], 0.42); place(dr, crash(), s['tt'], 0.36)
+    place(gtr, chord(D2, 1.4), s['tt'], 0.8)
+place(dr, crash(), 0.15, 0.3)
+band = reverb(gtr * 0.5, 0.12, 4) + bs * 0.42 + reverb(dr * 0.6, 0.1, 5)
 gongs = np.zeros(N)
-for at, f, g in ((0.0, 61.7, 1.0), (17.55, 55.0, 0.8), (25.6, 49.0, 0.9), (33.0, 73.4, 0.5)):
-    place(gongs, metal(f, 7.0, GONG, 3.2, 0.5), at, g)
-# o gongo final ressoa até o corte, para emendar com o gongo do frame 0 (loop)
+place(gongs, metal(61.7, 7.0, GONG, 3.2, 0.5), 0.0, 1.0)
 place(gongs, metal(61.7, 3.0, GONG, 3.2, 0.5)[::-1] * np.linspace(0, 1, int(3.0 * SR)) ** 2, DUR - 3.0, 0.55)
-music += reverb(gongs, 0.35, 3) * 0.9
+band *= np.interp(t, [0, 0.3, DUR - 1.2, DUR], [0.4, 1, 1, 0.25])
+music = band / np.abs(band).max() + reverb(gongs, 0.35, 3) * 0.5
 music /= np.abs(music).max()
 
 # ---------------- efeitos ----------------
@@ -124,8 +195,8 @@ place(voice, v, OFF)
 voice *= db(-3) / max(1e-6, np.abs(voice).max())
 vrms = np.sqrt((voice[np.abs(voice) > 0.02] ** 2).mean())
 mrms = np.sqrt((music ** 2).mean())
-music *= vrms * db(-18) / mrms * 1.0                 # trilha 18 dB abaixo da voz
-music_boost = 1 + 1.6 * (np.interp(t, [0, 0.1, 1.0, DUR - 2.2, DUR - 0.3, DUR], [1, 1, 0, 0, 1, 1]))  # abre/fecha no gongo
+music *= vrms * db(-17) / mrms * 1.0                 # trilha 18 dB abaixo da voz
+music_boost = 1 + 0.8 * (np.interp(t, [0, 0.1, 1.0, DUR - 2.2, DUR - 0.3, DUR], [1, 1, 0, 0, 1, 1]))  # abre/fecha no gongo
 mix = voice + music * music_boost + sfx * 0.22
 # estéreo leve: trilha/efeitos com pequena largura
 wide = signal.lfilter([0] * 480 + [1], [1], music * music_boost + sfx * 0.22)

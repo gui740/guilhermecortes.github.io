@@ -39,5 +39,5 @@ Pôsteres e stills via TMDB: https://www.themoviedb.org/movie/1134433 · https:/
 - Mapa: Natural Earth 1:50m Admin 0 (domínio público) — https://github.com/nvkelso/natural-earth-vector
 - Tipografia: Anton, Playfair Display, Inter, Noto Sans Thai (Google Fonts, OFL)
 - Logos: simple-icons (Netflix, Apple TV), marcas dos respectivos donos
-- Narração: edge-tts, voz pt-BR-AntonioNeural (sem GEMINI_API_KEY nem ELEVENLABS_API_KEY no ambiente)
-- Trilha e efeitos: sintetizados em scripts/audio.py (nenhum sample de terceiros; os bancos de áudio estavam bloqueados pela rede)
+- Narração: Google AI Studio, Gemini TTS (gemini-3.8-flash-tts, voz Puck), uma tomada única fatiada por frase; a chave fica só em variável de ambiente
+- Trilha (rock: guitarra distorcida, baixo e bateria) e efeitos: sintetizados em scripts/audio.py (nenhum sample de terceiros; os bancos de áudio estavam bloqueados pela rede)

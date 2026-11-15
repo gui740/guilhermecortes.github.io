@@ -75,5 +75,5 @@
   "mapa": "Natural Earth 1:50m Admin 0 Countries (domínio público) — https://github.com/nvkelso/natural-earth-vector",
   "fontes_tipograficas": "Anton, Playfair Display, Inter, Noto Sans Thai (Google Fonts, OFL)",
   "logos": "simple-icons (Netflix, Apple TV) — marcas dos respectivos donos",
-  "audio": "Narração: edge-tts pt-BR-AntonioNeural (+8%). Trilha e efeitos: sintetizados em scripts/audio.py (sem samples de terceiros)."
+  "audio": "Narração: Gemini TTS (gemini-3.8-flash-tts, voz Puck). Trilha de rock e efeitos: sintetizados em scripts/audio.py (sem samples de terceiros)."
 }

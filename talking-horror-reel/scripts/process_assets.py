@@ -24,32 +24,40 @@ CUTS = {
     'th_lamp':   ('ov/th_lamp_0.jpg', None, 'rembg', 900, {}),
     'moon':      ('ov/moon_0.jpg', None, 'bright', 800, {'thr': 28}),
     # --- Indonésia / Fortuna Maldita
-    'fm_fig':    ('fm/still_2.jpg', (0.52, 0.0, 1.0, 1.0), 'rembg', 1300, {}),
-    'fm_ghost':  ('fm/still_9.jpg', (0.14, 0.0, 0.52, 1.0), 'rembg', 1000, {}),
-    'fm_house':  ('ov/id_villa_6.jpg', None, 'rembg', 1024, {}),
-    'fm_candles': ('ov/id_candle_4.jpg', None, 'bright', 1024, {'thr': 40}),
-    'fm_palm':   ('ov/id_palm_6.jpg', (0, 0, 1, 0.5), 'dark', 1024, {'thr': 70}),
+    'fm_fig':    ('fm/still_2.jpg', (0.52, 0.0, 1.0, 1.0), 'rembg', 1300, {'model': 'isnet-general-use', 'fill': 0.2}),
+    'fm_ghost':  ('fm/still_9.jpg', (0.14, 0.0, 0.52, 1.0), 'rembg', 1000, {'fill': 0.2}),
+    'fm_house':  ('ov/id_villa_6.jpg', (0.0, 0.0, 0.66, 0.86), 'rembg', 1024, {'model': 'isnet-general-use', 'fill': 0.5, 'xmax': 0.8, 'ymax': 0.93}),
+    'fm_candles': ('ov/id_candle_4.jpg', (0.3, 0.2, 1.0, 1.0), 'rembg', 1024, {'model': 'isnet-general-use', 'fill': 0.5}),
+    'fm_palm':   ('ov/id_palm_6.jpg', (0, 0, 1, 0.5), 'dark', 1024, {'thr': 70, 'keep': 0.02}),
     'moon2':     ('ov/moon_3.jpg', None, 'bright', 800, {'thr': 28}),
     # --- Indonésia / Impetigore
-    'imp_fig':   ('imp/still_9.jpg', (0.12, 0.0, 1.0, 1.0), 'rembg', 1500, {}),
-    'imp_woman': ('imp/still_2.jpg', (0.42, 0.0, 0.95, 1.0), 'rembg', 1000, {}),
-    'imp_house': ('ov/id_house_1.jpg', (0, 0, 0.93, 0.86), 'notwhite', 1024, {'thr': 200}),
+    'imp_fig':   ('imp/still_9.jpg', (0.12, 0.0, 1.0, 1.0), 'rembg', 1500, {'model': 'isnet-general-use', 'fill': 0.3}),
+    'imp_woman': ('imp/still_2.jpg', (0.42, 0.0, 0.95, 1.0), 'rembg', 1000, {'fill': 0.3}),
+    'imp_house': ('ov/id_house_1.jpg', (0.03, 0.0, 0.92, 0.82), 'notwhite', 1024, {'thr': 205, 'fill': 1.0}),
     'imp_wayang': ('ov/id_wayang_7.jpg', (0.0, 0.0, 0.75, 1.0), 'dark', 1024, {'thr': 95}),
-    'imp_shadow': ('ov/id_wayang_2.jpg', (0.05, 0.0, 0.95, 1.0), 'dark', 900, {'thr': 70}),
-    'imp_gunungan': ('ov/id_gunungan_2.jpg', (0.5, 0.0, 1.0, 1.0), 'dark', 900, {'thr': 110}),
+    'imp_shadow': ('ov/id_wayang_2.jpg', (0.16, 0.03, 0.84, 0.97), 'rect', 900, {}),
+    'imp_gunungan': ('ov/id_gunungan_2.jpg', (0.5, 0.0, 1.0, 0.93), 'dark', 900, {'thr': 110, 'keep': 0.3, 'fill': 1.0}),
     'imp_frond': ('ov/id_palm_7.jpg', None, 'bright', 1024, {'thr': 60}),
     # --- globais
     'gong':      ('ov/id_gong_5.jpg', (0.0, 0.0, 1.0, 0.86), 'rembg', 1024, {}),
     'cloud':     ('ov/cloud_3.jpg', (0, 0.1, 1, 0.95), 'cloud', 1024, {}),
 }
-BLUR = {'th_leaf': 10, 'th_bamboo': 9, 'fm_palm': 10, 'fm_candles': 8, 'imp_frond': 10, 'imp_shadow': 6, 'th_lamp': 0}
+BLUR = {'th_leaf': 10, 'th_bamboo': 9, 'fm_palm': 10, 'fm_candles': 8, 'imp_frond': 10, 'th_lamp': 0}
 
-_sess = None
-def rembg_alpha(im):
-    global _sess
+_sess = {}
+def rembg_alpha(im, model='u2net'):
     from rembg import new_session, remove
-    if _sess is None: _sess = new_session('u2net')
-    return np.asarray(remove(im, session=_sess, only_mask=True)).astype(np.float32) / 255
+    if model not in _sess: _sess[model] = new_session(model)
+    return np.asarray(remove(im, session=_sess[model], only_mask=True)).astype(np.float32) / 255
+
+def fill_holes(alpha, max_frac=1.0):
+    a = (alpha > 0.5).astype(np.uint8)
+    inv = 1 - a; n, lab, st, _ = cv2.connectedComponentsWithStats(inv, connectivity=4)
+    h, w = a.shape; tot = a.sum()
+    for i in range(1, n):
+        x, y, bw, bh, area = st[i]
+        if x > 0 and y > 0 and x + bw < w and y + bh < h and area < max_frac * tot: a[lab == i] = 1
+    return a.astype(np.float32)
 
 def halftone(g, cell=5.0, ang=45):
     h, w = g.shape
@@ -110,19 +118,30 @@ for name, (src, crop, method, size, opt) in CUTS.items():
     sc = size / max(im.size)
     im = im.resize((round(im.width * sc), round(im.height * sc)), Image.LANCZOS)
     lum = np.asarray(ImageOps.grayscale(im)).astype(np.float32)
-    if method == 'rembg': alpha = keep_big(rembg_alpha(im), 0.05)
-    elif method == 'dark': alpha = (cv2.GaussianBlur(lum, (0, 0), 1) < opt['thr']).astype(np.float32)
+    if method == 'rembg':
+        alpha = keep_big(rembg_alpha(im, opt.get('model', 'u2net')), 0.08)
+        alpha = fill_holes(cv2.morphologyEx((alpha > 0.5).astype(np.uint8), cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9))).astype(np.float32), opt.get('fill', 0.05))
+    elif method == 'rect': alpha = np.ones_like(lum) / 1.0
+    elif method == 'dark':
+        alpha = (cv2.GaussianBlur(lum, (0, 0), 1) < opt['thr']).astype(np.uint8)
+        alpha = keep_big(cv2.morphologyEx(alpha, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8)).astype(np.float32), opt.get('keep', 0.01))
+        if opt.get('fill'): alpha = fill_holes(alpha, opt['fill'])
     elif method == 'bright': alpha = keep_big((cv2.GaussianBlur(lum, (0, 0), 1.5) > opt['thr']).astype(np.float32), 0.01)
     elif method == 'notwhite':
         a = (cv2.GaussianBlur(lum, (0, 0), 2) < opt['thr']).astype(np.uint8)
         # só o que está ligado à base (montanha), sem buracos
         a = cv2.morphologyEx(a, cv2.MORPH_CLOSE, np.ones((15, 15), np.uint8)); alpha = keep_big(a.astype(np.float32), 0.3)
+        if opt.get('fill'): alpha = fill_holes(alpha, opt['fill'])
     elif method == 'cloud':
         rgb = np.asarray(im).astype(np.float32)
         whiteness = rgb.min(axis=2) - 0.5 * (rgb[..., 2] - rgb[..., 0])
         alpha = keep_big((cv2.GaussianBlur(whiteness, (0, 0), 3) > 150).astype(np.float32), 0.15)
+    if opt.get('xmax') or opt.get('ymax'):
+        ys, xs = np.where(alpha > 0.5)
+        if opt.get('xmax'): alpha[:, int(xs.min() + (xs.max() - xs.min()) * opt['xmax']):] = 0
+        if opt.get('ymax'): alpha[int(ys.min() + (ys.max() - ys.min()) * opt['ymax']):, :] = 0
     g = treat_gray(im, alpha)
-    if method == 'dark': g = g * 0.35           # silhuetas ficam escuras, com retícula
+    if method == 'dark' and not opt.get('fill'): g = g * 0.35           # silhuetas ficam escuras, com retícula
     rgba = bbox_crop(sticker(g, alpha, border=max(4, size // 170)))
     Image.fromarray(rgba).save(os.path.join(OUT, name + '.png'))
     # sombra (alpha desfocado, baixa resolução)

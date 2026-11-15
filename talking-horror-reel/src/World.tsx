@@ -311,12 +311,12 @@ const HOOKS: Record<string, Line[]> = {
     {h: 3.2, words: [{k: 'hk9', at: wt('hook', 10)}]},
   ],
   B: [
-    {h: 3.4, words: [{k: 'hb1', at: 0.95}]}, {h: 3.4, words: [{k: 'hb2', at: 1.19}]},
-    {h: 2.1, gap: 0.1, words: [{k: 'hb3', at: 1.79}]}, {h: 3.4, words: [{k: 'hb4', at: 2.15}]},
+    {h: 3.4, words: [{k: 'hb1', at: 1.17}]}, {h: 3.4, words: [{k: 'hb2', at: 1.39}]},
+    {h: 2.1, gap: 0.1, words: [{k: 'hb3', at: 1.93}]}, {h: 3.4, words: [{k: 'hb4', at: 2.44}]},
   ],
   C: [
-    {h: 3.4, words: [{k: 'hc1', at: 0.15}, {k: 'hc2', at: 0.35}]}, {h: 3.4, words: [{k: 'hc3', at: 0.49}]},
-    {h: 2.1, gap: 0.1, words: [{k: 'hc4', at: 0.89}]}, {h: 3.4, words: [{k: 'hc5', at: 1.49}]},
+    {h: 3.4, words: [{k: 'hc1', at: 0.2}, {k: 'hc2', at: 0.5}]}, {h: 3.4, words: [{k: 'hc3', at: 0.68}]},
+    {h: 2.1, gap: 0.1, words: [{k: 'hc4', at: 1.1}]}, {h: 3.4, words: [{k: 'hc5', at: 1.66}]},
   ],
 };
 const SEND: Line[] = [

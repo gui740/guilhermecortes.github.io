@@ -55,17 +55,17 @@
   "blur": false
  },
  "fm_house": {
-  "w": 621,
-  "h": 494,
+  "w": 742,
+  "h": 684,
   "blur": false
  },
  "fm_candles": {
-  "w": 480,
-  "h": 508,
+  "w": 555,
+  "h": 627,
   "blur": true
  },
  "fm_palm": {
-  "w": 798,
+  "w": 797,
   "h": 341,
   "blur": true
  },
@@ -75,8 +75,8 @@
   "blur": false
  },
  "imp_fig": {
-  "w": 936,
-  "h": 923,
+  "w": 808,
+  "h": 956,
   "blur": false
  },
  "imp_woman": {
@@ -86,7 +86,7 @@
  },
  "imp_house": {
   "w": 1024,
-  "h": 628,
+  "h": 625,
   "blur": false
  },
  "imp_wayang": {
@@ -95,13 +95,13 @@
   "blur": false
  },
  "imp_shadow": {
-  "w": 607,
+  "w": 489,
   "h": 900,
-  "blur": true
+  "blur": false
  },
  "imp_gunungan": {
-  "w": 500,
-  "h": 893,
+  "w": 531,
+  "h": 894,
   "blur": false
  },
  "imp_frond": {
