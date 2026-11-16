@@ -28,7 +28,7 @@ print("quadros quase parados (diff < 0.6):", still or "nenhum")
 # cortes secos: maior salto entre amostras de 0,5s
 big = sorted(diffs, key=lambda x: -x[1])[:5]; print("maiores saltos entre amostras de 0,5s:", [(round(t, 1), round(m, 1)) for t, m in big])
 # loop: primeiro x último quadro
-f0, f1 = frame(0).astype(np.float32), frame(dur - 1 / 30 - 0.01).astype(np.float32)
+f0, f1 = frame(0).astype(np.float32), frame(dur - 0.12).astype(np.float32)
 print("loop (diferença 1º x último quadro):", round(float(np.abs(f0 - f1).mean()), 2))
 # ampliações 200%
 for k, (t, box) in enumerate([(12.8, (180, 900, 720, 1500)), (31.5, (60, 840, 600, 1440)), (45.5, (100, 880, 640, 1480))]):
