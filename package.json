@@ -18,5 +18,8 @@
     "react-dom": "^19.3.1",
     "remotion": "^4.0.544",
     "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "opentype.js": "^1.3.4"
   }
 }

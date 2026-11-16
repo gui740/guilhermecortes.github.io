@@ -19,7 +19,12 @@ export function wordTexture(text: string, font: string) {
   c.width = w; c.height = h;
   ctx.font = `${F.style} ${F.weight} ${F.px}px "${F.family}"`; ctx.fillStyle = '#fff'; ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
   ctx.save(); ctx.translate(w / 2, h / 2 + F.px * 0.04); ctx.scale(F.scaleX, 1); ctx.fillText(text, 0, 0); ctx.restore();
-  return {tex: tex(c), aspect: w / h, hPerPx: h / F.px};
+  // halo: mesmo texto com contorno grosso desfocado (pintado depois na cor do fundo para destacar das folhas)
+  const hc = document.createElement('canvas'); hc.width = w; hc.height = h; const hx = hc.getContext('2d')!;
+  hx.font = ctx.font; hx.textBaseline = 'middle'; hx.textAlign = 'center'; hx.lineJoin = 'round';
+  hx.filter = `blur(${Math.round(F.px * 0.07)}px)`; hx.strokeStyle = '#fff'; hx.fillStyle = '#fff'; hx.lineWidth = F.px * 0.22;
+  hx.save(); hx.translate(w / 2, h / 2 + F.px * 0.04); hx.scale(F.scaleX, 1); hx.strokeText(text, 0, 0); hx.fillText(text, 0, 0); hx.restore();
+  return {tex: tex(c), halo: tex(hc), aspect: w / h, hPerPx: h / F.px};
 }
 function rough(ctx: CanvasRenderingContext2D, w: number, h: number, seed: number) {
   // apaga pontinhos aleatórios: textura de carimbo

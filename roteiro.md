@@ -1,6 +1,6 @@
 # Roteiro — A história da maconha no mundo (≈59 s, loop)
 
-Narração: 168 palavras · voz pt-BR-AntonioNeural (edge-tts), +8% e acelerada 1,07x · tempos abaixo já no áudio final.
+Narração: 168 palavras · voz Gemini TTS (Zubenelgenubi), acelerada 1,2x · tempos abaixo já no áudio final.
 
 ## Ganchos testados (5) — escolhido: A
 
@@ -14,48 +14,48 @@ Narração: 168 palavras · voz pt-BR-AntonioNeural (edge-tts), +8% e acelerada 
 
 
 **Gancho**
-- `00.14–03.21s` O Rio proibiu maconha cem anos antes dos Estados Unidos.
-- `03.50–03.84s` Porra.
+- `00.07–03.85s` O Rio proibiu maconha cem anos antes dos Estados Unidos.
+- `04.03–04.41s` Porra.
 
 **Ásia ≈10.000 a.C.**
-- `03.95–06.90s` Volta doze mil anos: a planta é domesticada na Ásia.
+- `04.47–07.69s` Volta doze mil anos: a planta é domesticada na Ásia.
 
 **Índia ≈1000 a.C.**
-- `06.99–09.18s` Na Índia, vira bhang, bebida sagrada.
+- `07.74–09.98s` Na Índia, vira bhang, bebida sagrada.
 
 **Ásia Central ≈500–440 a.C.**
-- `09.27–11.87s` No Pamir, queimavam erva com THC em funeral.
-- `11.96–13.67s` Os citas? Sauna de fumaça.
-- `13.77–15.56s` Heródoto jura que uivavam de prazer.
+- `10.03–13.27s` No Pamir, queimavam erva com THC em funeral.
+- `13.32–15.27s` Os citas? Sauna de fumaça.
+- `15.32–17.60s` Heródoto jura que uivavam de prazer.
 
 **Cairo séc. XV**
-- `15.67–17.74s` No Cairo medieval, o haxixe bomba.
+- `17.65–20.28s` No Cairo medieval, o haxixe bomba.
 
 **Navegações séc. XVI**
-- `17.83–20.61s` Nas navegações, corda de cânhamo segura os navios.
+- `20.33–23.02s` Nas navegações, corda de cânhamo segura os navios.
 
 **Brasil 1830**
-- `20.72–23.36s` No Brasil, vira fumo de Angola, pito do pango.
-- `23.46–26.77s` E em 1830 o Rio proíbe: cadeia pra quem fumasse.
-- `26.86–28.13s` Adivinha quem era o alvo?
-- `28.41–29.41s` Os escravizados.
+- `23.07–25.94s` No Brasil, vira fumo de Angola, pito do pango.
+- `25.99–29.43s` E em 1830 o Rio proíbe: cadeia pra quem fumasse.
+- `29.48–31.46s` Adivinha quem era o alvo?
+- `31.66–32.66s` Os escravizados.
 
 **EUA 1936–37**
-- `29.54–34.66s` Nos Estados Unidos, Anslinger espalha pânico, Reefer Madness, e em 37 a lei trava tudo.
+- `32.71–38.73s` Nos Estados Unidos, Anslinger espalha pânico, Reefer Madness, e em 37 a lei trava tudo.
 
 **ONU 1961 · Israel 1964**
-- `34.76–37.57s` Em 61, a ONU manda proibir no planeta inteiro.
-- `37.66–40.11s` Em 64, Mechoulam isola o THC.
-- `40.21–41.89s` Proibiram antes de saber o que era.
-- `42.15–42.79s` Puta merda.
+- `38.78–41.71s` Em 61, a ONU manda proibir no planeta inteiro.
+- `41.76–44.43s` Em 64, Mechoulam isola o THC.
+- `44.48–46.33s` Proibiram antes de saber o que era.
+- `46.50–47.41s` Puta merda.
 
 **2013–2024**
-- `42.92–50.21s` Aí vira: Uruguai legaliza em 2013, Canadá em 2018, Alemanha em 2024, e o STF tira o porte do crime.
+- `47.46–55.30s` Aí vira: Uruguai legaliza em 2013, Canadá em 2018, Alemanha em 2024, e o STF tira o porte do crime.
 
 **2026 + chamada**
-- `50.30–53.71s` Em 2026, a Anvisa libera plantio de cânhamo pra remédio.
-- `53.84–56.14s` Cê sabia que o Rio proibiu antes dos gringos?
-- `56.21–57.22s` Comenta e segue aí.
+- `55.35–59.47s` Em 2026, a Anvisa libera plantio de cânhamo pra remédio.
+- `59.56–61.63s` Cê sabia que o Rio proibiu antes dos gringos?
+- `61.68–62.70s` Comenta e segue aí.
 
 Fecho em loop: a última frase ("Comenta e segue aí.") termina com a câmera mergulhando numa folha igual à da abertura, e o vídeo recomeça em "O Rio proibiu...".
 

@@ -46,4 +46,4 @@ async def main(out):
         else: raise SystemExit("TTS falhou: " + fid)
         res.append({"id": fid, "estacao": st, "texto": text, "pausa": pausa, "palavras": w})
     json.dump({"voz": VOICE, "rate": RATE, "pitch": PITCH, "frases": res}, open(f"{out}/frases.json", "w"), ensure_ascii=False, indent=1)
-asyncio.run(main(sys.argv[1]))
+if __name__ == "__main__": asyncio.run(main(sys.argv[1]))

@@ -187,9 +187,10 @@
   }
  ],
  "ferramentas": {
-  "narracao": "edge-tts pt-BR-AntonioNeural (sem chaves Gemini/ElevenLabs no ambiente)",
-  "timestamps": "WordBoundary do próprio sintetizador (Whisper indisponível: modelos em huggingface.co/openaipublic bloqueados pela rede)",
-  "trilha": "sintetizada no próprio projeto (scripts/historia/audio.py) — livre de direitos",
+  "narracao": "Gemini TTS (gemini-3.1-flash-tts-preview, voz Zubenelgenubi), gerada em blocos por estação — a cota gratuita é de 10 pedidos/dia por modelo e o roteiro inteiro num pedido só foi barrado pelo filtro de segurança. O 'Porra' do gancho veio do gemini-3.8-flash-tts (mesma voz), porque o bloco suavizou o palavrão. Cada bloco foi conferido por transcrição automática.",
+  "timestamps": "Tempos por palavra transferidos da referência edge-tts (que tem WordBoundary exato) para a voz Gemini por DTW de MFCC (scripts/historia/alinhar.py). Whisper indisponível: modelos em huggingface.co/openaipublic bloqueados pela rede.",
+  "aceleracao": "1,2x (acima dos 1,05–1,1x pedidos) para caber em 65s — a voz Gemini fala mais devagar e a cota não permitiu regerar um texto mais curto.",
+  "trilha": "Reggae roots instrumental sintetizado no projeto (scripts/historia/reggae.py: one-drop, skank Karplus–Strong, órgão bubble, baixo, eco dub). Lyria sem cota no plano gratuito; archive.org/Pixabay/Incompetech/Freesound bloqueados para download nesta rede.",
   "efeitos": "sintetizados (scripts/historia/audio.py)"
  },
  "imagens": {

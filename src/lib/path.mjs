@@ -1,7 +1,7 @@
 // Trajetória da câmera (plano-sequência) e utilidades de tempo. JS puro: usado pelo Remotion e pelo script de áudio.
-export const FPS = 30, FOV = 50, ASPECT = 9 / 16, D = 24, H0 = 6.6, H1 = 4.2, HM = (H0 + H1) / 2;
+export const FPS = 30, FOV = 50, ASPECT = 9 / 16, D = 24, H0 = 6.2, H1 = 5.0, HM = H1;   // layout dimensionado no ponto mais próximo
 export const TANH = Math.tan((FOV / 2) * Math.PI / 180);
-export const LEAD = 0.03, TRAVEL_BEFORE = 0.42, TRAVEL_AFTER = 0.62;
+export const LEAD = 0.03, TRAVEL_BEFORE = 0.06, TRAVEL_AFTER = 0.92;
 export const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 export const smooth = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
 export const eOut = (p) => 1 - Math.pow(1 - clamp(p), 3);
@@ -62,9 +62,9 @@ export function buildCamera(starts, total, opts = {}) {
   return function cam(t) {
     const k = stopAt(t), zz = z(t) - recoil(t), w = holdW(t);
     const a = arrive[k], d = depart[k], u = clamp((t - a) / Math.max(0.3, d - a));
-    const sgn = k % 2 ? -1 : 1, phi = ((-5 + 10 * u) * sgn * Math.PI) / 180 * w;     // órbita de 10°
+    const sgn = k % 2 ? -1 : 1, phi = ((-4 + 8 * u) * sgn * Math.PI) / 180 * w;      // órbita de 8°
     const zf = Z(k) - 0.4, dist = Math.max(0.5, zz - zf);
-    const x = Math.sin(phi) * dist * 0.9, y = 0.06 * Math.sin(t * 0.9) + 0.12 * Math.sin(phi) * w;
+    const x = Math.sin(phi) * dist * 0.75, y = 0.06 * Math.sin(t * 0.9) + 0.12 * Math.sin(phi) * w;
     const look = [x * (1 - w), y * (1 - w), zz - 12];
     const lw = [0, 0, zf];
     const lx = look[0] * (1 - w) + lw[0] * w, ly = look[1] * (1 - w) + lw[1] * w, lz = Math.min(look[2] * (1 - w) + lw[2] * w, zz - 3);

@@ -135,8 +135,8 @@ function build(tex: Record<string, THREE.Texture>, opts: {stations: boolean; hoo
   if (opts.stations) STOPS.forEach((st: any, k: number) => {
     const els = k === 0 && opts.hook ? opts.hook : st.els;
     els.forEach((e: any, j: number) => {
-      let t: THREE.Texture, aspect = 1, mode = 0, hPerPx = 1, extra: any = {};
-      if (e.type === 'word') { const w = wordTexture(e.text, e.font); t = w.tex; aspect = w.aspect; hPerPx = w.hPerPx; mode = 1; }
+      let t: THREE.Texture, aspect = 1, mode = 0, hPerPx = 1, extra: any = {}; let haloT: THREE.Texture | null = null;
+      if (e.type === 'word') { const w = wordTexture(e.text, e.font); t = w.tex; haloT = w.halo; aspect = w.aspect; hPerPx = w.hPerPx; mode = 1; }
       else if (e.type === 'stamp') { const s = stampTexture(e.text, e.kind, 11 + j * 7 + k * 31); t = s.tex; aspect = s.aspect; mode = s.colored ? 0 : 1; }
       else if (e.type === 'star') { const s = starTexture(); t = s.tex; aspect = 1; }
       else if (e.type === 'molecule') { const s = moleculeCanvas(); t = s.tex; aspect = s.aspect; mode = 1; extra.draw = s.draw; extra.last = -1; }
@@ -146,6 +146,11 @@ function build(tex: Record<string, THREE.Texture>, opts: {stations: boolean; hoo
       const hgt = e.type === 'word' ? p.s * hPerPx : p.s;
       mesh.scale.set(hgt * aspect, hgt, 1);
       if (e.hook) { mesh.renderOrder = 20; m.depthTest = false; }
+      if (haloT) {   // halo na cor do fundo, logo atrás da palavra
+        const hm = mat(haloT, 1); const halo = new THREE.Mesh(PLANE, hm); halo.scale.set(hgt * aspect, hgt, 1);
+        if (e.hook) { halo.renderOrder = 19; hm.depthTest = false; }
+        mesh.add(halo); halo.position.set(0, 0, -0.004); halo.scale.set(1, 1, 1); extra.halo = hm; mesh.renderOrder = mesh.renderOrder || 1;
+      }
       root.add(mesh);
       cards.push({mesh, m, base: {...p, rot: ((e.rot || 0) * Math.PI) / 180, sx: hgt * aspect, sy: hgt}, kind: e.type, e, at: R(e.at) - LEAD, out: e.out != null ? R(e.out) : undefined, extra});
     });
@@ -153,7 +158,7 @@ function build(tex: Record<string, THREE.Texture>, opts: {stations: boolean; hoo
       const t = tex[st.cover]; const m = mat(t, st.cover.startsWith('smoke') ? 3 : 0); const mesh = new THREE.Mesh(PLANE, m);
       const asp = (t.image as any).width / (t.image as any).height; const s = st.cover.startsWith('smoke') ? 6 : 4.2;
       mesh.scale.set(s * asp, s, 1); root.add(mesh);
-      cards.push({mesh, m, base: {x: 0.15, y: 0.1, z: -k * D + 6.6 + 3.2, rot: 0.6}, kind: 'cover'});
+      cards.push({mesh, m, base: {x: 0.15, y: 0.1, z: -k * D + 6.2 + 3.2, rot: 0.6}, kind: 'cover'});
     }
   });
   // folha da abertura/fecho (loop)
@@ -235,6 +240,7 @@ export const World: React.FC<{frame: number; fps: number; stations?: boolean; ho
       mesh.rotation.set(0, 0, b.rot || 0);
       mesh.scale.set(b.sx * sc, b.sy * sc, 1);
       u.uOpacity.value = op; u.uBias.value = bias;
+      if (c.extra.halo) { const hu = c.extra.halo.uniforms; hu.uTint.value.copy(P.fog); hu.uFog.value.copy(P.fog); hu.uOpacity.value = op * 0.78; hu.uBias.value = bias + 0.5; hu.uFogNear.value = u.uFogNear.value; hu.uFogFar.value = u.uFogFar.value; }
       if (e.type === 'word' || (e.type === 'stamp' && u.uMode.value > 0.5) || e.type === 'molecule') u.uTint.value.copy(e.hl ? P.hl : P.text);
       // texto atrás do recorte: some no nevoeiro só longe; perto fica nítido
       if (!e.hook) { u.uFogNear.value = 9; u.uFogFar.value = 44; }

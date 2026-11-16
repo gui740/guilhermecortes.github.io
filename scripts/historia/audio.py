@@ -92,10 +92,11 @@ def sfx(total, E):
 if __name__ == "__main__":
     E = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "build/h_eventos.json")); total = E["total"]
     narr_path = sys.argv[2] if len(sys.argv) > 2 else "build/h_narracao.wav"; out_path = sys.argv[3] if len(sys.argv) > 3 else "assets/historia/audio/mix.wav"
-    m = music(total); wav("build/h_music.wav", m); gm = (-34.0) - lufs("build/h_music.wav")   # trilha -18 dB abaixo da voz (-16)
+    subprocess.run([sys.executable, "scripts/historia/reggae.py", str(total), "build/h_music.wav"], check=True)   # reggae sintetizado (estéreo)
+    gm = (-31.0) - lufs("build/h_music.wav")   # estéreo: ≈ -18 dB abaixo da voz (-16 LUFS mono → -13 em estéreo duplo)
     s = sfx(total, E); wav("build/h_sfx.wav", s); gs = (-27.0) - lufs("build/h_sfx.wav")
     import os; os.makedirs(os.path.dirname(out_path), exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", narr_path, "-i", "build/h_music.wav", "-i", "build/h_sfx.wav", "-filter_complex",
-        f"[0:a]apad,atrim=0:{total}[v];[1:a]volume={gm:.2f}dB[m];[2:a]volume={gs:.2f}dB[s];[v][m][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.89:level=false,pan=stereo|c0=c0|c1=c0",
+        f"[0:a]apad,atrim=0:{total},pan=stereo|c0=c0|c1=c0[v];[1:a]volume={gm:.2f}dB[m];[2:a]volume={gs:.2f}dB,pan=stereo|c0=c0|c1=c0[s];[v][m][s]amix=inputs=3:normalize=0:duration=first,alimiter=limit=0.89:level=false",
         "-ar", "48000", "-t", f"{total:.3f}", out_path], check=True)
     print("mix", out_path, "LUFS", lufs(out_path))

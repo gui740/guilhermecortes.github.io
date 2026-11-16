@@ -17,7 +17,7 @@ STOPS.forEach((s, k) => {
     if (e.type === 'molecule') for (let i = 0; i < 8; i++) ev.push({t: t + i * e.dur / 8, n: 'pen'});
   });
   if (s.cover) { // instante em que a câmera atravessa a folha/fumaça
-    const zc = -k * D + 6.6 + 3.2; let tt = starts[k] - 2; while (tt < starts[k] + 1 && cam(tt).z > zc) tt += 1 / 120; ev.push({t: tt - 0.15, n: 'whoosh_big'});
+    const zc = -k * D + 6.2 + 3.2; let tt = starts[k] - 2; while (tt < starts[k] + 1 && cam(tt).z > zc) tt += 1 / 120; ev.push({t: tt - 0.15, n: 'whoosh_big'});
   }
   const counts = s.counterAt ? s.counterAt.map(([r]) => R(r) - 0.25) : s.counter ? [starts[k] - 0.25] : [];
   counts.forEach((t0) => { for (let i = 0; i < 6; i++) ev.push({t: t0 + i * 0.075, n: 'tick'}); });
