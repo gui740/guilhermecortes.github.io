@@ -1,0 +1,111 @@
+[
+ {
+  "name": "leaf01",
+  "src": "o_hemp_wb",
+  "mode": "rembg"
+ },
+ {
+  "name": "leaf02",
+  "src": "o_clipart",
+  "mode": "paper",
+  "thr": 30
+ },
+ {
+  "name": "leaf03",
+  "src": "o_flk7",
+  "mode": "paper",
+  "thr": 45
+ },
+ {
+  "name": "leaf04",
+  "src": "o_mj6",
+  "mode": "rembg"
+ },
+ {
+  "name": "leaf05",
+  "src": "o_flk11",
+  "mode": "rembg"
+ },
+ {
+  "name": "leaf06",
+  "src": "o_hemp_farm",
+  "mode": "rembg"
+ },
+ {
+  "name": "leaf07",
+  "src": "o_leaf_sticker",
+  "mode": "rembg"
+ },
+ {
+  "name": "leaf08",
+  "src": "o_leaf_png",
+  "mode": "rembg"
+ },
+ {
+  "name": "ramo01",
+  "src": "m_bio71",
+  "mode": "paper",
+  "thr": 42,
+  "box": [
+   0.02,
+   0.02,
+   0.98,
+   0.93
+  ],
+  "fill": false,
+  "close": 3
+ },
+ {
+  "name": "ramo02",
+  "src": "m_bio166",
+  "mode": "paper",
+  "thr": 42,
+  "box": [
+   0.02,
+   0.02,
+   0.98,
+   0.93
+  ],
+  "fill": false,
+  "close": 3
+ },
+ {
+  "name": "ramo03",
+  "src": "m_fuchs",
+  "mode": "paper",
+  "thr": 55,
+  "box": [
+   0.04,
+   0.03,
+   0.96,
+   0.88
+  ],
+  "fill": false,
+  "close": 3
+ },
+ {
+  "name": "ramo07",
+  "src": "m_herbal_canabs",
+  "mode": "rembg",
+  "box": [
+   0.5,
+   0.2,
+   0.97,
+   0.86
+  ]
+ },
+ {
+  "name": "ramo08",
+  "src": "o_pdm_cann",
+  "mode": "paper",
+  "thr": 45,
+  "box": [
+   0.25,
+   0.05,
+   0.62,
+   0.6
+  ],
+  "fill": false,
+  "close": 3
+ }
+]

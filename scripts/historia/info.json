@@ -1,0 +1,220 @@
+[
+ {
+  "name": "i_sementes",
+  "src": "f_sementes",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.1,
+   0.1,
+   0.9,
+   0.75
+  ]
+ },
+ {
+  "name": "i_china_vaso",
+  "src": "m_china_vaso",
+  "mode": "rembg",
+  "border": 12
+ },
+ {
+  "name": "i_gunjah",
+  "src": "m_gunjah",
+  "mode": "rect",
+  "border": 12,
+  "contrast": 2.5,
+  "box": [
+   0.04,
+   0.03,
+   0.96,
+   0.92
+  ]
+ },
+ {
+  "name": "i_shiva",
+  "src": "m_shiva",
+  "mode": "rembg",
+  "border": 12,
+  "box": [
+   0.05,
+   0.08,
+   0.95,
+   0.86
+  ]
+ },
+ {
+  "name": "i_braseiro",
+  "src": "m_braseiro",
+  "mode": "rembg",
+  "border": 12
+ },
+ {
+  "name": "i_cita",
+  "src": "m_cita_arqueiro",
+  "mode": "rembg",
+  "border": 12
+ },
+ {
+  "name": "i_herodoto",
+  "src": "w_herodoto_nobg",
+  "mode": "rembg",
+  "border": 12
+ },
+ {
+  "name": "i_arabe",
+  "src": "m_arabe",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.04,
+   0.04,
+   0.96,
+   0.96
+  ]
+ },
+ {
+  "name": "i_cairo",
+  "src": "l_cairo",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.06,
+   0.04,
+   0.94,
+   0.9
+  ]
+ },
+ {
+  "name": "i_caravelas",
+  "src": "m_caravelas",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.03,
+   0.04,
+   0.97,
+   0.9
+  ]
+ },
+ {
+  "name": "i_corda",
+  "src": "m_corda",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.12,
+   0.12,
+   0.88,
+   0.88
+  ]
+ },
+ {
+  "name": "i_caravela_foto",
+  "src": "l_caravela",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.05,
+   0.05,
+   0.95,
+   0.92
+  ]
+ },
+ {
+  "name": "i_rio",
+  "src": "m_rio_euro",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.03,
+   0.03,
+   0.97,
+   0.97
+  ]
+ },
+ {
+  "name": "i_reefer",
+  "src": "e_reefer",
+  "mode": "rect",
+  "border": 12
+ },
+ {
+  "name": "i_killer",
+  "src": "f_killer",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.02,
+   0.02,
+   0.98,
+   0.98
+  ]
+ },
+ {
+  "name": "i_marihuana_poster",
+  "src": "l_marihuana1970",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.02,
+   0.02,
+   0.98,
+   0.98
+  ]
+ },
+ {
+  "name": "i_anslinger",
+  "src": "l_anslinger1937",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.08,
+   0.05,
+   0.92,
+   0.95
+  ]
+ },
+ {
+  "name": "i_anslinger_mesa",
+  "src": "l_eua_canada1938",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.05,
+   0.05,
+   0.95,
+   0.94
+  ]
+ },
+ {
+  "name": "i_globo",
+  "src": "m_globo",
+  "mode": "rect",
+  "border": 12,
+  "contrast": 1.5,
+  "box": [
+   0.03,
+   0.03,
+   0.97,
+   0.93
+  ]
+ },
+ {
+  "name": "i_stf",
+  "src": "f_stf",
+  "mode": "rect",
+  "border": 12,
+  "box": [
+   0.0,
+   0.0,
+   1.0,
+   0.92
+  ]
+ },
+ {
+  "name": "i_canhamo",
+  "src": "m_canhamo_farm",
+  "mode": "rect",
+  "border": 12
+ }
+]

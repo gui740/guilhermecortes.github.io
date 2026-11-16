@@ -1,0 +1,463 @@
+{
+ "observacao": "Linha do tempo pesquisada em 16/11/2026. Cada fato tem duas fontes; 'incerto' marca o que tem disputa acadêmica ou fonte de qualidade média. Alguns sites não puderam ser abertos neste ambiente (science.org, nationalgeographic.com) — os dados vêm dos resumos indexados e das fontes secundárias listadas.",
+ "correcoes_do_briefing": [
+  {
+   "item": "'2700 a.C.' como data inicial",
+   "correcao": "2700 a.C. vem da lenda do imperador Shennong (não verificável). O túmulo de Yanghai tem cerca de 2.700 ANOS (≈700 a.C.), não é de 2700 a.C. A data mais antiga com base científica usada no vídeo é a domesticação estimada em ~12 mil anos (≈10.000 a.C., estudo genético de 2021, contestado). A capa usa 10.000 a.C."
+  },
+  {
+   "item": "'cânhamo nas velas'",
+   "correcao": "O cânhamo dominava cordas e cordames; as velas eram em geral de linho (há relatos mistos). O vídeo fala só da corda."
+  },
+  {
+   "item": "'Brasil proibiu antes dos EUA'",
+   "correcao": "Foi uma postura MUNICIPAL do Rio de Janeiro (1830). A lei federal dos EUA é de 1937. Antes do Rio já houve proibições no Egito mameluco (séc. XIII–XIV), então 'uma das primeiras do mundo' é exagero; o vídeo diz 'antes dos Estados Unidos'."
+  },
+  {
+   "item": "Chegada da planta ao Brasil",
+   "correcao": "A associação com africanos escravizados ('fumo de Angola') é documentada nos nomes e usos, mas a data/rota exata de chegada não tem consenso."
+  }
+ ],
+ "estacoes": [
+  {
+   "n": 1,
+   "lugar": "Leste da Ásia (China)",
+   "data": "≈12 mil anos atrás (≈10.000 a.C.)",
+   "fato": "Estudo genético de 110 genomas (Ren et al., Science Advances, 2021) estima que a cannabis foi domesticada no Neolítico inicial no leste da Ásia.",
+   "incerto": true,
+   "nota": "Data contestada: críticos questionam amostragem e relógio molecular; a evidência arqueológica consistente de uso para fibra/droga tem ~7.500 anos.",
+   "fontes": [
+    "https://www.scmp.com/news/china/article/3141536/cannabis-was-first-domesticated-12000-years-ago-china-researchers-find",
+    "https://newsinfo.inquirer.net/?p=1461081",
+    "https://beyondthc.com/was-cannabis-first-grown-in-eastern-china/"
+   ]
+  },
+  {
+   "n": 2,
+   "lugar": "Índia",
+   "data": "≈1500–1000 a.C. (Atharvaveda)",
+   "fato": "O Atharvaveda cita 'bhanga' entre cinco plantas sagradas; o bhang (preparado de folhas) virou bebida ritual ligada a Shiva.",
+   "incerto": true,
+   "nota": "Há debate se 'bhanga' no texto védico é a cannabis; datação do texto varia.",
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Cannabis_in_India",
+    "https://www.brut.media/in/articles/history-of-bhang-in-india"
+   ]
+  },
+  {
+   "n": 3,
+   "lugar": "Pamir — cemitério de Jirzankal (Xinjiang, China)",
+   "data": "≈2.500 anos (≈500 a.C.)",
+   "fato": "Braseiros de madeira de tumbas com resíduos de cannabis queimada com teor de THC acima do de plantas silvestres (detectado via CBN). Estudo de Ren, Yang et al., Science Advances, jun. 2019.",
+   "incerto": false,
+   "fontes": [
+    "https://www.sciencenews.org/article/evidence-marijuana-smoking-rituals-ancient-western-china",
+    "https://www.nationalgeographic.com/culture/article/earliest-evidence-cannabis-marijuana-smoking-china-tombs"
+   ],
+   "relacionado": {
+    "fato": "Yanghai (Turpan): túmulo de ~2.700 anos com 789 g de cannabis (Russo et al., J. Exp. Botany, 2008)",
+    "fontes": [
+     "https://gizmodo.com/world-s-oldest-pot-stash-offered-an-afterlife-high-5099717",
+     "https://www.foxnews.com/story/huge-stash-of-marijuana-found-in-ancient-tomb"
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "lugar": "Estepe — citas, segundo Heródoto",
+   "data": "≈440 a.C.",
+   "fato": "Histórias IV.73–75: os citas jogavam sementes de cânhamo em pedras em brasa dentro de tendas e 'uivavam de prazer' com o vapor.",
+   "incerto": false,
+   "fontes": [
+    "https://cts.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/4.73.2-4.75.1",
+    "https://lexundria.com/hdt/4.75/mcly"
+   ]
+  },
+  {
+   "n": 5,
+   "lugar": "Cairo (Egito medieval)",
+   "data": "séc. XIII–XV",
+   "fato": "Haxixe se espalha no Cairo; o cronista al-Maqrizi (séc. XV) reclamou do consumo aberto nas ruas; houve proibições mamelucas.",
+   "incerto": true,
+   "nota": "Datas de proibições (1266, 1378...) e a ligação com sufis vêm de fontes secundárias; no vídeo só 'Cairo medieval'.",
+   "fontes": [
+    "https://www.medievalists.net/2024/04/drug-use-medieval-egypt/",
+    "https://www.scribd.com/document/538725564/bullnyacadmed00095-0056"
+   ]
+  },
+  {
+   "n": 6,
+   "lugar": "Navegações (Portugal/Europa)",
+   "data": "séc. XV–XVI",
+   "fato": "Corda de cânhamo era a principal fibra do cordame dos navios à vela.",
+   "incerto": false,
+   "fontes": [
+    "https://ussconstitutionmuseum.org/2016/07/19/canvasing-the-navy/",
+    "https://goodoldboat.com/rope-history/"
+   ]
+  },
+  {
+   "n": 7,
+   "lugar": "Brasil / Rio de Janeiro",
+   "data": "4 out. 1830",
+   "fato": "Postura da Câmara Municipal do Rio proíbe a venda e o uso do 'pito do pango': vendedor multado em 20$000; 'escravos e mais pessoas que dele usarem', 3 dias de cadeia. Nome popular 'fumo de Angola'.",
+   "incerto": false,
+   "fontes": [
+    "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856588_b5b522cd19f011f60787c7408a1c132d.pdf",
+    "https://www.gazetadopovo.com.br/vozes/rolmops-e-catchup/pito-do-pango/",
+    "https://digital.bbm.usp.br/bitstream/bbm/3880/1/005916_COMPLETO.pdf",
+    "https://atarde.com.br/bahia/racismo-guiou-estudo-baiano-que-fez-maconha-ser-proibida-no-brasil-1290403"
+   ]
+  },
+  {
+   "n": 8,
+   "lugar": "Estados Unidos",
+   "data": "1936–1937",
+   "fato": "Harry Anslinger (Federal Bureau of Narcotics, 1930–62) lidera campanha de pânico; filme 'Reefer Madness' (1936); Marihuana Tax Act (efeito em 1º out. 1937) torna a maconha proibida na prática via imposto. Artigo 'Marijuana, Assassin of Youth' (The American Magazine, 1937).",
+   "incerto": false,
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Marijuana_Tax_Act",
+    "https://www.bu.edu/bulawreview/files/2021/07/FISHER.pdf",
+    "https://abajournal.com/magazine/article/sept-25-1930-us-names-its-first-drug-czar",
+    "https://hashmuseum.com/en/sammlung/reefer-madness/assassin-of-youth/"
+   ]
+  },
+  {
+   "n": 9,
+   "lugar": "ONU",
+   "data": "1961",
+   "fato": "Convenção Única sobre Entorpecentes coloca a cannabis entre as drogas sob controle internacional (uso só médico/científico). Em 2020 a CND tirou a cannabis da Lista IV.",
+   "incerto": false,
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Legality_of_cannabis",
+    "https://www.cannabisbusinesstimes.com/us-cannabis-reschedule-international-treaty-compliance"
+   ]
+  },
+  {
+   "n": 10,
+   "lugar": "Israel — Instituto Weizmann",
+   "data": "1964",
+   "fato": "Raphael Mechoulam e Yehiel Gaoni isolam e descrevem o Δ9-THC (J. Am. Chem. Soc. 86:1646, 1964) — três anos depois da Convenção de 1961.",
+   "incerto": false,
+   "fontes": [
+    "https://www.historyofmedicine.com/id/16402",
+    "https://www.worldofcannabis.museum/post/tdich-4-1-1964-thc-discovery"
+   ]
+  },
+  {
+   "n": 11,
+   "lugar": "Uruguai, Canadá, Alemanha, Brasil (STF)",
+   "data": "2013–2024",
+   "fato": "Uruguai legaliza em dez. 2013; Canadá em 17 out. 2018; Alemanha em 1º abr. 2024; STF (RE 635.659, 25–26 jun. 2024) descriminaliza o porte para uso pessoal (até 40 g ou 6 plantas fêmeas, presunção relativa; vira ilícito administrativo, não legaliza).",
+   "incerto": false,
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Legality_of_cannabis",
+    "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+    "https://www.migalhas.com.br/quentes/410151/entenda-o-que-acontecera-com-quem-for-pego-com-ate-40g-de-maconha"
+   ]
+  },
+  {
+   "n": 12,
+   "lugar": "Hoje (2026)",
+   "data": "2026",
+   "fato": "Brasil: em jan./fev. 2026 a Anvisa aprovou resoluções que autorizam empresas licenciadas a cultivar cânhamo (até 0,3% THC) só para fins medicinais/farmacêuticos; em abr. 2026 o STJ considerou cumprida a ordem. EUA: desde 28 abr. 2026, maconha medicinal licenciada e produtos aprovados pela FDA passaram à Lista III; reclassificação geral seguia em audiência na DEA.",
+   "incerto": true,
+   "nota": "Situação de implementação após abril de 2026 não confirmada; o vídeo cita só a decisão da Anvisa.",
+   "fontes": [
+    "https://www.migalhas.com.br/quentes/448813/anvisa-autoriza-cultivo-e-amplia-uso-medicinal-da-cannabis-no-brasil",
+    "https://www.gazetadopovo.com.br/vida-e-cidadania/anvisa-plantio-cannabis-ordem-stj-sem-aprovacao-congresso/",
+    "https://www.migalhas.com.br/quentes/453522/stj-aprova-regulamentacao-da-anvisa-para-cultivo-medicinal-da-cannabis",
+    "https://www.federalregister.gov/documents/2026/04/28/2026-08177/schedules-of-controlled-substances-rescheduling-of-marijuana",
+    "https://www.dea.gov/marijuana-rescheduling-regulatory-actions"
+   ]
+  }
+ ],
+ "descartado": [
+  {
+   "item": "Lenda de Shennong (2700 a.C.)",
+   "motivo": "mito sem fonte verificável"
+  },
+  {
+   "item": "'canvas vem de cannabis' e velas de cânhamo",
+   "motivo": "etimologia citada por uma só fonte confiável; velas eram majoritariamente de linho"
+  },
+  {
+   "item": "Hashishin/assassinos",
+   "motivo": "origem do termo disputada; fora do roteiro"
+  }
+ ],
+ "ferramentas": {
+  "narracao": "edge-tts pt-BR-AntonioNeural (sem chaves Gemini/ElevenLabs no ambiente)",
+  "timestamps": "WordBoundary do próprio sintetizador (Whisper indisponível: modelos em huggingface.co/openaipublic bloqueados pela rede)",
+  "trilha": "sintetizada no próprio projeto (scripts/historia/audio.py) — livre de direitos",
+  "efeitos": "sintetizados (scripts/historia/audio.py)"
+ },
+ "imagens": {
+  "l_marihuana1970": {
+   "arquivo": "assets/historia/raw/l_marihuana1970.jpg",
+   "titulo": "Marihuana",
+   "licenca": "Library of Congress — sem restrições conhecidas",
+   "pagina": "http://www.loc.gov/item/2013648139/",
+   "data": "1970-01-01"
+  },
+  "l_caravela": {
+   "arquivo": "assets/historia/raw/l_caravela.jpg",
+   "titulo": "Spanish caravel Nina",
+   "licenca": "Library of Congress — sem restrições conhecidas",
+   "pagina": "http://www.loc.gov/item/2016798338/",
+   "data": "1893-01-01"
+  },
+  "l_cairo": {
+   "arquivo": "assets/historia/raw/l_cairo.jpg",
+   "titulo": "Cairo. Street view",
+   "licenca": "Library of Congress — sem restrições conhecidas",
+   "pagina": "http://www.loc.gov/item/92500744/",
+   "data": "1860-01-01"
+  },
+  "l_eua_canada1938": {
+   "arquivo": "assets/historia/raw/l_eua_canada1938.jpg",
+   "titulo": "Closer U.S.-Canada Marihuana (Marijuana) control discussed. Washington, D.C., March 24. Closer cooperation in ",
+   "licenca": "Library of Congress — sem restrições conhecidas",
+   "pagina": "http://www.loc.gov/item/2016873283/",
+   "data": "1938-01-01"
+  },
+  "l_anslinger1937": {
+   "arquivo": "assets/historia/raw/l_anslinger1937.jpg",
+   "titulo": "[Harry Anslinger, half-length portrait, facing front, on board the S.S. Washington]",
+   "licenca": "Library of Congress — sem restrições conhecidas",
+   "pagina": "http://www.loc.gov/item/99403155/",
+   "data": "1937-01-01"
+  },
+  "o_hemp_wb": {
+   "arquivo": "assets/historia/raw/o_hemp_wb.jpg",
+   "titulo": "Green hemp leaf white background",
+   "licenca": "cc0 1.0",
+   "autor": "U.S. Department of Agriculture",
+   "pagina": "https://www.rawpixel.com/image/10995706/green-hemp-leaf-white-background",
+   "baixado_de": "https://api.openverse.org/v1/images/03980a90-0fb3-4408-b0c5-8c7c4b82b552/thumb/?full_size=true"
+  },
+  "o_hemp_farm": {
+   "arquivo": "assets/historia/raw/o_hemp_farm.jpg",
+   "titulo": "Hemp leaf from organic farm",
+   "licenca": "cc0 1.0",
+   "autor": "U.S. Department of Agriculture",
+   "pagina": "https://www.rawpixel.com/image/10995693/hemp-leaf-from-organic-farm",
+   "baixado_de": "https://api.openverse.org/v1/images/bfe6b4f5-43e0-45b9-a93c-dcc71d5e1f4c/thumb/?full_size=true"
+  },
+  "o_leaf_png": {
+   "arquivo": "assets/historia/raw/o_leaf_png.jpg",
+   "titulo": "PNG Cannabis leaf clipart, transparent",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/7669385/png-plant-medicine",
+   "baixado_de": "https://api.openverse.org/v1/images/b56eb95c-d0a8-4c4f-b1f7-5c9646a30f81/thumb/?full_size=true"
+  },
+  "o_leaf_sticker": {
+   "arquivo": "assets/historia/raw/o_leaf_sticker.jpg",
+   "titulo": "Cannabis leaf png sticker, botanical",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/6287012/png-leaf-public-domain",
+   "baixado_de": "https://api.openverse.org/v1/images/19879525-96cf-49c8-9b39-e6326a5bf66e/thumb/?full_size=true"
+  },
+  "o_flk7": {
+   "arquivo": "assets/historia/raw/o_flk7.jpg",
+   "titulo": "Cannabis leaf",
+   "licenca": "by 2.0",
+   "autor": "elsaolofsson",
+   "pagina": "https://www.flickr.com/photos/189516854@N06/50610714768",
+   "baixado_de": "https://api.openverse.org/v1/images/bf0ec2b3-e318-4e63-9b33-cf9ffc724a9c/thumb/?full_size=true"
+  },
+  "o_flk11": {
+   "arquivo": "assets/historia/raw/o_flk11.jpg",
+   "titulo": "Cannabis leaf",
+   "licenca": "by 2.0",
+   "autor": "elsaolofsson",
+   "pagina": "https://www.flickr.com/photos/189516854@N06/50611456966",
+   "baixado_de": "https://api.openverse.org/v1/images/1db7481a-05d0-49ee-84dc-15d11762eda5/thumb/?full_size=true"
+  },
+  "o_mj6": {
+   "arquivo": "assets/historia/raw/o_mj6.jpg",
+   "titulo": "Marijuana Leaf",
+   "licenca": "by 2.0",
+   "autor": "lindsay-fox",
+   "pagina": "https://www.flickr.com/photos/87735223@N02/50611112801",
+   "baixado_de": "https://api.openverse.org/v1/images/699a1a4a-b4b4-49eb-af85-a9a65576510e/thumb/?full_size=true"
+  },
+  "o_pdm_cann": {
+   "arquivo": "assets/historia/raw/o_pdm_cann.jpg",
+   "titulo": "Cannabis",
+   "licenca": "pdm 1.0",
+   "autor": "Swallowtail Garden Seeds",
+   "pagina": "https://www.flickr.com/photos/97123293@N07/28994157725",
+   "baixado_de": "https://api.openverse.org/v1/images/e3fc83ce-4612-482b-b1c6-44dccdab8d96/thumb/?full_size=true"
+  },
+  "o_clipart": {
+   "arquivo": "assets/historia/raw/o_clipart.jpg",
+   "titulo": "Cannabis leaf clipart, herb illustration",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/6287004/image-leaf-public-domain-nature",
+   "baixado_de": "https://api.openverse.org/v1/images/e9813434-bbe7-42a5-9b69-15ea8b09b5f4/thumb/?full_size=true"
+  },
+  "w_herodoto_nobg": {
+   "arquivo": "assets/historia/raw/w_herodoto_nobg.png",
+   "titulo": "Herodotus-bust-noBG",
+   "licenca": "cc0 1.0",
+   "autor": "Metropolitan Museum of Art",
+   "pagina": "https://commons.wikimedia.org/w/index.php?curid=105424931",
+   "baixado_de": "https://upload.wikimedia.org/wikipedia/commons/0/01/Herodotus-bust-noBG.png"
+  },
+  "m_china_vaso": {
+   "arquivo": "assets/historia/raw/m_china_vaso.jpg",
+   "titulo": "Ancient Chinese bronze ritual vessel",
+   "licenca": "cc0 1.0",
+   "autor": "artinstitutechicago",
+   "pagina": "https://www.rawpixel.com/image/9019695/beaker",
+   "baixado_de": "https://api.openverse.org/v1/images/473dc438-4a64-4b23-a65d-df3903de13af/thumb/?full_size=true"
+  },
+  "m_herbal_canabs": {
+   "arquivo": "assets/historia/raw/m_herbal_canabs.jpg",
+   "titulo": "Cannabis sativa, 'canabs', 'chanve fumelle'",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/7665598/image-plant-art-vintage",
+   "baixado_de": "https://api.openverse.org/v1/images/c24ff0d6-af5d-4778-8e9e-37a4c36868f7/thumb/?full_size=true"
+  },
+  "m_fuchs": {
+   "arquivo": "assets/historia/raw/m_fuchs.jpg",
+   "titulo": "M0002892: Illustration from Historia Stirpium",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/13959883/m0002892-illustration-from-historia-stirpium",
+   "baixado_de": "https://api.openverse.org/v1/images/1bc9eb5c-b9f1-4268-a269-c51fb18efdf6/thumb/?full_size=true"
+  },
+  "m_gunjah": {
+   "arquivo": "assets/historia/raw/m_gunjah.jpg",
+   "titulo": "preparations Indian hemp, gunjah, (Cannabis",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/13979962/image-paper-plant-grass",
+   "baixado_de": "https://api.openverse.org/v1/images/bbf6a948-40f8-4420-97d1-4bea6276ccda/thumb/?full_size=true"
+  },
+  "m_shiva": {
+   "arquivo": "assets/historia/raw/m_shiva.jpg",
+   "titulo": "Shiva Parvati Seated Nandi",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/7423406/shiva-and-parvati-seated-nandi",
+   "baixado_de": "https://api.openverse.org/v1/images/f1ab1904-4081-4835-a6ae-98541f993074/thumb/?full_size=true"
+  },
+  "m_braseiro": {
+   "arquivo": "assets/historia/raw/m_braseiro.jpg",
+   "titulo": "Brazier",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.metmuseum.org/art/collection/search/325621",
+   "baixado_de": "https://api.openverse.org/v1/images/5fa53fe4-d071-492c-a393-eaf6a2c759ad/thumb/?full_size=true"
+  },
+  "m_cita_arqueiro": {
+   "arquivo": "assets/historia/raw/m_cita_arqueiro.jpg",
+   "titulo": "Bronze statuette Scythian mounted archer",
+   "licenca": "cc0 1.0",
+   "autor": "themet",
+   "pagina": "https://www.rawpixel.com/image/8385031/bronze-statuette-scythian-mounted-archer",
+   "baixado_de": "https://api.openverse.org/v1/images/6758a995-e0d8-4195-be3c-7266e43f39a6/thumb/?full_size=true"
+  },
+  "m_arabe": {
+   "arquivo": "assets/historia/raw/m_arabe.jpg",
+   "titulo": "Manuscript Leaves from an Arabic Manuscript",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.metmuseum.org/art/collection/search/479384",
+   "baixado_de": "https://api.openverse.org/v1/images/3c69ff25-807d-4bfa-b139-e212d136f02a/thumb/?full_size=true"
+  },
+  "m_caravelas": {
+   "arquivo": "assets/historia/raw/m_caravelas.jpg",
+   "titulo": "Three Caravels in a Rising Squall with Arion on a Dolphin from The Sailing Vessels",
+   "licenca": "cc0 1.0",
+   "autor": "Pieter Bruegel the Elder",
+   "pagina": "https://www.metmuseum.org/art/collection/search/383055",
+   "baixado_de": "https://api.openverse.org/v1/images/1a5ce185-4fa3-405c-83dc-de33868c83f3/thumb/?full_size=true"
+  },
+  "m_corda": {
+   "arquivo": "assets/historia/raw/m_corda.jpg",
+   "titulo": "Rope Coil",
+   "licenca": "cc0 1.0",
+   "autor": "National Park Service",
+   "pagina": "https://www.rawpixel.com/image/3309741/free-photo-image-animal-cc0-creative-commons",
+   "baixado_de": "https://api.openverse.org/v1/images/4da0586a-a952-48fa-9b7d-a89ffa1a1e12/thumb/?full_size=true"
+  },
+  "m_rio_euro": {
+   "arquivo": "assets/historia/raw/m_rio_euro.jpg",
+   "titulo": "Rio de Janeiro, Brazil: European",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/13959623/image-cartoon-person-art",
+   "baixado_de": "https://api.openverse.org/v1/images/b668cbed-abb7-4400-b8f9-988d2858d6d2/thumb/?full_size=true"
+  },
+  "m_globo": {
+   "arquivo": "assets/historia/raw/m_globo.jpg",
+   "titulo": "Geography: hemispheres globe. Engraving J",
+   "licenca": "cc0 1.0",
+   "autor": "",
+   "pagina": "https://www.rawpixel.com/image/13970527/geography-the-hemispheres-globe-engraving-pass-1807",
+   "baixado_de": "https://api.openverse.org/v1/images/934260dd-818c-4cf2-aefd-396c31974f7a/thumb/?full_size=true"
+  },
+  "m_canhamo_farm": {
+   "arquivo": "assets/historia/raw/m_canhamo_farm.jpg",
+   "titulo": "Hemp plants flourish on a farm",
+   "licenca": "cc0 1.0",
+   "autor": "U.S. Department of Agriculture",
+   "pagina": "https://www.rawpixel.com/image/3259345/free-photo-image-cannabis-weed-hemp-plants",
+   "baixado_de": "https://api.openverse.org/v1/images/3001a9d5-9174-4d9d-a6ef-69ea6077dc5d/thumb/?full_size=true"
+  },
+  "m_bio71": {
+   "arquivo": "assets/historia/raw/m_bio71.jpg",
+   "titulo": "n71_w1150",
+   "licenca": "pdm 1.0",
+   "autor": "BioDivLibrary",
+   "pagina": "https://www.flickr.com/photos/61021753@N02/8615474221",
+   "baixado_de": "https://api.openverse.org/v1/images/410eda21-4b11-4089-bfe2-e07ddeff0ffb/thumb/?full_size=true"
+  },
+  "m_bio166": {
+   "arquivo": "assets/historia/raw/m_bio166.jpg",
+   "titulo": "n166_w1150",
+   "licenca": "pdm 1.0",
+   "autor": "BioDivLibrary",
+   "pagina": "https://www.flickr.com/photos/61021753@N02/8411501256",
+   "baixado_de": "https://api.openverse.org/v1/images/b3504217-768c-433e-a4f0-a2105780c6cd/thumb/?full_size=true"
+  },
+  "f_stf": {
+   "arquivo": "assets/historia/raw/f_stf.jpg",
+   "titulo": "Edifício-sede do Supremo Tribunal Federal/ Brazil's Supreme Court building (Brasília, Dist",
+   "licenca": "by 2.0",
+   "autor": "thejourney1972 (South America addicted)",
+   "pagina": "https://www.flickr.com/photos/50694521@N00/821050639",
+   "baixado_de": "https://api.openverse.org/v1/images/5460c997-1ded-4ec1-9b4f-14dfaaac1576/thumb/?full_size=true"
+  },
+  "f_killer": {
+   "arquivo": "assets/historia/raw/f_killer.jpg",
+   "titulo": "Killer Drug Marijuana",
+   "licenca": "by 2.0",
+   "autor": "The Drug Users Bible",
+   "pagina": "https://www.flickr.com/photos/157786281@N07/43643669214",
+   "baixado_de": "https://api.openverse.org/v1/images/034c87f3-aea2-4eab-a1ad-050cd69a9a79/thumb/?full_size=true"
+  },
+  "f_sementes": {
+   "arquivo": "assets/historia/raw/f_sementes.jpg",
+   "titulo": "Hemp seeds",
+   "licenca": "by 2.0",
+   "autor": "blondinrikard",
+   "pagina": "https://www.flickr.com/photos/44093058@N06/28133870025",
+   "baixado_de": "https://api.openverse.org/v1/images/dca61871-b1d4-4114-84e7-da3f16851f55/thumb/?full_size=true"
+  },
+  "e_reefer": {
+   "arquivo": "assets/historia/raw/e_reefer.jpg",
+   "titulo": "File:Reefer Madness (1936).jpg",
+   "licenca": "Public domain",
+   "autor": "Motion Picture Ventures",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Reefer_Madness_(1936).jpg"
+  }
+ }
+}

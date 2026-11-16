@@ -1,0 +1,114 @@
+{
+ "A": {
+  "audio": "audio/gancho_A.wav",
+  "els": null
+ },
+ "B": {
+  "audio": "audio/gancho_B.wav",
+  "els": [
+   {
+    "type": "word",
+    "text": "PROIBIRAM",
+    "font": "anton",
+    "x": 540,
+    "y": 720,
+    "h": 250,
+    "at": -0.4,
+    "hook": 1,
+    "hl": 1
+   },
+   {
+    "type": "word",
+    "text": "ANTES",
+    "font": "anton",
+    "x": 540,
+    "y": 930,
+    "h": 200,
+    "at": 0.65575
+   },
+   {
+    "type": "word",
+    "text": "DE SABER",
+    "font": "anton",
+    "x": 540,
+    "y": 1100,
+    "h": 150,
+    "at": 0.990541
+   },
+   {
+    "type": "word",
+    "text": "O QUE ERA",
+    "font": "anton",
+    "x": 540,
+    "y": 1260,
+    "h": 150,
+    "at": 1.303041
+   },
+   {
+    "type": "word",
+    "text": "PUTA MERDA",
+    "font": "anton",
+    "x": 540,
+    "y": 1030,
+    "h": 270,
+    "at": 1.9949999999999999,
+    "dz": 1.2,
+    "shake": 1,
+    "hl": 1,
+    "rot": -6
+   }
+  ]
+ },
+ "C": {
+  "audio": "audio/gancho_C.wav",
+  "els": [
+   {
+    "type": "word",
+    "text": "12 MIL",
+    "font": "anton",
+    "x": 540,
+    "y": 720,
+    "h": 300,
+    "at": -0.4,
+    "hook": 1
+   },
+   {
+    "type": "word",
+    "text": "ANOS",
+    "font": "anton",
+    "x": 540,
+    "y": 930,
+    "h": 170,
+    "at": 0.756166
+   },
+   {
+    "type": "word",
+    "text": "de",
+    "font": "inter",
+    "x": 300,
+    "y": 1070,
+    "h": 60,
+    "at": 1.024041
+   },
+   {
+    "type": "word",
+    "text": "MACONHA",
+    "font": "anton",
+    "x": 600,
+    "y": 1080,
+    "h": 190,
+    "at": 1.102166,
+    "hl": 1
+   },
+   {
+    "type": "word",
+    "text": "EM 60 SEGUNDOS",
+    "font": "anton",
+    "x": 540,
+    "y": 1270,
+    "h": 120,
+    "at": 1.492791
+   }
+  ]
+ }
+}
