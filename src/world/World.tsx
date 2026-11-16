@@ -250,8 +250,8 @@ export const World: React.FC<{frame: number; fps: number; stations?: boolean; ho
     const pmu = (W.pts.material as THREE.ShaderMaterial).uniforms; pmu.uFog.value.copy(P.fog); pmu.uC.value.copy(P.w.black > 0.5 ? C.yellow : new THREE.Vector3(1, 1, 1));
     // folha do loop: abertura (0–0.55s) e mergulho final (últimos 0.6s)
     let op = -1;
-    if (!camOverride) { if (t < 0.55) op = t / 0.55; else if (t > tEnd - 0.6) op = 1 - (t - (tEnd - 0.6)) / 0.6; }
-    if (op >= 0 && op < 1) {
+    if (!camOverride) { if (t < 0.55) op = t / 0.55; else if (t > tEnd - 0.65) op = Math.max(0, 1 - (t - (tEnd - 0.65)) / 0.6); }
+    if (op >= 0 && op < 1) {  // op=0 → folha cobrindo a tela (igual ao quadro 0)
       const pose = openingPose(Math.max(0, op));
       tmpV.set(pose.x, pose.y, pose.z).applyMatrix4(pc.matrixWorld); W.ol.position.copy(tmpV);
       W.ol.quaternion.copy(pc.quaternion); W.ol.rotateZ(pose.rz); W.ol.rotateY(pose.ry);

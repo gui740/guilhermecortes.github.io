@@ -1,7 +1,7 @@
 // Trajetória da câmera (plano-sequência) e utilidades de tempo. JS puro: usado pelo Remotion e pelo script de áudio.
 export const FPS = 30, FOV = 50, ASPECT = 9 / 16, D = 24, H0 = 6.6, H1 = 4.2, HM = (H0 + H1) / 2;
 export const TANH = Math.tan((FOV / 2) * Math.PI / 180);
-export const LEAD = 0.03, TRAVEL_BEFORE = 0.75, TRAVEL_AFTER = 0.35;
+export const LEAD = 0.03, TRAVEL_BEFORE = 0.42, TRAVEL_AFTER = 0.62;
 export const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 export const smooth = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
 export const eOut = (p) => 1 - Math.pow(1 - clamp(p), 3);
@@ -55,7 +55,7 @@ export function buildCamera(starts, total, opts = {}) {
       const a = arrive[k], d = depart[k];
       if (t >= a - 0.2 && t <= d + 0.2) w = Math.max(w, smooth((t - a + 0.2) / 0.55) * smooth((d + 0.2 - t) / 0.55));
     }
-    return k0(t) === 0 ? Math.max(w, smooth((t - 0.1) / 0.4)) : w;
+    return w;
   }
   const k0 = (t) => stopAt(t);
   const recoil = (t) => (opts.noOpening ? 0 : 2.2 * (1 - eOut(t / 0.55)));       // abertura: câmera recua rápido
@@ -67,7 +67,7 @@ export function buildCamera(starts, total, opts = {}) {
     const x = Math.sin(phi) * dist * 0.9, y = 0.06 * Math.sin(t * 0.9) + 0.12 * Math.sin(phi) * w;
     const look = [x * (1 - w), y * (1 - w), zz - 12];
     const lw = [0, 0, zf];
-    const lx = look[0] * (1 - w) + lw[0] * w, ly = look[1] * (1 - w) + lw[1] * w, lz = look[2] * (1 - w) + lw[2] * w;
+    const lx = look[0] * (1 - w) + lw[0] * w, ly = look[1] * (1 - w) + lw[1] * w, lz = Math.min(look[2] * (1 - w) + lw[2] * w, zz - 3);
     const dt = 1 / 120, sp = Math.abs(z(t + dt) - z(t - dt)) / (2 * dt);
     return { x, y, z: zz, lx, ly, lz, w, k, speed: sp };
   };
