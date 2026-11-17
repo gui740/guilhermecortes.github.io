@@ -20,3 +20,6 @@ out/reel_video.mp4
 out/patch/
 out/conferencia/full_*.png
 out/gancho_*_video.mp4
+assets/audio/gemini/test/
+assets/audio/gemini/full/ph_*
+assets/audio/gemini/full/fen_*
