@@ -69,3 +69,16 @@ if (modo === "faixas") {
     log(`faixa ${r} ok`);
   }
 }
+
+// node render.mjs amostra [ID...] -> out/v3a/<ID>.mp4 (cenas da amostra v3, com áudio)
+if (modo === "amostra") {
+  fs.mkdirSync("out/v3a", { recursive: true });
+  const lista = ids.length ? ids : ["V3ColdOpen", "V3Colagem", "V3FalaT04", "V3TransicaoCap", "V3Short02Hook"];
+  for (const id of lista) {
+    const c = await comp(id);
+    ultimo = -1;
+    await renderMedia({ composition: c, serveUrl, codec: "h264", crf: 18, outputLocation: `out/v3a/${id}.mp4`, browserExecutable: BROWSER,
+      concurrency: 4, imageFormat: "jpeg", jpegQuality: 92, onProgress: progresso(id), timeoutInMilliseconds: 120000 });
+    log(`${id} ok`);
+  }
+}

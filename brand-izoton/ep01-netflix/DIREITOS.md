@@ -22,3 +22,12 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Print da matéria do The Drum | The Drum | bloco 7 | Editorial | citação com data |
 | Print da matéria do Meio & Mensagem | Meio & Mensagem | bloco 7 | Editorial | citação com data |
 | Print do press release do Netflix House (PDF) | Netflix | bloco 10 | Editorial | citação com data |
+
+## v3 (amostra da Parada 1)
+
+| Material | Dono | Onde aparece | Status | Observação |
+|---|---|---|---|---|
+| Fotos de Reed Hastings (2014, 2015) | cellanr / re:publica (Wikimedia Commons) | cold open, colagem | Livre com atribuição (CC BY-SA 2.0) | ver IMAGENS.md |
+| Envelope de DVD da Netflix | BlueMint (Wikimedia Commons) | colagem | Livre com atribuição (CC BY 2.5) | ver IMAGENS.md |
+| Box de séries em DVD | BrokenSphere (Wikimedia Commons) | fala TED 03:33 | Livre com atribuição (CC BY-SA 3.0) | box genérico, não é da HBO |
+| Linhas novas de narração (Gacrux) | Próprio (síntese Gemini TTS) | cold open, regancho, hook do SHORT 02 | Próprio | — |
