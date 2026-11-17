@@ -12,7 +12,7 @@ import numpy as np
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 SEGS = json.load(open(os.path.join(AQUI, "narracao.json"), encoding="utf8"))
-GRUPOS = [(0, 2), (3, 4), (5, 7), (8, 10)]
+GRUPOS = [tuple(map(int, g.split("-"))) for g in os.environ.get("NARR_GRUPOS", "0-2,3-4,5-7,8-10").split(",")]
 VOZ, MODELO = "Gacrux", "gemini-3.1-flash-tts-preview"
 
 
@@ -42,9 +42,13 @@ def gemini(out):
     model = WhisperModel("small", device="cpu", compute_type="int8")
     for gi, (b0, b1) in enumerate(GRUPOS):
         segs = [s for s in SEGS if b0 <= s["bloco"] <= b1]
-        bruto = os.path.join(out, f"_grupo{gi}.wav")
+        bruto = os.path.join(out, f"_blocos{b0}-{b1}.wav")
         if not os.path.exists(bruto):
-            tts(VOZ, "\n\n".join(s["texto"] for s in segs), bruto, MODELO)
+            try:
+                tts(VOZ, "\n\n".join(s["texto"] for s in segs), bruto, MODELO)
+            except Exception as e:
+                print(f"FALHOU blocos {b0}-{b1}: {e}", flush=True)
+                continue
         # transcrição com tempo por palavra
         with wave.open(bruto) as w:
             sr = w.getframerate()

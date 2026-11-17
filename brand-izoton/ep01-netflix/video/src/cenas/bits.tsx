@@ -22,7 +22,7 @@ export const NLogo: React.FC<{ altura: number; style?: React.CSSProperties }> = 
 
 export const Faixa: React.FC<{ children: React.ReactNode; style?: React.CSSProperties }> = ({ children, style }) => (
   <div style={{ position: "absolute", left: FAIXA.x, width: FAIXA.w, top: 0, bottom: 0, display: "flex", flexDirection: "column",
-    justifyContent: "center", alignItems: "center", textAlign: "center", ...style }}>{children}</div>
+    justifyContent: "center", alignItems: "center", textAlign: "center", padding: "0 22px", boxSizing: "border-box", ...style }}>{children}</div>
 );
 
 export const Mono: React.FC<{ children: React.ReactNode; size?: number; cor?: string; style?: React.CSSProperties }> = ({ children, size = 22, cor = C.secundario, style }) => (

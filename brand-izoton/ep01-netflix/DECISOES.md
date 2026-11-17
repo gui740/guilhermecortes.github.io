@@ -3,7 +3,8 @@
 Escolhas tomadas sem consulta, seguindo o guia do prompt. Revise e me diga o que mudar.
 
 ## Narração
-1. **Voz provisória nesta versão:** Microsoft Edge TTS, `pt-BR-FranciscaNeural`, levemente mais lenta (-6%) e mais grave (-4 Hz). Motivo: a cota gratuita diária do Gemini acabou, e o filtro de segurança do Gemini bloqueou o grupo dos blocos 5 a 7. Conforme o seu pedido, uso a voz gratuita só nesta versão.
+1. **(Atualizado) Há duas versões.** A **v1** usa a voz provisória (Edge TTS), conforme o seu pedido. Quando a cota do Gemini renovou (08:06), gerei os blocos 5 a 10 na **Gacrux** e renderizei a **v2 com a Gacrux no vídeo todo**. A v2 é a entrega principal; a v1 fica em `video/out/v1_voz_provisoria/`.
+1a. **Voz provisória da v1:** Microsoft Edge TTS, `pt-BR-FranciscaNeural`, levemente mais lenta (-6%) e mais grave (-4 Hz). Motivo: a cota gratuita diária do Gemini acabou, e o filtro de segurança do Gemini bloqueou o grupo dos blocos 5 a 7. Conforme o seu pedido, uso a voz gratuita só nesta versão.
 2. **Trechos da Gacrux já prontos (blocos 0 a 4)** ficam guardados fora do repo e **não** entram nesta versão. Uma voz só no vídeo todo deixa a avaliação mais justa.
 3. **Para a versão final:** quando a cota renovar, gero os blocos 5 a 10 na Gacrux. Antes, isolo a frase que disparou o filtro, segmento por segmento.
 4. **Números falados por extenso** no texto da narração ("cento e trinta e seis milhões"), para a voz não ler dígito por dígito. Na tela, os números aparecem em algarismos.
@@ -58,6 +59,12 @@ Escolhas tomadas sem consulta, seguindo o guia do prompt. Revise e me diga o que
 34. **Legendas e carimbos ficavam mais largos que a faixa** e eram cortados no 9:16. A legenda agora tem no máximo 588 px (fonte 34), e o carimbo quebra linha dentro da faixa. O episódio inteiro foi renderizado de novo com isso.
 35. **A cópia do comercial #FU2016 tem legendas em português gravadas na imagem.** Dei zoom de 1,2× ancorado no topo da tela da TV para tirá-las do quadro e mantive só a nossa legenda, fiel ao áudio original.
 36. **Rótulo "CNN · 15 DEZ. 2015" da TV desenhada removido:** encostava na legenda e repetia o lower third.
+
+## Versão v2 (voz Gacrux)
+37. **Filtro de segurança do Gemini:** ele bloqueia **combinações** de blocos num mesmo pedido (5–7 juntos, 8–10 juntos), não uma frase específica. Com **um pedido por bloco**, todos passaram, sem mudar nenhuma palavra do roteiro.
+38. **Narração Gacrux acelerada em 7%** (ffmpeg `atempo=1.07`, tom preservado). Sem isso, o episódio passaria de 15 min (cerca de 15 min 33 s); com isso fecha em cerca de 14 min 52 s.
+39. **Faixa 9:16 com margem interna de 22 px** em todas as composições centrais. Subtítulos em fonte mono longos encostavam na borda do Short.
+40. **Prévia leve** do episódio (720p, cerca de 100 MB) para ver no celular, além do master 1080p.
 
 ## Entrega
 20. **Mídia fora do repo:** o repositório é público. Vídeo, áudio e clipes de terceiros não vão para o Git, só código, roteiro e documentos. Os arquivos finais vão para a pasta do episódio na sessão e, se der, para o seu Drive.

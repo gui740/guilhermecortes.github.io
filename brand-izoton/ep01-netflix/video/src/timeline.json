@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "duracao": 876.204,
+ "duracao": 892.002,
  "trechos": [
   {
    "tipo": "arq",
@@ -31,7 +31,7 @@
   {
    "tipo": "narr",
    "id": "n00a",
-   "dur": 6.013999999999999,
+   "dur": 6.183,
    "audio": "narr/n00a.wav",
    "cenas": [
     {
@@ -55,7 +55,7 @@
   {
    "tipo": "narr",
    "id": "n00b",
-   "dur": 10.91,
+   "dur": 12.11,
    "audio": "narr/n00b.wav",
    "cenas": [
     {
@@ -79,12 +79,12 @@
      "ate": 0.75
     }
    ],
-   "start": 11.534
+   "start": 11.703
   },
   {
    "tipo": "narr",
    "id": "n00c",
-   "dur": 6.1339999999999995,
+   "dur": 6.265,
    "audio": "narr/n00c.wav",
    "cenas": [
     {
@@ -104,12 +104,12 @@
      "foco": null
     }
    ],
-   "start": 22.444
+   "start": 23.813
   },
   {
    "tipo": "narr",
    "id": "n00d",
-   "dur": 4.428,
+   "dur": 4.317,
    "audio": "narr/n00d.wav",
    "cenas": [
     {
@@ -120,12 +120,12 @@
      "nota": "“Nosso maior concorrente é o sono” é manchete, não fala literal."
     }
    ],
-   "start": 28.578
+   "start": 30.078
   },
   {
    "tipo": "narr",
    "id": "n00e",
-   "dur": 10.392,
+   "dur": 10.972999999999999,
    "audio": "narr/n00e.wav",
    "cenas": [
     {
@@ -137,7 +137,7 @@
      "sub": "COMPETE COM VOCÊ."
     }
    ],
-   "start": 33.006
+   "start": 34.395
   },
   {
    "tipo": "respiro",
@@ -151,12 +151,12 @@
      "t": 0.0
     }
    ],
-   "start": 43.398
+   "start": 45.368
   },
   {
    "tipo": "narr",
    "id": "n01a",
-   "dur": 10.958,
+   "dur": 11.209,
    "audio": "narr/n01a.wav",
    "cenas": [
     {
@@ -166,7 +166,7 @@
      "rotulo": "DVD PELO CORREIO"
     }
    ],
-   "start": 45.998
+   "start": 47.968
   },
   {
    "tipo": "arq",
@@ -192,12 +192,12 @@
      "t": 0.0
     }
    ],
-   "start": 56.956
+   "start": 59.177
   },
   {
    "tipo": "narr",
    "id": "n01b",
-   "dur": 12.709999999999999,
+   "dur": 13.83,
    "audio": "narr/n01b.wav",
    "cenas": [
     {
@@ -207,12 +207,12 @@
      "sub": "“founding ethos” · TED 2018"
     }
    ],
-   "start": 67.226
+   "start": 69.447
   },
   {
    "tipo": "narr",
    "id": "n01c",
-   "dur": 19.406000000000002,
+   "dur": 18.808,
    "audio": "narr/n01c.wav",
    "cenas": [
     {
@@ -248,7 +248,7 @@
      "texto": "JENNER · Netflix and the re-invention of television · 2018"
     }
    ],
-   "start": 79.936
+   "start": 83.277
   },
   {
    "tipo": "respiro",
@@ -262,12 +262,12 @@
      "t": 0.0
     }
    ],
-   "start": 99.342
+   "start": 102.085
   },
   {
    "tipo": "narr",
    "id": "n02a",
-   "dur": 6.901999999999999,
+   "dur": 6.590999999999999,
    "audio": "narr/n02a.wav",
    "cenas": [
     {
@@ -278,7 +278,7 @@
      "grande": true
     }
    ],
-   "start": 101.942
+   "start": 104.685
   },
   {
    "tipo": "arq",
@@ -304,12 +304,12 @@
      "t": 0.0
     }
    ],
-   "start": 108.844
+   "start": 111.276
   },
   {
    "tipo": "narr",
    "id": "n02b",
-   "dur": 4.046,
+   "dur": 3.777,
    "audio": "narr/n02b.wav",
    "cenas": [
     {
@@ -320,7 +320,7 @@
      "grande": true
     }
    ],
-   "start": 123.634
+   "start": 126.066
   },
   {
    "tipo": "arq",
@@ -348,12 +348,12 @@
      "t": 0.0
     }
    ],
-   "start": 127.68
+   "start": 129.843
   },
   {
    "tipo": "narr",
    "id": "n02c",
-   "dur": 5.39,
+   "dur": 4.806,
    "audio": "narr/n02c.wav",
    "cenas": [
     {
@@ -363,7 +363,7 @@
      "sub": "CHRIS ANDERSON · TED 2018"
     }
    ],
-   "start": 144.91
+   "start": 147.073
   },
   {
    "tipo": "arq",
@@ -388,12 +388,12 @@
      "t": 0.0
     }
    ],
-   "start": 150.3
+   "start": 151.879
   },
   {
    "tipo": "narr",
    "id": "n02d",
-   "dur": 5.534,
+   "dur": 5.433,
    "audio": "narr/n02d.wav",
    "cenas": [
     {
@@ -413,7 +413,7 @@
      ]
     }
    ],
-   "start": 159.01
+   "start": 160.589
   },
   {
    "tipo": "arq",
@@ -440,12 +440,12 @@
      "t": 0.0
     }
    ],
-   "start": 164.544
+   "start": 166.022
   },
   {
    "tipo": "narr",
    "id": "n02e",
-   "dur": 12.398,
+   "dur": 12.443999999999999,
    "audio": "narr/n02e.wav",
    "cenas": [
     {
@@ -468,7 +468,7 @@
      "ate": 0.92
     }
    ],
-   "start": 183.154
+   "start": 184.632
   },
   {
    "tipo": "arq",
@@ -493,7 +493,7 @@
      "t": 0.0
     }
    ],
-   "start": 195.552
+   "start": 197.076
   },
   {
    "tipo": "respiro",
@@ -507,12 +507,12 @@
      "t": 0.0
     }
    ],
-   "start": 201.662
+   "start": 203.186
   },
   {
    "tipo": "narr",
    "id": "n03a",
-   "dur": 8.654,
+   "dur": 8.025,
    "audio": "narr/n03a.wav",
    "cenas": [
     {
@@ -522,7 +522,7 @@
      "sub": "HOUSE OF CARDS · 2013"
     }
    ],
-   "start": 204.262
+   "start": 205.786
   },
   {
    "tipo": "arq",
@@ -550,12 +550,12 @@
      "t": 0.0
     }
    ],
-   "start": 212.916
+   "start": 213.811
   },
   {
    "tipo": "narr",
    "id": "n03b",
-   "dur": 17.534000000000002,
+   "dur": 17.099,
    "audio": "narr/n03b.wav",
    "cenas": [
     {
@@ -575,12 +575,12 @@
      "texto": "JENNER · cap. “Scheduling the Binge” · 2018 · p. 119–137 · conceito de Lisa Perks"
     }
    ],
-   "start": 238.026
+   "start": 238.921
   },
   {
    "tipo": "narr",
    "id": "n03c",
-   "dur": 11.918,
+   "dur": 11.873,
    "audio": "narr/n03c.wav",
    "cenas": [
     {
@@ -600,12 +600,12 @@
      "texto": "PAZ PÉREZ · Next episode, next market · On Research · 2020 · p. 9"
     }
    ],
-   "start": 255.56
+   "start": 256.02
   },
   {
    "tipo": "narr",
    "id": "n03d",
-   "dur": 6.109999999999999,
+   "dur": 5.840999999999999,
    "audio": "narr/n03d.wav",
    "cenas": [
     {
@@ -617,12 +617,12 @@
      "nota": "DADO DE 2022"
     }
    ],
-   "start": 267.478
+   "start": 267.893
   },
   {
    "tipo": "narr",
    "id": "n03e",
-   "dur": 20.102,
+   "dur": 18.484,
    "audio": "narr/n03e.wav",
    "cenas": [
     {
@@ -653,12 +653,12 @@
      "foco": null
     }
    ],
-   "start": 273.588
+   "start": 273.734
   },
   {
    "tipo": "narr",
    "id": "n03f",
-   "dur": 13.405999999999999,
+   "dur": 14.266,
    "audio": "narr/n03f.wav",
    "cenas": [
     {
@@ -680,12 +680,12 @@
      "credito": "ENGENHEIRO DA NETFLIX, SEGUNDO JOHNSON (2022)"
     }
    ],
-   "start": 293.69
+   "start": 292.218
   },
   {
    "tipo": "narr",
    "id": "n03g",
-   "dur": 6.1579999999999995,
+   "dur": 6.289,
    "audio": "narr/n03g.wav",
    "cenas": [
     {
@@ -707,7 +707,7 @@
      "texto": "NÃO DEIXAR VOCÊ ESPERAR."
     }
    ],
-   "start": 307.096
+   "start": 306.484
   },
   {
    "tipo": "respiro",
@@ -721,12 +721,12 @@
      "t": 0.0
     }
    ],
-   "start": 313.254
+   "start": 312.773
   },
   {
    "tipo": "narr",
    "id": "n04a",
-   "dur": 13.814,
+   "dur": 13.054,
    "audio": "narr/n04a.wav",
    "cenas": [
     {
@@ -737,7 +737,7 @@
      "rotulo": "PRÊMIO DO ALGORITMO · C. 2007"
     }
    ],
-   "start": 315.854
+   "start": 315.373
   },
   {
    "tipo": "arq",
@@ -762,7 +762,7 @@
      "t": 0.0
     }
    ],
-   "start": 329.668
+   "start": 328.427
   },
   {
    "tipo": "arq",
@@ -790,12 +790,12 @@
      "t": 0.0
     }
    ],
-   "start": 334.518
+   "start": 333.277
   },
   {
    "tipo": "narr",
    "id": "n04b",
-   "dur": 5.51,
+   "dur": 5.8309999999999995,
    "audio": "narr/n04b.wav",
    "cenas": [
     {
@@ -805,7 +805,7 @@
      "direita": "O QUE VOCÊ ASSISTE"
     }
    ],
-   "start": 347.248
+   "start": 346.007
   },
   {
    "tipo": "arq",
@@ -831,12 +831,12 @@
      "t": 0.0
     }
    ],
-   "start": 352.758
+   "start": 351.838
   },
   {
    "tipo": "narr",
    "id": "n04c",
-   "dur": 11.87,
+   "dur": 11.25,
    "audio": "narr/n04c.wav",
    "cenas": [
     {
@@ -859,7 +859,7 @@
      "sub": "TED 2018 · 12:13"
     }
    ],
-   "start": 362.568
+   "start": 361.648
   },
   {
    "tipo": "respiro",
@@ -873,12 +873,12 @@
      "t": 0.0
     }
    ],
-   "start": 374.438
+   "start": 372.898
   },
   {
    "tipo": "narr",
    "id": "n05a",
-   "dur": 6.758,
+   "dur": 6.992999999999999,
    "audio": "narr/n05a.wav",
    "cenas": [
     {
@@ -888,7 +888,7 @@
      "sub": "ANOS 1990"
     }
    ],
-   "start": 377.038
+   "start": 375.498
   },
   {
    "tipo": "arq",
@@ -914,12 +914,12 @@
      "t": 0.0
     }
    ],
-   "start": 383.796
+   "start": 382.491
   },
   {
    "tipo": "narr",
    "id": "n05b",
-   "dur": 6.085999999999999,
+   "dur": 6.318,
    "audio": "narr/n05b.wav",
    "cenas": [
     {
@@ -929,7 +929,7 @@
      "sub": "TED 2018"
     }
    ],
-   "start": 399.326
+   "start": 398.021
   },
   {
    "tipo": "arq",
@@ -955,7 +955,7 @@
      "t": 0.0
     }
    ],
-   "start": 405.412
+   "start": 404.339
   },
   {
    "tipo": "arq",
@@ -980,12 +980,12 @@
      "t": 0.0
     }
    ],
-   "start": 412.342
+   "start": 411.269
   },
   {
    "tipo": "narr",
    "id": "n05c",
-   "dur": 8.75,
+   "dur": 8.113,
    "audio": "narr/n05c.wav",
    "cenas": [
     {
@@ -996,7 +996,7 @@
      "ano": "2001"
     }
    ],
-   "start": 418.212
+   "start": 417.139
   },
   {
    "tipo": "arq",
@@ -1023,12 +1023,12 @@
      "t": 0.0
     }
    ],
-   "start": 426.962
+   "start": 425.252
   },
   {
    "tipo": "narr",
    "id": "n05d",
-   "dur": 6.47,
+   "dur": 6.444,
    "audio": "narr/n05d.wav",
    "cenas": [
     {
@@ -1037,7 +1037,7 @@
      "texto": "DENSIDADE DE TALENTO"
     }
    ],
-   "start": 444.132
+   "start": 442.422
   },
   {
    "tipo": "arq",
@@ -1065,12 +1065,12 @@
      "t": 0.0
     }
    ],
-   "start": 450.602
+   "start": 448.866
   },
   {
    "tipo": "narr",
    "id": "n05e",
-   "dur": 22.838,
+   "dur": 23.78,
    "audio": "narr/n05e.wav",
    "cenas": [
     {
@@ -1101,7 +1101,7 @@
      "texto": "“THAT’S A KEEPER, REED!”"
     }
    ],
-   "start": 475.092
+   "start": 473.356
   },
   {
    "tipo": "respiro",
@@ -1115,12 +1115,12 @@
      "t": 0.0
     }
    ],
-   "start": 497.93
+   "start": 497.136
   },
   {
    "tipo": "narr",
    "id": "n06a",
-   "dur": 7.151999999999999,
+   "dur": 7.7379999999999995,
    "audio": "narr/n06a.wav",
    "cenas": [
     {
@@ -1129,12 +1129,12 @@
      "silencio": true
     }
    ],
-   "start": 500.53
+   "start": 499.736
   },
   {
    "tipo": "narr",
    "id": "n06b",
-   "dur": 11.246,
+   "dur": 12.266,
    "audio": "narr/n06b.wav",
    "cenas": [
     {
@@ -1159,12 +1159,12 @@
      "foco": null
     }
    ],
-   "start": 507.682
+   "start": 507.474
   },
   {
    "tipo": "narr",
    "id": "n06c",
-   "dur": 11.629999999999999,
+   "dur": 12.766,
    "audio": "narr/n06c.wav",
    "cenas": [
     {
@@ -1172,12 +1172,12 @@
      "t": 0
     }
    ],
-   "start": 518.928
+   "start": 519.74
   },
   {
    "tipo": "narr",
    "id": "n06d",
-   "dur": 17.03,
+   "dur": 22.327,
    "audio": "narr/n06d.wav",
    "cenas": [
     {
@@ -1195,12 +1195,12 @@
      ]
     }
    ],
-   "start": 530.558
+   "start": 532.506
   },
   {
    "tipo": "narr",
    "id": "n06e",
-   "dur": 25.694000000000003,
+   "dur": 29.107000000000003,
    "audio": "narr/n06e.wav",
    "cenas": [
     {
@@ -1238,7 +1238,7 @@
      "texto": "PAZ PÉREZ · Next episode, next market · On Research · 2020 · p. 11–12 · estudo preliminar de 3 meses"
     }
    ],
-   "start": 547.588
+   "start": 554.833
   },
   {
    "tipo": "respiro",
@@ -1252,12 +1252,12 @@
      "t": 0.0
     }
    ],
-   "start": 573.282
+   "start": 583.94
   },
   {
    "tipo": "narr",
    "id": "n07a",
-   "dur": 14.533999999999999,
+   "dur": 15.447,
    "audio": "narr/n07a.wav",
    "cenas": [
     {
@@ -1283,7 +1283,7 @@
      "foco": null
     }
    ],
-   "start": 575.882
+   "start": 586.54
   },
   {
    "tipo": "arq",
@@ -1309,12 +1309,12 @@
      "t": 0.0
     }
    ],
-   "start": 590.416
+   "start": 601.987
   },
   {
    "tipo": "narr",
    "id": "n07b",
-   "dur": 14.75,
+   "dur": 15.701,
    "audio": "narr/n07b.wav",
    "cenas": [
     {
@@ -1330,7 +1330,7 @@
      "texto": "CONNELLY · The Drum · 16 dez. 2015"
     }
    ],
-   "start": 610.316
+   "start": 621.887
   },
   {
    "tipo": "arq",
@@ -1354,12 +1354,12 @@
      "t": 0.0
     }
    ],
-   "start": 625.066
+   "start": 637.588
   },
   {
    "tipo": "narr",
    "id": "n07c",
-   "dur": 5.101999999999999,
+   "dur": 5.036,
    "audio": "narr/n07c.wav",
    "cenas": [
     {
@@ -1368,12 +1368,12 @@
      "texto": "ENTROU NA CONVERSA."
     }
    ],
-   "start": 628.516
+   "start": 641.038
   },
   {
    "tipo": "narr",
    "id": "n07d",
-   "dur": 16.718,
+   "dur": 17.434,
    "audio": "narr/n07d.wav",
    "cenas": [
     {
@@ -1407,7 +1407,7 @@
      "foco": null
     }
    ],
-   "start": 633.618
+   "start": 646.074
   },
   {
    "tipo": "respiro",
@@ -1421,12 +1421,12 @@
      "t": 0.0
     }
    ],
-   "start": 650.336
+   "start": 663.508
   },
   {
    "tipo": "narr",
    "id": "n08a",
-   "dur": 18.902,
+   "dur": 20.254,
    "audio": "narr/n08a.wav",
    "cenas": [
     {
@@ -1447,12 +1447,12 @@
      "rotulo": "NÚMERO 1 EM 94 PAÍSES · CARTA Q3 2021"
     }
    ],
-   "start": 652.936
+   "start": 666.108
   },
   {
    "tipo": "narr",
    "id": "n08b",
-   "dur": 14.198,
+   "dur": 14.293,
    "audio": "narr/n08b.wav",
    "cenas": [
     {
@@ -1479,12 +1479,12 @@
      "rotulo": "SÉRIE MAIS VISTA DA HISTÓRIA DA NETFLIX"
     }
    ],
-   "start": 671.838
+   "start": 686.362
   },
   {
    "tipo": "narr",
    "id": "n08c",
-   "dur": 15.134,
+   "dur": 14.834999999999999,
    "audio": "narr/n08c.wav",
    "cenas": [
     {
@@ -1514,12 +1514,12 @@
      "foco": null
     }
    ],
-   "start": 686.036
+   "start": 700.655
   },
   {
    "tipo": "narr",
    "id": "n08d",
-   "dur": 8.581999999999999,
+   "dur": 9.854,
    "audio": "narr/n08d.wav",
    "cenas": [
     {
@@ -1535,12 +1535,12 @@
      ]
     }
    ],
-   "start": 701.17
+   "start": 715.49
   },
   {
    "tipo": "narr",
    "id": "n08e",
-   "dur": 7.43,
+   "dur": 8.13,
    "audio": "narr/n08e.wav",
    "cenas": [
     {
@@ -1556,7 +1556,7 @@
      "texto": "JENNER · cap. “The Netflix Audience” · 2018 · p. 241–259"
     }
    ],
-   "start": 709.752
+   "start": 725.344
   },
   {
    "tipo": "respiro",
@@ -1570,12 +1570,12 @@
      "t": 0.0
     }
    ],
-   "start": 717.182
+   "start": 733.474
   },
   {
    "tipo": "narr",
    "id": "n09a",
-   "dur": 12.373999999999999,
+   "dur": 12.581999999999999,
    "audio": "narr/n09a.wav",
    "cenas": [
     {
@@ -1602,12 +1602,12 @@
      "foco": null
     }
    ],
-   "start": 719.782
+   "start": 736.074
   },
   {
    "tipo": "narr",
    "id": "n09b",
-   "dur": 5.27,
+   "dur": 4.766,
    "audio": "narr/n09b.wav",
    "cenas": [
     {
@@ -1627,12 +1627,12 @@
      "foco": null
     }
    ],
-   "start": 732.156
+   "start": 748.656
   },
   {
    "tipo": "narr",
    "id": "n09c",
-   "dur": 12.998,
+   "dur": 12.996,
    "audio": "narr/n09c.wav",
    "cenas": [
     {
@@ -1652,12 +1652,12 @@
      "foco": null
     }
    ],
-   "start": 737.426
+   "start": 753.422
   },
   {
    "tipo": "narr",
    "id": "n09d",
-   "dur": 7.406,
+   "dur": 7.616,
    "audio": "narr/n09d.wav",
    "cenas": [
     {
@@ -1667,12 +1667,12 @@
      "rotulo": "PELOS NÚMEROS DA EMPRESA: SIM"
     }
    ],
-   "start": 750.424
+   "start": 766.418
   },
   {
    "tipo": "narr",
    "id": "n09e",
-   "dur": 25.622,
+   "dur": 24.742,
    "audio": "narr/n09e.wav",
    "cenas": [
     {
@@ -1705,12 +1705,12 @@
      "sub": "CARTA Q4 2024"
     }
    ],
-   "start": 757.83
+   "start": 774.034
   },
   {
    "tipo": "narr",
    "id": "n09f",
-   "dur": 16.67,
+   "dur": 16.309,
    "audio": "narr/n09f.wav",
    "cenas": [
     {
@@ -1743,7 +1743,7 @@
      "ate": 0.85
     }
    ],
-   "start": 783.452
+   "start": 798.776
   },
   {
    "tipo": "arq",
@@ -1770,7 +1770,7 @@
      "t": 0.0
     }
    ],
-   "start": 800.122
+   "start": 815.085
   },
   {
    "tipo": "respiro",
@@ -1784,7 +1784,7 @@
      "t": 0.0
     }
    ],
-   "start": 813.472
+   "start": 828.435
   },
   {
    "tipo": "arq",
@@ -1808,12 +1808,12 @@
      "t": 0.0
     }
    ],
-   "start": 816.072
+   "start": 831.035
   },
   {
    "tipo": "narr",
    "id": "n10a",
-   "dur": 20.318,
+   "dur": 20.946,
    "audio": "narr/n10a.wav",
    "cenas": [
     {
@@ -1835,12 +1835,12 @@
      "texto": "LAS VEGAS · 2027"
     }
    ],
-   "start": 818.572
+   "start": 833.535
   },
   {
    "tipo": "narr",
    "id": "n10b",
-   "dur": 9.83,
+   "dur": 9.859,
    "audio": "narr/n10b.wav",
    "cenas": [
     {
@@ -1867,7 +1867,7 @@
      "foco": null
     }
    ],
-   "start": 838.89
+   "start": 854.481
   },
   {
    "tipo": "arq",
@@ -1892,12 +1892,12 @@
      "t": 0.0
     }
    ],
-   "start": 848.72
+   "start": 864.34
   },
   {
    "tipo": "narr",
    "id": "n10c",
-   "dur": 13.520000000000001,
+   "dur": 13.702,
    "audio": "narr/n10c.wav",
    "cenas": [
     {
@@ -1911,12 +1911,12 @@
      "t": 8.0
     }
    ],
-   "start": 854.82
+   "start": 870.44
   },
   {
    "tipo": "narr",
    "id": "n10d",
-   "dur": 7.864,
+   "dur": 7.859999999999999,
    "audio": "narr/n10d.wav",
    "cenas": [
     {
@@ -1926,7 +1926,7 @@
      "sub": "ATÉ O PRÓXIMO ARQUIVO."
     }
    ],
-   "start": 868.34
+   "start": 884.142
   }
  ],
  "fx": [
@@ -1943,583 +1943,583 @@
    "som": "tecla_2"
   },
   {
-   "t": 11.534,
+   "t": 11.703,
    "som": "bip_3"
   },
   {
-   "t": 16.234,
+   "t": 16.403,
    "som": "geiger_0"
   },
   {
-   "t": 22.444,
+   "t": 23.813,
    "som": "papel_1"
   },
   {
-   "t": 22.994,
+   "t": 24.363,
    "som": "carimbo_2"
   },
   {
-   "t": 28.578,
+   "t": 30.078,
    "som": "bip_3"
   },
   {
-   "t": 33.006,
+   "t": 34.395,
    "som": "sweep_0"
   },
   {
-   "t": 43.398,
+   "t": 45.368,
    "som": "click_1"
   },
   {
-   "t": 45.998,
+   "t": 47.968,
    "som": "papel_2"
   },
   {
-   "t": 56.956,
+   "t": 59.177,
    "som": "crt_on_3"
   },
   {
-   "t": 66.976,
+   "t": 69.197,
    "som": "crt_off_0"
   },
   {
-   "t": 67.226,
+   "t": 69.447,
    "som": "bip_1"
   },
   {
-   "t": 79.936,
+   "t": 83.277,
    "som": "click_2"
   },
   {
-   "t": 88.936,
+   "t": 92.277,
    "som": "papel_3"
   },
   {
-   "t": 89.486,
+   "t": 92.827,
    "som": "carimbo_0"
   },
   {
-   "t": 99.342,
+   "t": 102.085,
    "som": "click_1"
   },
   {
-   "t": 101.942,
+   "t": 104.685,
    "som": "bip_2"
   },
   {
-   "t": 108.844,
+   "t": 111.276,
    "som": "crt_on_3"
   },
   {
-   "t": 123.384,
+   "t": 125.816,
    "som": "crt_off_0"
   },
   {
-   "t": 123.634,
+   "t": 126.066,
    "som": "bip_1"
   },
   {
-   "t": 127.68,
+   "t": 129.843,
    "som": "crt_on_2"
   },
   {
-   "t": 144.66,
+   "t": 146.823,
    "som": "crt_off_3"
   },
   {
-   "t": 144.91,
+   "t": 147.073,
    "som": "bip_0"
   },
   {
-   "t": 150.3,
+   "t": 151.879,
    "som": "crt_on_1"
   },
   {
-   "t": 158.76,
+   "t": 160.339,
    "som": "crt_off_2"
   },
   {
-   "t": 159.01,
+   "t": 160.589,
    "som": "sweep_3"
   },
   {
-   "t": 164.544,
+   "t": 166.022,
    "som": "crt_on_0"
   },
   {
-   "t": 182.904,
+   "t": 184.382,
    "som": "crt_off_1"
   },
   {
-   "t": 183.154,
+   "t": 184.632,
    "som": "bip_2"
   },
   {
-   "t": 187.854,
+   "t": 189.332,
    "som": "geiger_3"
   },
   {
-   "t": 195.552,
+   "t": 197.076,
    "som": "crt_on_0"
   },
   {
-   "t": 201.412,
+   "t": 202.936,
    "som": "crt_off_1"
   },
   {
-   "t": 201.662,
+   "t": 203.186,
    "som": "click_2"
   },
   {
-   "t": 204.262,
+   "t": 205.786,
    "som": "bip_3"
   },
   {
-   "t": 212.916,
+   "t": 213.811,
    "som": "crt_on_0"
   },
   {
-   "t": 237.776,
+   "t": 238.671,
    "som": "crt_off_1"
   },
   {
-   "t": 238.026,
+   "t": 238.921,
    "som": "click_2"
   },
   {
-   "t": 255.56,
+   "t": 256.02,
    "som": "papel_3"
   },
   {
-   "t": 256.11,
+   "t": 256.57,
    "som": "carimbo_0"
   },
   {
-   "t": 267.728,
+   "t": 268.143,
    "som": "click_1"
   },
   {
-   "t": 273.688,
+   "t": 273.834,
    "som": "bip_2"
   },
   {
-   "t": 284.588,
+   "t": 284.734,
    "som": "papel_3"
   },
   {
-   "t": 285.138,
+   "t": 285.284,
    "som": "carimbo_0"
   },
   {
-   "t": 293.69,
+   "t": 292.218,
    "som": "sweep_1"
   },
   {
-   "t": 293.84,
+   "t": 292.368,
    "som": "tecla_2"
   },
   {
-   "t": 300.19,
+   "t": 298.718,
    "som": "bip_3"
   },
   {
-   "t": 307.296,
+   "t": 306.684,
    "som": "geiger_0"
   },
   {
-   "t": 310.096,
+   "t": 309.484,
    "som": "bip_1"
   },
   {
-   "t": 313.254,
+   "t": 312.773,
    "som": "click_2"
   },
   {
-   "t": 316.454,
+   "t": 315.973,
    "som": "carimbo_3"
   },
   {
-   "t": 329.668,
+   "t": 328.427,
    "som": "crt_on_0"
   },
   {
-   "t": 334.268,
+   "t": 333.027,
    "som": "crt_off_1"
   },
   {
-   "t": 334.518,
+   "t": 333.277,
    "som": "crt_on_2"
   },
   {
-   "t": 346.998,
+   "t": 345.757,
    "som": "crt_off_3"
   },
   {
-   "t": 347.448,
+   "t": 346.207,
    "som": "plin_0"
   },
   {
-   "t": 352.758,
+   "t": 351.838,
    "som": "crt_on_1"
   },
   {
-   "t": 362.318,
+   "t": 361.398,
    "som": "crt_off_2"
   },
   {
-   "t": 362.768,
+   "t": 361.848,
    "som": "geiger_3"
   },
   {
-   "t": 367.568,
+   "t": 366.648,
    "som": "bip_0"
   },
   {
-   "t": 374.438,
+   "t": 372.898,
    "som": "click_1"
   },
   {
-   "t": 377.038,
+   "t": 375.498,
    "som": "bip_2"
   },
   {
-   "t": 383.796,
+   "t": 382.491,
    "som": "crt_on_3"
   },
   {
-   "t": 399.076,
+   "t": 397.771,
    "som": "crt_off_0"
   },
   {
-   "t": 399.326,
+   "t": 398.021,
    "som": "bip_1"
   },
   {
-   "t": 405.412,
+   "t": 404.339,
    "som": "crt_on_2"
   },
   {
-   "t": 412.092,
+   "t": 411.019,
    "som": "crt_off_3"
   },
   {
-   "t": 412.342,
+   "t": 411.269,
    "som": "crt_on_0"
   },
   {
-   "t": 417.962,
+   "t": 416.889,
    "som": "crt_off_1"
   },
   {
-   "t": 418.612,
+   "t": 417.539,
    "som": "click_2"
   },
   {
-   "t": 426.962,
+   "t": 425.252,
    "som": "crt_on_3"
   },
   {
-   "t": 443.882,
+   "t": 442.172,
    "som": "crt_off_0"
   },
   {
-   "t": 444.132,
+   "t": 442.422,
    "som": "bip_1"
   },
   {
-   "t": 450.602,
+   "t": 448.866,
    "som": "crt_on_2"
   },
   {
-   "t": 474.842,
+   "t": 473.106,
    "som": "crt_off_3"
   },
   {
-   "t": 475.392,
+   "t": 473.656,
    "som": "carimbo_0"
   },
   {
-   "t": 481.092,
+   "t": 479.356,
    "som": "papel_1"
   },
   {
-   "t": 481.642,
+   "t": 479.906,
    "som": "carimbo_2"
   },
   {
-   "t": 489.092,
+   "t": 487.356,
    "som": "plin_3"
   },
   {
-   "t": 497.93,
+   "t": 497.136,
    "som": "click_0"
   },
   {
-   "t": 513.682,
+   "t": 513.474,
    "som": "papel_1"
   },
   {
-   "t": 514.232,
+   "t": 514.024,
    "som": "carimbo_2"
   },
   {
-   "t": 518.928,
+   "t": 519.74,
    "som": "bip_3"
   },
   {
-   "t": 530.558,
+   "t": 532.506,
    "som": "tecla_0"
   },
   {
-   "t": 547.788,
+   "t": 555.033,
    "som": "geiger_1"
   },
   {
-   "t": 561.588,
+   "t": 568.833,
    "som": "papel_2"
   },
   {
-   "t": 562.138,
+   "t": 569.383,
    "som": "carimbo_3"
   },
   {
-   "t": 573.282,
+   "t": 583.94,
    "som": "click_0"
   },
   {
-   "t": 575.882,
+   "t": 586.54,
    "som": "bip_1"
   },
   {
-   "t": 576.232,
+   "t": 586.89,
    "som": "bip_2"
   },
   {
-   "t": 582.882,
+   "t": 593.54,
    "som": "papel_3"
   },
   {
-   "t": 583.432,
+   "t": 594.09,
    "som": "carimbo_0"
   },
   {
-   "t": 590.416,
+   "t": 601.987,
    "som": "sweep_1"
   },
   {
-   "t": 610.066,
+   "t": 621.637,
    "som": "click_2"
   },
   {
-   "t": 610.316,
+   "t": 621.887,
    "som": "bip_3"
   },
   {
-   "t": 625.066,
+   "t": 637.588,
    "som": "sweep_0"
   },
   {
-   "t": 628.266,
+   "t": 640.788,
    "som": "click_1"
   },
   {
-   "t": 628.516,
+   "t": 641.038,
    "som": "bip_2"
   },
   {
-   "t": 633.618,
+   "t": 646.074,
    "som": "tecla_3"
   },
   {
-   "t": 642.618,
+   "t": 655.074,
    "som": "papel_0"
   },
   {
-   "t": 643.168,
+   "t": 655.624,
    "som": "carimbo_1"
   },
   {
-   "t": 650.336,
+   "t": 663.508,
    "som": "click_2"
   },
   {
-   "t": 652.936,
+   "t": 666.108,
    "som": "sweep_3"
   },
   {
-   "t": 660.436,
+   "t": 673.608,
    "som": "sweep_0"
   },
   {
-   "t": 660.586,
+   "t": 673.758,
    "som": "tecla_1"
   },
   {
-   "t": 671.838,
+   "t": 686.362,
    "som": "papel_2"
   },
   {
-   "t": 672.388,
+   "t": 686.912,
    "som": "carimbo_3"
   },
   {
-   "t": 677.838,
+   "t": 692.362,
    "som": "sweep_0"
   },
   {
-   "t": 677.988,
+   "t": 692.512,
    "som": "tecla_1"
   },
   {
-   "t": 686.036,
+   "t": 700.655,
    "som": "sweep_2"
   },
   {
-   "t": 692.536,
+   "t": 707.155,
    "som": "papel_3"
   },
   {
-   "t": 693.086,
+   "t": 707.705,
    "som": "carimbo_0"
   },
   {
-   "t": 701.17,
+   "t": 715.49,
    "som": "sweep_1"
   },
   {
-   "t": 709.852,
+   "t": 725.444,
    "som": "bip_2"
   },
   {
-   "t": 717.182,
+   "t": 733.474,
    "som": "click_3"
   },
   {
-   "t": 719.782,
+   "t": 736.074,
    "som": "sweep_0"
   },
   {
-   "t": 719.932,
+   "t": 736.224,
    "som": "tecla_1"
   },
   {
-   "t": 725.782,
+   "t": 742.074,
    "som": "papel_2"
   },
   {
-   "t": 726.332,
+   "t": 742.624,
    "som": "carimbo_3"
   },
   {
-   "t": 732.156,
+   "t": 748.656,
    "som": "papel_0"
   },
   {
-   "t": 732.706,
+   "t": 749.206,
    "som": "carimbo_1"
   },
   {
-   "t": 737.426,
+   "t": 753.422,
    "som": "papel_2"
   },
   {
-   "t": 737.976,
+   "t": 753.972,
    "som": "carimbo_3"
   },
   {
-   "t": 750.724,
+   "t": 766.718,
    "som": "carimbo_0"
   },
   {
-   "t": 757.83,
+   "t": 774.034,
    "som": "sweep_1"
   },
   {
-   "t": 757.98,
+   "t": 774.184,
    "som": "tecla_2"
   },
   {
-   "t": 766.83,
+   "t": 783.034,
    "som": "papel_3"
   },
   {
-   "t": 767.38,
+   "t": 783.584,
    "som": "carimbo_0"
   },
   {
-   "t": 775.33,
+   "t": 791.534,
    "som": "bip_1"
   },
   {
-   "t": 783.452,
+   "t": 798.776,
    "som": "papel_2"
   },
   {
-   "t": 784.002,
+   "t": 799.326,
    "som": "carimbo_3"
   },
   {
-   "t": 793.652,
+   "t": 808.976,
    "som": "geiger_0"
   },
   {
-   "t": 800.122,
+   "t": 815.085,
    "som": "crt_on_1"
   },
   {
-   "t": 813.222,
+   "t": 828.185,
    "som": "crt_off_2"
   },
   {
-   "t": 813.472,
+   "t": 828.435,
    "som": "click_3"
   },
   {
-   "t": 816.072,
+   "t": 831.035,
    "som": "sweep_0"
   },
   {
-   "t": 818.322,
+   "t": 833.285,
    "som": "click_1"
   },
   {
-   "t": 824.572,
+   "t": 839.535,
    "som": "sweep_2"
   },
   {
-   "t": 824.722,
+   "t": 839.685,
    "som": "tecla_3"
   },
   {
-   "t": 832.572,
+   "t": 847.535,
    "som": "bip_0"
   },
   {
-   "t": 838.89,
+   "t": 854.481,
    "som": "papel_1"
   },
   {
-   "t": 843.89,
+   "t": 859.481,
    "som": "papel_2"
   },
   {
-   "t": 844.44,
+   "t": 860.031,
    "som": "carimbo_3"
   },
   {
-   "t": 848.72,
+   "t": 864.34,
    "som": "sweep_0"
   },
   {
-   "t": 854.57,
+   "t": 870.19,
    "som": "click_1"
   },
   {
-   "t": 854.82,
+   "t": 870.44,
    "som": "bip_2"
   },
   {
-   "t": 871.34,
+   "t": 887.142,
    "som": "crt_off_3"
   }
  ],
@@ -2530,11 +2530,11 @@
    "trechos": [
     [
      0.0,
-     33.006
+     34.395
     ],
     [
-     783.452,
-     813.472
+     798.776,
+     828.435
     ]
    ],
    "hook": "A NETFLIX NÃO COMPETE COM A HBO."
@@ -2544,8 +2544,8 @@
    "nome": "O botão mais apertado da Netflix",
    "trechos": [
     [
-     267.478,
-     313.254
+     267.893,
+     312.773
     ]
    ],
    "hook": "136 MILHÕES DE CLIQUES POR DIA"
@@ -2555,8 +2555,8 @@
    "nome": "Você dá 5 estrelas para Schindler e assiste Adam Sandler",
    "trechos": [
     [
-     334.518,
-     374.438
+     333.277,
+     372.898
     ]
    ],
    "hook": "5 ESTRELAS PARA SCHINDLER. E VOCÊ ASSISTE SANDLER."
@@ -2566,8 +2566,8 @@
    "nome": "O teste que todo chefe da Netflix precisa fazer",
    "trechos": [
     [
-     418.212,
-     497.93
+     417.139,
+     497.136
     ]
    ],
    "hook": "VOCÊ LUTARIA PARA MANTÊ-LA?"
@@ -2577,8 +2577,8 @@
    "nome": "Por que a Netflix lidera com uma letra",
    "trechos": [
     [
-     500.53,
-     547.588
+     499.736,
+     554.833
     ]
    ],
    "hook": "POR QUE UMA LETRA SÓ?"
@@ -2588,8 +2588,8 @@
    "nome": "A campanha da Netflix que entrou num debate presidencial",
    "trechos": [
     [
-     575.882,
-     633.618
+     586.54,
+     646.074
     ]
    ],
    "hook": "NO INTERVALO, UM CANDIDATO QUE NÃO EXISTE."
@@ -2599,8 +2599,8 @@
    "nome": "O fim da senha compartilhada foi um acerto?",
    "trechos": [
     [
-     719.782,
-     757.83
+     736.074,
+     774.034
     ]
    ],
    "hook": "A NETFLIX COBROU A SENHA. DEU CERTO?"
@@ -2610,8 +2610,8 @@
    "nome": "A Netflix saiu da tela",
    "trechos": [
     [
-     816.072,
-     876.204
+     831.035,
+     892.002
     ]
    ],
    "hook": "AGORA É VOCÊ QUE ENTRA NA NETFLIX."
@@ -2619,43 +2619,43 @@
  ],
  "capitulos": [
   {
-   "t": 43.398,
+   "t": 45.368,
    "titulo": "Do dvd ao streaming"
   },
   {
-   "t": 99.342,
+   "t": 102.085,
    "titulo": "A aposta no original"
   },
   {
-   "t": 201.662,
+   "t": 203.186,
    "titulo": "O binge como produto"
   },
   {
-   "t": 313.254,
+   "t": 312.773,
    "titulo": "O algoritmo"
   },
   {
-   "t": 374.438,
+   "t": 372.898,
    "titulo": "A cultura"
   },
   {
-   "t": 497.93,
+   "t": 497.136,
    "titulo": "A identidade"
   },
   {
-   "t": 573.282,
+   "t": 583.94,
    "titulo": "A publicidade"
   },
   {
-   "t": 650.336,
+   "t": 663.508,
    "titulo": "Os fenômenos"
   },
   {
-   "t": 717.182,
+   "t": 733.474,
    "titulo": "A conta"
   },
   {
-   "t": 813.472,
+   "t": 828.435,
    "titulo": "A casa"
   }
  ]

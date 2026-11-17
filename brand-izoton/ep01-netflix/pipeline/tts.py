@@ -39,6 +39,8 @@ def tts(voice, text, out, model="gemini-3.8-flash-tts"):
         if "content" in c:
             break
         print("TTS sem áudio:", c.get("finishReason"), d.get("promptFeedback"), file=sys.stderr)
+        if c.get("finishReason") in ("SAFETY", "PROHIBITED_CONTENT", "BLOCKLIST", "OTHER"):
+            raise RuntimeError(f"bloqueado pelo filtro: {c.get('finishReason')}")
         time.sleep(5)
         d = json.load(urllib.request.urlopen(req, timeout=300))
     pcm = base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
