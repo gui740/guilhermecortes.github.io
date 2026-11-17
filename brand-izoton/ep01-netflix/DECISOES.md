@@ -54,5 +54,10 @@ Escolhas tomadas sem consulta, seguindo o guia do prompt. Revise e me diga o que
 32. **Emenda em vez de render completo:** os dois trechos corrigidos foram renderizados à parte e encaixados no master quadro a quadro, poupando cerca de 1 h de render.
 33. **Pico após o AAC:** o mix sai a -14,0 LUFS e -1,0 dBTP; depois da codificação AAC, o pico medido fica em cerca de -0,7 dBFS. Mantive assim, porque o YouTube normaliza para -14 LUFS e a diferença é inaudível.
 
+## Checagem quadro a quadro dos Shorts (correções aplicadas)
+34. **Legendas e carimbos ficavam mais largos que a faixa** e eram cortados no 9:16. A legenda agora tem no máximo 588 px (fonte 34), e o carimbo quebra linha dentro da faixa. O episódio inteiro foi renderizado de novo com isso.
+35. **A cópia do comercial #FU2016 tem legendas em português gravadas na imagem.** Dei zoom de 1,2× ancorado no topo da tela da TV para tirá-las do quadro e mantive só a nossa legenda, fiel ao áudio original.
+36. **Rótulo "CNN · 15 DEZ. 2015" da TV desenhada removido:** encostava na legenda e repetia o lower third.
+
 ## Entrega
 20. **Mídia fora do repo:** o repositório é público. Vídeo, áudio e clipes de terceiros não vão para o Git, só código, roteiro e documentos. Os arquivos finais vão para a pasta do episódio na sessão e, se der, para o seu Drive.
