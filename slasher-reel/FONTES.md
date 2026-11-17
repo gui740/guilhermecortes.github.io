@@ -16,6 +16,6 @@ Disponibilidade conferida em 17/11/2026. Catálogo de streaming muda: vale recon
 - **Objetos do cenário (33 recortes):** Openverse (Flickr/Wikimedia) com licenças CC que permitem uso comercial e modificação; autor e licença de cada um em `research.json`.
 - **Logos:** HBO Max (site oficial), Prime Video (Wikimedia Commons), Looke (site oficial), todos convertidos para branco.
 - **Trilha:** "Cool Hard Facts", Kevin MacLeod (incompetech.com), CC BY 4.0 → **o crédito é obrigatório** (já está na legenda).
-- **Narração:** edge-tts, voz pt-BR-AntonioNeural. Não havia chave de ElevenLabs nem de Gemini no ambiente.
+- **Narração:** Gemini TTS (gemini-3.1-flash-tts-preview, voz Fenrir) com notas de direção de estilo; cortada por frase, aparada e encaixada na timeline (rubberband 1,05–1,20x), EQ, compressão, −16 LUFS e room tone.
 - **Efeitos sonoros:** sintetizados por código.
 - **Fontes tipográficas:** Anton, Playfair Display, Inter, Special Elite (Google Fonts, OFL).

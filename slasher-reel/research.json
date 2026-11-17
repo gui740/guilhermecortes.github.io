@@ -1108,7 +1108,7 @@
    "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Hard%20Facts.mp3",
    "edicao": "remontada compasso a compasso (114,8 BPM): viradas nos compassos 52 e 21 caem nas travessias; breque seco antes de 'Presos no Gelo'"
   },
-  "narracao": "edge-tts, voz pt-BR-AntonioNeural (Microsoft). ElevenLabs/Gemini indisponíveis: nenhuma chave de API no ambiente.",
+  "narracao": "Gemini TTS (Google AI Studio), modelo gemini-3.1-flash-tts-preview, voz Fenrir, prompt com notas de direção (youtuber de terror animado, baixa a voz nos assassinos). Ganchos B/C com a mesma voz.",
   "efeitos": "sintetizados por código (scripts/mix.py): clique de lanterna, whoosh, fita rasgando, porta rangendo, passos, respiração abafada"
  },
  "fontes_tipograficas": "Anton, Playfair Display Italic, Inter, Special Elite — Google Fonts (OFL)"
