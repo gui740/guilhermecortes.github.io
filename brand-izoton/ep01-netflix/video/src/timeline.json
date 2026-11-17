@@ -1286,14 +1286,14 @@
      "tipo": "evidencia",
      "t": 7.0,
      "img": "media/stills/web_drum.png",
-     "w": 2560,
-     "h": 1520,
+     "w": 1364,
+     "h": 1028,
      "carimbo": "EVIDÊNCIA 13 · THE DRUM · 16 DEZ. 2015",
      "trecho": [
       0.04,
-      0.3,
+      0.69,
       0.92,
-      0.1
+      0.29
      ],
      "frase": null,
      "foco": null

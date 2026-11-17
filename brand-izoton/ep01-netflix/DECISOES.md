@@ -33,5 +33,20 @@ Escolhas tomadas sem consulta, seguindo o guia do prompt. Revise e me diga o que
 ## Legendas
 19. **Legenda PT-BR só nas falas em inglês**, como pede o briefing. A narração em português não ganha legenda queimada no vídeo longo; o YouTube gera a automática.
 
+## Montagem
+21. **Zoom mínimo por plano:** quando o rosto de Hastings está perto da borda (ex.: plano por cima do ombro de Chris Anderson no T12), o zoom sobe até o necessário para centralizar o rosto, com limite de 2,6×. A regra vem da faixa 9:16, que manda.
+22. **Scanlines, barra de rolagem e cintilação do CRT são feitas no Remotion** (camada por cima do vídeo). P&B, grão, curvatura e aberração ficam no ffmpeg. Motivo: o filtro de scanline no ffmpeg deixava o processamento 10 vezes mais lento.
+23. **Saída das falas de arquivo:** o último quadro congela, encolhe para 60% com sombra e se isola no branco. É a versão enxuta da transição-assinatura. No hook, a saída é o "desligar de TV": a imagem colapsa numa linha.
+24. **O hook abre seco**, só com o áudio original de Hastings, sem trilha. A trilha entra com a narração.
+25. **Captura da The Drum** refeita só com o título e o primeiro parágrafo (a primeira captura tinha pegado um anúncio).
+26. **Referência do vídeo #FU2016:** o arquivo vem do canal "Frank Underwood" no YouTube (não é o canal oficial da Netflix). A descrição cita o canal e informa que é a reprodução do comercial exibido na CNN.
+
+## Shorts
+27. **Renderizados do mesmo projeto em 1,5×** (2880x1620) e recortados na faixa central (912x1620), com ampliação final pequena para 1080x1920. Fica bem mais nítido que recortar do master 1080p.
+28. **Título-gancho** nos 2,5 s iniciais: cartão branco no topo, mesma tipografia do episódio. O SHORT 01 junta dois trechos (o hook e o bloco do Fortnite e do vício), como previsto na decupagem.
+
+## Capa
+29. **Capa 1280x720:** Hastings em P&B com scanlines à esquerda, o N limpo à direita, título "ELA COMPETE COM O SEU SONO." (paráfrase fiel da fala literal "competing with sleep"), assinatura do canal e lower third em âmbar.
+
 ## Entrega
 20. **Mídia fora do repo:** o repositório é público. Vídeo, áudio e clipes de terceiros não vão para o Git, só código, roteiro e documentos. Os arquivos finais vão para a pasta do episódio na sessão e, se der, para o seu Drive.
