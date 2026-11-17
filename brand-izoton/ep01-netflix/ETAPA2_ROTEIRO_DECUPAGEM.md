@@ -247,13 +247,25 @@
 > Legenda: *"queremos que as pessoas digam a verdade. E dizemos: discordar em silêncio é desleal."*
 
 > **[SHORT 04 · Cultura] "O teste que todo chefe da Netflix precisa fazer"**
-> - **Entrada:** 06:55. **Saída:** 07:40.
+> - **Entrada:** 06:55. **Saída:** 08:05.
 > - **Hook (0–2 s):** a pergunta em tipografia grande na faixa central: **SE ESSA PESSOA QUISESSE SAIR, VOCÊ LUTARIA PARA MANTÊ-LA?**
 
-**[06:55–07:40] NARR, com ARQUIVO do Blitzscaling se a fala for confirmada no vídeo**
-> Em 2001, quando o dinheiro para startups secou, a Netflix demitiu um terço da empresa: de 120 para 80 pessoas. Achavam que tudo ia travar. Fizeram mais. Isso Hastings contou numa aula em Stanford, em 2015. [F9, notas oficiais da aula]
-> Daí veio a ideia de densidade de talento, e o *keeper test*. No memorando oficial de cultura da Netflix, a pergunta é: se essa pessoa quisesse sair, eu lutaria para mantê-la? Se a resposta for não, a empresa considera mais justo se separar rápido. [F9, jobs.netflix.com/culture]
-> A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria: quando Hastings era criança, o pai dele dizia, ao ver um peixe bom, "esse é um keeper". Esse fica. [F9]
+**[06:55–07:01] NARR**
+> Em 2001, o dinheiro acabou. Hastings contou o que veio depois numa aula em Stanford, em 2015.
+
+**[07:01–07:18] ARQUIVO B01** (Blitzscaling, 356,48 s → 373,10 s)
+> "after we did this one third layoff, it was 120 people to 80, we had expected to basically grind to a halt (…) because it would take 80 people just to keep the lights on. But in fact, we got more done with only 80 people."
+> Legenda: *"depois de demitir um terço, de 120 para 80 pessoas, a gente esperava travar (…) porque seriam precisos 80 só para manter as luzes acesas. Mas, na verdade, fizemos mais com só 80 pessoas."*
+
+**[07:18–07:23] NARR**
+> Daí veio a densidade de talento. E uma pergunta que todo gestor tem de responder.
+
+**[07:23–07:47] ARQUIVO B02** (Blitzscaling, 425,16 s → 449,10 s)
+> "for managers, they have to each year testify for each of their people. That if that person were trying to quit, they would try to change their mind. (…) But sometimes you find that you have people working for you, and if they quit, you'd be like, that's pretty good."
+> Legenda: *"os gestores têm de, todo ano, dar um testemunho sobre cada pessoa: se ela tentasse pedir demissão, eles tentariam fazê-la mudar de ideia? (…) Mas às vezes você percebe que tem gente no time que, se pedisse para sair, você pensaria: até que seria bom."*
+
+**[07:47–08:05] NARR**
+> No memorando oficial de cultura, isso tem nome: *keeper test*. Se a resposta for não, a empresa considera mais justo se separar rápido. A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria: quando Hastings era criança, o pai dele dizia, ao ver um peixe bom, "esse é um keeper". Esse fica. [F9]
 
 - **Motion:**
   - o organograma `120 → 80` em pictogramas de pessoas, com 40 apagando em `#D9D9D9` e uma seta de produção subindo;
@@ -261,7 +273,7 @@
   - a pergunta do keeper test em caixa alta grande;
   - um anzol e um peixe em linha fina, desenhados do zero, para a origem do nome;
   - lower third: `NOTAS DA AULA CS183C · STANFORD · 13 NOV. 2015`.
-- **Arquivo:** se a fala de 120→80 e a do keeper test estiverem no vídeo do Blitzscaling, entram como ARQUIVO CRT com lower third `REED HASTINGS · CEO DA NETFLIX · STANFORD · 2015`, e a narração encolhe. Estou mapeando o vídeo agora.
+- **Arquivo:** B01 e B02 entram como ARQUIVO CRT com lower third `REED HASTINGS · CEO DA NETFLIX · STANFORD (CS183C) · 2015` e crédito `GREYLOCK · BLITZSCALING 16`. Close e plano aberto recebem reenquadramentos diferentes.
 - **Som:** clique seco a cada pessoa que apaga, carimbo na pergunta.
 - **Respiro:** `06 / A IDENTIDADE`.
 
@@ -403,7 +415,7 @@
 | 01 Estratégia | 00:00–00:22 + 12:25–12:45 | Fala do TED + **A NETFLIX NÃO COMPETE COM A HBO** | "não pensamos em termos de vício" |
 | 02 Produto | 04:12–04:46 | Clique no botão + **136 MILHÕES DE CLIQUES POR DIA** | "não deixar você esperar" |
 | 03 Algoritmo | 05:09–05:58 | Fala do Schindler + estrelas | ressalva da curadoria |
-| 04 Cultura | 06:55–07:40 | **VOCÊ LUTARIA PARA MANTÊ-LA?** | origem do nome "keeper" |
+| 04 Cultura | 06:55–08:05 | **VOCÊ LUTARIA PARA MANTÊ-LA?** | origem do nome "keeper" |
 | 05 Branding | 07:45–08:30 | N vermelho limpo + **POR QUE UMA LETRA SÓ?** | regras do chão e da comida |
 | 06 Marketing | 09:00–09:45 | **AO VIVO · CNN** + candidato que não existe | "Entrou nela." |
 | 07 Crítica | 11:15–12:00 | **100.000.000 DE CASAS** | "a conta mudou" |
@@ -418,7 +430,7 @@
 | Material | Fonte | Status |
 |---|---|---|
 | Vídeo TED 2018 | Drive (enviado por você) | OK |
-| Vídeo Blitzscaling 16 | Drive (enviado por você) | baixado; mapeando falas |
+| Vídeo Blitzscaling 16 | Drive (enviado por você) | OK; cortes B00 a B02 |
 | Comercial #FU2016 | YouTube (bloqueado aqui) | **pedir no Drive**, ou usar os prints dos tweets |
 | Netflix House Dallas (vídeo) | YouTube | **pedir no Drive** (opcional) |
 | Fotos do Netflix House | kit de imprensa PRNewswire | baixar |

@@ -83,6 +83,17 @@ Leitura feita em 17 nov. 2026. Legenda de status:
 | T11 | 547,48 → 551,78 | 4,3 s | "super exciting at the time. This is about 2007, but we haven't done it again." | 4 |
 | T12 | 593,52 → 623,56 | 30,0 s | "Everyone would rate Schindler's List five stars (…) simple pleasures." No roteiro, divido em dois trechos. | 4 / SHORT 03 |
 
+#### F9a · Cortes do Blitzscaling 16 (vídeo enviado por você no Drive, 1080p, 1:21:00)
+
+- **Transcrição:** palavra por palavra (Whisper) dos primeiros 15 minutos.
+- **Enquadramento:** o vídeo alterna entre o close de Hastings e o plano aberto com Reid Hoffman. Cada plano recebe um reenquadramento próprio; no aberto, o zoom sobre Hastings fica em cerca de 2×.
+
+| ID | Entrada → saída (s) | Duração | Fala | Bloco |
+|---|---|---|---|---|
+| B00 | 281,98 → 287,20 | 5,2 s | "So, suddenly we didn't have enough money, we had to lay off a third of the company in 2001." | 5 |
+| B01 | 356,48 → 373,10 | 16,6 s | "after we did this one third layoff, it was 120 people to 80, we had expected to basically grind to a halt (…) because it would take 80 people just to keep the lights on. But in fact, we got more done with only 80 people." | 5 / SHORT 04 |
+| B02 | 425,16 → 449,10 | 23,9 s | "for managers, they have to each year testify for each of their people. That if that person were trying to quit, they would try to change their mind. (…) But sometimes you find that you have people working for you, and if they quit, you'd be like, that's pretty good." | 5 / SHORT 04 |
+
 - **Risco que você assumiu:** a política do TED (item 0.2) não autoriza esse uso. O vídeo pode receber reivindicação de direitos ou ter a monetização bloqueada. Para reduzir o risco, a imagem do TED aparece sempre tratada, em trechos curtos, com crédito ("TED 2018") e dentro de análise.
 
 ### F2 · Entrevista de resultados do 1º tri 2017 (17 abr. 2017). **OK com ressalva**
