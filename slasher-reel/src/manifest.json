@@ -1,0 +1,287 @@
+{
+ "kit": {
+  "k_VHS_2": {
+   "w": 760,
+   "h": 456,
+   "yellow": true
+  },
+  "k_VHS_3": {
+   "w": 541,
+   "h": 392,
+   "yellow": false
+  },
+  "k_carnival_4": {
+   "w": 760,
+   "h": 657,
+   "yellow": false
+  },
+  "k_carnival_5": {
+   "w": 545,
+   "h": 549,
+   "yellow": false
+  },
+  "k_chain_1": {
+   "w": 760,
+   "h": 495,
+   "yellow": false
+  },
+  "k_chain_2": {
+   "w": 760,
+   "h": 510,
+   "yellow": false
+  },
+  "k_doll_4": {
+   "w": 760,
+   "h": 396,
+   "yellow": false
+  },
+  "k_gas_1": {
+   "w": 632,
+   "h": 760,
+   "yellow": false
+  },
+  "k_hammer_1": {
+   "w": 760,
+   "h": 306,
+   "yellow": true
+  },
+  "k_knife_2": {
+   "w": 760,
+   "h": 510,
+   "yellow": false
+  },
+  "k_knife_5": {
+   "w": 500,
+   "h": 760,
+   "yellow": false
+  },
+  "k_porcelai_2": {
+   "w": 475,
+   "h": 548,
+   "yellow": false
+  },
+  "k_porcelai_3": {
+   "w": 607,
+   "h": 590,
+   "yellow": false
+  },
+  "k_porcelai_4": {
+   "w": 366,
+   "h": 533,
+   "yellow": false
+  },
+  "k_saw_1": {
+   "w": 760,
+   "h": 401,
+   "yellow": true
+  },
+  "k_scissors_0": {
+   "w": 760,
+   "h": 337,
+   "yellow": false
+  },
+  "k_typewrit_2": {
+   "w": 610,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_cassette_0": {
+   "w": 760,
+   "h": 465,
+   "yellow": true
+  },
+  "r2_cassette_4": {
+   "w": 727,
+   "h": 450,
+   "yellow": false
+  },
+  "r2_hanging_3": {
+   "w": 510,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_hanging_4": {
+   "w": 509,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_hanging_5": {
+   "w": 660,
+   "h": 734,
+   "yellow": false
+  },
+  "r2_kerosene_0": {
+   "w": 415,
+   "h": 757,
+   "yellow": true
+  },
+  "r2_kitchen_1": {
+   "w": 760,
+   "h": 598,
+   "yellow": false
+  },
+  "r2_kitchen_3": {
+   "w": 760,
+   "h": 245,
+   "yellow": false
+  },
+  "r2_padlock_3": {
+   "w": 424,
+   "h": 489,
+   "yellow": false
+  },
+  "r2_plaster_2": {
+   "w": 390,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_plaster_3": {
+   "w": 454,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_plaster_4": {
+   "w": 503,
+   "h": 760,
+   "yellow": false
+  },
+  "r2_polaroid_0": {
+   "w": 760,
+   "h": 586,
+   "yellow": false
+  },
+  "r2_screwdri_4": {
+   "w": 578,
+   "h": 570,
+   "yellow": false
+  },
+  "r2_teddy_0": {
+   "w": 476,
+   "h": 538,
+   "yellow": false
+  },
+  "r2_wooden_2": {
+   "w": 470,
+   "h": 760,
+   "yellow": false
+  }
+ },
+ "film": {
+  "f1_killer": {
+   "w": 1075,
+   "h": 926
+  },
+  "f2_killer": {
+   "w": 1135,
+   "h": 1226
+  },
+  "f3_killer": {
+   "w": 817,
+   "h": 1326
+  },
+  "f1_pol0": {
+   "w": 784,
+   "h": 896,
+   "src": "poster_6X0TwnQaakgb1DrdIzbMZuSUqzZ.jpg"
+  },
+  "f1_pol1": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_2nP1xyR9ibiViRP6PpifcdhrvkG.jpg"
+  },
+  "f1_pol2": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_jzzCTReqa9oIPB1DGb7EUNRLXqn.jpg"
+  },
+  "f1_pol3": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_l3xjbQ2hCKkrqAnHhkkaZAk5hqy.jpg"
+  },
+  "f1_pol4": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_99xMo0iXjCUzV1sYuANA4eUujXv.jpg"
+  },
+  "f1_pol5": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_w7EfId1vBTUvo3SMOCKMiihUySf.jpg"
+  },
+  "f2_pol0": {
+   "w": 784,
+   "h": 896,
+   "src": "poster_laWfaJz5q1DIQcaptiAXx8gagAB.jpg"
+  },
+  "f2_pol1": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_byiUU6WSjprSSCVcS568SOMV62u.jpg"
+  },
+  "f2_pol2": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_rO4pMP6IV3peHAVEakpvFsgVfio.jpg"
+  },
+  "f2_pol3": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_iIvsKyBw3AOpRYLRpKmN689uhbS.jpg"
+  },
+  "f2_pol4": {
+   "w": 784,
+   "h": 896,
+   "src": "poster_2bTOzrOffMWNqwnGYSsyHADEPLH.jpg"
+  },
+  "f2_pol5": {
+   "w": 784,
+   "h": 896,
+   "src": "poster_5vL6gYjVwxj71CyWMH4BJLZq12l.jpg"
+  },
+  "f3_pol0": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_hPF3SPzwTUHD0oWXvGAKjU08DRP.jpg"
+  },
+  "f3_pol1": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_mZ8lvIx8ZVejiXBQlXgi8dXMRbQ.jpg"
+  },
+  "f3_pol2": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_96Q04AnaKv6Gn0WJYwUGkFZwIEb.jpg"
+  },
+  "f3_pol3": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_cYGB6lP77e4U3fuNPiDiefBVP4k.jpg"
+  },
+  "f3_pol4": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_3WjO42wgHlsWEfep1uzdth6VbhZ.jpg"
+  },
+  "f3_pol5": {
+   "w": 784,
+   "h": 896,
+   "src": "backdrop_cPgxauKBpU5LZi9drtxBdEsvOI.jpg"
+  }
+ },
+ "logos": {
+  "hbomax": {
+   "w": 1000,
+   "h": 720
+  },
+  "primevideo": {
+   "w": 1400,
+   "h": 431
+  },
+  "looke": {
+   "w": 999,
+   "h": 258
+  }
+ }
+}

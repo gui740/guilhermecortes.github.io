@@ -1,0 +1,1115 @@
+{
+ "gerado_em": "2026-11-17",
+ "criterios": {
+  "proibidos_checados": "lista do briefing (óbvios + já usados na página); usados.txt não existia na pasta — criado agora",
+  "streaming": "disponível por assinatura no Brasil, confirmado em 2 fontes: JustWatch Brasil (API pública) + página do próprio streaming",
+  "variedade": "1 de outro país e mais antigo/cult (Noruega, 2006) + 2 recentes (2021, 2025)"
+ },
+ "filmes": [
+  {
+   "ordem": 3,
+   "titulo_br": "O Palhaço no Milharal",
+   "titulo_br_alternativo": "Palhaço Diabólico (nome no JustWatch Brasil)",
+   "titulo_original": "Clown in a Cornfield",
+   "ano": 2025,
+   "pais": "EUA",
+   "direcao": "Eli Craig",
+   "assassino": {
+    "quem": "Frendo, o palhaço-mascote da fábrica de xarope de milho Baypen, símbolo da cidade de Kettle Springs",
+    "visual": "fantasia/máscara de palhaço sorridente",
+    "armas": "besta, motosserra, forcado e faca (vários ataques no filme)",
+    "regra": "caça os adolescentes da cidade"
+   },
+   "premissa": "Quinn se muda com o pai para Kettle Springs, uma cidade decadente do Meio-Oeste americano, e ela e os novos amigos viram alvo de alguém vestido de Frendo.",
+   "detalhe_que_fisga": "orçamento de cerca de US$ 1 milhão; arrecadou US$ 13,8 milhões. Estreou no festival SXSW 2025.",
+   "streaming": {
+    "servico": "HBO Max",
+    "tipo": "assinatura",
+    "confirmacoes": [
+     {
+      "fonte": "JustWatch Brasil",
+      "url": "https://www.justwatch.com/br/filme/clown-in-a-cornfield",
+      "resultado": "FLATRATE HBO Max e HBO Max Amazon Channel"
+     },
+     {
+      "fonte": "HBO Max Brasil (página do título)",
+      "url": "https://www.hbomax.com/br/pt/movie/5ba3c00c-08c5-422f-a00b-af383c4c9ae5",
+      "resultado": "página 'Assista O Palhaço no Milharal | HBO Max' ativa no catálogo BR"
+     }
+    ]
+   },
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Clown_in_a_Cornfield_(film)",
+    "https://www.rogerebert.com/?p=253182",
+    "https://bloody-disgusting.com/reviews/3857891/clown-in-a-cornfield-review-sxsw/"
+   ],
+   "incertezas": [
+    "Nome em português diverge: o HBO Max usa 'O Palhaço no Milharal'; o JustWatch mostra 'Palhaço Diabólico'. Usamos o do streaming.",
+    "JustWatch lista coprodução CA/GB/LU/US; a Wikipédia lista EUA. A etiqueta mostra EUA.",
+    "Orçamento/bilheteria vêm da Wikipédia (fonte secundária)."
+   ]
+  },
+  {
+   "ordem": 2,
+   "titulo_br": "O Massacre da Festa do Pijama",
+   "titulo_br_alternativo": "Massacre na Festa do Pijama (nome no JustWatch Brasil)",
+   "titulo_original": "Slumber Party Massacre",
+   "ano": 2021,
+   "pais": "EUA / África do Sul",
+   "direcao": "Danishka Esterhazy",
+   "roteiro": "Suzanne Keilly",
+   "assassino": {
+    "quem": "Russ Thorn, o 'Assassino da Furadeira'",
+    "visual": "homem de jaqueta jeans, rosto à mostra",
+    "armas": "furadeira elétrica",
+    "regra": "volta à cidade onde atacou uma festa do pijama em 1993"
+   },
+   "premissa": "Dana, filha da única sobrevivente de um massacre de 1993, vai passar um fim de semana numa cabana com as amigas perto da cidade onde a mãe enfrentou o assassino.",
+   "detalhe_que_fisga": "reimaginação/continuação independente do clássico de 1982 que 'vira o jogo' dos clichês do slasher; estreia mundial no Fantastic Fest 2021; filmado em 18 dias em Stellenbosch (África do Sul).",
+   "streaming": {
+    "servico": "Looke",
+    "tipo": "assinatura",
+    "confirmacoes": [
+     {
+      "fonte": "JustWatch Brasil",
+      "url": "https://www.justwatch.com/br/filme/slumber-party-massacre",
+      "resultado": "FLATRATE Looke e Booh Amazon Channel"
+     },
+     {
+      "fonte": "Looke (página do título)",
+      "url": "https://www.looke.com.br/detalhes/472092",
+      "resultado": "página 'O Massacre da Festa do Pijama - Looke' ativa; sem preço de aluguel exibido (só 'Cadastre-se/Assine')"
+     }
+    ]
+   },
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Slumber_Party_Massacre_(2021_film)",
+    "https://aiptcomics.com/2021/09/29/fantastic-fest-21-slumber-party-massacre-2021-review-clever-slasher-flips-the-script/",
+    "https://whattowatch.com/reviews/slumber-party-massacre-review-a-sensationally-subversive-remake"
+   ],
+   "incertezas": [
+    "Na Looke, a indicação de 'assinatura' é por ausência de preço de aluguel na página pública (o player exige login)."
+   ]
+  },
+  {
+   "ordem": 1,
+   "titulo_br": "Presos no Gelo",
+   "titulo_original": "Fritt vilt (Cold Prey)",
+   "ano": 2006,
+   "pais": "Noruega",
+   "direcao": "Roar Uthaug",
+   "assassino": {
+    "quem": "o Homem da Montanha (creditado como 'The Mountain Man', vivido por Rune Melby)",
+    "visual": "figura sem rosto, de óculos de neve e roupa pesada de inverno (descrição da Variety)",
+    "armas": "picareta",
+    "regra": "ataca quem entra no hotel abandonado nas montanhas"
+   },
+   "premissa": "Cinco amigos vão praticar snowboard nas montanhas; um deles quebra a perna e eles se abrigam num hotel abandonado, sem sinal de celular.",
+   "detalhe_que_fisga": "filmado perto do pico de Jotunheimen, com helicópteros levando 20 toneladas de equipamento; 9ª maior bilheteria da Noruega em 2006; virou trilogia.",
+   "streaming": {
+    "servico": "Prime Video (também na Looke)",
+    "tipo": "assinatura",
+    "confirmacoes": [
+     {
+      "fonte": "JustWatch Brasil",
+      "url": "https://www.justwatch.com/br/filme/presos-no-gelo",
+      "resultado": "FLATRATE Amazon Prime Video, Prime Video com anúncios, Looke, Looke Amazon Channel"
+     },
+     {
+      "fonte": "Prime Video (página do título)",
+      "url": "https://www.primevideo.com/-/pt/detail/0L2I5DX51EQ0ZXO0JKXPBWHSYQ",
+      "resultado": "página 'Prime Video: Presos no Gelo' ativa"
+     },
+     {
+      "fonte": "Looke (página do título)",
+      "url": "https://www.looke.com.br/detalhes/433574",
+      "resultado": "página 'Presos no Gelo - Looke' ativa; sem preço de aluguel"
+     }
+    ]
+   },
+   "fontes": [
+    "https://en.wikipedia.org/wiki/Cold_Prey",
+    "https://www.imdb.com/title/tt0808276",
+    "https://kviff.com/en/programme/film/11/3267-cold-prey"
+   ],
+   "incertezas": [
+    "A página do Prime Video foi acessada de servidor fora do Brasil (EUA): ela confirma o título, mas a inclusão no plano Prime BR vem do JustWatch. A segunda confirmação de assinatura no Brasil é a Looke.",
+    "A 'picareta' como arma vem da Wikipédia em inglês."
+   ]
+  }
+ ],
+ "imagens": {
+  "filmes_tmdb": {
+   "f3_palhaco": [
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/1rkTuvAlLPmHl04mIFRWoHJ0Lrt.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/1wx6BWYcqK48hsEUfRchLcIRfOs.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/2FFiutqiyRLpL3gEWyOW4I8io6n.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/2RQ0LOwdmiAKl3gsn2PqHd5Wkt3.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/3Igz5iw7Kc71UPAt96vVRC22txq.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/3VhWgYjHrirTUXCwQIsqKKvbTtG.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/3WjO42wgHlsWEfep1uzdth6VbhZ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/3c2HHc5jSr0Sv2zFAOwYbp05eJo.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/4QTZqQiAq3fInHIen9NRLPojMEo.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/6ep6gw90TJ8bYvJC6hEDo8SxjoJ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/6mKCkYr7hzy7VBWbiAlal0XiuiU.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/6pGc661buiNHPsSuE2t0JyVhpI.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/7aRjuR4om58ZZ6t3JJZ9q3fIwuN.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/8FLzVS8AlhyAMSgzcsZukCKG15c.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/8k60erwqfeGkpNGe4rE7o3NWJ6T.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/96Q04AnaKv6Gn0WJYwUGkFZwIEb.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/A0C5Bwshvl7St5LxGUbI6joVjjJ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/aYttQHCSLorIqquAxkNJWK28Ba.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/cL6rE7W1jiiBStkY8G9zxmDQLvR.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/cPgxauKBpU5LZi9drtxBdEsvOI.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/cYGB6lP77e4U3fuNPiDiefBVP4k.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/cooNDA0IWVMMSkqGoRhfuZmXnX0.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/cvMLSdxXSS5H2SuxqVfOCyN65Bd.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/dqtn34bt0uFPYRSsCMccXQzdOEM.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/eLNMgEqcY7fOGfms4xIxl0A9IwV.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/eMr6e5TBtZ9QHzporhearTJ6lMX.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/ee4MZ9svQDLfgthQgqypAOwfUbC.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/fozUhKlLvJBqpKO5CqzX3uj4lZl.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/fwsK6WnfRuZtZXKTpeEoALSJpYP.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/fyTzFPgeIZgfaouv0OIMiJB40LC.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/gIwG9UWJLsiSBfaG5GJWGj9ghXD.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/hPF3SPzwTUHD0oWXvGAKjU08DRP.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/hdkjIMTJNp2RytgqBB0t2IXjYcp.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/hqniWjuikEThLcT68vPATTkVXa1.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/il7CZ2ZvVw5n9ktqxNl6MM62qAN.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/jJEnQBVk1EY7iBh5TiqW4fUTeEe.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/jlCtweBq23dCHLNupKWx9WnaFUp.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/krzZCyj6YL3M1jDcRrAjLNrQkCw.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/lOekahsgTXEF2ZY2zhlNuQIiBka.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/lcqAPVUqCxGVI1EDOlnbITXiVzE.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/lrw6EbSTc6N90HlfnHugADLDOOQ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/m43InqTVyQ4rXA0aJPzkC6uCJkp.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/mZ8lvIx8ZVejiXBQlXgi8dXMRbQ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/ohKpZhn0oejxWN00RMRNlGDyB68.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/pGRcuZBZGkDypqOmiyxddZa1hiC.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/pPfQQnwHHVsNWmnSkqVDUAd7cb8.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/pUpMy1ESwShWk0mQKI7AFmNR6bG.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/pnLmQ8ulshX8XSD6Xc6mkHeXPTm.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/qwiIclxpscoWUUHTNIEOI72wxcz.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/rAaiFpBshyOW6lpJ4gdwJTikizS.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/rbdHAIkowQrDd6Ws7bZxHUoyxY.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/rorpbrixNJGFtGffx48nyeSqgtZ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/rtayzXg5X17Hhsh4f4a2hWt1H6e.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/uCm6zJCKbHz99tmMsCcHS5w6Qw9.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/uGe1WtgzIXC01J5lwmzvVMaPvch.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/uVa7tRplAVhQfWNy4buzUtFwH3x.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/vR2dxwtDaQPlkvtLQKTw01cRbJN.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/wjzZmYntO9hYxgOvcEuu9O7Uggb.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/wkShXe0llyeONaKtnkX6BIkevS7.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/xZ0Pbu15NeDY2NmBWvx8LQC6Izd.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/yPVnWfCCYnwPVgn3KfeR8JNfJRh.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/yiyy3ZtyuGjNs81kVV3cC4mTWgA.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/ypZIt8liZtx4FRjYLsKSRkMn8PY.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/zrIE7qg61W2KEwDRCW83VtkhSeo.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/11L8yLy9gXqXkDO97nsb7k3JTdx.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/3IVT0BpnWsK74ZlGftq583U8UHB.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/3bIWgBA1ryVFSAbiuMbjC4szyR7.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/5lSGHK9ZfrOg92302uh7EltaUs.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/6XXXXSH4jU6W2qba9SLlKTlT6ak.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/6ep6gw90TJ8bYvJC6hEDo8SxjoJ.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/7AS2ogA124GHNh5rPFApYKToE2b.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/7OkcwYdZuHCAxkB3pPelbObQfcW.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/7bEmX56UpXKoOf5WjigYlP5oLFa.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/9KsMvVNrp4YawC7DuY6zJPp5gRk.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/AivkxfmJHDMqNfJ3XPk71K6GPOu.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/bghFYMUMEKK6GyTHRA7XVC8uWn6.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/cTa1gSyUrvByw2uILt8iyJHbcRb.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/d2siKDhTrqfIxDz7VVqlEAJW3IN.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/dAqme9TPkMTJXMAlQFSLuFbvAbH.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/diPSE2jVqMQF1g6u1duFzzxMxh9.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/divbq6DJ3pNWZaq4WLoYojBOgzR.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/dkIigNrQI5kklCC9Cv9b2Vpr1Q0.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/fEx2RfugX4vKjZ02nduzF3Dzwfz.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/fPwXGyJrqhcvZ06xN70YouQ6WU4.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/gEpZrDZDYYuc6if15k7yPtBKzrD.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/mZJxFmTpOuoB4be8FmDSHGHUFP5.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/mhyxD4kG3Sepgyh7IzUhu5lHvL3.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/nMUE7Ciu0DqguUUSXoZp6sJhv4w.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/nOACBqqGRuqHhD4tSBBMSQdgLbM.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/ndSUjnnwaYF4pnrcgGotFJzg5Bt.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/oDFRI8eFescWySu0tFwQq9ZZZGi.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/oeuHMu48dWzqraVo1qQqL09uNSc.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/peQMJVlWD7Ng7fZFcC3k83DdNhk.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/pkjxQRjJjFX9F1VgcY8qB5tPCwu.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/rKC96bQiZ1EpW40rud6qk8L8vE0.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/sk3Ga13o85uIZIgRUgCdgGOycY8.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/u4J0Z7F4ZA9PD7FQQ0paQb7qlZ1.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/u50pKbCUosiMTP87ZDL9QQDLRYc.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/waQEkoCtrf7zAgZSic26tcDnS0a.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/zrIE7qg61W2KEwDRCW83VtkhSeo.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/zwkkRom3AMJr35YrEelMVSWSMl2.jpg"
+    }
+   ],
+   "f2_massacre": [
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/48jaNHKmMx9yVQsulhxsxHKSpGT.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/aukoS4wGTAYHqnrWe66OLTCyw8.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/byiUU6WSjprSSCVcS568SOMV62u.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/iIvsKyBw3AOpRYLRpKmN689uhbS.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/mrYjjxrniqVGg8Nes243siAeBMa.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/rO4pMP6IV3peHAVEakpvFsgVfio.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/zN5vCe6JacxQAT5hOEGPbp1fWS1.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/2bTOzrOffMWNqwnGYSsyHADEPLH.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/5vL6gYjVwxj71CyWMH4BJLZq12l.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/Av2Tj9vNpe1DOAstrKeTkOWssAh.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/aYf6T1cyeCcDR5RTyWjMjz75xTA.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/aukoS4wGTAYHqnrWe66OLTCyw8.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/hkxB4RIaAIHKYcUOWooHWXWevhK.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/laWfaJz5q1DIQcaptiAXx8gagAB.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/mrYjjxrniqVGg8Nes243siAeBMa.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/rYk5DpxBl30fwSCKLhtWwIIp3RC.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/taybMcekWWhL7yuxPgYKXH5I1FY.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/uMZthINUZ2HbkIJM9xg7uEcWHmQ.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/wEXyvykmnhoOhrmmUoaELEOhryV.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/yYPpfH5iX07DgFwYSC8HuZCXwP1.jpg"
+    }
+   ],
+   "f1_presos": [
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/1aSONwUZbNWY7LkVMM0pMoJzsGc.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/1cYcF3LaYqt2dKQGv1cZyNLXbaJ.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/2nP1xyR9ibiViRP6PpifcdhrvkG.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/40b3I9JOl2sNJoFCQxXB0uE1mzx.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/8aCSN8HXRR9252IHhDYKMvc5cnh.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/99xMo0iXjCUzV1sYuANA4eUujXv.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/b0wEROaKBcAdnLExFXNX5Wkx03P.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/duhfdJlcGoigm3qqSYdNeed3ZCu.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/jzzCTReqa9oIPB1DGb7EUNRLXqn.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/l3xjbQ2hCKkrqAnHhkkaZAk5hqy.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/mm6ETcPpEY5Z2BKKpIvzEXmQ6Mj.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/mvx1TENgNxoGph5NFlIXwy43tiK.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/n7TRczmaXbOQsMfZpfJR1blSWvX.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/skCBeoi1iBhnBUBEkEV7gT9motx.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/sxYjsslcs5FSsAkEfjr50gAQWNo.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/u0zJm9HDy638Yg1mGwi9qIL6yoL.jpg"
+    },
+    {
+     "tipo": "backdrop",
+     "url": "https://image.tmdb.org/t/p/original/w7EfId1vBTUvo3SMOCKMiihUySf.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/1uKzpcSpeSpQuzHLAKyOGGCRHSj.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/6X0TwnQaakgb1DrdIzbMZuSUqzZ.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/99xMo0iXjCUzV1sYuANA4eUujXv.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/eEWIBWDi8R4Z0Y4SjqYvJao7drs.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/lQnKipqNR0r9CVrkoBUB2I2gyns.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/nRgK1f7vLJ195DJrrDKcc5pyt0d.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/nsNeWCwvY183boDXqCRWfuPpX41.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/oA1gqCMHgOZ84w2YrZ7iOBmRWMQ.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/pm933l0BJgot0x3rnKJEIGKcHyj.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/qYTgI2MCZv5UjQblP8EIHpuQisl.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/sZL5Sn1JLhJB1EFLfbc19QiXsSd.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/sxYjsslcs5FSsAkEfjr50gAQWNo.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/uSN5NZgcEXbY5aY9DAK2FSrYU2G.jpg"
+    },
+    {
+     "tipo": "poster",
+     "url": "https://image.tmdb.org/t/p/original/w8d95r26ZDO1P1yU9D3wDz2nP91.jpg"
+    }
+   ]
+  },
+  "trailers": "NÃO usados: o YouTube bloqueou o download (exige login anti-robô); usamos apenas stills/pôsteres oficiais do TMDB",
+  "recortes_assassinos": {
+   "f1": "TMDB backdrop duhfdJlcGoigm3qqSYdNeed3ZCu",
+   "f2": "TMDB backdrop aukoS4wGTAYHqnrWe66OLTCyw8",
+   "f3": "TMDB backdrop rbdHAIkowQrDd6Ws7bZxHUoyxY"
+  },
+  "kit_cenario_openverse": [
+   {
+    "recorte": "k_VHS_2",
+    "file": "VHS_2.jpg",
+    "term": "VHS tape",
+    "title": "VHS tapes I own",
+    "page": "https://www.flickr.com/photos/148374920@N02/26206422749",
+    "url": "https://live.staticflickr.com/4467/26206422749_f871cc4562_b.jpg",
+    "creator": "jjbers",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_VHS_3",
+    "file": "VHS_3.jpg",
+    "term": "VHS tape",
+    "title": "Sony S-VHS tape recorder",
+    "page": "https://www.flickr.com/photos/69385801@N07/6498606451",
+    "url": "https://live.staticflickr.com/7018/6498606451_10c057f236_b.jpg",
+    "creator": "DRs Kulturarvsprojekt",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "k_carnival_4",
+    "file": "carnival_4.jpg",
+    "term": "carnival mask",
+    "title": "Venetian Carnival Mask - Maschera di Carnevale - Venice Italy - Creative Commons by gnuckx",
+    "page": "https://www.flickr.com/photos/34409164@N06/4701305147",
+    "url": "https://live.staticflickr.com/4038/4701305147_8272fc7875_b.jpg",
+    "creator": "gnuckx",
+    "license": "cc0 1.0"
+   },
+   {
+    "recorte": "k_carnival_5",
+    "file": "carnival_5.jpg",
+    "term": "carnival mask",
+    "title": "Venetian Carnival Mask - Maschera di Carnevale - Venice Italy - Creative Commons by gnuckx",
+    "page": "https://www.flickr.com/photos/34409164@N06/4701966610",
+    "url": "https://live.staticflickr.com/4009/4701966610_afaaaa27a8_b.jpg",
+    "creator": "gnuckx",
+    "license": "cc0 1.0"
+   },
+   {
+    "recorte": "k_chain_1",
+    "file": "chain_1.jpg",
+    "term": "chain",
+    "title": "Chained and Locked",
+    "page": "https://www.flickr.com/photos/55608722@N06/12472399134",
+    "url": "https://live.staticflickr.com/3699/12472399134_4b289cd98d_b.jpg",
+    "creator": "Dusty J",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_chain_2",
+    "file": "chain_2.jpg",
+    "term": "chain",
+    "title": "chain",
+    "page": "https://www.flickr.com/photos/10017030@N08/5359581911",
+    "url": "https://live.staticflickr.com/5166/5359581911_d07f15db17_b.jpg",
+    "creator": "pratanti",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_doll_4",
+    "file": "doll_4.jpg",
+    "term": "doll head",
+    "title": "Creepy dolls heads",
+    "page": "https://www.flickr.com/photos/9128415@N02/1260089046",
+    "url": "https://live.staticflickr.com/1268/1260089046_4dd3d1ad50_b.jpg",
+    "creator": "Lala Photography at JoLi Studios Colchester",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "k_gas_1",
+    "file": "gas_1.jpg",
+    "term": "gas mask",
+    "title": "Zombie Gas Mask",
+    "page": "https://www.flickr.com/photos/75325532@N08/14993908624",
+    "url": "https://live.staticflickr.com/3936/14993908624_2b98ff243f_b.jpg",
+    "creator": "eyecmore",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "k_hammer_1",
+    "file": "hammer_1.jpg",
+    "term": "hammer tool",
+    "title": "Hammer Tool Craft Work Repair Edited 2020",
+    "page": "https://www.flickr.com/photos/188454520@N02/49905944233",
+    "url": "https://live.staticflickr.com/65535/49905944233_9e5b3dbaee_b.jpg",
+    "creator": "chimpwithcan",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_knife_2",
+    "file": "knife_2.jpg",
+    "term": "knife isolated",
+    "title": "Knife 8",
+    "page": "https://www.flickr.com/photos/37753256@N08/3523024991",
+    "url": "https://live.staticflickr.com/3627/3523024991_d577356b7a_b.jpg",
+    "creator": "~Brenda-Starr~",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_knife_5",
+    "file": "knife_5.jpg",
+    "term": "knife isolated",
+    "title": "Full Set of BrickArms Medieval Weapons",
+    "page": "https://www.flickr.com/photos/38446022@N00/3530693001",
+    "url": "https://live.staticflickr.com/2080/3530693001_4efd971c73_b.jpg",
+    "creator": "floodllama",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_porcelai_2",
+    "file": "porcelai_2.jpg",
+    "term": "porcelain doll",
+    "title": "Whitney - a vintage porcelain doll face cabochon",
+    "page": "https://www.flickr.com/photos/42121564@N04/7260292200",
+    "url": "https://live.staticflickr.com/8147/7260292200_0a766c0f1f_b.jpg",
+    "creator": "Melissa Ingram Design",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_porcelai_3",
+    "file": "porcelai_3.jpg",
+    "term": "porcelain doll",
+    "title": "Lola - a vintage porcelain doll face cabochon",
+    "page": "https://www.flickr.com/photos/42121564@N04/7260291764",
+    "url": "https://live.staticflickr.com/7240/7260291764_561691da3e_b.jpg",
+    "creator": "Melissa Ingram Design",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_porcelai_4",
+    "file": "porcelai_4.jpg",
+    "term": "porcelain doll",
+    "title": "Veronica - a vintage porcelain doll face cabochon",
+    "page": "https://www.flickr.com/photos/42121564@N04/7260292040",
+    "url": "https://live.staticflickr.com/7235/7260292040_e6321de7d0_b.jpg",
+    "creator": "Melissa Ingram Design",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_saw_1",
+    "file": "saw_1.jpg",
+    "term": "saw tool",
+    "title": "Hacksaw Saw Tool Equipment Edited 2020",
+    "page": "https://www.flickr.com/photos/188454520@N02/49901907228",
+    "url": "https://live.staticflickr.com/65535/49901907228_05b8593dcd_b.jpg",
+    "creator": "chimpwithcan",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_scissors_0",
+    "file": "scissors_0.jpg",
+    "term": "scissors",
+    "title": "Scissors",
+    "page": "https://www.flickr.com/photos/29848680@N08/3708293822",
+    "url": "https://live.staticflickr.com/2597/3708293822_70be41ce99_b.jpg",
+    "creator": "James Bowe",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "k_typewrit_2",
+    "file": "typewrit_2.jpg",
+    "term": "typewriter",
+    "title": "Typewriter",
+    "page": "https://www.flickr.com/photos/41894141496@N01/5146778302",
+    "url": "https://live.staticflickr.com/1078/5146778302_94f9decb64_b.jpg",
+    "creator": "mikeymckay",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_cassette_0",
+    "file": "cassette_0.jpg",
+    "term": "cassette tape",
+    "title": "Best iPhone Case Ever - 80s Cassette Tape",
+    "page": "https://www.flickr.com/photos/70116881@N00/6733458411",
+    "url": "https://live.staticflickr.com/7016/6733458411_25bbbdff0b_b.jpg",
+    "creator": "Chris Breikss",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_cassette_4",
+    "file": "cassette_4.jpg",
+    "term": "cassette tape",
+    "title": "Ampex C12 computer cassette - Tape - Labelled - Face",
+    "page": "https://www.flickr.com/photos/24001581@N07/13844622273",
+    "url": "https://live.staticflickr.com/7300/13844622273_4895c19b16_b.jpg",
+    "creator": "stuart.childs",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_hanging_3",
+    "file": "hanging_3.jpg",
+    "term": "hanging masks",
+    "title": "Hanging Mask of Shrine God",
+    "page": "https://www.rawpixel.com/image/9320123/hanging-mask-shrine-god",
+    "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL2xhY21hMjExMzMyOS1pbWFnZS5qcGc.jpg",
+    "creator": "lacma",
+    "license": "cc0 1.0"
+   },
+   {
+    "recorte": "r2_hanging_4",
+    "file": "hanging_4.jpg",
+    "term": "hanging masks",
+    "title": "Mask or Hanging Mask",
+    "page": "https://www.rawpixel.com/image/11796657/mask-hanging-mask",
+    "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L2xhY21hMjExMzMzMC1pbWFnZS5qcGc.jpg",
+    "creator": null,
+    "license": "cc0 1.0"
+   },
+   {
+    "recorte": "r2_hanging_5",
+    "file": "hanging_5.jpg",
+    "term": "hanging masks",
+    "title": "Hanging Mask Shinto Shrine",
+    "page": "https://www.rawpixel.com/image/9320152/hanging-mask-for-shinto-shrine",
+    "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL2xhY21hMjExMzMyMy1pbWFnZS5qcGc.jpg",
+    "creator": "lacma",
+    "license": "cc0 1.0"
+   },
+   {
+    "recorte": "r2_kerosene_0",
+    "file": "kerosene_0.jpg",
+    "term": "kerosene lantern",
+    "title": "CNW brakeman's kerosene lantern",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=252274",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/CNW_brakeman%27s_kerosene_lantern.JPG",
+    "creator": null,
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_kitchen_1",
+    "file": "kitchen_1.jpg",
+    "term": "kitchen knife",
+    "title": "Kitchen Knife II",
+    "page": "https://www.flickr.com/photos/87316606@N00/2865776146",
+    "url": "https://live.staticflickr.com/3003/2865776146_ca6e5f739a_b.jpg",
+    "creator": "DaveCrosby",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_kitchen_3",
+    "file": "kitchen_3.jpg",
+    "term": "kitchen knife",
+    "title": "Kitchen Knife I",
+    "page": "https://www.flickr.com/photos/87316606@N00/2864958657",
+    "url": "https://live.staticflickr.com/3100/2864958657_cb38472551_b.jpg",
+    "creator": "DaveCrosby",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_padlock_3",
+    "file": "padlock_3.jpg",
+    "term": "padlock",
+    "title": "Padlock unlocked",
+    "page": "https://www.flickr.com/photos/45034206@N06/4141457002",
+    "url": "https://live.staticflickr.com/2648/4141457002_73652dd848_b.jpg",
+    "creator": "☺ Lee J Haywood",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_plaster_2",
+    "file": "plaster_2.jpg",
+    "term": "plaster mask face",
+    "title": "Death mask, Nicola Sacco",
+    "page": "https://www.flickr.com/photos/24029425@N06/4604378147",
+    "url": "https://live.staticflickr.com/1422/4604378147_4d2a042c29_b.jpg",
+    "creator": "Boston Public Library",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_plaster_3",
+    "file": "plaster_3.jpg",
+    "term": "plaster mask face",
+    "title": "Death mask, Nicola Sacco",
+    "page": "https://www.flickr.com/photos/24029425@N06/4604991870",
+    "url": "https://live.staticflickr.com/1305/4604991870_b44f854e35_b.jpg",
+    "creator": "Boston Public Library",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_plaster_4",
+    "file": "plaster_4.jpg",
+    "term": "plaster mask face",
+    "title": "Death mask, Bartolomeo Vanzetti",
+    "page": "https://www.flickr.com/photos/24029425@N06/4604991928",
+    "url": "https://live.staticflickr.com/1006/4604991928_6b13e6b20f_b.jpg",
+    "creator": "Boston Public Library",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_polaroid_0",
+    "file": "polaroid_0.jpg",
+    "term": "polaroid camera",
+    "title": "Polaroid Camera (like Instagram-Icon)",
+    "page": "https://www.flickr.com/photos/28872131@N05/7243333208",
+    "url": "https://live.staticflickr.com/5155/7243333208_090b1e37df_b.jpg",
+    "creator": "adkorte",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_screwdri_4",
+    "file": "screwdri_4.jpg",
+    "term": "screwdriver",
+    "title": "Craftsman Flathead Screwdriver",
+    "page": "https://www.flickr.com/photos/30264437@N02/4164263268",
+    "url": "https://live.staticflickr.com/2536/4164263268_a29ce7fae7_b.jpg",
+    "creator": "Ivy Dawned",
+    "license": "by-sa 2.0"
+   },
+   {
+    "recorte": "r2_teddy_0",
+    "file": "teddy_0.jpg",
+    "term": "teddy bear old",
+    "title": "Teddy bear / Old toy :)",
+    "page": "https://www.flickr.com/photos/36076466@N08/24471238669",
+    "url": "https://live.staticflickr.com/1713/24471238669_34ae28c84c_b.jpg",
+    "creator": "Epicantus",
+    "license": "by 2.0"
+   },
+   {
+    "recorte": "r2_wooden_2",
+    "file": "wooden_2.jpg",
+    "term": "wooden door old",
+    "title": "Elaborately carved wooden door, old Jeddah, Saudi Arabia (2)",
+    "page": "https://www.flickr.com/photos/43714545@N06/50702743003",
+    "url": "https://live.staticflickr.com/65535/50702743003_7857c53daf_b.jpg",
+    "creator": "Prof. Mortel",
+    "license": "by 2.0"
+   }
+  ],
+  "logos": {
+   "hbomax": "https://www.hbomax.com/dotcom/img/hbomax/logo_nav_bar.png",
+   "primevideo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Amazon_Prime_Video_logo.svg",
+   "looke": "https://www.looke.com.br/content/images/looke_txt.png"
+  },
+  "graficos_proprios": "fita zebrada, placas de evidência, etiquetas, cartazes de 'desaparecido' (genéricos), estrela, fumaça e pegadas foram desenhados por código (scripts/bake_text.py)"
+ },
+ "audio": {
+  "trilha": {
+   "titulo": "Cool Hard Facts",
+   "autor": "Kevin MacLeod (incompetech.com)",
+   "licenca": "CC BY 4.0 — exige crédito: 'Cool Hard Facts' Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Hard%20Facts.mp3",
+   "edicao": "remontada compasso a compasso (114,8 BPM): viradas nos compassos 52 e 21 caem nas travessias; breque seco antes de 'Presos no Gelo'"
+  },
+  "narracao": "edge-tts, voz pt-BR-AntonioNeural (Microsoft). ElevenLabs/Gemini indisponíveis: nenhuma chave de API no ambiente.",
+  "efeitos": "sintetizados por código (scripts/mix.py): clique de lanterna, whoosh, fita rasgando, porta rangendo, passos, respiração abafada"
+ },
+ "fontes_tipograficas": "Anton, Playfair Display Italic, Inter, Special Elite — Google Fonts (OFL)"
+}
