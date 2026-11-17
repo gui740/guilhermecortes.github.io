@@ -149,8 +149,7 @@ N("n06a", C("logoN", silencio=True), pos=0.6)
 N("n06b", C("logoN", legenda="EXISTE PODER EM SER DONO DE UMA LETRA DO ALFABETO."),
   EV("web_brand_n.png", "EVIDÊNCIA 10 · BRAND.NETFLIX.COM", t=6.0, trecho=WEB_TRECHO))
 N("n06c", C("cores"))
-N("n06d", C("proibicoes", itens=["ESTICAR", "GIRAR", "UMA COR SÓ", "EFEITOS", "FUNDO POLUÍDO", "SOBRE VERMELHO", "NO CHÃO", "NA COMIDA"]),
-  EV("web_brand_avoid.png", "EVIDÊNCIA 11 · BRAND.NETFLIX.COM · THINGS TO AVOID", t=10.5, trecho=[0.04, 0.33, 0.92, 0.12]))
+N("n06d", C("proibicoes", itens=["ESTICAR", "GIRAR", "UMA COR SÓ", "EFEITOS", "FUNDO POLUÍDO", "SOBRE VERMELHO", "NO CHÃO", "NA COMIDA"]))
 N("n06e", C("barras", titulo="INTENÇÃO DE HUMOR · TWITTER", a=["EUA", 36.7], b=["ESPANHA", 60.0]),
   EV("pazperez_p12-12.png", "EVIDÊNCIA 12 · PAZ PÉREZ · 2020 · P. 12", t=14.0, trecho=TR.get("pazperez_p12-12", {}).get("trecho")),
   C("academico", t=0.5, texto="PAZ PÉREZ · Next episode, next market · On Research · 2020 · p. 11–12 · estudo preliminar de 3 meses"))
@@ -204,7 +203,7 @@ N("n10a", C("cor_clip", clip="media/arquivo/H03.mp4", mudo=True),
   C("contador", t=6.0, valor="≈ 9.290 M²", sufixo="NETFLIX HOUSE DALLAS", rotulo="DEZ. 2025 · PRESS RELEASE OFICIAL"),
   C("titulo", t=14.0, texto="LAS VEGAS · 2027"))
 N("n10b", C("envelope", ano="2025", rotulo="A PORTA É UM ENVELOPE VERMELHO", porta=True),
-  EV("house_release-1.png", "EVIDÊNCIA 22 · NETFLIX · PRESS RELEASE · 11 DEZ. 2025", t=5.0, trecho=[0.06, 0.70, 0.88, 0.10]))
+  EV("house_release-2.png", "EVIDÊNCIA 22 · NETFLIX · PRESS RELEASE · 11 DEZ. 2025 · P. 2", t=5.0, trecho=[0.0711, 0.5729, 0.8497, 0.035]))
 A("H02", ["Estivemos na sua sala por muito tempo.", "Agora estamos dizendo: venha para a nossa sala."], lt=LT_HOUSE, modo="cor")
 N("n10c", C("titulo", texto="DO ENVELOPE QUE CHEGAVA À SUA CASA", sub="AO ENVELOPE EM QUE VOCÊ ENTRA"),
   C("logoN", t=8.0), pos=0.8)

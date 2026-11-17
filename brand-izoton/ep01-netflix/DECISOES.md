@@ -48,5 +48,11 @@ Escolhas tomadas sem consulta, seguindo o guia do prompt. Revise e me diga o que
 ## Capa
 29. **Capa 1280x720:** Hastings em P&B com scanlines à esquerda, o N limpo à direita, título "ELA COMPETE COM O SEU SONO." (paráfrase fiel da fala literal "competing with sleep"), assinatura do canal e lower third em âmbar.
 
+## Revisão da folha de contato (correções aplicadas)
+30. **Tirei a ficha "Things to avoid" do guia de marca (bloco 6):** a captura mostrava os exemplos de logo distorcido do próprio guia. Isso contraria a decisão 12; as proibições ficam só no diagrama genérico.
+31. **Press release do Netflix House:** a ficha agora mostra a p. 2, com o parágrafo do envelope vermelho. A p. 1 tinha uma caixa de vídeo quebrada ("Error 153") embutida no PDF.
+32. **Emenda em vez de render completo:** os dois trechos corrigidos foram renderizados à parte e encaixados no master quadro a quadro, poupando cerca de 1 h de render.
+33. **Pico após o AAC:** o mix sai a -14,0 LUFS e -1,0 dBTP; depois da codificação AAC, o pico medido fica em cerca de -0,7 dBFS. Mantive assim, porque o YouTube normaliza para -14 LUFS e a diferença é inaudível.
+
 ## Entrega
 20. **Mídia fora do repo:** o repositório é público. Vídeo, áudio e clipes de terceiros não vão para o Git, só código, roteiro e documentos. Os arquivos finais vão para a pasta do episódio na sessão e, se der, para o seu Drive.

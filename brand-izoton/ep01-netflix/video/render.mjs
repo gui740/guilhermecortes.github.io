@@ -57,3 +57,15 @@ if (modo === "shorts") {
     log(`${s.id} ok`);
   }
 }
+
+// node render.mjs faixas a-b c-d ... -> out/fix_<a>_<b>.mp4 (trechos do episódio, 1920x1080, para emenda)
+if (modo === "faixas") {
+  const c = await comp("Episodio");
+  for (const r of ids) {
+    const [a, b] = r.split("-").map(Number);
+    ultimo = -1;
+    await renderMedia({ composition: c, serveUrl, codec: "h264", crf: 17, muted: true, frameRange: [a, b], outputLocation: `out/fix_${a}_${b}.mp4`,
+      browserExecutable: BROWSER, concurrency: 4, imageFormat: "jpeg", jpegQuality: 92, onProgress: progresso(`faixa ${r}`), timeoutInMilliseconds: 120000 });
+    log(`faixa ${r} ok`);
+  }
+}

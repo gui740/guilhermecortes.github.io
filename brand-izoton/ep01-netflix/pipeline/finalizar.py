@@ -66,8 +66,8 @@ def contato(video, out, passo="25"):
     cols = 6
     rows = (n + cols - 1) // cols
     run(["ffmpeg", "-v", "error", "-y", "-i", video, "-vf",
-         f"fps=1/{passo},scale=480:270,drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.7,"
-         f"tile={cols}x{rows}:padding=6:margin=6:color=white", "-frames:v", "1", "-q:v", "3", out])
+         f"select='not(mod(n\\,{int(float(passo) * 30)}))',scale=480:270,drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.7,"
+         f"tile={cols}x{rows}:padding=6:margin=6:color=white", "-frames:v", "1", "-fps_mode", "vfr", "-q:v", "3", out])
     print("contato:", out)
 
 
@@ -78,8 +78,8 @@ def checar(short, out):
     cols = 10
     rows = (n + cols - 1) // cols
     run(["ffmpeg", "-v", "error", "-y", "-i", short, "-vf",
-         f"fps=1/1.5,scale=216:384,drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=4:y=4:fontsize=14:fontcolor=white:box=1:boxcolor=black@0.7,"
-         f"tile={cols}x{rows}:padding=4:margin=4:color=gray", "-frames:v", "1", "-q:v", "3", out])
+         f"select='not(mod(n\\,45))',scale=216:384,drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=4:y=4:fontsize=14:fontcolor=white:box=1:boxcolor=black@0.7,"
+         f"tile={cols}x{rows}:padding=4:margin=4:color=gray", "-frames:v", "1", "-fps_mode", "vfr", "-q:v", "3", out])
     print("checagem:", out)
 
 
