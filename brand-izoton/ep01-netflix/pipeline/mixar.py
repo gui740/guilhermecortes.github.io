@@ -49,8 +49,10 @@ mus_env[: int((hook["start"] + hook["dur"]) * SR)] = 0.0
 
 # suaviza o ducking (ataque/soltura ~0,35 s)
 k = int(0.35 * SR)
-ker = np.ones(k) / k
-mus_env = np.convolve(mus_env, ker, mode="same")
+cs = np.concatenate([[0.0], np.cumsum(mus_env)])
+idx = np.arange(N)
+lo = np.clip(idx - k // 2, 0, N); hi = np.clip(idx + k // 2 + 1, 0, N)
+mus_env = (cs[hi] - cs[lo]) / (hi - lo)
 
 trilha = load(os.path.join(som_dir, "trilha.wav"))
 mus = np.zeros((N, 2)); put(mus, trilha, 0.0)
