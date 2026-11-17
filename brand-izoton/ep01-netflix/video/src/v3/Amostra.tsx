@@ -6,25 +6,25 @@ import { Legenda, LowerThird, NLogo, Picto } from "../cenas/bits";
 import { Camada, Camera, Card, Carimbo3, Contador, Cursor, Destaque, Dossie, Grao, PaginaEditorial, Papel, Recorte, Terminal, TituloDoisPesos, easeInOut, useEntrada, useS } from "./kit";
 import { Empurrao, Mascara, Painel, TelaCRT } from "./transicoes";
 
-const LT_TED = { nome: "REED HASTINGS", cargo: "CEO DA NETFLIX", fonte: "TED · ABR. 2018" };
-const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
+export const LT_TED = { nome: "REED HASTINGS", cargo: "CEO DA NETFLIX", fonte: "TED · ABR. 2018" };
+export const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
 
 /* ------------------------------------------------------------------ som */
-const Sfx: React.FC<{ s: number; nome: string; vol?: number }> = ({ s, nome, vol = 0.45 }) => {
+export const Sfx: React.FC<{ s: number; nome: string; vol?: number }> = ({ s, nome, vol = 0.45 }) => {
   const S = useS();
   return <Sequence from={S(s)} layout="none"><Audio src={staticFile(`media/som/fx/${nome}.wav`)} volume={vol} /></Sequence>;
 };
-const Narr: React.FC<{ s: number; arq: string; vol?: number; inicio?: number; dur?: number }> = ({ s, arq, vol = 1, inicio = 0, dur }) => {
+export const Narr: React.FC<{ s: number; arq: string; vol?: number; inicio?: number; dur?: number }> = ({ s, arq, vol = 1, inicio = 0, dur }) => {
   const S = useS();
   return <Sequence from={S(s)} durationInFrames={dur ? S(dur) : undefined} layout="none"><Audio src={staticFile(arq)} volume={vol} startFrom={S(inicio)} /></Sequence>;
 };
-const Trilha: React.FC<{ de: number; vol?: number }> = ({ de, vol = 0.07 }) => {
+export const Trilha: React.FC<{ de: number; vol?: number }> = ({ de, vol = 0.07 }) => {
   const S = useS();
   return <Audio src={staticFile("media/som/trilha.wav")} startFrom={S(de)} volume={vol} />;
 };
 
 /* ------------------------------------------------------------------ peças desenhadas */
-const ListaCard: React.FC<{ itens: { t: string; s: number; tom?: "tinta" | "netflix" }[]; x: number; y: number; riscar?: { idx: number; s: number } }> = ({ itens, x, y }) => {
+export const ListaCard: React.FC<{ itens: { t: string; s: number; tom?: "tinta" | "netflix" }[]; x: number; y: number; riscar?: { idx: number; s: number } }> = ({ itens, x, y }) => {
   const S = useS();
   return (
     <div style={{ position: "absolute", left: x, top: y, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
@@ -45,7 +45,7 @@ const Recibo: React.FC = () => (
   </div>
 );
 
-const LinhaDVD: React.FC<{ s: number; y: number }> = ({ s, y }) => {
+export const LinhaDVD: React.FC<{ s: number; y: number }> = ({ s, y }) => {
   const S = useS();
   const f = useCurrentFrame();
   const k = interpolate(f - S(s), [0, 30], [0, 1], { ...clamp, easing: easeInOut });
@@ -67,13 +67,18 @@ const LinhaDVD: React.FC<{ s: number; y: number }> = ({ s, y }) => {
   );
 };
 
-const DiscoGirando: React.FC<{ x: number; y: number; s: number }> = ({ x, y, s }) => {
+const DiscoGirando: React.FC<{ x: number; y: number; s: number; rola?: number }> = ({ x, y, s, rola = 0 }) => {
   const S = useS();
   const f = useCurrentFrame();
   const k = useEntrada(S(s), 10);
+  // rola: o disco atravessa `rola` px em degraus de stop-motion (3 quadros por pose) até 2,6 s depois de entrar
+  const t = Math.floor((f - S(s)) / 3) * 3;
+  const dx = rola ? interpolate(t, [0, S(2.6)], [-rola, 0], { ...clamp, easing: easeInOut }) : 0;
+  const dy = rola ? Math.sin(t / 5) * 10 : 0;
   return (
-    <div style={{ position: "absolute", left: x, top: y, opacity: k, transform: `rotate(${(f - S(s)) * 4}deg) scale(${0.9 + 0.1 * k})`, filter: "drop-shadow(10px 12px 10px rgba(0,0,0,0.25))" }}>
+    <div style={{ position: "absolute", left: x + dx, top: y + dy, opacity: k, transform: `rotate(${(rola ? t : f - S(s)) * 4}deg) scale(${0.9 + 0.1 * k})`, filter: "drop-shadow(10px 12px 10px rgba(0,0,0,0.25))" }}>
       <Picto nome="DVD" size={200} />
+      {rola > 0 && <div style={{ position: "absolute", left: 128, top: 92, width: 46, height: 16, borderRadius: 3, background: C.tinta }} />}
     </div>
   );
 };
@@ -188,7 +193,17 @@ export const ColdOpen: React.FC = () => {
 };
 
 /* ================================================================== 2 · COLAGEM 01:09 */
-export const Colagem: React.FC = () => {
+const Datilografa: React.FC<{ texto: string; s: number; x: number; y: number }> = ({ texto, s, x, y }) => {
+  const S = useS();
+  const f = useCurrentFrame();
+  const n = Math.max(0, Math.min(texto.length, Math.floor((f - S(s)) / 1.5)));
+  if (f < S(s)) return null;
+  return <div style={{ position: "absolute", left: x, top: y, fontFamily: MONO, fontSize: 26, letterSpacing: 3, color: C.tinta, background: C.branco, padding: "6px 12px" }}>
+    {texto.slice(0, n)}<span style={{ opacity: Math.floor(f / 8) % 2 ? 1 : 0 }}>▌</span></div>;
+};
+
+/** v2 = rodada 1 do FIXES: o começo ganha movimento (disco rolando em degraus + ficha datilografada em "formato"). */
+export const Colagem: React.FC<{ v2?: boolean }> = ({ v2 = false }) => {
   const S = useS();
   const f = useCurrentFrame();
   const DUR = 13.9;
@@ -201,7 +216,8 @@ export const Colagem: React.FC = () => {
         </Camada>
         <Camada vel={0.7} dur={S(DUR)}>
           <Recorte src="media/v3img/rec_envelope.png" x={60} y={170} w={720} inicio={S(0)} rot={-6} seed="env" de="esq" />
-          <DiscoGirando x={600} y={130} s={0.2} />
+          <DiscoGirando x={600} y={130} s={0.2} rola={v2 ? 300 : 0} />
+          {v2 && <Datilografa texto="FORMATO: DVD · 1997" s={1.18} x={110} y={520} />}
           <Carimbo3 texto="PRAZO DE VALIDADE" inicio={S(1.82)} x={130} y={600} rot={-8} />
           <Recorte src="media/v3img/rec_hastings_2014.png" x={1290} y={110} w={560} inicio={S(7.2)} rot={3} seed="h14" de="dir" />
         </Camada>
@@ -226,7 +242,7 @@ export const Colagem: React.FC = () => {
       <Grao />
       <Narr s={0} arq="media/v3audio/n01b.wav" />
       <Trilha de={70} vol={0.07} />
-      <Sfx s={0} nome="papel_0" /><Sfx s={1.82} nome="carimbo_0" /><Sfx s={3.2} nome="bip_0" vol={0.25} /><Sfx s={4.1} nome="papel_2" vol={0.35} />
+      <Sfx s={0} nome="papel_0" /><Sfx s={1.82} nome="carimbo_0" />{v2 && <Sfx s={1.18} nome="click_0" vol={0.25} />}<Sfx s={3.2} nome="bip_0" vol={0.25} /><Sfx s={4.1} nome="papel_2" vol={0.35} />
       <Sfx s={7.2} nome="papel_1" /><Sfx s={8.56} nome="papel_3" /><Sfx s={9.48} nome="click_0" vol={0.3} /><Sfx s={12.12} nome="carimbo_1" />
     </AbsoluteFill>
   );

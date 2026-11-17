@@ -71,8 +71,14 @@ const ligacao = (i: number) => {
   return `M ${posCartao(i).x} ${a.y} H ${posCartao(i + 1).x + CW}`;
 };
 
-const Cartao: React.FC<{ i: number; preenchido: boolean; ativo: boolean }> = ({ i, preenchido, ativo }) => {
+const Cartao: React.FC<{ i: number; preenchido: boolean; ativo: boolean; invertido?: boolean }> = ({ i, preenchido, ativo, invertido = false }) => {
   const p = posCartao(i);
+  if (invertido) return (
+    <div style={{ position: "absolute", left: p.x, top: p.y, width: CW, height: CH, background: C.tinta, borderRadius: 14, boxShadow: SOMBRA, boxSizing: "border-box", padding: "26px 30px" }}>
+      <div style={{ fontFamily: MONO, fontSize: 26, letterSpacing: 3, color: C.ambar }}>{String(i + 1).padStart(2, "0")}</div>
+      <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 46, lineHeight: 1.0, color: C.branco, marginTop: 18, textTransform: "uppercase" }}>{CAPITULOS[i]}</div>
+    </div>
+  );
   return (
     <div style={{ position: "absolute", left: p.x, top: p.y, width: CW, height: CH, background: C.branco, borderRadius: 14,
       border: preenchido ? `2px solid ${C.tinta}` : `2px dashed ${C.apoio}`, boxShadow: ativo ? SOMBRA : "0 8px 20px rgba(0,0,0,0.06)",
@@ -91,9 +97,13 @@ const Cartao: React.FC<{ i: number; preenchido: boolean; ativo: boolean }> = ({ 
  * Viagem pelo painel. Fases (em quadros): mostra o cartão `de`, traço percorre a ligação, câmera voa até `para` com desfoque
  * e mergulha (zoom-in). `visaoGeral` mostra o painel inteiro (abertura e fechamento).
  */
-export const Painel: React.FC<{ de: number; para: number; dur: number; preenchidos: number; visaoGeral?: boolean; mergulho?: boolean }> =
-  ({ de, para, dur, preenchidos, visaoGeral = false, mergulho = true }) => {
+export const Painel: React.FC<{ de: number; para: number; dur: number; preenchidos: number; visaoGeral?: boolean; mergulho?: boolean;
+  acende?: { inicio: number; passo: number }; pan?: number }> =
+  ({ de, para, dur, preenchidos: base, visaoGeral = false, mergulho = true, acende, pan = 180 }) => {
     const f = useCurrentFrame();
+    // acende: os cartões se preenchem um a um (a partir de `inicio`, um a cada `passo` quadros)
+    const nAceso = acende ? Math.max(0, Math.min(10, Math.floor((f - acende.inicio) / acende.passo) + 1)) : 0;
+    const preenchidos = Math.max(base, nAceso);
     const t1 = Math.round(dur * 0.25), t2 = Math.round(dur * 0.5), t3 = Math.round(dur * 0.75);
     const zoomCartao = 1920 / (CW * 1.9);
     const zoomGeral = Math.min(1920 / PW, 1080 / PH) * 0.95;
@@ -103,7 +113,7 @@ export const Painel: React.FC<{ de: number; para: number; dur: number; preenchid
     if (visaoGeral) {
       cx = PW / 2; cy = PH / 2;
       z = interpolate(f, [0, dur], [zoomGeral * 1.12, zoomGeral * 0.98], clamp);
-      cx = PW / 2 + interpolate(f, [0, dur], [-180, 180], clamp);
+      cx = PW / 2 + interpolate(f, [0, dur], [-pan, pan], clamp);
     } else {
       const sai = interpolate(f, [0, t1], [zoomCartao * 1.6, zoomCartao], { ...clamp, easing: easeOut });
       const voo = interpolate(f, [t2, t3], [0, 1], { ...clamp, easing: easeInOut });
@@ -135,7 +145,7 @@ export const Painel: React.FC<{ de: number; para: number; dur: number; preenchid
                 pathLength={1} strokeDasharray="0.22 1" strokeDashoffset={-trace * 1.0 + 0.22} />
             )}
           </svg>
-          {Array.from({ length: 10 }, (_, i) => <Cartao key={i} i={i} preenchido={i < preenchidos || (!visaoGeral && i === para && f > t3)} ativo={!visaoGeral && (i === para && f > t2 || i === de && f <= t2)} />)}
+          {Array.from({ length: 10 }, (_, i) => <Cartao key={i} i={i} preenchido={i < preenchidos || (!visaoGeral && i === para && f > t3)} ativo={acende ? i === nAceso - 1 : !visaoGeral && (i === para && f > t2 || i === de && f <= t2)} invertido={!!acende && i === nAceso - 1} />)}
           <div style={{ position: "absolute", left: X0, top: 120, fontFamily: MONO, fontSize: 34, letterSpacing: 6, color: C.secundario }}>
             ARQUIVO NETFLIX · EP01 · 10 CAPÍTULOS
           </div>
