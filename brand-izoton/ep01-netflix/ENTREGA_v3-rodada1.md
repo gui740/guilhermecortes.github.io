@@ -1,8 +1,10 @@
 # ENTREGA v3 · rodada 1 do FIXES · EP01 Netflix
 
-Só os dois trechos do `FIXES.md` foram mexidos. A fala do TED com camadas, a transição 2 → 3 e o começo do SHORT 02 ficaram iguais. A amostra anterior continua intacta: os arquivos novos têm nomes novos.
+Itens 1 a 6 do `FIXES.md`. A imagem da fala do TED com camadas, da transição 2 → 3 e do começo do SHORT 02 não mudou. O som dos efeitos (item 6) foi corrigido em todas as cenas, e a transição 2 → 3 foi entregue de novo só com o som novo.
 
-**Artifact privado:** https://claude.ai/artifact/4WpF1JMsEE92opFs1GbgpK. Tem os 2 clipes em 540p a -14 LUFS, 6 prints de cada um com o tempo e o relatório de motion.
+**[ÁUDIO PROVISÓRIO]** A voz dos clipes ainda é a Gacrux, acelerada 7%. O Guilherme vai narrar o EP01, e a edição será ressincronizada no tempo dele quando o áudio chegar. A amostra anterior continua intacta: os arquivos novos têm nomes novos.
+
+**Artifact privado:** https://claude.ai/artifact/4WpF1JMsEE92opFs1GbgpK. Tem os 3 clipes em 540p a -14 LUFS, 6 prints de cada um com o tempo, o relatório de motion e o relatório de som.
 
 ## O que foi feito
 **Cold open v2** (`V3ColdOpen-v2`, em `video/src/v3/Rodada1.tsx`): 13,7 s no total, com 1,8 s de carimbo.
@@ -22,6 +24,19 @@ Só os dois trechos do `FIXES.md` foram mexidos. A fala do TED com camadas, a tr
 - A ficha datilografada "FORMATO: DVD · 1997" entra na palavra "formato" (1,18 s).
 - O carimbo continua em "prazo" (1,82 s).
 
+**Som das transições (item 6)**, em `Sfx` (`video/src/v3/Amostra.tsx`), para todas as cenas:
+- todos os efeitos levaram -9 dB;
+- arquivos novos em `media/som/fx_suave/`, com low-pass de 8 kHz e fade-in de 30 ms;
+- ducking de mais -4,4 dB quando o efeito cai sobre a fala (trechos de fala informados por cena via `FalaCtx`).
+
+| Trecho | Pico da voz | Pico dos efeitos: antes | Pico dos efeitos: depois |
+|---|---|---|---|
+| Cold open | -2,8 dBFS | -7,9 (-5,2 dB da voz) | -22,8 (-20,0 dB da voz) |
+| Colagem 01:09 | -5,7 dBFS | -7,9 (-2,3 dB da voz) | -23,3 (-17,6 dB da voz) |
+| Transição 2 → 3 | -1,5 dBFS | -7,9 (-6,4 dB da voz) | -22,8 (-21,2 dB da voz) |
+
+Os picos foram medidos no arquivo de cada efeito e de cada voz, com o ganho aplicado na cena, antes da normalização final, que é igual para tudo.
+
 ## Relatório de motion
 Medida que vale: sem grão (vídeo a 160 px com desfoque, freezedetect n=0,004, d=1 s).
 
@@ -29,6 +44,7 @@ Medida que vale: sem grão (vídeo a 160 px com desfoque, freezedetect n=0,004, 
 |---|---|---|---|---|---|
 | Cold open | 28,6 → 13,7 s | 47% | **0%** | 3,0 s → 0 s | 0% → 0% |
 | Colagem 01:09 | 13,9 s | 32% | **14%** | 2,6 s (início) → 1,9 s | 0% → 0% |
+| Transição 2 → 3 | 10,5 s | 12% | 12% (imagem igual) | 1,3 s → 1,3 s | 0% → 0% |
 
 Eventos no cold open: cerca de 30 em 13,7 s (cerca de 130/min). Laterais ocupadas de 0,1 s até o fim.
 
@@ -44,9 +60,14 @@ Eventos no cold open: cerca de 30 em 13,7 s (cerca de 130/min). Laterais ocupada
 3. **TED no CRT mudo**, porque fica sob a narração.
 4. **Carimbo "17 ABR. 2017"** e etiqueta "CEO · REED HASTINGS" acrescentados no primeiro segundo. Sem eles, 0,3–1,3 s ficava parado.
 
+5. **Um quadro com defeito corrigido.** A primeira publicação do cold open tinha um quadro de defeito aos 10,2 s, de uma falha do navegador durante a renderização. Os clipes atuais foram checados quadro a quadro.
+   - O `render.mjs` aceita `CONC=2` para renderizar com menos paralelismo.
+   - Os renders da primeira publicação foram mantidos como `*_v2_som-antigo.mp4`.
+
 ## Arquivos
 - Código: `video/src/v3/Rodada1.tsx`, `video/src/v3/Amostra.tsx` (helpers exportados e opção v2 da colagem), `video/src/v3/transicoes.tsx` (`acende`, `pan`, cartão invertido) e `video/src/Root.tsx`.
 - Áudio cortado (fora do Git): `video/public/media/v3audio/l01c_107.wav` e `l02c_107.wav`.
-- Masters 1080p (fora do Git): `video/out/v3a/V3ColdOpen_v2.mp4` e `V3Colagem_v2.mp4`.
+- Masters 1080p (fora do Git): `video/out/v3a/V3ColdOpen_v2.mp4`, `V3Colagem_v2.mp4` e `V3TransicaoCap_v2.mp4`.
+- Efeitos suavizados (fora do Git): `video/public/media/som/fx_suave/`.
 
 **Parei aqui.** Nada da Parada 2.

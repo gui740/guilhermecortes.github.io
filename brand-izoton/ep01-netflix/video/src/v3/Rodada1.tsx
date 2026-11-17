@@ -7,7 +7,7 @@ import { AbsoluteFill, Img, Sequence, interpolate, staticFile, useCurrentFrame }
 import { C, FAIXA, FONT, MONO } from "../theme";
 import { Camada, Camera, Card, Carimbo3, Destaque, Grao, PaginaEditorial, Papel, Recorte, useEntrada, useS } from "./kit";
 import { Mascara, Painel, TelaCRT } from "./transicoes";
-import { ListaCard, Narr, Sfx, Trilha, clamp } from "./Amostra";
+import { FalaCtx, ListaCard, Narr, Sfx, Trilha, clamp } from "./Amostra";
 
 export const COLD_OPEN_V2_DUR = 13.7;
 
@@ -20,6 +20,7 @@ export const ColdOpenV2: React.FC = () => {
   const pulso = 1 + 0.12 * Math.max(0, 1 - Math.abs(f - S(5.5)) / 6);
   const sobeFrase = Math.floor(interpolate(f, [0, S(N2)], [0, -40], clamp) / 4) * 4; // deriva em degraus
   return (
+    <FalaCtx.Provider value={[[0, 6.14], [N2, N2 + 5.46]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       {/* ---------------- A · frase + camadas (0 → N2) */}
       <Sequence from={0} durationInFrames={S(N2 + 0.5)}>
@@ -98,5 +99,6 @@ export const ColdOpenV2: React.FC = () => {
       <Sfx s={2.9} nome="crt_on_0" vol={0.35} /><Sfx s={4.08} nome="bip_0" vol={0.25} /><Sfx s={4.5} nome="papel_3" vol={0.35} /><Sfx s={5.2} nome="carimbo_2" vol={0.35} />
       <Sfx s={5.46} nome="bip_1" vol={0.25} /><Sfx s={N2} nome="sweep_0" vol={0.3} /><Sfx s={N2 + 1.42} nome="bip_2" vol={0.22} />{[0.36, 1.2, 2.04, 2.88, 3.72].map((t) => <Sfx key={t} s={N2 + t} nome="click_0" vol={0.15} />)}<Sfx s={D + 0.07} nome="carimbo_3" />
     </AbsoluteFill>
+    </FalaCtx.Provider>
   );
 };

@@ -78,7 +78,7 @@ if (modo === "amostra") {
     const c = await comp(id);
     ultimo = -1;
     await renderMedia({ composition: c, serveUrl, codec: "h264", crf: 18, outputLocation: `out/v3a/${id}.mp4`, browserExecutable: BROWSER,
-      concurrency: 4, imageFormat: "jpeg", jpegQuality: 92, onProgress: progresso(id), timeoutInMilliseconds: 120000 });
+      concurrency: Number(process.env.CONC || 4), imageFormat: "jpeg", jpegQuality: 92, onProgress: progresso(id), timeoutInMilliseconds: 120000 });
     log(`${id} ok`);
   }
 }

@@ -10,9 +10,15 @@ export const LT_TED = { nome: "REED HASTINGS", cargo: "CEO DA NETFLIX", fonte: "
 export const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
 
 /* ------------------------------------------------------------------ som */
+/** Trechos com fala (s) da cena; os efeitos que caem dentro deles levam ducking. Sem provedor, considera que há fala. */
+export const FalaCtx = React.createContext<[number, number][] | null>(null);
+/** Efeitos de transição (FIXES rodada 1, item 6): -9 dB, arquivos em fx_suave (low-pass 8 kHz, fade-in 30 ms) e -4,4 dB a mais sob fala. */
+export const SFX_GANHO = 0.355, SFX_DUCK = 0.6;
 export const Sfx: React.FC<{ s: number; nome: string; vol?: number }> = ({ s, nome, vol = 0.45 }) => {
   const S = useS();
-  return <Sequence from={S(s)} layout="none"><Audio src={staticFile(`media/som/fx/${nome}.wav`)} volume={vol} /></Sequence>;
+  const fala = React.useContext(FalaCtx);
+  const sob = fala ? fala.some(([a, b]) => s >= a - 0.1 && s <= b) : true;
+  return <Sequence from={S(s)} layout="none"><Audio src={staticFile(`media/som/fx_suave/${nome}.wav`)} volume={vol * SFX_GANHO * (sob ? SFX_DUCK : 1)} /></Sequence>;
 };
 export const Narr: React.FC<{ s: number; arq: string; vol?: number; inicio?: number; dur?: number }> = ({ s, arq, vol = 1, inicio = 0, dur }) => {
   const S = useS();
@@ -208,6 +214,7 @@ export const Colagem: React.FC<{ v2?: boolean }> = ({ v2 = false }) => {
   const f = useCurrentFrame();
   const DUR = 13.9;
   return (
+    <FalaCtx.Provider value={[[0, 13.48]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       <Papel />
       <Camera dur={S(DUR)} de={1.0} ate={1.13} dx={60} dy={-25}>
@@ -245,6 +252,7 @@ export const Colagem: React.FC<{ v2?: boolean }> = ({ v2 = false }) => {
       <Sfx s={0} nome="papel_0" /><Sfx s={1.82} nome="carimbo_0" />{v2 && <Sfx s={1.18} nome="click_0" vol={0.25} />}<Sfx s={3.2} nome="bip_0" vol={0.25} /><Sfx s={4.1} nome="papel_2" vol={0.35} />
       <Sfx s={7.2} nome="papel_1" /><Sfx s={8.56} nome="papel_3" /><Sfx s={9.48} nome="click_0" vol={0.3} /><Sfx s={12.12} nome="carimbo_1" />
     </AbsoluteFill>
+    </FalaCtx.Provider>
   );
 };
 
@@ -308,6 +316,7 @@ export const TransicaoCap: React.FC = () => {
   const T06_INI = 3.7, CAUDA = 1.9, PAINEL = 6.0, DEPOIS = 2.6;
   const P0 = CAUDA, P1 = CAUDA + PAINEL;
   return (
+    <FalaCtx.Provider value={[[0, CAUDA], [P0 + 0.2, P0 + 5.65], [P1, P1 + DEPOIS]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       <Sequence durationInFrames={S(CAUDA)}><TelaCRT clip="media/arquivo/T06.mp4" inicioClip={S(T06_INI)} dur={S(CAUDA)} liga={false} congelaFim /></Sequence>
       <Sequence durationInFrames={S(CAUDA)} layout="none"><LowerThird {...LT_TED} delay={0} /></Sequence>
@@ -342,6 +351,7 @@ export const TransicaoCap: React.FC = () => {
       <Sfx s={CAUDA - 0.3} nome="crt_off_2" /><Sfx s={P0 + PAINEL * 0.25} nome="sweep_0" vol={0.35} /><Sfx s={P0 + PAINEL * 0.5} nome="sweep_1" vol={0.35} />
       <Sfx s={P0 + PAINEL * 0.75} nome="click_1" vol={0.35} /><Sfx s={P1} nome="papel_2" />
     </AbsoluteFill>
+    </FalaCtx.Provider>
   );
 };
 
