@@ -181,6 +181,12 @@ export const World: React.FC<{cameraOnly?: boolean; variant?: 'A' | 'B' | 'C'; a
       
       if (el.from !== undefined && t < el.from) opacity = 0;
       if (el.kind === 'tape' && el.ring !== undefined) opacity *= lerp(0.3, 1, smooth(1.5, 6, c.z - z));
+      if (el.to !== undefined) opacity *= 1 - smooth(el.to - 0.2, el.to, t);
+      // gancho e fecho: fitas do corredor recuam para não cruzar o texto (janelas com rampa suave)
+      if (el.kind === 'tape' && el.ring !== undefined) {
+        const wtape = smooth(0.1, 0.4, t) * (1 - smooth(4.5, 4.9, t)) + smooth(33.0, 33.4, t) * (1 - smooth(37.6, 37.9, t));
+        opacity *= 1 - 0.75 * wtape * (1 - smooth(10, 16, c.z - z));
+      }
       let D = (c.z - z);
       if (el.kind === 'text' || el.kind === 'tag' || el.kind === 'star' || el.kind === 'dash') {
         const t0 = el.t0 ?? 0;
@@ -208,7 +214,7 @@ export const World: React.FC<{cameraOnly?: boolean; variant?: 'A' | 'B' | 'C'; a
           opacity *= clamp((t - t0) / 0.06);
         }
         // elementos gráficos somem antes de virar borrão na lente
-        if (el.kind === 'star') opacity *= smooth(1.4, 3.0, c.z - z);
+        if (el.kind === 'star') opacity *= smooth(2.6, 4.6, c.z - z);
         if (el.kind === 'dash' || el.kind === 'tag') opacity *= smooth(1.0, 2.2, c.z - z);
         // saída: a câmera passa pelo texto (ele corre até a lente)
         if (el.until !== undefined && t > el.until) {

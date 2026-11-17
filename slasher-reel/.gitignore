@@ -17,3 +17,6 @@ assets/audio/hooks/jobs.json
 assets/audio/ln.json
 out/preview_camera_video.mp4
 out/reel_video.mp4
+out/patch/
+out/conferencia/full_*.png
+out/gancho_*_video.mp4

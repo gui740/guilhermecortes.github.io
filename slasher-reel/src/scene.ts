@@ -40,6 +40,7 @@ export type El = {
   until?: number; // sai (câmera passa) depois deste tempo (s)
   noAnim?: boolean;
   from?: number; // invisível antes deste tempo
+  to?: number; // invisível depois deste tempo (some suave)
   group?: string; // blocos que respeitam a margem juntos
   variant?: 'A' | 'B' | 'C'; // versões do gancho
 };
@@ -176,14 +177,14 @@ const T = (s: TSpec) => {
 
 // ---------------------------------------------------------------- abertura (máscara colada na câmera) e fecho
 const MASK0 = 'r2_plaster_3';
-const openMask = (t: number, key: string, from?: number) => {
+const openMask = (t: number, key: string, from?: number, to?: number) => {
   const sz = sizeKit(MASK0, 1);
   const p = place(t, 0.0, 0.18, 1.55, 0.95, sz.w / sz.h);
-  add({key, kind: 'obj', tex: kit(MASK0), w: p.w, h: p.h, x: p.x, y: p.y, z: p.z, hang: {top: p.y + 3, phase: 0.4, amp: 0.02}, shadow: true, emissive: 0.05, from});
+  add({key, kind: 'obj', tex: kit(MASK0), w: p.w, h: p.h, x: p.x, y: p.y, z: p.z, hang: {top: p.y + 3, phase: 0.4, amp: 0.02}, shadow: true, emissive: 0.05, from, to});
 };
-openMask(0, 'mask_open');
+openMask(0, 'mask_open', undefined, 1.55);
 openMask(38.5, 'mask_end', 38.16);
-T({variant: 'A', id: 'h_tres', t: 0, sx: 0, sy: -0.36, D: 1.3, w: 0.62, until: 3.0});
+T({variant: 'A', id: 'h_tres', t: 0, sx: 0, sy: -0.36, D: 1.3, w: 0.62, until: 1.35});
 T({from: 38.16, id: 'h_tres', t: 38.5, sx: 0, sy: -0.36, D: 1.3, w: 0.62, tex: 'txt/h_tres.png', noAnim: true, until: 99});
 // gancho
 T({variant: 'A', id: 'h_assassinos', t: wt('assassinos', 0), sx: 0, sy: -0.06, D: 4.4, w: 0.86});
@@ -250,7 +251,7 @@ T({group: 'm3', id: 'f3_custou', t: wt('custou'), sx: -0.3, sy: 0.24, dzk: 1.0, 
 T({group: 'm3', id: 'f3_milhao', t: wt('milhão'), sx: 0.0, sy: 0.1, dzk: 1.0, st: S3, w: 0.66, impact: true});
 T({group: 'm3', id: 'f3_dolares', t: wt('dólares'), sx: 0.3, sy: -0.03, dzk: 1.0, st: S3, w: 0.28});
 // ponte
-T({group: 'bridge', id: 'b_insano', t: wt('esse'), sx: 0, sy: 0.1, D: 8.5, w: 0.86});
+T({group: 'bridge', id: 'b_insano', t: wt('esse'), sx: 0, sy: 0.1, D: 17, w: 0.86});
 T({group: 'bridge', id: 'b_proximo', t: wt('próximo'), sx: 0.05, sy: -0.06, D: 7, w: 0.52});
 
 stationEls({s: S2, killer: 'f2', tag: 'tag_2', tTag: S2.tTitle, logo: 'looke', tLogo: wt('looke'), tTana: wt('tá', 1), tanaId: 'tana', placardSide: 1});
