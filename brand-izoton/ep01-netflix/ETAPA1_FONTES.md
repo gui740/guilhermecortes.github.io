@@ -59,6 +59,32 @@ Leitura feita em 17 nov. 2026. Legenda de status:
 - Na legenda oficial PT-BR, "linear TV" virou só "TV". Na nossa tela vou usar "TV linear", que é mais fiel ao original.
 - Em 14:16 Hastings recusa a metáfora do vício. É um contraponto honesto à fala do sono de 2017 e vale para o bloco 9.
 
+#### F1a · Cortes de áudio e vídeo do TED (decisão do Guilherme em 17 nov. 2026)
+
+- **Decisão:** usar a voz real de Hastings. Quando der, usar também a imagem, sempre tratada: P&B, grão, scanlines e TV com falha. Nunca usar só foto com narração de IA no lugar da fala.
+- **Arquivo:** o vídeo que você subiu no Drive (pasta NETFLIX), versão do YouTube em 1080p, 24 fps, 20:51,8. Fica fora do repo.
+- **Cortes:** marcados com transcrição palavra por palavra (Whisper). O arquivo está cerca de 12,7 s à frente das minutagens do ted.com.
+- **Enquadramento:** câmera única no close de Hastings, com o rosto em x≈1030. Um zoom de 1,15× centralizado no rosto põe a cabeça dentro da faixa 9:16.
+
+| ID | Entrada → saída (s, no arquivo) | Duração | Início … fim da fala | Bloco |
+|---|---|---|---|---|
+| **HOOK** | 877,88 → 882,70 | 4,8 s | "And you can watch linear TV, you can do video games, you can do YouTube, or you can watch Netflix." | 0 / SHORT 01 |
+| T13 | 869,90 → 882,64 | 12,7 s | "we try not to think about it in addiction terms (…) or you can watch Netflix." | 9 |
+| T01 | 70,74 → 84,98 | 14,2 s | "we had actually tried to get into original content back in 2005 (…) we were subscale." | 2 |
+| T02 | 86,94 → 103,62 | 16,7 s | "in 2011, Ted Sarandos (…) $100 million (…) competition with HBO." | 2 |
+| T03 | 121,14 → 129,30 | 8,2 s | "we weren't confident (…) it was scary." | 2 |
+| T04 | 152,04 → 176,60 | 24,6 s | "we had grown up shipping DVDs (…) linear TV can't do." | 3 |
+| T05 | 199,60 → 217,66 | 18,1 s | "it's really about making the brand stronger (…) watched it on Netflix." | 2 |
+| T06 | 240,34 → 245,90 | 5,6 s | "It's about $8 billion around the world, and it's not enough." | 2 |
+| T07 | 317,04 → 326,76 | 9,7 s | "we were born on DVD (…) what's coming next" | 1 |
+| T08 | 386,68 → 401,66 | 15,0 s | "every time someone made a mistake (…) only dummies wanted to work there." | 5 |
+| T09 | 434,76 → 441,14 | 6,4 s | "We're like the anti-Apple (…) everybody gets all the information." | 5 / SHORT 04 |
+| T10 | 487,32 → 492,64 | 5,3 s | "we want people to speak the truth, and we say to disagree silently is disloyal." | 5 / SHORT 04 |
+| T11 | 547,48 → 551,78 | 4,3 s | "super exciting at the time. This is about 2007, but we haven't done it again." | 4 |
+| T12 | 593,52 → 623,56 | 30,0 s | "Everyone would rate Schindler's List five stars (…) simple pleasures." No roteiro, divido em dois trechos. | 4 / SHORT 03 |
+
+- **Risco que você assumiu:** a política do TED (item 0.2) não autoriza esse uso. O vídeo pode receber reivindicação de direitos ou ter a monetização bloqueada. Para reduzir o risco, a imagem do TED aparece sempre tratada, em trechos curtos, com crédito ("TED 2018") e dentro de análise.
+
 ### F2 · Entrevista de resultados do 1º tri 2017 (17 abr. 2017). **OK com ressalva**
 
 - **Fonte primária do texto:** transcrição completa da entrevista ([allmind.ai](https://allmind.ai/earnings/event/bt_NFLX_2017_Q1)), lida inteira.
