@@ -3,9 +3,16 @@ Uso: python3 tts.py <voz> <arquivo_texto> <saida.wav> [modelo]
 """
 import base64, json, os, sys, time, urllib.error, urllib.request, wave
 
-STYLE = ("Narre em português do Brasil como um locutor de rádio de uma cidade retrofuturista: "
-         "voz masculina grave, dicção nítida, ritmo firme e enfático, com uma ironia leve e inteligente. "
-         "Tom de documentário curioso, sem gritar e sem exagero. Pausas curtas entre as frases.")
+STYLES = {
+    "radio": ("Narre em português do Brasil como um locutor de rádio de uma cidade retrofuturista: "
+              "voz masculina grave, dicção nítida, ritmo firme e enfático, com uma ironia leve e inteligente. "
+              "Tom de documentário curioso, sem gritar e sem exagero. Pausas curtas entre as frases."),
+    "serena": ("Narre em português do Brasil com voz feminina de registro médio-grave, nunca aguda nem fina. "
+               "Calma, serena e segura, como a locutora de um abrigo que mantém a paz num futuro apocalíptico: "
+               "autoridade tranquila, calor humano, nenhuma pressa. Dicção nítida, frases bem assentadas, "
+               "pausas respiradas entre as ideias. Curiosa e inteligente, levemente irônica, sem dramatizar e sem sussurrar."),
+}
+STYLE = STYLES[os.environ.get("TTS_STYLE", "serena")]
 
 PROMPT = ("# AUDIO PROFILE\nNarrador de documentário de um canal de design e marcas.\n\n"
           "## DIRECTOR'S NOTES\n{style}\nLeia SOMENTE o texto da seção TRANSCRIPT.\n\n"
