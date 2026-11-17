@@ -50,7 +50,7 @@ export const Carimbo: React.FC<{ texto: string; delay?: number; style?: React.CS
   return (
     <div style={{ fontFamily: MONO, fontSize: 17, letterSpacing: 2, color: C.tinta, border: `2px solid ${C.tinta}`, padding: "6px 12px",
       textTransform: "uppercase", background: C.branco, transform: `scale(${interpolate(k, [0, 1], [1.6, 1])}) rotate(-1.5deg)`,
-      opacity: Math.min(1, k * 2), whiteSpace: "nowrap", ...style }}>{texto}</div>
+      opacity: Math.min(1, k * 2), maxWidth: FAIXA.w - 30, lineHeight: 1.35, ...style }}>{texto}</div>
   );
 };
 
@@ -115,8 +115,8 @@ export const Legenda: React.FC<{ linhas: string[]; dur: number; inicio?: number 
   if (t >= dur) idx = linhas.length - 1;
   if (idx < 0) return null;
   return (
-    <div style={{ position: "absolute", left: FAIXA.x - 30, width: FAIXA.w + 60, top: 790, display: "flex", justifyContent: "center" }}>
-      <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 38, lineHeight: 1.18, color: "white", textAlign: "center",
+    <div style={{ position: "absolute", left: FAIXA.x + 10, width: FAIXA.w - 20, top: 790, display: "flex", justifyContent: "center" }}>
+      <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 34, lineHeight: 1.18, color: "white", textAlign: "center",
         textShadow: "0 0 3px #000, 0 2px 10px rgba(0,0,0,0.9)", padding: "0 10px" }}>{linhas[idx]}</div>
     </div>
   );

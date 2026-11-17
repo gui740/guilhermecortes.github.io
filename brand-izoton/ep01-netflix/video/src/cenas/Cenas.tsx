@@ -112,14 +112,13 @@ const TV: React.FC<P> = ({ c, trecho }) => {
         <div style={{ background: C.tinta, padding: "34px 34px 70px", borderRadius: 34, boxShadow: SOMBRA, position: "relative" }}>
           <div style={{ width: sw, height: sh, borderRadius: 26, overflow: "hidden", background: "black", position: "relative" }}>
             {f >= pre && f < fimClip && (
-              <Sequence from={pre} layout="none"><OffthreadVideo src={staticFile(c.clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} /></Sequence>
+              <Sequence from={pre} layout="none"><OffthreadVideo src={staticFile(c.clip)} muted style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.2)", transformOrigin: "50% 8%" }} /></Sequence>
             )}
             <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0px, rgba(0,0,0,0.12) 1px, transparent 1px, transparent 3px)", borderRadius: 26 }} />
           </div>
           <div style={{ position: "absolute", bottom: 22, right: 50, display: "flex", gap: 16 }}>
             {[0, 1].map((i) => <div key={i} style={{ width: 26, height: 26, borderRadius: 13, border: `3px solid ${C.apoio}` }} />)}
           </div>
-          <Mono size={16} cor={C.apoio} style={{ position: "absolute", bottom: 24, left: 50 }}>CNN · 15 DEZ. 2015 · INTERVALO</Mono>
         </div>
       </div>
       {f >= pre && f < fimClip && (
@@ -159,7 +158,7 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
         <div style={{ position: "absolute", left: cw / 2 - (tr[2] * iw * s) / 2, top: ch / 2 + (tr[3] * ih * s) / 2 + 8,
           width: tr[2] * iw * s * sub, height: 4, background: C.tinta }} />
       </div>
-      <div style={{ position: "absolute", left: FAIXA.x - 40, top: 160 + (1 - entra) * 80 }}>
+      <div style={{ position: "absolute", left: FAIXA.x + 12, top: 150 + (1 - entra) * 80 }}>
         <Carimbo texto={c.carimbo} />
       </div>
       {temFrase && fraseK > 0 && (
