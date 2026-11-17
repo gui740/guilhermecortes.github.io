@@ -94,6 +94,24 @@ Leitura feita em 17 nov. 2026. Legenda de status:
 | B01 | 356,48 → 373,10 | 16,6 s | "after we did this one third layoff, it was 120 people to 80, we had expected to basically grind to a halt (…) because it would take 80 people just to keep the lights on. But in fact, we got more done with only 80 people." | 5 / SHORT 04 |
 | B02 | 425,16 → 449,10 | 23,9 s | "for managers, they have to each year testify for each of their people. That if that person were trying to quit, they would try to change their mind. (…) But sometimes you find that you have people working for you, and if they quit, you'd be like, that's pretty good." | 5 / SHORT 04 |
 
+#### F8a · Cortes do vídeo oficial "Netflix House Dallas is Now Open" (Drive, 1080p, 3:22)
+
+- **Quem fala:** um executivo da Netflix que o vídeo não identifica pelo nome. Na tela: "Executivo da Netflix · vídeo oficial · dez. 2025".
+- **Na tela do vídeo:** aparece "Netflix House Philadelphia Opening · November 12, 2025".
+
+| ID | Entrada → saída (s) | Fala |
+|---|---|---|
+| H01 | 1,06 → 2,95 | "Our number one job is fandom." |
+| H02 | 159,82 → 165,20 | "We've been in your living room for so long and now we're saying we want you to come into our living room" |
+| H03 | 172,30 → 176,90 | "(…) Netflix House Dallas to open and in 2027 Netflix House Vegas." O Whisper transcreveu "South Vegas", mas é Las Vegas, como no release. |
+
+#### FU · Comercial "#FU2016" de House of Cards (Drive, 720p, 30 s)
+
+| ID | Entrada → saída (s) | Fala |
+|---|---|---|
+| FU1 | 0,94 → 20,12 | "It's a new day in America. Today, more people will go to work, return home to their families, and sleep more soundly than ever before. (…) That man is Frank Underwood." |
+| FU2 | 25,60 → 28,32 | "I'm Frank Underwood, and I approve this message." |
+
 - **Risco que você assumiu:** a política do TED (item 0.2) não autoriza esse uso. O vídeo pode receber reivindicação de direitos ou ter a monetização bloqueada. Para reduzir o risco, a imagem do TED aparece sempre tratada, em trechos curtos, com crédito ("TED 2018") e dentro de análise.
 
 ### F2 · Entrevista de resultados do 1º tri 2017 (17 abr. 2017). **OK com ressalva**

@@ -1,0 +1,2686 @@
+{
+ "fps": 30,
+ "duracao": 876.204,
+ "trechos": [
+  {
+   "tipo": "arq",
+   "id": "HOOK",
+   "dur": 5.52000000000005,
+   "pre": 0.0,
+   "audio": "arquivo/HOOK.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/HOOK.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "Você pode ver TV linear, jogar videogame,",
+      "ver YouTube… ou ver Netflix."
+     ],
+     "clipDur": 4.82000000000005,
+     "desliga": true,
+     "t": 0.0
+    }
+   ],
+   "start": 0.0
+  },
+  {
+   "tipo": "narr",
+   "id": "n00a",
+   "dur": 6.013999999999999,
+   "audio": "narr/n00a.wav",
+   "cenas": [
+    {
+     "tipo": "lista",
+     "t": 0,
+     "itens": [
+      "TV LINEAR",
+      "VIDEOGAME",
+      "YOUTUBE",
+      "NETFLIX"
+     ],
+     "riscados": [
+      "HBO",
+      "AMAZON"
+     ],
+     "riscarEm": 0.42
+    }
+   ],
+   "start": 5.52
+  },
+  {
+   "tipo": "narr",
+   "id": "n00b",
+   "dur": 10.91,
+   "audio": "narr/n00b.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "A BRIGA PELO SEU TEMPO LIVRE",
+     "sub": "TED · VANCOUVER · 10 ABR. 2018",
+     "grande": true
+    },
+    {
+     "tipo": "medidor",
+     "t": 4.5,
+     "rotulo": "TEMPO DE TELA",
+     "marcas": [
+      "TV",
+      "GAMES",
+      "YOUTUBE",
+      "NETFLIX"
+     ],
+     "de": 0.05,
+     "ate": 0.75
+    }
+   ],
+   "start": 11.534
+  },
+  {
+   "tipo": "narr",
+   "id": "n00c",
+   "dur": 6.1339999999999995,
+   "audio": "narr/n00c.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/web_sleep.png",
+     "w": 2560,
+     "h": 1520,
+     "carimbo": "EVIDÊNCIA 01 · ENTREVISTA DE RESULTADOS Q1 2017 · 17 ABR. 2017",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 22.444
+  },
+  {
+   "tipo": "narr",
+   "id": "n00d",
+   "dur": 4.428,
+   "audio": "narr/n00d.wav",
+   "cenas": [
+    {
+     "tipo": "citacao",
+     "t": 0,
+     "texto": "“ESTAMOS COMPETINDO COM O SONO, NA MARGEM.”",
+     "credito": "REED HASTINGS · ENTREVISTA DE RESULTADOS Q1 2017",
+     "nota": "“Nosso maior concorrente é o sono” é manchete, não fala literal."
+    }
+   ],
+   "start": 28.578
+  },
+  {
+   "tipo": "narr",
+   "id": "n00e",
+   "dur": 10.392,
+   "audio": "narr/n00e.wav",
+   "cenas": [
+    {
+     "tipo": "abertura",
+     "t": 0,
+     "ep": "EP01",
+     "marca": "NETFLIX",
+     "titulo": "A NETFLIX NÃO COMPETE COM A HBO.",
+     "sub": "COMPETE COM VOCÊ."
+    }
+   ],
+   "start": 33.006
+  },
+  {
+   "tipo": "respiro",
+   "id": "r1",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 1,
+     "titulo": "DO DVD AO STREAMING",
+     "t": 0.0
+    }
+   ],
+   "start": 43.398
+  },
+  {
+   "tipo": "narr",
+   "id": "n01a",
+   "dur": 10.958,
+   "audio": "narr/n01a.wav",
+   "cenas": [
+    {
+     "tipo": "envelope",
+     "t": 0,
+     "ano": "1997",
+     "rotulo": "DVD PELO CORREIO"
+    }
+   ],
+   "start": 45.998
+  },
+  {
+   "tipo": "arq",
+   "id": "T07",
+   "dur": 10.269999999999971,
+   "pre": 0.25,
+   "audio": "arquivo/T07.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T07.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "nascemos do DVD e sabíamos que ele seria temporário.",
+      "Ninguém achou que ficaríamos 100 anos enviando discos.",
+      "Então você fica paranoico com o que vem a seguir."
+     ],
+     "clipDur": 9.71999999999997,
+     "t": 0.0
+    }
+   ],
+   "start": 56.956
+  },
+  {
+   "tipo": "narr",
+   "id": "n01b",
+   "dur": 12.709999999999999,
+   "audio": "narr/n01b.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "DESCONFIAR DO PRÓPRIO SUCESSO",
+     "sub": "“founding ethos” · TED 2018"
+    }
+   ],
+   "start": 67.226
+  },
+  {
+   "tipo": "narr",
+   "id": "n01c",
+   "dur": 19.406000000000002,
+   "audio": "narr/n01c.wav",
+   "cenas": [
+    {
+     "tipo": "linha",
+     "t": 0,
+     "itens": [
+      "CONTROLE REMOTO",
+      "VIDEOCASSETE",
+      "DVD",
+      "STREAMING",
+      "MARATONA"
+     ]
+    },
+    {
+     "tipo": "evidencia",
+     "t": 9.0,
+     "img": "media/stills/web_jenner.png",
+     "w": 2560,
+     "h": 1442,
+     "carimbo": "EVIDÊNCIA 02 · JENNER · SPRINGER · 2018",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "academico",
+     "t": 9.0,
+     "texto": "JENNER · Netflix and the re-invention of television · 2018"
+    }
+   ],
+   "start": 79.936
+  },
+  {
+   "tipo": "respiro",
+   "id": "r2",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 2,
+     "titulo": "A APOSTA NO ORIGINAL",
+     "t": 0.0
+    }
+   ],
+   "start": 99.342
+  },
+  {
+   "tipo": "narr",
+   "id": "n02a",
+   "dur": 6.901999999999999,
+   "audio": "narr/n02a.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "2005",
+     "sub": "PRIMEIRA TENTATIVA · AINDA SÓ DVD",
+     "grande": true
+    }
+   ],
+   "start": 101.942
+  },
+  {
+   "tipo": "arq",
+   "id": "T01",
+   "dur": 14.79000000000001,
+   "pre": 0.25,
+   "audio": "arquivo/T01.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T01.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "tentamos entrar em conteúdo original em 2005,",
+      "quando só tínhamos DVD (…) éramos um miniestúdio.",
+      "E não funcionou, porque não tínhamos escala."
+     ],
+     "clipDur": 14.240000000000009,
+     "t": 0.0
+    }
+   ],
+   "start": 108.844
+  },
+  {
+   "tipo": "narr",
+   "id": "n02b",
+   "dur": 4.046,
+   "audio": "narr/n02b.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "2011",
+     "sub": "SEGUNDA TENTATIVA",
+     "grande": true
+    }
+   ],
+   "start": 123.634
+  },
+  {
+   "tipo": "arq",
+   "id": "T02",
+   "dur": 17.230000000000008,
+   "pre": 0.25,
+   "audio": "arquivo/T02.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T02.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "em 2011, Ted Sarandos, meu sócio que cuida do conteúdo,",
+      "ficou muito empolgado com House of Cards.",
+      "Na época, custava 100 milhões de dólares.",
+      "Era um investimento fantástico, e competia com a HBO."
+     ],
+     "clipDur": 16.680000000000007,
+     "poster": "media/stills/poster_houseofcards.jpg",
+     "t": 0.0
+    }
+   ],
+   "start": 127.68
+  },
+  {
+   "tipo": "narr",
+   "id": "n02c",
+   "dur": 5.39,
+   "audio": "narr/n02c.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "COMO TER CERTEZA?",
+     "sub": "CHRIS ANDERSON · TED 2018"
+    }
+   ],
+   "start": 144.91
+  },
+  {
+   "tipo": "arq",
+   "id": "T03",
+   "dur": 8.710000000000012,
+   "pre": 0.25,
+   "audio": "arquivo/T03.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T03.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "a gente não tinha certeza. Essa é a tensão toda.",
+      "(…) foi assustador."
+     ],
+     "clipDur": 8.16000000000001,
+     "t": 0.0
+    }
+   ],
+   "start": 150.3
+  },
+  {
+   "tipo": "narr",
+   "id": "n02d",
+   "dur": 5.534,
+   "audio": "narr/n02d.wav",
+   "cenas": [
+    {
+     "tipo": "posters",
+     "t": 0,
+     "imgs": [
+      "media/stills/poster_houseofcards.jpg",
+      "media/stills/poster_madmen.jpg"
+     ],
+     "rotulos": [
+      "DA NETFLIX",
+      "SÓ EXIBIDA PELA NETFLIX"
+     ],
+     "pb": [
+      false,
+      true
+     ]
+    }
+   ],
+   "start": 159.01
+  },
+  {
+   "tipo": "arq",
+   "id": "T05",
+   "dur": 18.610000000000003,
+   "pre": 0.25,
+   "audio": "arquivo/T05.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T05.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "é sobre fortalecer a marca, para que mais gente queira assinar.",
+      "E House of Cards fez isso (…)",
+      "já Mad Men, que a gente exibia, ótima série da AMC,",
+      "não era associada à Netflix, mesmo assistida na Netflix."
+     ],
+     "clipDur": 18.060000000000002,
+     "t": 0.0
+    }
+   ],
+   "start": 164.544
+  },
+  {
+   "tipo": "narr",
+   "id": "n02e",
+   "dur": 12.398,
+   "audio": "narr/n02e.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "QUEM É DONO DA HISTÓRIA É LEMBRADO.",
+     "sub": "QUEM SÓ EXIBE, NÃO."
+    },
+    {
+     "tipo": "medidor",
+     "t": 4.5,
+     "rotulo": "APOSTA EM CONTEÚDO",
+     "marcas": [
+      "US$ 100 MI · 2011",
+      "",
+      "",
+      "US$ 8 BI · 2018"
+     ],
+     "de": 0.05,
+     "ate": 0.92
+    }
+   ],
+   "start": 183.154
+  },
+  {
+   "tipo": "arq",
+   "id": "T06",
+   "dur": 6.110000000000002,
+   "pre": 0.25,
+   "audio": "arquivo/T06.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T06.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "Uns 8 bilhões de dólares no mundo todo.",
+      "E não é suficiente."
+     ],
+     "clipDur": 5.560000000000002,
+     "t": 0.0
+    }
+   ],
+   "start": 195.552
+  },
+  {
+   "tipo": "respiro",
+   "id": "r3",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 3,
+     "titulo": "O BINGE COMO PRODUTO",
+     "t": 0.0
+    }
+   ],
+   "start": 201.662
+  },
+  {
+   "tipo": "narr",
+   "id": "n03a",
+   "dur": 8.654,
+   "audio": "narr/n03a.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "TODOS OS EPISÓDIOS DE UMA VEZ",
+     "sub": "HOUSE OF CARDS · 2013"
+    }
+   ],
+   "start": 204.262
+  },
+  {
+   "tipo": "arq",
+   "id": "T04",
+   "dur": 25.110000000000003,
+   "pre": 0.25,
+   "audio": "arquivo/T04.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T04.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "crescemos enviando DVDs, e tinha as séries em box de DVD.",
+      "Todos nós tivemos a experiência de ver ótimas séries da HBO",
+      "(…) próximo episódio, próximo episódio.",
+      "É muito poderoso ter todos os episódios de uma vez.",
+      "E isso a TV linear não consegue fazer."
+     ],
+     "clipDur": 24.560000000000002,
+     "t": 0.0
+    }
+   ],
+   "start": 212.916
+  },
+  {
+   "tipo": "narr",
+   "id": "n03b",
+   "dur": 17.534000000000002,
+   "audio": "narr/n03b.wav",
+   "cenas": [
+    {
+     "tipo": "fluxo",
+     "t": 0,
+     "itens": [
+      "EPISÓDIO 1",
+      "PRÓXIMO EPISÓDIO EM 5…",
+      "PULAR ABERTURA",
+      "EPISÓDIO 2"
+     ],
+     "rotulo": "FLUXO ISOLADO"
+    },
+    {
+     "tipo": "academico",
+     "t": 6.0,
+     "texto": "JENNER · cap. “Scheduling the Binge” · 2018 · p. 119–137 · conceito de Lisa Perks"
+    }
+   ],
+   "start": 238.026
+  },
+  {
+   "tipo": "narr",
+   "id": "n03c",
+   "dur": 11.918,
+   "audio": "narr/n03c.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/pazperez_p9-09.png",
+     "w": 1323,
+     "h": 1871,
+     "carimbo": "EVIDÊNCIA 04 · PAZ PÉREZ · ON RESEARCH · 2020 · P. 9",
+     "trecho": null,
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "academico",
+     "t": 0.5,
+     "texto": "PAZ PÉREZ · Next episode, next market · On Research · 2020 · p. 9"
+    }
+   ],
+   "start": 255.56
+  },
+  {
+   "tipo": "narr",
+   "id": "n03d",
+   "dur": 6.109999999999999,
+   "audio": "narr/n03d.wav",
+   "cenas": [
+    {
+     "tipo": "botao",
+     "t": 0,
+     "texto": "PULAR ABERTURA",
+     "contador": "136.000.000",
+     "sufixo": "CLIQUES POR DIA",
+     "nota": "DADO DE 2022"
+    }
+   ],
+   "start": 267.478
+  },
+  {
+   "tipo": "narr",
+   "id": "n03e",
+   "dur": 20.102,
+   "audio": "narr/n03e.wav",
+   "cenas": [
+    {
+     "tipo": "mapa",
+     "t": 0,
+     "titulo": "250 SÉRIES · TESTE INICIAL",
+     "pontos": [
+      "EUA",
+      "REINO UNIDO",
+      "CANADÁ"
+     ],
+     "sub": "WEB PRIMEIRO · TV EM AGO. 2017"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 11.0,
+     "img": "media/stills/web_skipintro_tv.png",
+     "w": 2560,
+     "h": 1466,
+     "carimbo": "EVIDÊNCIA 05 · NETFLIX · 17 MAR. 2022",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 273.588
+  },
+  {
+   "tipo": "narr",
+   "id": "n03f",
+   "dur": 13.405999999999999,
+   "audio": "narr/n03f.wav",
+   "cenas": [
+    {
+     "tipo": "contador",
+     "t": 0,
+     "valor": "195",
+     "sufixo": "ANOS ECONOMIZADOS",
+     "rotulo": "SOMA DO TEMPO DE TODOS · 2022"
+    },
+    {
+     "tipo": "academico",
+     "t": 0.5,
+     "texto": "JOHNSON · Looking back on the origin of Skip Intro · Netflix · 2022"
+    },
+    {
+     "tipo": "citacao",
+     "t": 6.5,
+     "texto": "“NEM UM BOTÃO ESCRITO ‘CUPCAKE GRÁTIS’ TERIA MAIS CLIQUES.”",
+     "credito": "ENGENHEIRO DA NETFLIX, SEGUNDO JOHNSON (2022)"
+    }
+   ],
+   "start": 293.69
+  },
+  {
+   "tipo": "narr",
+   "id": "n03g",
+   "dur": 6.1579999999999995,
+   "audio": "narr/n03g.wav",
+   "cenas": [
+    {
+     "tipo": "medidor",
+     "t": 0,
+     "rotulo": "TEMPO ATÉ A HISTÓRIA",
+     "marcas": [
+      "ABERTURA",
+      "",
+      "",
+      "ZERO"
+     ],
+     "de": 0.1,
+     "ate": 0.95
+    },
+    {
+     "tipo": "titulo",
+     "t": 3.0,
+     "texto": "NÃO DEIXAR VOCÊ ESPERAR."
+    }
+   ],
+   "start": 307.096
+  },
+  {
+   "tipo": "respiro",
+   "id": "r4",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 4,
+     "titulo": "O ALGORITMO",
+     "t": 0.0
+    }
+   ],
+   "start": 313.254
+  },
+  {
+   "tipo": "narr",
+   "id": "n04a",
+   "dur": 13.814,
+   "audio": "narr/n04a.wav",
+   "cenas": [
+    {
+     "tipo": "cheque",
+     "t": 0,
+     "valor": "US$ 1.000.000",
+     "carimbo": "+10%",
+     "rotulo": "PRÊMIO DO ALGORITMO · C. 2007"
+    }
+   ],
+   "start": 315.854
+  },
+  {
+   "tipo": "arq",
+   "id": "T11",
+   "dur": 4.849999999999954,
+   "pre": 0.25,
+   "audio": "arquivo/T11.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T11.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "foi superempolgante na época. Isso foi por volta de 2007.",
+      "Mas a gente não fez de novo."
+     ],
+     "clipDur": 4.2999999999999545,
+     "t": 0.0
+    }
+   ],
+   "start": 329.668
+  },
+  {
+   "tipo": "arq",
+   "id": "T12a",
+   "dur": 12.730000000000064,
+   "pre": 0.25,
+   "audio": "arquivo/T12a.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T12a.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "Todo mundo dava cinco estrelas para A Lista de Schindler",
+      "e três para Zerando a Vida, do Adam Sandler.",
+      "Mas, quando se olhava o que assistiam,",
+      "era quase sempre Adam Sandler."
+     ],
+     "clipDur": 12.180000000000064,
+     "estrelas": true,
+     "t": 0.0
+    }
+   ],
+   "start": 334.518
+  },
+  {
+   "tipo": "narr",
+   "id": "n04b",
+   "dur": 5.51,
+   "audio": "narr/n04b.wav",
+   "cenas": [
+    {
+     "tipo": "colunas",
+     "t": 0,
+     "esquerda": "O QUE VOCÊ DIZ",
+     "direita": "O QUE VOCÊ ASSISTE"
+    }
+   ],
+   "start": 347.248
+  },
+  {
+   "tipo": "arq",
+   "id": "T12b",
+   "dur": 9.809999999999992,
+   "pre": 0.25,
+   "audio": "arquivo/T12b.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T12b.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "agrada muito mais olhar para as escolhas reais das pessoas.",
+      "As preferências reveladas",
+      "pelo quanto elas curtem prazeres simples."
+     ],
+     "clipDur": 9.259999999999991,
+     "t": 0.0
+    }
+   ],
+   "start": 352.758
+  },
+  {
+   "tipo": "narr",
+   "id": "n04c",
+   "dur": 11.87,
+   "audio": "narr/n04c.wav",
+   "cenas": [
+    {
+     "tipo": "medidor",
+     "t": 0,
+     "rotulo": "PREFERÊNCIA REVELADA",
+     "marcas": [
+      "ASPIRAÇÃO",
+      "",
+      "",
+      "PRAZER SIMPLES"
+     ],
+     "de": 0.2,
+     "ate": 0.8
+    },
+    {
+     "tipo": "titulo",
+     "t": 5.0,
+     "texto": "CURADORIA + FERRAMENTA",
+     "sub": "TED 2018 · 12:13"
+    }
+   ],
+   "start": 362.568
+  },
+  {
+   "tipo": "respiro",
+   "id": "r5",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 5,
+     "titulo": "A CULTURA",
+     "t": 0.0
+    }
+   ],
+   "start": 374.438
+  },
+  {
+   "tipo": "narr",
+   "id": "n05a",
+   "dur": 6.758,
+   "audio": "narr/n05a.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "A PRIMEIRA EMPRESA",
+     "sub": "ANOS 1990"
+    }
+   ],
+   "start": 377.038
+  },
+  {
+   "tipo": "arq",
+   "id": "T08",
+   "dur": 15.530000000000019,
+   "pre": 0.25,
+   "audio": "arquivo/T08.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T08.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "toda vez que alguém errava, a gente criava um processo",
+      "para aquilo não se repetir (…)",
+      "E, no fim, só os bobos queriam trabalhar lá."
+     ],
+     "clipDur": 14.980000000000018,
+     "t": 0.0
+    }
+   ],
+   "start": 383.796
+  },
+  {
+   "tipo": "narr",
+   "id": "n05b",
+   "dur": 6.085999999999999,
+   "audio": "narr/n05b.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "MÍNIMO DE PROCESSO. SEM CAOS.",
+     "sub": "TED 2018"
+    }
+   ],
+   "start": 399.326
+  },
+  {
+   "tipo": "arq",
+   "id": "T09",
+   "dur": 6.929999999999995,
+   "pre": 0.25,
+   "audio": "arquivo/T09.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T09.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "Somos tipo a anti-Apple. Sabe como eles compartimentam?",
+      "A gente faz o contrário:",
+      "todo mundo recebe todas as informações."
+     ],
+     "clipDur": 6.3799999999999955,
+     "t": 0.0
+    }
+   ],
+   "start": 405.412
+  },
+  {
+   "tipo": "arq",
+   "id": "T10",
+   "dur": 5.869999999999993,
+   "pre": 0.25,
+   "audio": "arquivo/T10.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T10.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "queremos que as pessoas digam a verdade.",
+      "E dizemos: discordar em silêncio é desleal."
+     ],
+     "clipDur": 5.319999999999993,
+     "t": 0.0
+    }
+   ],
+   "start": 412.342
+  },
+  {
+   "tipo": "narr",
+   "id": "n05c",
+   "dur": 8.75,
+   "audio": "narr/n05c.wav",
+   "cenas": [
+    {
+     "tipo": "pessoas",
+     "t": 0,
+     "de": 120,
+     "ate": 80,
+     "ano": "2001"
+    }
+   ],
+   "start": 418.212
+  },
+  {
+   "tipo": "arq",
+   "id": "B01",
+   "dur": 17.170000000000005,
+   "pre": 0.25,
+   "audio": "arquivo/B01.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/B01.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "STANFORD CS183C · GREYLOCK · 2015"
+     },
+     "legenda": [
+      "depois de demitir um terço, de 120 para 80 pessoas,",
+      "a gente esperava travar (…)",
+      "seriam precisos 80 só para manter as luzes acesas.",
+      "Mas, na verdade, fizemos mais com só 80 pessoas."
+     ],
+     "clipDur": 16.620000000000005,
+     "t": 0.0
+    }
+   ],
+   "start": 426.962
+  },
+  {
+   "tipo": "narr",
+   "id": "n05d",
+   "dur": 6.47,
+   "audio": "narr/n05d.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "DENSIDADE DE TALENTO"
+    }
+   ],
+   "start": 444.132
+  },
+  {
+   "tipo": "arq",
+   "id": "B02",
+   "dur": 24.49,
+   "pre": 0.25,
+   "audio": "arquivo/B02.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/B02.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "STANFORD CS183C · GREYLOCK · 2015"
+     },
+     "legenda": [
+      "os gestores têm de, todo ano, dar um testemunho sobre cada pessoa:",
+      "se ela tentasse pedir demissão,",
+      "eles tentariam fazê-la mudar de ideia?",
+      "(…) às vezes você percebe que tem gente no time",
+      "que, se pedisse para sair, você pensaria: até que seria bom."
+     ],
+     "clipDur": 23.939999999999998,
+     "t": 0.0
+    }
+   ],
+   "start": 450.602
+  },
+  {
+   "tipo": "narr",
+   "id": "n05e",
+   "dur": 22.838,
+   "audio": "narr/n05e.wav",
+   "cenas": [
+    {
+     "tipo": "pergunta",
+     "t": 0,
+     "texto": "SE ESSA PESSOA QUISESSE SAIR, EU LUTARIA PARA MANTÊ-LA?",
+     "rotulo": "KEEPER TEST"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 6.0,
+     "img": "media/stills/web_keeper.png",
+     "w": 2560,
+     "h": 1520,
+     "carimbo": "EVIDÊNCIA 09 · NETFLIX CULTURE MEMO",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "anzol",
+     "t": 14.0,
+     "texto": "“THAT’S A KEEPER, REED!”"
+    }
+   ],
+   "start": 475.092
+  },
+  {
+   "tipo": "respiro",
+   "id": "r6",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 6,
+     "titulo": "A IDENTIDADE",
+     "t": 0.0
+    }
+   ],
+   "start": 497.93
+  },
+  {
+   "tipo": "narr",
+   "id": "n06a",
+   "dur": 7.151999999999999,
+   "audio": "narr/n06a.wav",
+   "cenas": [
+    {
+     "tipo": "logoN",
+     "t": 0,
+     "silencio": true
+    }
+   ],
+   "start": 500.53
+  },
+  {
+   "tipo": "narr",
+   "id": "n06b",
+   "dur": 11.246,
+   "audio": "narr/n06b.wav",
+   "cenas": [
+    {
+     "tipo": "logoN",
+     "t": 0,
+     "legenda": "EXISTE PODER EM SER DONO DE UMA LETRA DO ALFABETO."
+    },
+    {
+     "tipo": "evidencia",
+     "t": 6.0,
+     "img": "media/stills/web_brand_n.png",
+     "w": 2560,
+     "h": 1520,
+     "carimbo": "EVIDÊNCIA 10 · BRAND.NETFLIX.COM",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 507.682
+  },
+  {
+   "tipo": "narr",
+   "id": "n06c",
+   "dur": 11.629999999999999,
+   "audio": "narr/n06c.wav",
+   "cenas": [
+    {
+     "tipo": "cores",
+     "t": 0
+    }
+   ],
+   "start": 518.928
+  },
+  {
+   "tipo": "narr",
+   "id": "n06d",
+   "dur": 17.03,
+   "audio": "narr/n06d.wav",
+   "cenas": [
+    {
+     "tipo": "proibicoes",
+     "t": 0,
+     "itens": [
+      "ESTICAR",
+      "GIRAR",
+      "UMA COR SÓ",
+      "EFEITOS",
+      "FUNDO POLUÍDO",
+      "SOBRE VERMELHO",
+      "NO CHÃO",
+      "NA COMIDA"
+     ]
+    },
+    {
+     "tipo": "evidencia",
+     "t": 10.5,
+     "img": "media/stills/web_brand_avoid.png",
+     "w": 2560,
+     "h": 1478,
+     "carimbo": "EVIDÊNCIA 11 · BRAND.NETFLIX.COM · THINGS TO AVOID",
+     "trecho": [
+      0.04,
+      0.33,
+      0.92,
+      0.12
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 530.558
+  },
+  {
+   "tipo": "narr",
+   "id": "n06e",
+   "dur": 25.694000000000003,
+   "audio": "narr/n06e.wav",
+   "cenas": [
+    {
+     "tipo": "barras",
+     "t": 0,
+     "titulo": "INTENÇÃO DE HUMOR · TWITTER",
+     "a": [
+      "EUA",
+      36.7
+     ],
+     "b": [
+      "ESPANHA",
+      60.0
+     ]
+    },
+    {
+     "tipo": "evidencia",
+     "t": 14.0,
+     "img": "media/stills/pazperez_p12-12.png",
+     "w": 1323,
+     "h": 1871,
+     "carimbo": "EVIDÊNCIA 12 · PAZ PÉREZ · 2020 · P. 12",
+     "trecho": [
+      0.0976,
+      0.1167,
+      0.5339,
+      0.1092
+     ],
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "academico",
+     "t": 0.5,
+     "texto": "PAZ PÉREZ · Next episode, next market · On Research · 2020 · p. 11–12 · estudo preliminar de 3 meses"
+    }
+   ],
+   "start": 547.588
+  },
+  {
+   "tipo": "respiro",
+   "id": "r7",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 7,
+     "titulo": "A PUBLICIDADE",
+     "t": 0.0
+    }
+   ],
+   "start": 573.282
+  },
+  {
+   "tipo": "narr",
+   "id": "n07a",
+   "dur": 14.533999999999999,
+   "audio": "narr/n07a.wav",
+   "cenas": [
+    {
+     "tipo": "aovivo",
+     "t": 0,
+     "linha1": "AO VIVO",
+     "linha2": "DEBATE REPUBLICANO · CNN · 15 DEZ. 2015"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 7.0,
+     "img": "media/stills/web_drum.png",
+     "w": 2560,
+     "h": 1520,
+     "carimbo": "EVIDÊNCIA 13 · THE DRUM · 16 DEZ. 2015",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 575.882
+  },
+  {
+   "tipo": "arq",
+   "id": "FU1",
+   "dur": 19.9,
+   "pre": 0.25,
+   "audio": "arquivo/FU1.mp4",
+   "cenas": [
+    {
+     "tipo": "tv",
+     "clip": "media/arquivo/FU1.mp4",
+     "lt": {
+      "nome": "FRANK UNDERWOOD (PERSONAGEM)",
+      "cargo": "COMERCIAL #FU2016 · HOUSE OF CARDS",
+      "fonte": "NETFLIX · CNN · 15 DEZ. 2015"
+     },
+     "legenda": [
+      "É um novo dia na América. Hoje, mais pessoas vão trabalhar,",
+      "voltar para suas famílias e dormir mais tranquilas do que nunca.",
+      "(…) Esse homem é Frank Underwood."
+     ],
+     "clipDur": 19.349999999999998,
+     "t": 0.0
+    }
+   ],
+   "start": 590.416
+  },
+  {
+   "tipo": "narr",
+   "id": "n07b",
+   "dur": 14.75,
+   "audio": "narr/n07b.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "#FU2016",
+     "sub": "SITE DE CAMPANHA FALSO · ESTREIA DA T4 EM 4 DE MARÇO",
+     "grande": true
+    },
+    {
+     "tipo": "academico",
+     "t": 0.5,
+     "texto": "CONNELLY · The Drum · 16 dez. 2015"
+    }
+   ],
+   "start": 610.316
+  },
+  {
+   "tipo": "arq",
+   "id": "FU2",
+   "dur": 3.4499999999999984,
+   "pre": 0.25,
+   "audio": "arquivo/FU2.mp4",
+   "cenas": [
+    {
+     "tipo": "tv",
+     "clip": "media/arquivo/FU2.mp4",
+     "lt": {
+      "nome": "FRANK UNDERWOOD (PERSONAGEM)",
+      "cargo": "COMERCIAL #FU2016 · HOUSE OF CARDS",
+      "fonte": "NETFLIX · CNN · 15 DEZ. 2015"
+     },
+     "legenda": [
+      "Eu sou Frank Underwood, e aprovo esta mensagem."
+     ],
+     "clipDur": 2.8999999999999986,
+     "t": 0.0
+    }
+   ],
+   "start": 625.066
+  },
+  {
+   "tipo": "narr",
+   "id": "n07c",
+   "dur": 5.101999999999999,
+   "audio": "narr/n07c.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "ENTROU NA CONVERSA."
+    }
+   ],
+   "start": 628.516
+  },
+  {
+   "tipo": "narr",
+   "id": "n07d",
+   "dur": 16.718,
+   "audio": "narr/n07d.wav",
+   "cenas": [
+    {
+     "tipo": "lista",
+     "t": 0,
+     "itens": [
+      "HEINEKEN",
+      "GUARANÁ ANTARCTICA",
+      "CLARO",
+      "McDONALD'S",
+      "TAG HEUER",
+      "PERSOL",
+      "FANATICS"
+     ],
+     "titulo": "SENNA · 2024 · PARCERIAS"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 9.0,
+     "img": "media/stills/web_mm_senna.png",
+     "w": 2560,
+     "h": 1444,
+     "carimbo": "EVIDÊNCIA 14 · MEIO & MENSAGEM · NOV. 2024",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 633.618
+  },
+  {
+   "tipo": "respiro",
+   "id": "r8",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 8,
+     "titulo": "OS FENÔMENOS",
+     "t": 0.0
+    }
+   ],
+   "start": 650.336
+  },
+  {
+   "tipo": "narr",
+   "id": "n08a",
+   "dur": 18.902,
+   "audio": "narr/n08a.wav",
+   "cenas": [
+    {
+     "tipo": "posters",
+     "t": 0,
+     "imgs": [
+      "media/stills/poster_squidgame.jpg"
+     ],
+     "rotulos": [
+      "ROUND 6 · 2021"
+     ]
+    },
+    {
+     "tipo": "contador",
+     "t": 7.5,
+     "valor": "142 MI",
+     "sufixo": "DOMICÍLIOS · 4 SEMANAS",
+     "rotulo": "NÚMERO 1 EM 94 PAÍSES · CARTA Q3 2021"
+    }
+   ],
+   "start": 652.936
+  },
+  {
+   "tipo": "narr",
+   "id": "n08b",
+   "dur": 14.198,
+   "audio": "narr/n08b.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/web_top10.png",
+     "w": 2560,
+     "h": 1460,
+     "carimbo": "EVIDÊNCIA 15 · NETFLIX TOP 10 · CONSULTA EM 17 NOV. 2026",
+     "trecho": [
+      0.04,
+      0.42,
+      0.92,
+      0.09
+     ],
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "contador",
+     "t": 6.0,
+     "valor": "265,2 MI",
+     "sufixo": "VIEWS · 91 DIAS",
+     "rotulo": "SÉRIE MAIS VISTA DA HISTÓRIA DA NETFLIX"
+    }
+   ],
+   "start": 671.838
+  },
+  {
+   "tipo": "narr",
+   "id": "n08c",
+   "dur": 15.134,
+   "audio": "narr/n08c.wav",
+   "cenas": [
+    {
+     "tipo": "posters",
+     "t": 0,
+     "imgs": [
+      "media/stills/poster_moneyheist.jpg"
+     ],
+     "rotulos": [
+      "LA CASA DE PAPEL"
+     ]
+    },
+    {
+     "tipo": "evidencia",
+     "t": 6.5,
+     "img": "media/stills/carta_q3_21-03.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 16 · CARTA AOS ACIONISTAS Q3 2021 · P. 3",
+     "trecho": [
+      0.1176,
+      0.1639,
+      0.764,
+      0.0896
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 686.036
+  },
+  {
+   "tipo": "narr",
+   "id": "n08d",
+   "dur": 8.581999999999999,
+   "audio": "narr/n08d.wav",
+   "cenas": [
+    {
+     "tipo": "posters",
+     "t": 0,
+     "imgs": [
+      "media/stills/poster_wednesday.jpg",
+      "media/stills/poster_strangerthings.jpg"
+     ],
+     "rotulos": [
+      "WEDNESDAY · 252,1 MI",
+      "STRANGER THINGS 4 · 140,7 MI"
+     ]
+    }
+   ],
+   "start": 701.17
+  },
+  {
+   "tipo": "narr",
+   "id": "n08e",
+   "dur": 7.43,
+   "audio": "narr/n08e.wav",
+   "cenas": [
+    {
+     "tipo": "mapa",
+     "t": 0,
+     "titulo": "AUDIÊNCIA TRANSNACIONAL",
+     "pontos": [],
+     "sub": "FRAGMENTADA ENTRE FRONTEIRAS"
+    },
+    {
+     "tipo": "academico",
+     "t": 0.5,
+     "texto": "JENNER · cap. “The Netflix Audience” · 2018 · p. 241–259"
+    }
+   ],
+   "start": 709.752
+  },
+  {
+   "tipo": "respiro",
+   "id": "r9",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 9,
+     "titulo": "A CONTA",
+     "t": 0.0
+    }
+   ],
+   "start": 717.182
+  },
+  {
+   "tipo": "narr",
+   "id": "n09a",
+   "dur": 12.373999999999999,
+   "audio": "narr/n09a.wav",
+   "cenas": [
+    {
+     "tipo": "contador",
+     "t": 0,
+     "valor": "100.000.000",
+     "sufixo": "DE CASAS COMPARTILHANDO",
+     "rotulo": "NETFLIX · 8 FEV. 2023"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 6.0,
+     "img": "media/stills/web_sharing.png",
+     "w": 2560,
+     "h": 1516,
+     "carimbo": "EVIDÊNCIA 17 · NETFLIX · AN UPDATE ON SHARING",
+     "trecho": [
+      0.04,
+      0.3,
+      0.92,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 719.782
+  },
+  {
+   "tipo": "narr",
+   "id": "n09b",
+   "dur": 5.27,
+   "audio": "narr/n09b.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/carta_q4_22-06.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 18 · CARTA Q4 2022 · P. 6",
+     "trecho": [
+      0.1176,
+      0.2011,
+      0.7623,
+      0.0524
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 732.156
+  },
+  {
+   "tipo": "narr",
+   "id": "n09c",
+   "dur": 12.998,
+   "audio": "narr/n09c.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/carta_q2_23-01.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 19 · CARTA Q2 2023 · P. 1",
+     "trecho": [
+      0.1471,
+      0.1506,
+      0.7277,
+      0.0707
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 737.426
+  },
+  {
+   "tipo": "narr",
+   "id": "n09d",
+   "dur": 7.406,
+   "audio": "narr/n09d.wav",
+   "cenas": [
+    {
+     "tipo": "pergunta",
+     "t": 0,
+     "texto": "FOI UM ACERTO?",
+     "rotulo": "PELOS NÚMEROS DA EMPRESA: SIM"
+    }
+   ],
+   "start": 750.424
+  },
+  {
+   "tipo": "narr",
+   "id": "n09e",
+   "dur": 25.622,
+   "audio": "narr/n09e.wav",
+   "cenas": [
+    {
+     "tipo": "contador",
+     "t": 0,
+     "valor": "4–5 MIN",
+     "sufixo": "DE ANÚNCIOS POR HORA",
+     "rotulo": "PLANO COM ANÚNCIOS · NOV. 2022 · 12 PAÍSES"
+    },
+    {
+     "tipo": "evidencia",
+     "t": 9.0,
+     "img": "media/stills/carta_q4_24-05.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 20 · CARTA Q4 2024 · P. 5",
+     "trecho": [
+      0.1176,
+      0.7709,
+      0.7348,
+      0.0518
+     ],
+     "frase": null,
+     "foco": null
+    },
+    {
+     "tipo": "titulo",
+     "t": 17.5,
+     "texto": "“PAGUE UM POUCO MAIS.”",
+     "sub": "CARTA Q4 2024"
+    }
+   ],
+   "start": 757.83
+  },
+  {
+   "tipo": "narr",
+   "id": "n09f",
+   "dur": 16.67,
+   "audio": "narr/n09f.wav",
+   "cenas": [
+    {
+     "tipo": "evidencia",
+     "t": 0,
+     "img": "media/stills/carta_q4_18-05.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 21 · CARTA Q4 2018 · P. 5",
+     "trecho": [
+      0.1176,
+      0.2898,
+      0.7645,
+      0.0328
+     ],
+     "frase": "“COMPETIMOS COM O FORTNITE (E PERDEMOS PARA ELE) MAIS DO QUE COM A HBO.”",
+     "foco": null
+    },
+    {
+     "tipo": "medidor",
+     "t": 10.0,
+     "rotulo": "TEMPO DE TELA",
+     "marcas": [
+      "FORTNITE",
+      "YOUTUBE",
+      "",
+      "NETFLIX"
+     ],
+     "de": 0.1,
+     "ate": 0.85
+    }
+   ],
+   "start": 783.452
+  },
+  {
+   "tipo": "arq",
+   "id": "T13",
+   "dur": 13.350000000000069,
+   "pre": 0.25,
+   "audio": "arquivo/T13.mp4",
+   "cenas": [
+    {
+     "tipo": "arquivo",
+     "clip": "media/arquivo/T13.mp4",
+     "lt": {
+      "nome": "REED HASTINGS",
+      "cargo": "CEO DA NETFLIX",
+      "fonte": "TED · ABR. 2018"
+     },
+     "legenda": [
+      "a gente tenta não pensar em termos de vício.",
+      "A gente pensa assim: o que você vai fazer com o seu tempo",
+      "e quando quiser relaxar? Você pode ver TV linear,",
+      "jogar videogame, ver YouTube… ou ver Netflix."
+     ],
+     "clipDur": 12.800000000000068,
+     "t": 0.0
+    }
+   ],
+   "start": 800.122
+  },
+  {
+   "tipo": "respiro",
+   "id": "r10",
+   "dur": 2.6,
+   "cenas": [
+    {
+     "tipo": "respiro",
+     "num": 10,
+     "titulo": "A CASA",
+     "t": 0.0
+    }
+   ],
+   "start": 813.472
+  },
+  {
+   "tipo": "arq",
+   "id": "H01",
+   "dur": 2.5,
+   "pre": 0.25,
+   "audio": "arquivo/H01.mp4",
+   "cenas": [
+    {
+     "tipo": "cor",
+     "clip": "media/arquivo/H01.mp4",
+     "lt": {
+      "nome": "EXECUTIVO DA NETFLIX",
+      "cargo": "VÍDEO OFICIAL NETFLIX HOUSE",
+      "fonte": "NETFLIX · DEZ. 2025"
+     },
+     "legenda": [
+      "Nosso trabalho número um é o fandom."
+     ],
+     "clipDur": 1.9500000000000002,
+     "t": 0.0
+    }
+   ],
+   "start": 816.072
+  },
+  {
+   "tipo": "narr",
+   "id": "n10a",
+   "dur": 20.318,
+   "audio": "narr/n10a.wav",
+   "cenas": [
+    {
+     "tipo": "cor_clip",
+     "t": 0,
+     "clip": "media/arquivo/H03.mp4",
+     "mudo": true
+    },
+    {
+     "tipo": "contador",
+     "t": 6.0,
+     "valor": "≈ 9.290 M²",
+     "sufixo": "NETFLIX HOUSE DALLAS",
+     "rotulo": "DEZ. 2025 · PRESS RELEASE OFICIAL"
+    },
+    {
+     "tipo": "titulo",
+     "t": 14.0,
+     "texto": "LAS VEGAS · 2027"
+    }
+   ],
+   "start": 818.572
+  },
+  {
+   "tipo": "narr",
+   "id": "n10b",
+   "dur": 9.83,
+   "audio": "narr/n10b.wav",
+   "cenas": [
+    {
+     "tipo": "envelope",
+     "t": 0,
+     "ano": "2025",
+     "rotulo": "A PORTA É UM ENVELOPE VERMELHO",
+     "porta": true
+    },
+    {
+     "tipo": "evidencia",
+     "t": 5.0,
+     "img": "media/stills/house_release-1.png",
+     "w": 1360,
+     "h": 1760,
+     "carimbo": "EVIDÊNCIA 22 · NETFLIX · PRESS RELEASE · 11 DEZ. 2025",
+     "trecho": [
+      0.06,
+      0.7,
+      0.88,
+      0.1
+     ],
+     "frase": null,
+     "foco": null
+    }
+   ],
+   "start": 838.89
+  },
+  {
+   "tipo": "arq",
+   "id": "H02",
+   "dur": 6.100000000000011,
+   "pre": 0.25,
+   "audio": "arquivo/H02.mp4",
+   "cenas": [
+    {
+     "tipo": "cor",
+     "clip": "media/arquivo/H02.mp4",
+     "lt": {
+      "nome": "EXECUTIVO DA NETFLIX",
+      "cargo": "VÍDEO OFICIAL NETFLIX HOUSE",
+      "fonte": "NETFLIX · DEZ. 2025"
+     },
+     "legenda": [
+      "Estivemos na sua sala por muito tempo.",
+      "Agora estamos dizendo: venha para a nossa sala."
+     ],
+     "clipDur": 5.550000000000011,
+     "t": 0.0
+    }
+   ],
+   "start": 848.72
+  },
+  {
+   "tipo": "narr",
+   "id": "n10c",
+   "dur": 13.520000000000001,
+   "audio": "narr/n10c.wav",
+   "cenas": [
+    {
+     "tipo": "titulo",
+     "t": 0,
+     "texto": "DO ENVELOPE QUE CHEGAVA À SUA CASA",
+     "sub": "AO ENVELOPE EM QUE VOCÊ ENTRA"
+    },
+    {
+     "tipo": "logoN",
+     "t": 8.0
+    }
+   ],
+   "start": 854.82
+  },
+  {
+   "tipo": "narr",
+   "id": "n10d",
+   "dur": 7.864,
+   "audio": "narr/n10d.wav",
+   "cenas": [
+    {
+     "tipo": "fim",
+     "t": 0,
+     "marca": "BRAND BY IZOTON",
+     "sub": "ATÉ O PRÓXIMO ARQUIVO."
+    }
+   ],
+   "start": 868.34
+  }
+ ],
+ "fx": [
+  {
+   "t": 0.0,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 5.27,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 5.52,
+   "som": "tecla_2"
+  },
+  {
+   "t": 11.534,
+   "som": "bip_3"
+  },
+  {
+   "t": 16.234,
+   "som": "geiger_0"
+  },
+  {
+   "t": 22.444,
+   "som": "papel_1"
+  },
+  {
+   "t": 22.994,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 28.578,
+   "som": "bip_3"
+  },
+  {
+   "t": 33.006,
+   "som": "sweep_0"
+  },
+  {
+   "t": 43.398,
+   "som": "click_1"
+  },
+  {
+   "t": 45.998,
+   "som": "papel_2"
+  },
+  {
+   "t": 56.956,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 66.976,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 67.226,
+   "som": "bip_1"
+  },
+  {
+   "t": 79.936,
+   "som": "click_2"
+  },
+  {
+   "t": 88.936,
+   "som": "papel_3"
+  },
+  {
+   "t": 89.486,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 99.342,
+   "som": "click_1"
+  },
+  {
+   "t": 101.942,
+   "som": "bip_2"
+  },
+  {
+   "t": 108.844,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 123.384,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 123.634,
+   "som": "bip_1"
+  },
+  {
+   "t": 127.68,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 144.66,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 144.91,
+   "som": "bip_0"
+  },
+  {
+   "t": 150.3,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 158.76,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 159.01,
+   "som": "sweep_3"
+  },
+  {
+   "t": 164.544,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 182.904,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 183.154,
+   "som": "bip_2"
+  },
+  {
+   "t": 187.854,
+   "som": "geiger_3"
+  },
+  {
+   "t": 195.552,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 201.412,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 201.662,
+   "som": "click_2"
+  },
+  {
+   "t": 204.262,
+   "som": "bip_3"
+  },
+  {
+   "t": 212.916,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 237.776,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 238.026,
+   "som": "click_2"
+  },
+  {
+   "t": 255.56,
+   "som": "papel_3"
+  },
+  {
+   "t": 256.11,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 267.728,
+   "som": "click_1"
+  },
+  {
+   "t": 273.688,
+   "som": "bip_2"
+  },
+  {
+   "t": 284.588,
+   "som": "papel_3"
+  },
+  {
+   "t": 285.138,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 293.69,
+   "som": "sweep_1"
+  },
+  {
+   "t": 293.84,
+   "som": "tecla_2"
+  },
+  {
+   "t": 300.19,
+   "som": "bip_3"
+  },
+  {
+   "t": 307.296,
+   "som": "geiger_0"
+  },
+  {
+   "t": 310.096,
+   "som": "bip_1"
+  },
+  {
+   "t": 313.254,
+   "som": "click_2"
+  },
+  {
+   "t": 316.454,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 329.668,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 334.268,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 334.518,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 346.998,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 347.448,
+   "som": "plin_0"
+  },
+  {
+   "t": 352.758,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 362.318,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 362.768,
+   "som": "geiger_3"
+  },
+  {
+   "t": 367.568,
+   "som": "bip_0"
+  },
+  {
+   "t": 374.438,
+   "som": "click_1"
+  },
+  {
+   "t": 377.038,
+   "som": "bip_2"
+  },
+  {
+   "t": 383.796,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 399.076,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 399.326,
+   "som": "bip_1"
+  },
+  {
+   "t": 405.412,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 412.092,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 412.342,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 417.962,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 418.612,
+   "som": "click_2"
+  },
+  {
+   "t": 426.962,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 443.882,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 444.132,
+   "som": "bip_1"
+  },
+  {
+   "t": 450.602,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 474.842,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 475.392,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 481.092,
+   "som": "papel_1"
+  },
+  {
+   "t": 481.642,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 489.092,
+   "som": "plin_3"
+  },
+  {
+   "t": 497.93,
+   "som": "click_0"
+  },
+  {
+   "t": 513.682,
+   "som": "papel_1"
+  },
+  {
+   "t": 514.232,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 518.928,
+   "som": "bip_3"
+  },
+  {
+   "t": 530.558,
+   "som": "tecla_0"
+  },
+  {
+   "t": 541.058,
+   "som": "papel_1"
+  },
+  {
+   "t": 541.608,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 547.788,
+   "som": "geiger_3"
+  },
+  {
+   "t": 561.588,
+   "som": "papel_0"
+  },
+  {
+   "t": 562.138,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 573.282,
+   "som": "click_2"
+  },
+  {
+   "t": 575.882,
+   "som": "bip_3"
+  },
+  {
+   "t": 576.232,
+   "som": "bip_0"
+  },
+  {
+   "t": 582.882,
+   "som": "papel_1"
+  },
+  {
+   "t": 583.432,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 590.416,
+   "som": "sweep_3"
+  },
+  {
+   "t": 610.066,
+   "som": "click_0"
+  },
+  {
+   "t": 610.316,
+   "som": "bip_1"
+  },
+  {
+   "t": 625.066,
+   "som": "sweep_2"
+  },
+  {
+   "t": 628.266,
+   "som": "click_3"
+  },
+  {
+   "t": 628.516,
+   "som": "bip_0"
+  },
+  {
+   "t": 633.618,
+   "som": "tecla_1"
+  },
+  {
+   "t": 642.618,
+   "som": "papel_2"
+  },
+  {
+   "t": 643.168,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 650.336,
+   "som": "click_0"
+  },
+  {
+   "t": 652.936,
+   "som": "sweep_1"
+  },
+  {
+   "t": 660.436,
+   "som": "sweep_2"
+  },
+  {
+   "t": 660.586,
+   "som": "tecla_3"
+  },
+  {
+   "t": 671.838,
+   "som": "papel_0"
+  },
+  {
+   "t": 672.388,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 677.838,
+   "som": "sweep_2"
+  },
+  {
+   "t": 677.988,
+   "som": "tecla_3"
+  },
+  {
+   "t": 686.036,
+   "som": "sweep_0"
+  },
+  {
+   "t": 692.536,
+   "som": "papel_1"
+  },
+  {
+   "t": 693.086,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 701.17,
+   "som": "sweep_3"
+  },
+  {
+   "t": 709.852,
+   "som": "bip_0"
+  },
+  {
+   "t": 717.182,
+   "som": "click_1"
+  },
+  {
+   "t": 719.782,
+   "som": "sweep_2"
+  },
+  {
+   "t": 719.932,
+   "som": "tecla_3"
+  },
+  {
+   "t": 725.782,
+   "som": "papel_0"
+  },
+  {
+   "t": 726.332,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 732.156,
+   "som": "papel_2"
+  },
+  {
+   "t": 732.706,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 737.426,
+   "som": "papel_0"
+  },
+  {
+   "t": 737.976,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 750.724,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 757.83,
+   "som": "sweep_3"
+  },
+  {
+   "t": 757.98,
+   "som": "tecla_0"
+  },
+  {
+   "t": 766.83,
+   "som": "papel_1"
+  },
+  {
+   "t": 767.38,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 775.33,
+   "som": "bip_3"
+  },
+  {
+   "t": 783.452,
+   "som": "papel_0"
+  },
+  {
+   "t": 784.002,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 793.652,
+   "som": "geiger_2"
+  },
+  {
+   "t": 800.122,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 813.222,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 813.472,
+   "som": "click_1"
+  },
+  {
+   "t": 816.072,
+   "som": "sweep_2"
+  },
+  {
+   "t": 818.322,
+   "som": "click_3"
+  },
+  {
+   "t": 824.572,
+   "som": "sweep_0"
+  },
+  {
+   "t": 824.722,
+   "som": "tecla_1"
+  },
+  {
+   "t": 832.572,
+   "som": "bip_2"
+  },
+  {
+   "t": 838.89,
+   "som": "papel_3"
+  },
+  {
+   "t": 843.89,
+   "som": "papel_0"
+  },
+  {
+   "t": 844.44,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 848.72,
+   "som": "sweep_2"
+  },
+  {
+   "t": 854.57,
+   "som": "click_3"
+  },
+  {
+   "t": 854.82,
+   "som": "bip_0"
+  },
+  {
+   "t": 871.34,
+   "som": "crt_off_1"
+  }
+ ],
+ "shorts": [
+  {
+   "id": "SHORT01",
+   "nome": "A Netflix diz que compete com o seu sono",
+   "trechos": [
+    [
+     0.0,
+     33.006
+    ],
+    [
+     783.452,
+     813.472
+    ]
+   ],
+   "hook": "A NETFLIX NÃO COMPETE COM A HBO."
+  },
+  {
+   "id": "SHORT02",
+   "nome": "O botão mais apertado da Netflix",
+   "trechos": [
+    [
+     267.478,
+     313.254
+    ]
+   ],
+   "hook": "136 MILHÕES DE CLIQUES POR DIA"
+  },
+  {
+   "id": "SHORT03",
+   "nome": "Você dá 5 estrelas para Schindler e assiste Adam Sandler",
+   "trechos": [
+    [
+     334.518,
+     374.438
+    ]
+   ],
+   "hook": "5 ESTRELAS PARA SCHINDLER. E VOCÊ ASSISTE SANDLER."
+  },
+  {
+   "id": "SHORT04",
+   "nome": "O teste que todo chefe da Netflix precisa fazer",
+   "trechos": [
+    [
+     418.212,
+     497.93
+    ]
+   ],
+   "hook": "VOCÊ LUTARIA PARA MANTÊ-LA?"
+  },
+  {
+   "id": "SHORT05",
+   "nome": "Por que a Netflix lidera com uma letra",
+   "trechos": [
+    [
+     500.53,
+     547.588
+    ]
+   ],
+   "hook": "POR QUE UMA LETRA SÓ?"
+  },
+  {
+   "id": "SHORT06",
+   "nome": "A campanha da Netflix que entrou num debate presidencial",
+   "trechos": [
+    [
+     575.882,
+     633.618
+    ]
+   ],
+   "hook": "NO INTERVALO, UM CANDIDATO QUE NÃO EXISTE."
+  },
+  {
+   "id": "SHORT07",
+   "nome": "O fim da senha compartilhada foi um acerto?",
+   "trechos": [
+    [
+     719.782,
+     757.83
+    ]
+   ],
+   "hook": "A NETFLIX COBROU A SENHA. DEU CERTO?"
+  },
+  {
+   "id": "SHORT08",
+   "nome": "A Netflix saiu da tela",
+   "trechos": [
+    [
+     816.072,
+     876.204
+    ]
+   ],
+   "hook": "AGORA É VOCÊ QUE ENTRA NA NETFLIX."
+  }
+ ],
+ "capitulos": [
+  {
+   "t": 43.398,
+   "titulo": "Do dvd ao streaming"
+  },
+  {
+   "t": 99.342,
+   "titulo": "A aposta no original"
+  },
+  {
+   "t": 201.662,
+   "titulo": "O binge como produto"
+  },
+  {
+   "t": 313.254,
+   "titulo": "O algoritmo"
+  },
+  {
+   "t": 374.438,
+   "titulo": "A cultura"
+  },
+  {
+   "t": 497.93,
+   "titulo": "A identidade"
+  },
+  {
+   "t": 573.282,
+   "titulo": "A publicidade"
+  },
+  {
+   "t": 650.336,
+   "titulo": "Os fenômenos"
+  },
+  {
+   "t": 717.182,
+   "titulo": "A conta"
+  },
+  {
+   "t": 813.472,
+   "titulo": "A casa"
+  }
+ ]
+}

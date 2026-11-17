@@ -1,0 +1,32 @@
+{
+  "_fontes": {
+    "ted": "How Netflix changed entertainment (TED 2018), arquivo 1080p do Drive",
+    "blitz": "Blitzscaling 16 (Greylock, Stanford CS183C, 2015), arquivo 1080p do Drive",
+    "house": "Netflix House Dallas is Now Open (Netflix, dez. 2025), arquivo 1080p do Drive",
+    "fu": "Frank Underwood #FU2016 (Netflix, dez. 2015), arquivo 720p do Drive"
+  },
+  "cortes": [
+    {"id": "HOOK", "src": "ted",   "in": 877.88, "out": 882.70, "modo": "crt", "lado": "direita"},
+    {"id": "T01",  "src": "ted",   "in": 70.74,  "out": 84.98,  "modo": "crt", "lado": "direita"},
+    {"id": "T02",  "src": "ted",   "in": 86.94,  "out": 103.62, "modo": "crt", "lado": "direita"},
+    {"id": "T03",  "src": "ted",   "in": 121.14, "out": 129.30, "modo": "crt", "lado": "direita"},
+    {"id": "T04",  "src": "ted",   "in": 152.04, "out": 176.60, "modo": "crt", "lado": "direita"},
+    {"id": "T05",  "src": "ted",   "in": 199.60, "out": 217.66, "modo": "crt", "lado": "direita"},
+    {"id": "T06",  "src": "ted",   "in": 240.34, "out": 245.90, "modo": "crt", "lado": "direita"},
+    {"id": "T07",  "src": "ted",   "in": 317.04, "out": 326.76, "modo": "crt", "lado": "direita"},
+    {"id": "T08",  "src": "ted",   "in": 386.68, "out": 401.66, "modo": "crt", "lado": "direita"},
+    {"id": "T09",  "src": "ted",   "in": 434.76, "out": 441.14, "modo": "crt", "lado": "direita"},
+    {"id": "T10",  "src": "ted",   "in": 487.32, "out": 492.64, "modo": "crt", "lado": "direita"},
+    {"id": "T11",  "src": "ted",   "in": 547.48, "out": 551.78, "modo": "crt", "lado": "direita"},
+    {"id": "T12a", "src": "ted",   "in": 593.52, "out": 605.70, "modo": "crt", "lado": "direita"},
+    {"id": "T12b", "src": "ted",   "in": 614.30, "out": 623.56, "modo": "crt", "lado": "direita"},
+    {"id": "T13",  "src": "ted",   "in": 869.90, "out": 882.70, "modo": "crt", "lado": "direita"},
+    {"id": "B01",  "src": "blitz", "in": 356.48, "out": 373.10, "modo": "crt", "lado": "esquerda"},
+    {"id": "B02",  "src": "blitz", "in": 425.16, "out": 449.10, "modo": "crt", "lado": "esquerda"},
+    {"id": "H01",  "src": "house", "in": 1.00,   "out": 2.95,   "modo": "cor"},
+    {"id": "H02",  "src": "house", "in": 159.70, "out": 165.25, "modo": "cor"},
+    {"id": "H03",  "src": "house", "in": 172.20, "out": 176.95, "modo": "cor"},
+    {"id": "FU1",  "src": "fu",    "in": 0.85,   "out": 20.20,  "modo": "cor"},
+    {"id": "FU2",  "src": "fu",    "in": 25.50,  "out": 28.40,  "modo": "cor"}
+  ]
+}

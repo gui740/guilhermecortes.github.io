@@ -1,0 +1,24 @@
+# Materiais e status de direitos de uso · EP01 Netflix
+
+Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em crítica, comentário e análise, com crédito e em trechos curtos (Lei 9.610/98, art. 46, III; fair use) · **Risco** = uso que a licença do dono não autoriza expressamente.
+
+| Material | Dono | Onde aparece | Status | Observação |
+|---|---|---|---|---|
+| Narração (voz provisória Edge TTS / voz final Gemini TTS) | Próprio (síntese) | todo o vídeo | Próprio | conferir os termos do Edge TTS antes de publicar a versão provisória; a final usa o Gemini |
+| Trilha e efeitos | Próprio (síntese no pipeline) | todo o vídeo | Próprio | nenhum sample de terceiros, sem "tudum" |
+| Tipografia Jost e IBM Plex Mono | Google Fonts (OFL) | todo o vídeo | Livre | licença SIL Open Font |
+| Pictogramas, medidores, envelope, TV, cheque, diagramas | Próprio | blocos 0–10 | Próprio | desenhados do zero |
+| TED 2018: Hastings × Anderson (17 trechos, de 4 a 30 s) | TED | blocos 0–5 e 9 | **Risco** | a licença CC BY-NC-ND proíbe uso comercial e recortes; uso decidido pelo Guilherme; imagem sempre tratada, com crédito |
+| Blitzscaling 16 (2 trechos) | Greylock / Stanford | bloco 5 | Editorial | sem licença declarada; trechos curtos, com crédito |
+| Netflix House Dallas (3 trechos) | Netflix | bloco 10 | Editorial | material promocional oficial, em cor e sem filtro |
+| Comercial #FU2016 (2 trechos) | Netflix / MRC (cópia do canal "Frank Underwood" no YouTube) | bloco 7 | Editorial | dentro de TV desenhada; personagem citado, sem destacar o ator |
+| Símbolo N (PNG oficial) | Netflix | blocos 0, 6 e 10 | Editorial | regras do guia respeitadas: cor original, sem efeito, com respiro; uso nominativo, sem sugerir parceria |
+| Pôsteres (House of Cards, Mad Men, Round 6, La Casa de Papel, Wednesday, Stranger Things) | Netflix / AMC (via TMDB) | blocos 2 e 8 | Editorial | cor original, com crédito do título |
+| Prints de cartas aos acionistas (Q4'18, Q3'21, Q4'22, Q2'23, Q4'24) | Netflix (documentos públicos de RI) | blocos 8 e 9 | Editorial | citação com página |
+| Prints das páginas: Skip Intro, An Update on Sharing, Basic with Ads, Culture Memo, Brand Site, Top 10 | Netflix | blocos 3, 5, 6, 8 e 9 | Editorial | citação com data |
+| Print da transcrição Q1 2017 (allmind.ai) | AllMind / Netflix | bloco 0 | Editorial | a fala é da Netflix; o print mostra a transcrição |
+| Print do sumário do Jenner (Springer) | Springer | bloco 1 | Editorial | citação acadêmica com autor, obra e ano |
+| Print das p. 9 e 12 da Paz Pérez | EU Business School (On Research) | blocos 3 e 6 | Editorial | a revista permite reprodução acadêmica com crédito |
+| Print da matéria do The Drum | The Drum | bloco 7 | Editorial | citação com data |
+| Print da matéria do Meio & Mensagem | Meio & Mensagem | bloco 7 | Editorial | citação com data |
+| Print do press release do Netflix House (PDF) | Netflix | bloco 10 | Editorial | citação com data |

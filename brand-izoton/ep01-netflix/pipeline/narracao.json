@@ -1,0 +1,64 @@
+[
+  {"id": "n00a", "bloco": 0, "texto": "Repara na lista. A HBO não está nela. A Amazon também não."},
+  {"id": "n00b", "bloco": 0, "texto": "No palco do TED, em 2018, o CEO da Netflix colocou a empresa na mesma briga que o videogame e o YouTube: a briga pelo seu tempo livre."},
+  {"id": "n00c", "bloco": 0, "texto": "Um ano antes, falando com analistas de Wall Street, ele tinha ido mais longe."},
+  {"id": "n00d", "bloco": 0, "texto": "Estamos competindo com o sono, na margem."},
+  {"id": "n00e", "bloco": 0, "texto": "Este é o episódio um do Brand by Izoton. Como a Netflix virou uma marca que disputa as suas horas, e não só o seu controle remoto."},
+
+  {"id": "n01a", "bloco": 1, "texto": "Para entender essa ambição, é preciso voltar a um disco. A Netflix foi fundada em 1997, e nasceu mandando DVDs pelo correio."},
+  {"id": "n01b", "bloco": 1, "texto": "Nascer num formato com prazo de validade virou método: desconfiar do próprio sucesso. Hastings diz que essa preocupação com o que vem a seguir faz parte do espírito de fundação da empresa."},
+  {"id": "n01c", "bloco": 1, "texto": "A pesquisadora Mareike Jenner vai além. No livro Netflix and the re-invention of television, de 2018, ela trata a Netflix como continuação da história da TV, e das tecnologias que deram controle ao espectador: do controle remoto até a maratona de episódios."},
+
+  {"id": "n02a", "bloco": 2, "texto": "A primeira tentativa de ter conteúdo próprio foi em 2005, ainda na era do DVD."},
+  {"id": "n02b", "bloco": 2, "texto": "A segunda tentativa veio em 2011."},
+  {"id": "n02c", "bloco": 2, "texto": "Chris Anderson pergunta como eles tinham certeza de que valia a pena."},
+  {"id": "n02d", "bloco": 2, "texto": "O retorno não estava em cada hora assistida. Estava em outro lugar."},
+  {"id": "n02e", "bloco": 2, "texto": "Quem é dono da história é lembrado. Quem só exibe, não. E a aposta cresceu. Em 2018, Hastings disse quanto a Netflix ia investir em conteúdo naquele ano."},
+
+  {"id": "n03a", "bloco": 3, "texto": "House of Cards trouxe uma segunda aposta: soltar todos os episódios de uma vez. De onde veio essa ideia?"},
+  {"id": "n03b", "bloco": 3, "texto": "O que a TV linear não consegue fazer virou produto. Jenner usa um conceito da pesquisadora Lisa Perks: o fluxo isolado. São recursos como a reprodução automática do próximo episódio, e o botão Pular abertura, que mantêm você dentro da maratona."},
+  {"id": "n03c", "bloco": 3, "texto": "Outro estudo, da pesquisadora Elisa Paz Pérez, descreve o mesmo: alguns segundos depois do fim de um episódio, o próximo já começa. Ninguém precisa apertar nada."},
+  {"id": "n03d", "bloco": 3, "texto": "Esse botão é apertado cento e trinta e seis milhões de vezes num dia típico."},
+  {"id": "n03e", "bloco": 3, "texto": "Ele nasceu de uma pesquisa: em cerca de quinze por cento das vezes, as pessoas adiantavam a série na mão nos primeiros cinco minutos. A Netflix testou em duzentas e cinquenta séries, nos Estados Unidos, no Reino Unido e no Canadá, primeiro na web, e levou para a TV em agosto de 2017."},
+  {"id": "n03f", "bloco": 3, "texto": "Em 2022, a empresa calculou: cento e noventa e cinco anos economizados, somando o tempo de todo mundo. Um engenheiro resumiu: talvez nem um botão escrito cupcake grátis tivesse mais cliques."},
+  {"id": "n03g", "bloco": 3, "texto": "Um botão que faz uma coisa só. Esse é o produto: não deixar você esperar."},
+
+  {"id": "n04a", "bloco": 4, "texto": "Por volta de 2007, segundo Hastings, a Netflix abriu o seu sistema de recomendação para o mundo, e ofereceu um milhão de dólares a quem conseguisse melhorá-lo em dez por cento. E nunca repetiu."},
+  {"id": "n04b", "bloco": 4, "texto": "O que você diz é a sua versão ideal. O que você assiste é você."},
+  {"id": "n04c", "bloco": 4, "texto": "Mas Hastings faz uma ressalva no mesmo palco: não dá para depender só do algoritmo. A Netflix se vê como um serviço com curadoria, e o algoritmo é uma ferramenta."},
+
+  {"id": "n05a", "bloco": 5, "texto": "Antes da Netflix, Hastings fundou outra empresa. E aprendeu com ela o que não fazer."},
+  {"id": "n05b", "bloco": 5, "texto": "Na Netflix, ele quis o contrário: o mínimo de processo, sem virar caos."},
+  {"id": "n05c", "bloco": 5, "texto": "Em 2001, o dinheiro acabou. Hastings contou o que veio depois, numa aula em Stanford, em 2015."},
+  {"id": "n05d", "bloco": 5, "texto": "Daí veio a densidade de talento. E uma pergunta que todo gestor tem de responder."},
+  {"id": "n05e", "bloco": 5, "texto": "No memorando oficial de cultura, isso tem nome: keeper test. Se a resposta for não, a empresa considera mais justo se separar rápido. A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria: quando Hastings era criança, o pai dele dizia, ao ver um peixe bom: esse é um keeper. Esse fica."},
+
+  {"id": "n06a", "bloco": 6, "texto": "Num vídeo inteiro em preto e branco, só uma coisa tem cor. Não é efeito. É regra."},
+  {"id": "n06b", "bloco": 6, "texto": "No guia de marca oficial, a Netflix diz que, nos mercados onde é muito conhecida, lidera com o N. Existe poder em ser dono de uma letra do alfabeto."},
+  {"id": "n06c", "bloco": 6, "texto": "Mas, sem o vermelho, o N poderia não ser lido como Netflix. Por isso ele aparece sempre na cor assinatura: o vermelho Netflix, com um vermelho escuro de apoio."},
+  {"id": "n06d", "bloco": 6, "texto": "O guia lista o que é proibido: esticar, girar, achatar numa cor só, pôr efeitos, colocar sobre fundo poluído, ou sobre vermelho. E duas regras curiosas: o N não pode ir no chão, onde alguém pise. Nem em comida que possa ser mordida."},
+  {"id": "n06e", "bloco": 6, "texto": "A identidade é fixa. A voz, não. Num estudo preliminar de três meses, Elisa Paz Pérez comparou as redes da Netflix nos Estados Unidos e na Espanha. No Twitter, sessenta por cento dos posts espanhóis tinham intenção de humor, contra trinta e seis vírgula sete por cento dos americanos. A conta americana informa mais. A espanhola brinca mais, e chama mais para a ação."},
+
+  {"id": "n07a", "bloco": 7, "texto": "Dezembro de 2015. Quinto debate republicano, ao vivo na CNN. Horas antes, a conta oficial de House of Cards avisa: o presidente Underwood fará um anúncio especial durante o debate."},
+  {"id": "n07b", "bloco": 7, "texto": "No intervalo, entra um comercial de campanha. O candidato é Frank Underwood, o presidente da série. Com hashtag própria, um site de campanha falso, e a data de estreia da quarta temporada: quatro de março."},
+  {"id": "n07c", "bloco": 7, "texto": "A série não interrompeu a conversa política. Entrou nela."},
+  {"id": "n07d", "bloco": 7, "texto": "No Brasil, o caminho foi o das parcerias. Segundo o Meio e Mensagem, Senna, de 2024, foi a produção brasileira da Netflix com mais parcerias comerciais: Heineken, Guaraná Antarctica, Claro, McDonald's, e outras."},
+
+  {"id": "n08a", "bloco": 8, "texto": "Em 2021, uma série coreana mudou a escala. Na carta aos acionistas, a Netflix chamou Round 6 de nosso maior programa de TV de todos os tempos: cento e quarenta e dois milhões de domicílios nas quatro primeiras semanas. Número um em noventa e quatro países."},
+  {"id": "n08b", "bloco": 8, "texto": "No ranking oficial de hoje, que soma as visualizações dos primeiros noventa e um dias, a primeira temporada de Round 6 tem duzentos e sessenta e cinco milhões. É a série mais vista da história da plataforma."},
+  {"id": "n08c", "bloco": 8, "texto": "Antes dela, veio La Casa de Papel. Na mesma carta, a Netflix diz que foi o primeiro título fora do inglês a provar que, com legenda e dublagem, grandes histórias podem vir de qualquer lugar, e ser amadas em todo lugar."},
+  {"id": "n08d", "bloco": 8, "texto": "Em inglês, Wednesday lidera, com duzentos e cinquenta e dois milhões. Stranger Things 4 soma cento e quarenta milhões."},
+  {"id": "n08e", "bloco": 8, "texto": "Jenner chama isso de audiência transnacional: fragmentada entre fronteiras, e não dentro delas."},
+
+  {"id": "n09a", "bloco": 9, "texto": "Em fevereiro de 2023, a Netflix disse que mais de cem milhões de domicílios compartilhavam contas, e que isso prejudicava a capacidade de investir em séries e filmes."},
+  {"id": "n09b", "bloco": 9, "texto": "A carta aos acionistas já previa cancelamentos em cada mercado."},
+  {"id": "n09c", "bloco": 9, "texto": "Em maio, o compartilhamento pago chegou a mais de cem países. Em julho, a carta dizia que a receita em cada região já era maior do que antes, e que as adesões superavam os cancelamentos."},
+  {"id": "n09d", "bloco": 9, "texto": "Foi um acerto? Pelos números da própria empresa, sim. Para quem dividia a senha, a conta mudou."},
+  {"id": "n09e", "bloco": 9, "texto": "Veio também o plano com anúncios, em novembro de 2022, em doze países, incluindo o Brasil: em média, de quatro a cinco minutos de anúncios por hora. No fim de 2024, ele respondia por mais da metade das novas assinaturas nos países onde existe. E a carta daquele trimestre avisava: de tempos em tempos, a Netflix vai pedir que você pague um pouco mais."},
+  {"id": "n09f", "bloco": 9, "texto": "E a concorrência? Em 2019, a carta aos acionistas foi direta: competimos com o Fortnite, e perdemos para ele, mais do que para a HBO. Quando o YouTube caiu por alguns minutos, a audiência e os cadastros da Netflix subiram."},
+
+  {"id": "n10a", "bloco": 10, "texto": "Em novembro de 2025, abriu a primeira Netflix House, perto da Filadélfia. Em dezembro, a de Dallas: mais de nove mil metros quadrados, entrada grátis, e experiências pagas de Stranger Things e Round 6. Uma terceira está prevista para Las Vegas, em 2027."},
+  {"id": "n10b", "bloco": 10, "texto": "A porta de entrada é um envelope vermelho gigante. Nas palavras da própria Netflix, uma referência às origens do DVD pelo correio."},
+  {"id": "n10c", "bloco": 10, "texto": "Do envelope que chegava à sua casa, ao envelope em que você entra. A Netflix passou quase trinta anos disputando o seu tempo dentro de casa. Agora, quer também o seu tempo fora dela."},
+  {"id": "n10d", "bloco": 10, "texto": "Brand by Izoton. Até o próximo arquivo."}
+]

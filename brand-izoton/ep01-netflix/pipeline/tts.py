@@ -34,6 +34,13 @@ def tts(voice, text, out, model="gemini-3.8-flash-tts"):
         except urllib.error.HTTPError as e:
             if e.code not in (429, 500, 503) or attempt == 5: raise
             time.sleep(20 * (attempt + 1))
+    for retry in range(3):
+        c = d.get("candidates", [{}])[0]
+        if "content" in c:
+            break
+        print("TTS sem áudio:", c.get("finishReason"), d.get("promptFeedback"), file=sys.stderr)
+        time.sleep(5)
+        d = json.load(urllib.request.urlopen(req, timeout=300))
     pcm = base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
     with wave.open(out, "wb") as w:  # PCM 16-bit mono 24 kHz
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
