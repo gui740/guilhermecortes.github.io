@@ -151,6 +151,24 @@ const Ficha: React.FC<{ e: Etq; n: number; cap: number; fim: number }> = ({ e, n
 };
 const SOMBRA_F = "10px 12px 22px rgba(0,0,0,0.18)";
 
+// pose: a cada ação o objeto principal se reposiciona num degrau de stop-motion (desloca ~14 px e, quando pode, gira ~1°),
+// somado à ação própria do objeto. Logo e cores da marca só deslocam (sem rotação, CLAUDE.md 2). Documento e pôsteres já têm lupa/holofote.
+const SEM_POSE = new Set(["evidencia", "posters"]);
+const SEM_GIRO = new Set(["logoN", "cores", "proibicoes"]);
+const POSES = [[0, 0, 0], [16, -8, 1.1], [-14, 6, -0.9], [10, 10, 0.7], [-16, -6, -1.2], [6, -12, 0.5]];
+const Pose: React.FC<{ acoes: number[]; tipo: string; children: React.ReactNode }> = ({ acoes, tipo, children }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (SEM_POSE.has(tipo)) return <>{children}</>;
+  const fr = acoes.map((t) => Math.round(t * fps));
+  const n = fr.filter((x) => f >= x).length;
+  const a = POSES[(n + POSES.length - 1) % POSES.length], b = POSES[n % POSES.length];
+  const k = n === 0 ? 1 : Math.min(1, Math.floor((f - fr[n - 1]) / 2) * 2 / 4); // chega em degraus de 2 quadros
+  const v = n === 0 ? POSES[0] : a.map((x, i) => x + (b[i] - x) * k);
+  const giro = SEM_GIRO.has(tipo) ? 0 : v[2];
+  return <AbsoluteFill style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${giro}deg)`, transformOrigin: "50% 50%" }}>{children}</AbsoluteFill>;
+};
+
 // tempos das ações do objeto principal: palavras dele (>= 1,25 s entre si, a partir de 0,9 s); pausas maiores que 2,2 s ganham ação a cada 1,5 s
 const acoesDe = (ritmo: number[], dur: number): number[] => {
   const out: number[] = [];
@@ -182,7 +200,7 @@ const TrechoV2: React.FC<{ tr: Tr }> = ({ tr }) => {
               <Entrada tipo={TRANS[transDe[`${tr.id}:${tr.cenas.indexOf(c)}`] ?? 0]}>
                 <CameraPassos ritmo={ritmo} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo} tipo={c.tipo} idx={i + tr.id.length} durF={Math.max(1, next - from)}>
                   <AcoesCtx.Provider value={acoesDe(ritmo, (next - from) / fps)}>
-                    <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
+                    <Pose acoes={acoesDe(ritmo, (next - from) / fps)} tipo={c.tipo}><Cena c={c} dur={(next - from) / fps} trecho={tr} /></Pose>
                   </AcoesCtx.Provider>
                 </CameraPassos>
               </Entrada>
