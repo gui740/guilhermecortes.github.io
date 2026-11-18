@@ -29,7 +29,7 @@ MAPA = {"n01a": "03", "n01b": "04", "n01c": "05", "n02a": "06", "n02b": "07", "n
         "n09e": "48", "n09f": "49", "n10a": "50", "n10b": "51", "n10c": "52+53", "n10d": "54"}
 REGANCHO = {3: ("11", "TER A SÉRIE NÃO BASTAVA.", "ELA PRECISAVA QUE VOCÊ NÃO PARASSE."),
             4: ("19", "E PARA ESCOLHER O QUE VOCÊ VÊ,", "A NETFLIX APRENDEU A NÃO CONFIAR NO QUE VOCÊ DIZ."),
-            5: ("23", "UMA EMPRESA COM REGRAS", "QUE QUASE NENHUMA OUTRA ACEITARIA."),
+            5: ("23", "UMA COM REGRAS", "QUE QUASE NENHUMA OUTRA ACEITARIA."),
             9: ("43", "TODA ESSA MÁQUINA TINHA UM PREÇO.", "EM 2023, ELE CHEGOU NA SUA CONTA.")}
 
 
@@ -170,6 +170,24 @@ IMG = {  # (arquivo, tipo) — tipo: rec (recorte com borda) | card (foto) | pri
  "n10c": [(V+"rec_envelope.png", "rec"), (V+"card_house_kop.jpg", "card")],
 }
 ESTREITAS = {"titulo", "contador", "pergunta", "citacao", "medidor", "cheque", "botao", "pessoas", "anzol", "mapa", "fluxo", "lista", "aovivo", "barras", "envelope"}
+
+# termos que podem virar ficha na lateral (revisados à mão a partir das palavras da narração; ver ENTREGA_v3b.md)
+def norm_f(w):
+    w = unicodedata.normalize("NFKD", w.lower()); return "".join(c for c in w if not unicodedata.combining(c)).strip(".,?!:;\"'()")
+TERMOS_FICHA = """ACIONISTAS ADESÕES ANTÁRTIDA ANTARCTICA ANÚNCIO ANÚNCIOS ASSINATURA ASSINATURAS AUDIÊNCIA BOTÃO CAMPANHA CANADÁ CANCELAMENTOS CARTA CASA
+CLIQUES CNN COMIDA CONCORRÊNCIA CONTA CONTEÚDO CONTROLE CORREIO CULTURA DALLAS DEBATE DENSIDADE DINHEIRO DVD DVDS DÓLARES EMPRESA ENGENHEIRO ENVELOPE
+EPISÓDIO EPISÓDIOS ESTUDO EXPERIÊNCIAS FERRAMENTA FILADÉLFIA FORTNITE FRONTEIRAS GRÁTIS HASTINGS HBO HEINEKEN HORAS IZOTON JULHO MAIO MARÇO NOVEMBRO
+FEVEREIRO DEZEMBRO ABRIL AGOSTO OUTUBRO LEGENDA LETRA MARATONA MARCA MERCADO MERCADOS MORDIDA NETFLIX NOME PAÍSES PARCERIAS PEIXE PERGUNTA PESCARIA
+PESQUISA PESQUISADORA PLANO PORTA POSTS PRESIDENTE PRODUTO PRODUÇÃO PROIBIDO RECEITA RECOMENDAÇÃO REGRA SÉRIE SÉRIES SENHA SENHAS SENNA SONO
+STREAMING TALENTO TECNOLOGIAS TEMPORADA TEMPO TRIMESTRE TRANSNACIONAL TWITTER VERMELHO WEDNESDAY YOUTUBE ALGORITMO SARANDOS UNDERWOOD SQUID ROUND
+TED APPLE CUPCAKE""".split()
+TERMOS_N = {norm_f(x) for x in TERMOS_FICHA}
+FRASES_FICHA = [["house", "of", "cards"], ["stranger", "things"], ["keeper", "test"], ["estados", "unidos"], ["reino", "unido"], ["frank", "underwood"],
+                ["guia", "de", "marca"], ["meio", "&", "mensagem"], ["la", "casa", "de", "papel"], ["round", "6"], ["reed", "hastings"], ["ted", "sarandos"],
+                ["pular", "abertura"], ["controle", "remoto"], ["densidade", "de", "talento"], ["netflix", "house"], ["mad", "men"]]
+UNIDADES = {"milhões": " MI", "%": "%", "anos": " ANOS", "dias": " DIAS", "países": " PAÍSES"}
+QUALIF = {"mais de": "MAIS DE ", "cerca de": "CERCA DE ", "quase": "QUASE "}
+TERMO_BLOCO = {}  # termo fixo por bloco, quando a fala não tem termo forte (preenchido na revisão)
 SLOTS = [("esq", 150), ("dir", 210), ("esq", 600), ("dir", 640)]
 for b in beats:
     if b["tipo"] not in ("narr",):
@@ -214,21 +232,47 @@ for b in beats:
     # etiquetas: a palavra de conteúdo dita, a cada >= 0,9 s, fora dos instantes de entrada de lateral
     ocup = [l["t"] for l in lat]
     pal_txt = b.get("_paltxt") or []
-    VAZIAS = {"naquele", "naquela", "quando", "porque", "também", "depois", "sempre", "então", "outra", "outro", "ainda", "muito", "muita", "isso",
-              "esse", "essa", "aquele", "aquela", "mesmo", "mesma", "sobre", "entre", "cada", "todo", "toda", "todos", "todas", "dentro", "antes",
-              "assim", "agora", "nesse", "nessa", "neste", "nesta", "deles", "delas", "dizia", "disse", "contra", "durante", "segundo", "quase", "existe",
-              "para", "pela", "pelo", "como", "mais", "isto", "esta", "este", "estava", "foram", "sobre", "onde", "seus", "suas", "dela", "dele", "nada"}
+    # fichas: só termo forte (substantivo do tema, nome próprio, número, data), por lista revisada à mão (TERMOS_FICHA, FRASES_FICHA).
+    # Pronome, verbo, artigo, advérbio e adjetivo solto nunca entram. Se a palavra da vez não for forte, repete o termo da cena.
     etq = []
+    ws = [(a_, w.strip(".,?!:;\"'()").lower()) for a_, w in pal_txt]
+    fortes = []  # (t, TEXTO) de cada termo forte dito no bloco
+    i = 0
+    while i < len(ws):
+        a_, lim = ws[i]
+        achou = None
+        for fr in FRASES_FICHA:  # nomes de várias palavras
+            k = len(fr)
+            if [norm_f(x[1]) for x in ws[i:i + k]] == [norm_f(x) for x in fr]:
+                achou = (a_, " ".join(fr).upper(), k); break
+        if achou: fortes.append(achou[:2]); i += achou[2]; continue
+        dig = re.sub(r"\D", "", lim)
+        if dig and len(dig) >= 2 and dig == re.sub(r"[.,]", "", lim):
+            # número: leva junto a casa decimal, a unidade e o qualificador ditos ("mais de 100 milhões" -> MAIS DE 100 MI)
+            txt, j = lim, i + 1
+            if j < len(ws) and re.fullmatch(r",\d+", pal_txt[j][1].strip()): txt += pal_txt[j][1].strip(); j += 1
+            uni = ws[j][1] if j < len(ws) else ""
+            if uni in UNIDADES: txt += UNIDADES[uni]; j += 1
+            ant = " ".join(x[1] for x in ws[max(0, i - 2):i])
+            q = next((Q for k_, Q in QUALIF.items() if ant.endswith(k_)), "")
+            fortes.append((a_, (q + txt).upper())); i = j; continue
+        if norm_f(lim) in TERMOS_N:
+            fortes.append((a_, lim.upper()))
+        i += 1
+    termo_cena = TERMO_BLOCO.get(b["id"]) or (fortes[0][1] if fortes else None)
+    vistos = {t for t, _ in fortes}
     for a_, w in pal_txt:
         lim = w.strip(".,?!:;\"'()").lower()
-        if lim in VAZIAS or not (len(lim) >= 4 or any(ch.isdigit() for ch in lim)): continue
-        if a_ < 0.25 or a_ > b["dur"] - 0.4: continue
+        if not lim or a_ < 0.25 or a_ > b["dur"] - 0.4: continue
         if etq and a_ - etq[-1]["t"] < 0.9: continue
         if any(abs(a_ - o) < 0.3 for o in ocup): continue
-        W = lim.upper()
-        if etq and etq[-1]["texto"] == W: continue
+        forte = next((T for t, T in fortes if abs(t - a_) < 0.01), None)
+        if forte: termo_cena = forte
+        elif len(lim) >= 4 and termo_cena: forte = termo_cena  # palavra fraca: repete o termo da cena
+        else: continue
+        if etq and etq[-1]["texto"] == forte: continue
         cena = next((c for c in reversed(princ) if c["t"] <= a_ + 0.01), princ[0])
-        etq.append({"t": round(a_, 2), "texto": W, "lado": "dir" if len(etq) % 2 else "esq", "estreita": cena["tipo"] in ESTREITAS})
+        etq.append({"t": round(a_, 2), "texto": forte, "lado": "dir" if len(etq) % 2 else "esq", "estreita": cena["tipo"] in ESTREITAS})
     if b.get("regravar") == "09":  # bloco não gravado: o texto do roteiro entra na tela, em pedaços
         pedacos = ["O RETORNO", "NÃO ESTAVA", "EM CADA HORA", "ASSISTIDA.", "ESTAVA EM", "OUTRO LUGAR."]
         etq = [{"t": round(0.3 + i * (b["dur"] - 0.8) / len(pedacos), 2), "texto": x, "lado": "dir" if i % 2 else "esq", "estreita": True} for i, x in enumerate(pedacos)]

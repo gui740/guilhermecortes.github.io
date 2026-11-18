@@ -182,7 +182,7 @@ N("n08e", C("mapa", titulo="AUDIÊNCIA TRANSNACIONAL", pontos=[], sub="FRAGMENTA
 
 # ------------------------------------------------------------------ BLOCO 9 · CRÍTICAS
 R(9, "A CONTA")
-N("n09a", C("contador", valor="100.000.000", sufixo="DE CASAS COMPARTILHANDO", rotulo="NETFLIX · 8 FEV. 2023"),
+N("n09a", C("contador", prefixo="MAIS DE", valor="100.000.000", sufixo="DE CASAS COMPARTILHANDO", rotulo="NETFLIX · 8 FEV. 2023"),
   EV("web_sharing.png", "EVIDÊNCIA 17 · NETFLIX · AN UPDATE ON SHARING", t=6.0, trecho=WEB_TRECHO))
 N("n09b", EV("carta_q4_22-06.png", "EVIDÊNCIA 18 · CARTA Q4 2022 · P. 6", trecho=TR.get("carta_q4_22-06", {}).get("trecho")))
 N("n09c", EV("carta_q2_23-01.png", "EVIDÊNCIA 19 · CARTA Q2 2023 · P. 1", trecho=TR.get("carta_q2_23-01", {}).get("trecho")))

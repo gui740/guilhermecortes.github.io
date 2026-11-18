@@ -190,3 +190,32 @@ Os 2 últimos (documento n09f 11:37,9 e fim n10d 12:55,3) foram corrigidos depoi
 
 ### Próximo: Parada 3
 Render 1080p final, 8 Shorts, capa, DESCRICAO_YOUTUBE.md, DESCRICAO_SHORTS.md e DIREITOS.md. Os blocos 09, 11 e S01–S08 ficam prontos para trocar (`pipeline/narracao_gui/trocar_audio.py`).
+
+
+## Ajustes do gerente depois da aprovação (entram no próximo 1080p, junto com a troca do bloco 09)
+
+O render 1080p que já estava rodando continua com o código anterior e fica como versão reserva.
+
+### 1. Fichas de palavra-chave nas laterais
+- Antes, entrava qualquer palavra de 4 letras ou mais que não estivesse numa lista curta de palavras vazias, e daí saíram "ALGUÉM", "PODE" e "DISCO". Eram 294 fichas, com 235 palavras diferentes.
+- Agora só entra o que está numa lista revisada à mão (`TERMOS_FICHA` e `FRASES_FICHA` em `pipeline/montar_timeline_v3.py`):
+  - substantivos do tema e nomes próprios, inclusive os de várias palavras ("HOUSE OF CARDS", "KEEPER TEST", "GUIA DE MARCA", "DENSIDADE DE TALENTO", "LA CASA DE PAPEL");
+  - números e datas.
+- Pronome, verbo, artigo, advérbio e adjetivo solto nunca entram. Também tirei os genéricos "EMPRESA", "PROGRAMA" e "VÍDEO".
+- Quando a palavra da vez não é forte, a ficha repete o termo da cena. Se a anterior já mostra esse termo, não entra ficha nova.
+- O número leva junto a casa decimal, a unidade e o qualificador ditos: "MAIS DE 100 MI", "CERCA DE 15%", "36,7%", "195 ANOS", "QUASE 30 ANOS". Antes saíam "36" (de 36,7 %) e "15" sem o %.
+- Resultado: 182 fichas, 125 termos. Lista final, revisada:
+
+12 PAÍSES · 140 MI · 195 ANOS · 1997 · 2005 · 2007 · 2011 · 2015 · 2018 · 2019 · 2024 · 2027 · 252 MI · 265 MI · 36,7% · 91 DIAS · 94 PAÍSES · ACIONISTAS · ADESÕES · AGOSTO · ALGORITMO · ANTARCTICA · ANÚNCIO (2) · ASSINATURA · ASSINATURAS · ASSISTIDA. · AUDIÊNCIA · BOTÃO (4) · CAMPANHA (2) · CANADÁ · CANCELAMENTOS (2) · CARTA (3) · CASA (2) · CERCA DE 15% · CLIQUES · CNN · COMIDA · CONCORRÊNCIA · CONTA (2) · CONTEÚDO (2) · CONTROLE · CONTROLE REMOTO · CULTURA · DALLAS · DEBATE · DENSIDADE DE TALENTO · DEZEMBRO · DINHEIRO · DVD (2) · DVDS · DÓLARES · EM CADA HORA · EMPRESA (3) · ENGENHEIRO · ENVELOPE (3) · EPISÓDIO (2) · EPISÓDIOS · ESTADOS UNIDOS · ESTAVA EM · ESTUDO (2) · EXPERIÊNCIAS · FERRAMENTA · FILADÉLFIA · FORTNITE · FRANK UNDERWOOD · FRONTEIRAS · GRÁTIS (2) · GUIA DE MARCA · HASTINGS (4) · HBO · HEINEKEN · HORAS · HOUSE OF CARDS · IZOTON · JULHO · LA CASA DE PAPEL · LEGENDA · LETRA · MAIO · MAIS DE 100 MI · MAIS DE 100 PAÍSES · MARATONA (2) · MARÇO · MERCADO · MERCADOS · MORDIDA · NETFLIX (18) · NETFLIX HOUSE · NOME · NOVEMBRO (2) · NÃO ESTAVA · O RETORNO · OUTRO LUGAR. · PARCERIAS (2) · PEIXE · PERGUNTA (2) · PESCARIA · PESQUISA · PESQUISADORA (2) · PLANO · PORTA · POSTS · PRESIDENTE · PRODUTO (2) · PRODUÇÃO · PROIBIDO · QUASE 30 ANOS · RECEITA · RECOMENDAÇÃO · REGRA · REINO UNIDO · SENHA · SENNA · STRANGER THINGS (2) · SÉRIE (5) · SÉRIES (2) · TECNOLOGIAS · TEMPO (3) · TEMPORADA (2) · TRANSNACIONAL · TRIMESTRE · TWITTER · VERMELHO (4) · WEDNESDAY · YOUTUBE
+
+### 2. Escala dos números e contadores
+- O bloco principal (qualificador, número, unidade, legenda e fonte) agora ocupa de 50 a 70% da altura do quadro e fica sempre dentro da faixa central de 608 px. Antes ocupava cerca de 30%.
+- Valores grandes viram número e unidade: "100.000.000" sai como "100" com "MILHÕES" embaixo (mesmo valor).
+- O disco de 1997 ficou maior ao centro, com cerca de 460 px.
+
+### 3. Conferência do "55.000.000 de casas compartilhando · Netflix · 8 fev. 2023"
+- O valor da cena é 100.000.000. O 55.000.000 do print era um quadro da animação de contagem, que passava por 55% e 80% do valor antes de chegar ao número.
+- Fonte: NETFLIX, "An update on sharing", 8 fev. 2023: "Today, over 100 million households are sharing accounts". A data bate.
+- Correções:
+  - a cena agora diz "MAIS DE 100 MILHÕES", como a fonte ("over");
+  - a contagem foi trocada por datilografia do número verdadeiro: as casas que faltam aparecem como traço, e nenhum número intermediário falso aparece em nenhum contador (195 anos, 142 mi, 265,2 mi, 4–5 min, ≈ 9.290 m²).

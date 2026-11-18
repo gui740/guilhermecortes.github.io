@@ -68,26 +68,14 @@
    ],
    "etiquetas": [
     {
-     "t": 1.06,
-     "texto": "AMBIÇÃO",
+     "t": 0.84,
+     "texto": "NETFLIX",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.06,
-     "texto": "PRECISO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 2.98,
-     "texto": "DISCO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.58,
-     "texto": "FUNDADA",
+     "t": 5.14,
+     "texto": "1997",
      "lado": "dir",
      "estreita": true
     },
@@ -253,20 +241,8 @@
      "estreita": false
     },
     {
-     "t": 1.58,
-     "texto": "ALÉM",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 3.12,
      "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.74,
-     "texto": "HISTÓRIA",
      "lado": "dir",
      "estreita": false
     },
@@ -283,8 +259,8 @@
      "estreita": false
     },
     {
-     "t": 9.98,
-     "texto": "REMOTO",
+     "t": 9.66,
+     "texto": "CONTROLE REMOTO",
      "lado": "esq",
      "estreita": false
     },
@@ -373,6 +349,12 @@
      "texto": "2005",
      "lado": "dir",
      "estreita": true
+    },
+    {
+     "t": 4.14,
+     "texto": "DVD",
+     "lado": "esq",
+     "estreita": true
     }
    ],
    "ritmo": [
@@ -457,7 +439,7 @@
    "etiquetas": [
     {
      "t": 1.38,
-     "texto": "VEIO",
+     "texto": "2011",
      "lado": "esq",
      "estreita": true
     }
@@ -534,18 +516,6 @@
     {
      "t": 0.68,
      "texto": "PERGUNTA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 1.72,
-     "texto": "TINHAM",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 2.76,
-     "texto": "VALIA",
      "lado": "esq",
      "estreita": true
     }
@@ -765,38 +735,20 @@
    "etiquetas": [
     {
      "t": 0.8,
-     "texto": "HISTÓRIA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 2.36,
-     "texto": "QUEM",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.0,
-     "texto": "CRESCEU",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 6.06,
      "texto": "2018",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 8.02,
-     "texto": "QUANTO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 8.96,
-     "texto": "INVESTIR",
+     "t": 8.24,
+     "texto": "NETFLIX",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.58,
+     "texto": "CONTEÚDO",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -922,25 +874,13 @@
    "etiquetas": [
     {
      "t": 0.76,
-     "texto": "TROUXE",
+     "texto": "HOUSE OF CARDS",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 2.32,
-     "texto": "SOLTAR",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 3.26,
      "texto": "EPISÓDIOS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.74,
-     "texto": "VEIO",
      "lado": "dir",
      "estreita": true
     }
@@ -1038,37 +978,13 @@
    "etiquetas": [
     {
      "t": 1.0,
-     "texto": "LINEAR",
+     "texto": "PRODUTO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.32,
-     "texto": "VIROU",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 4.02,
-     "texto": "CHAMAM",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.1,
-     "texto": "ISOLADO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 6.74,
-     "texto": "REPRODUÇÃO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 7.82,
-     "texto": "PRÓXIMO",
+     "t": 8.1,
+     "texto": "EPISÓDIO",
      "lado": "dir",
      "estreita": true
     },
@@ -1079,15 +995,9 @@
      "estreita": true
     },
     {
-     "t": 10.8,
-     "texto": "MANTÉM",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 11.8,
      "texto": "MARATONA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -1205,27 +1115,9 @@
      "estreita": false
     },
     {
-     "t": 1.92,
-     "texto": "ALGUNS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 3.38,
      "texto": "EPISÓDIO",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.76,
-     "texto": "COMEÇA",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.88,
-     "texto": "PRECISA",
-     "lado": "esq",
      "estreita": false
     }
    ],
@@ -1273,14 +1165,8 @@
    "etiquetas": [
     {
      "t": 1.2,
-     "texto": "APERTADO",
+     "texto": "BOTÃO",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.98,
-     "texto": "VEZES",
-     "lado": "dir",
      "estreita": true
     }
    ],
@@ -1380,26 +1266,14 @@
      "estreita": true
     },
     {
-     "t": 1.84,
-     "texto": "CERCA",
+     "t": 2.32,
+     "texto": "CERCA DE 15%",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 4.22,
-     "texto": "PESSOAS",
-     "lado": "esq",
      "estreita": true
     },
     {
      "t": 5.14,
      "texto": "SÉRIE",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 6.1,
-     "texto": "PRIMEIROS",
      "lado": "esq",
      "estreita": true
     },
@@ -1417,13 +1291,13 @@
     },
     {
      "t": 10.62,
-     "texto": "ESTADOS",
+     "texto": "ESTADOS UNIDOS",
      "lado": "dir",
      "estreita": false
     },
     {
      "t": 11.74,
-     "texto": "REINO",
+     "texto": "REINO UNIDO",
      "lado": "esq",
      "estreita": false
     },
@@ -1434,15 +1308,9 @@
      "estreita": false
     },
     {
-     "t": 14.5,
-     "texto": "LEVOU",
+     "t": 15.32,
+     "texto": "AGOSTO",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 15.88,
-     "texto": "2017",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -1561,44 +1429,38 @@
     },
     {
      "t": 2.4,
-     "texto": "195",
+     "texto": "195 ANOS",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.88,
-     "texto": "ECONOMIZADOS",
+     "t": 5.34,
+     "texto": "TEMPO",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.92,
-     "texto": "SOMANDO",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 7.24,
      "texto": "ENGENHEIRO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 8.92,
      "texto": "BOTÃO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 10.14,
      "texto": "GRÁTIS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 11.56,
      "texto": "CLIQUES",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -1696,7 +1558,7 @@
    "etiquetas": [
     {
      "t": 0.94,
-     "texto": "COISA",
+     "texto": "BOTÃO",
      "lado": "esq",
      "estreita": true
     },
@@ -1704,12 +1566,6 @@
      "t": 2.38,
      "texto": "PRODUTO",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 3.38,
-     "texto": "VOCÊ",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -1799,14 +1655,14 @@
    ],
    "etiquetas": [
     {
-     "t": 1.7,
-     "texto": "HASTINGS",
+     "t": 1.52,
+     "texto": "2007",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.76,
-     "texto": "ABRIU",
+     "t": 2.44,
+     "texto": "NETFLIX",
      "lado": "dir",
      "estreita": true
     },
@@ -1817,27 +1673,9 @@
      "estreita": true
     },
     {
-     "t": 4.74,
-     "texto": "MUNDO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 6.38,
      "texto": "DÓLARES",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 7.56,
-     "texto": "MELHORÁ-LO",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 9.72,
-     "texto": "NUNCA",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -1974,26 +1812,7 @@
     2.58,
     3.76
    ],
-   "etiquetas": [
-    {
-     "t": 0.44,
-     "texto": "VOCÊ",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 1.6,
-     "texto": "IDEAL",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 2.8,
-     "texto": "VOCÊ",
-     "lado": "esq",
-     "estreita": false
-    }
-   ],
+   "etiquetas": [],
    "ritmo": [
     0.0,
     0.72,
@@ -2077,13 +1896,13 @@
    "etiquetas": [
     {
      "t": 1.3,
-     "texto": "RESSALVA",
+     "texto": "HASTINGS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.26,
-     "texto": "DEPENDER",
+     "t": 4.02,
+     "texto": "ALGORITMO",
      "lado": "dir",
      "estreita": true
     },
@@ -2094,15 +1913,9 @@
      "estreita": true
     },
     {
-     "t": 6.12,
-     "texto": "SERVIÇO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 8.86,
      "texto": "FERRAMENTA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2158,7 +1971,7 @@
    "para": 4,
    "audio": "narr_gui/b23.wav",
    "regancho": [
-    "UMA EMPRESA COM REGRAS",
+    "UMA COM REGRAS",
     "QUE QUASE NENHUMA OUTRA ACEITARIA."
    ],
    "regravar": null,
@@ -2170,7 +1983,7 @@
      "nome": "Viagem pelo painel → cap. 5"
     }
    ],
-   "fala": "23: UMA EMPRESA COM REGRAS QUE QUASE NENHUMA OUTRA ACEITARIA.",
+   "fala": "23: UMA COM REGRAS QUE QUASE NENHUMA OUTRA ACEITARIA.",
    "start": 313.731
   },
   {
@@ -2201,12 +2014,6 @@
      "t": 1.44,
      "texto": "HASTINGS",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.26,
-     "texto": "FAZER",
-     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2292,19 +2099,7 @@
    "etiquetas": [
     {
      "t": 1.18,
-     "texto": "QUIS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 2.46,
-     "texto": "MÍNIMO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 3.86,
-     "texto": "VIRAR",
+     "texto": "NETFLIX",
      "lado": "esq",
      "estreita": true
     }
@@ -2431,15 +2226,9 @@
      "estreita": true
     },
     {
-     "t": 4.16,
-     "texto": "NUMA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 5.4,
      "texto": "2015",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -2527,25 +2316,13 @@
    "etiquetas": [
     {
      "t": 0.96,
-     "texto": "DENSIDADE",
+     "texto": "DENSIDADE DE TALENTO",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 1.86,
-     "texto": "TALENTO",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 2.94,
      "texto": "PERGUNTA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.84,
-     "texto": "RESPONDER",
      "lado": "dir",
      "estreita": true
     }
@@ -2674,7 +2451,7 @@
    "etiquetas": [
     {
      "t": 0.68,
-     "texto": "OFICIAL",
+     "texto": "CULTURA",
      "lado": "esq",
      "estreita": true
     },
@@ -2685,75 +2462,33 @@
      "estreita": true
     },
     {
-     "t": 2.98,
-     "texto": "TEST",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 4.94,
      "texto": "EMPRESA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 6.24,
-     "texto": "JUSTO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 7.58,
-     "texto": "RÁPIDO",
+     "t": 8.8,
+     "texto": "NETFLIX",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 8.6,
-     "texto": "PRÓPRIA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 10.42,
-     "texto": "PAPEL",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 11.32,
-     "texto": "TESTE",
-     "lado": "esq",
      "estreita": false
     },
     {
      "t": 13.72,
      "texto": "PESCARIA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 14.74,
      "texto": "HASTINGS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 17.86,
      "texto": "PEIXE",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 19.22,
-     "texto": "KEEPER",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 20.28,
-     "texto": "FICA",
-     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2871,30 +2606,6 @@
    "etiquetas": [
     {
      "t": 0.48,
-     "texto": "VÍDEO",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 1.66,
-     "texto": "BRANCO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.0,
-     "texto": "COISA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.6,
-     "texto": "EFEITO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.7,
      "texto": "REGRA",
      "lado": "esq",
      "estreita": false
@@ -2958,7 +2669,7 @@
    "etiquetas": [
     {
      "t": 0.54,
-     "texto": "MARCA",
+     "texto": "GUIA DE MARCA",
      "lado": "esq",
      "estreita": false
     },
@@ -2971,18 +2682,6 @@
     {
      "t": 2.94,
      "texto": "MERCADOS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 3.96,
-     "texto": "CONHECIDA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 6.54,
-     "texto": "PODER",
      "lado": "esq",
      "estreita": false
     },
@@ -3046,38 +2745,26 @@
      "estreita": false
     },
     {
-     "t": 2.76,
-     "texto": "LIDO",
+     "t": 3.12,
+     "texto": "NETFLIX",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 4.5,
-     "texto": "APARECE",
-     "lado": "esq",
      "estreita": false
     },
     {
      "t": 5.52,
      "texto": "ASSINATURA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 6.62,
      "texto": "NETFLIX",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 7.78,
      "texto": "VERMELHO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 8.7,
-     "texto": "APOIO",
      "lado": "esq",
      "estreita": false
     }
@@ -3143,31 +2830,7 @@
    "etiquetas": [
     {
      "t": 0.3,
-     "texto": "GUIA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 1.26,
      "texto": "PROIBIDO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 2.5,
-     "texto": "GIRAR",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.22,
-     "texto": "EFEITOS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.4,
-     "texto": "FUNDO",
      "lado": "esq",
      "estreita": false
     },
@@ -3178,33 +2841,15 @@
      "estreita": false
     },
     {
-     "t": 8.34,
-     "texto": "DUAS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 10.36,
-     "texto": "PODE",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 11.54,
-     "texto": "ALGUÉM",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 12.94,
      "texto": "COMIDA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 13.94,
      "texto": "MORDIDA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -3309,80 +2954,38 @@
    "etiquetas": [
     {
      "t": 1.08,
-     "texto": "FIXA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.2,
      "texto": "ESTUDO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 4.52,
      "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.54,
-     "texto": "UNIDOS",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 7.0,
-     "texto": "TRÊS",
-     "lado": "esq",
      "estreita": true
     },
     {
      "t": 8.32,
      "texto": "TWITTER",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 9.92,
      "texto": "POSTS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 11.28,
-     "texto": "TINHAM",
      "lado": "dir",
      "estreita": false
     },
     {
      "t": 13.08,
-     "texto": "36",
+     "texto": "36,7%",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 15.06,
-     "texto": "AMERICANOS",
-     "lado": "dir",
      "estreita": false
     },
     {
      "t": 16.44,
      "texto": "CONTA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 18.74,
-     "texto": "ESPANHOLA",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 20.4,
-     "texto": "CHAMA",
-     "lado": "esq",
      "estreita": false
     }
    ],
@@ -3501,25 +3104,25 @@
    "etiquetas": [
     {
      "t": 1.9,
-     "texto": "QUINTO",
+     "texto": "DEZEMBRO",
      "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.1,
+     "texto": "CNN",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 5.04,
      "texto": "HORAS",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 6.14,
      "texto": "CONTA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 7.3,
-     "texto": "CARDS",
      "lado": "dir",
      "estreita": false
     },
@@ -3530,8 +3133,8 @@
      "estreita": false
     },
     {
-     "t": 9.68,
-     "texto": "FARÁ",
+     "t": 10.18,
+     "texto": "ANÚNCIO",
      "lado": "dir",
      "estreita": false
     },
@@ -3652,31 +3255,19 @@
    "etiquetas": [
     {
      "t": 1.3,
-     "texto": "ENTRA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 2.22,
      "texto": "CAMPANHA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 3.74,
-     "texto": "FRANK",
-     "lado": "esq",
+     "texto": "FRANK UNDERWOOD",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 6.2,
      "texto": "SÉRIE",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 7.36,
-     "texto": "PROPRIA",
      "lado": "esq",
      "estreita": true
     },
@@ -3687,21 +3278,15 @@
      "estreita": true
     },
     {
-     "t": 9.84,
-     "texto": "DATA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 10.92,
      "texto": "TEMPORADA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 12.26,
      "texto": "MARÇO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -3830,14 +3415,8 @@
    "etiquetas": [
     {
      "t": 1.24,
-     "texto": "CONVERSA",
+     "texto": "SÉRIE",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 2.48,
-     "texto": "ENTROU",
-     "lado": "dir",
      "estreita": true
     }
    ],
@@ -3922,62 +3501,44 @@
    "etiquetas": [
     {
      "t": 1.1,
-     "texto": "CAMINHO",
+     "texto": "PARCERIAS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.1,
-     "texto": "MEIO &",
+     "t": 3.72,
+     "texto": "SENNA",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 4.28,
-     "texto": "2024",
-     "lado": "esq",
      "estreita": true
     },
     {
      "t": 5.68,
      "texto": "PRODUÇÃO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 6.58,
      "texto": "NETFLIX",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 7.52,
      "texto": "PARCERIAS",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 9.36,
      "texto": "HEINEKEN",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 10.48,
      "texto": "ANTARCTICA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 11.64,
-     "texto": "CLARO",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 13.3,
-     "texto": "OUTRAS",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -4086,56 +3647,20 @@
      "estreita": false
     },
     {
-     "t": 2.68,
-     "texto": "ESCALA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 3.82,
      "texto": "ACIONISTAS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 4.78,
      "texto": "NETFLIX",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.84,
-     "texto": "6",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 7.06,
-     "texto": "PROGRAMA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 8.38,
-     "texto": "TEMPOS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 10.2,
-     "texto": "MILHÕES",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 11.6,
-     "texto": "4",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 13.4,
-     "texto": "NÚMERO",
+     "t": 14.08,
+     "texto": "94 PAÍSES",
      "lado": "dir",
      "estreita": true
     }
@@ -4271,49 +3796,25 @@
    "etiquetas": [
     {
      "t": 0.56,
-     "texto": "OFICIAL",
+     "texto": "91 DIAS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 1.78,
-     "texto": "SOMAM",
+     "t": 5.42,
+     "texto": "TEMPORADA",
      "lado": "dir",
-     "estreita": false
+     "estreita": true
     },
     {
-     "t": 3.08,
-     "texto": "PRIMEIROS",
+     "t": 7.04,
+     "texto": "265 MI",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.06,
-     "texto": "DIAS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.18,
-     "texto": "PRIMEIRA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.28,
-     "texto": "6",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 9.66,
      "texto": "SÉRIE",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 10.7,
-     "texto": "HISTÓRIA",
      "lado": "dir",
      "estreita": true
     }
@@ -4424,7 +3925,7 @@
    "etiquetas": [
     {
      "t": 1.06,
-     "texto": "VEIO",
+     "texto": "LA CASA DE PAPEL",
      "lado": "esq",
      "estreita": false
     },
@@ -4435,39 +3936,9 @@
      "estreita": false
     },
     {
-     "t": 4.46,
-     "texto": "PRIMEIRO",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 5.7,
-     "texto": "INGLÊS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 7.28,
      "texto": "LEGENDA",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 8.9,
-     "texto": "GRANDES",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 10.24,
-     "texto": "QUALQUER",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 11.46,
-     "texto": "AMADAS",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -4539,44 +4010,26 @@
    "etiquetas": [
     {
      "t": 0.52,
-     "texto": "INGLÊS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 1.46,
      "texto": "WEDNESDAY",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 3.0,
-     "texto": "252",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.1,
-     "texto": "MILHÕES",
+     "texto": "252 MI",
      "lado": "dir",
      "estreita": false
     },
     {
      "t": 5.0,
-     "texto": "STRANGER",
+     "texto": "STRANGER THINGS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 5.96,
-     "texto": "SOMA",
+     "t": 6.34,
+     "texto": "140 MI",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 6.86,
-     "texto": "MILHÕES",
-     "lado": "esq",
      "estreita": false
     }
    ],
@@ -4628,7 +4081,7 @@
    "etiquetas": [
     {
      "t": 0.98,
-     "texto": "CHAMA",
+     "texto": "PESQUISADORA",
      "lado": "esq",
      "estreita": true
     },
@@ -4710,6 +4163,7 @@
     {
      "tipo": "contador",
      "t": 0,
+     "prefixo": "MAIS DE",
      "valor": "100.000.000",
      "sufixo": "DE CASAS COMPARTILHANDO",
      "rotulo": "NETFLIX · 8 FEV. 2023"
@@ -4754,32 +4208,14 @@
     },
     {
      "t": 3.16,
-     "texto": "100",
+     "texto": "MAIS DE 100 MI",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.5,
-     "texto": "COMPARTILHAVAM",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.52,
-     "texto": "PREJUDICAVA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 7.44,
-     "texto": "CAPACIDADE",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 8.74,
      "texto": "SÉRIES",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -4852,8 +4288,8 @@
      "estreita": false
     },
     {
-     "t": 1.8,
-     "texto": "PREVIA",
+     "t": 2.08,
+     "texto": "CANCELAMENTOS",
      "lado": "dir",
      "estreita": false
     },
@@ -4923,32 +4359,20 @@
      "estreita": false
     },
     {
-     "t": 1.9,
-     "texto": "PAGO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 2.88,
-     "texto": "100",
-     "lado": "esq",
+     "texto": "MAIS DE 100 PAÍSES",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 4.16,
      "texto": "JULHO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 5.72,
      "texto": "RECEITA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.98,
-     "texto": "MAIOR",
      "lado": "dir",
      "estreita": false
     },
@@ -5013,25 +4437,13 @@
    "etiquetas": [
     {
      "t": 1.94,
-     "texto": "PELOS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.02,
      "texto": "EMPRESA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 4.9,
-     "texto": "QUEM",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 6.5,
-     "texto": "CONTA",
+     "t": 5.8,
+     "texto": "SENHA",
      "lado": "dir",
      "estreita": true
     }
@@ -5141,19 +4553,7 @@
     },
     {
      "t": 3.58,
-     "texto": "12",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.52,
-     "texto": "INCLUINDO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 6.32,
-     "texto": "4",
+     "texto": "12 PAÍSES",
      "lado": "esq",
      "estreita": true
     },
@@ -5170,20 +4570,8 @@
      "estreita": false
     },
     {
-     "t": 10.94,
-     "texto": "RESPONDIA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 12.4,
-     "texto": "NOVAS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 13.44,
-     "texto": "PAÍSES",
+     "t": 12.66,
+     "texto": "ASSINATURAS",
      "lado": "dir",
      "estreita": false
     },
@@ -5194,20 +4582,8 @@
      "estreita": true
     },
     {
-     "t": 17.94,
-     "texto": "TEMPOS",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 19.24,
      "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 20.22,
-     "texto": "VOCÊ",
      "lado": "dir",
      "estreita": true
     }
@@ -5366,32 +4742,20 @@
      "estreita": false
     },
     {
-     "t": 3.98,
-     "texto": "DIRETA",
+     "t": 5.78,
+     "texto": "FORTNITE",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 5.08,
-     "texto": "COMPETIMOS",
+     "t": 8.72,
+     "texto": "HBO",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.74,
-     "texto": "PERDEMOS",
-     "lado": "dir",
      "estreita": false
     },
     {
      "t": 10.06,
      "texto": "YOUTUBE",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 10.98,
-     "texto": "MINUTOS",
      "lado": "dir",
      "estreita": true
     },
@@ -5572,38 +4936,26 @@
      "estreita": false
     },
     {
-     "t": 2.08,
-     "texto": "ABRIU",
+     "t": 2.56,
+     "texto": "NETFLIX HOUSE",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.0,
-     "texto": "HOUSE",
-     "lado": "esq",
      "estreita": false
     },
     {
      "t": 4.06,
      "texto": "FILADÉLFIA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 6.24,
      "texto": "DALLAS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 7.28,
-     "texto": "9",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 9.2,
-     "texto": "ENTRADA",
+     "t": 9.32,
+     "texto": "GRÁTIS",
      "lado": "esq",
      "estreita": true
     },
@@ -5615,19 +4967,7 @@
     },
     {
      "t": 11.36,
-     "texto": "STRANGER",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 12.36,
-     "texto": "6",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 13.44,
-     "texto": "TERCEIRA",
+     "texto": "STRANGER THINGS",
      "lado": "esq",
      "estreita": true
     },
@@ -5753,21 +5093,15 @@
      "estreita": true
     },
     {
-     "t": 3.06,
-     "texto": "PALAVRAS",
+     "t": 3.92,
+     "texto": "NETFLIX",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.06,
-     "texto": "REFERÊNCIA",
-     "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.82,
-     "texto": "CORREIO",
-     "lado": "dir",
+     "t": 6.26,
+     "texto": "DVD",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -5868,50 +5202,50 @@
    ],
    "etiquetas": [
     {
-     "t": 1.72,
+     "t": 1.18,
      "texto": "ENVELOPE",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.88,
-     "texto": "CHEGAVA",
+     "t": 2.16,
+     "texto": "VERMELHO",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 3.42,
+     "texto": "CASA",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 4.98,
      "texto": "ENVELOPE",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 6.02,
      "texto": "PORTA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 8.4,
-     "texto": "30",
-     "lado": "esq",
+     "texto": "QUASE 30 ANOS",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 9.82,
      "texto": "TEMPO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 10.76,
      "texto": "CASA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 11.96,
-     "texto": "QUER",
      "lado": "dir",
      "estreita": false
     },
@@ -6009,12 +5343,6 @@
      "texto": "IZOTON",
      "lado": "esq",
      "estreita": false
-    },
-    {
-     "t": 2.68,
-     "texto": "PRÓXIMO",
-     "lado": "dir",
-     "estreita": false
     }
    ],
    "ritmo": [
@@ -6075,67 +5403,47 @@
    "som": "papel_3"
   },
   {
-   "t": 18.66,
+   "t": 18.44,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 19.66,
+   "t": 22.74,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 20.58,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 22.18,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 24.92,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 27.61,
-   "som": "crt_on_1"
+   "som": "crt_on_3"
   },
   {
    "t": 37.63,
-   "som": "crt_off_2"
+   "som": "crt_off_0"
   },
   {
    "t": 49.78,
-   "som": "click_3"
+   "som": "click_1"
   },
   {
    "t": 53.02,
-   "som": "papel_0"
+   "som": "papel_2"
   },
   {
    "t": 53.57,
-   "som": "carimbo_1"
+   "som": "carimbo_3"
   },
   {
    "t": 50.1,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 51.36,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 52.9,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 54.52,
+   "t": 52.9,
    "som": "click_1",
    "vol": 0.18
   },
@@ -6150,7 +5458,7 @@
    "vol": 0.18
   },
   {
-   "t": 59.76,
+   "t": 59.44,
    "som": "click_0",
    "vol": 0.18
   },
@@ -6212,158 +5520,138 @@
    "vol": 0.18
   },
   {
+   "t": 69.69,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
    "t": 70.5,
-   "som": "crt_on_3"
+   "som": "crt_on_0"
   },
   {
    "t": 85.04,
-   "som": "crt_off_0"
+   "som": "crt_off_1"
   },
   {
    "t": 85.29,
-   "som": "bip_1"
+   "som": "bip_2"
   },
   {
    "t": 85.69,
-   "som": "papel_2"
+   "som": "papel_3"
   },
   {
    "t": 86.67,
-   "som": "click_3",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 88.32,
-   "som": "crt_on_0"
+   "som": "crt_on_1"
   },
   {
    "t": 105.3,
-   "som": "crt_off_1"
+   "som": "crt_off_2"
   },
   {
    "t": 105.55,
-   "som": "bip_2"
+   "som": "bip_3"
   },
   {
    "t": 105.91,
-   "som": "papel_3"
+   "som": "papel_0"
   },
   {
    "t": 106.23,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 107.27,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 108.31,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 109.35,
-   "som": "crt_on_3"
+   "som": "crt_on_2"
   },
   {
    "t": 117.81,
-   "som": "crt_off_0"
+   "som": "crt_off_3"
   },
   {
    "t": 118.06,
-   "som": "sweep_1"
+   "som": "sweep_0"
   },
   {
    "t": 118.56,
-   "som": "papel_2"
+   "som": "papel_1"
   },
   {
    "t": 118.36,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 119.0,
-   "som": "click_0",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 119.63,
-   "som": "click_1",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 120.27,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 120.9,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 121.54,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 122.671,
-   "som": "crt_on_1"
-  },
-  {
-   "t": 141.031,
-   "som": "crt_off_2"
-  },
-  {
-   "t": 141.281,
-   "som": "bip_3"
-  },
-  {
-   "t": 145.581,
-   "som": "geiger_0"
-  },
-  {
-   "t": 141.741,
-   "som": "papel_1"
-  },
-  {
-   "t": 145.661,
-   "som": "papel_2"
-  },
-  {
-   "t": 148.741,
-   "som": "papel_3"
-  },
-  {
-   "t": 142.081,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 143.641,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 146.281,
+   "t": 120.9,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 147.341,
+   "t": 121.54,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 149.301,
+   "t": 122.671,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 141.031,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 141.281,
+   "som": "bip_2"
+  },
+  {
+   "t": 145.581,
+   "som": "geiger_3"
+  },
+  {
+   "t": 141.741,
+   "som": "papel_0"
+  },
+  {
+   "t": 145.661,
+   "som": "papel_1"
+  },
+  {
+   "t": 148.741,
+   "som": "papel_2"
+  },
+  {
+   "t": 142.081,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 149.521,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 150.241,
+   "t": 150.861,
    "som": "click_1",
    "vol": 0.18
   },
@@ -6393,104 +5681,64 @@
    "vol": 0.18
   },
   {
-   "t": 165.161,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 166.101,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 167.581,
-   "som": "click_2",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 194.271,
-   "som": "click_3"
+   "som": "click_1"
   },
   {
    "t": 194.851,
-   "som": "papel_0"
-  },
-  {
-   "t": 197.731,
-   "som": "papel_1"
-  },
-  {
-   "t": 200.291,
    "som": "papel_2"
   },
   {
-   "t": 202.811,
+   "t": 197.731,
    "som": "papel_3"
   },
   {
-   "t": 205.591,
+   "t": 200.291,
    "som": "papel_0"
   },
   {
+   "t": 202.811,
+   "som": "papel_1"
+  },
+  {
+   "t": 205.591,
+   "som": "papel_2"
+  },
+  {
    "t": 195.271,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 196.591,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 198.291,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 199.371,
+   "t": 202.371,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 201.011,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 202.091,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 203.331,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 205.071,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 206.071,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 207.121,
-   "som": "papel_2"
-  },
-  {
-   "t": 207.671,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 207.521,
-   "som": "click_0",
+   "t": 206.071,
+   "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 209.041,
+   "t": 207.121,
+   "som": "papel_3"
+  },
+  {
+   "t": 207.671,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 207.521,
    "som": "click_1",
    "vol": 0.18
   },
@@ -6500,77 +5748,57 @@
    "vol": 0.18
   },
   {
-   "t": 211.881,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 213.001,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 214.801,
-   "som": "click_1"
+   "som": "click_3"
   },
   {
    "t": 214.891,
-   "som": "papel_2"
-  },
-  {
-   "t": 217.791,
-   "som": "papel_3"
-  },
-  {
-   "t": 215.751,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 218.531,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 220.201,
-   "som": "bip_2"
-  },
-  {
-   "t": 230.471,
-   "som": "papel_3"
-  },
-  {
-   "t": 231.021,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 220.401,
-   "som": "papel_1"
-  },
-  {
-   "t": 223.281,
-   "som": "papel_2"
-  },
-  {
-   "t": 225.681,
-   "som": "papel_3"
-  },
-  {
-   "t": 228.681,
    "som": "papel_0"
   },
   {
-   "t": 220.981,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 217.791,
+   "som": "papel_1"
   },
   {
-   "t": 221.941,
+   "t": 215.751,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 224.321,
+   "t": 220.201,
+   "som": "bip_3"
+  },
+  {
+   "t": 230.471,
+   "som": "papel_0"
+  },
+  {
+   "t": 231.021,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 220.401,
+   "som": "papel_2"
+  },
+  {
+   "t": 223.281,
+   "som": "papel_3"
+  },
+  {
+   "t": 225.681,
+   "som": "papel_0"
+  },
+  {
+   "t": 228.681,
+   "som": "papel_1"
+  },
+  {
+   "t": 220.981,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 222.421,
    "som": "click_3",
    "vol": 0.18
   },
@@ -6580,141 +5808,121 @@
    "vol": 0.18
   },
   {
-   "t": 226.201,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
    "t": 227.881,
-   "som": "click_2",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 229.721,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 230.721,
-   "som": "click_0",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 231.841,
-   "som": "click_1",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 232.781,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 235.421,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 234.601,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 235.981,
-   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 237.311,
-   "som": "sweep_1"
+   "som": "sweep_3"
   },
   {
    "t": 237.461,
-   "som": "tecla_2"
+   "som": "tecla_0"
   },
   {
    "t": 242.801,
-   "som": "bip_3"
+   "som": "bip_1"
   },
   {
    "t": 237.811,
-   "som": "papel_0"
-  },
-  {
-   "t": 240.651,
-   "som": "papel_1"
-  },
-  {
-   "t": 243.191,
    "som": "papel_2"
   },
   {
-   "t": 245.911,
+   "t": 240.651,
    "som": "papel_3"
   },
   {
+   "t": 243.191,
+   "som": "papel_0"
+  },
+  {
+   "t": 245.911,
+   "som": "papel_1"
+  },
+  {
    "t": 238.651,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 239.711,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 241.191,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 242.231,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 242.651,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 244.551,
-   "som": "click_0",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 246.231,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 247.451,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 248.871,
+   "t": 247.451,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 249.991,
-   "som": "geiger_0"
-  },
-  {
-   "t": 251.841,
-   "som": "bip_1"
-  },
-  {
-   "t": 250.051,
-   "som": "papel_2"
-  },
-  {
-   "t": 252.851,
-   "som": "papel_3"
-  },
-  {
-   "t": 250.731,
+   "t": 248.871,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 252.171,
+   "t": 249.991,
+   "som": "geiger_1"
+  },
+  {
+   "t": 251.841,
+   "som": "bip_2"
+  },
+  {
+   "t": 250.051,
+   "som": "papel_3"
+  },
+  {
+   "t": 252.851,
+   "som": "papel_0"
+  },
+  {
+   "t": 250.731,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 253.171,
+   "t": 252.171,
    "som": "click_2",
    "vol": 0.18
   },
@@ -6739,12 +5947,12 @@
    "som": "papel_3"
   },
   {
-   "t": 262.401,
+   "t": 262.221,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 263.461,
+   "t": 263.141,
    "som": "click_1",
    "vol": 0.18
   },
@@ -6754,132 +5962,92 @@
    "vol": 0.18
   },
   {
-   "t": 265.441,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 267.081,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 268.261,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 270.421,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 271.671,
-   "som": "crt_on_3"
+   "som": "crt_on_0"
   },
   {
    "t": 276.271,
-   "som": "crt_off_0"
+   "som": "crt_off_1"
   },
   {
    "t": 276.521,
-   "som": "crt_on_1"
+   "som": "crt_on_2"
   },
   {
    "t": 289.001,
-   "som": "crt_off_2"
+   "som": "crt_off_3"
   },
   {
    "t": 289.451,
-   "som": "plin_3"
+   "som": "plin_0"
   },
   {
-   "t": 289.691,
+   "t": 294.091,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 303.651,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 304.101,
+   "som": "geiger_3"
+  },
+  {
+   "t": 307.971,
+   "som": "bip_0"
+  },
+  {
+   "t": 304.361,
+   "som": "papel_1"
+  },
+  {
+   "t": 308.471,
+   "som": "papel_2"
+  },
+  {
+   "t": 311.541,
+   "som": "papel_3"
+  },
+  {
+   "t": 305.201,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 290.851,
+   "t": 307.921,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 292.051,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 294.091,
-   "som": "crt_on_3"
-  },
-  {
-   "t": 303.651,
-   "som": "crt_off_0"
-  },
-  {
-   "t": 304.101,
-   "som": "geiger_1"
-  },
-  {
-   "t": 307.971,
-   "som": "bip_2"
-  },
-  {
-   "t": 304.361,
-   "som": "papel_3"
-  },
-  {
-   "t": 308.471,
-   "som": "papel_0"
-  },
-  {
-   "t": 311.541,
-   "som": "papel_1"
-  },
-  {
-   "t": 305.201,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 307.161,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 308.961,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 310.021,
-   "som": "click_1",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 312.761,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 320.139,
-   "som": "bip_3"
+   "som": "bip_0"
   },
   {
    "t": 320.459,
-   "som": "papel_0"
-  },
-  {
-   "t": 323.159,
    "som": "papel_1"
   },
   {
-   "t": 321.579,
-   "som": "click_2",
-   "vol": 0.18
+   "t": 323.159,
+   "som": "papel_2"
   },
   {
-   "t": 324.399,
+   "t": 321.579,
    "som": "click_3",
    "vol": 0.18
   },
@@ -6909,90 +6077,70 @@
    "vol": 0.18
   },
   {
-   "t": 343.179,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 344.579,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 345.799,
-   "som": "crt_on_0"
-  },
-  {
-   "t": 352.479,
-   "som": "crt_off_1"
-  },
-  {
-   "t": 352.729,
    "som": "crt_on_2"
   },
   {
-   "t": 358.349,
+   "t": 352.479,
    "som": "crt_off_3"
   },
   {
+   "t": 352.729,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 358.349,
+   "som": "crt_off_1"
+  },
+  {
    "t": 358.999,
-   "som": "click_0"
+   "som": "click_2"
   },
   {
    "t": 358.859,
-   "som": "papel_1"
+   "som": "papel_3"
   },
   {
    "t": 361.659,
-   "som": "papel_2"
+   "som": "papel_0"
   },
   {
    "t": 359.899,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 361.059,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 362.759,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 363.999,
+   "t": 361.059,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 365.199,
-   "som": "crt_on_3"
-  },
-  {
-   "t": 382.119,
-   "som": "crt_off_0"
-  },
-  {
-   "t": 382.369,
-   "som": "bip_1"
-  },
-  {
-   "t": 383.009,
-   "som": "papel_2"
-  },
-  {
-   "t": 385.869,
-   "som": "papel_3"
-  },
-  {
-   "t": 383.329,
-   "som": "click_0",
+   "t": 363.999,
+   "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 384.229,
+   "t": 365.199,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 382.119,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 382.369,
+   "som": "bip_2"
+  },
+  {
+   "t": 383.009,
+   "som": "papel_3"
+  },
+  {
+   "t": 385.869,
+   "som": "papel_0"
+  },
+  {
+   "t": 383.329,
    "som": "click_1",
    "vol": 0.18
   },
@@ -7002,117 +6150,77 @@
    "vol": 0.18
   },
   {
-   "t": 387.209,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 388.429,
-   "som": "crt_on_0"
+   "som": "crt_on_3"
   },
   {
    "t": 412.669,
-   "som": "crt_off_1"
+   "som": "crt_off_0"
   },
   {
    "t": 413.219,
-   "som": "carimbo_2"
+   "som": "carimbo_1"
   },
   {
    "t": 416.909,
-   "som": "papel_3"
-  },
-  {
-   "t": 417.459,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 425.029,
-   "som": "plin_1"
-  },
-  {
-   "t": 413.239,
    "som": "papel_2"
   },
   {
-   "t": 425.799,
-   "som": "papel_3"
+   "t": 417.459,
+   "som": "carimbo_3"
   },
   {
-   "t": 428.279,
-   "som": "papel_0"
+   "t": 425.029,
+   "som": "plin_0"
   },
   {
-   "t": 431.099,
+   "t": 413.239,
    "som": "papel_1"
   },
   {
+   "t": 425.799,
+   "som": "papel_2"
+  },
+  {
+   "t": 428.279,
+   "som": "papel_3"
+  },
+  {
+   "t": 431.099,
+   "som": "papel_0"
+  },
+  {
    "t": 413.599,
-   "som": "click_2",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 414.899,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 415.899,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 417.859,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 419.159,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 420.499,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 421.519,
+   "t": 421.719,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 423.339,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 424.239,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 426.639,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 427.659,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 430.779,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 432.139,
+   "t": 427.659,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 433.199,
+   "t": 430.779,
    "som": "click_3",
    "vol": 0.18
   },
@@ -7152,26 +6260,6 @@
    "vol": 0.18
   },
   {
-   "t": 438.299,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 439.639,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 441.239,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 442.339,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 448.409,
    "som": "papel_1"
   },
@@ -7195,56 +6283,36 @@
    "vol": 0.18
   },
   {
-   "t": 447.829,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 450.409,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 451.589,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 453.219,
-   "som": "bip_1"
+   "som": "bip_3"
   },
   {
    "t": 454.399,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 455.979,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 457.719,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 458.739,
+   "t": 456.339,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 459.839,
+   "t": 458.739,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 460.999,
+   "t": 459.839,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 461.919,
+   "t": 460.999,
    "som": "click_0",
    "vol": 0.18
   },
@@ -7258,78 +6326,38 @@
    "vol": 0.18
   },
   {
-   "t": 464.189,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 465.429,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 467.149,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 468.329,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
    "t": 470.089,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 471.269,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 473.289,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 474.469,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
    "t": 475.869,
-   "som": "click_3",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 476.869,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 478.349,
-   "som": "geiger_1"
-  },
-  {
-   "t": 486.519,
-   "som": "papel_2"
-  },
-  {
-   "t": 487.069,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 478.509,
-   "som": "papel_0"
-  },
-  {
-   "t": 479.229,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 481.349,
+   "t": 478.349,
+   "som": "geiger_2"
+  },
+  {
+   "t": 486.519,
+   "som": "papel_3"
+  },
+  {
+   "t": 487.069,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 478.509,
+   "som": "papel_1"
+  },
+  {
+   "t": 479.229,
    "som": "click_2",
    "vol": 0.18
   },
@@ -7339,53 +6367,23 @@
    "vol": 0.18
   },
   {
-   "t": 483.689,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 485.149,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
    "t": 486.469,
-   "som": "click_2",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 488.069,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 489.429,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 491.229,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 493.209,
+   "t": 491.229,
    "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 494.589,
    "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 496.889,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 498.549,
-   "som": "click_1",
    "vol": 0.18
   },
   {
@@ -7420,121 +6418,111 @@
   },
   {
    "t": 502.899,
-   "som": "bip_2"
+   "som": "bip_0"
   },
   {
    "t": 503.249,
-   "som": "bip_3"
+   "som": "bip_1"
   },
   {
    "t": 508.309,
-   "som": "papel_0"
-  },
-  {
-   "t": 508.859,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 503.539,
    "som": "papel_2"
   },
   {
+   "t": 508.859,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 503.539,
+   "som": "papel_0"
+  },
+  {
    "t": 506.399,
-   "som": "papel_3"
+   "som": "papel_1"
   },
   {
    "t": 504.799,
-   "som": "click_0",
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 506.999,
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 507.939,
-   "som": "click_1",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 509.039,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 510.199,
-   "som": "click_3",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 511.539,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 512.579,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 514.439,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 515.229,
-   "som": "sweep_3"
-  },
-  {
-   "t": 534.879,
-   "som": "click_0"
-  },
-  {
-   "t": 535.129,
-   "som": "bip_1"
-  },
-  {
-   "t": 535.409,
-   "som": "papel_2"
-  },
-  {
-   "t": 538.129,
-   "som": "papel_3"
-  },
-  {
-   "t": 540.609,
-   "som": "papel_0"
-  },
-  {
-   "t": 543.129,
-   "som": "papel_1"
-  },
-  {
-   "t": 545.609,
-   "som": "papel_2"
-  },
-  {
-   "t": 548.019,
-   "som": "papel_3"
-  },
-  {
-   "t": 536.429,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 537.349,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 538.869,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 541.329,
+   "t": 513.079,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 542.489,
+   "t": 514.439,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 515.229,
+   "som": "sweep_1"
+  },
+  {
+   "t": 534.879,
+   "som": "click_2"
+  },
+  {
+   "t": 535.129,
+   "som": "bip_3"
+  },
+  {
+   "t": 535.409,
+   "som": "papel_0"
+  },
+  {
+   "t": 538.129,
+   "som": "papel_1"
+  },
+  {
+   "t": 540.609,
+   "som": "papel_2"
+  },
+  {
+   "t": 543.129,
+   "som": "papel_3"
+  },
+  {
+   "t": 545.609,
+   "som": "papel_0"
+  },
+  {
+   "t": 548.019,
+   "som": "papel_1"
+  },
+  {
+   "t": 536.429,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 538.869,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 541.329,
    "som": "click_0",
    "vol": 0.18
   },
@@ -7544,110 +6532,85 @@
    "vol": 0.18
   },
   {
-   "t": 544.969,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
    "t": 546.049,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 547.389,
-   "som": "click_0",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 549.399,
-   "som": "sweep_1"
+   "som": "sweep_0"
   },
   {
    "t": 552.599,
-   "som": "click_2"
+   "som": "click_1"
   },
   {
    "t": 552.849,
-   "som": "bip_3"
+   "som": "bip_2"
   },
   {
    "t": 553.249,
-   "som": "papel_0"
+   "som": "papel_3"
   },
   {
    "t": 554.089,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 555.329,
-   "som": "click_2",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 556.819,
-   "som": "tecla_3"
+   "som": "tecla_1"
   },
   {
    "t": 562.869,
-   "som": "papel_0"
-  },
-  {
-   "t": 563.419,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 557.099,
    "som": "papel_2"
   },
   {
+   "t": 563.419,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 557.099,
+   "som": "papel_0"
+  },
+  {
    "t": 557.919,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 559.919,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 561.099,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 560.539,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 562.499,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 563.399,
-   "som": "click_3",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 564.339,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 566.179,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 567.299,
+   "t": 566.179,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 568.459,
+   "t": 567.299,
    "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 570.119,
-   "som": "click_0",
    "vol": 0.18
   },
   {
@@ -7682,211 +6645,136 @@
   },
   {
    "t": 573.739,
-   "som": "sweep_1"
+   "som": "sweep_0"
   },
   {
    "t": 579.629,
-   "som": "sweep_2"
+   "som": "sweep_1"
   },
   {
    "t": 579.779,
-   "som": "tecla_3"
+   "som": "tecla_2"
   },
   {
    "t": 574.079,
-   "som": "papel_0"
-  },
-  {
-   "t": 577.039,
-   "som": "papel_1"
-  },
-  {
-   "t": 579.959,
-   "som": "papel_2"
-  },
-  {
-   "t": 583.339,
    "som": "papel_3"
   },
   {
-   "t": 585.779,
+   "t": 577.039,
    "som": "papel_0"
   },
   {
-   "t": 588.419,
+   "t": 579.959,
    "som": "papel_1"
   },
   {
-   "t": 575.199,
-   "som": "click_2",
-   "vol": 0.18
+   "t": 583.339,
+   "som": "papel_2"
   },
   {
-   "t": 576.419,
-   "som": "click_3",
+   "t": 585.779,
+   "som": "papel_3"
+  },
+  {
+   "t": 588.419,
+   "som": "papel_0"
+  },
+  {
+   "t": 575.199,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 577.559,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 578.519,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 579.579,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 580.799,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 582.119,
+   "t": 587.819,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 583.939,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 585.339,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 587.139,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 589.619,
-   "som": "papel_0"
-  },
-  {
-   "t": 590.169,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 595.009,
-   "som": "sweep_2"
-  },
-  {
-   "t": 595.159,
-   "som": "tecla_3"
-  },
-  {
-   "t": 595.459,
-   "som": "papel_0"
-  },
-  {
-   "t": 598.159,
    "som": "papel_1"
   },
   {
-   "t": 600.619,
+   "t": 590.169,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 595.009,
+   "som": "sweep_3"
+  },
+  {
+   "t": 595.159,
+   "som": "tecla_0"
+  },
+  {
+   "t": 595.459,
+   "som": "papel_1"
+  },
+  {
+   "t": 598.159,
    "som": "papel_2"
   },
   {
-   "t": 590.179,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 600.619,
+   "som": "papel_3"
   },
   {
-   "t": 591.399,
+   "t": 590.179,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 592.699,
+   "t": 595.039,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 593.679,
+   "t": 596.659,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 594.799,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 595.899,
-   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 599.279,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 600.319,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 601.909,
-   "som": "sweep_3"
+   "som": "sweep_0"
   },
   {
    "t": 607.259,
-   "som": "papel_0"
+   "som": "papel_1"
   },
   {
    "t": 607.809,
-   "som": "carimbo_1"
+   "som": "carimbo_2"
   },
   {
    "t": 602.349,
-   "som": "papel_2"
+   "som": "papel_3"
   },
   {
    "t": 602.969,
-   "som": "click_3",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 604.629,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 606.369,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 607.609,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 609.189,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 610.809,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 612.149,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 613.369,
    "som": "click_2",
    "vol": 0.18
   },
@@ -7900,170 +6788,130 @@
    "vol": 0.18
   },
   {
-   "t": 616.559,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
    "t": 618.099,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 619.199,
-   "som": "click_3",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 620.099,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 621.059,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 621.959,
    "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 621.439,
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 623.089,
-   "som": "bip_3"
+   "som": "bip_0"
   },
   {
    "t": 623.309,
-   "som": "papel_0"
-  },
-  {
-   "t": 626.289,
    "som": "papel_1"
   },
   {
+   "t": 626.289,
+   "som": "papel_2"
+  },
+  {
    "t": 623.969,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 625.089,
-   "som": "click_3",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 626.849,
-   "som": "click_0",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 635.689,
-   "som": "sweep_1"
+   "som": "sweep_2"
   },
   {
    "t": 635.839,
-   "som": "tecla_2"
+   "som": "tecla_3"
   },
   {
    "t": 640.059,
-   "som": "papel_3"
+   "som": "papel_0"
   },
   {
    "t": 640.609,
-   "som": "carimbo_0"
+   "som": "carimbo_1"
   },
   {
    "t": 636.409,
-   "som": "papel_1"
+   "som": "papel_2"
   },
   {
    "t": 637.669,
-   "som": "click_2",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 638.849,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 640.189,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 642.209,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 643.129,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 644.429,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 645.989,
-   "som": "papel_0"
-  },
-  {
-   "t": 646.539,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 646.329,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 647.789,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 649.309,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 650.639,
-   "som": "papel_1"
-  },
-  {
-   "t": 651.189,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 651.159,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 652.539,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 653.519,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 654.799,
+   "t": 645.989,
+   "som": "papel_2"
+  },
+  {
+   "t": 646.539,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 646.329,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 648.069,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 649.309,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 656.359,
+   "t": 650.639,
+   "som": "papel_3"
+  },
+  {
+   "t": 651.189,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 651.159,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 653.519,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 654.799,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 657.619,
+   "t": 656.359,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8091,82 +6939,62 @@
    "vol": 0.18
   },
   {
-   "t": 665.169,
+   "t": 667.949,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 667.049,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 668.649,
-   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 669.709,
-   "som": "sweep_1"
+   "som": "sweep_3"
   },
   {
    "t": 669.859,
-   "som": "tecla_2"
+   "som": "tecla_0"
   },
   {
    "t": 676.759,
-   "som": "papel_3"
-  },
-  {
-   "t": 677.309,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 684.859,
-   "som": "bip_1"
-  },
-  {
-   "t": 670.089,
-   "som": "papel_2"
-  },
-  {
-   "t": 672.719,
-   "som": "papel_3"
-  },
-  {
-   "t": 675.349,
-   "som": "papel_0"
-  },
-  {
-   "t": 685.169,
    "som": "papel_1"
   },
   {
-   "t": 688.129,
+   "t": 677.309,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 684.859,
+   "som": "bip_3"
+  },
+  {
+   "t": 670.089,
+   "som": "papel_0"
+  },
+  {
+   "t": 672.719,
+   "som": "papel_1"
+  },
+  {
+   "t": 675.349,
    "som": "papel_2"
   },
   {
+   "t": 685.169,
+   "som": "papel_3"
+  },
+  {
+   "t": 688.129,
+   "som": "papel_0"
+  },
+  {
    "t": 670.449,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 671.389,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 673.289,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 674.229,
+   "t": 671.389,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 676.029,
+   "t": 673.289,
    "som": "click_3",
    "vol": 0.18
   },
@@ -8181,37 +7009,17 @@
    "vol": 0.18
   },
   {
-   "t": 680.649,
+   "t": 682.369,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 682.109,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 683.149,
-   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 685.809,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 687.649,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 688.949,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 689.929,
+   "t": 688.949,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8247,47 +7055,37 @@
    "vol": 0.18
   },
   {
-   "t": 695.549,
+   "t": 697.349,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 696.649,
+   "t": 700.289,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 698.309,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 701.629,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 702.549,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 703.549,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 704.749,
    "som": "click_2",
    "vol": 0.18
   },
   {
+   "t": 703.549,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 704.749,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
    "t": 706.539,
-   "som": "crt_on_3"
+   "som": "crt_on_1"
   },
   {
    "t": 719.639,
-   "som": "crt_off_0"
+   "som": "crt_off_2"
   },
   {
    "t": 720.389,
@@ -8321,72 +7119,62 @@
   },
   {
    "t": 722.489,
-   "som": "sweep_1"
-  },
-  {
-   "t": 724.739,
-   "som": "click_2"
-  },
-  {
-   "t": 729.359,
    "som": "sweep_3"
   },
   {
+   "t": 724.739,
+   "som": "click_0"
+  },
+  {
+   "t": 729.359,
+   "som": "sweep_1"
+  },
+  {
    "t": 729.509,
-   "som": "tecla_0"
+   "som": "tecla_2"
   },
   {
    "t": 736.319,
-   "som": "bip_1"
+   "som": "bip_3"
   },
   {
    "t": 730.229,
-   "som": "papel_2"
-  },
-  {
-   "t": 733.419,
-   "som": "papel_3"
-  },
-  {
-   "t": 736.729,
    "som": "papel_0"
   },
   {
-   "t": 739.689,
+   "t": 733.419,
    "som": "papel_1"
   },
   {
+   "t": 736.729,
+   "som": "papel_2"
+  },
+  {
+   "t": 739.689,
+   "som": "papel_3"
+  },
+  {
    "t": 725.509,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 727.069,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 727.989,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 729.049,
+   "t": 727.549,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 731.229,
+   "t": 729.049,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 732.269,
+   "t": 731.229,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 734.189,
+   "t": 734.309,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8401,136 +7189,116 @@
    "vol": 0.18
   },
   {
-   "t": 737.349,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 738.429,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 740.589,
-   "som": "click_1",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 743.179,
-   "som": "papel_2"
+   "som": "papel_0"
   },
   {
    "t": 746.749,
-   "som": "papel_3"
-  },
-  {
-   "t": 747.299,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 743.639,
    "som": "papel_1"
   },
   {
+   "t": 747.299,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 743.639,
+   "som": "papel_3"
+  },
+  {
    "t": 744.559,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 746.239,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 748.239,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 749.999,
+   "t": 747.099,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 749.439,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 751.689,
-   "som": "sweep_2"
+   "som": "sweep_3"
   },
   {
    "t": 757.539,
-   "som": "click_3"
+   "som": "click_0"
   },
   {
    "t": 757.789,
-   "som": "bip_0"
+   "som": "bip_1"
   },
   {
    "t": 758.509,
-   "som": "papel_1"
-  },
-  {
-   "t": 761.519,
    "som": "papel_2"
   },
   {
-   "t": 764.189,
+   "t": 761.519,
    "som": "papel_3"
   },
   {
-   "t": 759.509,
-   "som": "click_0",
+   "t": 764.189,
+   "som": "papel_0"
+  },
+  {
+   "t": 758.969,
+   "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 760.669,
-   "som": "click_1",
+   "t": 759.949,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 761.209,
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 762.769,
-   "som": "click_2",
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 763.809,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 766.189,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 767.609,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 768.549,
+   "t": 766.189,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 769.749,
+   "t": 767.609,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 770.889,
+   "t": 768.549,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 775.879,
-   "som": "crt_off_1"
-  },
-  {
-   "t": 774.279,
-   "som": "click_2",
+   "t": 770.889,
+   "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 775.559,
+   "t": 775.879,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 774.279,
    "som": "click_3",
    "vol": 0.18
   }

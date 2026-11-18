@@ -115,7 +115,7 @@ export const EnvelopeA: React.FC<P> = ({ c, dur }) => {
   const sai = p(2);                       // disco sai do envelope
   const fora = p(3);                      // envelope sai de cena, disco ao centro
   const discoY = interpolate(sai, [0, 1], [150, -40]) + interpolate(fora, [0, 1], [0, 120]);
-  const discoS = interpolate(fora, [0, 1], [1, 1.55]);
+  const discoS = interpolate(fora, [0, 1], [1, 1.95]); // disco ao centro um pouco maior (~460 px, dentro da faixa central)
   const giro = n >= 3 ? desde(3) * 3 + (n >= 6 ? Array.from({ length: n - 5 }, (_, i) => interpolate(desde(6 + i), [0, 14], [0, 180], { ...cl, easing: ease })).reduce((a, b) => a + b, 0) : 0) : 0;
   return (
     <AbsoluteFill style={{ backgroundColor: C.branco, alignItems: "center", justifyContent: "center" }}>
@@ -166,29 +166,41 @@ export const MedidorA: React.FC<P> = ({ c }) => {
   );
 };
 
-// contador: entra em 55%, sobe a 80% na 1ª ação e ao valor na 2ª; 3 o rótulo é carimbado; 4+ a régua embaixo enche um segmento por ação
+// contador: o número verdadeiro é datilografado da esquerda para a direita (as casas que faltam aparecem como traço, nunca um número intermediário falso):
+// entra com ~55% dos caracteres, 80% na 1ª ação, completo na 2ª; 3 o rótulo é carimbado; 4+ a régua embaixo enche um segmento por ação.
+// O bloco (qualificador, número, unidade, legenda, fonte) ocupa ~55–65% da altura do quadro, dentro da faixa central de 608 px.
+const UNI: Record<string, string> = { MI: "MILHÕES", "M²": "M²", MIN: "MINUTOS" };
 export const ContadorA: React.FC<P> = ({ c }) => {
   const { n, p, f } = useAcoes();
   const k = useEntra(4, 12);
-  const digitos = c.valor.replace(/\D/g, "");
-  const num = parseInt(digitos || "0", 10);
+  const m = c.valor.match(/^(≈\s*)?([\d.,–]+)\s*(.*)$/);
+  let pre = (c.prefixo ?? "") + (m?.[1] ? "CERCA DE " : ""), fig = m ? m[2] : c.valor, uni = m ? (UNI[m[3]] ?? m[3]) : "";
+  if (/^\d{1,3}(\.000){2}$/.test(fig)) { fig = fig.split(".")[0]; uni = "MILHÕES"; }   // 100.000.000 -> 100 MILHÕES (mesmo valor)
   const ent = interpolate(f, [0, 20], [0, 0.55], { ...cl, easing: ease });
   const prog = n === 0 ? ent : n === 1 ? 0.55 + 0.25 * p(1) : 0.8 + 0.2 * p(2);
-  let mostra = c.valor;
-  if (/^[\d.]+$/.test(c.valor) && num > 0) mostra = Math.round(num * prog).toLocaleString("pt-BR");
-  else mostra = c.valor.slice(0, Math.max(1, Math.ceil(c.valor.length * Math.min(1, prog / 0.8))));
-  const pulo = n >= 1 && n <= 2 ? interpolate(p(n), [0, 0.4, 1], [1, 1.06, 1]) : 1;
-  const size = c.valor.length > 9 ? 92 : c.valor.length > 6 ? 118 : 170;
+  const nVis = Math.max(1, Math.ceil(fig.length * Math.min(1, prog)));
+  const pulo = n >= 1 && n <= 2 ? interpolate(p(n), [0, 0.4, 1], [1, 1.05, 1]) : 1;
+  const linhas = (pre ? 1 : 0) + (uni ? 1 : 0) + (c.sufixo.length > 22 ? 1 : 0);
+  // largura estimada em "em" (algarismo da Jost 800 ≈ 0,9 em): o número nunca passa da faixa central de 608 px
+  const em = fig.split("").reduce((a, ch) => a + (/[.,]/.test(ch) ? 0.35 : ch === "–" ? 1.05 : 0.9), 0);
+  const size = Math.min(linhas >= 2 ? 220 : 280, Math.floor(560 / em)); // bloco inteiro em ~50–70% da altura
+  const uniSize = Math.min(90, Math.max(72, 300 - size)); // número estreito → unidade maior, para o bloco não encolher
   return (
     <Faixa>
-      <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: size, color: C.tinta, letterSpacing: -2, lineHeight: 1, fontVariantNumeric: "tabular-nums", transform: `scale(${pulo})` }}>{mostra}</div>
-      <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 34, color: C.tinta, marginTop: 16, opacity: k }}>{c.sufixo}</div>
-      <div style={{ marginTop: 20, minHeight: 40, display: "flex", justifyContent: "center" }}>
-        {n >= 3 ? <Bate texto={c.rotulo} prog={p(3)} rot={-2} size={17} /> : <Mono size={18} style={{ opacity: k }}>{c.rotulo}</Mono>}
+      {pre && <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 46, color: C.secundario, letterSpacing: 2, opacity: k, marginBottom: 4 }}>{pre.trim()}</div>}
+      <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: size, color: C.tinta, letterSpacing: -4, lineHeight: 0.95, fontVariantNumeric: "tabular-nums",
+        transform: `scale(${pulo})`, whiteSpace: "nowrap" }}>
+        {fig.split("").map((ch, i) => i < nVis ? <span key={i}>{ch}</span>
+          : <span key={i} style={{ color: "transparent", borderBottom: `${Math.round(size * 0.06)}px solid ${C.apoio}`, margin: "0 0.04em" }}>{ch}</span>)}
       </div>
-      {c.nota && <Mono size={16} cor={C.tinta} style={{ marginTop: 12, opacity: k }}>{c.nota}</Mono>}
-      <div style={{ display: "flex", gap: 6, marginTop: 26 }}>
-        {Array.from({ length: 10 }, (_, i) => <div key={i} style={{ width: 30, height: 8, background: i < n - 3 ? C.tinta : C.apoio, transform: `scaleY(${i === n - 4 ? 1 + (1 - p(n)) : 1})` }} />)}
+      {uni && <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: uniSize, color: C.tinta, lineHeight: 1, marginTop: 4, opacity: k, letterSpacing: 1 }}>{uni}</div>}
+      <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 40, color: C.tinta, marginTop: 14, opacity: k, lineHeight: 1.1, maxWidth: 560 }}>{c.sufixo}</div>
+      <div style={{ marginTop: 20, minHeight: 46, display: "flex", justifyContent: "center" }}>
+        {n >= 3 ? <Bate texto={c.rotulo} prog={p(3)} rot={-2} size={22} /> : <Mono size={22} style={{ opacity: k }}>{c.rotulo}</Mono>}
+      </div>
+      {c.nota && <Mono size={18} cor={C.tinta} style={{ marginTop: 12, opacity: k }}>{c.nota}</Mono>}
+      <div style={{ display: "flex", gap: 6, marginTop: 22 }}>
+        {Array.from({ length: 10 }, (_, i) => <div key={i} style={{ width: 40, height: 10, background: i < n - 3 ? C.tinta : C.apoio, transform: `scaleY(${i === n - 4 ? 1 + (1 - p(n)) : 1})` }} />)}
       </div>
     </Faixa>
   );
