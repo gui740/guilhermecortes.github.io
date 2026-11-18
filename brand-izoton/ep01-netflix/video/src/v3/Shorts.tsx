@@ -197,7 +197,7 @@ export const Short01V3: React.FC = () => {
   const S = useS();
   const f = useCurrentFrame();
   const palavras = [...pal("01", A1), ...pal("02", A2, 2.5), ...pal("49", A49)];
-  const T = { y2017: t("01", A1, "2017"), sono: t("01", A1, "sono"), hbo: t("02", A2, "hbo"), lista: t("02", A2, "lista"),
+  const T = { y2017: t("01", A1, "2017"), ceo: t("01", A1, "ceo"), sono: t("01", A1, "sono"), hbo: t("02", A2, "hbo"), lista: t("02", A2, "lista"),
     y2019: t("49", A49, "2019"), fort: t("49", A49, "fortnite"), perd: t("49", A49, "perdemos"), hbo2: t("49", A49, "hbo"),
     yt: t("49", A49, "youtube"), aud: t("49", A49, "audi"), fim: A49 + P["49"].dur };
   const ARQ_LEG: [number, string][] = [[0, "Você pode ver TV linear,"], [1.6, "jogar videogame,"], [2.9, "ver YouTube…"], [4.2, "ou ver Netflix."]];
@@ -205,8 +205,19 @@ export const Short01V3: React.FC = () => {
     <FalaCtx.Provider value={[[0, 12.6], [A49, T.fim]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       <Papel />
-      {/* 1 · frase literal sobre a tela CRT, no quadro 0 */}
-      <Plano de={0} ate={ARQ}>
+      {/* 1 · frase literal sobre a tela CRT, no quadro 0; em "CEO", troca para o recorte e a ficha da entrevista */}
+      <Plano de={T.ceo} ate={ARQ}>
+        <Recorte src="media/v3img/rec_hastings_2015.png" x={80} y={240} w={440} inicio={0} rot={-3} seed="s1h" de="esq" />
+        <Card x={480} y={330} w={520} h={420} inicio={S(0.6)} rotY={-10} rotZ={2} seed="s1f">
+          <Img src={staticFile("media/stills/web_sleep.png")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%" }} />
+        </Card>
+        <Carimbo3 texto="ENTREVISTA Q1 · 17 ABR. 2017" inicio={S(1.0)} x={420} y={780} rot={-4} size={30} />
+        <div style={{ position: "absolute", left: 60, right: 60, top: 860, textAlign: "center" }}>
+          <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 92, lineHeight: 1.0, color: C.tinta }}>COMPETE COM<br />O SEU</div>
+          <div style={{ marginTop: 18, display: "inline-block", transform: `scale(${1 + 0.12 * Math.max(0, 1 - Math.abs(f - S(T.sono)) / 6)})` }}><Destaque texto="SONO." inicio={2} size={150} /></div>
+        </div>
+      </Plano>
+      <Plano de={0} ate={T.ceo}>
         <div style={{ position: "absolute", left: 90, right: 90, top: 260, height: 520, borderRadius: 18, overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.25)" }}>
           <TelaCRT clip="media/arquivo/HOOK.mp4" inicioClip={0} dur={S(ARQ)} desliga={false} />
         </div>
@@ -243,7 +254,13 @@ export const Short01V3: React.FC = () => {
         <div style={{ position: "absolute", left: 0, right: 0, top: 640, display: "flex", justifyContent: "center" }}><Destaque texto="E A CONCORRÊNCIA?" inicio={0} size={88} /></div>
       </Plano>
       {/* 5 · a carta aos acionistas */}
-      <Plano de={T.y2019} ate={T.fort}><Evid img="carta_q4_18-05.png" inicio={0} rotulo="CARTA AOS ACIONISTAS · JAN. 2019" pos="50% 30%" /></Plano>
+      <Plano de={T.y2019} ate={(T.y2019 + T.fort) / 2}><Evid img="carta_q4_18-05.png" inicio={0} rotulo="CARTA AOS ACIONISTAS · JAN. 2019" pos="50% 30%" /></Plano>
+      <Plano de={(T.y2019 + T.fort) / 2} ate={T.fort}>
+        <Card x={60} y={420} w={960} h={520} inicio={0} rotY={6} rotZ={1} seed="s1z">
+          <Img src={staticFile("media/stills/carta_q4_18-05.png")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 62%", transform: "scale(1.5)" }} />
+        </Card>
+        <Carimbo3 texto="“COMPETITION”" inicio={S(0.3)} x={140} y={360} rot={-5} size={40} />
+      </Plano>
       {/* 6 · Fortnite */}
       <Plano de={T.fort} ate={T.hbo2 - 0.3}>
         <div style={{ position: "absolute", left: 0, right: 0, top: 520, display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>

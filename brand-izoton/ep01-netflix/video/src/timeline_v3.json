@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "duracao": 787.462,
+ "duracao": 781.629,
  "trechos": [
   {
    "tipo": "v3",
@@ -54,10 +54,51 @@
    "fala": "03: Para entender essa ambição, é preciso voltar a um disco. A Netflix foi fundada em 1997 e nasceu mandando DVDs pelo correio.",
    "passos": [
     0.5,
-    2.28,
+    1.94,
+    2.98,
     3.9,
+    4.94,
     6.18,
-    7.86
+    7.32,
+    8.52
+   ],
+   "etiquetas": [
+    {
+     "t": 2.98,
+     "texto": "DISCO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.9,
+     "texto": "NETFLIX",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.94,
+     "texto": "1997",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 6.18,
+     "texto": "NASCEU",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.32,
+     "texto": "MANDANDO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.52,
+     "texto": "CORREIO",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -65,14 +106,18 @@
      "src": "media/v3img/rec_envelope.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 10.01
     },
     {
-     "t": 2.28,
+     "t": 1.94,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 10.01
     }
    ],
    "start": 17.6
@@ -163,12 +208,73 @@
    "fala": "05: Uma pesquisadora de TV vai além. Para ela, a Netflix é uma continuação da história da televisão e das tecnologias que deram controle ao espectador, do controle remoto até a maratona de episódios.",
    "passos": [
     0.32,
+    1.32,
     2.26,
-    3.72,
+    3.5,
+    4.54,
     5.86,
-    7.66,
+    7.24,
+    8.28,
     9.42,
-    11.24
+    10.66,
+    11.58,
+    12.78
+   ],
+   "etiquetas": [
+    {
+     "t": 0.32,
+     "texto": "PESQUISADORA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 3.5,
+     "texto": "NETFLIX",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 4.54,
+     "texto": "HISTÓRIA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 5.86,
+     "texto": "TELEVISÃO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 7.24,
+     "texto": "DERAM",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 8.28,
+     "texto": "ESPECTADOR",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 9.42,
+     "texto": "CONTROLE",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 10.66,
+     "texto": "MARATONA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 11.58,
+     "texto": "EPISÓDIOS",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
    "start": 49.78
@@ -210,24 +316,37 @@
    ],
    "fala": "06: A primeira tentativa de ter conteúdo próprio foi em 2005, ainda na era do DVD.",
    "passos": [
-    0.5,
-    2.14,
-    3.78
+    0.28,
+    1.34,
+    2.36,
+    3.56
+   ],
+   "etiquetas": [
+    {
+     "t": 2.36,
+     "texto": "2005",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 0.5,
+     "t": 0.28,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 4.95
     },
     {
-     "t": 2.14,
+     "t": 1.34,
      "src": "media/v3img/rec_envelope.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 4.95
     }
    ],
    "start": 65.55
@@ -277,22 +396,28 @@
    "fala": "07: A segunda tentativa veio em 2011.",
    "passos": [
     0.4,
-    2.4
+    1.38,
+    2.58
    ],
+   "etiquetas": [],
    "laterais": [
     {
      "t": 0.4,
      "src": "media/v3img/card_sarandos.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 3.03
     },
     {
-     "t": 2.4,
+     "t": 1.38,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 3.03
     }
    ],
    "start": 85.29
@@ -343,7 +468,16 @@
    "fala": "08: Chris Anderson pergunta como eles tinham certeza de que valia a pena.",
    "passos": [
     0.36,
-    2.36
+    1.52,
+    2.56
+   ],
+   "etiquetas": [
+    {
+     "t": 2.56,
+     "texto": "VALIA",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -351,14 +485,18 @@
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 3.8
     },
     {
-     "t": 2.36,
+     "t": 1.52,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 3.8
     }
    ],
    "start": 105.55
@@ -393,7 +531,7 @@
    "tipo": "narr",
    "id": "n02d",
    "bloco": "09",
-   "dur": 4.664,
+   "dur": 4.611,
    "audio": null,
    "regravar": "09",
    "cenas": [
@@ -414,11 +552,14 @@
      ]
     }
    ],
-   "fala": "09: [REGRAVAR] silêncio de 4.7 s estimado",
+   "fala": "09: [REGRAVAR] silêncio de 4.6 s estimado",
    "passos": [
     0.5,
-    2.5
+    1.5,
+    2.5,
+    3.5
    ],
+   "etiquetas": [],
    "laterais": [],
    "start": 118.06
   },
@@ -448,13 +589,13 @@
     }
    ],
    "fala": "[arquivo] é sobre fortalecer a marca, para que mais gente queira assinar. E House of Cards fez isso (…) já Mad Men, que a gente exibia, ótima série da AMC, não era associada à Netflix, mesmo assistida na Netflix.",
-   "start": 122.724
+   "start": 122.671
   },
   {
    "tipo": "narr",
    "id": "n02e",
    "bloco": "10",
-   "dur": 11.15,
+   "dur": 10.95,
    "audio": "narr_gui/b10.wav",
    "cenas": [
     {
@@ -477,14 +618,49 @@
      "ate": 0.92
     }
    ],
-   "fala": "10: Quem é o dono da história é lembrado, quem só exibe, não. E a aposta cresceu. Em 2018, Hastings disse que quando a Netflix ia investir em conteúdo naquele ano.",
+   "fala": "10: Quem é o dono da história é lembrado, quem só exibe, não. E a aposta cresceu. Em 2018, Hastings disse quanto a Netflix ia investir em conteúdo naquele ano.",
    "passos": [
     0.46,
-    2.36,
-    4.54,
-    6.54,
-    8.22,
-    10.06
+    1.5,
+    2.48,
+    3.64,
+    4.38,
+    5.92,
+    7.46,
+    8.72,
+    9.86
+   ],
+   "etiquetas": [
+    {
+     "t": 4.38,
+     "texto": "APOSTA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.92,
+     "texto": "2018",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.46,
+     "texto": "HASTINGS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.72,
+     "texto": "INVESTIR",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.86,
+     "texto": "CONTEÚDO",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -492,31 +668,30 @@
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 4.1
     },
     {
-     "t": 2.36,
+     "t": 1.5,
      "src": "media/stills/poster_madmen.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 4.1
     },
     {
-     "t": 4.54,
+     "t": 2.48,
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 600
-    },
-    {
-     "t": 6.54,
-     "src": "media/stills/poster_houseofcards.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 640
+     "y": 600,
+     "grande": false,
+     "fim": 4.1
     }
    ],
-   "start": 141.334
+   "start": 141.281
   },
   {
    "tipo": "arq",
@@ -542,7 +717,7 @@
     }
    ],
    "fala": "[arquivo] Uns 8 bilhões de dólares no mundo todo. E não é suficiente.",
-   "start": 152.484
+   "start": 152.231
   },
   {
    "tipo": "painel",
@@ -565,7 +740,7 @@
     }
    ],
    "fala": "11: TER A SÉRIE NÃO BASTAVA. ELA PRECISAVA QUE VOCÊ NÃO PARASSE.",
-   "start": 158.594
+   "start": 158.341
   },
   {
    "tipo": "narr",
@@ -583,27 +758,54 @@
    ],
    "fala": "12: House of Cards trouxe uma segunda aposta. Soltar todos os episódios de uma vez? De onde veio essa ideia?",
    "passos": [
-    0.52,
+    0.3,
+    1.24,
     2.32,
-    4.4
+    3.26,
+    4.4,
+    5.6
+   ],
+   "etiquetas": [
+    {
+     "t": 2.32,
+     "texto": "SOLTAR",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.26,
+     "texto": "EPISÓDIOS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.6,
+     "texto": "IDEIA",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 0.52,
+     "t": 0.3,
      "src": "media/v3img/card_boxset.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 6.07
     },
     {
-     "t": 2.32,
+     "t": 1.24,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 6.07
     }
    ],
-   "start": 163.094
+   "start": 162.841
   },
   {
    "tipo": "v3",
@@ -619,7 +821,7 @@
    ],
    "fala": "[arquivo TED] box sets de DVD, próximo episódio… a TV linear não consegue fazer.",
    "arq": "T04",
-   "start": 169.164
+   "start": 168.911
   },
   {
    "tipo": "narr",
@@ -648,12 +850,72 @@
    "fala": "13: O que a TV linear não consegue fazer virou produto. Pesquisadores chamam isso de fluxo isolado, recursos como a reprodução automática do próximo episódio e o botão Pular Abertura que mantém você dentro da maratona.",
    "passos": [
     0.58,
-    2.32,
+    1.54,
+    2.72,
     4.02,
+    5.1,
     6.02,
-    7.64,
-    9.54,
-    11.32
+    7.12,
+    8.1,
+    9.06,
+    10.52,
+    11.58
+   ],
+   "etiquetas": [
+    {
+     "t": 2.72,
+     "texto": "PRODUTO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.02,
+     "texto": "CHAMAM",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.1,
+     "texto": "ISOLADO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 6.02,
+     "texto": "RECURSOS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.12,
+     "texto": "AUTOMÁTICA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.1,
+     "texto": "EPISÓDIO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.06,
+     "texto": "BOTÃO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.52,
+     "texto": "MANTÉM",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 11.58,
+     "texto": "MARATONA",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -661,17 +923,21 @@
      "src": "media/stills/web_skipintro.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 12.85
     },
     {
-     "t": 2.32,
+     "t": 1.54,
      "src": "media/v3img/rec_controle.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 12.85
     }
    ],
-   "start": 194.524
+   "start": 194.271
   },
   {
    "tipo": "narr",
@@ -700,12 +966,52 @@
    "fala": "14: Outro estudo descreve o mesmo. Alguns segundos depois do fim de um episódio, o próximo já começa. Ninguém precisa apertar nada.",
    "passos": [
     0.4,
-    2.18,
+    1.92,
+    2.92,
     4.16,
-    5.88
+    5.64,
+    6.64
+   ],
+   "etiquetas": [
+    {
+     "t": 0.4,
+     "texto": "ESTUDO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.92,
+     "texto": "ALGUNS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.92,
+     "texto": "EPISÓDIO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.16,
+     "texto": "PRÓXIMO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.64,
+     "texto": "NINGUÉM",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.64,
+     "texto": "APERTAR",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 207.374
+   "start": 207.121
   },
   {
    "tipo": "narr",
@@ -726,8 +1032,23 @@
    "fala": "15: Esse botão é apertado 136 milhões de vezes num dia típico.",
    "passos": [
     0.34,
-    2.34,
-    3.98
+    1.76,
+    3.24,
+    4.24
+   ],
+   "etiquetas": [
+    {
+     "t": 3.24,
+     "texto": "MILHÕES",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.24,
+     "texto": "VEZES",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -735,17 +1056,21 @@
      "src": "media/v3img/rec_controle.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 5.55
     },
     {
-     "t": 2.34,
+     "t": 1.76,
      "src": "media/stills/web_skipintro_tv.png",
      "tipo": "print",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 5.55
     }
    ],
-   "start": 214.804
+   "start": 214.551
   },
   {
    "tipo": "narr",
@@ -784,48 +1109,126 @@
    ],
    "fala": "16: Ele nasceu de uma pesquisa. Em cerca de 15 % das vezes, as pessoas adiantavam a série na mão nos primeiros 5 minutos. A Netflix testou em 250 séries, nos Estados Unidos, no Reino Unido e no Canadá. Primeiro na web e levou pra TV em agosto de 2017.",
    "passos": [
-    0.54,
-    2.32,
+    0.3,
+    1.72,
+    2.9,
     3.98,
-    5.58,
-    7.68,
-    9.62,
+    4.96,
+    5.88,
+    6.78,
+    7.78,
+    8.76,
+    9.96,
     10.98,
-    12.68,
+    11.92,
+    13.44,
     14.5,
-    16.5
+    15.68
+   ],
+   "etiquetas": [
+    {
+     "t": 3.98,
+     "texto": "PESSOAS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.96,
+     "texto": "SÉRIE",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.88,
+     "texto": "PRIMEIROS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 6.78,
+     "texto": "MINUTOS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.78,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.76,
+     "texto": "250",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.96,
+     "texto": "SÉRIES",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.98,
+     "texto": "UNIDOS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 11.92,
+     "texto": "UNIDO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 13.44,
+     "texto": "PRIMEIRO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 14.5,
+     "texto": "LEVOU",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 15.68,
+     "texto": "2017",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
-     "t": 0.54,
+     "t": 0.3,
      "src": "media/stills/poster_strangerthings.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 10.37
     },
     {
-     "t": 2.32,
+     "t": 1.72,
      "src": "media/stills/poster_wednesday.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 10.37
     },
     {
-     "t": 3.98,
+     "t": 2.9,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 600
-    },
-    {
-     "t": 5.58,
-     "src": "media/stills/poster_strangerthings.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 640
+     "y": 600,
+     "grande": false,
+     "fim": 10.37
     }
    ],
-   "start": 220.354
+   "start": 220.101
   },
   {
    "tipo": "narr",
@@ -855,30 +1258,91 @@
    ],
    "fala": "17: Em 2022, a empresa calculou 195 anos economizados, somando o tempo de todo mundo. Um engenheiro resumiu, talvez nem um botão escrito Cupcake grátis tivesse mais cliques.",
    "passos": [
-    1.3,
+    0.5,
+    1.64,
     3.34,
+    4.92,
     5.88,
-    7.54,
-    9.2,
-    11.18
+    7.1,
+    8.36,
+    9.46,
+    10.78,
+    11.98
+   ],
+   "etiquetas": [
+    {
+     "t": 4.92,
+     "texto": "SOMANDO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.88,
+     "texto": "MUNDO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.1,
+     "texto": "ENGENHEIRO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.36,
+     "texto": "TALVEZ",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.46,
+     "texto": "CUPCAKE",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.78,
+     "texto": "TIVESSE",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 11.98,
+     "texto": "CLIQUES",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 1.3,
-     "src": "media/stills/web_skipintro.png",
-     "tipo": "print",
+     "t": 0.5,
+     "src": "media/v3img/rec_relogio.png",
+     "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 5.49
+    },
+    {
+     "t": 1.64,
+     "src": "media/v3img/rec_cupcake.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210,
+     "grande": false,
+     "fim": 5.49
     },
     {
      "t": 3.34,
-     "src": "media/v3img/rec_controle.png",
-     "tipo": "rec",
-     "lado": "dir",
-     "y": 210
+     "src": "media/stills/web_skipintro.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 600,
+     "grande": false,
+     "fim": 5.49
     }
    ],
-   "start": 237.564
+   "start": 237.311
   },
   {
    "tipo": "narr",
@@ -908,26 +1372,46 @@
    ],
    "fala": "18: Um botão que faz uma coisa só, esse é o produto, não deixar você esperar.",
    "passos": [
-    0.48,
-    2.38
+    0.26,
+    1.24,
+    2.38,
+    3.38
+   ],
+   "etiquetas": [
+    {
+     "t": 2.38,
+     "texto": "PRODUTO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.38,
+     "texto": "DEIXAR",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 0.48,
-     "src": "media/v3img/rec_controle.png",
+     "t": 0.26,
+     "src": "media/v3img/rec_relogio.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 2.05
     },
     {
-     "t": 2.38,
-     "src": "media/v3img/rec_hastings_2014.png",
+     "t": 1.24,
+     "src": "media/v3img/rec_controle.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 2.05
     }
    ],
-   "start": 250.044
+   "start": 249.791
   },
   {
    "tipo": "painel",
@@ -950,7 +1434,7 @@
     }
    ],
    "fala": "19: E PARA ESCOLHER O QUE VOCÊ VÊ, A NETFLIX APRENDEU A NÃO CONFIAR NO QUE VOCÊ DIZ.",
-   "start": 254.684
+   "start": 254.431
   },
   {
    "tipo": "narr",
@@ -967,14 +1451,68 @@
      "rotulo": "PRÊMIO DO ALGORITMO · C. 2007"
     }
    ],
-   "fala": "20: Por volta de 2007, segundo Hastings, a Netflix abriu o seu sistema de recomendação para o mundo, e ofereceu 1 milhão de dólares a quem conseguisse melhorá -lo em 10%, e nunca repetiu.",
+   "fala": "20: Por volta de 2007, segundo Hastings, a Netflix abriu o seu sistema de recomendação para o mundo, e ofereceu 1 milhão de dólares a quem conseguisse melhorá-lo em 10%, e nunca repetiu.",
    "passos": [
     0.42,
-    2.38,
+    1.52,
+    2.44,
+    3.34,
     4.44,
-    6.24,
-    8.1,
-    9.72
+    5.42,
+    6.38,
+    7.56,
+    9.18,
+    10.38
+   ],
+   "etiquetas": [
+    {
+     "t": 2.44,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.34,
+     "texto": "SISTEMA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.44,
+     "texto": "MUNDO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.42,
+     "texto": "OFERECEU",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 6.38,
+     "texto": "DÓLARES",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 7.56,
+     "texto": "MELHORÁ-LO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.18,
+     "texto": "NUNCA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.38,
+     "texto": "REPETIU",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -982,17 +1520,21 @@
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 10.97
     },
     {
-     "t": 2.38,
+     "t": 1.52,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 10.97
     }
    ],
-   "start": 260.954
+   "start": 260.701
   },
   {
    "tipo": "arq",
@@ -1018,7 +1560,7 @@
     }
    ],
    "fala": "[arquivo] foi superempolgante na época. Isso foi por volta de 2007. Mas a gente não fez de novo.",
-   "start": 271.924
+   "start": 271.671
   },
   {
    "tipo": "arq",
@@ -1047,7 +1589,7 @@
     }
    ],
    "fala": "[arquivo] Todo mundo dava cinco estrelas para A Lista de Schindler e três para Zerando a Vida, do Adam Sandler. Mas, quando se olhava o que assistiam, era quase sempre Adam Sandler.",
-   "start": 276.774
+   "start": 276.521
   },
   {
    "tipo": "narr",
@@ -1065,11 +1607,27 @@
    ],
    "fala": "21: O que você diz é a sua versão ideal. O que você assiste é você.",
    "passos": [
-    0.44,
-    2.58
+    0.28,
+    1.2,
+    2.58,
+    3.76
+   ],
+   "etiquetas": [
+    {
+     "t": 1.2,
+     "texto": "VERSÃO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 2.58,
+     "texto": "ASSISTE",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 289.504
+   "start": 289.251
   },
   {
    "tipo": "arq",
@@ -1096,7 +1654,7 @@
     }
    ],
    "fala": "[arquivo] agrada muito mais olhar para as escolhas reais das pessoas. As preferências reveladas pelo quanto elas curtem prazeres simples.",
-   "start": 294.344
+   "start": 294.091
   },
   {
    "tipo": "narr",
@@ -1128,10 +1686,44 @@
    "fala": "22: Mas Hastings faz uma ressalva no mesmo palco, não dá para depender só do algoritmo. A Netflix se vê como um serviço com curadoria, e o algoritmo é uma ferramenta.",
    "passos": [
     0.46,
-    2.1,
+    1.66,
+    2.82,
     4.98,
-    6.8,
-    8.4
+    5.94,
+    7.64,
+    8.62
+   ],
+   "etiquetas": [
+    {
+     "t": 2.82,
+     "texto": "DEPENDER",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.98,
+     "texto": "NETFLIX",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.94,
+     "texto": "SERVIÇO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 7.64,
+     "texto": "ALGORITMO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 8.62,
+     "texto": "FERRAMENTA",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1139,17 +1731,21 @@
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 4.07
     },
     {
-     "t": 2.1,
-     "src": "media/stills/web_jenner.png",
-     "tipo": "print",
+     "t": 1.66,
+     "src": "media/v3img/card_sofa.jpg",
+     "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 4.07
     }
    ],
-   "start": 304.154
+   "start": 303.901
   },
   {
    "tipo": "painel",
@@ -1172,7 +1768,7 @@
     }
    ],
    "fala": "23: UMA EMPRESA COM REGRAS QUE QUASE NENHUMA OUTRA ACEITARIA.",
-   "start": 313.984
+   "start": 313.731
   },
   {
    "tipo": "narr",
@@ -1191,8 +1787,23 @@
    "fala": "24: Antes da Netflix, Hastings fundou outra empresa e aprendeu com ela o que não fazer.",
    "passos": [
     0.32,
-    2.0,
+    1.44,
+    2.68,
     3.78
+   ],
+   "etiquetas": [
+    {
+     "t": 2.68,
+     "texto": "APRENDEU",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.78,
+     "texto": "FAZER",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1200,17 +1811,21 @@
      "src": "media/v3img/rec_hastings_2014.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 5.05
     },
     {
-     "t": 2.0,
+     "t": 1.44,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 5.05
     }
    ],
-   "start": 320.392
+   "start": 320.139
   },
   {
    "tipo": "arq",
@@ -1237,7 +1852,7 @@
     }
    ],
    "fala": "[arquivo] toda vez que alguém errava, a gente criava um processo para aquilo não se repetir (…) E, no fim, só os bobos queriam trabalhar lá.",
-   "start": 325.442
+   "start": 325.189
   },
   {
    "tipo": "narr",
@@ -1256,7 +1871,17 @@
    "fala": "25: Na Netflix, ele quis o contrário, o mínimo de processo sem virar caos.",
    "passos": [
     1.08,
-    2.7
+    2.38,
+    3.38,
+    4.58
+   ],
+   "etiquetas": [
+    {
+     "t": 3.38,
+     "texto": "PROCESSO",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1264,17 +1889,21 @@
      "src": "media/stills/web_keeper.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 5.08
     },
     {
-     "t": 2.7,
+     "t": 2.38,
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 5.08
     }
    ],
-   "start": 340.972
+   "start": 340.719
   },
   {
    "tipo": "arq",
@@ -1301,7 +1930,7 @@
     }
    ],
    "fala": "[arquivo] Somos tipo a anti-Apple. Sabe como eles compartimentam? A gente faz o contrário: todo mundo recebe todas as informações.",
-   "start": 346.052
+   "start": 345.799
   },
   {
    "tipo": "arq",
@@ -1327,7 +1956,7 @@
     }
    ],
    "fala": "[arquivo] queremos que as pessoas digam a verdade. E dizemos: discordar em silêncio é desleal.",
-   "start": 352.982
+   "start": 352.729
   },
   {
    "tipo": "narr",
@@ -1346,27 +1975,53 @@
    ],
    "fala": "26: Em 2001, o dinheiro acabou. Hastings contou o que veio depois, numa aula em Stanford em 2015.",
    "passos": [
+    0.26,
     1.26,
-    3.06,
-    4.82
+    2.46,
+    4.16,
+    5.16
+   ],
+   "etiquetas": [
+    {
+     "t": 2.46,
+     "texto": "HASTINGS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.16,
+     "texto": "STANFORD",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.16,
+     "texto": "2015",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 1.26,
+     "t": 0.26,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 6.6
     },
     {
-     "t": 3.06,
+     "t": 1.26,
      "src": "media/v3img/rec_hastings_2014.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 6.6
     }
    ],
-   "start": 358.852
+   "start": 358.599
   },
   {
    "tipo": "arq",
@@ -1394,7 +2049,7 @@
     }
    ],
    "fala": "[arquivo] depois de demitir um terço, de 120 para 80 pessoas, a gente esperava travar (…) seriam precisos 80 só para manter as luzes acesas. Mas, na verdade, fizemos mais com só 80 pessoas.",
-   "start": 365.452
+   "start": 365.199
   },
   {
    "tipo": "narr",
@@ -1412,8 +2067,30 @@
    "fala": "27: Daí veio a densidade de talento, e uma pergunta que todo gestor tem que responder.",
    "passos": [
     0.64,
+    1.6,
     2.7,
-    4.52
+    3.68,
+    4.84
+   ],
+   "etiquetas": [
+    {
+     "t": 2.7,
+     "texto": "PERGUNTA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.68,
+     "texto": "GESTOR",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.84,
+     "texto": "RESPONDER",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1421,17 +2098,21 @@
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 6.06
     },
     {
-     "t": 2.7,
+     "t": 1.6,
      "src": "media/stills/web_keeper.png",
      "tipo": "print",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 6.06
     }
    ],
-   "start": 382.622
+   "start": 382.369
   },
   {
    "tipo": "arq",
@@ -1460,7 +2141,7 @@
     }
    ],
    "fala": "[arquivo] os gestores têm de, todo ano, dar um testemunho sobre cada pessoa: se ela tentasse pedir demissão, eles tentariam fazê-la mudar de ideia? (…) às vezes você percebe que tem gente no time que, se pedisse para sair, você pensaria: até que seria bom.",
-   "start": 388.682
+   "start": 388.429
   },
   {
    "tipo": "narr",
@@ -1497,20 +2178,86 @@
      "texto": "“THAT’S A KEEPER, REED!”"
     }
    ],
-   "fala": "28: No memorando oficial de cultura, isso tem nome, Keeper Test. Se a resposta for não, a empresa considera mais justo se separar rápido. A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria. Quando Hastings era criança, o pai dele dizia, ao ver um peixe bom, esse é um Keeper. Esse fica.",
+   "fala": "28: No memorando oficial de cultura, isso tem nome, keeper test. Se a resposta for não, a empresa considera mais justo se separar rápido. A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria. Quando Hastings era criança, o pai dele dizia, ao ver um peixe bom, esse é um Keeper. Esse fica.",
    "passos": [
     0.32,
-    1.98,
+    1.6,
+    2.68,
     4.3,
-    5.96,
+    5.26,
+    6.24,
     7.58,
-    9.3,
+    8.52,
+    9.84,
     11.18,
     12.88,
     14.56,
-    16.24,
-    17.86,
+    16.16,
+    17.36,
+    18.86,
     19.96
+   ],
+   "etiquetas": [
+    {
+     "t": 4.3,
+     "texto": "RESPOSTA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 5.26,
+     "texto": "CONSIDERA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 6.24,
+     "texto": "JUSTO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.58,
+     "texto": "RÁPIDO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.52,
+     "texto": "PRÓPRIA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.84,
+     "texto": "ADMITE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 11.18,
+     "texto": "TESTE",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 14.56,
+     "texto": "HASTINGS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 17.36,
+     "texto": "PEIXE",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 18.86,
+     "texto": "KEEPER",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1518,17 +2265,30 @@
      "src": "media/stills/web_keeper.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 3.99
     },
     {
-     "t": 1.98,
+     "t": 1.6,
      "src": "media/v3img/rec_hastings_2014.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 3.99
+    },
+    {
+     "t": 2.68,
+     "src": "media/v3img/rec_peixe.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 600,
+     "grande": false,
+     "fim": 3.99
     }
    ],
-   "start": 413.172
+   "start": 412.919
   },
   {
    "tipo": "painel",
@@ -1548,7 +2308,7 @@
     }
    ],
    "fala": "(sem fala)",
-   "start": 434.292
+   "start": 434.039
   },
   {
    "tipo": "narr",
@@ -1566,12 +2326,47 @@
    "fala": "29: Num vídeo inteiro em preto e branco, só uma coisa tem cor. Não é efeito, é regra.",
    "passos": [
     0.48,
+    1.58,
     2.54,
-    4.22,
-    6.22
+    3.52,
+    4.6,
+    5.58,
+    6.78
+   ],
+   "etiquetas": [
+    {
+     "t": 0.48,
+     "texto": "VÍDEO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.58,
+     "texto": "BRANCO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.54,
+     "texto": "COISA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.6,
+     "texto": "EFEITO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.58,
+     "texto": "REGRA",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 436.892
+   "start": 436.639
   },
   {
    "tipo": "narr",
@@ -1602,16 +2397,69 @@
      "foco": null
     }
    ],
-   "fala": "30: No guia de Marco Oficial, a Netflix diz que, nos mercados onde é muito conhecida, lidera com o N. Existe poder em ser dono de uma letra do alfabeto.",
+   "fala": "30: No guia de marca oficial, a Netflix diz que, nos mercados onde é muito conhecida, lidera com o N. Existe poder em ser dono de uma letra do alfabeto.",
    "passos": [
     0.42,
-    2.2,
+    1.36,
+    2.76,
+    3.68,
     5.12,
-    6.84,
-    8.84
+    6.24,
+    7.24,
+    8.44
+   ],
+   "etiquetas": [
+    {
+     "t": 0.42,
+     "texto": "MARCA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.36,
+     "texto": "NETFLIX",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.76,
+     "texto": "MERCADOS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 3.68,
+     "texto": "CONHECIDA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.12,
+     "texto": "LIDERA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.24,
+     "texto": "PODER",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 7.24,
+     "texto": "LETRA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 8.44,
+     "texto": "ALFABETO",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 444.122
+   "start": 443.869
   },
   {
    "tipo": "narr",
@@ -1625,22 +2473,69 @@
      "t": 0
     }
    ],
-   "fala": "31: Mas, sem o vermelho, o N poderia não ser lido como Netflix, por isso ele aparece sempre na cura assinatura, o vermelho Netflix, com o vermelho escuro de apoio.",
+   "fala": "31: Mas, sem o vermelho, o N poderia não ser lido como Netflix, por isso ele aparece sempre na cor assinatura, o vermelho Netflix, com o vermelho escuro de apoio.",
    "passos": [
     0.82,
-    2.6,
-    4.24,
+    1.9,
+    2.92,
+    4.12,
+    5.04,
     6.2,
-    8.08
+    7.6,
+    8.7
+   ],
+   "etiquetas": [
+    {
+     "t": 0.82,
+     "texto": "VERMELHO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.9,
+     "texto": "PODERIA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.92,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.12,
+     "texto": "APARECE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.04,
+     "texto": "ASSINATURA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.2,
+     "texto": "VERMELHO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.7,
+     "texto": "APOIO",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 453.472
+   "start": 453.219
   },
   {
    "tipo": "narr",
    "id": "n06d",
    "bloco": "32",
-   "dur": 20.8,
+   "dur": 15.22,
    "audio": "narr_gui/b32.wav",
    "cenas": [
     {
@@ -1658,22 +2553,91 @@
      ]
     }
    ],
-   "fala": "32: O guia lista é o que é proibido. Esticar, girar, achatar numa cor só, pôr efeitos, colocar sobre fundo poluído ou sobre vermelho. E duas regras curiosas, o ele não pode ir no chão, onde alguém pise, nem em comida que possa ser mordida.",
+   "fala": "32: O guia lista o que é proibido, esticar, girar, achatar numa cor só, pôr efeitos, colocar sobre fundo poluído ou sobre vermelho. E duas regras curiosas, o ele não pode ir no chão, onde alguém pise, nem em comida que possa ser mordida.",
    "passos": [
-    0.52,
-    2.52,
-    4.52,
-    6.16,
-    8.08,
-    9.78,
-    12.12,
-    13.76,
-    15.42,
-    17.12,
-    18.78
+    0.3,
+    1.26,
+    2.5,
+    3.42,
+    4.8,
+    5.74,
+    6.88,
+    8.18,
+    9.86,
+    10.98,
+    12.66,
+    13.72
+   ],
+   "etiquetas": [
+    {
+     "t": 0.3,
+     "texto": "LISTA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.26,
+     "texto": "PROIBIDO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.5,
+     "texto": "GIRAR",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 3.42,
+     "texto": "ACHATAR",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 4.8,
+     "texto": "COLOCAR",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 5.74,
+     "texto": "POLUÍDO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 6.88,
+     "texto": "VERMELHO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 8.18,
+     "texto": "REGRAS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.98,
+     "texto": "ALGUÉM",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 12.66,
+     "texto": "COMIDA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 13.72,
+     "texto": "POSSA",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 463.182
+   "start": 462.929
   },
   {
    "tipo": "narr",
@@ -1720,17 +2684,103 @@
    "fala": "33: A identidade é fixa. A voz? Não. Um estudo comparou as redes da Netflix nos Estados Unidos e na Espanha, durante três meses. No Twitter, 60 % dos posts espanhóis tinham intenção de humor, contra 36 ,7 % dos americanos. A conta americana informa mais, a espanhola brinca mais e chama mais para a ação.",
    "passos": [
     0.36,
-    2.42,
+    1.7,
+    3.06,
     4.04,
-    5.78,
-    7.78,
+    4.94,
+    5.94,
+    7.0,
     9.1,
+    10.26,
     11.28,
     12.88,
-    14.78,
-    16.44,
-    18.54,
-    20.4
+    14.4,
+    15.6,
+    16.64,
+    17.94,
+    19.2,
+    20.4,
+    21.6
+   ],
+   "etiquetas": [
+    {
+     "t": 3.06,
+     "texto": "ESTUDO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.04,
+     "texto": "REDES",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.94,
+     "texto": "ESTADOS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.94,
+     "texto": "ESPANHA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.0,
+     "texto": "MESES",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 9.1,
+     "texto": "60",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.26,
+     "texto": "ESPANHÓIS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 11.28,
+     "texto": "TINHAM",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 12.88,
+     "texto": "36",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 14.4,
+     "texto": "AMERICANOS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 16.64,
+     "texto": "AMERICANA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 19.2,
+     "texto": "BRINCA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 20.4,
+     "texto": "CHAMA",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
@@ -1738,10 +2788,12 @@
      "src": "media/stills/pazperez_p12-12.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 8.37
     }
    ],
-   "start": 483.982
+   "start": 478.149
   },
   {
    "tipo": "painel",
@@ -1761,7 +2813,7 @@
     }
    ],
    "fala": "(sem fala)",
-   "start": 506.132
+   "start": 500.299
   },
   {
    "tipo": "narr",
@@ -1796,12 +2848,52 @@
    "fala": "34: Dezembro de 2015, quinto debate republicano, ao vivo na CNN. Horas antes, a conta oficial de House of Cards avisa. O presidente Underwood fará um anúncio especial durante o debate.",
    "passos": [
     0.64,
-    2.4,
-    4.1,
+    1.9,
+    3.5,
+    5.04,
     5.98,
-    7.64,
+    7.1,
+    8.42,
     9.68,
-    11.34
+    11.02
+   ],
+   "etiquetas": [
+    {
+     "t": 5.04,
+     "texto": "HORAS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.98,
+     "texto": "CONTA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 7.1,
+     "texto": "CARDS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 8.42,
+     "texto": "PRESIDENTE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 9.68,
+     "texto": "ANÚNCIO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 11.02,
+     "texto": "ESPECIAL",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
@@ -1809,17 +2901,21 @@
      "src": "media/stills/web_drum.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 5.41
     },
     {
-     "t": 2.4,
+     "t": 1.9,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 5.41
     }
    ],
-   "start": 508.732
+   "start": 502.899
   },
   {
    "tipo": "arq",
@@ -1846,7 +2942,7 @@
     }
    ],
    "fala": "[arquivo] É um novo dia na América. Hoje, mais pessoas vão trabalhar, voltar para suas famílias e dormir mais tranquilas do que nunca. (…) Esse homem é Frank Underwood.",
-   "start": 521.062
+   "start": 515.229
   },
   {
    "tipo": "narr",
@@ -1870,31 +2966,102 @@
    ],
    "fala": "35: No intervalo, entra um comercial de campanha. O candidato é Frank Underwood, o presidente da série, com o hashtag propria, um site de campanha falso e a data de estreia da quarta temporada, 4 de março.",
    "passos": [
+    0.28,
     1.3,
-    3.0,
+    2.22,
+    3.14,
+    4.36,
     5.48,
-    7.36,
+    6.76,
+    8.0,
     9.42,
+    10.48,
     11.74,
-    13.74
+    12.94
+   ],
+   "etiquetas": [
+    {
+     "t": 2.22,
+     "texto": "CAMPANHA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.14,
+     "texto": "CANDIDATO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.36,
+     "texto": "UNDERWOOD",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.48,
+     "texto": "PRESIDENTE",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 6.76,
+     "texto": "HASHTAG",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 8.0,
+     "texto": "CAMPANHA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 9.42,
+     "texto": "FALSO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.48,
+     "texto": "QUARTA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 11.74,
+     "texto": "4",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 12.94,
+     "texto": "MARÇO",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 1.3,
+     "t": 0.28,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 14.27
     },
     {
-     "t": 3.0,
+     "t": 1.3,
      "src": "media/stills/web_drum.png",
      "tipo": "print",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 14.27
     }
    ],
-   "start": 540.962
+   "start": 535.129
   },
   {
    "tipo": "arq",
@@ -1919,7 +3086,7 @@
     }
    ],
    "fala": "[arquivo] Eu sou Frank Underwood, e aprovo esta mensagem.",
-   "start": 555.232
+   "start": 549.399
   },
   {
    "tipo": "narr",
@@ -1937,7 +3104,22 @@
    "fala": "36: A série não interrompeu a conversa política. Entrou nela.",
    "passos": [
     0.4,
-    2.48
+    1.68,
+    2.9
+   ],
+   "etiquetas": [
+    {
+     "t": 1.68,
+     "texto": "POLÍTICA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 2.9,
+     "texto": "ENTROU",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -1945,10 +3127,12 @@
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 3.97
     }
    ],
-   "start": 558.682
+   "start": 552.849
   },
   {
    "tipo": "narr",
@@ -1988,27 +3172,94 @@
      "foco": null
     }
    ],
-   "fala": "37: No Brasil, o caminho foi o das parcerias. Segundo o Meio Mensagem Sena, de 2024, foi a produção brasileira da Netflix com mais parcerias comerciais. Heineken, Guarana Antártica, Claro, McDonald's e outras.",
+   "fala": "37: No Brasil, o caminho foi o das parcerias. Segundo o Meio & Mensagem, Senna, de 2024, foi a produção brasileira da Netflix com mais parcerias comerciais. Heineken, Guaraná Antarctica, Claro, McDonald's e outras.",
    "passos": [
-    0.98,
+    0.28,
+    1.28,
     2.76,
+    3.72,
     5.44,
     6.44,
-    8.06,
+    7.52,
+    8.72,
     10.0,
     11.64,
-    13.3
+    13.06
+   ],
+   "etiquetas": [
+    {
+     "t": 1.28,
+     "texto": "CAMINHO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 2.76,
+     "texto": "MEIO &",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 3.72,
+     "texto": "SENNA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.44,
+     "texto": "PRODUÇÃO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 6.44,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.52,
+     "texto": "PARCERIAS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.72,
+     "texto": "HEINEKEN",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 10.0,
+     "texto": "GUARANÁ",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 11.64,
+     "texto": "CLARO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 13.06,
+     "texto": "OUTRAS",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
-     "t": 0.98,
+     "t": 0.28,
      "src": "media/stills/web_mm_senna.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 6.05
     }
    ],
-   "start": 562.652
+   "start": 556.819
   },
   {
    "tipo": "painel",
@@ -2028,7 +3279,7 @@
     }
    ],
    "fala": "(sem fala)",
-   "start": 576.972
+   "start": 571.139
   },
   {
    "tipo": "narr",
@@ -2058,14 +3309,87 @@
    "fala": "38: Em 2021, uma série coreana mudou a escala. Na carta aos acionistas, a Netflix chamou Round 6 de nosso maior programa de TV de todos os tempos. 142 milhões de domicílios nas 4 primeiras semanas, número 1 em 94 países.",
    "passos": [
     0.34,
-    2.14,
-    3.82,
+    1.34,
+    2.46,
+    3.4,
+    4.72,
     6.22,
-    7.98,
+    7.36,
+    8.38,
     9.6,
-    11.34,
-    13.4,
-    15.4
+    10.52,
+    11.6,
+    12.8,
+    13.8,
+    15.0
+   ],
+   "etiquetas": [
+    {
+     "t": 0.34,
+     "texto": "2021",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.34,
+     "texto": "SÉRIE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.46,
+     "texto": "ESCALA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 3.4,
+     "texto": "CARTA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 4.72,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.6,
+     "texto": "142",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 10.52,
+     "texto": "DOMICÍLIOS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 11.6,
+     "texto": "4",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 12.8,
+     "texto": "SEMANAS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 13.8,
+     "texto": "1",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 15.0,
+     "texto": "PAÍSES",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -2073,31 +3397,30 @@
      "src": "media/v3img/card_squid_cosplay.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 15.88
     },
     {
-     "t": 7.98,
+     "t": 7.36,
      "src": "media/stills/poster_squidgame.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 15.88
     },
     {
-     "t": 9.6,
+     "t": 8.38,
      "src": "media/stills/carta_q3_21-03.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 600
-    },
-    {
-     "t": 11.34,
-     "src": "media/v3img/card_squid_cosplay.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 640
+     "y": 600,
+     "grande": false,
+     "fim": 15.88
     }
    ],
-   "start": 579.572
+   "start": 573.739
   },
   {
    "tipo": "narr",
@@ -2133,11 +3456,65 @@
    "fala": "39: No ranking oficial de hoje, que somam as visualizações dos primeiros 91 dias, a primeira temporada de Round 6 tem 265 milhões, é a série mais vista da história da plataforma.",
    "passos": [
     0.56,
-    2.22,
+    1.68,
+    2.84,
     4.06,
     5.84,
+    7.04,
     8.54,
-    10.2
+    9.58,
+    10.48,
+    11.68
+   ],
+   "etiquetas": [
+    {
+     "t": 0.56,
+     "texto": "OFICIAL",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.68,
+     "texto": "SOMAM",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.84,
+     "texto": "PRIMEIROS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.06,
+     "texto": "91",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.54,
+     "texto": "MILHÕES",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 9.58,
+     "texto": "SÉRIE",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 10.48,
+     "texto": "HISTÓRIA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 11.68,
+     "texto": "PLATAFORMA",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -2145,17 +3522,21 @@
      "src": "media/stills/poster_squidgame.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 12.29
     },
     {
-     "t": 8.54,
+     "t": 7.04,
      "src": "media/v3img/card_house_guard.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 12.29
     }
    ],
-   "start": 595.452
+   "start": 589.619
   },
   {
    "tipo": "narr",
@@ -2194,15 +3575,88 @@
    "fala": "40: Antes dela, veio La Casa de Papel, na mesma carta, a Netflix diz que foi o primeiro título fora do inglês a provar que, com legenda e dublagem, grandes histórias podem vir de qualquer lugar e ser amadas em todo lugar.",
    "passos": [
     0.44,
-    2.36,
-    4.1,
+    1.52,
+    2.46,
+    3.42,
+    4.34,
     5.7,
-    7.68,
+    7.06,
+    8.26,
     9.5,
-    11.24
+    10.5,
+    11.46,
+    12.66
+   ],
+   "etiquetas": [
+    {
+     "t": 1.52,
+     "texto": "PAPEL",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 2.46,
+     "texto": "CARTA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 3.42,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.34,
+     "texto": "PRIMEIRO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.7,
+     "texto": "INGLÊS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.06,
+     "texto": "LEGENDA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.26,
+     "texto": "DUBLAGEM",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.5,
+     "texto": "PODEM",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.5,
+     "texto": "LUGAR",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 11.46,
+     "texto": "AMADAS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 12.66,
+     "texto": "LUGAR",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 607.742
+   "start": 601.909
   },
   {
    "tipo": "narr",
@@ -2227,12 +3681,59 @@
    "fala": "41: Em inglês, Wednesday lidera, com 252 milhões, Stranger Things 4 soma 140 milhões.",
    "passos": [
     0.52,
-    2.22,
+    1.46,
+    2.84,
     4.1,
-    5.96
+    5.0,
+    5.96,
+    6.86
+   ],
+   "etiquetas": [
+    {
+     "t": 0.52,
+     "texto": "INGLÊS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.46,
+     "texto": "WEDNESDAY",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.84,
+     "texto": "252",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.1,
+     "texto": "MILHÕES",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.0,
+     "texto": "STRANGER",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 5.96,
+     "texto": "140",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 6.86,
+     "texto": "MILHÕES",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 620.932
+   "start": 615.099
   },
   {
    "tipo": "narr",
@@ -2257,41 +3758,56 @@
    "fala": "42: Uma pesquisadora chama isso de audiência transnacional, dividida entre fronteiras e não dentro delas.",
    "passos": [
     0.32,
-    2.1,
-    3.86,
-    5.86
+    1.26,
+    2.46,
+    3.56,
+    4.54,
+    5.74
+   ],
+   "etiquetas": [
+    {
+     "t": 3.56,
+     "texto": "DIVIDIDA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.54,
+     "texto": "FRONTEIRAS",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
      "t": 0.32,
-     "src": "media/stills/poster_squidgame.jpg",
-     "tipo": "card",
+     "src": "media/v3img/card_mapa.jpg",
+     "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 6.43
     },
     {
-     "t": 2.1,
+     "t": 1.26,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210,
+     "grande": false,
+     "fim": 6.43
+    },
+    {
+     "t": 2.46,
      "src": "media/stills/poster_moneyheist.jpg",
      "tipo": "card",
-     "lado": "dir",
-     "y": 210
-    },
-    {
-     "t": 3.86,
-     "src": "media/stills/poster_wednesday.jpg",
-     "tipo": "card",
      "lado": "esq",
-     "y": 600
-    },
-    {
-     "t": 5.86,
-     "src": "media/stills/poster_squidgame.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 640
+     "y": 600,
+     "grande": false,
+     "fim": 6.43
     }
    ],
-   "start": 628.822
+   "start": 622.989
   },
   {
    "tipo": "painel",
@@ -2314,7 +3830,7 @@
     }
    ],
    "fala": "43: TODA ESSA MÁQUINA TINHA UM PREÇO. EM 2023, ELE CHEGOU NA SUA CONTA.",
-   "start": 635.252
+   "start": 629.419
   },
   {
    "tipo": "narr",
@@ -2350,10 +3866,51 @@
    "fala": "44: Em fevereiro de 2023, a Netflix disse que mais de 100 milhões de domicílios compartilhavam contas e que isso prejudicava a capacidade de investir em séries e filmes.",
    "passos": [
     0.72,
-    2.34,
+    1.94,
+    2.96,
     5.28,
+    6.26,
     7.28,
-    9.06
+    8.22,
+    9.24
+   ],
+   "etiquetas": [
+    {
+     "t": 2.96,
+     "texto": "100",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.28,
+     "texto": "CONTAS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 6.26,
+     "texto": "PREJUDICAVA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.28,
+     "texto": "CAPACIDADE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.22,
+     "texto": "INVESTIR",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.24,
+     "texto": "FILMES",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
@@ -2361,17 +3918,21 @@
      "src": "media/stills/web_sharing.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 4.37
     },
     {
-     "t": 2.34,
+     "t": 1.94,
      "src": "media/stills/carta_q4_22-06.png",
      "tipo": "print",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 4.37
     }
    ],
-   "start": 641.522
+   "start": 635.689
   },
   {
    "tipo": "narr",
@@ -2400,11 +3961,32 @@
    "fala": "45: A carta aos acionistas já previa cancelamentos em cada mercado.",
    "passos": [
     0.34,
-    2.08,
-    4.08
+    1.48,
+    2.86,
+    4.06
+   ],
+   "etiquetas": [
+    {
+     "t": 0.34,
+     "texto": "CARTA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.48,
+     "texto": "PREVIA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.86,
+     "texto": "MERCADO",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 651.822
+   "start": 645.989
   },
   {
    "tipo": "narr",
@@ -2433,14 +4015,74 @@
    "fala": "46: Em maio, o compartilhamento pago chegou a mais de 100 países. Em julho, a carta dizia que a receita em cada região já era maior do que antes, e que as adesões superavam os cancelamentos.",
    "passos": [
     0.52,
-    2.2,
+    1.9,
+    2.88,
     3.96,
-    5.58,
-    7.24,
-    9.26
+    4.92,
+    6.0,
+    6.98,
+    8.32,
+    9.26,
+    10.46
+   ],
+   "etiquetas": [
+    {
+     "t": 1.9,
+     "texto": "CHEGOU",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 2.88,
+     "texto": "100",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 3.96,
+     "texto": "JULHO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 4.92,
+     "texto": "CARTA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 6.0,
+     "texto": "RECEITA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.98,
+     "texto": "MAIOR",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.32,
+     "texto": "ADESÕES",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.26,
+     "texto": "SUPERAVAM",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.46,
+     "texto": "CANCELAMENTOS",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 656.472
+   "start": 650.639
   },
   {
    "tipo": "narr",
@@ -2458,21 +4100,51 @@
    ],
    "fala": "47: Foi um acerto? Pelos números da própria empresa, sim. Para quem dividia a senha, a conta mudou.",
    "passos": [
-    0.52,
-    2.22,
+    0.28,
+    1.94,
+    3.02,
     3.94,
-    5.64
+    4.9,
+    6.38
+   ],
+   "etiquetas": [
+    {
+     "t": 1.94,
+     "texto": "PELOS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.02,
+     "texto": "EMPRESA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.9,
+     "texto": "DIVIDIA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 6.38,
+     "texto": "CONTA",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
-     "t": 0.52,
+     "t": 0.28,
      "src": "media/stills/carta_q2_23-01.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 7.56
     }
    ],
-   "start": 667.982
+   "start": 662.149
   },
   {
    "tipo": "narr",
@@ -2514,17 +4186,115 @@
    "fala": "48: Veio também o plano com anúncios em novembro de 2022, em 12 países, incluindo o Brasil, em média de 4 a 5 minutos de anúncio por hora. No fim de 2024, ele respondia por mais da metade das novas assinaturas nos países onde existe. E a carta daquele trimestre avisava, de tempos em tempos, a Netflix vai pedir que você pague um pouco mais.",
    "passos": [
     0.38,
-    2.16,
+    1.5,
+    2.7,
     3.84,
-    5.64,
+    4.76,
+    5.74,
     7.5,
-    9.2,
-    10.94,
-    12.66,
-    14.66,
+    9.08,
+    10.76,
+    11.8,
+    13.24,
+    14.44,
     15.46,
+    16.66,
     17.72,
-    19.58
+    19.12,
+    20.04,
+    21.02
+   ],
+   "etiquetas": [
+    {
+     "t": 2.7,
+     "texto": "2022",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.84,
+     "texto": "PAÍSES",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 4.76,
+     "texto": "BRASIL",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 5.74,
+     "texto": "MÉDIA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 7.5,
+     "texto": "ANÚNCIO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 9.08,
+     "texto": "2024",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.76,
+     "texto": "RESPONDIA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 11.8,
+     "texto": "METADE",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 13.24,
+     "texto": "PAÍSES",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 15.46,
+     "texto": "CARTA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 16.66,
+     "texto": "AVISAVA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 17.72,
+     "texto": "TEMPOS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 19.12,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 20.04,
+     "texto": "PEDIR",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 21.02,
+     "texto": "POUCO",
+     "lado": "esq",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -2532,17 +4302,21 @@
      "src": "media/stills/web_ads.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 7.05
     },
     {
-     "t": 2.16,
+     "t": 1.5,
      "src": "media/stills/carta_q4_24-05.png",
      "tipo": "print",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 7.05
     }
    ],
-   "start": 675.542
+   "start": 669.709
   },
   {
    "tipo": "narr",
@@ -2583,14 +4357,81 @@
    ],
    "fala": "49: E a concorrência? Em 2019, a carta aos acionistas foi direta, competimos com o Fortnite e perdemos pra ele, mais do que pra HBO. Quando o YouTube caiu por alguns minutos, a audiência e os cadastros da Netflix subiram.",
    "passos": [
-    0.5,
+    0.26,
+    1.72,
     2.82,
+    3.78,
     5.08,
-    6.74,
+    6.34,
+    7.4,
     8.42,
     9.74,
+    10.64,
     11.86,
-    13.7
+    13.06,
+    14.26
+   ],
+   "etiquetas": [
+    {
+     "t": 0.26,
+     "texto": "CONCORRÊNCIA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 1.72,
+     "texto": "2019",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 2.82,
+     "texto": "CARTA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 3.78,
+     "texto": "DIRETA",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.08,
+     "texto": "COMPETIMOS",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.34,
+     "texto": "PERDEMOS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 10.64,
+     "texto": "ALGUNS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 11.86,
+     "texto": "AUDIÊNCIA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 13.06,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 14.26,
+     "texto": "SUBIRAM",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -2598,10 +4439,12 @@
      "src": "media/stills/carta_q4_18-05.png",
      "tipo": "print",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 14.97
     }
    ],
-   "start": 697.402
+   "start": 691.569
   },
   {
    "tipo": "arq",
@@ -2629,7 +4472,7 @@
     }
    ],
    "fala": "[arquivo] a gente tenta não pensar em termos de vício. A gente pensa assim: o que você vai fazer com o seu tempo e quando quiser relaxar? Você pode ver TV linear, jogar videogame, ver YouTube… ou ver Netflix.",
-   "start": 712.372
+   "start": 706.539
   },
   {
    "tipo": "painel",
@@ -2649,7 +4492,7 @@
     }
    ],
    "fala": "(sem fala)",
-   "start": 725.722
+   "start": 719.889
   },
   {
    "tipo": "arq",
@@ -2674,7 +4517,7 @@
     }
    ],
    "fala": "[arquivo] Nosso trabalho número um é o fandom.",
-   "start": 728.322
+   "start": 722.489
   },
   {
    "tipo": "narr",
@@ -2705,14 +4548,80 @@
    "fala": "50: Em novembro de 2025, abriu a primeira Netflix House, perto da Filadélfia. Em dezembro, a de Dallas, mais de 9 mil metros quadrados, entrada grátis e experiências pagas de Stranger Things e Round 6. Uma terceira está prevista para Las Vegas em 2027.",
    "passos": [
     0.52,
-    2.28,
+    2.08,
+    3.0,
     5.24,
-    6.92,
-    9.2,
+    6.24,
+    7.28,
+    8.48,
+    9.98,
     11.74,
-    13.44,
-    15.28,
-    17.28
+    13.26,
+    14.46,
+    15.6,
+    16.8
+   ],
+   "etiquetas": [
+    {
+     "t": 0.52,
+     "texto": "NOVEMBRO",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 2.08,
+     "texto": "ABRIU",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 3.0,
+     "texto": "HOUSE",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.28,
+     "texto": "9",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 8.48,
+     "texto": "QUADRADOS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 9.98,
+     "texto": "EXPERIÊNCIAS",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 11.74,
+     "texto": "THINGS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 13.26,
+     "texto": "TERCEIRA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 14.46,
+     "texto": "PREVISTA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 15.6,
+     "texto": "2027",
+     "lado": "dir",
+     "estreita": true
+    }
    ],
    "laterais": [
     {
@@ -2720,17 +4629,21 @@
      "src": "media/v3img/card_house_kop.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 11.33
     },
     {
-     "t": 6.92,
+     "t": 6.24,
      "src": "media/v3img/card_house_guard.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 11.33
     }
    ],
-   "start": 730.822
+   "start": 724.989
   },
   {
    "tipo": "narr",
@@ -2766,10 +4679,44 @@
    "fala": "51: A porta de entrada é um envelope vermelho gigante, nas palavras da própria Netflix, uma referência às origens do DVD pelo correio.",
    "passos": [
     0.46,
-    2.22,
+    1.38,
+    2.98,
     3.92,
-    5.66,
-    7.66
+    4.92,
+    6.08,
+    7.28
+   ],
+   "etiquetas": [
+    {
+     "t": 2.98,
+     "texto": "PALAVRAS",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 3.92,
+     "texto": "NETFLIX",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 4.92,
+     "texto": "REFERÊNCIA",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 6.08,
+     "texto": "ORIGENS",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 7.28,
+     "texto": "CORREIO",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
@@ -2777,17 +4724,21 @@
      "src": "media/v3img/card_house_kop.jpg",
      "tipo": "card",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": false,
+     "fim": 3.57
     },
     {
-     "t": 2.22,
+     "t": 1.38,
      "src": "media/v3img/rec_envelope.png",
      "tipo": "rec",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 3.57
     }
    ],
-   "start": 749.012
+   "start": 743.179
   },
   {
    "tipo": "arq",
@@ -2813,7 +4764,7 @@
     }
    ],
    "fala": "[arquivo] Estivemos na sua sala por muito tempo. Agora estamos dizendo: venha para a nossa sala.",
-   "start": 757.522
+   "start": 751.689
   },
   {
    "tipo": "narr",
@@ -2840,13 +4791,67 @@
    "fala": "52+53: Ela começou como um envelope vermelho que chegava a sua casa. Agora, o envelope vermelho é a porta da casa dela. Depois de quase 30 anos disputando seu tempo dentro de casa, a Netflix quer também o seu tempo fora dela.",
    "passos": [
     0.72,
+    1.72,
     2.66,
     4.32,
-    5.92,
+    5.3,
+    6.22,
     7.58,
+    8.74,
     10.14,
-    11.96,
-    13.68
+    11.42,
+    12.8,
+    14.0
+   ],
+   "etiquetas": [
+    {
+     "t": 2.66,
+     "texto": "CHEGAVA",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 4.32,
+     "texto": "ENVELOPE",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 5.3,
+     "texto": "VERMELHO",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 6.22,
+     "texto": "PORTA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 8.74,
+     "texto": "30",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 10.14,
+     "texto": "TEMPO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 11.42,
+     "texto": "NETFLIX",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 12.8,
+     "texto": "TEMPO",
+     "lado": "dir",
+     "estreita": false
+    }
    ],
    "laterais": [
     {
@@ -2854,17 +4859,21 @@
      "src": "media/v3img/rec_envelope.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 150
+     "y": 150,
+     "grande": true,
+     "fim": 9.68
     },
     {
-     "t": 2.66,
+     "t": 1.72,
      "src": "media/v3img/card_house_kop.jpg",
      "tipo": "card",
      "lado": "dir",
-     "y": 210
+     "y": 210,
+     "grande": false,
+     "fim": 9.68
     }
    ],
-   "start": 763.622
+   "start": 757.789
   },
   {
    "tipo": "narr",
@@ -2880,18 +4889,71 @@
      "sub": "ATÉ O PRÓXIMO ARQUIVO."
     }
    ],
-   "fala": "54: Branch by Isoton. Até o próximo arquivo.",
+   "fala": "54: Brand by Izoton. Até o próximo arquivo.",
    "passos": [
     1.02,
-    2.68,
-    4.68,
-    6.68
+    2.34,
+    3.54,
+    4.74,
+    5.94,
+    7.14,
+    8.34
+   ],
+   "etiquetas": [
+    {
+     "t": 1.02,
+     "texto": "IZOTON",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 2.34,
+     "texto": "PRÓXIMO",
+     "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 3.54,
+     "texto": "ARQUIVO",
+     "lado": "esq",
+     "estreita": false
+    }
    ],
    "laterais": [],
-   "start": 778.712
+   "start": 772.879
   }
  ],
  "fx": [
+  {
+   "t": 15.5,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 15.67,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 15.84,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 16.01,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 16.18,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 16.35,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
   {
    "t": 17.6,
    "som": "papel_0"
@@ -2901,40 +4963,150 @@
    "som": "papel_1"
   },
   {
-   "t": 19.88,
+   "t": 19.54,
    "som": "papel_2"
+  },
+  {
+   "t": 20.58,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 21.5,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 22.54,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 23.78,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 24.92,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 26.12,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
    "t": 27.61,
-   "som": "crt_on_3"
+   "som": "crt_on_1"
   },
   {
    "t": 37.63,
-   "som": "crt_off_0"
+   "som": "crt_off_2"
   },
   {
    "t": 49.78,
-   "som": "click_1"
+   "som": "click_3"
   },
   {
    "t": 53.02,
-   "som": "papel_2"
+   "som": "papel_0"
   },
   {
    "t": 53.57,
-   "som": "carimbo_3"
+   "som": "carimbo_1"
+  },
+  {
+   "t": 50.1,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 53.28,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 54.32,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 55.64,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 57.02,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 58.06,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 59.2,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 60.44,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 61.36,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 63.45,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 63.62,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 63.79,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 63.96,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 64.13,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 64.3,
+   "som": "tecla_1",
+   "vol": 0.16
   },
   {
    "t": 65.55,
-   "som": "bip_0"
+   "som": "bip_3"
   },
   {
-   "t": 66.05,
+   "t": 65.83,
+   "som": "papel_0"
+  },
+  {
+   "t": 66.89,
    "som": "papel_1"
   },
   {
-   "t": 67.69,
-   "som": "papel_2"
+   "t": 67.91,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
    "t": 70.5,
@@ -2953,7 +5125,7 @@
    "som": "papel_2"
   },
   {
-   "t": 87.69,
+   "t": 86.67,
    "som": "papel_3"
   },
   {
@@ -2973,704 +5145,2141 @@
    "som": "papel_3"
   },
   {
-   "t": 107.91,
+   "t": 107.07,
    "som": "papel_0"
+  },
+  {
+   "t": 108.11,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
    "t": 109.35,
-   "som": "crt_on_1"
+   "som": "crt_on_2"
   },
   {
    "t": 117.81,
-   "som": "crt_off_2"
+   "som": "crt_off_3"
   },
   {
    "t": 118.06,
-   "som": "sweep_3"
+   "som": "sweep_0"
   },
   {
-   "t": 122.724,
-   "som": "crt_on_0"
+   "t": 122.671,
+   "som": "crt_on_1"
   },
   {
-   "t": 141.084,
-   "som": "crt_off_1"
+   "t": 141.031,
+   "som": "crt_off_2"
   },
   {
-   "t": 141.334,
-   "som": "bip_2"
+   "t": 141.281,
+   "som": "bip_3"
   },
   {
-   "t": 145.634,
-   "som": "geiger_3"
+   "t": 145.581,
+   "som": "geiger_0"
   },
   {
-   "t": 141.794,
-   "som": "papel_0"
-  },
-  {
-   "t": 143.694,
+   "t": 141.741,
    "som": "papel_1"
   },
   {
-   "t": 145.874,
+   "t": 142.781,
    "som": "papel_2"
   },
   {
-   "t": 147.874,
+   "t": 143.761,
    "som": "papel_3"
   },
   {
-   "t": 152.484,
-   "som": "crt_on_0"
+   "t": 145.661,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 158.344,
-   "som": "crt_off_1"
+   "t": 147.201,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 163.094,
-   "som": "bip_2"
+   "t": 148.741,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 163.614,
-   "som": "papel_3"
+   "t": 150.001,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 165.414,
+   "t": 151.141,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 152.231,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 158.091,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 162.841,
+   "som": "bip_3"
+  },
+  {
+   "t": 163.141,
    "som": "papel_0"
   },
   {
-   "t": 194.524,
+   "t": 164.081,
+   "som": "papel_1"
+  },
+  {
+   "t": 165.161,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 166.101,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 168.441,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 194.271,
    "som": "click_1"
   },
   {
-   "t": 195.104,
+   "t": 194.851,
    "som": "papel_2"
   },
   {
-   "t": 196.844,
+   "t": 195.811,
    "som": "papel_3"
   },
   {
-   "t": 207.374,
-   "som": "papel_0"
+   "t": 196.991,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 207.924,
-   "som": "carimbo_1"
+   "t": 198.291,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 215.054,
-   "som": "click_2"
+   "t": 199.371,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 215.144,
-   "som": "papel_3"
+   "t": 200.291,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 217.144,
-   "som": "papel_0"
+   "t": 201.391,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 220.454,
-   "som": "bip_1"
+   "t": 202.371,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 230.724,
-   "som": "papel_2"
+   "t": 203.331,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 231.274,
-   "som": "carimbo_3"
+   "t": 204.791,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 220.894,
-   "som": "papel_0"
+   "t": 205.851,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 222.674,
+   "t": 207.121,
    "som": "papel_1"
   },
   {
-   "t": 224.334,
+   "t": 207.671,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 207.521,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 209.041,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 210.041,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 211.281,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 212.761,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 213.761,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 214.801,
+   "som": "click_1"
+  },
+  {
+   "t": 214.891,
    "som": "papel_2"
   },
   {
-   "t": 225.934,
+   "t": 216.311,
    "som": "papel_3"
   },
   {
-   "t": 237.564,
+   "t": 217.791,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 218.791,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 220.201,
+   "som": "bip_2"
+  },
+  {
+   "t": 230.471,
+   "som": "papel_3"
+  },
+  {
+   "t": 231.021,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 220.401,
+   "som": "papel_1"
+  },
+  {
+   "t": 221.821,
+   "som": "papel_2"
+  },
+  {
+   "t": 223.001,
+   "som": "papel_3"
+  },
+  {
+   "t": 224.081,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 225.061,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 225.981,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 226.881,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 227.881,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 228.861,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 230.061,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 231.081,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 232.021,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 233.541,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 234.601,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 235.781,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 237.311,
    "som": "sweep_0"
   },
   {
-   "t": 237.714,
+   "t": 237.461,
    "som": "tecla_1"
   },
   {
-   "t": 243.054,
+   "t": 242.801,
    "som": "bip_2"
   },
   {
-   "t": 238.864,
+   "t": 237.811,
    "som": "papel_3"
   },
   {
-   "t": 240.904,
+   "t": 238.951,
    "som": "papel_0"
   },
   {
-   "t": 250.244,
+   "t": 240.651,
+   "som": "papel_1"
+  },
+  {
+   "t": 242.231,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 243.191,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 244.411,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 245.671,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 246.771,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 248.091,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 249.291,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 249.991,
    "som": "geiger_1"
   },
   {
-   "t": 252.094,
+   "t": 251.841,
    "som": "bip_2"
   },
   {
-   "t": 250.524,
+   "t": 250.051,
    "som": "papel_3"
   },
   {
-   "t": 252.424,
+   "t": 251.031,
    "som": "papel_0"
   },
   {
-   "t": 261.554,
-   "som": "carimbo_1"
+   "t": 252.171,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 261.374,
-   "som": "papel_2"
+   "t": 253.171,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 263.334,
-   "som": "papel_3"
+   "t": 261.301,
+   "som": "carimbo_3"
   },
   {
-   "t": 271.924,
+   "t": 261.121,
+   "som": "papel_0"
+  },
+  {
+   "t": 262.221,
+   "som": "papel_1"
+  },
+  {
+   "t": 263.141,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 264.041,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 265.141,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 266.121,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 267.081,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 268.261,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 269.881,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 271.081,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 271.671,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 276.271,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 276.521,
    "som": "crt_on_0"
   },
   {
-   "t": 276.524,
+   "t": 289.001,
    "som": "crt_off_1"
   },
   {
-   "t": 276.774,
-   "som": "crt_on_2"
+   "t": 289.451,
+   "som": "plin_2"
   },
   {
-   "t": 289.254,
-   "som": "crt_off_3"
+   "t": 290.451,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 289.704,
-   "som": "plin_0"
+   "t": 291.831,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 294.344,
+   "t": 294.091,
    "som": "crt_on_1"
   },
   {
-   "t": 303.904,
+   "t": 303.651,
    "som": "crt_off_2"
   },
   {
-   "t": 304.354,
+   "t": 304.101,
    "som": "geiger_3"
   },
   {
-   "t": 308.224,
+   "t": 307.971,
    "som": "bip_0"
   },
   {
-   "t": 304.614,
+   "t": 304.361,
    "som": "papel_1"
   },
   {
-   "t": 306.254,
+   "t": 305.561,
    "som": "papel_2"
   },
   {
-   "t": 320.392,
-   "som": "bip_3"
+   "t": 306.721,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 320.712,
-   "som": "papel_0"
+   "t": 308.881,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 322.392,
-   "som": "papel_1"
+   "t": 309.841,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 325.442,
-   "som": "crt_on_2"
+   "t": 311.541,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 340.722,
-   "som": "crt_off_3"
+   "t": 312.521,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 340.972,
+   "t": 320.139,
    "som": "bip_0"
   },
   {
-   "t": 342.052,
+   "t": 320.459,
    "som": "papel_1"
   },
   {
-   "t": 343.672,
+   "t": 321.579,
    "som": "papel_2"
   },
   {
-   "t": 346.052,
-   "som": "crt_on_3"
+   "t": 322.819,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 352.732,
-   "som": "crt_off_0"
+   "t": 323.919,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 352.982,
+   "t": 325.189,
    "som": "crt_on_1"
   },
   {
-   "t": 358.602,
+   "t": 340.469,
    "som": "crt_off_2"
   },
   {
-   "t": 359.252,
-   "som": "click_3"
+   "t": 340.719,
+   "som": "bip_3"
   },
   {
-   "t": 360.112,
+   "t": 341.799,
    "som": "papel_0"
   },
   {
-   "t": 361.912,
+   "t": 343.099,
    "som": "papel_1"
   },
   {
-   "t": 365.452,
-   "som": "crt_on_2"
+   "t": 344.099,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 382.372,
-   "som": "crt_off_3"
-  },
-  {
-   "t": 382.622,
-   "som": "bip_0"
-  },
-  {
-   "t": 383.262,
-   "som": "papel_1"
-  },
-  {
-   "t": 385.322,
-   "som": "papel_2"
-  },
-  {
-   "t": 388.682,
+   "t": 345.799,
    "som": "crt_on_3"
   },
   {
-   "t": 412.922,
+   "t": 352.479,
    "som": "crt_off_0"
   },
   {
-   "t": 413.472,
-   "som": "carimbo_1"
+   "t": 352.729,
+   "som": "crt_on_1"
   },
   {
-   "t": 417.162,
-   "som": "papel_2"
+   "t": 358.349,
+   "som": "crt_off_2"
   },
   {
-   "t": 417.712,
-   "som": "carimbo_3"
+   "t": 358.999,
+   "som": "click_3"
   },
   {
-   "t": 425.282,
-   "som": "plin_0"
+   "t": 358.859,
+   "som": "papel_0"
   },
   {
-   "t": 413.492,
+   "t": 359.859,
    "som": "papel_1"
   },
   {
-   "t": 415.152,
-   "som": "papel_2"
+   "t": 361.059,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 448.662,
+   "t": 362.759,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 363.759,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 365.199,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 382.119,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 382.369,
+   "som": "bip_3"
+  },
+  {
+   "t": 383.009,
+   "som": "papel_0"
+  },
+  {
+   "t": 383.969,
+   "som": "papel_1"
+  },
+  {
+   "t": 385.069,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 386.049,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 387.209,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 388.429,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 412.669,
+   "som": "crt_off_2"
+  },
+  {
+   "t": 413.219,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 416.909,
+   "som": "papel_0"
+  },
+  {
+   "t": 417.459,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 425.029,
+   "som": "plin_2"
+  },
+  {
+   "t": 413.239,
    "som": "papel_3"
   },
   {
-   "t": 449.212,
-   "som": "carimbo_0"
+   "t": 414.519,
+   "som": "papel_0"
   },
   {
-   "t": 453.472,
-   "som": "bip_1"
+   "t": 415.599,
+   "som": "papel_1"
   },
   {
-   "t": 463.182,
-   "som": "tecla_2"
+   "t": 417.219,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 484.182,
+   "t": 418.179,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 419.159,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 420.499,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 421.439,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 422.759,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 424.099,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 427.479,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 430.279,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 431.779,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 434.539,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 434.709,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 434.879,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 435.049,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 435.219,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 435.389,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 437.119,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 438.219,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 439.179,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 441.239,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 442.219,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 448.409,
+   "som": "papel_1"
+  },
+  {
+   "t": 448.959,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 444.289,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 445.229,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 446.629,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 447.549,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 448.989,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 450.109,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 451.109,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 452.309,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 453.219,
+   "som": "bip_3"
+  },
+  {
+   "t": 454.039,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 455.119,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 456.139,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 457.339,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 458.259,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 459.419,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 461.919,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 462.929,
+   "som": "tecla_3"
+  },
+  {
+   "t": 463.229,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 464.189,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 465.429,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 466.349,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 467.729,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 468.669,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 469.809,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 471.109,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 473.909,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 475.589,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 476.649,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 478.349,
    "som": "geiger_3"
   },
   {
-   "t": 492.352,
+   "t": 486.519,
    "som": "papel_0"
   },
   {
-   "t": 492.902,
+   "t": 487.069,
    "som": "carimbo_1"
   },
   {
-   "t": 484.342,
+   "t": 478.509,
    "som": "papel_2"
   },
   {
-   "t": 508.732,
-   "som": "bip_3"
+   "t": 481.209,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 509.082,
+   "t": 482.189,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 483.089,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 484.089,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 485.149,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 487.249,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 488.409,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 489.429,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 491.029,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 492.549,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 494.789,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 497.349,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 498.549,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 500.799,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 500.969,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 501.139,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 501.309,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 501.479,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 501.649,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 502.899,
    "som": "bip_0"
   },
   {
-   "t": 514.142,
-   "som": "papel_1"
-  },
-  {
-   "t": 514.692,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 509.372,
-   "som": "papel_3"
-  },
-  {
-   "t": 511.132,
-   "som": "papel_0"
-  },
-  {
-   "t": 521.062,
-   "som": "sweep_1"
-  },
-  {
-   "t": 540.712,
-   "som": "click_2"
-  },
-  {
-   "t": 540.962,
-   "som": "bip_3"
-  },
-  {
-   "t": 542.262,
-   "som": "papel_0"
-  },
-  {
-   "t": 543.962,
-   "som": "papel_1"
-  },
-  {
-   "t": 555.232,
-   "som": "sweep_2"
-  },
-  {
-   "t": 558.432,
-   "som": "click_3"
-  },
-  {
-   "t": 558.682,
-   "som": "bip_0"
-  },
-  {
-   "t": 559.082,
-   "som": "papel_1"
-  },
-  {
-   "t": 562.652,
-   "som": "tecla_2"
-  },
-  {
-   "t": 568.702,
-   "som": "papel_3"
-  },
-  {
-   "t": 569.252,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 563.632,
-   "som": "papel_1"
-  },
-  {
-   "t": 579.572,
-   "som": "sweep_2"
-  },
-  {
-   "t": 585.462,
-   "som": "sweep_3"
-  },
-  {
-   "t": 585.612,
-   "som": "tecla_0"
-  },
-  {
-   "t": 585.792,
-   "som": "papel_1"
-  },
-  {
-   "t": 587.552,
-   "som": "papel_2"
-  },
-  {
-   "t": 589.172,
-   "som": "papel_3"
-  },
-  {
-   "t": 590.912,
-   "som": "papel_0"
-  },
-  {
-   "t": 595.452,
-   "som": "papel_1"
-  },
-  {
-   "t": 596.002,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 600.842,
-   "som": "sweep_3"
-  },
-  {
-   "t": 600.992,
-   "som": "tecla_0"
-  },
-  {
-   "t": 601.292,
-   "som": "papel_1"
-  },
-  {
-   "t": 603.992,
-   "som": "papel_2"
-  },
-  {
-   "t": 607.742,
-   "som": "sweep_3"
-  },
-  {
-   "t": 613.092,
-   "som": "papel_0"
-  },
-  {
-   "t": 613.642,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 620.932,
-   "som": "sweep_2"
-  },
-  {
-   "t": 628.922,
-   "som": "bip_3"
-  },
-  {
-   "t": 629.142,
-   "som": "papel_0"
-  },
-  {
-   "t": 630.922,
-   "som": "papel_1"
-  },
-  {
-   "t": 632.682,
-   "som": "papel_2"
-  },
-  {
-   "t": 634.682,
-   "som": "papel_3"
-  },
-  {
-   "t": 641.522,
-   "som": "sweep_0"
-  },
-  {
-   "t": 641.672,
-   "som": "tecla_1"
-  },
-  {
-   "t": 645.892,
-   "som": "papel_2"
-  },
-  {
-   "t": 646.442,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 642.242,
-   "som": "papel_0"
-  },
-  {
-   "t": 643.862,
-   "som": "papel_1"
-  },
-  {
-   "t": 651.822,
-   "som": "papel_2"
-  },
-  {
-   "t": 652.372,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 656.472,
-   "som": "papel_0"
-  },
-  {
-   "t": 657.022,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 668.282,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 668.502,
-   "som": "papel_3"
-  },
-  {
-   "t": 675.542,
-   "som": "sweep_0"
-  },
-  {
-   "t": 675.692,
-   "som": "tecla_1"
-  },
-  {
-   "t": 682.592,
-   "som": "papel_2"
-  },
-  {
-   "t": 683.142,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 690.692,
-   "som": "bip_0"
-  },
-  {
-   "t": 675.922,
-   "som": "papel_1"
-  },
-  {
-   "t": 677.702,
-   "som": "papel_2"
-  },
-  {
-   "t": 697.402,
-   "som": "papel_3"
-  },
-  {
-   "t": 697.952,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 706.772,
-   "som": "geiger_1"
-  },
-  {
-   "t": 707.142,
-   "som": "papel_2"
-  },
-  {
-   "t": 712.372,
-   "som": "crt_on_3"
-  },
-  {
-   "t": 725.472,
-   "som": "crt_off_0"
-  },
-  {
-   "t": 728.322,
-   "som": "sweep_1"
-  },
-  {
-   "t": 730.572,
-   "som": "click_2"
-  },
-  {
-   "t": 735.192,
-   "som": "sweep_3"
-  },
-  {
-   "t": 735.342,
-   "som": "tecla_0"
-  },
-  {
-   "t": 742.152,
+   "t": 503.249,
    "som": "bip_1"
   },
   {
-   "t": 736.062,
+   "t": 508.309,
    "som": "papel_2"
   },
   {
-   "t": 737.742,
-   "som": "papel_3"
+   "t": 508.859,
+   "som": "carimbo_3"
   },
   {
-   "t": 749.012,
+   "t": 503.539,
    "som": "papel_0"
   },
   {
-   "t": 752.582,
+   "t": 504.799,
    "som": "papel_1"
   },
   {
-   "t": 753.132,
+   "t": 507.939,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 508.879,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 509.999,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 511.319,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 512.579,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 513.919,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 515.229,
+   "som": "sweep_0"
+  },
+  {
+   "t": 534.879,
+   "som": "click_1"
+  },
+  {
+   "t": 535.129,
+   "som": "bip_2"
+  },
+  {
+   "t": 535.409,
+   "som": "papel_3"
+  },
+  {
+   "t": 536.429,
+   "som": "papel_0"
+  },
+  {
+   "t": 537.349,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 538.269,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 539.489,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 540.609,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 541.889,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 543.129,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 544.549,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 545.609,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 546.869,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 548.069,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 549.399,
+   "som": "sweep_3"
+  },
+  {
+   "t": 552.599,
+   "som": "click_0"
+  },
+  {
+   "t": 552.849,
+   "som": "bip_1"
+  },
+  {
+   "t": 553.249,
+   "som": "papel_2"
+  },
+  {
+   "t": 554.529,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 555.749,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 556.819,
+   "som": "tecla_1"
+  },
+  {
+   "t": 562.869,
+   "som": "papel_2"
+  },
+  {
+   "t": 563.419,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 557.099,
+   "som": "papel_0"
+  },
+  {
+   "t": 558.099,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 559.579,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 560.539,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 562.259,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 563.259,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 564.339,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 565.539,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 566.819,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 568.459,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 569.879,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 571.639,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 571.809,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 571.979,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 572.149,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 572.319,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 572.489,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 573.739,
+   "som": "sweep_3"
+  },
+  {
+   "t": 579.629,
+   "som": "sweep_0"
+  },
+  {
+   "t": 579.779,
+   "som": "tecla_1"
+  },
+  {
+   "t": 579.959,
+   "som": "papel_2"
+  },
+  {
+   "t": 581.099,
+   "som": "papel_3"
+  },
+  {
+   "t": 582.119,
+   "som": "papel_0"
+  },
+  {
+   "t": 574.079,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 575.079,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 576.199,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 577.139,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 578.459,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 583.339,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 584.259,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 585.339,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 586.539,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 587.539,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 588.739,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 589.619,
+   "som": "papel_0"
+  },
+  {
+   "t": 590.169,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 595.009,
+   "som": "sweep_2"
+  },
+  {
+   "t": 595.159,
+   "som": "tecla_3"
+  },
+  {
+   "t": 595.459,
+   "som": "papel_0"
+  },
+  {
+   "t": 596.659,
+   "som": "papel_1"
+  },
+  {
+   "t": 590.179,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 591.299,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 592.459,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 593.679,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 598.159,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 599.199,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 600.099,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 601.299,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 601.909,
+   "som": "sweep_2"
+  },
+  {
+   "t": 607.259,
+   "som": "papel_3"
+  },
+  {
+   "t": 607.809,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 603.429,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 604.369,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 605.329,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 606.249,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 607.609,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 608.969,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 610.169,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 611.409,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 612.409,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 613.369,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 614.569,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 615.099,
+   "som": "sweep_0"
+  },
+  {
+   "t": 615.619,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 616.559,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 617.939,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 619.199,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 620.099,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 621.059,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 621.959,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 623.089,
+   "som": "bip_0"
+  },
+  {
+   "t": 623.309,
+   "som": "papel_1"
+  },
+  {
+   "t": 624.249,
+   "som": "papel_2"
+  },
+  {
+   "t": 625.449,
+   "som": "papel_3"
+  },
+  {
+   "t": 626.549,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 627.529,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 635.689,
+   "som": "sweep_2"
+  },
+  {
+   "t": 635.839,
+   "som": "tecla_3"
+  },
+  {
+   "t": 640.059,
+   "som": "papel_0"
+  },
+  {
+   "t": 640.609,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 636.409,
+   "som": "papel_2"
+  },
+  {
+   "t": 637.629,
+   "som": "papel_3"
+  },
+  {
+   "t": 638.649,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 640.969,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 641.949,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 642.969,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 643.909,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 644.929,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 645.989,
+   "som": "papel_2"
+  },
+  {
+   "t": 646.539,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 646.329,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 647.469,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 648.849,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 650.639,
+   "som": "papel_3"
+  },
+  {
+   "t": 651.189,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 652.539,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 653.519,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 654.599,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 655.559,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 656.639,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 657.619,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 658.959,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 659.899,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 661.099,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 662.449,
    "som": "carimbo_2"
   },
   {
-   "t": 749.472,
+   "t": 662.429,
    "som": "papel_3"
   },
   {
-   "t": 751.232,
-   "som": "papel_0"
+   "t": 664.089,
+   "som": "click_0",
+   "vol": 0.18
   },
   {
-   "t": 757.522,
-   "som": "sweep_1"
+   "t": 665.169,
+   "som": "click_1",
+   "vol": 0.18
   },
   {
-   "t": 763.372,
-   "som": "click_2"
+   "t": 667.049,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 763.622,
-   "som": "bip_3"
+   "t": 668.529,
+   "som": "click_3",
+   "vol": 0.18
   },
   {
-   "t": 764.342,
-   "som": "papel_0"
+   "t": 669.709,
+   "som": "sweep_0"
   },
   {
-   "t": 766.282,
+   "t": 669.859,
+   "som": "tecla_1"
+  },
+  {
+   "t": 676.759,
+   "som": "papel_2"
+  },
+  {
+   "t": 677.309,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 684.859,
+   "som": "bip_0"
+  },
+  {
+   "t": 670.089,
    "som": "papel_1"
   },
   {
-   "t": 781.712,
+   "t": 671.209,
+   "som": "papel_2"
+  },
+  {
+   "t": 672.409,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 673.549,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 674.469,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 675.449,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 677.209,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 678.789,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 680.469,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 681.509,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 682.949,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 685.169,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 686.369,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 687.429,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 688.829,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 689.749,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 690.729,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 691.569,
+   "som": "papel_2"
+  },
+  {
+   "t": 692.119,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 700.939,
+   "som": "geiger_0"
+  },
+  {
+   "t": 701.309,
+   "som": "papel_1"
+  },
+  {
+   "t": 691.829,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 693.289,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 694.389,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 695.349,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 696.649,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 697.909,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 702.209,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 703.429,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 704.629,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 705.829,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 706.539,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 719.639,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 720.389,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 720.559,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 720.729,
+   "som": "tecla_2",
+   "vol": 0.16
+  },
+  {
+   "t": 720.899,
+   "som": "tecla_3",
+   "vol": 0.16
+  },
+  {
+   "t": 721.069,
+   "som": "tecla_0",
+   "vol": 0.16
+  },
+  {
+   "t": 721.239,
+   "som": "tecla_1",
+   "vol": 0.16
+  },
+  {
+   "t": 722.489,
+   "som": "sweep_2"
+  },
+  {
+   "t": 724.739,
+   "som": "click_3"
+  },
+  {
+   "t": 729.359,
+   "som": "sweep_0"
+  },
+  {
+   "t": 729.509,
+   "som": "tecla_1"
+  },
+  {
+   "t": 736.319,
+   "som": "bip_2"
+  },
+  {
+   "t": 730.229,
+   "som": "papel_3"
+  },
+  {
+   "t": 731.229,
+   "som": "papel_0"
+  },
+  {
+   "t": 725.509,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 727.069,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 727.989,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 732.269,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 733.469,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 734.969,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 736.729,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 738.249,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 739.449,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 740.589,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 743.179,
+   "som": "papel_3"
+  },
+  {
+   "t": 746.749,
+   "som": "papel_0"
+  },
+  {
+   "t": 747.299,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 743.639,
+   "som": "papel_2"
+  },
+  {
+   "t": 744.559,
+   "som": "papel_3"
+  },
+  {
+   "t": 746.159,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 747.099,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 748.099,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 749.259,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 750.459,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 751.689,
+   "som": "sweep_1"
+  },
+  {
+   "t": 757.539,
+   "som": "click_2"
+  },
+  {
+   "t": 757.789,
+   "som": "bip_3"
+  },
+  {
+   "t": 758.509,
+   "som": "papel_0"
+  },
+  {
+   "t": 759.509,
+   "som": "papel_1"
+  },
+  {
+   "t": 760.449,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 762.109,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 763.089,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 764.009,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 766.529,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 767.929,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 769.209,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 770.589,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 775.879,
    "som": "crt_off_2"
+  },
+  {
+   "t": 773.899,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 775.219,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 776.419,
+   "som": "click_1",
+   "vol": 0.18
   }
  ],
  "capitulos": [
@@ -3683,37 +7292,37 @@
    "titulo": "A aposta no original"
   },
   {
-   "t": 158.594,
+   "t": 158.341,
    "titulo": "O binge como produto"
   },
   {
-   "t": 254.684,
+   "t": 254.431,
    "titulo": "O algoritmo"
   },
   {
-   "t": 313.984,
+   "t": 313.731,
    "titulo": "A cultura"
   },
   {
-   "t": 434.292,
+   "t": 434.039,
    "titulo": "A identidade"
   },
   {
-   "t": 506.132,
+   "t": 500.299,
    "titulo": "A publicidade"
   },
   {
-   "t": 576.972,
+   "t": 571.139,
    "titulo": "Os fenômenos"
   },
   {
-   "t": 635.252,
+   "t": 629.419,
    "titulo": "A conta"
   },
   {
-   "t": 725.722,
+   "t": 719.889,
    "titulo": "A casa"
   }
  ],
- "ritmo": 0.849
+ "ritmo": 0.838
 }

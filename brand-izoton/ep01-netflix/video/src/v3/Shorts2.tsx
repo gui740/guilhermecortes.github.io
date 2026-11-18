@@ -147,10 +147,10 @@ export const SHORTS_CFG: ShortCfg[] = [
     ] },
   { id: "SHORT05", topo: "IDENTIDADE · NETFLIX", trilha: 420, hook: ["EM MUITOS PAÍSES,", "A NETFLIX NEM ESCREVE", "O PRÓPRIO NOME."], loop: ["DONO DE UMA", "LETRA."],
     segs: [
+      { tipo: "narr", bloco: "30", imgs: [{ src: "", tipo: "logo" }], destaques: [["lidera", "LIDERA COM O N"], ["letra", "UMA LETRA DO ALFABETO", "ambar"]] },
       { tipo: "narr", bloco: "29", imgs: [{ src: "", tipo: "logo" }], destaques: [["cor", "SÓ UMA COISA TEM COR"], ["regra", "É REGRA.", "ambar"]] },
       { tipo: "narr", bloco: "31", imgs: [{ src: ST + "n_symbol_card.jpg" }], destaques: [["vermelho", "VERMELHO NETFLIX", "netflix"]] },
       { tipo: "narr", bloco: "32", imgs: [{ src: ST + "web_brand_n.png", tipo: "print" }], destaques: [["esticar", "ESTICAR"], ["girar", "GIRAR"], ["efeitos", "EFEITOS"], ["chão", "NO CHÃO", "ambar"], ["comida", "NA COMIDA", "ambar"]], carimbo: ["guia", "BRAND.NETFLIX.COM"] },
-      { tipo: "narr", bloco: "30", imgs: [{ src: "", tipo: "logo" }], destaques: [["lidera", "LIDERA COM O N"], ["letra", "UMA LETRA DO ALFABETO", "ambar"]] },
     ] },
   { id: "SHORT06", topo: "PUBLICIDADE · NETFLIX", trilha: 480, hook: ["EM 2015, UM CANDIDATO", "FEZ PROPAGANDA NA CNN.", "ELE NÃO EXISTE."], loop: ["ELE NÃO", "EXISTE."],
     segs: [

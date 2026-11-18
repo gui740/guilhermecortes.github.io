@@ -119,7 +119,7 @@ for b in beats_v2:
             nc = dict(c); nc["t"] = warp(ps, c.get("t", 0), dur_novo) if c.get("t", 0) > 0 else 0
             if "riscarEm" in nc: pass
             cenas.append(nc)
-        add({"tipo": "narr", "id": bid, "bloco": alvo, "dur": dur, "audio": audio, "cenas": cenas, "_pal": [w[0] for w in novo],
+        add({"tipo": "narr", "id": bid, "bloco": alvo, "dur": dur, "audio": audio, "cenas": cenas, "_pal": [w[0] for w in novo], "_paltxt": [[w[0], w[2]] for w in novo],
              "fala": f"{alvo}: " + " ".join(w for _, _, w in novo)})
     else:
         dur = round(dur_v2[bid] * RITMO + 0.35, 3)
@@ -142,16 +142,16 @@ IMG = {  # (arquivo, tipo) — tipo: rec (recorte com borda) | card (foto) | pri
  "n03c": [(V+"rec_controle.png", "rec")],
  "n03d": [(V+"rec_controle.png", "rec"), (ST+"web_skipintro_tv.png", "print")],
  "n03e": [(ST+"poster_strangerthings.jpg", "card"), (ST+"poster_wednesday.jpg", "card"), (ST+"poster_houseofcards.jpg", "card")],
- "n03f": [(ST+"web_skipintro.png", "print"), (V+"rec_controle.png", "rec")],
- "n03g": [(V+"rec_controle.png", "rec"), (V+"rec_hastings_2014.png", "rec")],
+ "n03f": [(V+"rec_relogio.png", "rec"), (V+"rec_cupcake.png", "rec"), (ST+"web_skipintro.png", "print")],
+ "n03g": [(V+"rec_relogio.png", "rec"), (V+"rec_controle.png", "rec")],
  "n04a": [(V+"rec_hastings_2015.png", "rec"), (V+"card_losgatos.jpg", "card")],
- "n04b": [(V+"rec_hastings_2014.png", "rec")],
- "n04c": [(V+"rec_hastings_2015.png", "rec"), (ST+"web_jenner.png", "print")],
+ "n04b": [(V+"card_sofa.jpg", "card"), (V+"rec_hastings_2014.png", "rec")],
+ "n04c": [(V+"rec_hastings_2015.png", "rec"), (V+"card_sofa.jpg", "card")],
  "n05a": [(V+"rec_hastings_2014.png", "rec"), (V+"card_losgatos.jpg", "card")],
  "n05b": [(ST+"web_keeper.png", "print"), (V+"rec_hastings_2015.png", "rec")],
  "n05c": [(V+"card_losgatos.jpg", "card"), (V+"rec_hastings_2014.png", "rec")],
  "n05d": [(V+"rec_hastings_2015.png", "rec"), (ST+"web_keeper.png", "print")],
- "n05e": [(ST+"web_keeper.png", "print"), (V+"rec_hastings_2014.png", "rec")],
+ "n05e": [(ST+"web_keeper.png", "print"), (V+"rec_hastings_2014.png", "rec"), (V+"rec_peixe.png", "rec")],
  "n06e": [(ST+"pazperez_p12-12.png", "print")],
  "n07a": [(ST+"web_drum.png", "print"), (ST+"poster_houseofcards.jpg", "card")],
  "n07b": [(ST+"poster_houseofcards.jpg", "card"), (ST+"web_drum.png", "print")],
@@ -160,7 +160,7 @@ IMG = {  # (arquivo, tipo) — tipo: rec (recorte com borda) | card (foto) | pri
  "n08a": [(V+"card_squid_cosplay.jpg", "card"), (ST+"poster_squidgame.jpg", "card"), (ST+"carta_q3_21-03.png", "print")],
  "n08b": [(ST+"poster_squidgame.jpg", "card"), (V+"card_house_guard.jpg", "card")],
  "n08c": [(ST+"poster_moneyheist.jpg", "card")],
- "n08e": [(ST+"poster_squidgame.jpg", "card"), (ST+"poster_moneyheist.jpg", "card"), (ST+"poster_wednesday.jpg", "card")],
+ "n08e": [(V+"card_mapa.jpg", "print"), (ST+"poster_squidgame.jpg", "card"), (ST+"poster_moneyheist.jpg", "card")],
  "n09a": [(ST+"web_sharing.png", "print"), (ST+"carta_q4_22-06.png", "print")],
  "n09d": [(ST+"carta_q2_23-01.png", "print")],
  "n09e": [(ST+"web_ads.png", "print"), (ST+"carta_q4_24-05.png", "print")],
@@ -175,27 +175,48 @@ for b in beats:
     if b["tipo"] not in ("narr",):
         continue
     pal = b.pop("_pal", None) or []
+    b_paltxt = b.get("_paltxt")
     if not pal:  # bloco não gravado: marcas a cada 2,2 s
         pal = [x * 0.5 for x in range(int(b["dur"] / 0.5))]
     princ = [c for c in b["cenas"] if c["tipo"] != "academico"]
     marcas = []
     for i, c in enumerate(princ):
         t0 = c["t"]; t1 = princ[i + 1]["t"] if i + 1 < len(princ) else b["dur"]
-        alvo = t0 + 0.6
-        while alvo < t1 - 0.4:
-            cand = [p for p in pal if alvo - 0.4 <= p <= alvo + 0.9 and t0 + 0.3 < p < t1 - 0.3]
+        alvo = t0 + 0.5
+        while alvo < t1 - 0.35:
+            cand = [p for p in pal if alvo - 0.3 <= p <= alvo + 0.6 and t0 + 0.25 < p < t1 - 0.25]
             tm = cand[0] if cand else alvo
             marcas.append((round(tm, 2), c["tipo"] in ESTREITAS))
-            alvo = tm + 2.0
+            alvo = tm + 1.2
     b["passos"] = [m for m, _ in marcas]
     imgs = IMG.get(b["id"], [])
-    lat = []
-    for k, (m, estreita) in enumerate([x for x in marcas if x[1]]):
-        if k >= len(SLOTS) or not imgs: break
-        src, tipo = imgs[k % len(imgs)]
-        if k >= len(imgs) and len(imgs) < 3: break
-        lado, y = SLOTS[k]
-        lat.append({"t": m, "src": src, "tipo": tipo, "lado": lado, "y": y})
+    lat = []; usados = 0
+    estreitas = [x for x in marcas if x[1]]
+    for k, (m, estreita) in enumerate(estreitas):
+        if usados >= min(len(SLOTS), max(len(imgs), 0)) or not imgs: break
+        src, tipo = imgs[usados % len(imgs)]
+        lado, y = SLOTS[usados]
+        cena = next((c for c in reversed(princ) if c["t"] <= m + 0.01), princ[0])
+        ic = princ.index(cena); fim_cena = princ[ic + 1]["t"] if ic + 1 < len(princ) else b["dur"]
+        lat.append({"t": m, "src": src, "tipo": tipo, "lado": lado, "y": y, "grande": cena["tipo"] == "titulo" and usados == 0, "fim": round(fim_cena, 2)})
+        usados += 1
+    # etiquetas: a palavra dita naquela marca (palavra de conteúdo), nas marcas sem imagem
+    ocup = {l["t"] for l in lat}
+    pal_txt = b.get("_paltxt") or []
+    etq = []
+    for k, (m, estreita) in enumerate(marcas):
+        if m in ocup or not pal_txt: continue
+        VAZIAS = {"naquele", "naquela", "quando", "porque", "também", "depois", "sempre", "então", "outra", "outro", "ainda", "muito", "muita", "isso",
+                  "esse", "essa", "aquele", "aquela", "mesmo", "mesma", "sobre", "entre", "cada", "todo", "toda", "todos", "todas", "dentro", "antes",
+                  "assim", "agora", "nesse", "nessa", "neste", "nesta", "deles", "delas", "dizia", "disse", "contra", "durante", "segundo", "quase", "existe"}
+        cand = [(abs(a - m), w) for a, w in pal_txt if abs(a - m) < 0.7 and w.strip(".,?!:;").lower() not in VAZIAS
+                and (len(w.strip(".,?!")) >= 5 or any(ch.isdigit() for ch in w))]
+        if not cand: continue
+        w = min(cand)[1].strip(".,?!:;").upper()
+        if etq and etq[-1]["texto"] == w: continue
+        etq.append({"t": m, "texto": w, "lado": "dir" if len(etq) % 2 else "esq", "estreita": estreita})
+    b["etiquetas"] = etq
+    b.pop("_paltxt", None)
     b["laterais"] = lat
 
 # efeitos (mesma regra da v2) e tempos absolutos
@@ -214,6 +235,11 @@ for b in beats:
                 fx.append({"t": round(t + c["t"] + off, 3), "som": f"{name}_{var % 4}"}); var += 1
     for l in b.get("laterais", []):
         fx.append({"t": round(t + l["t"], 3), "som": f"papel_{var % 4}"}); var += 1
+    for e in b.get("etiquetas", []):
+        fx.append({"t": round(t + e["t"], 3), "som": f"click_{var % 4}", "vol": 0.18}); var += 1
+    if b["tipo"] == "painel" and not b.get("audio") and not b.get("regancho"):
+        for k in range(6):
+            fx.append({"t": round(t + 0.5 + k * 0.17, 3), "som": f"tecla_{k % 4}", "vol": 0.16})
     if b["tipo"] == "arq":
         crt = CORTES[b["id"]]["modo"] == "crt"
         fx.append({"t": round(t, 3), "som": f"crt_on_{var % 4}" if crt else f"sweep_{var % 4}"}); var += 1

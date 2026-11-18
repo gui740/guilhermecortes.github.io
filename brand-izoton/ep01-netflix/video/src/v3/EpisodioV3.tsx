@@ -6,17 +6,18 @@ import timeline from "../timeline_v3.json";
 import { C, FAIXA, MONO } from "../theme";
 import { Cena } from "../cenas/Cenas";
 import { Academico } from "../cenas/bits";
-import { Card, Destaque, Grao, PaginaEditorial, Recorte } from "./kit";
-import { Painel, CAPITULOS } from "./transicoes";
+import { Camada, Card, Destaque, Grao, PaginaEditorial, Recorte, Terminal } from "./kit";
+import { Painel, CAPITULOS, Mascara } from "./transicoes";
 import { Colagem, FalaCtx, FalaT04, Sfx } from "./Amostra";
 import { ColdOpenV2 } from "./Rodada1";
 
 type Cn = { tipo: string; t: number; [k: string]: any };
-type Lat = { t: number; src: string; tipo: "rec" | "card" | "print"; lado: "esq" | "dir"; y: number };
+type Lat = { t: number; src: string; tipo: "rec" | "card" | "print"; lado: "esq" | "dir"; y: number; grande?: boolean; fim?: number };
+type Etq = { t: number; texto: string; lado: "esq" | "dir"; estreita: boolean };
 type Tr = { tipo: string; id: string; start: number; dur: number; pre?: number; cenas: Cn[]; audio?: any; regravar?: string | null;
-  laterais?: Lat[]; passos?: number[];
+  laterais?: Lat[]; passos?: number[]; etiquetas?: Etq[];
   comp?: string; de?: number; para?: number; regancho?: string[] | null; titulo?: string };
-const TL = timeline as unknown as { trechos: Tr[]; fx: { t: number; som: string }[]; duracao: number };
+const TL = timeline as unknown as { trechos: Tr[]; fx: { t: number; som: string; vol?: number }[]; duracao: number };
 
 // capítulo corrente de cada trecho (para a página editorial)
 const capDe = (() => {
@@ -35,8 +36,20 @@ const Regravar: React.FC<{ bloco: string }> = ({ bloco }) => (
 );
 
 // cenas só de tipografia/dado ficam maiores (Passo 3: elementos principais com 50–70% da altura)
-const ESCALA: Record<string, number> = { titulo: 1.2, contador: 1.2, pergunta: 1.25, citacao: 1.2, medidor: 1.25, cheque: 1.2, botao: 1.3, pessoas: 1.25,
-  anzol: 1.3, fluxo: 1.25, lista: 1.2, aovivo: 1.0, barras: 1.25, mapa: 1.1, envelope: 1.3, logoN: 1.0 };
+const ESCALA: Record<string, number> = { titulo: 1.3, contador: 1.45, pergunta: 1.35, citacao: 1.3, medidor: 1.5, cheque: 1.4, botao: 1.45, pessoas: 1.4,
+  anzol: 1.4, fluxo: 1.3, lista: 1.25, aovivo: 1.15, barras: 1.4, mapa: 1.2, envelope: 1.3, logoN: 1.0, cores: 1.15, proibicoes: 1.15, colunas: 1.1 };
+// transições de entrada entre cenas, em rodízio (nunca a mesma duas vezes seguidas)
+const TRANS = ["dir", "circulo", "baixo", "desliza"] as const;
+const Entrada: React.FC<{ tipo: typeof TRANS[number]; children: React.ReactNode }> = ({ tipo, children }) => {
+  const f = useCurrentFrame();
+  if (tipo === "desliza") {
+    const k = interpolate(f, [0, 9], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+    return <AbsoluteFill style={{ transform: `translateX(${(1 - k) * 220}px)`, opacity: k, filter: k < 1 ? `blur(${(1 - k) * 8}px)` : "none" }}>{children}</AbsoluteFill>;
+  }
+  return <Mascara inicio={0} direcao={tipo}>{children}</Mascara>;
+};
+let contTrans = 0;
+const transDe = (() => { const m: Record<string, number> = {}; for (const tr of TL.trechos) tr.cenas.forEach((c, i) => { if (c.tipo !== "academico") m[`${tr.id}:${i}`] = contTrans++ % TRANS.length; }); return m; })();
 
 /** Câmera em degraus: a cada "passo" (palavra da fala), um pequeno salto de zoom e de posição, com 5 quadros de assentamento. */
 const CameraPassos: React.FC<{ passos: number[]; base: number; children: React.ReactNode; arquivo: boolean }> = ({ passos, base, children, arquivo }) => {
@@ -54,19 +67,32 @@ const CameraPassos: React.FC<{ passos: number[]; base: number; children: React.R
 const Lateral: React.FC<{ l: Lat; i: number }> = ({ l, i }) => {
   const { fps } = useVideoConfig();
   const ini = Math.round(l.t * fps);
+  const fim = l.fim !== undefined ? Math.round(l.fim * fps) : undefined;
   const rot = (i % 2 ? 1 : -1) * (2 + (i % 3));
   // laterais: esquerda até x=560, direita a partir de x=1380 (a faixa central 656–1264 e a cena ampliada ficam livres)
   if (l.tipo === "rec") {
     const wr = l.src.includes("controle") ? 150 : l.src.includes("vhs") ? 360 : 380;
-    return <Recorte src={l.src} x={l.lado === "esq" ? 60 : 1920 - wr - 60} y={l.y} w={wr} inicio={ini} rot={rot} seed={l.src + i} de={l.lado === "esq" ? "esq" : "dir"} />;
+    return <Recorte src={l.src} x={l.lado === "esq" ? 60 : 1920 - wr - 60} y={l.y} w={l.grande ? 480 : wr} inicio={ini} fim={fim} rot={rot} seed={l.src + i} de={l.lado === "esq" ? "esq" : "dir"} />;
   }
-  const w = l.tipo === "print" ? 480 : l.src.includes("poster") ? 290 : 450;
-  const h = l.tipo === "print" ? 340 : l.src.includes("poster") ? 425 : 320;
+  const w = l.grande ? 490 : l.tipo === "print" ? 480 : l.src.includes("poster") ? 290 : 450;
+  const h = l.grande ? 700 : l.tipo === "print" ? 340 : l.src.includes("poster") ? 425 : 320;
   const x = l.lado === "esq" ? 60 : 1920 - w - 60;
   return (
-    <Card x={x} y={l.y} w={w} h={h} inicio={ini} rotY={l.lado === "esq" ? 10 : -10} rotZ={rot} seed={l.src + i}>
+    <Card x={x} y={l.y} w={w} h={h} inicio={ini} fim={fim} rotY={l.lado === "esq" ? 10 : -10} rotZ={rot} seed={l.src + i}>
       <Img src={staticFile(l.src)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: l.tipo === "print" ? "50% 0%" : "50% 30%" }} />
     </Card>
+  );
+};
+
+const Etiqueta: React.FC<{ e: Etq; fim: number }> = ({ e, fim }) => {
+  const { fps } = useVideoConfig();
+  const f = useCurrentFrame();
+  const ini = Math.round(e.t * fps);
+  if (f < ini || f >= fim) return null;
+  return (
+    <div style={{ position: "absolute", top: 950, ...(e.lado === "esq" ? { left: 70 } : { right: 70 }), transform: `rotate(${e.lado === "esq" ? -2 : 2}deg)` }}>
+      <Destaque texto={e.texto} inicio={ini} size={46} tom={/\d/.test(e.texto) ? "ambar" : "tinta"} />
+    </div>
   );
 };
 
@@ -85,13 +111,22 @@ const TrechoV2: React.FC<{ tr: Tr }> = ({ tr }) => {
         const passos = (tr.passos ?? []).filter((p) => p * fps >= from && p * fps < next).map((p) => p - c.t);
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, next - from)} layout="none">
-            <CameraPassos passos={passos} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo}>
-              <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
-            </CameraPassos>
+            {arquivo ? <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill> : (
+              <Entrada tipo={TRANS[transDe[`${tr.id}:${tr.cenas.indexOf(c)}`] ?? 0]}>
+                <CameraPassos passos={passos} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo}>
+                  <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
+                </CameraPassos>
+              </Entrada>
+            )}
           </Sequence>
         );
       })}
-      {(tr.laterais ?? []).map((l, i) => <Lateral key={i} l={l} i={i} />)}
+      <Camada vel={0.6} dur={total}>{(tr.laterais ?? []).filter((l) => l.lado === "esq").map((l, i) => <Lateral key={i} l={l} i={i} />)}</Camada>
+      <Camada vel={1.1} dur={total}>{(tr.laterais ?? []).filter((l) => l.lado === "dir").map((l, i) => <Lateral key={i} l={l} i={i + 1} />)}</Camada>
+      {(tr.etiquetas ?? []).map((e, i, a) => {
+        const prox = a.slice(i + 1).find((x) => x.lado === e.lado);
+        return <Etiqueta key={i} e={e} fim={prox ? Math.round(prox.t * fps) : total} />;
+      })}
       {overlays.map((c, i) => (
         <Sequence key={"o" + i} from={Math.round(c.t * fps)} layout="none"><Academico texto={c.texto} /></Sequence>
       ))}
@@ -113,6 +148,13 @@ const PainelV3: React.FC<{ tr: Tr }> = ({ tr }) => {
       {tr.regancho && (
         <div style={{ position: "absolute", left: FAIXA.x + 10, width: FAIXA.w - 20, top: 900, textAlign: "center" }}>
           {f < meio ? <Destaque texto={tr.regancho[0]} inicio={4} size={38} /> : <Destaque texto={tr.regancho[1]} inicio={meio} size={34} tom="ambar" />}
+        </div>
+      )}
+      {!tr.audio && !tr.regancho && (
+        <div style={{ position: "absolute", left: FAIXA.x - 120, width: FAIXA.w + 240, top: 880, display: "flex", justifyContent: "center" }}>
+          <div style={{ background: C.tinta, padding: "14px 22px" }}>
+            <Terminal texto={`CAPÍTULO ${String((tr.para ?? 0) + 1).padStart(2, "0")} · ${CAPITULOS[tr.para ?? 0]}`} inicio={Math.round(0.5 * fps)} cps={26} size={34} w={FAIXA.w + 200} />
+          </div>
         </div>
       )}
       <Grao opacidade={0.4} />
@@ -151,7 +193,7 @@ export const EpisodioV3: React.FC = () => {
         </Sequence>
       ))}
       <FalaCtx.Provider value={FALAS}>
-        {TL.fx.map((e, i) => <Sfx key={i} s={e.t} nome={e.som} />)}
+        {TL.fx.map((e, i) => <Sfx key={i} s={e.t} nome={e.som} vol={e.vol ?? 0.45} />)}
       </FalaCtx.Provider>
     </AbsoluteFill>
   );
