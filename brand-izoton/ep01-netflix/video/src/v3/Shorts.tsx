@@ -21,7 +21,13 @@ const t = (b: string, desloc: number, palavra: string, n = 0) => {
 /** janela de um plano: monta só entre `de` e `ate` (em s) e passa o quadro relativo */
 const Plano: React.FC<{ de: number; ate: number; children: React.ReactNode }> = ({ de, ate, children }) => {
   const S = useS();
-  return <Sequence from={S(de)} durationInFrames={Math.max(1, S(ate) - S(de))} layout="none"><AbsoluteFill>{children}</AbsoluteFill></Sequence>;
+  return <Sequence from={S(de)} durationInFrames={Math.max(1, S(ate) - S(de))} layout="none"><Empurra n={Math.max(1, S(ate) - S(de))}>{children}</Empurra></Sequence>;
+};
+// cada plano se aproxima devagar em degraus de 3 quadros (stop-motion), para nenhum plano ficar parado
+const Empurra: React.FC<{ n: number; children: React.ReactNode }> = ({ n, children }) => {
+  const f = Math.floor(useCurrentFrame() / 3) * 3;
+  const k = Math.min(1, f / n);
+  return <AbsoluteFill style={{ transform: `scale(${1 + 0.1 * k}) translateY(${-30 * k}px)`, transformOrigin: "50% 45%" }}>{children}</AbsoluteFill>;
 };
 const Topo: React.FC<{ texto: string }> = ({ texto }) => (
   <div style={{ position: "absolute", left: 60, top: 70, display: "flex", alignItems: "center", gap: 12, fontFamily: MONO, fontSize: 26, letterSpacing: 3, color: C.tinta }}>

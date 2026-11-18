@@ -52,7 +52,7 @@ const SegNarr: React.FC<{ s: Extract<Seg, { tipo: "narr" }> }> = ({ s }) => {
   const atual = ds.filter((d) => f >= S(d.t)).slice(-1)[0];
   return (
     <AbsoluteFill>
-      <Camera dur={S(dur)} de={1.0} ate={1.06}>
+      <Camera dur={S(dur)} de={1.0} ate={1.16} dy={-40} degrau>
         {s.imgs.length > 0 && <Sequence key={k} from={S(k * passo)} layout="none"><Imagem im={s.imgs[k]} inicio={0} i={k} /></Sequence>}
       </Camera>
       {s.carimbo && <Carimbo3 texto={s.carimbo[1]} inicio={S(quando(s.carimbo[0]))} x={150} y={1060} rot={-4} size={32} />}
@@ -102,7 +102,8 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
       {/* hook em texto, no quadro 0 (sem voz); some quando o hook gravado entra antes (hooks.tsx) */}
       {f < S(2.4) && !temHook(cfg.id) && (
         <AbsoluteFill style={{ background: C.branco }}>
-          <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
+          <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
+            transform: `scale(${1 + 0.16 * Math.floor(f / 3) * 3 / S(2.4)}) translateY(${-40 * Math.floor(f / 3) * 3 / S(2.4)}px)` }}>
             {cfg.hook.map((l, i) => <Destaque key={i} texto={l} inicio={i * 4} size={i === cfg.hook.length - 1 ? 104 : 76} tom={i === cfg.hook.length - 1 ? "tinta" : "tinta"} />)}
           </div>
         </AbsoluteFill>
@@ -110,7 +111,8 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
       {/* loop: o último quadro retoma o hook */}
       {f >= S(fim) && (
         <AbsoluteFill style={{ background: C.branco }}>
-          <div style={{ position: "absolute", left: 60, right: 60, top: 520, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
+          <div style={{ position: "absolute", left: 60, right: 60, top: 520, display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
+            transform: `scale(${1 + 0.14 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}) translateY(${-36 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}px)` }}>
             {cfg.loop.map((l, i) => <Destaque key={i} texto={l} inicio={S(fim) + i * 4} size={i === cfg.loop.length - 1 ? 110 : 76} tom={i === cfg.loop.length - 1 ? "ambar" : "tinta"} />)}
           </div>
         </AbsoluteFill>

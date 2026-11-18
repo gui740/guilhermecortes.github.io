@@ -85,9 +85,10 @@ export const Papel: React.FC = () => (
 );
 
 /** Câmera virtual: deriva lenta e contínua (3–8%) por cima de tudo. */
-export const Camera: React.FC<{ children: React.ReactNode; de?: number; ate?: number; dx?: number; dy?: number; dur: number }> =
-  ({ children, de = 1.0, ate = 1.06, dx = 0, dy = 0, dur }) => {
-    const f = useCurrentFrame();
+export const Camera: React.FC<{ children: React.ReactNode; de?: number; ate?: number; dx?: number; dy?: number; dur: number; degrau?: boolean }> =
+  ({ children, de = 1.0, ate = 1.06, dx = 0, dy = 0, dur, degrau = false }) => {
+    const f0 = useCurrentFrame();
+    const f = degrau ? Math.floor(f0 / 3) * 3 : f0; // degrau: pose a cada 3 quadros (stop-motion)
     const k = interpolate(f, [0, dur], [0, 1], clamp);
     const s = de + (ate - de) * k;
     return <AbsoluteFill style={{ transform: `translate(${dx * k}px, ${dy * k}px) scale(${s})`, transformOrigin: "50% 45%" }}>{children}</AbsoluteFill>;
@@ -179,9 +180,13 @@ export const Contador: React.FC<{ valor: number; inicio: number; dur?: number; s
     const f = useCurrentFrame();
     const k = interpolate(f - inicio, [0, dur], [0, 1], { ...clamp, easing: easeOut });
     if (f < inicio) return null;
+    // o número verdadeiro é datilografado; as casas que faltam aparecem como traço (nunca um número intermediário falso)
+    const txt = valor.toLocaleString("pt-BR") + sufixo;
+    const nVis = Math.max(1, Math.ceil(txt.length * k));
     return (
-      <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: size, color: cor, letterSpacing: -2, fontVariantNumeric: "tabular-nums", lineHeight: 1 }}>
-        {Math.round(valor * k).toLocaleString("pt-BR")}{sufixo}
+      <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: size, color: cor, letterSpacing: -2, fontVariantNumeric: "tabular-nums", lineHeight: 1, whiteSpace: "nowrap" }}>
+        {txt.split("").map((ch, i) => i < nVis ? <span key={i}>{ch}</span>
+          : <span key={i} style={{ color: "transparent", borderBottom: `${Math.round(size * 0.06)}px solid ${C.apoio}`, margin: "0 0.04em" }}>{ch}</span>)}
       </div>
     );
   };
