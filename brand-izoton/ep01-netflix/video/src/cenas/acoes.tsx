@@ -374,7 +374,7 @@ export const AnzolA: React.FC<P> = ({ c }) => {
 
 // logo: o N fica intocado (guia de marca). As ações acontecem em volta: 1 cantos de enquadramento · 2 cota de altura · 3 área de proteção tracejada
 export const LogoNA: React.FC<P> = ({ c }) => {
-  const { p } = useAcoes();
+  const { n, p } = useAcoes();
   const k = useEntra(c.silencio ? 20 : 0, 18);
   const kl = useEntra(26, 14);
   const H = 380, Wl = 214;
@@ -392,6 +392,11 @@ export const LogoNA: React.FC<P> = ({ c }) => {
             <text x={Wl + 188} y={120 + H / 2} fontFamily={MONO} fontSize="15" fill={C.secundario} letterSpacing="2">ALTURA N</text>
           </g>
           <rect x={60} y={60} width={(Wl + 120) * p(3)} height={H + 120} fill="none" stroke={C.secundario} strokeWidth="2" strokeDasharray="10 8" opacity={p(3)} />
+          {n >= 4 && <g>
+            <line x1={100} y1={H + 205} x2={100 + (Wl + 40) * Math.min(1, (n - 3) / 5)} y2={H + 205} stroke={C.tinta} strokeWidth="3" />
+            {Array.from({ length: Math.min(6, n - 3) }, (_, i) => <line key={i} x1={100 + i * (Wl + 40) / 5} y1={H + 196} x2={100 + i * (Wl + 40) / 5} y2={H + 214} stroke={C.tinta} strokeWidth="2" />)}
+            <text x={100} y={H + 236} fontFamily={MONO} fontSize="14" fill={C.secundario} letterSpacing="2">RESPIRO · {String(n - 3).padStart(2, "0")}</text>
+          </g>}
         </svg>
       </div>
       {c.legenda && <div style={{ marginTop: 90, opacity: kl }}><Kinetic texto={c.legenda} size={40} peso={700} delay={26} passo={2} /></div>}
@@ -401,7 +406,7 @@ export const LogoNA: React.FC<P> = ({ c }) => {
 
 // cores: o N limpo; 1 amostra vermelha · 2 amostra escura · 3 carimbo "OFICIAL" · 4 a cota mede a amostra
 export const CoresA: React.FC<P> = () => {
-  const { p, f } = useAcoes();
+  const { n, p, f } = useAcoes();
   const k = interpolate(f, [0, 14], [0, 1], cl);
   const sw = (cor: string, hex: string, pms: string, kk: number) => (
     <div style={{ display: "flex", alignItems: "center", gap: 20, opacity: kk, transform: `translateX(${(1 - kk) * -40}px)` }}>
@@ -416,8 +421,8 @@ export const CoresA: React.FC<P> = () => {
     <Faixa>
       <div style={{ opacity: k, marginBottom: 80 }}><NLogo altura={260} /></div>
       <div style={{ display: "flex", flexDirection: "column", gap: 26, position: "relative" }}>
-        {sw(C.netflix, "#E50914", "NETFLIX RED · PMS 1795 C", Math.max(0.0, p(1)))}
-        {sw(C.netflixEscuro, "#B20710", "SYMBOL DARK RED · PMS 7627 C", p(2))}
+        <div style={{ outline: n >= 5 && n % 2 === 1 ? `3px solid ${C.tinta}` : "none", outlineOffset: 8 }}>{sw(C.netflix, "#E50914", "NETFLIX RED · PMS 1795 C", Math.max(0.0, p(1)))}</div>
+        <div style={{ outline: n >= 5 && n % 2 === 0 ? `3px solid ${C.tinta}` : "none", outlineOffset: 8 }}>{sw(C.netflixEscuro, "#B20710", "SYMBOL DARK RED · PMS 7627 C", p(2))}</div>
         <div style={{ position: "absolute", right: -70, top: -40 }}><Bate texto="OFICIAL" prog={p(3)} rot={8} /></div>
         <div style={{ position: "absolute", left: 0, top: -22, width: 90 * p(4), height: 2, background: C.tinta }} />
       </div>
@@ -473,7 +478,7 @@ export const PostersA: React.FC<P> = ({ c }) => {
         {c.imgs.map((src: string, i: number) => {
           const k = interpolate(f - i * 10, [0, 16], [0, 1], { ...cl, easing: ease });
           const pb = c.pb?.[i];
-          const em = m > 1 && i === foco ? p(n) : m === 1 && n >= 1 ? p(1) : 0;
+          const em = m > 1 && i === foco ? p(n) : m === 1 && n >= 1 ? (n >= 3 ? (n % 2 ? p(n) : 1 - p(n) * 0.7) : p(1)) : 0;
           const recua = m > 1 && foco >= 0 && i !== foco ? 1 : 0;
           return (
             <div key={i} style={{ width: pb ? w * 0.82 : w, opacity: k * (1 - recua * 0.35), transform: `translateY(${(1 - k) * 60 - em * 26}px) scale(${1 + em * 0.07})`,
@@ -534,5 +539,47 @@ export const ColunasA: React.FC<P> = ({ c }) => {
         <div style={{ position: "absolute", top: 90, right: -40 }}><Bate texto="O QUE ASSISTEM" prog={p(3)} rot={8} size={16} /></div>
       </div>
     </Faixa>
+  );
+};
+
+// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3+ o átomo dá um salto de giro a cada ação
+export const FimA: React.FC<P> = ({ c, dur }) => {
+  const { n, p, f, fps } = useAcoes();
+  const k = useEntra(0, 18);
+  const off = interpolate(f, [dur * fps - 40, dur * fps - 20], [1, 0], cl);
+  const salto = n >= 3 ? Array.from({ length: n - 2 }, (_, i) => p(i + 3) * 60).reduce((a, b) => a + b, 0) : 0;
+  return (
+    <Faixa style={{ opacity: off }}>
+      <div style={{ opacity: k, transform: `rotate(${f * 0.5 + salto}deg)` }}><Picto nome="ATOMO" size={110} /></div>
+      <div style={{ marginTop: 26, minHeight: 90, display: "flex", alignItems: "center" }}>
+        {n >= 1 ? <Bate texto={c.marca} prog={p(1)} rot={-2} size={46} /> : <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 64, color: C.tinta, opacity: k, letterSpacing: 2 }}>{c.marca}</div>}
+      </div>
+      <Mono size={20} style={{ marginTop: 18, opacity: k * (n >= 2 ? 1 : 0.4), transform: `translateY(${(1 - p(2)) * 16}px)` }}>{c.sub}</Mono>
+    </Faixa>
+  );
+};
+
+// ao vivo: a TV acende; 1 a 1ª linha é datilografada · 2 a 2ª · 3+ o relógio "AO VIVO" avança e a tela dá um pulo de sinal a cada ação
+export const AoVivoA: React.FC<P> = ({ c }) => {
+  const { n, p, f } = useAcoes();
+  const k = useMola(0, 16);
+  const l1 = c.linha1.slice(0, Math.ceil(c.linha1.length * Math.max(0.2, p(1))));
+  const l2 = (c.linha2 ?? "").slice(0, Math.ceil((c.linha2 ?? "").length * p(2)));
+  const pulo = n >= 3 ? (1 - p(n)) * 14 : 0;
+  const seg = Math.floor(f / 30);
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.branco, alignItems: "center", justifyContent: "center" }}>
+      <div style={{ background: C.tinta, padding: "30px 30px 60px", borderRadius: 30, boxShadow: SOMBRA, transform: `scale(${k})` }}>
+        <div style={{ width: 580, height: 400, background: "#111", borderRadius: 22, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14, transform: `translateY(${pulo}px)` }}>
+            <div style={{ width: 22, height: 22, borderRadius: 11, background: C.ambar, opacity: Math.floor(f / 12) % 2 ? 1 : 0.25 }} />
+            <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 80, color: "#EEE" }}>{l1}</div>
+          </div>
+          <Mono size={18} cor="#CCC" style={{ marginTop: 18, maxWidth: 480, minHeight: 50 }}>{l2}</Mono>
+          <Mono size={16} cor="#999" style={{ position: "absolute", top: 18, right: 22 }}>{`00:${String(seg).padStart(2, "0")}`}</Mono>
+          <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(0,0,0,0.25) 0px, rgba(0,0,0,0.25) 1px, transparent 1px, transparent 3px)" }} />
+        </div>
+      </div>
+    </AbsoluteFill>
   );
 };

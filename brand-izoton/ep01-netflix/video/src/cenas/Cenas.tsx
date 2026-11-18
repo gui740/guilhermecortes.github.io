@@ -287,9 +287,9 @@ const AoVivo: React.FC<P> = ({ c }) => {
 export const Cena: React.FC<P> = (p) => {
   const map: Record<string, React.FC<P>> = {
     arquivo: Arquivo, cor: Cor, tv: TV, cor_clip: CorClip, evidencia: Evidencia, titulo: A.TituloA, pergunta: A.PerguntaA, citacao: A.CitacaoA,
-    lista: A.ListaA, abertura: Abertura, fim: Fim, respiro: Respiro, medidor: A.MedidorA, contador: A.ContadorA, botao: A.BotaoA, fluxo: A.FluxoA,
+    lista: A.ListaA, abertura: Abertura, fim: A.FimA, respiro: Respiro, medidor: A.MedidorA, contador: A.ContadorA, botao: A.BotaoA, fluxo: A.FluxoA,
     linha: Linha, envelope: A.EnvelopeA, posters: A.PostersA, mapa: A.MapaA, cheque: A.ChequeA, colunas: A.ColunasA, pessoas: A.PessoasA, anzol: A.AnzolA,
-    logoN: A.LogoNA, cores: A.CoresA, proibicoes: A.ProibicoesA, barras: A.BarrasA, aovivo: AoVivo,
+    logoN: A.LogoNA, cores: A.CoresA, proibicoes: A.ProibicoesA, barras: A.BarrasA, aovivo: A.AoVivoA,
   };
   const Comp = map[p.c.tipo];
   if (!Comp) return <Faixa><Mono>{p.c.tipo}</Mono></Faixa>;
