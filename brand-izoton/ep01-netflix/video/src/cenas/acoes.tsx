@@ -554,7 +554,7 @@ export const FimA: React.FC<P> = ({ c, dur }) => {
       <div style={{ marginTop: 26, minHeight: 90, display: "flex", alignItems: "center" }}>
         {n >= 1 ? <Bate texto={c.marca} prog={p(1)} rot={-2} size={46} /> : <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 64, color: C.tinta, opacity: k, letterSpacing: 2 }}>{c.marca}</div>}
       </div>
-      <Mono size={20} style={{ marginTop: 18, opacity: k * (n >= 2 ? 1 : 0.4), transform: `translateY(${(1 - p(2)) * 16}px)` }}>{c.sub}</Mono>
+      <Mono size={20} style={{ marginTop: 18, opacity: k * (n >= 2 ? p(2) : 0), transform: `translateY(${(1 - p(2)) * 50}px)` }}>{c.sub}</Mono>
       <div style={{ marginTop: 30, minHeight: 70, display: "flex", gap: 28, alignItems: "center" }}>
         {n >= 3 && <Bate texto="ARQUIVO 10/10" prog={p(3)} rot={3} size={30} />}
         {n >= 4 && <Bate texto={n >= 5 && n % 2 ? "ARQUIVADO" : "ENCERRADO"} prog={n >= 5 ? p(n) : p(4)} rot={-3} size={30} />}

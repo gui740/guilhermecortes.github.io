@@ -151,6 +151,7 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
   if (c.lupa !== false) {
     const fonte = ctxA && ctxA.length ? ctxA : Array.from({ length: 12 }, (_, i) => 1.6 + i * 2.1);
     for (const t of fonte) if (t >= 1.4 && t <= dur - 0.6 && (!passos.length || t - passos[passos.length - 1] >= 1.5)) passos.push(t);
+    while (passos.length && dur - 0.5 - passos[passos.length - 1] > 2.0) passos.push(passos[passos.length - 1] + 1.6); // sem pausa longa no fim
   }
   const alvos: [number, number, number][] = [[0, 0, 1], [-0.28, -0.22, 1.45], [0.26, 0.05, 1.5], [-0.12, 0.26, 1.4], [0.22, -0.2, 1.45]];
   const nPassos = passos.length;
