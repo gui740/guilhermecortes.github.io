@@ -15,7 +15,7 @@ type Cn = { tipo: string; t: number; [k: string]: any };
 type Lat = { t: number; src: string; tipo: "rec" | "card" | "print"; lado: "esq" | "dir"; y: number; grande?: boolean; fim?: number };
 type Etq = { t: number; texto: string; lado: "esq" | "dir"; estreita: boolean };
 type Tr = { tipo: string; id: string; start: number; dur: number; pre?: number; cenas: Cn[]; audio?: any; regravar?: string | null;
-  laterais?: Lat[]; passos?: number[]; etiquetas?: Etq[];
+  laterais?: Lat[]; passos?: number[]; etiquetas?: Etq[]; ritmo?: number[];
   comp?: string; de?: number; para?: number; regancho?: string[] | null; titulo?: string };
 const TL = timeline as unknown as { trechos: Tr[]; fx: { t: number; som: string; vol?: number }[]; duracao: number };
 
@@ -52,23 +52,25 @@ let contTrans = 0;
 const transDe = (() => { const m: Record<string, number> = {}; for (const tr of TL.trechos) tr.cenas.forEach((c, i) => { if (c.tipo !== "academico") m[`${tr.id}:${i}`] = contTrans++ % TRANS.length; }); return m; })();
 
 /** Câmera em degraus: a cada "passo" (palavra da fala), um pequeno salto de zoom e de posição, com 5 quadros de assentamento. */
-const CameraPassos: React.FC<{ passos: number[]; base: number; children: React.ReactNode; arquivo: boolean }> = ({ passos, base, children, arquivo }) => {
-  // pulso de câmera a cada 0,8 s (alterna aproximar/afastar, sem zoom acumulado), e os passos da fala somam um pequeno salto extra;
-  // assim nenhum quadro fica igual por mais de ~0,8 s (meta: nada parado por 1 s ou mais na medida sem grão)
+// pulso de câmera: até 1,5% de escala, com easing, no começo das palavras (ritmo da fala, nunca metrônomo);
+// desligado nas cenas de documento e foto. Não conta como conteúdo novo. `semPulso` desliga tudo (medida de controle).
+const SEM_PULSO = new Set(["evidencia", "posters", "cores", "proibicoes", "logoN"]);
+const PulsoCtx = React.createContext(false);
+const CameraPassos: React.FC<{ ritmo: number[]; base: number; children: React.ReactNode; arquivo: boolean; tipo: string }> = ({ ritmo, base, children, arquivo, tipo }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const P = Math.round(0.8 * fps);
-  const n = Math.floor(f / P), dentro = f - n * P;
-  const k = interpolate(dentro, [0, 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const alvo = (i: number) => ({ z: i % 2 ? 0.03 : 0, x: [0, 14, -10, 8][i % 4], y: [0, -8, 6, -4][i % 4] });
-  const a0 = alvo(Math.max(0, n - 1)), a1 = alvo(n);
-  let z = base + (n === 0 ? a1.z * k : a0.z + (a1.z - a0.z) * k), x = n === 0 ? a1.x * k : a0.x + (a1.x - a0.x) * k, y = n === 0 ? a1.y * k : a0.y + (a1.y - a0.y) * k;
-  passos.forEach((p) => {
-    const kk = interpolate(f - Math.round(p * fps), [0, 4, 12], [0, 1, 0.6], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-    z += 0.012 * kk;
-  });
+  const semPulso = React.useContext(PulsoCtx);
   if (arquivo) return <AbsoluteFill>{children}</AbsoluteFill>;
-  return <AbsoluteFill style={{ transform: `translate(${x}px, ${y}px) scale(${z})`, transformOrigin: "50% 48%" }}>{children}</AbsoluteFill>;
+  let z = base, x = 0;
+  if (!semPulso && !SEM_PULSO.has(tipo)) {
+    ritmo.forEach((p, i) => {
+      const k = interpolate(f - Math.round(p * fps), [0, 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: (t) => 1 - Math.pow(1 - t, 3) });
+      const alvoZ = i % 2 ? 0.015 : 0, alvoX = i % 2 ? 8 : 0;
+      const antZ = i % 2 ? 0 : 0.015, antX = i % 2 ? 0 : 8;
+      if (f >= Math.round(p * fps)) { z = base + (i === 0 ? alvoZ * k : antZ + (alvoZ - antZ) * k); x = i === 0 ? alvoX * k : antX + (alvoX - antX) * k; }
+    });
+  }
+  return <AbsoluteFill style={{ transform: `translateX(${x}px) scale(${z})`, transformOrigin: "50% 48%" }}>{children}</AbsoluteFill>;
 };
 
 const Lateral: React.FC<{ l: Lat; i: number }> = ({ l, i }) => {
@@ -97,8 +99,9 @@ const Etiqueta: React.FC<{ e: Etq; fim: number }> = ({ e, fim }) => {
   const ini = Math.round(e.t * fps);
   if (f < ini || f >= fim) return null;
   return (
-    <div style={{ position: "absolute", top: 950, ...(e.lado === "esq" ? { left: 70 } : { right: 70 }), transform: `rotate(${e.lado === "esq" ? -2 : 2}deg)` }}>
-      <Destaque texto={e.texto} inicio={ini} size={46} tom={/\d/.test(e.texto) ? "ambar" : "tinta"} />
+    <div style={{ position: "absolute", top: 930, ...(e.lado === "esq" ? { left: 60 } : { right: 60 }),
+      transform: `translateX(${interpolate(f - ini, [0, 6], [e.lado === "esq" ? -60 : 60, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px) rotate(${e.lado === "esq" ? -2 : 2}deg)` }}>
+      <Destaque texto={e.texto} inicio={ini} size={58} tom={/\d/.test(e.texto) ? "ambar" : "tinta"} />
     </div>
   );
 };
@@ -115,12 +118,12 @@ const TrechoV2: React.FC<{ tr: Tr }> = ({ tr }) => {
       {principais.map((c, i) => {
         const from = Math.round(c.t * fps);
         const next = i + 1 < principais.length ? Math.round(principais[i + 1].t * fps) : total;
-        const passos = (tr.passos ?? []).filter((p) => p * fps >= from && p * fps < next).map((p) => p - c.t);
+        const ritmo = (tr.ritmo ?? []).filter((p) => p * fps >= from && p * fps < next).map((p) => p - c.t);
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, next - from)} layout="none">
             {arquivo ? <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill> : (
               <Entrada tipo={TRANS[transDe[`${tr.id}:${tr.cenas.indexOf(c)}`] ?? 0]}>
-                <CameraPassos passos={passos} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo}>
+                <CameraPassos ritmo={ritmo} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo} tipo={c.tipo}>
                   <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
                 </CameraPassos>
               </Entrada>
@@ -185,9 +188,10 @@ const Som: React.FC<{ tr: Tr }> = ({ tr }) => {
 
 export const EPISODIO_V3_DUR = TL.duracao;
 
-export const EpisodioV3: React.FC = () => {
+export const EpisodioV3: React.FC<{ semPulso?: boolean }> = ({ semPulso = false }) => {
   const { fps } = useVideoConfig();
   return (
+    <PulsoCtx.Provider value={semPulso}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       {TL.trechos.map((tr) => (
         <Sequence key={tr.id} from={Math.round(tr.start * fps)} durationInFrames={Math.round(tr.dur * fps)}>
@@ -203,5 +207,6 @@ export const EpisodioV3: React.FC = () => {
         {TL.fx.map((e, i) => <Sfx key={i} s={e.t} nome={e.som} vol={e.vol ?? 0.45} />)}
       </FalaCtx.Provider>
     </AbsoluteFill>
+    </PulsoCtx.Provider>
   );
 };

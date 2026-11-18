@@ -28,5 +28,11 @@ Atualizado a cada etapa concluída.
    - os demais já abrem com a frase do longo que diz o mesmo fato (03: bloco 20; 04: 27; 06: 34; 07: 44; 08: 50), com o hook em texto no 1º quadro.
 7. **Duração:** 13,0 min.
 
+## Etapa 1b: ajuste do pulso de câmera (pedido do gerente)
+- **Pulso:** até 1,5% de escala, com easing, no começo das palavras da fala (ritmo dele, não metrônomo). Fica desligado em documento, foto, cores, proibições e logo.
+- **Conteúdo preso à fala a cada ~0,85 s:** 67 imagens reais e 391 etiquetas com a palavra-chave dita. O bloco 09, que não foi gravado, mostra o texto do roteiro em pedaços.
+- **Chave `semPulso`** no EpisodioV3, para a medida de controle.
+- **Medida rápida (1:00–3:00, sem pulso):** 12% parado (antes, 35%) e maior trecho de 4,0 s. Esse trecho era o bloco 09, já corrigido com o texto na tela.
+
 ## Etapa 2: montagem completa 540p
-Em andamento: render em 4 partes (`out/v3a/partes/ep540b_*`).
+Em andamento: render com pulso (`out/v3a/partes/ep540c_*`). Depois, medida de controle sem pulso.

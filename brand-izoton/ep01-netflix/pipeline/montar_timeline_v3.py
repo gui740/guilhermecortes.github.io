@@ -184,10 +184,10 @@ for b in beats:
         t0 = c["t"]; t1 = princ[i + 1]["t"] if i + 1 < len(princ) else b["dur"]
         alvo = t0 + 0.5
         while alvo < t1 - 0.35:
-            cand = [p for p in pal if alvo - 0.3 <= p <= alvo + 0.6 and t0 + 0.25 < p < t1 - 0.25]
+            cand = [p for p in pal if alvo - 0.25 <= p <= alvo + 0.4 and t0 + 0.25 < p < t1 - 0.25]
             tm = cand[0] if cand else alvo
             marcas.append((round(tm, 2), c["tipo"] in ESTREITAS))
-            alvo = tm + 1.2
+            alvo = tm + 0.85
     b["passos"] = [m for m, _ in marcas]
     imgs = IMG.get(b["id"], [])
     lat = []; usados = 0
@@ -209,13 +209,20 @@ for b in beats:
         VAZIAS = {"naquele", "naquela", "quando", "porque", "também", "depois", "sempre", "então", "outra", "outro", "ainda", "muito", "muita", "isso",
                   "esse", "essa", "aquele", "aquela", "mesmo", "mesma", "sobre", "entre", "cada", "todo", "toda", "todos", "todas", "dentro", "antes",
                   "assim", "agora", "nesse", "nessa", "neste", "nesta", "deles", "delas", "dizia", "disse", "contra", "durante", "segundo", "quase", "existe"}
-        cand = [(abs(a - m), w) for a, w in pal_txt if abs(a - m) < 0.7 and w.strip(".,?!:;").lower() not in VAZIAS
-                and (len(w.strip(".,?!")) >= 5 or any(ch.isdigit() for ch in w))]
+        cand = [(abs(a - m), w) for a, w in pal_txt if abs(a - m) < 0.45 and w.strip(".,?!:;").lower() not in VAZIAS
+                and (len(w.strip(".,?!")) >= 4 or any(ch.isdigit() for ch in w))]
         if not cand: continue
         w = min(cand)[1].strip(".,?!:;").upper()
         if etq and etq[-1]["texto"] == w: continue
         etq.append({"t": m, "texto": w, "lado": "dir" if len(etq) % 2 else "esq", "estreita": estreita})
+    if b.get("regravar") == "09":  # bloco não gravado: o texto do roteiro entra na tela, em pedaços
+        pedacos = ["O RETORNO", "NÃO ESTAVA", "EM CADA HORA", "ASSISTIDA.", "ESTAVA EM", "OUTRO LUGAR."]
+        etq = [{"t": round(0.3 + i * (b["dur"] - 0.8) / len(pedacos), 2), "texto": x, "lado": "dir" if i % 2 else "esq", "estreita": True} for i, x in enumerate(pedacos)]
     b["etiquetas"] = etq
+    rit = []
+    for p in pal:
+        if not rit or p - rit[-1] >= 0.5: rit.append(round(p, 2))
+    b["ritmo"] = rit
     b.pop("_paltxt", None)
     b["laterais"] = lat
 
