@@ -82,3 +82,19 @@ if (modo === "amostra") {
     log(`${id} ok`);
   }
 }
+
+// node render.mjs v3a [animatic] [short01] [short02] -> out/v3a/EP01_v3a_animatic_0-3min_raw.mp4, SHORT01_v3a_raw.mp4, SHORT02_v3a_raw.mp4 (540p)
+if (modo === "v3a") {
+  fs.mkdirSync("out/v3a", { recursive: true });
+  const alvos = ids.length ? ids : ["animatic", "short01", "short02"];
+  const job = { animatic: ["EpisodioV3", "EP01_v3a_animatic_0-3min_raw.mp4", [0, 180 * 30 - 1]], short01: ["SHORT01-v3a", "SHORT01_v3a_raw.mp4", null],
+    short02: ["SHORT02-v3a", "SHORT02_v3a_raw.mp4", null] };
+  for (const a of alvos) {
+    const [id, arq, fr] = job[a];
+    const c = await comp(id);
+    ultimo = -1;
+    await renderMedia({ composition: c, serveUrl, codec: "h264", crf: 20, scale: 0.5, frameRange: fr ?? undefined, outputLocation: `out/v3a/${arq}`,
+      browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 3), imageFormat: "jpeg", jpegQuality: 90, onProgress: progresso(a), timeoutInMilliseconds: 120000 });
+    log(`${a} ok`);
+  }
+}

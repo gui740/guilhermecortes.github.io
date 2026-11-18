@@ -364,12 +364,16 @@ export const TransicaoCap: React.FC<{ voz?: "gacrux" | "gui" }> = ({ voz = "gacr
 };
 
 /* ================================================================== 5 · SHORT 02 · primeiros 5 s (1080x1920) */
-const LegendaPalavra: React.FC<{ palavras: [number, number, string][]; chave: Record<string, "tinta" | "ambar"> }> = ({ palavras, chave }) => {
+export const LegendaPalavra: React.FC<{ palavras: [number, number, string][]; chave: Record<string, "tinta" | "ambar"> }> = ({ palavras, chave }) => {
   const S = useS();
   const f = useCurrentFrame();
-  // mostra as últimas 3 palavras já faladas; palavra-chave em caixa
+  // mostra as últimas 3 palavras já faladas da frase corrente; some 0,7 s depois da última palavra
+  // (assim não fica sobre a fala de arquivo nem mistura o fim de um bloco com o começo do outro)
   const ditas = palavras.filter((p) => f >= S(p[0]));
-  const vis = ditas.slice(-3);
+  const ult = ditas[ditas.length - 1];
+  let ini = ditas.length - 1;
+  while (ini > 0 && ditas[ini][0] - ditas[ini - 1][1] < 0.7) ini--;
+  const vis = ult && f < S(ult[1] + 0.7) ? ditas.slice(Math.max(ini, ditas.length - 3)) : [];
   return (
     <div style={{ position: "absolute", left: 60, right: 60, top: 1330, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px 18px" }}>
       {vis.map((p, i) => {

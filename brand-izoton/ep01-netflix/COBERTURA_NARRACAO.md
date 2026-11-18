@@ -34,9 +34,9 @@
 | 06 | gravacao-06 | 4.78–9.48 | 4.7 s | única | igual ao roteiro |
 | 07 | gravacao-06 | 9.77–12.55 | 2.8 s | única | igual ao roteiro |
 | 08 | gravacao-06 | 13.01–16.56 | 3.5 s | única | igual ao roteiro |
-| 09 | — | — | — | **FALTA GRAVAR** | texto: “O retorno não estava em cada hora assistida. Estava em outro lugar.” |
+| 09 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “O retorno não estava em cada hora assistida. Estava em outro lugar.” |
 | 10 | gravacao-06 | 17.86–28.76 | 10.9 s | única | Disse "Quem é **o** dono" e "Hastings disse **que** quanto…". O "que" a mais pode ser cortado na edição. |
-| 11 | — | — | — | **FALTA GRAVAR** | texto: “Ter a série não bastava. Ela precisava que você não parasse de assistir.” |
+| 11 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Ter a série não bastava. Ela precisava que você não parasse de assistir.” |
 | 12 | gravacao-07 | 4.11–9.93 | 5.8 s | única | "De onde **vem** essa ideia?" (roteiro: "veio"). Não muda fato. |
 | 13 | gravacao-07 | 9.56–22.16 | 12.6 s | única | "Pular **a** Abertura" (roteiro: "Pular abertura", nome do botão). Sem impacto. |
 | 14 | gravacao-07 | 22.71–29.89 | 7.2 s | única | igual ao roteiro |
@@ -81,14 +81,14 @@
 | 53 | gravacao-14 | 63.68–70.39 | 6.7 s | única | "disputando seu tempo" (sem o "o"). Sem impacto. |
 | 54 | gravacao-14 | 71.64–76.39 | 4.8 s | única | igual ao roteiro |
 | 55 | gravacao-14 | 80.46–86.40 | 5.9 s | única | "compete com seu sono" (sem o "o"). Sem impacto. É a reserva. |
-| S01 | — | — | — | **FALTA GRAVAR** | texto: “O CEO da Netflix disse que ela compete com o seu sono.” |
-| S02 | — | — | — | **FALTA GRAVAR** | texto: “Esse botão é apertado cento e trinta e seis milhões de vezes por dia.” |
-| S03 | — | — | — | **FALTA GRAVAR** | texto: “Você dá cinco estrelas para um filme e assiste outro. A Netflix percebeu.” |
-| S04 | — | — | — | **FALTA GRAVAR** | texto: “Todo chefe da Netflix precisa responder uma pergunta sobre você.” |
-| S05 | — | — | — | **FALTA GRAVAR** | texto: “Em muitos países, a Netflix nem escreve o próprio nome.” |
-| S06 | — | — | — | **FALTA GRAVAR** | texto: “Em 2015, um candidato fez propaganda no intervalo de um debate na CNN. Ele não existe.” |
-| S07 | — | — | — | **FALTA GRAVAR** | texto: “A Netflix proibiu dividir a senha. Muita gente disse que ia cancelar.” |
-| S08 | — | — | — | **FALTA GRAVAR** | texto: “A Netflix abriu uma casa onde você entra nas séries.” |
+| S01 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “O CEO da Netflix disse que ela compete com o seu sono.” |
+| S02 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Esse botão é apertado cento e trinta e seis milhões de vezes por dia.” |
+| S03 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Você dá cinco estrelas para um filme e assiste outro. A Netflix percebeu.” |
+| S04 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Todo chefe da Netflix precisa responder uma pergunta sobre você.” |
+| S05 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Em muitos países, a Netflix nem escreve o próprio nome.” |
+| S06 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “Em 2015, um candidato fez propaganda no intervalo de um debate na CNN. Ele não existe.” |
+| S07 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “A Netflix proibiu dividir a senha. Muita gente disse que ia cancelar.” |
+| S08 | — | — | — | **[REGRAVAR]** falta gravar; na edição, silêncio do tamanho estimado | texto: “A Netflix abriu uma casa onde você entra nas séries.” |
 
 ## Tratamento da voz (igual para todas as gravações)
 1. High-pass em 80 Hz.
