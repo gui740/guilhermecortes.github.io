@@ -110,7 +110,7 @@ if (modo === "partes") {
     const out = `out/v3a/partes/${pref}_${String(k).padStart(2, "0")}.mp4`;
     if (fs.existsSync(out)) { log(`${out} já existe`); continue; }
     ultimo = -1;
-    await renderMedia({ composition: c, serveUrl, inputProps: props, codec: "h264", crf: escala < 1 ? 20 : 17, scale: escala, frameRange: [i, Math.min(N, i + passo) - 1],
+    await renderMedia({ composition: c, serveUrl, inputProps: props, codec: "h264", ...(process.env.BITRATE ? { videoBitrate: process.env.BITRATE } : { crf: escala < 1 ? 20 : 17 }), scale: escala, frameRange: [i, Math.min(N, i + passo) - 1],
       outputLocation: out + ".tmp.mp4", browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 3), imageFormat: "jpeg", jpegQuality: 90,
       onProgress: progresso(`parte ${k}`), timeoutInMilliseconds: 120000, offthreadVideoCacheSizeInBytes: 2 * 1024 ** 3 });
     fs.renameSync(out + ".tmp.mp4", out);
@@ -127,5 +127,24 @@ if (modo === "trecho") {
     outputLocation: `out/v3a/teste_${nome}.mp4`, browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 4), imageFormat: "jpeg", jpegQuality: 90,
     onProgress: progresso(nome), timeoutInMilliseconds: 120000 });
   log(`${nome} ok`);
+  process.exit(0);
+}
+
+// node render.mjs shortsfinal <sufixo> [ids...] -> out/v3a/shorts/SHORT0N_<sufixo>_raw.mp4 em 1080x1920 (pula os que já existem)
+if (modo === "shortsfinal") {
+  const suf = ids[0] || "final";
+  const alvos = ids.length > 1 ? ids.slice(1) : ["SHORT01-v3a", "SHORT02-v3a", ...[3, 4, 5, 6, 7, 8].map((k) => `SHORT0${k}-v3`)];
+  fs.mkdirSync("out/v3a/shorts", { recursive: true });
+  for (const id of alvos) {
+    const out = `out/v3a/shorts/${id.split("-")[0]}_${suf}_raw.mp4`;
+    if (fs.existsSync(out)) { log(`${out} já existe`); continue; }
+    const c = await comp(id);
+    ultimo = -1;
+    await renderMedia({ composition: c, serveUrl, codec: "h264", ...(process.env.BITRATE ? { videoBitrate: process.env.BITRATE } : { crf: 17 }), outputLocation: out + ".tmp.mp4", browserExecutable: BROWSER,
+      concurrency: Number(process.env.CONC || 4), imageFormat: "jpeg", jpegQuality: 92, onProgress: progresso(id), timeoutInMilliseconds: 120000 });
+    fs.renameSync(out + ".tmp.mp4", out);
+    log(`${id} ok`);
+  }
+  log("shorts fim");
   process.exit(0);
 }
