@@ -542,13 +542,14 @@ export const ColunasA: React.FC<P> = ({ c }) => {
   );
 };
 
-// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3 carimbo ARQUIVO 10/10 · 4 ENCERRADO · 5+ recarimba (ENCERRADO/ARQUIVADO) e o átomo dá um salto de giro a cada ação
+// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3 carimbo ARQUIVO 10/10 · 4 a pasta do arquivo sobe até a metade · 5 a pasta fecha e recebe ENCERRADO; o átomo dá um salto de giro a cada ação
 export const FimA: React.FC<P> = ({ c, dur }) => {
   const { n, p, f, fps } = useAcoes();
   const k = useEntra(0, 18);
   const off = interpolate(f, [dur * fps - 40, dur * fps - 20], [1, 0], cl);
   const salto = n >= 3 ? Array.from({ length: n - 2 }, (_, i) => p(i + 3) * 60).reduce((a, b) => a + b, 0) : 0;
   return (
+    <>
     <Faixa style={{ opacity: off }}>
       <div style={{ opacity: k, transform: `rotate(${f * 0.5 + salto}deg)` }}><Picto nome="ATOMO" size={110} /></div>
       <div style={{ marginTop: 26, minHeight: 90, display: "flex", alignItems: "center" }}>
@@ -556,10 +557,22 @@ export const FimA: React.FC<P> = ({ c, dur }) => {
       </div>
       <Mono size={20} style={{ marginTop: 18, opacity: k * (n >= 2 ? p(2) : 0), transform: `translateY(${(1 - p(2)) * 50}px)` }}>{c.sub}</Mono>
       <div style={{ marginTop: 30, minHeight: 70, display: "flex", gap: 28, alignItems: "center" }}>
-        {n >= 3 && <Bate texto="ARQUIVO 10/10" prog={p(3)} rot={3} size={30} />}
-        {n >= 4 && <Bate texto={n >= 5 && n % 2 ? "ARQUIVADO" : "ENCERRADO"} prog={n >= 5 ? p(n) : p(4)} rot={-3} size={30} />}
+        {n >= 3 && <Bate texto="ARQUIVO 10/10" prog={p(3)} rot={3} size={40} />}
       </div>
     </Faixa>
+    {n >= 4 && (() => {
+      // a pasta do arquivo fecha por cima da cena, em degraus de stop-motion: 4 sobe até a metade · 5+ fecha e recebe o carimbo
+      const passo = (v: number) => Math.floor(v * 4) / 4;
+      const alt = n >= 5 ? 0.5 + 0.5 * passo(p(5)) : 0.5 * passo(p(4));
+      return (
+        <div style={{ position: "absolute", left: -60, right: -60, bottom: -60, height: `calc(${alt * 100}% + 60px)`, background: C.apoio, borderTop: `3px solid ${C.tinta}`, boxShadow: "0 -12px 30px rgba(0,0,0,0.15)" }}>
+          <div style={{ position: "absolute", top: -46, left: 820, width: 400, height: 46, background: C.apoio, borderTop: `3px solid ${C.tinta}`, borderLeft: `3px solid ${C.tinta}`, borderRight: `3px solid ${C.tinta}`,
+            display: "flex", alignItems: "center", justifyContent: "center", fontFamily: MONO, fontSize: 20, letterSpacing: 3, color: C.tinta }}>ARQUIVO 10/10 · NETFLIX</div>
+          {n >= 5 && <div style={{ position: "absolute", left: 0, right: 0, top: "38%", display: "flex", justifyContent: "center" }}><Bate texto="ENCERRADO" prog={p(5)} rot={-4} size={64} /></div>}
+        </div>
+      );
+    })()}
+    </>
   );
 };
 
