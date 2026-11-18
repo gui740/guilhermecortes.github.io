@@ -192,11 +192,23 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
       </div>
       {temFrase && fraseK > 0 && (
         <Faixa style={{ opacity: fraseK }}>
-          <A.AcoesTexto carimbo={c.carimbo ?? "DOC"} largura={480}><Kinetic texto={c.frase} size={50} delay={Math.round(dur * fps * 0.42)} passo={2} /></A.AcoesTexto>
+          <FrasePose>
+          <A.AcoesTexto carimbo="CITAÇÃO" largura={480}><Kinetic texto={c.frase} size={50} delay={Math.round(dur * fps * 0.42)} passo={2} /></A.AcoesTexto>
+          </FrasePose>
         </Faixa>
       )}
     </AbsoluteFill>
   );
+};
+
+// a frase do documento se reposiciona em degrau a cada ação (o documento em si não balança: leitura)
+const POSES_F = [[0, 0, 0], [18, -10, 1.2], [-16, 8, -1], [12, 12, 0.8], [-18, -8, -1.3]];
+const FrasePose: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { n, desde } = A.useAcoes();
+  const a = POSES_F[(n + POSES_F.length - 1) % POSES_F.length], b = POSES_F[n % POSES_F.length];
+  const k = n === 0 ? 1 : Math.min(1, Math.floor(desde(n) / 2) * 2 / 4);
+  const v = a.map((x, i) => x + (b[i] - x) * k);
+  return <div style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${v[2]}deg)` }}>{children}</div>;
 };
 
 /* ------------------------------------------------------------------ TIPOGRAFIA */
