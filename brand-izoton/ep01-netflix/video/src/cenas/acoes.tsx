@@ -542,7 +542,7 @@ export const ColunasA: React.FC<P> = ({ c }) => {
   );
 };
 
-// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3+ o átomo dá um salto de giro a cada ação
+// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3 carimbo ARQUIVO 10/10 · 4 ENCERRADO · 5+ recarimba (ENCERRADO/ARQUIVADO) e o átomo dá um salto de giro a cada ação
 export const FimA: React.FC<P> = ({ c, dur }) => {
   const { n, p, f, fps } = useAcoes();
   const k = useEntra(0, 18);
@@ -555,6 +555,10 @@ export const FimA: React.FC<P> = ({ c, dur }) => {
         {n >= 1 ? <Bate texto={c.marca} prog={p(1)} rot={-2} size={46} /> : <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 64, color: C.tinta, opacity: k, letterSpacing: 2 }}>{c.marca}</div>}
       </div>
       <Mono size={20} style={{ marginTop: 18, opacity: k * (n >= 2 ? 1 : 0.4), transform: `translateY(${(1 - p(2)) * 16}px)` }}>{c.sub}</Mono>
+      <div style={{ marginTop: 30, minHeight: 70, display: "flex", gap: 28, alignItems: "center" }}>
+        {n >= 3 && <Bate texto="ARQUIVO 10/10" prog={p(3)} rot={3} size={30} />}
+        {n >= 4 && <Bate texto={n >= 5 && n % 2 ? "ARQUIVADO" : "ENCERRADO"} prog={n >= 5 ? p(n) : p(4)} rot={-3} size={30} />}
+      </div>
     </Faixa>
   );
 };
