@@ -4,7 +4,7 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 
 | Material | Dono | Onde aparece | Status | Observação |
 |---|---|---|---|---|
-| Narração (voz provisória Edge TTS / voz final Gemini TTS) | Próprio (síntese) | todo o vídeo | Próprio | conferir os termos do Edge TTS antes de publicar a versão provisória; a final usa o Gemini |
+| Narração (versões v1/v2, voz sintética: Edge TTS e Gemini TTS) | Próprio (síntese) | só nas versões antigas | Próprio | **saiu do episódio**: a v3 usa só a voz gravada do Guilherme |
 | Trilha e efeitos | Próprio (síntese no pipeline) | todo o vídeo | Próprio | nenhum sample de terceiros, sem "tudum" |
 | Tipografia Jost e IBM Plex Mono | Google Fonts (OFL) | todo o vídeo | Livre | licença SIL Open Font |
 | Pictogramas, medidores, envelope, TV, cheque, diagramas | Próprio | blocos 0–10 | Próprio | desenhados do zero |
@@ -30,7 +30,7 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Fotos de Reed Hastings (2014, 2015) | cellanr / re:publica (Wikimedia Commons) | cold open, colagem | Livre com atribuição (CC BY-SA 2.0) | ver IMAGENS.md |
 | Envelope de DVD da Netflix | BlueMint (Wikimedia Commons) | colagem | Livre com atribuição (CC BY 2.5) | ver IMAGENS.md |
 | Box de séries em DVD | BrokenSphere (Wikimedia Commons) | fala TED 03:33 | Livre com atribuição (CC BY-SA 3.0) | box genérico, não é da HBO |
-| Linhas novas de narração (Gacrux) | Próprio (síntese Gemini TTS) | cold open, regancho, hook do SHORT 02 | Próprio | — |
+| Linhas novas de narração (Gacrux) | Próprio (síntese Gemini TTS) | só na amostra da Parada 1 | Próprio | saiu do episódio e dos Shorts; serve só de régua de tempo no pipeline |
 
 ## Passo 3 (montagem completa)
 
@@ -50,3 +50,13 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Salmo trutta.jpg | Eric Engbretson for U.S. Fish and Wildlife Service (Wikimedia Commons) | cap. 5, keeper test (pescaria) | Livre (Public domain) | objeto ou conceito, não registro de fato |
 | Living room in apartment of Condomínio do Edifício Zaher, Le Blond, Rio de Janeiro, Brazil.jpg | Wilfredor (Wikimedia Commons) | cap. 4, o que você assiste | Livre (CC0) | objeto ou conceito, não registro de fato |
 | World blank map (grey & white).png | Mariomassone (Wikimedia Commons) | cap. 8, audiência transnacional | Livre (CC BY-SA 3.0) | objeto ou conceito, não registro de fato |
+
+## Parada 3 (final 1080p e Shorts)
+
+| Material | Dono | Onde aparece | Status | Observação |
+|---|---|---|---|---|
+| Narração (voz do Guilherme), todos os blocos gravados (menos 09 e 11) | Próprio | episódio e Shorts | Próprio | limpeza e corte no pipeline (`pipeline/narracao_gui/`) |
+| Blocos 09 e 11 e hooks S01–S08 | Próprio | episódio (bloco 09 em 1:58; bloco 11 no regancho do cap. 3) e abertura dos Shorts | Próprio | ainda não gravados: silêncio com o texto do roteiro na tela; trocar com `trocar_audio.py` quando chegarem |
+| Resposta de sala sintética (`sala_pequena.wav`) | Próprio (gerada no pipeline) | tratamento da voz | Próprio | sem impulso de terceiros |
+| Imagens geradas por IA (Gemini) | — | — | — | nenhuma no episódio até agora; os pedidos estão em GEMINI_PEDIDOS.md. Quando chegarem, entram marcadas em IMAGENS.md como "gerada por IA (Gemini), conceito, não é registro" |
+| Geração paga de imagem | — | — | — | não usada |

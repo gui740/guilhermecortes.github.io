@@ -10,10 +10,10 @@ CAPÍTULOS
 04:14 O algoritmo que olha o que você faz
 05:13 Cultura: anti-Apple e keeper test
 07:14 Identidade: por que uma letra só
-08:26 Publicidade: #FU2016 e Senna
-09:36 Fenômenos: Round 6, La Casa de Papel, Wednesday
-10:35 A conta: senhas, anúncios e preço
-12:05 A casa: Netflix House
+08:20 Publicidade: #FU2016 e Senna
+09:31 Fenômenos: Round 6, La Casa de Papel, Wednesday
+10:29 A conta: senhas, anúncios e preço
+11:59 A casa: Netflix House
 
 FONTES (ABNT)
 BLITZSCALING 16: Reed Hastings on building a streaming empire. [S. l.]: Greylock, 2015. 1 vídeo. Disponível em: https://www.youtube.com/watch?v=jYhP08uuffs. Acesso em: 17 nov. 2026.

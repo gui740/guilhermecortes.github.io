@@ -1,7 +1,7 @@
 # Descrições dos Shorts · EP01 Netflix (v3)
 
 > Em todos: marcar o episódio completo no recurso **vídeo relacionado** do YouTube. A chamada para o longo fica só na descrição, nunca falada ou em cartão. Fontes completas, em ABNT, na descrição do episódio.
-> Narração: Guilherme Izoton. Os hooks S03 a S08 entram em texto na tela até serem gravados.
+> Narração: Guilherme Izoton. Os hooks falados S01–S08 entram antes de cada Short quando forem gravados (`video/src/v3/hooks.tsx`); até lá, o hook fica em texto na tela.
 
 ## SHORT01 · O CEO da Netflix disse que ela compete com o seu sono
 Em 2017, Reed Hastings disse que a Netflix compete com o seu sono. No TED de 2018, a lista dele tinha TV, videogame e YouTube. A HBO não estava nela. E, em 2019, a carta aos acionistas foi direta: "competimos com o Fortnite (e perdemos para ele) mais do que com a HBO".
