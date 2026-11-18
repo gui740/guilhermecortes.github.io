@@ -165,4 +165,28 @@ Na cena da porta (2025), o envelope cresce como uma porta, a aba abre, sai luz d
 
 Os 2 últimos (documento n09f 11:37,9 e fim n10d 12:55,3) foram corrigidos depois disso. Na conferência do trecho 11:28–13:01 nenhum passa de 2,5 s.
 
-### Medidas (pendente: render final em andamento)
+### Medidas (montagem final `video/out/v3a/EP01_v3b4_540.mp4`, 781,9 s)
+
+| Medida | Parado | Maior trecho | Meta | Resultado |
+|---|---|---|---|---|
+| Normal (episódio inteiro, sem grão) | 4,6% (35,8 s) | 2,1 s · nenhum ≥ 2,2 s · fim sem quadro parado | < 5% e nada > 2,5 s | passou |
+| Sem pulso | 5% | 2,1 s | até 5–8% | passou |
+| Só conteúdo (informativa) | 21% | 2,6 s, no fim; corrigido depois | informação | 21% aceito |
+
+- Auditoria "parado na narrativa" (recorte da faixa central, d = 2,5 s) na v3b4: **0 trechos**.
+- Quadro isolado (glitch): nenhum. O quadro preto de 2:49,2 sumiu (a TV liga a partir do branco: `TelaCRT` em `transicoes.tsx`).
+- 8,9 trocas fortes por minuto. Loudness da montagem 540p: −16,4 LUFS (o master 1080p sai em −14 LUFS e −1 dBTP).
+- As medidas "sem pulso" e "só conteúdo" foram feitas antes dos três últimos ajustes (fim, painel, documento). Esses ajustes só acrescentam movimento, mas as duas medidas não foram refeitas.
+- Na primeira montagem (v3b3) a medida normal deu 5,5% (43,0 s), e os últimos 3,2 s ficavam parados. O script arredondava para "5%", e ele também não conta um trecho parado que vai até o fim do arquivo. Correções da v3b4, todas em degraus de stop-motion:
+  1. Fim: a pasta do arquivo sobe desde a assinatura, fecha com ENCERRADO, recebe ARQUIVADO e desce para fora do quadro até o último quadro.
+  2. Painel de capítulo: a câmera recua e desliza enquanto o traço corre.
+  3. Documento: aproximação lenta em degraus de 3 quadros, e o cartão da frase continua a se aproximar entre as ações.
+- A v3b4 reaproveita as partes 1–3 já renderizadas, que não têm os ajustes 2 e 3. No 1080p final, todas as cenas saem com o código novo.
+
+### Links
+- Montagem completa (vídeo 540p, prints por capítulo, cena de documento, auditoria e medidas): https://claude.ai/artifact/4URkcNdgCGnDVNkDby969o
+- Pedidos de imagem para o Gemini (GEMINI_PEDIDOS.md): https://claude.ai/artifact/JYUGvCi7ShrYLzZf4WkrsX
+- Os dois são privados: só abrem para quem tiver acesso compartilhado.
+
+### Próximo: Parada 3
+Render 1080p final, 8 Shorts, capa, DESCRICAO_YOUTUBE.md, DESCRICAO_SHORTS.md e DIREITOS.md. Os blocos 09, 11 e S01–S08 ficam prontos para trocar (`pipeline/narracao_gui/trocar_audio.py`).
