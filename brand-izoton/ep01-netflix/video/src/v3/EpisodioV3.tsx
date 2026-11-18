@@ -5,6 +5,7 @@ import { AbsoluteFill, Audio, Img, Sequence, interpolate, staticFile, useCurrent
 import timeline from "../timeline_v3.json";
 import { C, FAIXA, FONT, MONO } from "../theme";
 import { Cena } from "../cenas/Cenas";
+import { AcoesCtx } from "../cenas/acoes";
 import { Academico } from "../cenas/bits";
 import { Camada, Card, Destaque, Grao, PaginaEditorial, Recorte, Terminal } from "./kit";
 import { Painel, CAPITULOS, Mascara } from "./transicoes";
@@ -150,6 +151,18 @@ const Ficha: React.FC<{ e: Etq; n: number; cap: number; fim: number }> = ({ e, n
 };
 const SOMBRA_F = "10px 12px 22px rgba(0,0,0,0.18)";
 
+// tempos das ações do objeto principal: palavras dele (>= 1,25 s entre si, a partir de 0,9 s); pausas maiores que 2,2 s ganham ação a cada 1,5 s
+const acoesDe = (ritmo: number[], dur: number): number[] => {
+  const out: number[] = [];
+  const push = (t: number) => { if (t >= 0.9 && t <= dur - 0.5 && (!out.length || t - out[out.length - 1] >= 1.25)) out.push(Math.round(t * 100) / 100); };
+  for (const t of ritmo) {
+    for (let g = 0; g < 20 && (out.length ? t - out[out.length - 1] > 2.2 : t > 2.6); g++) push((out.length ? out[out.length - 1] : 0.9 - 1.5) + 1.5);
+    push(t);
+  }
+  while ((out.length ? out[out.length - 1] : 0) + 1.5 <= dur - 0.5) { const n0 = out.length; push((out.length ? out[out.length - 1] : -0.6) + 1.5); if (out.length === n0) break; }
+  return out;
+};
+
 const TrechoV2: React.FC<{ tr: Tr }> = ({ tr }) => {
   const { fps } = useVideoConfig();
   const total = Math.round(tr.dur * fps);
@@ -168,7 +181,9 @@ const TrechoV2: React.FC<{ tr: Tr }> = ({ tr }) => {
             {arquivo ? <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill> : (
               <Entrada tipo={TRANS[transDe[`${tr.id}:${tr.cenas.indexOf(c)}`] ?? 0]}>
                 <CameraPassos ritmo={ritmo} base={ESCALA[c.tipo] ?? 1.0} arquivo={arquivo} tipo={c.tipo} idx={i + tr.id.length} durF={Math.max(1, next - from)}>
-                  <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
+                  <AcoesCtx.Provider value={acoesDe(ritmo, (next - from) / fps)}>
+                    <AbsoluteFill><Cena c={c} dur={(next - from) / fps} trecho={tr} /></AbsoluteFill>
+                  </AcoesCtx.Provider>
                 </CameraPassos>
               </Entrada>
             )}

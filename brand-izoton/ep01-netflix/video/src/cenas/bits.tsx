@@ -123,11 +123,11 @@ export const Legenda: React.FC<{ linhas: string[]; dur: number; inicio?: number 
 };
 
 /** Medidor analógico de argumento (semicírculo, ponteiro, escala). */
-export const Medidor: React.FC<{ rotulo: string; marcas: string[]; de: number; ate: number; delay?: number; size?: number }> =
-  ({ rotulo, marcas, de, ate, delay = 6, size = 540 }) => {
+export const Medidor: React.FC<{ rotulo: string; marcas: string[]; de: number; ate: number; delay?: number; size?: number; prog?: number }> =
+  ({ rotulo, marcas, de, ate, delay = 6, size = 540, prog }) => {
     const f = useCurrentFrame();
     const { fps } = useVideoConfig();
-    const s = spring({ frame: f - delay, fps, config: { damping: 9, mass: 1.4, stiffness: 60 } });
+    const s = prog ?? spring({ frame: f - delay, fps, config: { damping: 9, mass: 1.4, stiffness: 60 } });
     const tremor = s > 0.97 ? Math.sin(f * 2.3) * 0.006 : 0;
     const v = de + (ate - de) * s + tremor;
     const ang = -180 + 180 * v;
