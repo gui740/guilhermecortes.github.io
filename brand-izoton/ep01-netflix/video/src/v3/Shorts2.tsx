@@ -1,5 +1,6 @@
 // Shorts 03–08 (Parada 3): gerador de Short a partir de trechos (blocos do Guilherme e falas de arquivo).
 // Os hooks S03–S08 não foram gravados: o hook entra só como texto na tela (sem voz; nunca TTS), e a voz dele começa junto.
+// Quando forem gravados, hooks.tsx (ComHook) põe a voz do hook antes do Short e este texto inicial sai.
 import React from "react";
 import { AbsoluteFill, Img, Sequence, staticFile, useCurrentFrame } from "remotion";
 import PAL from "./palavras_gui.json";
@@ -9,6 +10,7 @@ import { NLogo } from "../cenas/bits";
 import { Camera, Card, Carimbo3, Destaque, Grao, Papel, Recorte, useS } from "./kit";
 import { TelaCRT } from "./transicoes";
 import { FalaCtx, LegendaPalavra, Narr, Sfx, Trilha } from "./Amostra";
+import { temHook } from "./hooks";
 
 type W = [number, number, string];
 const P = PAL as unknown as Record<string, { dur: number; palavras: W[] }>;
@@ -97,8 +99,8 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
           {s.tipo === "narr" ? <SegNarr s={s} /> : <SegArq s={s} />}
         </Sequence>
       ))}
-      {/* hook em texto, no quadro 0 (sem voz) */}
-      {f < S(2.4) && (
+      {/* hook em texto, no quadro 0 (sem voz); some quando o hook gravado entra antes (hooks.tsx) */}
+      {f < S(2.4) && !temHook(cfg.id) && (
         <AbsoluteFill style={{ background: C.branco }}>
           <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
             {cfg.hook.map((l, i) => <Destaque key={i} texto={l} inicio={i * 4} size={i === cfg.hook.length - 1 ? 104 : 76} tom={i === cfg.hook.length - 1 ? "tinta" : "tinta"} />)}
@@ -116,7 +118,7 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
       <div style={{ position: "absolute", left: 60, top: 70, display: "flex", alignItems: "center", gap: 12, fontFamily: MONO, fontSize: 26, letterSpacing: 3, color: C.tinta }}>
         <span style={{ width: 12, height: 12, borderRadius: 6, background: C.ambar, display: "inline-block" }} />{cfg.topo}
       </div>
-      {f >= S(2.4) && <LegendaPalavra palavras={palavras} chave={{}} />}
+      {(f >= S(2.4) || temHook(cfg.id)) && <LegendaPalavra palavras={palavras} chave={{}} />}
       <Grao />
       {cfg.segs.map((s, i) => s.tipo === "narr"
         ? <Narr key={i} s={ini[i]} arq={`media/narr_gui/b${s.bloco}.wav`} />
