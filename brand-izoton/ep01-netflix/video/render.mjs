@@ -117,3 +117,15 @@ if (modo === "partes") {
     log(`parte ${k} ok`);
   }
 }
+
+// node render.mjs trecho <ini_s> <fim_s> <nome> -> out/v3a/teste_<nome>.mp4 (EpisodioV3 em 540p, só esse trecho, para testar uma correção)
+if (modo === "trecho") {
+  const [a, b, nome] = [Number(ids[0]), Number(ids[1]), ids[2] || "trecho"];
+  const c = await comp("EpisodioV3");
+  ultimo = -1;
+  await renderMedia({ composition: c, serveUrl, codec: "h264", crf: 20, scale: 0.5, frameRange: [Math.round(a * 30), Math.min(c.durationInFrames, Math.round(b * 30)) - 1],
+    outputLocation: `out/v3a/teste_${nome}.mp4`, browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 4), imageFormat: "jpeg", jpegQuality: 90,
+    onProgress: progresso(nome), timeoutInMilliseconds: 120000 });
+  log(`${nome} ok`);
+  process.exit(0);
+}

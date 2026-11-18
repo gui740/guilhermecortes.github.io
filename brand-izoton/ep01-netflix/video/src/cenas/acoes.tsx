@@ -21,7 +21,7 @@ export const useAcoes = () => {
   const n = fr.filter((x) => f >= x).length;
   const p = (i: number) => (i < 1 ? 1 : i > fr.length ? 0 : interpolate(f - fr[i - 1], [0, 9], [0, 1], { ...cl, easing: ease }));
   const desde = (i: number) => (i < 1 ? f : i > fr.length ? -1 : f - fr[i - 1]);
-  return { n, p, f, fps, desde };
+  return { n, p, f, fps, desde, fr };
 };
 
 /** Carimbo que bate (escala 1,6 → 1) quando a ação i chega. */
@@ -542,15 +542,15 @@ export const ColunasA: React.FC<P> = ({ c }) => {
   );
 };
 
-// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe · 3 a pasta do arquivo sobe até a metade · 4 a pasta fecha e recebe ENCERRADO · 5 ARQUIVADO; o átomo dá um salto de giro a cada ação
+// fim: o átomo gira devagar; 1 a marca é carimbada · 2 a assinatura sobe e a pasta do arquivo começa a subir em degraus · 4 a pasta fecha e recebe ENCERRADO · 5 ARQUIVADO · depois a pasta desce para fora até o último quadro
 export const FimA: React.FC<P> = ({ c, dur }) => {
-  const { n, p, f, fps } = useAcoes();
+  const { n, p, f, fps, fr } = useAcoes();
   const k = useEntra(0, 18);
   const off = interpolate(f, [dur * fps - 40, dur * fps - 20], [1, 0], cl);
   const salto = n >= 3 ? Array.from({ length: n - 2 }, (_, i) => p(i + 3) * 60).reduce((a, b) => a + b, 0) : 0;
   return (
     <>
-    <Faixa style={{ opacity: off }}>
+    <Faixa style={{ opacity: n >= 2 ? 1 : off }}>
       <div style={{ opacity: k, transform: `rotate(${f * 0.5 + salto}deg)` }}><Picto nome="ATOMO" size={110} /></div>
       <div style={{ marginTop: 26, minHeight: 90, display: "flex", alignItems: "center" }}>
         {n >= 1 ? <Bate texto={c.marca} prog={p(1)} rot={-2} size={46} /> : <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 64, color: C.tinta, opacity: k, letterSpacing: 2 }}>{c.marca}</div>}
@@ -559,12 +559,17 @@ export const FimA: React.FC<P> = ({ c, dur }) => {
       <div style={{ marginTop: 30, minHeight: 70, display: "flex", gap: 28, alignItems: "center" }}>
       </div>
     </Faixa>
-    {n >= 3 && (() => {
-      // a pasta do arquivo fecha por cima da cena, em degraus de stop-motion: 3 sobe até a metade · 4 fecha e recebe ENCERRADO · 5 recarimba ARQUIVADO
-      const passo = (v: number) => Math.floor(v * 4) / 4;
-      const alt = n >= 4 ? 0.5 + 0.5 * passo(p(4)) : 0.5 * passo(p(3));
+    {n >= 2 && fr.length >= 5 && (() => {
+      // a pasta do arquivo sobe por cima da cena em degraus de stop-motion (pose a cada 3 quadros) da ação 2 até fechar entre a 3 e a 4 · 4 ENCERRADO · 5 ARQUIVADO (já descendo) ·
+      // depois a pasta fechada desce para fora do quadro, também em degraus, e sai no último quadro (o fim nunca fica parado)
+      const deg = Math.floor(f / 3) * 3;
+      const alt = interpolate(deg, [fr[1], fr[2] + Math.round((fr[3] - fr[2]) * 0.5)], [0, 1], cl);
+      const fim = dur * fps - 1;
+      const ini = Math.min(fr[3] + 9, fim - 30);
+      const desce = interpolate(deg, [ini, fim], [0, 1], cl);
       return (
-        <div style={{ position: "absolute", left: -60, right: -60, bottom: -60, height: `calc(${alt * 100}% + 60px)`, background: C.apoio, borderTop: `3px solid ${C.tinta}`, boxShadow: "0 -12px 30px rgba(0,0,0,0.15)" }}>
+        <div style={{ position: "absolute", left: -60, right: -60, bottom: -60, height: `calc(${alt * 100}% + 60px)`, background: C.apoio, borderTop: `3px solid ${C.tinta}`, boxShadow: "0 -12px 30px rgba(0,0,0,0.15)",
+          transform: `translateY(${desce * 1260}px) rotate(${desce * 2.5}deg)` }}>
           <div style={{ position: "absolute", top: -46, left: 820, width: 400, height: 46, background: C.apoio, borderTop: `3px solid ${C.tinta}`, borderLeft: `3px solid ${C.tinta}`, borderRight: `3px solid ${C.tinta}`,
             display: "flex", alignItems: "center", justifyContent: "center", fontFamily: MONO, fontSize: 20, letterSpacing: 3, color: C.tinta }}>ARQUIVO 10/10 · NETFLIX</div>
           {n >= 4 && <div style={{ position: "absolute", left: 0, right: 0, top: "38%", display: "flex", justifyContent: "center" }}><Bate texto={n >= 5 ? "ARQUIVADO" : "ENCERRADO"} prog={n >= 5 ? p(5) : p(4)} rot={n >= 5 ? 3 : -4} size={64} /></div>}

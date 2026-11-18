@@ -143,7 +143,7 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
   const iw = c.w, ih = c.h;
   // escala para o trecho ocupar ~88% da largura do cartão
   const base = Math.min((cw * 0.88) / (tr[2] * iw), (ch * 0.9) / (tr[3] * ih * 3.2));
-  const zoom = interpolate(f, [0, dur * fps], [0.92, 1.04], { extrapolateRight: "clamp" });
+  const zoom = interpolate(Math.floor(f / 3) * 3, [0, dur * fps], [0.9, 1.08], { extrapolateRight: "clamp" }); // aproximação lenta em degraus de 3 quadros (stop-motion)
   // leitura em degraus ("lupa"), presa às palavras dele (AcoesCtx, >= 1,8 s entre passos): a câmera vai para outro pedaço do trecho,
   // um marca-texto varre o pedaço em foco, e no último passo volta ao todo e o trecho é "recortado" (contorno tracejado e sombra)
   const ctxA = React.useContext(A.AcoesCtx);
@@ -201,14 +201,17 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
   );
 };
 
-// a frase do documento se reposiciona em degrau a cada ação (o documento em si não balança: leitura)
+// a frase do documento se reposiciona em degrau a cada ação e se aproxima devagar entre elas (o documento em si não balança: leitura)
 const POSES_F = [[0, 0, 0], [18, -10, 1.2], [-16, 8, -1], [12, 12, 0.8], [-18, -8, -1.3]];
 const FrasePose: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { n, desde } = A.useAcoes();
   const a = POSES_F[(n + POSES_F.length - 1) % POSES_F.length], b = POSES_F[n % POSES_F.length];
   const k = n === 0 ? 1 : Math.min(1, Math.floor(desde(n) / 2) * 2 / 4);
   const v = a.map((x, i) => x + (b[i] - x) * k);
-  return <div style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${v[2]}deg)` }}>{children}</div>;
+  // entre uma ação e outra o cartão da frase continua a se aproximar devagar, em degraus de 3 quadros (nunca fica parado)
+  const d = Math.min(2.5, Math.floor((n === 0 ? desde(0) : desde(n)) / 3) * 3 / 60);
+  const z = 1 + 0.07 * d, dx = (b[0] >= 0 ? -1 : 1) * 22 * d;
+  return <div style={{ transform: `translate(${v[0] + dx}px, ${v[1]}px) rotate(${v[2]}deg) scale(${z})` }}>{children}</div>;
 };
 
 /* ------------------------------------------------------------------ TIPOGRAFIA */

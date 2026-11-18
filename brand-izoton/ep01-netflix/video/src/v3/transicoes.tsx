@@ -120,6 +120,9 @@ export const Painel: React.FC<{ de: number; para: number; dur: number; preenchid
       cx = A.x + (B.x - A.x) * voo; cy = A.y + (B.y - A.y) * voo;
       const recuo = Math.sin(voo * Math.PI) * 0.35;
       z = f < t2 ? sai : zoomCartao * (1 - recuo);
+      // enquanto o traço corre (t1–t2) a câmera recua e desliza devagar, e devolve isso ao voar (sem quadro parado no cartão)
+      const deriva = interpolate(f, [t1, t2], [0, 1], clamp) * (1 - voo);
+      z = z * (1 - 0.12 * deriva); cx = cx + 90 * deriva;
       if (mergulho) z = z * interpolate(f, [t3, dur], [1, 2.6], { ...clamp, easing: Easing2 });
       blur = Math.sin(voo * Math.PI) * 9;
     }
