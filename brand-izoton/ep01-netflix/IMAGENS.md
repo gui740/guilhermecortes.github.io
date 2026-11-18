@@ -33,3 +33,15 @@ Nada faltou nesta amostra. A lista completa de imagens faltando sai com a Parada
 | card_squid_cosplay.jpg | cap. 8, Round 6 (bloco 38) | [Front Man cosplay.jpg](https://commons.wikimedia.org/wiki/File:Front_Man_cosplay.jpg) | Rose Abrams | CC BY 4.0 | card P&B (fã fantasiado), borda e sombra |
 
 Recusadas na checagem: "CNN Republican Underdog Debate December 15, 2015" (é caricatura satírica, não registro do debate) e "Chris Anderson 2007" (não deu para confirmar que é o curador do TED).
+
+### Imagens de conceito (Commons, 18 nov. 2026)
+
+| Arquivo no projeto | Onde entra | Página no Commons | Autor | Licença |
+|---|---|---|---|---|
+| rec_relogio.png | cap. 3, 195 anos e "não deixar você esperar" | [Clock analog clock.jpg](https://commons.wikimedia.org/wiki/File:Clock_analog_clock.jpg) | Paolo Neo | Public domain |
+| rec_cupcake.png | cap. 3, "cupcake grátis" | [Chocolate cupcakes.jpg](https://commons.wikimedia.org/wiki/File:Chocolate_cupcakes.jpg) | Pamela from DC Metro | CC BY 2.0 |
+| rec_peixe.png | cap. 5, keeper test (pescaria) | [Salmo trutta.jpg](https://commons.wikimedia.org/wiki/File:Salmo_trutta.jpg) | Eric Engbretson for U.S. Fish and Wildlife Service | Public domain |
+| card_sofa.jpg | cap. 4, o que você assiste | [Living room in apartment of Condomínio do Edifício Zaher, Le Blond, Rio de Janeiro, Brazil.jpg](https://commons.wikimedia.org/wiki/File:Living_room_in_apartment_of_Condom%C3%ADnio_do_Edif%C3%ADcio_Zaher,_Le_Blond,_Rio_de_Janeiro,_Brazil.jpg) | Wilfredor | CC0 |
+| card_mapa.jpg | cap. 8, audiência transnacional | [World blank map (grey & white).png](https://commons.wikimedia.org/wiki/File:World_blank_map_(grey_%26_white).png) | Mariomassone | CC BY-SA 3.0 |
+
+Pixabay: não usado. O site bloqueia acesso automático e a API exige chave.

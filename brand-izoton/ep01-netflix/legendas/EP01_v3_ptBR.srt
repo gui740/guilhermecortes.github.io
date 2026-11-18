@@ -1,0 +1,1232 @@
+1
+00:00:00,000 --> 00:00:02,760
+Em 2017, o CEO da Netflix disse
+
+2
+00:00:02,760 --> 00:00:04,520
+que a empresa compete com o seu sono.
+
+3
+00:00:05,000 --> 00:00:07,460
+Repara, a HBO não está na lista.
+
+4
+00:00:07,860 --> 00:00:10,200
+Neste episódio, as jogadas da Netflix nessa
+
+5
+00:00:10,200 --> 00:00:11,300
+briga pelo seu tempo,
+
+6
+00:00:11,740 --> 00:00:12,980
+e a conta que ela mandou pra
+
+7
+00:00:12,980 --> 00:00:13,560
+você no fim.
+
+8
+00:00:17,600 --> 00:00:19,280
+Para entender essa ambição,
+
+9
+00:00:19,540 --> 00:00:20,960
+é preciso voltar a um disco.
+
+10
+00:00:21,500 --> 00:00:24,340
+A Netflix foi fundada em 1997 e
+
+11
+00:00:24,340 --> 00:00:26,160
+nasceu mandando DVDs pelo correio.
+
+12
+00:00:27,860 --> 00:00:31,050
+nascemos do DVD e sabíamos que ele seria temporário.
+
+13
+00:00:31,100 --> 00:00:34,290
+Ninguém achou que ficaríamos 100 anos enviando discos.
+
+14
+00:00:34,340 --> 00:00:37,530
+Então você fica paranoico com o que vem a seguir.
+
+15
+00:00:37,880 --> 00:00:40,000
+Nascer num formato com prazo de validade
+
+16
+00:00:40,000 --> 00:00:42,900
+virou método, desconfiar do próprio sucesso.
+
+17
+00:00:43,520 --> 00:00:45,380
+Hastings diz que essa preocupação com o
+
+18
+00:00:45,380 --> 00:00:46,840
+que vem a seguir faz parte do
+
+19
+00:00:46,840 --> 00:00:48,460
+espírito de fundação da empresa.
+
+20
+00:00:49,780 --> 00:00:51,680
+Uma pesquisadora de TV vai além.
+
+21
+00:00:52,040 --> 00:00:54,320
+Para ela, a Netflix é uma continuação
+
+22
+00:00:54,320 --> 00:00:57,020
+da história da televisão e das tecnologias
+
+23
+00:00:57,020 --> 00:00:58,780
+que deram controle ao espectador,
+
+24
+00:00:59,200 --> 00:01:02,100
+do controle remoto até a maratona de episódios.
+
+25
+00:01:05,550 --> 00:01:07,690
+A primeira tentativa de ter conteúdo próprio
+
+26
+00:01:07,690 --> 00:01:08,710
+foi em 2005,
+
+27
+00:01:09,110 --> 00:01:09,990
+ainda na era do DVD.
+
+28
+00:01:10,750 --> 00:01:15,447
+tentamos entrar em conteúdo original em 2005,
+
+29
+00:01:15,497 --> 00:01:20,193
+quando só tínhamos DVD (…) éramos um miniestúdio.
+
+30
+00:01:20,243 --> 00:01:24,940
+E não funcionou, porque não tínhamos escala.
+
+31
+00:01:25,290 --> 00:01:27,790
+A segunda tentativa veio em 2011.
+
+32
+00:01:28,570 --> 00:01:32,690
+em 2011, Ted Sarandos, meu sócio que cuida do conteúdo,
+
+33
+00:01:32,740 --> 00:01:36,860
+ficou muito empolgado com House of Cards.
+
+34
+00:01:36,910 --> 00:01:41,030
+Na época, custava 100 milhões de dólares.
+
+35
+00:01:41,080 --> 00:01:45,200
+Era um investimento fantástico, e competia com a HBO.
+
+36
+00:01:45,550 --> 00:01:47,910
+Chris Anderson pergunta como eles tinham certeza
+
+37
+00:01:47,910 --> 00:01:48,870
+de que valia a pena.
+
+38
+00:01:49,600 --> 00:01:53,630
+a gente não tinha certeza. Essa é a tensão toda.
+
+39
+00:01:53,680 --> 00:01:57,710
+(…) foi assustador.
+
+40
+00:02:02,921 --> 00:02:07,386
+é sobre fortalecer a marca, para que mais gente queira assinar.
+
+41
+00:02:07,436 --> 00:02:11,901
+E House of Cards fez isso (…)
+
+42
+00:02:11,951 --> 00:02:16,416
+já Mad Men, que a gente exibia, ótima série da AMC,
+
+43
+00:02:16,466 --> 00:02:20,931
+não era associada à Netflix, mesmo assistida na Netflix.
+
+44
+00:02:21,281 --> 00:02:22,781
+Quem é o dono da história é
+
+45
+00:02:22,781 --> 00:02:24,501
+lembrado, quem só exibe,
+
+46
+00:02:24,921 --> 00:02:26,841
+não. E a aposta cresceu.
+
+47
+00:02:27,201 --> 00:02:30,001
+Em 2018, Hastings disse quanto a Netflix
+
+48
+00:02:30,001 --> 00:02:31,741
+ia investir em conteúdo naquele ano.
+
+49
+00:02:32,481 --> 00:02:35,211
+Uns 8 bilhões de dólares no mundo todo.
+
+50
+00:02:35,261 --> 00:02:37,991
+E não é suficiente.
+
+51
+00:02:42,841 --> 00:02:44,941
+House of Cards trouxe uma segunda aposta.
+
+52
+00:02:45,161 --> 00:02:47,021
+Soltar todos os episódios de uma vez?
+
+53
+00:02:47,241 --> 00:02:48,201
+De onde veio essa ideia?
+
+54
+00:02:49,711 --> 00:02:54,461
+crescemos enviando DVDs, e tinha as séries em box de DVD.
+
+55
+00:02:54,511 --> 00:02:59,261
+Todos nós tivemos a experiência de ver ótimas séries da HBO
+
+56
+00:02:59,311 --> 00:03:04,061
+(…) próximo episódio, próximo episódio.
+
+57
+00:03:04,111 --> 00:03:08,861
+É muito poderoso ter todos os episódios de uma vez.
+
+58
+00:03:08,911 --> 00:03:13,661
+E isso a TV linear não consegue fazer.
+
+59
+00:03:14,271 --> 00:03:16,071
+O que a TV linear não consegue
+
+60
+00:03:16,071 --> 00:03:17,451
+fazer virou produto.
+
+61
+00:03:17,731 --> 00:03:19,931
+Pesquisadores chamam isso de fluxo isolado,
+
+62
+00:03:20,291 --> 00:03:22,371
+recursos como a reprodução automática do próximo
+
+63
+00:03:22,371 --> 00:03:25,071
+episódio e o botão Pular Abertura que
+
+64
+00:03:25,071 --> 00:03:26,531
+mantém você dentro da maratona.
+
+65
+00:03:27,121 --> 00:03:28,641
+Outro estudo descreve o mesmo.
+
+66
+00:03:29,041 --> 00:03:30,501
+Alguns segundos depois do fim de um
+
+67
+00:03:30,501 --> 00:03:32,281
+episódio, o próximo já começa.
+
+68
+00:03:32,761 --> 00:03:33,981
+Ninguém precisa apertar nada.
+
+69
+00:03:34,551 --> 00:03:37,791
+Esse botão é apertado 136
+
+70
+00:03:37,791 --> 00:03:39,631
+milhões de vezes num dia típico.
+
+71
+00:03:40,101 --> 00:03:41,541
+Ele nasceu de uma pesquisa.
+
+72
+00:03:41,821 --> 00:03:43,721
+Em cerca de 15 % das vezes,
+
+73
+00:03:44,081 --> 00:03:45,981
+as pessoas adiantavam a série na mão
+
+74
+00:03:45,981 --> 00:03:47,361
+nos primeiros 5 minutos.
+
+75
+00:03:47,781 --> 00:03:50,441
+A Netflix testou em 250 séries,
+
+76
+00:03:50,621 --> 00:03:51,481
+nos Estados Unidos,
+
+77
+00:03:51,761 --> 00:03:53,421
+no Reino Unido e no Canadá.
+
+78
+00:03:53,541 --> 00:03:55,181
+Primeiro na web e levou pra TV
+
+79
+00:03:55,181 --> 00:03:56,581
+em agosto de 2017.
+
+80
+00:03:57,311 --> 00:04:00,651
+Em 2022, a empresa calculou 195
+
+81
+00:04:00,651 --> 00:04:03,411
+anos economizados, somando o tempo de todo
+
+82
+00:04:03,411 --> 00:04:05,411
+mundo. Um engenheiro resumiu,
+
+83
+00:04:05,671 --> 00:04:08,091
+talvez nem um botão escrito Cupcake grátis
+
+84
+00:04:08,091 --> 00:04:09,251
+tivesse mais cliques.
+
+85
+00:04:09,791 --> 00:04:11,311
+Um botão que faz uma coisa só,
+
+86
+00:04:11,791 --> 00:04:12,491
+esse é o produto,
+
+87
+00:04:12,751 --> 00:04:13,891
+não deixar você esperar.
+
+88
+00:04:14,931 --> 00:04:16,671
+E para escolher o que você vê,
+
+89
+00:04:16,911 --> 00:04:18,731
+a Netflix aprendeu a não confiar no
+
+90
+00:04:18,731 --> 00:04:19,451
+que você diz.
+
+91
+00:04:20,701 --> 00:04:21,941
+Por volta de 2007,
+
+92
+00:04:22,221 --> 00:04:24,041
+segundo Hastings, a Netflix abriu o seu
+
+93
+00:04:24,041 --> 00:04:25,661
+sistema de recomendação para o mundo,
+
+94
+00:04:26,021 --> 00:04:27,601
+e ofereceu 1 milhão de dólares a
+
+95
+00:04:27,601 --> 00:04:29,881
+quem conseguisse melhorá-lo em 10%,
+
+96
+00:04:29,881 --> 00:04:31,161
+e nunca repetiu.
+
+97
+00:04:31,921 --> 00:04:34,021
+foi superempolgante na época. Isso foi por volta de 2007.
+
+98
+00:04:34,071 --> 00:04:36,171
+Mas a gente não fez de novo.
+
+99
+00:04:36,771 --> 00:04:39,766
+Todo mundo dava cinco estrelas para A Lista de Schindler
+
+100
+00:04:39,816 --> 00:04:42,811
+e três para Zerando a Vida, do Adam Sandler.
+
+101
+00:04:42,861 --> 00:04:45,856
+Mas, quando se olhava o que assistiam,
+
+102
+00:04:45,906 --> 00:04:48,901
+era quase sempre Adam Sandler.
+
+103
+00:04:49,251 --> 00:04:50,571
+O que você diz é a sua
+
+104
+00:04:50,571 --> 00:04:53,491
+versão ideal. O que você assiste é você.
+
+105
+00:04:54,341 --> 00:04:57,378
+agrada muito mais olhar para as escolhas reais das pessoas.
+
+106
+00:04:57,428 --> 00:05:00,464
+As preferências reveladas
+
+107
+00:05:00,514 --> 00:05:03,551
+pelo quanto elas curtem prazeres simples.
+
+108
+00:05:03,901 --> 00:05:06,001
+Mas Hastings faz uma ressalva no mesmo
+
+109
+00:05:06,001 --> 00:05:07,921
+palco, não dá para depender só do
+
+110
+00:05:07,921 --> 00:05:10,021
+algoritmo. A Netflix se vê como um
+
+111
+00:05:10,021 --> 00:05:11,361
+serviço com curadoria,
+
+112
+00:05:11,541 --> 00:05:13,261
+e o algoritmo é uma ferramenta.
+
+113
+00:05:14,231 --> 00:05:15,491
+Para fazer tudo isso,
+
+114
+00:05:15,871 --> 00:05:17,411
+ela montou uma empresa com regras que
+
+115
+00:05:17,411 --> 00:05:18,971
+quase nenhuma outra aceitaria.
+
+116
+00:05:20,139 --> 00:05:21,179
+Antes da Netflix,
+
+117
+00:05:21,579 --> 00:05:23,699
+Hastings fundou outra empresa e aprendeu com
+
+118
+00:05:23,699 --> 00:05:24,699
+ela o que não fazer.
+
+119
+00:05:25,439 --> 00:05:30,382
+toda vez que alguém errava, a gente criava um processo
+
+120
+00:05:30,432 --> 00:05:35,376
+para aquilo não se repetir (…)
+
+121
+00:05:35,426 --> 00:05:40,369
+E, no fim, só os bobos queriam trabalhar lá.
+
+122
+00:05:40,719 --> 00:05:42,819
+Na Netflix, ele quis o contrário,
+
+123
+00:05:43,099 --> 00:05:45,279
+o mínimo de processo sem virar caos.
+
+124
+00:05:46,049 --> 00:05:48,126
+Somos tipo a anti-Apple. Sabe como eles compartimentam?
+
+125
+00:05:48,176 --> 00:05:50,252
+A gente faz o contrário:
+
+126
+00:05:50,302 --> 00:05:52,379
+todo mundo recebe todas as informações.
+
+127
+00:05:52,979 --> 00:05:55,589
+queremos que as pessoas digam a verdade.
+
+128
+00:05:55,639 --> 00:05:58,249
+E dizemos: discordar em silêncio é desleal.
+
+129
+00:05:58,599 --> 00:06:00,579
+Em 2001, o dinheiro acabou.
+
+130
+00:06:01,059 --> 00:06:02,639
+Hastings contou o que veio depois,
+
+131
+00:06:02,759 --> 00:06:04,639
+numa aula em Stanford em 2015.
+
+132
+00:06:05,449 --> 00:06:09,554
+depois de demitir um terço, de 120 para 80 pessoas,
+
+133
+00:06:09,604 --> 00:06:13,709
+a gente esperava travar (…)
+
+134
+00:06:13,759 --> 00:06:17,864
+seriam precisos 80 só para manter as luzes acesas.
+
+135
+00:06:17,914 --> 00:06:22,019
+Mas, na verdade, fizemos mais com só 80 pessoas.
+
+136
+00:06:22,369 --> 00:06:24,849
+Daí veio a densidade de talento,
+
+137
+00:06:25,069 --> 00:06:26,889
+e uma pergunta que todo gestor tem
+
+138
+00:06:26,889 --> 00:06:27,569
+que responder.
+
+139
+00:06:28,679 --> 00:06:33,417
+os gestores têm de, todo ano, dar um testemunho sobre cada pessoa:
+
+140
+00:06:33,467 --> 00:06:38,205
+se ela tentasse pedir demissão,
+
+141
+00:06:38,255 --> 00:06:42,993
+eles tentariam fazê-la mudar de ideia?
+
+142
+00:06:43,043 --> 00:06:47,781
+(…) às vezes você percebe que tem gente no time
+
+143
+00:06:47,831 --> 00:06:52,569
+que, se pedisse para sair, você pensaria: até que seria bom.
+
+144
+00:06:52,919 --> 00:06:54,419
+No memorando oficial de cultura,
+
+145
+00:06:54,519 --> 00:06:55,239
+isso tem nome,
+
+146
+00:06:55,599 --> 00:06:57,499
+keeper test. Se a resposta for não,
+
+147
+00:06:57,799 --> 00:07:00,499
+a empresa considera mais justo se separar
+
+148
+00:07:00,499 --> 00:07:03,039
+rápido. A própria Netflix admite que,
+
+149
+00:07:03,259 --> 00:07:05,459
+no papel, o teste pode assustar.
+
+150
+00:07:05,799 --> 00:07:07,279
+E o nome vem de uma pescaria.
+
+151
+00:07:07,479 --> 00:07:08,779
+Quando Hastings era criança,
+
+152
+00:07:09,079 --> 00:07:10,079
+o pai dele dizia,
+
+153
+00:07:10,279 --> 00:07:11,359
+ao ver um peixe bom,
+
+154
+00:07:11,779 --> 00:07:12,699
+esse é um Keeper.
+
+155
+00:07:12,879 --> 00:07:13,499
+Esse fica.
+
+156
+00:07:16,639 --> 00:07:18,719
+Num vídeo inteiro em preto e branco,
+
+157
+00:07:19,179 --> 00:07:20,479
+só uma coisa tem cor.
+
+158
+00:07:20,859 --> 00:07:21,699
+Não é efeito,
+
+159
+00:07:22,219 --> 00:07:22,739
+é regra.
+
+160
+00:07:23,869 --> 00:07:25,109
+No guia de marca oficial,
+
+161
+00:07:25,229 --> 00:07:26,569
+a Netflix diz que,
+
+162
+00:07:26,629 --> 00:07:28,409
+nos mercados onde é muito conhecida,
+
+163
+00:07:28,649 --> 00:07:29,649
+lidera com o N.
+
+164
+00:07:30,109 --> 00:07:31,589
+Existe poder em ser dono de uma
+
+165
+00:07:31,589 --> 00:07:32,909
+letra do alfabeto.
+
+166
+00:07:33,219 --> 00:07:34,899
+Mas, sem o vermelho,
+
+167
+00:07:35,119 --> 00:07:36,339
+o N poderia não ser lido como
+
+168
+00:07:36,339 --> 00:07:38,439
+Netflix, por isso ele aparece sempre na
+
+169
+00:07:38,439 --> 00:07:40,439
+cor assinatura, o vermelho Netflix,
+
+170
+00:07:40,819 --> 00:07:42,259
+com o vermelho escuro de apoio.
+
+171
+00:07:42,929 --> 00:07:44,709
+O guia lista o que é proibido,
+
+172
+00:07:45,009 --> 00:07:46,809
+esticar, girar, achatar numa cor só,
+
+173
+00:07:46,969 --> 00:07:49,809
+pôr efeitos, colocar sobre fundo poluído ou
+
+174
+00:07:49,809 --> 00:07:52,569
+sobre vermelho. E duas regras curiosas,
+
+175
+00:07:52,789 --> 00:07:54,189
+o ele não pode ir no chão,
+
+176
+00:07:54,349 --> 00:07:55,269
+onde alguém pise,
+
+177
+00:07:55,589 --> 00:07:57,389
+nem em comida que possa ser mordida.
+
+178
+00:07:58,149 --> 00:07:59,609
+A identidade é fixa.
+
+179
+00:07:59,849 --> 00:08:00,849
+A voz? Não.
+
+180
+00:08:01,209 --> 00:08:03,089
+Um estudo comparou as redes da Netflix
+
+181
+00:08:03,089 --> 00:08:04,789
+nos Estados Unidos e na Espanha,
+
+182
+00:08:04,989 --> 00:08:05,869
+durante três meses.
+
+183
+00:08:06,369 --> 00:08:09,429
+No Twitter, 60 % dos posts espanhóis
+
+184
+00:08:09,429 --> 00:08:10,529
+tinham intenção de humor,
+
+185
+00:08:11,029 --> 00:08:14,109
+contra 36 ,7 % dos americanos.
+
+186
+00:08:14,469 --> 00:08:16,429
+A conta americana informa mais,
+
+187
+00:08:16,689 --> 00:08:19,029
+a espanhola brinca mais e chama mais
+
+188
+00:08:19,029 --> 00:08:19,589
+para a ação.
+
+189
+00:08:22,899 --> 00:08:24,419
+Dezembro de 2015,
+
+190
+00:08:24,799 --> 00:08:26,159
+quinto debate republicano,
+
+191
+00:08:26,399 --> 00:08:27,479
+ao vivo na CNN.
+
+192
+00:08:27,939 --> 00:08:29,999
+Horas antes, a conta oficial de House
+
+193
+00:08:29,999 --> 00:08:30,959
+of Cards avisa.
+
+194
+00:08:31,319 --> 00:08:33,919
+O presidente Underwood fará um anúncio especial
+
+195
+00:08:33,919 --> 00:08:34,739
+durante o debate.
+
+196
+00:08:35,479 --> 00:08:41,879
+É um novo dia na América. Hoje, mais pessoas vão trabalhar,
+
+197
+00:08:41,929 --> 00:08:48,329
+voltar para suas famílias e dormir mais tranquilas do que nunca.
+
+198
+00:08:48,379 --> 00:08:54,779
+(…) Esse homem é Frank Underwood.
+
+199
+00:08:55,129 --> 00:08:57,829
+No intervalo, entra um comercial de campanha.
+
+200
+00:08:58,129 --> 00:09:00,229
+O candidato é Frank Underwood,
+
+201
+00:09:00,609 --> 00:09:01,609
+o presidente da série,
+
+202
+00:09:01,889 --> 00:09:02,929
+com o hashtag propria,
+
+203
+00:09:03,129 --> 00:09:04,969
+um site de campanha falso e a
+
+204
+00:09:04,969 --> 00:09:06,529
+data de estreia da quarta temporada,
+
+205
+00:09:06,869 --> 00:09:07,889
+4 de março.
+
+206
+00:09:09,649 --> 00:09:12,499
+Eu sou Frank Underwood, e aprovo esta mensagem.
+
+207
+00:09:12,849 --> 00:09:14,949
+A série não interrompeu a conversa política.
+
+208
+00:09:15,329 --> 00:09:16,309
+Entrou nela.
+
+209
+00:09:16,819 --> 00:09:18,559
+No Brasil, o caminho foi o das
+
+210
+00:09:18,559 --> 00:09:20,539
+parcerias. Segundo o Meio & Mensagem,
+
+211
+00:09:20,539 --> 00:09:21,819
+Senna, de 2024,
+
+212
+00:09:22,259 --> 00:09:24,059
+foi a produção brasileira da Netflix com
+
+213
+00:09:24,059 --> 00:09:25,859
+mais parcerias comerciais.
+
+214
+00:09:26,179 --> 00:09:28,059
+Heineken, Guaraná Antarctica,
+
+215
+00:09:28,459 --> 00:09:30,439
+Claro, McDonald's e outras.
+
+216
+00:09:33,739 --> 00:09:36,419
+Em 2021, uma série coreana mudou a
+
+217
+00:09:36,419 --> 00:09:38,279
+escala. Na carta aos acionistas,
+
+218
+00:09:38,459 --> 00:09:40,459
+a Netflix chamou Round 6 de nosso
+
+219
+00:09:40,459 --> 00:09:42,119
+maior programa de TV de todos os
+
+220
+00:09:42,119 --> 00:09:45,079
+tempos. 142 milhões de domicílios
+
+221
+00:09:45,079 --> 00:09:46,659
+nas 4 primeiras semanas,
+
+222
+00:09:47,139 --> 00:09:48,979
+número 1 em 94 países.
+
+223
+00:09:49,619 --> 00:09:51,059
+No ranking oficial de hoje,
+
+224
+00:09:51,299 --> 00:09:53,679
+que somam as visualizações dos primeiros 91
+
+225
+00:09:53,679 --> 00:09:56,339
+dias, a primeira temporada de Round 6
+
+226
+00:09:56,339 --> 00:09:58,539
+tem 265 milhões,
+
+227
+00:09:59,019 --> 00:10:00,619
+é a série mais vista da história
+
+228
+00:10:00,619 --> 00:10:01,359
+da plataforma.
+
+229
+00:10:01,909 --> 00:10:04,089
+Antes dela, veio La Casa de Papel,
+
+230
+00:10:04,269 --> 00:10:05,049
+na mesma carta,
+
+231
+00:10:05,329 --> 00:10:06,729
+a Netflix diz que foi o primeiro
+
+232
+00:10:06,729 --> 00:10:08,769
+título fora do inglês a provar que,
+
+233
+00:10:08,969 --> 00:10:10,449
+com legenda e dublagem,
+
+234
+00:10:10,809 --> 00:10:12,809
+grandes histórias podem vir de qualquer lugar
+
+235
+00:10:12,809 --> 00:10:14,509
+e ser amadas em todo lugar.
+
+236
+00:10:15,099 --> 00:10:17,859
+Em inglês, Wednesday lidera,
+
+237
+00:10:17,939 --> 00:10:19,639
+com 252 milhões,
+
+238
+00:10:20,099 --> 00:10:22,379
+Stranger Things 4 soma 140 milhões.
+
+239
+00:10:22,989 --> 00:10:25,969
+Uma pesquisadora chama isso de audiência transnacional,
+
+240
+00:10:26,289 --> 00:10:28,769
+dividida entre fronteiras e não dentro delas.
+
+241
+00:10:29,919 --> 00:10:31,699
+Toda essa máquina tinha um preço.
+
+242
+00:10:32,259 --> 00:10:34,659
+Em 2023, ele chegou na sua conta.
+
+243
+00:10:35,689 --> 00:10:37,309
+Em fevereiro de 2023,
+
+244
+00:10:37,629 --> 00:10:38,989
+a Netflix disse que mais de 100
+
+245
+00:10:38,989 --> 00:10:41,629
+milhões de domicílios compartilhavam contas
+
+246
+00:10:41,629 --> 00:10:43,909
+e que isso prejudicava a capacidade de
+
+247
+00:10:43,909 --> 00:10:45,409
+investir em séries e filmes.
+
+248
+00:10:45,989 --> 00:10:48,849
+A carta aos acionistas já previa cancelamentos
+
+249
+00:10:48,849 --> 00:10:49,789
+em cada mercado.
+
+250
+00:10:50,639 --> 00:10:53,139
+Em maio, o compartilhamento pago chegou a
+
+251
+00:10:53,139 --> 00:10:54,139
+mais de 100 países.
+
+252
+00:10:54,599 --> 00:10:56,359
+Em julho, a carta dizia que a
+
+253
+00:10:56,359 --> 00:10:57,879
+receita em cada região já era maior
+
+254
+00:10:57,879 --> 00:10:58,559
+do que antes,
+
+255
+00:10:58,959 --> 00:11:01,459
+e que as adesões superavam os cancelamentos.
+
+256
+00:11:02,149 --> 00:11:03,629
+Foi um acerto?
+
+257
+00:11:04,089 --> 00:11:05,669
+Pelos números da própria empresa,
+
+258
+00:11:06,089 --> 00:11:08,309
+sim. Para quem dividia a senha,
+
+259
+00:11:08,529 --> 00:11:09,269
+a conta mudou.
+
+260
+00:11:09,709 --> 00:11:11,389
+Veio também o plano com anúncios em
+
+261
+00:11:11,389 --> 00:11:12,769
+novembro de 2022,
+
+262
+00:11:13,209 --> 00:11:13,989
+em 12 países,
+
+263
+00:11:14,229 --> 00:11:14,929
+incluindo o Brasil,
+
+264
+00:11:15,349 --> 00:11:16,949
+em média de 4 a 5 minutos
+
+265
+00:11:16,949 --> 00:11:18,229
+de anúncio por hora.
+
+266
+00:11:18,789 --> 00:11:20,009
+No fim de 2024,
+
+267
+00:11:20,469 --> 00:11:22,109
+ele respondia por mais da metade das
+
+268
+00:11:22,109 --> 00:11:24,149
+novas assinaturas nos países onde existe.
+
+269
+00:11:24,949 --> 00:11:27,149
+E a carta daquele trimestre avisava,
+
+270
+00:11:27,429 --> 00:11:28,689
+de tempos em tempos,
+
+271
+00:11:28,829 --> 00:11:30,369
+a Netflix vai pedir que você pague
+
+272
+00:11:30,369 --> 00:11:31,089
+um pouco mais.
+
+273
+00:11:31,569 --> 00:11:32,769
+E a concorrência?
+
+274
+00:11:33,289 --> 00:11:35,549
+Em 2019, a carta aos acionistas foi
+
+275
+00:11:35,549 --> 00:11:38,309
+direta, competimos com o Fortnite e
+
+276
+00:11:38,309 --> 00:11:39,249
+perdemos pra ele,
+
+277
+00:11:39,589 --> 00:11:40,689
+mais do que pra HBO.
+
+278
+00:11:41,309 --> 00:11:43,049
+Quando o YouTube caiu por alguns minutos,
+
+279
+00:11:43,429 --> 00:11:46,069
+a audiência e os cadastros da Netflix subiram.
+
+280
+00:11:46,789 --> 00:11:49,939
+a gente tenta não pensar em termos de vício.
+
+281
+00:11:49,989 --> 00:11:53,139
+A gente pensa assim: o que você vai fazer com o seu tempo
+
+282
+00:11:53,189 --> 00:11:56,339
+e quando quiser relaxar? Você pode ver TV linear,
+
+283
+00:11:56,389 --> 00:11:59,539
+jogar videogame, ver YouTube… ou ver Netflix.
+
+284
+00:12:02,739 --> 00:12:04,639
+Nosso trabalho número um é o fandom.
+
+285
+00:12:04,989 --> 00:12:06,829
+Em novembro de 2025,
+
+286
+00:12:07,069 --> 00:12:08,469
+abriu a primeira Netflix House,
+
+287
+00:12:08,729 --> 00:12:09,649
+perto da Filadélfia.
+
+288
+00:12:10,229 --> 00:12:11,609
+Em dezembro, a de Dallas,
+
+289
+00:12:11,909 --> 00:12:13,789
+mais de 9 mil metros quadrados,
+
+290
+00:12:14,189 --> 00:12:16,729
+entrada grátis e experiências pagas de Stranger
+
+291
+00:12:16,729 --> 00:12:17,889
+Things e Round 6.
+
+292
+00:12:18,249 --> 00:12:20,269
+Uma terceira está prevista para Las Vegas
+
+293
+00:12:20,269 --> 00:12:21,409
+em 2027.
+
+294
+00:12:23,179 --> 00:12:24,899
+A porta de entrada é um envelope
+
+295
+00:12:24,899 --> 00:12:27,719
+vermelho gigante, nas palavras da própria Netflix,
+
+296
+00:12:28,099 --> 00:12:30,479
+uma referência às origens do DVD pelo correio.
+
+297
+00:12:31,939 --> 00:12:34,664
+Estivemos na sua sala por muito tempo.
+
+298
+00:12:34,714 --> 00:12:37,439
+Agora estamos dizendo: venha para a nossa sala.
+
+299
+00:12:37,789 --> 00:12:40,449
+Ela começou como um envelope vermelho
+
+300
+00:12:40,449 --> 00:12:41,609
+que chegava a sua casa.
+
+301
+00:12:42,109 --> 00:12:44,009
+Agora, o envelope vermelho é a porta
+
+302
+00:12:44,009 --> 00:12:44,729
+da casa dela.
+
+303
+00:12:45,369 --> 00:12:47,609
+Depois de quase 30 anos disputando seu
+
+304
+00:12:47,609 --> 00:12:48,869
+tempo dentro de casa,
+
+305
+00:12:49,209 --> 00:12:51,109
+a Netflix quer também o seu tempo
+
+306
+00:12:51,109 --> 00:12:51,729
+fora dela.
+
+307
+00:12:52,879 --> 00:12:54,699
+Brand by Izoton.
+
+308
+00:12:55,219 --> 00:12:56,319
+Até o próximo arquivo.
+

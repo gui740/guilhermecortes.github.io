@@ -45,3 +45,8 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Adam Brown - DVD Box Set Collection.jpg | Adam Brown (Wikimedia Commons) | cap. 1 e 3 (box sets) | Livre com atribuição (CC BY-SA 2.0) | ver IMAGENS.md |
 | Front Man cosplay.jpg | Rose Abrams (Wikimedia Commons) | cap. 8, Round 6 (bloco 38) | Livre com atribuição (CC BY 4.0) | ver IMAGENS.md |
 | Narração (voz do Guilherme) | Próprio | todo o vídeo | Próprio | gravada por ele; a voz Gacrux (TTS) saiu do episódio |
+| Clock analog clock.jpg | Paolo Neo (Wikimedia Commons) | cap. 3, 195 anos e "não deixar você esperar" | Livre (Public domain) | objeto ou conceito, não registro de fato |
+| Chocolate cupcakes.jpg | Pamela from DC Metro (Wikimedia Commons) | cap. 3, "cupcake grátis" | Livre (CC BY 2.0) | objeto ou conceito, não registro de fato |
+| Salmo trutta.jpg | Eric Engbretson for U.S. Fish and Wildlife Service (Wikimedia Commons) | cap. 5, keeper test (pescaria) | Livre (Public domain) | objeto ou conceito, não registro de fato |
+| Living room in apartment of Condomínio do Edifício Zaher, Le Blond, Rio de Janeiro, Brazil.jpg | Wilfredor (Wikimedia Commons) | cap. 4, o que você assiste | Livre (CC0) | objeto ou conceito, não registro de fato |
+| World blank map (grey & white).png | Mariomassone (Wikimedia Commons) | cap. 8, audiência transnacional | Livre (CC BY-SA 3.0) | objeto ou conceito, não registro de fato |

@@ -53,12 +53,19 @@ const transDe = (() => { const m: Record<string, number> = {}; for (const tr of 
 
 /** Câmera em degraus: a cada "passo" (palavra da fala), um pequeno salto de zoom e de posição, com 5 quadros de assentamento. */
 const CameraPassos: React.FC<{ passos: number[]; base: number; children: React.ReactNode; arquivo: boolean }> = ({ passos, base, children, arquivo }) => {
+  // pulso de câmera a cada 0,8 s (alterna aproximar/afastar, sem zoom acumulado), e os passos da fala somam um pequeno salto extra;
+  // assim nenhum quadro fica igual por mais de ~0,8 s (meta: nada parado por 1 s ou mais na medida sem grão)
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  let z = base, x = 0, y = 0;
-  passos.forEach((p, i) => {
-    const k = interpolate(f - Math.round(p * fps), [0, 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-    z += 0.035 * k; x += (i % 2 ? 14 : -14) * k; y += (i % 3 === 0 ? -8 : 6) * k;
+  const P = Math.round(0.8 * fps);
+  const n = Math.floor(f / P), dentro = f - n * P;
+  const k = interpolate(dentro, [0, 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const alvo = (i: number) => ({ z: i % 2 ? 0.03 : 0, x: [0, 14, -10, 8][i % 4], y: [0, -8, 6, -4][i % 4] });
+  const a0 = alvo(Math.max(0, n - 1)), a1 = alvo(n);
+  let z = base + (n === 0 ? a1.z * k : a0.z + (a1.z - a0.z) * k), x = n === 0 ? a1.x * k : a0.x + (a1.x - a0.x) * k, y = n === 0 ? a1.y * k : a0.y + (a1.y - a0.y) * k;
+  passos.forEach((p) => {
+    const kk = interpolate(f - Math.round(p * fps), [0, 4, 12], [0, 1, 0.6], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+    z += 0.012 * kk;
   });
   if (arquivo) return <AbsoluteFill>{children}</AbsoluteFill>;
   return <AbsoluteFill style={{ transform: `translate(${x}px, ${y}px) scale(${z})`, transformOrigin: "50% 48%" }}>{children}</AbsoluteFill>;
