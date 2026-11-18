@@ -35,4 +35,23 @@ Atualizado a cada etapa concluída.
 - **Medida rápida (1:00–3:00, sem pulso):** 12% parado (antes, 35%) e maior trecho de 4,0 s. Esse trecho era o bloco 09, já corrigido com o texto na tela.
 
 ## Etapa 2: montagem completa 540p
-Em andamento: render com pulso (`out/v3a/partes/ep540c_*`). Depois, medida de controle sem pulso.
+**Render com pulso (ep540c) terminou às 07:27Z** (não travou, só foi mais lento que o previsto). Medida sem grão: **18% parado**, maior trecho 4,3 s, 4 trechos acima de 2,5 s. Reprovado (meta 5% / 2,5 s).
+
+Diagnóstico pelos quadros congelados:
+- laterais vazias na maior parte do tempo (as imagens só entravam até o número de imagens do bloco, em geral 1 a 3);
+- as etiquetas de palavra eram pequenas demais para contar como mudança (em 160 px viram uma faixa de 25x6 px no mesmo lugar);
+- documentos ficavam 8 a 10 s parados com um zoom de 12%;
+- alguns elementos centrais pequenos (medidor, proibições, pôsteres);
+- a medida usa janela de 1 s: qualquer segundo sem mudança grande conta como parado.
+
+Reforço de conteúdo (rodada v3b-d):
+1. **Fichas de dossiê nas laterais livres**: a palavra-chave que ele diz entra num cartão de papel com o código do arquivo ("ARQ 06 · Nº 07"), deslizando da borda em degraus, lados alternados, no máximo uma por 0,9 s. Onde a lateral tem imagem real, fica a etiqueta pequena embaixo. Nas cenas de documento a ficha é menor e colada na borda para não cobrir o texto.
+2. **Imagens reais em rodízio nas laterais**: a cada ~2,4 s durante as cenas estreitas, lados alternados, nunca a mesma imagem dos dois lados ao mesmo tempo (95 entradas, antes 67).
+3. **Leitura de documento em degraus ("lupa")**: a cada ~2,1 s a câmera vai para outro pedaço do trecho citado e volta ao todo no fim; o grifo e o sublinhado acompanham.
+4. **Elementos centrais maiores**: medidor 1,7x, proibições 1,45x, pôsteres 1,2x.
+5. **Deriva de câmera**: órbita lenta e contínua (26 px a cada 7 s, ~23 px/s, sem paradas, não sincronizada) + zoom de 0,5%/s. Não é o pulso: tem chave própria.
+6. O pulso continua como pedido: no máximo 1,5%, preso ao começo das palavras, desligado em documento, pôster, cores, proibições e logo.
+
+Teste no trecho mais difícil (7:40–8:20, proibições + barras + documento): normal 8% parado (antes 40%), pulso desligado 11%.
+
+Em andamento: render 540p completo (ep540d) → medida com pulso desligado → medida só conteúdo (pulso e deriva desligados). As três medidas entram no relatório.

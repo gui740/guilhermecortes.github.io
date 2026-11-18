@@ -68,20 +68,20 @@
    ],
    "etiquetas": [
     {
-     "t": 2.06,
-     "texto": "PRECISO",
+     "t": 1.06,
+     "texto": "AMBIÇÃO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.66,
-     "texto": "DISCO",
+     "t": 2.06,
+     "texto": "PRECISO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.9,
-     "texto": "NETFLIX",
+     "t": 2.98,
+     "texto": "DISCO",
      "lado": "esq",
      "estreita": true
     },
@@ -92,20 +92,8 @@
      "estreita": true
     },
     {
-     "t": 5.43,
-     "texto": "1997",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 6.96,
-     "texto": "MANDANDO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 7.86,
-     "texto": "PELO",
+     "t": 7.32,
+     "texto": "DVDS",
      "lado": "esq",
      "estreita": true
     }
@@ -132,14 +120,23 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 10.01
+     "fim": 7.16
     },
     {
-     "t": 1.35,
+     "t": 3.9,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
+     "grande": false,
+     "fim": 10.01
+    },
+    {
+     "t": 6.96,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 560,
      "grande": false,
      "fim": 10.01
     }
@@ -262,26 +259,14 @@
      "estreita": false
     },
     {
-     "t": 2.26,
-     "texto": "PARA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 3.5,
+     "t": 3.12,
      "texto": "NETFLIX",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 4.54,
-     "texto": "HISTÓRIA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 5.26,
-     "texto": "TELEVISÃO",
+     "t": 4.74,
+     "texto": "HISTÓRIA",
      "lado": "dir",
      "estreita": false
     },
@@ -292,27 +277,21 @@
      "estreita": false
     },
     {
-     "t": 7.24,
-     "texto": "DERAM",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 8.1,
-     "texto": "ESPECTADOR",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 9.66,
+     "t": 7.66,
      "texto": "CONTROLE",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 11.58,
-     "texto": "EPISÓDIOS",
+     "t": 9.98,
+     "texto": "REMOTO",
      "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 11.24,
+     "texto": "MARATONA",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -384,13 +363,13 @@
    ],
    "etiquetas": [
     {
-     "t": 1.7,
-     "texto": "PRÓPRIO",
+     "t": 1.34,
+     "texto": "CONTEÚDO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.36,
+     "t": 2.48,
      "texto": "2005",
      "lado": "dir",
      "estreita": true
@@ -412,11 +391,11 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 4.95
     },
     {
-     "t": 1.0,
+     "t": 3.56,
      "src": "media/v3img/rec_envelope.png",
      "tipo": "rec",
      "lado": "dir",
@@ -477,8 +456,8 @@
    ],
    "etiquetas": [
     {
-     "t": 2.23,
-     "texto": "2011",
+     "t": 1.38,
+     "texto": "VEIO",
      "lado": "esq",
      "estreita": true
     }
@@ -495,15 +474,6 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
-     "fim": 3.03
-    },
-    {
-     "t": 1.38,
-     "src": "media/stills/poster_houseofcards.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 210,
      "grande": false,
      "fim": 3.03
     }
@@ -562,15 +532,21 @@
    ],
    "etiquetas": [
     {
-     "t": 2.36,
-     "texto": "VALIA",
+     "t": 0.68,
+     "texto": "PERGUNTA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.02,
-     "texto": "PENA",
+     "t": 1.72,
+     "texto": "TINHAM",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 2.76,
+     "texto": "VALIA",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -589,15 +565,6 @@
      "tipo": "rec",
      "lado": "esq",
      "y": 150,
-     "grande": true,
-     "fim": 3.8
-    },
-    {
-     "t": 1.24,
-     "src": "media/stills/poster_houseofcards.jpg",
-     "tipo": "card",
-     "lado": "dir",
-     "y": 210,
      "grande": false,
      "fim": 3.8
     }
@@ -711,7 +678,17 @@
     3.5,
     4.0
    ],
-   "laterais": [],
+   "laterais": [
+    {
+     "t": 0.5,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150,
+     "grande": false,
+     "fim": 4.61
+    }
+   ],
    "start": 118.06
   },
   {
@@ -787,32 +764,32 @@
    ],
    "etiquetas": [
     {
-     "t": 4.38,
-     "texto": "APOSTA",
+     "t": 0.8,
+     "texto": "HISTÓRIA",
      "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 2.36,
+     "texto": "QUEM",
+     "lado": "dir",
      "estreita": true
     },
     {
      "t": 5.0,
      "texto": "CRESCEU",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.92,
-     "texto": "2018",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 7.46,
-     "texto": "HASTINGS",
+     "t": 6.06,
+     "texto": "2018",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 8.16,
-     "texto": "NETFLIX",
+     "t": 8.02,
+     "texto": "QUANTO",
      "lado": "esq",
      "estreita": true
     },
@@ -820,12 +797,6 @@
      "t": 8.96,
      "texto": "INVESTIR",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 9.58,
-     "texto": "CONTEÚDO",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -851,26 +822,26 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 4.1
     },
     {
-     "t": 1.2,
+     "t": 4.38,
      "src": "media/stills/poster_madmen.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
      "grande": false,
-     "fim": 4.1
+     "fim": 10.95
     },
     {
-     "t": 2.36,
+     "t": 7.46,
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "esq",
-     "y": 600,
+     "y": 560,
      "grande": false,
-     "fim": 4.1
+     "fim": 10.95
     }
    ],
    "start": 141.281
@@ -950,33 +921,27 @@
    ],
    "etiquetas": [
     {
-     "t": 1.91,
-     "texto": "APOSTA",
+     "t": 0.76,
+     "texto": "TROUXE",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.74,
+     "t": 2.32,
      "texto": "SOLTAR",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.56,
+     "t": 3.26,
      "texto": "EPISÓDIOS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 4.4,
-     "texto": "ONDE",
+     "t": 4.74,
+     "texto": "VEIO",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.14,
-     "texto": "IDEIA",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -998,11 +963,11 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 6.07
     },
     {
-     "t": 1.06,
+     "t": 2.74,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
@@ -1072,19 +1037,19 @@
    ],
    "etiquetas": [
     {
-     "t": 2.32,
-     "texto": "VIROU",
+     "t": 1.0,
+     "texto": "LINEAR",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.46,
-     "texto": "PESQUISADORES",
+     "t": 2.32,
+     "texto": "VIROU",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.32,
+     "t": 4.02,
      "texto": "CHAMAM",
      "lado": "esq",
      "estreita": true
@@ -1096,51 +1061,33 @@
      "estreita": true
     },
     {
-     "t": 6.02,
-     "texto": "RECURSOS",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 6.74,
      "texto": "REPRODUÇÃO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
-     "t": 7.64,
+     "t": 7.82,
      "texto": "PRÓXIMO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 8.54,
-     "texto": "EPISÓDIO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 9.54,
-     "texto": "PULAR",
+     "t": 9.06,
+     "texto": "BOTÃO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 10.52,
+     "t": 10.8,
      "texto": "MANTÉM",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 11.32,
-     "texto": "VOCÊ",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 12.17,
+     "t": 11.8,
      "texto": "MARATONA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -1173,14 +1120,41 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 12.85
+     "fim": 6.22
     },
     {
-     "t": 1.26,
+     "t": 3.46,
      "src": "media/v3img/rec_controle.png",
      "tipo": "rec",
      "lado": "dir",
      "y": 210,
+     "grande": false,
+     "fim": 8.74
+    },
+    {
+     "t": 6.02,
+     "src": "media/stills/web_skipintro.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 11.52
+    },
+    {
+     "t": 8.54,
+     "src": "media/v3img/rec_controle.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 600,
+     "grande": false,
+     "fim": 12.85
+    },
+    {
+     "t": 11.32,
+     "src": "media/stills/web_skipintro.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150,
      "grande": false,
      "fim": 12.85
     }
@@ -1231,26 +1205,14 @@
      "estreita": false
     },
     {
-     "t": 1.12,
-     "texto": "DESCREVE",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 1.92,
      "texto": "ALGUNS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 3.38,
      "texto": "EPISÓDIO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 4.16,
-     "texto": "PRÓXIMO",
      "lado": "esq",
      "estreita": false
     },
@@ -1261,15 +1223,9 @@
      "estreita": false
     },
     {
-     "t": 5.64,
-     "texto": "NINGUÉM",
+     "t": 5.88,
+     "texto": "PRECISA",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.64,
-     "texto": "NADA",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -1316,26 +1272,14 @@
    ],
    "etiquetas": [
     {
-     "t": 1.76,
-     "texto": "136",
+     "t": 1.2,
+     "texto": "APERTADO",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.24,
-     "texto": "MILHÕES",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 3.98,
      "texto": "VEZES",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.62,
-     "texto": "TÍPICO",
      "lado": "dir",
      "estreita": true
     }
@@ -1359,7 +1303,7 @@
      "fim": 5.55
     },
     {
-     "t": 0.94,
+     "t": 3.24,
      "src": "media/stills/web_skipintro_tv.png",
      "tipo": "print",
      "lado": "dir",
@@ -1430,85 +1374,73 @@
    ],
    "etiquetas": [
     {
-     "t": 2.52,
-     "texto": "15",
+     "t": 0.88,
+     "texto": "PESQUISA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.18,
-     "texto": "VEZES",
+     "t": 1.84,
+     "texto": "CERCA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.98,
+     "t": 4.22,
      "texto": "PESSOAS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 4.96,
+     "t": 5.14,
      "texto": "SÉRIE",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 6.5,
-     "texto": "5",
+     "t": 6.1,
+     "texto": "PRIMEIROS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 7.68,
+     "t": 7.78,
      "texto": "NETFLIX",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 8.58,
-     "texto": "250",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 9.62,
      "texto": "SÉRIES",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     },
     {
-     "t": 10.98,
-     "texto": "UNIDOS",
-     "lado": "esq",
+     "t": 10.62,
+     "texto": "ESTADOS",
+     "lado": "dir",
      "estreita": false
     },
     {
-     "t": 11.66,
+     "t": 11.74,
      "texto": "REINO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 12.32,
-     "texto": "CANADÁ",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 13.44,
-     "texto": "PRIMEIRO",
+     "t": 12.68,
+     "texto": "CANADÁ",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 14.26,
+     "t": 14.5,
      "texto": "LEVOU",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 15.68,
+     "t": 15.88,
      "texto": "2017",
      "lado": "dir",
      "estreita": false
@@ -1545,22 +1477,31 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 10.37
+     "fim": 5.78
     },
     {
-     "t": 1.15,
+     "t": 3.18,
      "src": "media/stills/poster_wednesday.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
      "grande": false,
-     "fim": 10.37
+     "fim": 8.78
     },
     {
-     "t": 1.84,
+     "t": 5.58,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 10.37
+    },
+    {
+     "t": 8.58,
+     "src": "media/stills/poster_wednesday.jpg",
+     "tipo": "card",
+     "lado": "dir",
      "y": 600,
      "grande": false,
      "fim": 10.37
@@ -1613,56 +1554,44 @@
    ],
    "etiquetas": [
     {
-     "t": 3.34,
-     "texto": "ANOS",
+     "t": 1.34,
+     "texto": "EMPRESA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 4.19,
-     "texto": "ECONOMIZADOS",
+     "t": 2.4,
+     "texto": "195",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 3.88,
+     "texto": "ECONOMIZADOS",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 4.92,
      "texto": "SOMANDO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.88,
-     "texto": "MUNDO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 7.1,
+     "t": 7.24,
      "texto": "ENGENHEIRO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 7.95,
-     "texto": "TALVEZ",
+     "t": 8.92,
+     "texto": "BOTÃO",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 9.2,
-     "texto": "ESCRITO",
-     "lado": "esq",
      "estreita": true
     },
     {
      "t": 10.14,
      "texto": "GRÁTIS",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 10.78,
-     "texto": "TIVESSE",
      "lado": "esq",
      "estreita": true
     },
@@ -1701,7 +1630,7 @@
      "fim": 5.49
     },
     {
-     "t": 1.3,
+     "t": 3.34,
      "src": "media/v3img/rec_cupcake.png",
      "tipo": "rec",
      "lado": "dir",
@@ -1710,13 +1639,22 @@
      "fim": 5.49
     },
     {
-     "t": 2.4,
+     "t": 5.88,
      "src": "media/stills/web_skipintro.png",
      "tipo": "print",
      "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 12.48
+    },
+    {
+     "t": 8.6,
+     "src": "media/v3img/rec_cupcake.png",
+     "tipo": "rec",
+     "lado": "dir",
      "y": 600,
      "grande": false,
-     "fim": 5.49
+     "fim": 12.48
     }
    ],
    "start": 237.311
@@ -1757,20 +1695,20 @@
    ],
    "etiquetas": [
     {
-     "t": 2.38,
-     "texto": "PRODUTO",
+     "t": 0.94,
+     "texto": "COISA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.06,
-     "texto": "DEIXAR",
+     "t": 2.38,
+     "texto": "PRODUTO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.7,
-     "texto": "ESPERAR",
+     "t": 3.38,
+     "texto": "VOCÊ",
      "lado": "esq",
      "estreita": true
     }
@@ -1794,13 +1732,13 @@
      "fim": 2.05
     },
     {
-     "t": 0.94,
+     "t": 3.06,
      "src": "media/v3img/rec_controle.png",
      "tipo": "rec",
      "lado": "dir",
      "y": 210,
      "grande": false,
-     "fim": 2.05
+     "fim": 4.64
     }
    ],
    "start": 249.791
@@ -1861,14 +1799,14 @@
    ],
    "etiquetas": [
     {
-     "t": 2.38,
-     "texto": "NETFLIX",
+     "t": 1.7,
+     "texto": "HASTINGS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.16,
-     "texto": "SISTEMA",
+     "t": 2.76,
+     "texto": "ABRIU",
      "lado": "dir",
      "estreita": true
     },
@@ -1879,26 +1817,14 @@
      "estreita": true
     },
     {
-     "t": 4.44,
-     "texto": "PARA",
+     "t": 4.74,
+     "texto": "MUNDO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 5.32,
-     "texto": "OFERECEU",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.96,
-     "texto": "MILHÃO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 6.7,
-     "texto": "QUEM",
+     "t": 6.38,
+     "texto": "DÓLARES",
      "lado": "esq",
      "estreita": true
     },
@@ -1909,15 +1835,9 @@
      "estreita": true
     },
     {
-     "t": 8.2,
-     "texto": "10%",
+     "t": 9.72,
+     "texto": "NUNCA",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 9.94,
-     "texto": "REPETIU",
-     "lado": "dir",
      "estreita": true
     }
    ],
@@ -1945,14 +1865,32 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 10.97
+     "fim": 6.16
     },
     {
-     "t": 1.52,
+     "t": 3.16,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
+     "grande": false,
+     "fim": 9.38
+    },
+    {
+     "t": 5.96,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 10.97
+    },
+    {
+     "t": 9.18,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 600,
      "grande": false,
      "fim": 10.97
     }
@@ -2038,27 +1976,21 @@
    ],
    "etiquetas": [
     {
-     "t": 0.28,
+     "t": 0.44,
      "texto": "VOCÊ",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 0.94,
-     "texto": "VERSÃO",
-     "lado": "dir",
      "estreita": false
     },
     {
      "t": 1.6,
      "texto": "IDEAL",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
-     "t": 2.58,
+     "t": 2.8,
      "texto": "VOCÊ",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -2144,51 +2076,33 @@
    ],
    "etiquetas": [
     {
-     "t": 2.1,
-     "texto": "PALCO",
+     "t": 1.3,
+     "texto": "RESSALVA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.82,
-     "texto": "PARA",
+     "t": 3.26,
+     "texto": "DEPENDER",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.68,
-     "texto": "ALGORITMO",
+     "t": 5.06,
+     "texto": "NETFLIX",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.46,
-     "texto": "COMO",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 6.12,
      "texto": "SERVIÇO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 6.8,
-     "texto": "CURADORIA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 7.64,
-     "texto": "ALGORITMO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 9.25,
+     "t": 8.86,
      "texto": "FERRAMENTA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -2216,13 +2130,22 @@
      "fim": 4.07
     },
     {
-     "t": 1.3,
+     "t": 4.57,
      "src": "media/v3img/card_sofa.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
      "grande": false,
-     "fim": 4.07
+     "fim": 9.83
+    },
+    {
+     "t": 7.64,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 9.83
     }
    ],
    "start": 303.901
@@ -2275,21 +2198,15 @@
    ],
    "etiquetas": [
     {
-     "t": 2.26,
-     "texto": "EMPRESA",
+     "t": 1.44,
+     "texto": "HASTINGS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.02,
-     "texto": "APRENDEU",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 4.63,
+     "t": 4.26,
      "texto": "FAZER",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2308,11 +2225,11 @@
      "tipo": "rec",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 5.05
     },
     {
-     "t": 1.44,
+     "t": 3.02,
      "src": "media/v3img/card_losgatos.jpg",
      "tipo": "card",
      "lado": "dir",
@@ -2374,20 +2291,20 @@
    ],
    "etiquetas": [
     {
-     "t": 2.38,
-     "texto": "MÍNIMO",
+     "t": 1.18,
+     "texto": "QUIS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.38,
-     "texto": "PROCESSO",
+     "t": 2.46,
+     "texto": "MÍNIMO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.24,
-     "texto": "CAOS",
+     "t": 3.86,
+     "texto": "VIRAR",
      "lado": "esq",
      "estreita": true
     }
@@ -2407,11 +2324,11 @@
      "tipo": "print",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 5.08
     },
     {
-     "t": 1.18,
+     "t": 3.38,
      "src": "media/v3img/rec_hastings_2015.png",
      "tipo": "rec",
      "lado": "dir",
@@ -2502,14 +2419,14 @@
    ],
    "etiquetas": [
     {
-     "t": 2.46,
-     "texto": "HASTINGS",
+     "t": 1.3,
+     "texto": "DINHEIRO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.06,
-     "texto": "VEIO",
+     "t": 2.46,
+     "texto": "HASTINGS",
      "lado": "dir",
      "estreita": true
     },
@@ -2520,15 +2437,9 @@
      "estreita": true
     },
     {
-     "t": 4.82,
-     "texto": "STANFORD",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.67,
+     "t": 5.4,
      "texto": "2015",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2552,7 +2463,7 @@
      "fim": 6.6
     },
     {
-     "t": 1.26,
+     "t": 3.06,
      "src": "media/v3img/rec_hastings_2014.png",
      "tipo": "rec",
      "lado": "dir",
@@ -2615,21 +2526,27 @@
    ],
    "etiquetas": [
     {
-     "t": 2.7,
+     "t": 0.96,
+     "texto": "DENSIDADE",
+     "lado": "esq",
+     "estreita": true
+    },
+    {
+     "t": 1.86,
+     "texto": "TALENTO",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 2.94,
      "texto": "PERGUNTA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.5,
-     "texto": "GESTOR",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.11,
+     "t": 4.84,
      "texto": "RESPONDER",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -2649,11 +2566,11 @@
      "tipo": "rec",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 6.06
     },
     {
-     "t": 1.6,
+     "t": 3.5,
      "src": "media/stills/web_keeper.png",
      "tipo": "print",
      "lado": "dir",
@@ -2756,31 +2673,31 @@
    ],
    "etiquetas": [
     {
-     "t": 2.68,
-     "texto": "KEEPER",
+     "t": 0.68,
+     "texto": "OFICIAL",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.52,
-     "texto": "RESPOSTA",
+     "t": 1.98,
+     "texto": "NOME",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 2.98,
+     "texto": "TEST",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 4.94,
      "texto": "EMPRESA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 5.96,
-     "texto": "MAIS",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 6.64,
+     "t": 6.24,
      "texto": "JUSTO",
      "lado": "esq",
      "estreita": false
@@ -2792,73 +2709,49 @@
      "estreita": false
     },
     {
-     "t": 8.52,
+     "t": 8.6,
      "texto": "PRÓPRIA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 9.3,
-     "texto": "ADMITE",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 10.34,
+     "t": 10.42,
      "texto": "PAPEL",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 11.18,
-     "texto": "TESTE",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 12.88,
-     "texto": "NOME",
+     "t": 11.32,
+     "texto": "TESTE",
      "lado": "esq",
-     "estreita": true
+     "estreita": false
     },
     {
-     "t": 13.54,
+     "t": 13.72,
      "texto": "PESCARIA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 14.56,
+     "t": 14.74,
      "texto": "HASTINGS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 15.36,
-     "texto": "CRIANÇA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 16.16,
-     "texto": "DELE",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 18.18,
+     "t": 17.86,
      "texto": "PEIXE",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 18.86,
+     "t": 19.22,
      "texto": "KEEPER",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 19.96,
+     "t": 20.28,
      "texto": "FICA",
      "lado": "dir",
      "estreita": true
@@ -2902,22 +2795,31 @@
      "fim": 3.99
     },
     {
-     "t": 0.98,
+     "t": 12.88,
      "src": "media/v3img/rec_hastings_2014.png",
      "tipo": "rec",
      "lado": "dir",
      "y": 210,
      "grande": false,
-     "fim": 3.99
+     "fim": 18.38
     },
     {
-     "t": 1.6,
+     "t": 15.36,
      "src": "media/v3img/rec_peixe.png",
      "tipo": "rec",
      "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 21.12
+    },
+    {
+     "t": 18.18,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "dir",
      "y": 600,
      "grande": false,
-     "fim": 3.99
+     "fim": 21.12
     }
    ],
    "start": 412.919
@@ -2974,33 +2876,27 @@
      "estreita": false
     },
     {
-     "t": 1.12,
-     "texto": "PRETO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 1.97,
+     "t": 1.66,
      "texto": "BRANCO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 3.0,
      "texto": "COISA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
-     "t": 4.22,
+     "t": 4.6,
      "texto": "EFEITO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 5.7,
      "texto": "REGRA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -3061,13 +2957,13 @@
    ],
    "etiquetas": [
     {
-     "t": 0.42,
+     "t": 0.54,
      "texto": "MARCA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 1.36,
+     "t": 1.46,
      "texto": "NETFLIX",
      "lado": "dir",
      "estreita": false
@@ -3079,32 +2975,20 @@
      "estreita": false
     },
     {
-     "t": 3.54,
-     "texto": "ONDE",
+     "t": 3.96,
+     "texto": "CONHECIDA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 5.12,
-     "texto": "LIDERA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 6.24,
+     "t": 6.54,
      "texto": "PODER",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 7.44,
-     "texto": "DONO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 8.08,
-     "texto": "ALFABETO",
+     "t": 7.72,
+     "texto": "LETRA",
      "lado": "dir",
      "estreita": false
     }
@@ -3156,31 +3040,19 @@
    ],
    "etiquetas": [
     {
-     "t": 0.82,
+     "t": 1.18,
      "texto": "VERMELHO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 1.9,
-     "texto": "PODERIA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 2.6,
+     "t": 2.76,
      "texto": "LIDO",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 3.45,
-     "texto": "NETFLIX",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 4.12,
+     "t": 4.5,
      "texto": "APARECE",
      "lado": "esq",
      "estreita": false
@@ -3192,27 +3064,21 @@
      "estreita": false
     },
     {
-     "t": 6.2,
-     "texto": "VERMELHO",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 7.05,
+     "t": 6.62,
      "texto": "NETFLIX",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 7.7,
-     "texto": "VERMELHO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 8.46,
-     "texto": "APOIO",
+     "t": 7.78,
+     "texto": "VERMELHO",
      "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 8.7,
+     "texto": "APOIO",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -3282,32 +3148,20 @@
      "estreita": false
     },
     {
-     "t": 0.96,
+     "t": 1.26,
      "texto": "PROIBIDO",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 2.08,
-     "texto": "ESTICAR",
+     "t": 2.5,
+     "texto": "GIRAR",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 2.96,
-     "texto": "ACHATAR",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.66,
-     "texto": "NUMA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.8,
-     "texto": "COLOCAR",
+     "t": 4.22,
+     "texto": "EFEITOS",
      "lado": "dir",
      "estreita": false
     },
@@ -3324,39 +3178,33 @@
      "estreita": false
     },
     {
-     "t": 8.18,
+     "t": 8.34,
      "texto": "DUAS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 8.86,
-     "texto": "CURIOSAS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 10.52,
+     "t": 10.36,
      "texto": "PODE",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 11.42,
-     "texto": "ONDE",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 12.66,
+     "t": 11.54,
+     "texto": "ALGUÉM",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 12.94,
      "texto": "COMIDA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
-     "t": 13.54,
-     "texto": "POSSA",
-     "lado": "dir",
+     "t": 13.94,
+     "texto": "MORDIDA",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -3466,68 +3314,44 @@
      "estreita": true
     },
     {
-     "t": 3.06,
+     "t": 3.2,
      "texto": "ESTUDO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.82,
-     "texto": "REDES",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 4.52,
      "texto": "NETFLIX",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.22,
-     "texto": "ESTADOS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 5.94,
-     "texto": "ESPANHA",
+     "t": 5.54,
+     "texto": "UNIDOS",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 6.84,
+     "t": 7.0,
      "texto": "TRÊS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 7.69,
-     "texto": "MESES",
+     "t": 8.32,
+     "texto": "TWITTER",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 9.1,
-     "texto": "60",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 9.92,
      "texto": "POSTS",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 11.5,
-     "texto": "INTENÇÃO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 12.35,
-     "texto": "HUMOR",
+     "t": 11.28,
+     "texto": "TINHAM",
      "lado": "dir",
      "estreita": false
     },
@@ -3538,57 +3362,27 @@
      "estreita": false
     },
     {
-     "t": 13.72,
-     "texto": "7",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 15.06,
      "texto": "AMERICANOS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 16.64,
-     "texto": "AMERICANA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 17.49,
-     "texto": "INFORMA",
+     "t": 16.44,
+     "texto": "CONTA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 18.54,
+     "t": 18.74,
      "texto": "ESPANHOLA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 19.2,
-     "texto": "BRINCA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 20.06,
+     "t": 20.4,
      "texto": "CHAMA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 20.88,
-     "texto": "PARA",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 21.73,
-     "texto": "AÇÃO",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -3706,32 +3500,20 @@
    ],
    "etiquetas": [
     {
-     "t": 2.4,
-     "texto": "REPUBLICANO",
+     "t": 1.9,
+     "texto": "QUINTO",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.5,
-     "texto": "VIVO",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 5.04,
      "texto": "HORAS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
-     "t": 5.98,
+     "t": 6.14,
      "texto": "CONTA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 6.64,
-     "texto": "HOUSE",
      "lado": "esq",
      "estreita": false
     },
@@ -3742,31 +3524,19 @@
      "estreita": false
     },
     {
-     "t": 8.42,
+     "t": 8.64,
      "texto": "PRESIDENTE",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 9.02,
-     "texto": "UNDERWOOD",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 9.68,
      "texto": "FARÁ",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 10.52,
-     "texto": "ESPECIAL",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 11.34,
+     "t": 11.54,
      "texto": "DEBATE",
      "lado": "esq",
      "estreita": false
@@ -3801,7 +3571,7 @@
      "fim": 5.41
     },
     {
-     "t": 1.49,
+     "t": 3.5,
      "src": "media/stills/poster_houseofcards.jpg",
      "tipo": "card",
      "lado": "dir",
@@ -3881,14 +3651,14 @@
    ],
    "etiquetas": [
     {
-     "t": 1.9,
-     "texto": "COMERCIAL",
+     "t": 1.3,
+     "texto": "ENTRA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.0,
-     "texto": "CANDIDATO",
+     "t": 2.22,
+     "texto": "CAMPANHA",
      "lado": "dir",
      "estreita": true
     },
@@ -3899,61 +3669,37 @@
      "estreita": true
     },
     {
-     "t": 4.36,
-     "texto": "UNDERWOOD",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.48,
-     "texto": "PRESIDENTE",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
      "t": 6.2,
      "texto": "SÉRIE",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 6.9,
-     "texto": "HASHTAG",
+     "t": 7.36,
+     "texto": "PROPRIA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 8.0,
-     "texto": "SITE",
+     "t": 8.54,
+     "texto": "CAMPANHA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 8.88,
-     "texto": "FALSO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 9.72,
+     "t": 9.84,
      "texto": "DATA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 10.48,
-     "texto": "QUARTA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 11.33,
-     "texto": "4",
+     "t": 10.92,
+     "texto": "TEMPORADA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 12.04,
+     "t": 12.26,
      "texto": "MARÇO",
      "lado": "esq",
      "estreita": true
@@ -3985,11 +3731,47 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
+     "fim": 5.68
+    },
+    {
+     "t": 3.0,
+     "src": "media/stills/web_drum.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210,
+     "grande": false,
+     "fim": 8.2
+    },
+    {
+     "t": 5.48,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 10.68
+    },
+    {
+     "t": 8.0,
+     "src": "media/stills/web_drum.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 600,
+     "grande": false,
+     "fim": 13.09
+    },
+    {
+     "t": 10.48,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150,
+     "grande": false,
      "fim": 14.27
     },
     {
-     "t": 1.3,
+     "t": 12.89,
      "src": "media/stills/web_drum.png",
      "tipo": "print",
      "lado": "dir",
@@ -4047,21 +3829,15 @@
    ],
    "etiquetas": [
     {
-     "t": 1.12,
+     "t": 1.24,
      "texto": "CONVERSA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 1.97,
-     "texto": "POLÍTICA",
+     "t": 2.48,
+     "texto": "ENTROU",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 2.9,
-     "texto": "NELA",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -4079,7 +3855,7 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": true,
+     "grande": false,
      "fim": 3.97
     }
    ],
@@ -4145,73 +3921,49 @@
    ],
    "etiquetas": [
     {
-     "t": 0.98,
+     "t": 1.1,
      "texto": "CAMINHO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 1.58,
-     "texto": "PARCERIAS",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 2.76,
+     "t": 3.1,
      "texto": "MEIO &",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 3.72,
-     "texto": "SENNA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.57,
+     "t": 4.28,
      "texto": "2024",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 5.44,
+     "t": 5.68,
      "texto": "PRODUÇÃO",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 6.44,
+     "t": 6.58,
      "texto": "NETFLIX",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 7.24,
-     "texto": "MAIS",
+     "t": 7.52,
+     "texto": "PARCERIAS",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 8.06,
-     "texto": "COMERCIAIS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 8.91,
+     "t": 9.36,
      "texto": "HEINEKEN",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 10.0,
-     "texto": "GUARANÁ",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 10.85,
+     "t": 10.48,
      "texto": "ANTARCTICA",
      "lado": "dir",
      "estreita": false
@@ -4223,15 +3975,9 @@
      "estreita": false
     },
     {
-     "t": 12.26,
-     "texto": "MCDONALD'S",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 13.06,
+     "t": 13.3,
      "texto": "OUTRAS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -4334,31 +4080,19 @@
    ],
    "etiquetas": [
     {
-     "t": 0.34,
-     "texto": "2021",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 1.34,
+     "t": 1.46,
      "texto": "SÉRIE",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 2.14,
-     "texto": "MUDOU",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 3.3,
-     "texto": "CARTA",
+     "t": 2.68,
+     "texto": "ESCALA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 4.15,
+     "t": 3.82,
      "texto": "ACIONISTAS",
      "lado": "esq",
      "estreita": false
@@ -4370,45 +4104,39 @@
      "estreita": false
     },
     {
+     "t": 5.84,
+     "texto": "6",
+     "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 7.06,
+     "texto": "PROGRAMA",
+     "lado": "dir",
+     "estreita": true
+    },
+    {
      "t": 8.38,
      "texto": "TEMPOS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 9.6,
-     "texto": "142",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 10.2,
      "texto": "MILHÕES",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
-     "t": 11.34,
+     "t": 11.6,
      "texto": "4",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 12.04,
-     "texto": "PRIMEIRAS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 13.64,
-     "texto": "1",
+     "t": 13.4,
+     "texto": "NÚMERO",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 14.68,
-     "texto": "PAÍSES",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -4436,7 +4164,43 @@
    ],
    "laterais": [
     {
+     "t": 0.34,
+     "src": "media/v3img/card_squid_cosplay.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150,
+     "grande": false,
+     "fim": 5.89
+    },
+    {
+     "t": 3.3,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210,
+     "grande": false,
+     "fim": 5.89
+    },
+    {
      "t": 6.22,
+     "src": "media/stills/carta_q3_21-03.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 12.24
+    },
+    {
+     "t": 9.6,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 600,
+     "grande": false,
+     "fim": 14.88
+    },
+    {
+     "t": 12.04,
      "src": "media/v3img/card_squid_cosplay.jpg",
      "tipo": "card",
      "lado": "esq",
@@ -4445,20 +4209,11 @@
      "fim": 15.88
     },
     {
-     "t": 7.06,
+     "t": 14.68,
      "src": "media/stills/poster_squidgame.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
-     "grande": false,
-     "fim": 15.88
-    },
-    {
-     "t": 7.74,
-     "src": "media/stills/carta_q3_21-03.png",
-     "tipo": "print",
-     "lado": "esq",
-     "y": 600,
      "grande": false,
      "fim": 15.88
     }
@@ -4521,56 +4276,44 @@
      "estreita": false
     },
     {
-     "t": 1.68,
+     "t": 1.78,
      "texto": "SOMAM",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 2.84,
+     "t": 3.08,
      "texto": "PRIMEIROS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 3.46,
-     "texto": "91",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 4.06,
      "texto": "DIAS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
-     "t": 5.04,
+     "t": 5.18,
      "texto": "PRIMEIRA",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
-     "t": 8.54,
-     "texto": "MILHÕES",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 9.4,
-     "texto": "SÉRIE",
+     "t": 6.28,
+     "texto": "6",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 10.2,
-     "texto": "VISTA",
+     "t": 9.66,
+     "texto": "SÉRIE",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 11.0,
-     "texto": "PLATAFORMA",
+     "t": 10.7,
+     "texto": "HISTÓRIA",
      "lado": "dir",
      "estreita": true
     }
@@ -4601,14 +4344,23 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 12.29
+     "fim": 11.2
     },
     {
-     "t": 6.72,
+     "t": 8.54,
      "src": "media/v3img/card_house_guard.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
+     "grande": false,
+     "fim": 12.29
+    },
+    {
+     "t": 11.0,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 560,
      "grande": false,
      "fim": 12.29
     }
@@ -4671,44 +4423,20 @@
    ],
    "etiquetas": [
     {
-     "t": 0.44,
-     "texto": "DELA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 1.06,
      "texto": "VEIO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 1.72,
-     "texto": "PAPEL",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 2.36,
+     "t": 2.72,
      "texto": "CARTA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 3.42,
-     "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.1,
+     "t": 4.46,
      "texto": "PRIMEIRO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 4.82,
-     "texto": "TÍTULO",
      "lado": "esq",
      "estreita": false
     },
@@ -4719,20 +4447,8 @@
      "estreita": false
     },
     {
-     "t": 6.6,
-     "texto": "PROVAR",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 7.28,
      "texto": "LEGENDA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 8.13,
-     "texto": "DUBLAGEM",
      "lado": "esq",
      "estreita": false
     },
@@ -4743,21 +4459,15 @@
      "estreita": false
     },
     {
-     "t": 9.5,
-     "texto": "PODEM",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
      "t": 10.24,
      "texto": "QUALQUER",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     },
     {
-     "t": 10.9,
-     "texto": "LUGAR",
-     "lado": "esq",
+     "t": 11.46,
+     "texto": "AMADAS",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -4781,7 +4491,17 @@
     11.24,
     11.92
    ],
-   "laterais": [],
+   "laterais": [
+    {
+     "t": 0.44,
+     "src": "media/stills/poster_moneyheist.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150,
+     "grande": false,
+     "fim": 5.35
+    }
+   ],
    "start": 601.909
   },
   {
@@ -4830,39 +4550,33 @@
      "estreita": false
     },
     {
-     "t": 2.22,
-     "texto": "LIDERA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 2.84,
+     "t": 3.0,
      "texto": "252",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.69,
-     "texto": "MILHÕES",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 5.3,
-     "texto": "THINGS",
+     "t": 4.1,
+     "texto": "MILHÕES",
      "lado": "dir",
+     "estreita": false
+    },
+    {
+     "t": 5.0,
+     "texto": "STRANGER",
+     "lado": "esq",
      "estreita": false
     },
     {
      "t": 5.96,
      "texto": "SOMA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 6.86,
      "texto": "MILHÕES",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -4913,15 +4627,21 @@
    ],
    "etiquetas": [
     {
-     "t": 2.55,
-     "texto": "TRANSNACIONAL",
+     "t": 0.98,
+     "texto": "CHAMA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.3,
-     "texto": "DIVIDIDA",
+     "t": 2.1,
+     "texto": "TRANSNACIONAL",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 3.86,
+     "texto": "FRONTEIRAS",
+     "lado": "esq",
      "estreita": true
     }
    ],
@@ -4946,20 +4666,11 @@
      "fim": 6.43
     },
     {
-     "t": 0.98,
+     "t": 3.3,
      "src": "media/stills/poster_squidgame.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
-     "grande": false,
-     "fim": 6.43
-    },
-    {
-     "t": 1.7,
-     "src": "media/stills/poster_moneyheist.jpg",
-     "tipo": "card",
-     "lado": "esq",
-     "y": 600,
      "grande": false,
      "fim": 6.43
     }
@@ -5036,25 +4747,25 @@
    ],
    "etiquetas": [
     {
-     "t": 2.64,
-     "texto": "MAIS",
+     "t": 1.98,
+     "texto": "NETFLIX",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.3,
-     "texto": "MILHÕES",
+     "t": 3.16,
+     "texto": "100",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.87,
+     "t": 4.5,
      "texto": "COMPARTILHAVAM",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.79,
+     "t": 6.52,
      "texto": "PREJUDICAVA",
      "lado": "dir",
      "estreita": false
@@ -5066,15 +4777,9 @@
      "estreita": false
     },
     {
-     "t": 8.22,
-     "texto": "INVESTIR",
+     "t": 8.74,
+     "texto": "SÉRIES",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 9.06,
-     "texto": "FILMES",
-     "lado": "esq",
      "estreita": false
     }
    ],
@@ -5101,15 +4806,6 @@
      "tipo": "print",
      "lado": "esq",
      "y": 150,
-     "grande": false,
-     "fim": 4.37
-    },
-    {
-     "t": 1.94,
-     "src": "media/stills/carta_q4_22-06.png",
-     "tipo": "print",
-     "lado": "dir",
-     "y": 210,
      "grande": false,
      "fim": 4.37
     }
@@ -5156,21 +4852,15 @@
      "estreita": false
     },
     {
-     "t": 1.48,
+     "t": 1.8,
      "texto": "PREVIA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 2.08,
-     "texto": "CANCELAMENTOS",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 3.71,
+     "t": 3.32,
      "texto": "MERCADO",
-     "lado": "dir",
+     "lado": "esq",
      "estreita": false
     }
    ],
@@ -5233,63 +4923,45 @@
      "estreita": false
     },
     {
-     "t": 1.36,
-     "texto": "COMPARTILHAMENTO",
+     "t": 1.9,
+     "texto": "PAGO",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 2.2,
-     "texto": "CHEGOU",
-     "lado": "esq",
      "estreita": false
     },
     {
      "t": 2.88,
      "texto": "100",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.96,
-     "texto": "JULHO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 4.8,
-     "texto": "CARTA",
+     "t": 4.16,
+     "texto": "JULHO",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 5.46,
+     "t": 5.72,
      "texto": "RECEITA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.16,
-     "texto": "REGIÃO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 6.86,
+     "t": 6.98,
      "texto": "MAIOR",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 9.26,
-     "texto": "SUPERAVAM",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 9.86,
-     "texto": "CANCELAMENTOS",
+     "t": 8.8,
+     "texto": "ADESÕES",
      "lado": "esq",
+     "estreita": false
+    },
+    {
+     "t": 10.12,
+     "texto": "CANCELAMENTOS",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -5346,27 +5018,21 @@
      "estreita": true
     },
     {
-     "t": 2.8,
-     "texto": "PRÓPRIA",
+     "t": 3.02,
+     "texto": "EMPRESA",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 4.82,
-     "texto": "PARA",
+     "t": 4.9,
+     "texto": "QUEM",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 5.64,
-     "texto": "SENHA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 6.38,
+     "t": 6.5,
      "texto": "CONTA",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -5462,26 +5128,26 @@
    ],
    "etiquetas": [
     {
-     "t": 2.16,
-     "texto": "2022",
+     "t": 0.74,
+     "texto": "PLANO",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 3.84,
-     "texto": "PAÍSES",
+     "t": 1.68,
+     "texto": "NOVEMBRO",
      "lado": "dir",
+     "estreita": true
+    },
+    {
+     "t": 3.58,
+     "texto": "12",
+     "lado": "esq",
      "estreita": true
     },
     {
      "t": 4.52,
      "texto": "INCLUINDO",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 5.64,
-     "texto": "MÉDIA",
      "lado": "dir",
      "estreita": true
     },
@@ -5498,52 +5164,28 @@
      "estreita": false
     },
     {
-     "t": 8.22,
-     "texto": "HORA",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 9.93,
+     "t": 9.54,
      "texto": "2024",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 10.76,
-     "texto": "RESPONDIA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 11.46,
-     "texto": "MAIS",
+     "t": 10.94,
+     "texto": "RESPONDIA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 12.18,
+     "t": 12.4,
      "texto": "NOVAS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 13.24,
+     "t": 13.44,
      "texto": "PAÍSES",
      "lado": "dir",
      "estreita": false
-    },
-    {
-     "t": 14.04,
-     "texto": "ONDE",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 15.46,
-     "texto": "CARTA",
-     "lado": "dir",
-     "estreita": true
     },
     {
      "t": 16.1,
@@ -5552,39 +5194,21 @@
      "estreita": true
     },
     {
-     "t": 16.95,
-     "texto": "AVISAVA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 17.72,
+     "t": 17.94,
      "texto": "TEMPOS",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
-     "t": 19.12,
+     "t": 19.24,
      "texto": "NETFLIX",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 19.8,
-     "texto": "PEDIR",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 20.44,
-     "texto": "PAGUE",
+     "t": 20.22,
+     "texto": "VOCÊ",
      "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 21.29,
-     "texto": "MAIS",
-     "lado": "esq",
      "estreita": true
     }
    ],
@@ -5625,16 +5249,43 @@
      "lado": "esq",
      "y": 150,
      "grande": false,
-     "fim": 7.05
+     "fim": 5.84
     },
     {
-     "t": 1.1,
+     "t": 3.01,
      "src": "media/stills/carta_q4_24-05.png",
      "tipo": "print",
      "lado": "dir",
      "y": 210,
      "grande": false,
      "fim": 7.05
+    },
+    {
+     "t": 5.64,
+     "src": "media/stills/web_ads.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 7.05
+    },
+    {
+     "t": 15.46,
+     "src": "media/stills/carta_q4_24-05.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 600,
+     "grande": false,
+     "fim": 21.86
+    },
+    {
+     "t": 18.42,
+     "src": "media/stills/web_ads.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150,
+     "grande": false,
+     "fim": 21.86
     }
    ],
    "start": 669.709
@@ -5697,74 +5348,62 @@
    ],
    "etiquetas": [
     {
-     "t": 0.26,
+     "t": 0.5,
      "texto": "CONCORRÊNCIA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 1.72,
+     "t": 1.82,
      "texto": "2019",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 2.82,
+     "t": 2.9,
      "texto": "CARTA",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 3.78,
+     "t": 3.98,
      "texto": "DIRETA",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 5.4,
+     "t": 5.08,
      "texto": "COMPETIMOS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.34,
+     "t": 6.74,
      "texto": "PERDEMOS",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 8.02,
-     "texto": "MAIS",
+     "t": 10.06,
+     "texto": "YOUTUBE",
      "lado": "esq",
-     "estreita": false
+     "estreita": true
     },
     {
-     "t": 10.64,
-     "texto": "ALGUNS",
+     "t": 10.98,
+     "texto": "MINUTOS",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 11.86,
+     "t": 11.98,
      "texto": "AUDIÊNCIA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 12.58,
-     "texto": "CADASTROS",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
      "t": 13.18,
      "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 14.03,
-     "texto": "SUBIRAM",
      "lado": "dir",
      "estreita": true
     }
@@ -5933,44 +5572,32 @@
      "estreita": false
     },
     {
-     "t": 1.37,
-     "texto": "2025",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
      "t": 2.08,
      "texto": "ABRIU",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 3.0,
      "texto": "HOUSE",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.74,
-     "texto": "PERTO",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.92,
-     "texto": "MAIS",
+     "t": 4.06,
+     "texto": "FILADÉLFIA",
      "lado": "dir",
-     "estreita": true
+     "estreita": false
     },
     {
-     "t": 7.58,
-     "texto": "METROS",
+     "t": 6.24,
+     "texto": "DALLAS",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 8.43,
-     "texto": "QUADRADOS",
+     "t": 7.28,
+     "texto": "9",
      "lado": "dir",
      "estreita": true
     },
@@ -5981,51 +5608,33 @@
      "estreita": true
     },
     {
-     "t": 9.98,
+     "t": 10.26,
      "texto": "EXPERIÊNCIAS",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 10.76,
-     "texto": "PAGAS",
+     "t": 11.36,
+     "texto": "STRANGER",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 11.74,
-     "texto": "THINGS",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 12.36,
      "texto": "6",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     },
     {
-     "t": 13.26,
+     "t": 13.44,
      "texto": "TERCEIRA",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 13.88,
-     "texto": "ESTÁ",
      "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 14.7,
-     "texto": "PARA",
-     "lado": "dir",
      "estreita": true
     },
     {
      "t": 15.6,
      "texto": "2027",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": true
     }
    ],
@@ -6063,13 +5672,31 @@
      "fim": 11.33
     },
     {
-     "t": 5.96,
+     "t": 8.43,
      "src": "media/v3img/card_house_guard.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
      "grande": false,
      "fim": 11.33
+    },
+    {
+     "t": 11.74,
+     "src": "media/v3img/card_house_kop.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 560,
+     "grande": false,
+     "fim": 18.19
+    },
+    {
+     "t": 14.7,
+     "src": "media/v3img/card_house_guard.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 600,
+     "grande": false,
+     "fim": 18.19
     }
    ],
    "start": 724.989
@@ -6120,45 +5747,27 @@
    ],
    "etiquetas": [
     {
-     "t": 2.22,
-     "texto": "GIGANTE",
+     "t": 1.38,
+     "texto": "ENVELOPE",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 2.98,
+     "t": 3.06,
      "texto": "PALAVRAS",
      "lado": "dir",
      "estreita": true
     },
     {
-     "t": 3.92,
-     "texto": "NETFLIX",
-     "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 4.92,
+     "t": 5.06,
      "texto": "REFERÊNCIA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 5.66,
-     "texto": "ORIGENS",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 6.26,
-     "texto": "PELO",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 7.11,
+     "t": 6.82,
      "texto": "CORREIO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     }
    ],
@@ -6182,15 +5791,6 @@
      "tipo": "card",
      "lado": "esq",
      "y": 150,
-     "grande": false,
-     "fim": 3.57
-    },
-    {
-     "t": 1.22,
-     "src": "media/v3img/rec_envelope.png",
-     "tipo": "rec",
-     "lado": "dir",
-     "y": 210,
      "grande": false,
      "fim": 3.57
     }
@@ -6268,8 +5868,8 @@
    ],
    "etiquetas": [
     {
-     "t": 2.16,
-     "texto": "VERMELHO",
+     "t": 1.72,
+     "texto": "ENVELOPE",
      "lado": "esq",
      "estreita": true
     },
@@ -6280,26 +5880,14 @@
      "estreita": true
     },
     {
-     "t": 3.73,
-     "texto": "CASA",
-     "lado": "esq",
-     "estreita": true
-    },
-    {
-     "t": 4.82,
+     "t": 4.98,
      "texto": "ENVELOPE",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 5.7,
-     "texto": "PORTA",
      "lado": "esq",
      "estreita": true
     },
     {
-     "t": 6.4,
-     "texto": "CASA",
+     "t": 6.02,
+     "texto": "PORTA",
      "lado": "dir",
      "estreita": true
     },
@@ -6310,45 +5898,27 @@
      "estreita": true
     },
     {
-     "t": 9.1,
-     "texto": "DISPUTANDO",
-     "lado": "dir",
-     "estreita": true
-    },
-    {
-     "t": 10.14,
+     "t": 9.82,
      "texto": "TEMPO",
-     "lado": "esq",
+     "lado": "dir",
      "estreita": false
     },
     {
      "t": 10.76,
      "texto": "CASA",
-     "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 11.42,
-     "texto": "NETFLIX",
      "lado": "esq",
      "estreita": false
     },
     {
-     "t": 12.18,
+     "t": 11.96,
      "texto": "QUER",
      "lado": "dir",
      "estreita": false
     },
     {
-     "t": 12.8,
+     "t": 13.1,
      "texto": "TEMPO",
      "lado": "esq",
-     "estreita": false
-    },
-    {
-     "t": 13.68,
-     "texto": "DELA",
-     "lado": "dir",
      "estreita": false
     }
    ],
@@ -6382,15 +5952,24 @@
      "tipo": "rec",
      "lado": "esq",
      "y": 150,
-     "grande": true,
-     "fim": 9.68
+     "grande": false,
+     "fim": 6.6
     },
     {
-     "t": 1.5,
+     "t": 3.73,
      "src": "media/v3img/card_house_kop.jpg",
      "tipo": "card",
      "lado": "dir",
      "y": 210,
+     "grande": false,
+     "fim": 9.68
+    },
+    {
+     "t": 6.4,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 560,
      "grande": false,
      "fim": 9.68
     }
@@ -6432,15 +6011,9 @@
      "estreita": false
     },
     {
-     "t": 2.34,
+     "t": 2.68,
      "texto": "PRÓXIMO",
      "lado": "dir",
-     "estreita": false
-    },
-    {
-     "t": 3.19,
-     "texto": "ARQUIVO",
-     "lado": "esq",
      "estreita": false
     }
    ],
@@ -6494,116 +6067,95 @@
    "som": "papel_1"
   },
   {
-   "t": 18.95,
+   "t": 21.5,
    "som": "papel_2"
   },
   {
-   "t": 19.66,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 24.56,
+   "som": "papel_3"
   },
   {
-   "t": 20.26,
+   "t": 18.66,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 21.5,
+   "t": 19.66,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 20.58,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 22.18,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 23.03,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 24.56,
+   "t": 24.92,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 25.46,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 27.61,
-   "som": "crt_on_2"
+   "som": "crt_on_1"
   },
   {
    "t": 37.63,
-   "som": "crt_off_3"
+   "som": "crt_off_2"
   },
   {
    "t": 49.78,
-   "som": "click_0"
+   "som": "click_3"
   },
   {
    "t": 53.02,
-   "som": "papel_1"
+   "som": "papel_0"
   },
   {
    "t": 53.57,
-   "som": "carimbo_2"
+   "som": "carimbo_1"
   },
   {
    "t": 50.1,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 51.36,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 52.04,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 53.28,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 54.32,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 55.04,
+   "t": 52.9,
    "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 54.52,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 56.26,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 57.02,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 57.88,
+   "t": 57.44,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 59.44,
+   "t": 59.76,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 61.36,
+   "t": 61.02,
    "som": "click_1",
    "vol": 0.18
   },
@@ -6646,16 +6198,16 @@
    "som": "papel_3"
   },
   {
-   "t": 66.55,
+   "t": 69.11,
    "som": "papel_0"
   },
   {
-   "t": 67.25,
+   "t": 66.89,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 67.91,
+   "t": 68.03,
    "som": "click_2",
    "vol": 0.18
   },
@@ -6677,54 +6229,55 @@
   },
   {
    "t": 86.67,
-   "som": "papel_3"
-  },
-  {
-   "t": 87.52,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 88.32,
-   "som": "crt_on_1"
-  },
-  {
-   "t": 105.3,
-   "som": "crt_off_2"
-  },
-  {
-   "t": 105.55,
-   "som": "bip_3"
-  },
-  {
-   "t": 105.91,
-   "som": "papel_0"
-  },
-  {
-   "t": 106.79,
-   "som": "papel_1"
-  },
-  {
-   "t": 107.91,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 108.57,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 109.35,
+   "t": 88.32,
    "som": "crt_on_0"
   },
   {
-   "t": 117.81,
+   "t": 105.3,
    "som": "crt_off_1"
   },
   {
+   "t": 105.55,
+   "som": "bip_2"
+  },
+  {
+   "t": 105.91,
+   "som": "papel_3"
+  },
+  {
+   "t": 106.23,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 107.27,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 108.31,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 109.35,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 117.81,
+   "som": "crt_off_0"
+  },
+  {
    "t": 118.06,
-   "som": "sweep_2"
+   "som": "sweep_1"
+  },
+  {
+   "t": 118.56,
+   "som": "papel_2"
   },
   {
    "t": 118.36,
@@ -6777,35 +6330,35 @@
    "som": "papel_1"
   },
   {
-   "t": 142.481,
+   "t": 145.661,
    "som": "papel_2"
   },
   {
-   "t": 143.641,
+   "t": 148.741,
    "som": "papel_3"
   },
   {
-   "t": 145.661,
+   "t": 142.081,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 146.281,
+   "t": 143.641,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 147.201,
+   "t": 146.281,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 148.741,
+   "t": 147.341,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 149.441,
+   "t": 149.301,
    "som": "click_0",
    "vol": 0.18
   },
@@ -6815,89 +6368,86 @@
    "vol": 0.18
   },
   {
-   "t": 150.861,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
    "t": 152.231,
-   "som": "crt_on_3"
+   "som": "crt_on_2"
   },
   {
    "t": 158.091,
-   "som": "crt_off_0"
+   "som": "crt_off_3"
   },
   {
    "t": 162.841,
-   "som": "bip_1"
+   "som": "bip_0"
   },
   {
    "t": 163.141,
-   "som": "papel_2"
-  },
-  {
-   "t": 163.901,
-   "som": "papel_3"
-  },
-  {
-   "t": 164.751,
-   "som": "click_0",
-   "vol": 0.18
+   "som": "papel_1"
   },
   {
    "t": 165.581,
-   "som": "click_1",
-   "vol": 0.18
+   "som": "papel_2"
   },
   {
-   "t": 166.401,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 167.241,
+   "t": 163.601,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 167.981,
+   "t": 165.161,
    "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 166.101,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 167.581,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 194.271,
-   "som": "click_1"
+   "som": "click_3"
   },
   {
    "t": 194.851,
-   "som": "papel_2"
-  },
-  {
-   "t": 195.531,
-   "som": "papel_3"
-  },
-  {
-   "t": 196.591,
-   "som": "click_0",
-   "vol": 0.18
+   "som": "papel_0"
   },
   {
    "t": 197.731,
+   "som": "papel_1"
+  },
+  {
+   "t": 200.291,
+   "som": "papel_2"
+  },
+  {
+   "t": 202.811,
+   "som": "papel_3"
+  },
+  {
+   "t": 205.591,
+   "som": "papel_0"
+  },
+  {
+   "t": 195.271,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 198.591,
+   "t": 196.591,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 199.371,
+   "t": 198.291,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 200.291,
+   "t": 199.371,
    "som": "click_0",
    "vol": 0.18
   },
@@ -6907,65 +6457,45 @@
    "vol": 0.18
   },
   {
-   "t": 201.911,
+   "t": 202.091,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 202.811,
+   "t": 203.331,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 203.811,
+   "t": 205.071,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 204.791,
+   "t": 206.071,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 205.591,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 206.441,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 207.121,
-   "som": "papel_0"
+   "som": "papel_2"
   },
   {
    "t": 207.671,
-   "som": "carimbo_1"
+   "som": "carimbo_3"
   },
   {
    "t": 207.521,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 208.241,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 209.041,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 210.501,
+   "t": 209.041,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 211.281,
+   "t": 210.501,
    "som": "click_2",
    "vol": 0.18
   },
@@ -6975,138 +6505,117 @@
    "vol": 0.18
   },
   {
-   "t": 212.761,
+   "t": 213.001,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 213.761,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 214.801,
-   "som": "click_2"
+   "som": "click_1"
   },
   {
    "t": 214.891,
-   "som": "papel_3"
-  },
-  {
-   "t": 215.491,
-   "som": "papel_0"
-  },
-  {
-   "t": 216.311,
-   "som": "click_1",
-   "vol": 0.18
+   "som": "papel_2"
   },
   {
    "t": 217.791,
-   "som": "click_2",
+   "som": "papel_3"
+  },
+  {
+   "t": 215.751,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 218.531,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 219.171,
-   "som": "click_0",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 220.201,
-   "som": "bip_1"
+   "som": "bip_2"
   },
   {
    "t": 230.471,
-   "som": "papel_2"
+   "som": "papel_3"
   },
   {
    "t": 231.021,
-   "som": "carimbo_3"
+   "som": "carimbo_0"
   },
   {
    "t": 220.401,
-   "som": "papel_0"
-  },
-  {
-   "t": 221.251,
    "som": "papel_1"
   },
   {
-   "t": 221.941,
+   "t": 223.281,
    "som": "papel_2"
   },
   {
-   "t": 222.621,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 225.681,
+   "som": "papel_3"
   },
   {
-   "t": 223.281,
-   "som": "click_0",
-   "vol": 0.18
+   "t": 228.681,
+   "som": "papel_0"
   },
   {
-   "t": 224.081,
+   "t": 220.981,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 225.061,
+   "t": 221.941,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 226.601,
+   "t": 224.321,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 227.781,
+   "t": 225.241,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 228.681,
+   "t": 226.201,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 227.881,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 229.721,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 231.081,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 231.761,
+   "t": 230.721,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 232.421,
+   "t": 231.841,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 233.541,
+   "t": 232.781,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 234.361,
+   "t": 234.601,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 235.781,
+   "t": 235.981,
    "som": "click_0",
    "vol": 0.18
   },
@@ -7127,45 +6636,44 @@
    "som": "papel_0"
   },
   {
-   "t": 238.611,
+   "t": 240.651,
    "som": "papel_1"
   },
   {
-   "t": 239.711,
+   "t": 243.191,
    "som": "papel_2"
   },
   {
-   "t": 240.651,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 245.911,
+   "som": "papel_3"
   },
   {
-   "t": 241.501,
+   "t": 238.651,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 242.231,
+   "t": 239.711,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 243.191,
+   "t": 241.191,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 244.411,
+   "t": 242.231,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 245.261,
+   "t": 244.551,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 246.511,
+   "t": 246.231,
    "som": "click_1",
    "vol": 0.18
   },
@@ -7175,30 +6683,30 @@
    "vol": 0.18
   },
   {
-   "t": 248.091,
+   "t": 248.871,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 248.871,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 249.991,
-   "som": "geiger_1"
+   "som": "geiger_0"
   },
   {
    "t": 251.841,
-   "som": "bip_2"
+   "som": "bip_1"
   },
   {
    "t": 250.051,
+   "som": "papel_2"
+  },
+  {
+   "t": 252.851,
    "som": "papel_3"
   },
   {
    "t": 250.731,
-   "som": "papel_0"
+   "som": "click_0",
+   "vol": 0.18
   },
   {
    "t": 252.171,
@@ -7206,374 +6714,350 @@
    "vol": 0.18
   },
   {
-   "t": 252.851,
+   "t": 253.171,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 253.491,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 261.301,
-   "som": "carimbo_0"
+   "som": "carimbo_3"
   },
   {
    "t": 261.121,
-   "som": "papel_1"
-  },
-  {
-   "t": 262.221,
-   "som": "papel_2"
-  },
-  {
-   "t": 263.081,
-   "som": "click_3",
-   "vol": 0.18
+   "som": "papel_0"
   },
   {
    "t": 263.861,
+   "som": "papel_1"
+  },
+  {
+   "t": 266.661,
+   "som": "papel_2"
+  },
+  {
+   "t": 269.881,
+   "som": "papel_3"
+  },
+  {
+   "t": 262.401,
    "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 263.461,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 264.541,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 265.141,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 266.021,
+   "t": 265.441,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 266.661,
+   "t": 267.081,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 267.401,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 268.261,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 270.421,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 268.901,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 270.641,
-   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 271.671,
-   "som": "crt_on_1"
-  },
-  {
-   "t": 276.271,
-   "som": "crt_off_2"
-  },
-  {
-   "t": 276.521,
    "som": "crt_on_3"
   },
   {
-   "t": 289.001,
+   "t": 276.271,
    "som": "crt_off_0"
   },
   {
+   "t": 276.521,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 289.001,
+   "som": "crt_off_2"
+  },
+  {
    "t": 289.451,
-   "som": "plin_1"
+   "som": "plin_3"
   },
   {
-   "t": 289.531,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 290.191,
-   "som": "click_3",
+   "t": 289.691,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 290.851,
-   "som": "click_0",
+   "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 291.831,
-   "som": "click_1",
+   "t": 292.051,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 294.091,
-   "som": "crt_on_2"
+   "som": "crt_on_3"
   },
   {
    "t": 303.651,
-   "som": "crt_off_3"
+   "som": "crt_off_0"
   },
   {
    "t": 304.101,
-   "som": "geiger_0"
+   "som": "geiger_1"
   },
   {
    "t": 307.971,
-   "som": "bip_1"
+   "som": "bip_2"
   },
   {
    "t": 304.361,
-   "som": "papel_2"
-  },
-  {
-   "t": 305.201,
    "som": "papel_3"
   },
   {
-   "t": 306.001,
-   "som": "click_0",
-   "vol": 0.18
+   "t": 308.471,
+   "som": "papel_0"
   },
   {
-   "t": 306.721,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 311.541,
+   "som": "papel_1"
   },
   {
-   "t": 307.581,
+   "t": 305.201,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 309.361,
+   "t": 307.161,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 308.961,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 310.021,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 310.701,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 311.541,
+   "t": 312.761,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 313.151,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 320.139,
-   "som": "bip_0"
+   "som": "bip_3"
   },
   {
    "t": 320.459,
+   "som": "papel_0"
+  },
+  {
+   "t": 323.159,
    "som": "papel_1"
   },
   {
    "t": 321.579,
-   "som": "papel_2"
-  },
-  {
-   "t": 322.399,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 323.159,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 324.769,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 325.189,
-   "som": "crt_on_2"
-  },
-  {
-   "t": 340.469,
-   "som": "crt_off_3"
-  },
-  {
-   "t": 340.719,
-   "som": "bip_0"
-  },
-  {
-   "t": 341.219,
-   "som": "papel_1"
-  },
-  {
-   "t": 341.899,
-   "som": "papel_2"
-  },
-  {
-   "t": 343.099,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 344.099,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 344.959,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 345.799,
-   "som": "crt_on_2"
-  },
-  {
-   "t": 352.479,
-   "som": "crt_off_3"
-  },
-  {
-   "t": 352.729,
-   "som": "crt_on_0"
-  },
-  {
-   "t": 358.349,
-   "som": "crt_off_1"
-  },
-  {
-   "t": 358.999,
-   "som": "click_2"
-  },
-  {
-   "t": 358.859,
-   "som": "papel_3"
-  },
-  {
-   "t": 359.859,
-   "som": "papel_0"
-  },
-  {
-   "t": 361.059,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 361.659,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 362.759,
+   "t": 324.399,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 363.419,
+   "t": 325.189,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 340.469,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 340.719,
+   "som": "bip_2"
+  },
+  {
+   "t": 341.219,
+   "som": "papel_3"
+  },
+  {
+   "t": 344.099,
+   "som": "papel_0"
+  },
+  {
+   "t": 341.899,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 343.179,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 344.579,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 345.799,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 352.479,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 352.729,
+   "som": "crt_on_2"
+  },
+  {
+   "t": 358.349,
+   "som": "crt_off_3"
+  },
+  {
+   "t": 358.999,
+   "som": "click_0"
+  },
+  {
+   "t": 358.859,
+   "som": "papel_1"
+  },
+  {
+   "t": 361.659,
+   "som": "papel_2"
+  },
+  {
+   "t": 359.899,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 361.059,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 364.269,
+   "t": 362.759,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 363.999,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 365.199,
-   "som": "crt_on_2"
+   "som": "crt_on_3"
   },
   {
    "t": 382.119,
-   "som": "crt_off_3"
+   "som": "crt_off_0"
   },
   {
    "t": 382.369,
-   "som": "bip_0"
+   "som": "bip_1"
   },
   {
    "t": 383.009,
-   "som": "papel_1"
-  },
-  {
-   "t": 383.969,
    "som": "papel_2"
   },
   {
-   "t": 385.069,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 385.869,
+   "som": "papel_3"
   },
   {
-   "t": 385.869,
+   "t": 383.329,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 387.479,
+   "t": 384.229,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 388.429,
-   "som": "crt_on_2"
+   "t": 385.309,
+   "som": "click_2",
+   "vol": 0.18
   },
   {
-   "t": 412.669,
-   "som": "crt_off_3"
-  },
-  {
-   "t": 413.219,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 416.909,
-   "som": "papel_1"
-  },
-  {
-   "t": 417.459,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 425.029,
-   "som": "plin_3"
-  },
-  {
-   "t": 413.239,
-   "som": "papel_0"
-  },
-  {
-   "t": 413.899,
-   "som": "papel_1"
-  },
-  {
-   "t": 414.519,
-   "som": "papel_2"
-  },
-  {
-   "t": 415.599,
+   "t": 387.209,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 416.439,
+   "t": 388.429,
+   "som": "crt_on_0"
+  },
+  {
+   "t": 412.669,
+   "som": "crt_off_1"
+  },
+  {
+   "t": 413.219,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 416.909,
+   "som": "papel_3"
+  },
+  {
+   "t": 417.459,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 425.029,
+   "som": "plin_1"
+  },
+  {
+   "t": 413.239,
+   "som": "papel_2"
+  },
+  {
+   "t": 425.799,
+   "som": "papel_3"
+  },
+  {
+   "t": 428.279,
+   "som": "papel_0"
+  },
+  {
+   "t": 431.099,
+   "som": "papel_1"
+  },
+  {
+   "t": 413.599,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 414.899,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 415.899,
    "som": "click_0",
    "vol": 0.18
   },
@@ -7583,78 +7067,53 @@
    "vol": 0.18
   },
   {
-   "t": 418.879,
+   "t": 419.159,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 419.559,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 420.499,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 421.439,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 422.219,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 423.259,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 424.099,
+   "t": 421.519,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 425.799,
+   "t": 423.339,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 426.459,
+   "t": 424.239,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 427.479,
+   "t": 426.639,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 428.279,
+   "t": 427.659,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 429.079,
+   "t": 430.779,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 431.099,
+   "t": 432.139,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 431.779,
+   "t": 433.199,
    "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 432.879,
-   "som": "click_0",
    "vol": 0.18
   },
   {
@@ -7689,79 +7148,64 @@
   },
   {
    "t": 437.119,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 438.299,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 437.759,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 438.609,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 439.639,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 440.859,
-   "som": "click_1",
+   "t": 441.239,
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 442.339,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 448.409,
-   "som": "papel_3"
-  },
-  {
-   "t": 448.959,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 444.289,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 445.229,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 446.809,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 447.409,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 448.989,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 448.409,
+   "som": "papel_1"
   },
   {
-   "t": 450.109,
-   "som": "click_2",
-   "vol": 0.18
+   "t": 448.959,
+   "som": "carimbo_2"
   },
   {
-   "t": 451.309,
+   "t": 444.409,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 451.949,
+   "t": 445.329,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 446.809,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 447.829,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 450.409,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 451.589,
    "som": "click_0",
    "vol": 0.18
   },
@@ -7770,253 +7214,178 @@
    "som": "bip_1"
   },
   {
-   "t": 454.039,
+   "t": 454.399,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 455.119,
+   "t": 455.979,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 455.819,
+   "t": 457.719,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 456.669,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 457.339,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 458.739,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 459.419,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 460.269,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 460.919,
+   "t": 459.839,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 461.679,
+   "t": 460.999,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 461.919,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 462.929,
-   "som": "tecla_0"
+   "som": "tecla_1"
   },
   {
    "t": 463.229,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 463.889,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 465.009,
+   "t": 464.189,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 465.889,
+   "t": 465.429,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 466.589,
+   "t": 467.149,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 467.729,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 468.329,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 470.089,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 471.109,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 471.789,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 473.449,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 474.349,
+   "t": 471.269,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 475.589,
+   "t": 473.289,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 476.469,
+   "t": 474.469,
    "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 475.869,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 476.869,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 478.349,
-   "som": "geiger_3"
+   "som": "geiger_1"
   },
   {
    "t": 486.519,
-   "som": "papel_0"
-  },
-  {
-   "t": 487.069,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 478.509,
    "som": "papel_2"
   },
   {
+   "t": 487.069,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 478.509,
+   "som": "papel_0"
+  },
+  {
    "t": 479.229,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 481.209,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 481.969,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 481.349,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 482.669,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 483.369,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 484.089,
+   "t": 483.689,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 484.989,
+   "t": 485.149,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 485.839,
+   "t": 486.469,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 487.249,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 488.069,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 489.429,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 489.649,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 490.499,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 491.229,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 491.869,
-   "som": "click_0",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 493.209,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 494.789,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 495.639,
+   "t": 494.589,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 496.689,
+   "t": 496.889,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 497.349,
+   "t": 498.549,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 498.209,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 499.029,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 499.879,
-   "som": "click_0",
    "vol": 0.18
   },
   {
@@ -8051,35 +7420,30 @@
   },
   {
    "t": 502.899,
-   "som": "bip_1"
-  },
-  {
-   "t": 503.249,
    "som": "bip_2"
   },
   {
+   "t": 503.249,
+   "som": "bip_3"
+  },
+  {
    "t": 508.309,
-   "som": "papel_3"
+   "som": "papel_0"
   },
   {
    "t": 508.859,
-   "som": "carimbo_0"
+   "som": "carimbo_1"
   },
   {
    "t": 503.539,
-   "som": "papel_1"
-  },
-  {
-   "t": 504.389,
    "som": "papel_2"
   },
   {
-   "t": 505.299,
-   "som": "click_3",
-   "vol": 0.18
+   "t": 506.399,
+   "som": "papel_3"
   },
   {
-   "t": 506.399,
+   "t": 504.799,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8089,158 +7453,134 @@
    "vol": 0.18
   },
   {
-   "t": 508.879,
+   "t": 509.039,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 509.539,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 510.199,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 511.539,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 511.319,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 511.919,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 512.579,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 513.419,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 514.239,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 514.439,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 515.229,
-   "som": "sweep_2"
+   "som": "sweep_3"
   },
   {
    "t": 534.879,
-   "som": "click_3"
+   "som": "click_0"
   },
   {
    "t": 535.129,
-   "som": "bip_0"
+   "som": "bip_1"
   },
   {
    "t": 535.409,
-   "som": "papel_1"
-  },
-  {
-   "t": 536.429,
    "som": "papel_2"
   },
   {
-   "t": 537.029,
-   "som": "click_3",
+   "t": 538.129,
+   "som": "papel_3"
+  },
+  {
+   "t": 540.609,
+   "som": "papel_0"
+  },
+  {
+   "t": 543.129,
+   "som": "papel_1"
+  },
+  {
+   "t": 545.609,
+   "som": "papel_2"
+  },
+  {
+   "t": 548.019,
+   "som": "papel_3"
+  },
+  {
+   "t": 536.429,
+   "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 538.129,
-   "som": "click_0",
+   "t": 537.349,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 538.869,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 539.489,
    "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 540.609,
-   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 541.329,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 542.029,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 543.129,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 544.009,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 544.849,
+   "t": 542.489,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 545.609,
+   "t": 543.669,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 546.459,
+   "t": 544.969,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 547.169,
+   "t": 546.049,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 547.389,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 549.399,
-   "som": "sweep_0"
+   "som": "sweep_1"
   },
   {
    "t": 552.599,
-   "som": "click_1"
+   "som": "click_2"
   },
   {
    "t": 552.849,
-   "som": "bip_2"
+   "som": "bip_3"
   },
   {
    "t": 553.249,
-   "som": "papel_3"
+   "som": "papel_0"
   },
   {
-   "t": 553.969,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 554.819,
+   "t": 554.089,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 555.749,
+   "t": 555.329,
    "som": "click_2",
    "vol": 0.18
   },
@@ -8261,62 +7601,42 @@
    "som": "papel_2"
   },
   {
-   "t": 557.799,
+   "t": 557.919,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 558.399,
+   "t": 559.919,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 559.579,
+   "t": 561.099,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 560.539,
+   "t": 562.499,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 561.389,
+   "t": 563.399,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 562.259,
+   "t": 564.339,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 563.259,
+   "t": 566.179,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 564.059,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 564.879,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 565.729,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 566.819,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 567.669,
+   "t": 567.299,
    "som": "click_2",
    "vol": 0.18
   },
@@ -8326,13 +7646,8 @@
    "vol": 0.18
   },
   {
-   "t": 569.079,
+   "t": 570.119,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 569.879,
-   "som": "click_1",
    "vol": 0.18
   },
   {
@@ -8367,50 +7682,52 @@
   },
   {
    "t": 573.739,
-   "som": "sweep_2"
+   "som": "sweep_1"
   },
   {
    "t": 579.629,
-   "som": "sweep_3"
+   "som": "sweep_2"
   },
   {
    "t": 579.779,
-   "som": "tecla_0"
-  },
-  {
-   "t": 579.959,
-   "som": "papel_1"
-  },
-  {
-   "t": 580.799,
-   "som": "papel_2"
-  },
-  {
-   "t": 581.479,
-   "som": "papel_3"
+   "som": "tecla_3"
   },
   {
    "t": 574.079,
-   "som": "click_0",
-   "vol": 0.18
+   "som": "papel_0"
   },
   {
-   "t": 575.079,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 577.039,
+   "som": "papel_1"
   },
   {
-   "t": 575.879,
+   "t": 579.959,
+   "som": "papel_2"
+  },
+  {
+   "t": 583.339,
+   "som": "papel_3"
+  },
+  {
+   "t": 585.779,
+   "som": "papel_0"
+  },
+  {
+   "t": 588.419,
+   "som": "papel_1"
+  },
+  {
+   "t": 575.199,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 577.039,
+   "t": 576.419,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 577.889,
+   "t": 577.559,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8420,62 +7737,61 @@
    "vol": 0.18
   },
   {
-   "t": 582.119,
+   "t": 579.579,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 583.339,
+   "t": 580.799,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 582.119,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 583.939,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 585.079,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 585.779,
+   "t": 585.339,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 587.379,
+   "t": 587.139,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 588.419,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
    "t": 589.619,
-   "som": "papel_1"
+   "som": "papel_0"
   },
   {
    "t": 590.169,
-   "som": "carimbo_2"
+   "som": "carimbo_1"
   },
   {
    "t": 595.009,
-   "som": "sweep_3"
+   "som": "sweep_2"
   },
   {
    "t": 595.159,
-   "som": "tecla_0"
+   "som": "tecla_3"
   },
   {
    "t": 595.459,
+   "som": "papel_0"
+  },
+  {
+   "t": 598.159,
    "som": "papel_1"
   },
   {
-   "t": 596.339,
+   "t": 600.619,
    "som": "papel_2"
   },
   {
@@ -8484,124 +7800,83 @@
    "vol": 0.18
   },
   {
-   "t": 591.299,
+   "t": 591.399,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 592.459,
+   "t": 592.699,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 593.079,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 593.679,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 594.659,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 598.159,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 599.019,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 599.819,
+   "t": 594.799,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 600.619,
+   "t": 595.899,
    "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 599.279,
+   "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 600.319,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 601.909,
-   "som": "sweep_1"
+   "som": "sweep_3"
   },
   {
    "t": 607.259,
-   "som": "papel_2"
+   "som": "papel_0"
   },
   {
    "t": 607.809,
-   "som": "carimbo_3"
+   "som": "carimbo_1"
   },
   {
    "t": 602.349,
-   "som": "click_0",
-   "vol": 0.18
+   "som": "papel_2"
   },
   {
    "t": 602.969,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 603.629,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 604.269,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 605.329,
+   "t": 604.629,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 606.009,
+   "t": 606.369,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 606.729,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 607.609,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 608.509,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 609.189,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 610.039,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 610.809,
+   "t": 609.189,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 611.409,
+   "t": 610.809,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8611,7 +7886,7 @@
    "vol": 0.18
   },
   {
-   "t": 612.809,
+   "t": 613.369,
    "som": "click_2",
    "vol": 0.18
   },
@@ -8630,145 +7905,127 @@
    "vol": 0.18
   },
   {
-   "t": 617.319,
+   "t": 618.099,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 617.939,
+   "t": 619.199,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 618.789,
+   "t": 620.099,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 620.399,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 621.059,
-   "som": "click_2",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 621.959,
-   "som": "click_3",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 623.089,
-   "som": "bip_0"
+   "som": "bip_3"
   },
   {
    "t": 623.309,
+   "som": "papel_0"
+  },
+  {
+   "t": 626.289,
    "som": "papel_1"
   },
   {
    "t": 623.969,
-   "som": "papel_2"
-  },
-  {
-   "t": 624.689,
-   "som": "papel_3"
-  },
-  {
-   "t": 625.539,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 626.289,
-   "som": "click_1",
+   "t": 625.089,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 626.849,
+   "som": "click_0",
    "vol": 0.18
   },
   {
    "t": 635.689,
-   "som": "sweep_2"
+   "som": "sweep_1"
   },
   {
    "t": 635.839,
-   "som": "tecla_3"
+   "som": "tecla_2"
   },
   {
    "t": 640.059,
-   "som": "papel_0"
-  },
-  {
-   "t": 640.609,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 636.409,
-   "som": "papel_2"
-  },
-  {
-   "t": 637.629,
    "som": "papel_3"
   },
   {
-   "t": 638.329,
-   "som": "click_0",
-   "vol": 0.18
+   "t": 640.609,
+   "som": "carimbo_0"
   },
   {
-   "t": 638.989,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 636.409,
+   "som": "papel_1"
   },
   {
-   "t": 640.559,
+   "t": 637.669,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 642.479,
+   "t": 638.849,
    "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 640.189,
+   "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 642.209,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 643.129,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 643.909,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 644.749,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 645.989,
-   "som": "papel_3"
-  },
-  {
-   "t": 646.539,
-   "som": "carimbo_0"
-  },
-  {
-   "t": 646.329,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 647.469,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 648.069,
+   "t": 644.429,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 649.699,
+   "t": 645.989,
+   "som": "papel_0"
+  },
+  {
+   "t": 646.539,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 646.329,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 647.789,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 649.309,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8786,85 +8043,65 @@
    "vol": 0.18
   },
   {
-   "t": 651.999,
+   "t": 652.539,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 652.839,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 653.519,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 654.599,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 655.439,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 656.099,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 656.799,
+   "t": 654.799,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 657.499,
+   "t": 656.359,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 659.899,
+   "t": 657.619,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 660.499,
+   "t": 659.439,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 660.759,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 662.449,
-   "som": "carimbo_2"
+   "som": "carimbo_3"
   },
   {
    "t": 662.429,
-   "som": "papel_3"
+   "som": "papel_0"
   },
   {
    "t": 664.089,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 664.949,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 666.969,
+   "t": 665.169,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 667.789,
+   "t": 667.049,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 668.529,
+   "t": 668.649,
    "som": "click_0",
    "vol": 0.18
   },
@@ -8893,16 +8130,33 @@
    "som": "papel_2"
   },
   {
-   "t": 670.809,
+   "t": 672.719,
    "som": "papel_3"
   },
   {
-   "t": 671.869,
+   "t": 675.349,
+   "som": "papel_0"
+  },
+  {
+   "t": 685.169,
+   "som": "papel_1"
+  },
+  {
+   "t": 688.129,
+   "som": "papel_2"
+  },
+  {
+   "t": 670.449,
+   "som": "click_3",
+   "vol": 0.18
+  },
+  {
+   "t": 671.389,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 673.549,
+   "t": 673.289,
    "som": "click_1",
    "vol": 0.18
   },
@@ -8912,92 +8166,52 @@
    "vol": 0.18
   },
   {
-   "t": 675.349,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 676.029,
-   "som": "click_0",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 677.209,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 677.929,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 679.639,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 680.469,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 681.169,
+   "t": 679.249,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 681.889,
+   "t": 680.649,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 682.949,
+   "t": 682.109,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 683.749,
+   "t": 683.149,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 685.169,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 685.809,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 686.659,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 687.429,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 688.829,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 689.509,
+   "t": 687.649,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 690.149,
+   "t": 688.949,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 690.999,
+   "t": 689.929,
    "som": "click_0",
    "vol": 0.18
   },
@@ -9018,72 +8232,62 @@
    "som": "papel_0"
   },
   {
-   "t": 691.829,
+   "t": 692.069,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 693.289,
+   "t": 693.389,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 694.389,
+   "t": 694.469,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 695.349,
+   "t": 695.549,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 696.969,
+   "t": 696.649,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 697.909,
+   "t": 698.309,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 699.589,
+   "t": 701.629,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 702.209,
+   "t": 702.549,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 703.429,
+   "t": 703.549,
    "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 704.149,
-   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 704.749,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 705.599,
-   "som": "click_0",
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 706.539,
-   "som": "crt_on_1"
+   "som": "crt_on_3"
   },
   {
    "t": 719.639,
-   "som": "crt_off_2"
+   "som": "crt_off_0"
   },
   {
    "t": 720.389,
@@ -9117,30 +8321,38 @@
   },
   {
    "t": 722.489,
-   "som": "sweep_3"
-  },
-  {
-   "t": 724.739,
-   "som": "click_0"
-  },
-  {
-   "t": 729.359,
    "som": "sweep_1"
   },
   {
+   "t": 724.739,
+   "som": "click_2"
+  },
+  {
+   "t": 729.359,
+   "som": "sweep_3"
+  },
+  {
    "t": 729.509,
-   "som": "tecla_2"
+   "som": "tecla_0"
   },
   {
    "t": 736.319,
-   "som": "bip_3"
+   "som": "bip_1"
   },
   {
    "t": 730.229,
+   "som": "papel_2"
+  },
+  {
+   "t": 733.419,
+   "som": "papel_3"
+  },
+  {
+   "t": 736.729,
    "som": "papel_0"
   },
   {
-   "t": 730.949,
+   "t": 739.689,
    "som": "papel_1"
   },
   {
@@ -9149,162 +8361,122 @@
    "vol": 0.18
   },
   {
-   "t": 726.359,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
    "t": 727.069,
-   "som": "click_0",
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 727.989,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 728.729,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 731.909,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 732.569,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 733.419,
+   "t": 729.049,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 731.229,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 732.269,
+   "som": "click_3",
    "vol": 0.18
   },
   {
    "t": 734.189,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 734.969,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 735.749,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 736.729,
+   "t": 735.249,
    "som": "click_1",
+   "vol": 0.18
+  },
+  {
+   "t": 736.349,
+   "som": "click_2",
    "vol": 0.18
   },
   {
    "t": 737.349,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 738.249,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 738.869,
+   "t": 738.429,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 739.689,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 740.589,
-   "som": "click_2",
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 743.179,
-   "som": "papel_3"
-  },
-  {
-   "t": 746.749,
-   "som": "papel_0"
-  },
-  {
-   "t": 747.299,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 743.639,
    "som": "papel_2"
   },
   {
-   "t": 744.399,
+   "t": 746.749,
    "som": "papel_3"
   },
   {
-   "t": 745.399,
-   "som": "click_0",
-   "vol": 0.18
+   "t": 747.299,
+   "som": "carimbo_0"
   },
   {
-   "t": 746.159,
-   "som": "click_1",
-   "vol": 0.18
+   "t": 743.639,
+   "som": "papel_1"
   },
   {
-   "t": 747.099,
+   "t": 744.559,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 748.099,
+   "t": 746.239,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 748.839,
+   "t": 748.239,
    "som": "click_0",
    "vol": 0.18
   },
   {
-   "t": 749.439,
+   "t": 749.999,
    "som": "click_1",
    "vol": 0.18
   },
   {
-   "t": 750.289,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
    "t": 751.689,
-   "som": "sweep_3"
+   "som": "sweep_2"
   },
   {
    "t": 757.539,
-   "som": "click_0"
+   "som": "click_3"
   },
   {
    "t": 757.789,
-   "som": "bip_1"
+   "som": "bip_0"
   },
   {
    "t": 758.509,
+   "som": "papel_1"
+  },
+  {
+   "t": 761.519,
    "som": "papel_2"
   },
   {
-   "t": 759.289,
+   "t": 764.189,
    "som": "papel_3"
   },
   {
-   "t": 759.949,
+   "t": 759.509,
    "som": "click_0",
    "vol": 0.18
   },
@@ -9314,82 +8486,52 @@
    "vol": 0.18
   },
   {
-   "t": 761.519,
+   "t": 762.769,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 762.609,
+   "t": 763.809,
    "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 763.489,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 764.189,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 766.189,
-   "som": "click_2",
-   "vol": 0.18
-  },
-  {
-   "t": 766.889,
-   "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 767.929,
    "som": "click_0",
+   "vol": 0.18
+  },
+  {
+   "t": 767.609,
+   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 768.549,
-   "som": "click_1",
-   "vol": 0.18
-  },
-  {
-   "t": 769.209,
    "som": "click_2",
    "vol": 0.18
   },
   {
-   "t": 769.969,
+   "t": 769.749,
    "som": "click_3",
    "vol": 0.18
   },
   {
-   "t": 770.589,
+   "t": 770.889,
    "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 771.469,
-   "som": "click_1",
    "vol": 0.18
   },
   {
    "t": 775.879,
-   "som": "crt_off_2"
+   "som": "crt_off_1"
   },
   {
    "t": 774.279,
+   "som": "click_2",
+   "vol": 0.18
+  },
+  {
+   "t": 775.559,
    "som": "click_3",
-   "vol": 0.18
-  },
-  {
-   "t": 775.219,
-   "som": "click_0",
-   "vol": 0.18
-  },
-  {
-   "t": 776.069,
-   "som": "click_1",
    "vol": 0.18
   }
  ],

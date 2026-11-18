@@ -142,8 +142,20 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
   // escala para o trecho ocupar ~88% da largura do cartão
   const base = Math.min((cw * 0.88) / (tr[2] * iw), (ch * 0.9) / (tr[3] * ih * 3.2));
   const zoom = interpolate(f, [0, dur * fps], [0.92, 1.04], { extrapolateRight: "clamp" });
-  const s = base * zoom;
-  const cxImg = (tr[0] + tr[2] / 2) * iw, cyImg = (tr[1] + tr[3] / 2) * ih;
+  // leitura em degraus ("lupa"): a cada ~2 s a câmera vai para outro pedaço do trecho e volta ao todo no fim
+  const PASSO = 2.1, ini = 1.6;
+  const alvos: [number, number, number][] = [[0, 0, 1], [-0.28, -0.22, 1.45], [0.26, 0.05, 1.5], [-0.12, 0.26, 1.4], [0.22, -0.2, 1.45]];
+  const nPassos = c.lupa === false ? 0 : Math.max(0, Math.floor((dur - ini - 1.2) / PASSO));
+  let lx = 0, ly = 0, lz = 1;
+  for (let k = 0; k <= nPassos; k++) {
+    const fk = Math.round((ini + k * PASSO) * fps);
+    const ultimo = k === nPassos;
+    const a = ultimo ? alvos[0] : alvos[(k % (alvos.length - 1)) + 1];
+    const e = interpolate(f, [fk, fk + 9], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: ease });
+    if (f >= fk && nPassos > 0) { lx += (a[0] - lx) * e; ly += (a[1] - ly) * e; lz += (a[2] - lz) * e; }
+  }
+  const s = base * zoom * lz;
+  const cxImg = (tr[0] + tr[2] / 2 + lx * tr[2]) * iw, cyImg = (tr[1] + tr[3] / 2 + ly * tr[3]) * ih;
   const left = cw / 2 - cxImg * s, top = ch / 2 - cyImg * s;
   const sub = interpolate(f, [14, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: ease });
   const temFrase = !!c.frase;
@@ -153,9 +165,9 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
       <div style={{ width: cw, height: ch, position: "relative", overflow: "hidden", background: "white", boxShadow: SOMBRA,
         transform: `translateY(${(1 - entra) * 80}px) scale(${1 - fraseK * 0.06})`, opacity: Math.min(1, entra * 1.5) * (1 - fraseK * 0.9) }}>
         <Img src={staticFile(c.img)} style={{ position: "absolute", left, top, width: iw * s, height: ih * s, maxWidth: "none" }} />
-        <div style={{ position: "absolute", left: cw / 2 - (tr[2] * iw * s) / 2, top: ch / 2 - (tr[3] * ih * s) / 2 - 6,
+        <div style={{ position: "absolute", left: left + tr[0] * iw * s, top: top + tr[1] * ih * s - 6,
           width: tr[2] * iw * s, height: tr[3] * ih * s + 12, background: "rgba(41,41,41,0.06)" }} />
-        <div style={{ position: "absolute", left: cw / 2 - (tr[2] * iw * s) / 2, top: ch / 2 + (tr[3] * ih * s) / 2 + 8,
+        <div style={{ position: "absolute", left: left + tr[0] * iw * s, top: top + (tr[1] + tr[3]) * ih * s + 8,
           width: tr[2] * iw * s * sub, height: 4, background: C.tinta }} />
       </div>
       <div style={{ position: "absolute", left: FAIXA.x + 12, top: 150 + (1 - entra) * 80 }}>

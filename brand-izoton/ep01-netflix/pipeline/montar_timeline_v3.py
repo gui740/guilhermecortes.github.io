@@ -190,31 +190,45 @@ for b in beats:
             alvo = tm + 0.85
     b["passos"] = [m for m, _ in marcas]
     imgs = IMG.get(b["id"], [])
-    lat = []; usados = 0
-    estreitas = [x for x in marcas if x[1]]
-    for k, (m, estreita) in enumerate(estreitas):
-        if usados >= min(len(SLOTS), max(len(imgs), 0)) or not imgs: break
-        src, tipo = imgs[usados % len(imgs)]
-        lado, y = SLOTS[usados]
+    lat = []
+    # laterais (rodada v3b): durante as cenas estreitas, uma imagem real entra a cada ~2,4 s, lados alternados,
+    # cada uma fica até a próxima do mesmo lado ou até o fim da cena (cena larga não recebe lateral)
+    LARG_OK = ESTREITAS | {"posters", "proibicoes"}
+    ult = -9.0; vis = {"esq": None, "dir": None}; n = 0
+    for m, _ in marcas:
         cena = next((c for c in reversed(princ) if c["t"] <= m + 0.01), princ[0])
+        if not imgs or cena["tipo"] not in LARG_OK or m - ult < 2.4: continue
         ic = princ.index(cena); fim_cena = princ[ic + 1]["t"] if ic + 1 < len(princ) else b["dur"]
-        lat.append({"t": m, "src": src, "tipo": tipo, "lado": lado, "y": y, "grande": cena["tipo"] == "titulo" and usados == 0, "fim": round(fim_cena, 2)})
-        usados += 1
-    # etiquetas: a palavra dita naquela marca (palavra de conteúdo), nas marcas sem imagem
-    ocup = {l["t"] for l in lat}
+        if fim_cena - m < 1.2: continue
+        lado = "esq" if n % 2 == 0 else "dir"
+        outro = vis["dir" if lado == "esq" else "esq"]
+        cands = [x for x in imgs if x[0] != outro]
+        if not cands: continue  # nunca a mesma imagem dos dois lados ao mesmo tempo
+        src, tipo = cands[(n // 2) % len(cands)]
+        y = (150 if lado == "esq" else 210) if (n // 2) % 2 == 0 else (560 if lado == "esq" else 600)
+        lat.append({"t": m, "src": src, "tipo": tipo, "lado": lado, "y": y, "grande": False, "fim": round(fim_cena, 2)})
+        vis[lado] = src; ult = m; n += 1
+    for i, l in enumerate(lat):  # sai quando a próxima do mesmo lado entra
+        prox = next((x for x in lat[i + 1:] if x["lado"] == l["lado"]), None)
+        if prox and prox["t"] < l["fim"]: l["fim"] = round(prox["t"] + 0.2, 2)
+    # etiquetas: a palavra de conteúdo dita, a cada >= 0,9 s, fora dos instantes de entrada de lateral
+    ocup = [l["t"] for l in lat]
     pal_txt = b.get("_paltxt") or []
+    VAZIAS = {"naquele", "naquela", "quando", "porque", "também", "depois", "sempre", "então", "outra", "outro", "ainda", "muito", "muita", "isso",
+              "esse", "essa", "aquele", "aquela", "mesmo", "mesma", "sobre", "entre", "cada", "todo", "toda", "todos", "todas", "dentro", "antes",
+              "assim", "agora", "nesse", "nessa", "neste", "nesta", "deles", "delas", "dizia", "disse", "contra", "durante", "segundo", "quase", "existe",
+              "para", "pela", "pelo", "como", "mais", "isto", "esta", "este", "estava", "foram", "sobre", "onde", "seus", "suas", "dela", "dele", "nada"}
     etq = []
-    for k, (m, estreita) in enumerate(marcas):
-        if m in ocup or not pal_txt: continue
-        VAZIAS = {"naquele", "naquela", "quando", "porque", "também", "depois", "sempre", "então", "outra", "outro", "ainda", "muito", "muita", "isso",
-                  "esse", "essa", "aquele", "aquela", "mesmo", "mesma", "sobre", "entre", "cada", "todo", "toda", "todos", "todas", "dentro", "antes",
-                  "assim", "agora", "nesse", "nessa", "neste", "nesta", "deles", "delas", "dizia", "disse", "contra", "durante", "segundo", "quase", "existe"}
-        cand = [(abs(a - m), w) for a, w in pal_txt if abs(a - m) < 0.45 and w.strip(".,?!:;").lower() not in VAZIAS
-                and (len(w.strip(".,?!")) >= 4 or any(ch.isdigit() for ch in w))]
-        if not cand: continue
-        w = min(cand)[1].strip(".,?!:;").upper()
-        if etq and etq[-1]["texto"] == w: continue
-        etq.append({"t": m, "texto": w, "lado": "dir" if len(etq) % 2 else "esq", "estreita": estreita})
+    for a_, w in pal_txt:
+        lim = w.strip(".,?!:;\"'()").lower()
+        if lim in VAZIAS or not (len(lim) >= 4 or any(ch.isdigit() for ch in lim)): continue
+        if a_ < 0.25 or a_ > b["dur"] - 0.4: continue
+        if etq and a_ - etq[-1]["t"] < 0.9: continue
+        if any(abs(a_ - o) < 0.3 for o in ocup): continue
+        W = lim.upper()
+        if etq and etq[-1]["texto"] == W: continue
+        cena = next((c for c in reversed(princ) if c["t"] <= a_ + 0.01), princ[0])
+        etq.append({"t": round(a_, 2), "texto": W, "lado": "dir" if len(etq) % 2 else "esq", "estreita": cena["tipo"] in ESTREITAS})
     if b.get("regravar") == "09":  # bloco não gravado: o texto do roteiro entra na tela, em pedaços
         pedacos = ["O RETORNO", "NÃO ESTAVA", "EM CADA HORA", "ASSISTIDA.", "ESTAVA EM", "OUTRO LUGAR."]
         etq = [{"t": round(0.3 + i * (b["dur"] - 0.8) / len(pedacos), 2), "texto": x, "lado": "dir" if i % 2 else "esq", "estreita": True} for i, x in enumerate(pedacos)]
