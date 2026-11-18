@@ -46,7 +46,7 @@ export const ComHook: React.FC<{ shortId: string; children: React.ReactNode }> =
                 // cada linha entra na palavra dele que a abre (ou em sequência, se não achar)
                 const w0 = l.split(" ")[0].toLowerCase().replace(/[.,?!%]/g, "");
                 const t = P[k].palavras.find((w) => w[2].toLowerCase().replace(/[.,?!%]/g, "").startsWith(w0))?.[0] ?? i * 0.6;
-                return f >= S(t) ? <Destaque key={i} texto={l} inicio={S(t)} size={i === linhas.length - 1 ? 104 : 76} tom={i === linhas.length - 1 ? "ambar" : "tinta"} /> : null;
+                return f >= S(t) ? <Destaque key={i} texto={l} inicio={S(t)} size={Math.min(i === linhas.length - 1 ? 104 : 76, Math.floor(900 / (l.length * 0.68)))} tom={i === linhas.length - 1 ? "ambar" : "tinta"} /> : null;
               })}
             </div>
             <LegendaPalavra palavras={P[k].palavras} chave={{}} />

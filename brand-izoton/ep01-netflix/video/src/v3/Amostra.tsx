@@ -379,8 +379,10 @@ export const LegendaPalavra: React.FC<{ palavras: [number, number, string][]; ch
       {vis.map((p, i) => {
         const w = p[2].replace(/[.,]/g, "").toUpperCase();
         const tom = chave[w];
-        return tom ? <Destaque key={p[0]} texto={w} inicio={S(p[0])} size={92} tom={tom} />
-          : <span key={p[0]} style={{ fontFamily: FONT, fontWeight: 800, fontSize: 92, color: C.tinta, lineHeight: 1.1 }}>{w}</span>;
+        // chave única por palavra (duas palavras podem começar no mesmo instante; chave repetida deixava uma palavra "fantasma" na tela)
+        const id = `${palavras.indexOf(p)}`;
+        return tom ? <Destaque key={id} texto={w} inicio={S(p[0])} size={92} tom={tom} />
+          : <span key={id} style={{ fontFamily: FONT, fontWeight: 800, fontSize: 92, color: C.tinta, lineHeight: 1.1 }}>{w}</span>;
       })}
     </div>
   );

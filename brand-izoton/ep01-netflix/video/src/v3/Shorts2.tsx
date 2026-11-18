@@ -48,6 +48,9 @@ const Leitura: React.FC<{ h: number }> = ({ h }) => {
   return <div style={{ position: "absolute", left: 30, right: 30, top: y, height: 46, background: "rgba(41,41,41,0.13)", mixBlendMode: "multiply" }} />;
 };
 
+// tamanho que cabe numa linha dentro da zona segura (~900 px): letra da Jost 800 em caixa alta ≈ 0,68 em
+export const cabe = (l: string, base: number) => Math.min(base, Math.floor(900 / (l.length * 0.68)));
+
 const SegNarr: React.FC<{ s: Extract<Seg, { tipo: "narr" }> }> = ({ s }) => {
   const S = useS();
   const f = useCurrentFrame();
@@ -112,8 +115,8 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
       {f < S(2.4) && !temHook(cfg.id) && (
         <AbsoluteFill style={{ background: C.branco }}>
           <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
-            transform: `scale(${1 + 0.16 * Math.floor(f / 3) * 3 / S(2.4)}) translateY(${-40 * Math.floor(f / 3) * 3 / S(2.4)}px)` }}>
-            {cfg.hook.map((l, i) => <Destaque key={i} texto={l} inicio={i * 4} size={i === cfg.hook.length - 1 ? 104 : 76} tom={i === cfg.hook.length - 1 ? "tinta" : "tinta"} />)}
+            transform: `scale(${1 + 0.07 * Math.floor(f / 3) * 3 / S(2.4)}) translateY(${-60 * Math.floor(f / 3) * 3 / S(2.4)}px)` }}>
+            {cfg.hook.map((l, i) => <Destaque key={i} texto={l} inicio={i * 4} size={cabe(l, i === cfg.hook.length - 1 ? 104 : 76)} tom="tinta" />)}
           </div>
         </AbsoluteFill>
       )}
@@ -121,8 +124,8 @@ export const ShortGen: React.FC<{ cfg: ShortCfg }> = ({ cfg }) => {
       {f >= S(fim) && (
         <AbsoluteFill style={{ background: C.branco }}>
           <div style={{ position: "absolute", left: 60, right: 60, top: 520, display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
-            transform: `scale(${1 + 0.14 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}) translateY(${-36 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}px)` }}>
-            {cfg.loop.map((l, i) => <Destaque key={i} texto={l} inicio={S(fim) + i * 4} size={i === cfg.loop.length - 1 ? 110 : 76} tom={i === cfg.loop.length - 1 ? "ambar" : "tinta"} />)}
+            transform: `scale(${1 + 0.07 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}) translateY(${-60 * Math.floor((f - S(fim)) / 3) * 3 / S(1.4)}px)` }}>
+            {cfg.loop.map((l, i) => <Destaque key={i} texto={l} inicio={S(fim) + i * 4} size={cabe(l, i === cfg.loop.length - 1 ? 110 : 76)} tom={i === cfg.loop.length - 1 ? "ambar" : "tinta"} />)}
           </div>
         </AbsoluteFill>
       )}
