@@ -18,7 +18,7 @@ export const TelaCRT: React.FC<{ clip: string; inicioClip: number; dur: number; 
     const push = interpolate(f, [0, dur], [1, 1.07], clamp);
     const video = <OffthreadVideo src={staticFile(clip)} muted startFrom={inicioClip} style={{ width: "100%", height: "100%", objectFit: "cover" }} />;
     return (
-      <AbsoluteFill style={{ backgroundColor: desliga && f > dur - 10 ? C.branco : "black" }}>
+      <AbsoluteFill style={{ backgroundColor: (desliga && f > dur - 10) || (liga && f < 6) ? C.branco : "black" }}>{/* liga a partir do papel branco: sem quadro preto isolado entre a colagem e o clarão */}
         <AbsoluteFill style={{ transform: `scaleY(${on * off}) scaleX(${offX})`, background: "black" }}>
           <AbsoluteFill style={{ transform: `scale(${push})` }}>
             {congelaFim && f > dur - 12 ? <Freeze frame={dur - 12}>{video}</Freeze> : video}
