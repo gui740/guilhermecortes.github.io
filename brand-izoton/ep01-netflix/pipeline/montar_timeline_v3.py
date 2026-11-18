@@ -119,13 +119,84 @@ for b in beats_v2:
             nc = dict(c); nc["t"] = warp(ps, c.get("t", 0), dur_novo) if c.get("t", 0) > 0 else 0
             if "riscarEm" in nc: pass
             cenas.append(nc)
-        add({"tipo": "narr", "id": bid, "bloco": alvo, "dur": dur, "audio": audio, "cenas": cenas,
+        add({"tipo": "narr", "id": bid, "bloco": alvo, "dur": dur, "audio": audio, "cenas": cenas, "_pal": [w[0] for w in novo],
              "fala": f"{alvo}: " + " ".join(w for _, _, w in novo)})
     else:
         dur = round(dur_v2[bid] * RITMO + 0.35, 3)
         cenas = [dict(c, t=round(c.get("t", 0) * RITMO, 2)) for c in b["cenas"]]
         add({"tipo": "narr", "id": bid, "bloco": alvo, "dur": dur, "audio": None, "regravar": alvo, "cenas": cenas,
              "fala": f"{alvo}: [REGRAVAR] silêncio de {dur:.1f} s estimado"})
+
+# ------------------------------------------------------------------ Passo 3: imagens reais nas laterais + passos de câmera
+V = "media/v3img/"; ST = "media/stills/"
+IMG = {  # (arquivo, tipo) — tipo: rec (recorte com borda) | card (foto) | print (captura de documento)
+ "n01a": [(V+"rec_envelope.png", "rec"), (V+"card_losgatos.jpg", "card")],
+ "n01c": [(V+"rec_controle.png", "rec"), (V+"rec_vhs.png", "rec"), (V+"card_boxset.jpg", "card")],
+ "n02a": [(V+"card_losgatos.jpg", "card"), (V+"rec_envelope.png", "rec")],
+ "n02b": [(V+"card_sarandos.jpg", "card"), (ST+"poster_houseofcards.jpg", "card")],
+ "n02c": [(V+"rec_hastings_2015.png", "rec"), (ST+"poster_houseofcards.jpg", "card")],
+ "n02d": [(V+"rec_hastings_2014.png", "rec")],
+ "n02e": [(ST+"poster_houseofcards.jpg", "card"), (ST+"poster_madmen.jpg", "card"), (V+"rec_hastings_2015.png", "rec")],
+ "n03a": [(V+"card_boxset.jpg", "card"), (ST+"poster_houseofcards.jpg", "card")],
+ "n03b": [(ST+"web_skipintro.png", "print"), (V+"rec_controle.png", "rec")],
+ "n03c": [(V+"rec_controle.png", "rec")],
+ "n03d": [(V+"rec_controle.png", "rec"), (ST+"web_skipintro_tv.png", "print")],
+ "n03e": [(ST+"poster_strangerthings.jpg", "card"), (ST+"poster_wednesday.jpg", "card"), (ST+"poster_houseofcards.jpg", "card")],
+ "n03f": [(ST+"web_skipintro.png", "print"), (V+"rec_controle.png", "rec")],
+ "n03g": [(V+"rec_controle.png", "rec"), (V+"rec_hastings_2014.png", "rec")],
+ "n04a": [(V+"rec_hastings_2015.png", "rec"), (V+"card_losgatos.jpg", "card")],
+ "n04b": [(V+"rec_hastings_2014.png", "rec")],
+ "n04c": [(V+"rec_hastings_2015.png", "rec"), (ST+"web_jenner.png", "print")],
+ "n05a": [(V+"rec_hastings_2014.png", "rec"), (V+"card_losgatos.jpg", "card")],
+ "n05b": [(ST+"web_keeper.png", "print"), (V+"rec_hastings_2015.png", "rec")],
+ "n05c": [(V+"card_losgatos.jpg", "card"), (V+"rec_hastings_2014.png", "rec")],
+ "n05d": [(V+"rec_hastings_2015.png", "rec"), (ST+"web_keeper.png", "print")],
+ "n05e": [(ST+"web_keeper.png", "print"), (V+"rec_hastings_2014.png", "rec")],
+ "n06e": [(ST+"pazperez_p12-12.png", "print")],
+ "n07a": [(ST+"web_drum.png", "print"), (ST+"poster_houseofcards.jpg", "card")],
+ "n07b": [(ST+"poster_houseofcards.jpg", "card"), (ST+"web_drum.png", "print")],
+ "n07c": [(ST+"poster_houseofcards.jpg", "card")],
+ "n07d": [(ST+"web_mm_senna.png", "print")],
+ "n08a": [(V+"card_squid_cosplay.jpg", "card"), (ST+"poster_squidgame.jpg", "card"), (ST+"carta_q3_21-03.png", "print")],
+ "n08b": [(ST+"poster_squidgame.jpg", "card"), (V+"card_house_guard.jpg", "card")],
+ "n08c": [(ST+"poster_moneyheist.jpg", "card")],
+ "n08e": [(ST+"poster_squidgame.jpg", "card"), (ST+"poster_moneyheist.jpg", "card"), (ST+"poster_wednesday.jpg", "card")],
+ "n09a": [(ST+"web_sharing.png", "print"), (ST+"carta_q4_22-06.png", "print")],
+ "n09d": [(ST+"carta_q2_23-01.png", "print")],
+ "n09e": [(ST+"web_ads.png", "print"), (ST+"carta_q4_24-05.png", "print")],
+ "n09f": [(ST+"carta_q4_18-05.png", "print")],
+ "n10a": [(V+"card_house_kop.jpg", "card"), (V+"card_house_guard.jpg", "card")],
+ "n10b": [(V+"card_house_kop.jpg", "card"), (V+"rec_envelope.png", "rec")],
+ "n10c": [(V+"rec_envelope.png", "rec"), (V+"card_house_kop.jpg", "card")],
+}
+ESTREITAS = {"titulo", "contador", "pergunta", "citacao", "medidor", "cheque", "botao", "pessoas", "anzol", "mapa", "fluxo", "lista", "aovivo", "barras", "envelope"}
+SLOTS = [("esq", 150), ("dir", 210), ("esq", 600), ("dir", 640)]
+for b in beats:
+    if b["tipo"] not in ("narr",):
+        continue
+    pal = b.pop("_pal", None) or []
+    if not pal:  # bloco não gravado: marcas a cada 2,2 s
+        pal = [x * 0.5 for x in range(int(b["dur"] / 0.5))]
+    princ = [c for c in b["cenas"] if c["tipo"] != "academico"]
+    marcas = []
+    for i, c in enumerate(princ):
+        t0 = c["t"]; t1 = princ[i + 1]["t"] if i + 1 < len(princ) else b["dur"]
+        alvo = t0 + 0.6
+        while alvo < t1 - 0.4:
+            cand = [p for p in pal if alvo - 0.4 <= p <= alvo + 0.9 and t0 + 0.3 < p < t1 - 0.3]
+            tm = cand[0] if cand else alvo
+            marcas.append((round(tm, 2), c["tipo"] in ESTREITAS))
+            alvo = tm + 2.0
+    b["passos"] = [m for m, _ in marcas]
+    imgs = IMG.get(b["id"], [])
+    lat = []
+    for k, (m, estreita) in enumerate([x for x in marcas if x[1]]):
+        if k >= len(SLOTS) or not imgs: break
+        src, tipo = imgs[k % len(imgs)]
+        if k >= len(imgs) and len(imgs) < 3: break
+        lado, y = SLOTS[k]
+        lat.append({"t": m, "src": src, "tipo": tipo, "lado": lado, "y": y})
+    b["laterais"] = lat
 
 # efeitos (mesma regra da v2) e tempos absolutos
 FX = {"evidencia": [("papel", 0.0), ("carimbo", 0.55)], "medidor": [("geiger", 0.2)], "contador": [("sweep", 0.0), ("tecla", 0.15)],
@@ -141,6 +212,8 @@ for b in beats:
         for c in b["cenas"]:
             for name, off in FX.get(c["tipo"], []):
                 fx.append({"t": round(t + c["t"] + off, 3), "som": f"{name}_{var % 4}"}); var += 1
+    for l in b.get("laterais", []):
+        fx.append({"t": round(t + l["t"], 3), "som": f"papel_{var % 4}"}); var += 1
     if b["tipo"] == "arq":
         crt = CORTES[b["id"]]["modo"] == "crt"
         fx.append({"t": round(t, 3), "som": f"crt_on_{var % 4}" if crt else f"sweep_{var % 4}"}); var += 1

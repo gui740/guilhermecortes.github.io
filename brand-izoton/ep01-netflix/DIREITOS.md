@@ -31,3 +31,17 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Envelope de DVD da Netflix | BlueMint (Wikimedia Commons) | colagem | Livre com atribuição (CC BY 2.5) | ver IMAGENS.md |
 | Box de séries em DVD | BrokenSphere (Wikimedia Commons) | fala TED 03:33 | Livre com atribuição (CC BY-SA 3.0) | box genérico, não é da HBO |
 | Linhas novas de narração (Gacrux) | Próprio (síntese Gemini TTS) | cold open, regancho, hook do SHORT 02 | Próprio | — |
+
+## Passo 3 (montagem completa)
+
+| Material | Dono | Onde aparece | Status | Observação |
+|---|---|---|---|---|
+| SXSW 2016 - Ted Sarandos (25752599662).jpg | Daniel Benavides from Aust (Wikimedia Commons) | cap. 2, "2011" (bloco 07) | Livre com atribuição (CC BY 2.0) | ver IMAGENS.md |
+| 100 Winchester Circle.jpg | Coolcaesar (Wikimedia Commons) | cap. 1–5 (1997, 2005, prêmio, primeira empresa, 2001) | Livre com atribuição (CC BY-SA 4.0) | ver IMAGENS.md |
+| VHS videocassette - back.jpg | LoMit (Wikimedia Commons) | cap. 1, linha da TV (bloco 05) | Livre com atribuição (CC BY-SA 4.0) | ver IMAGENS.md |
+| Television remote control - black 01.jpg | Dmitry Makeev (Wikimedia Commons) | cap. 1 e 3 (linha da TV, botão) | Livre com atribuição (CC BY-SA 4.0) | ver IMAGENS.md |
+| Netflix House at King of Prussia Mall.jpeg | Dough4872 (Wikimedia Commons) | cap. 10 (blocos 50–53) | Livre com atribuição (CC BY-SA 4.0) | ver IMAGENS.md |
+| Netflix House Dallas, Squid Game guard (cropped).png | Violet Adazé, Netflix (Wikimedia Commons) | cap. 8 e 10 | Livre com atribuição (CC BY 4.0) | ver IMAGENS.md |
+| Adam Brown - DVD Box Set Collection.jpg | Adam Brown (Wikimedia Commons) | cap. 1 e 3 (box sets) | Livre com atribuição (CC BY-SA 2.0) | ver IMAGENS.md |
+| Front Man cosplay.jpg | Rose Abrams (Wikimedia Commons) | cap. 8, Round 6 (bloco 38) | Livre com atribuição (CC BY 4.0) | ver IMAGENS.md |
+| Narração (voz do Guilherme) | Próprio | todo o vídeo | Próprio | gravada por ele; a voz Gacrux (TTS) saiu do episódio |

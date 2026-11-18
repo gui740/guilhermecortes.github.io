@@ -52,6 +52,29 @@
     }
    ],
    "fala": "03: Para entender essa ambição, é preciso voltar a um disco. A Netflix foi fundada em 1997 e nasceu mandando DVDs pelo correio.",
+   "passos": [
+    0.5,
+    2.28,
+    3.9,
+    6.18,
+    7.86
+   ],
+   "laterais": [
+    {
+     "t": 0.5,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.28,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 17.6
   },
   {
@@ -138,6 +161,16 @@
     }
    ],
    "fala": "05: Uma pesquisadora de TV vai além. Para ela, a Netflix é uma continuação da história da televisão e das tecnologias que deram controle ao espectador, do controle remoto até a maratona de episódios.",
+   "passos": [
+    0.32,
+    2.26,
+    3.72,
+    5.86,
+    7.66,
+    9.42,
+    11.24
+   ],
+   "laterais": [],
    "start": 49.78
   },
   {
@@ -176,6 +209,27 @@
     }
    ],
    "fala": "06: A primeira tentativa de ter conteúdo próprio foi em 2005, ainda na era do DVD.",
+   "passos": [
+    0.5,
+    2.14,
+    3.78
+   ],
+   "laterais": [
+    {
+     "t": 0.5,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.14,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 65.55
   },
   {
@@ -221,6 +275,26 @@
     }
    ],
    "fala": "07: A segunda tentativa veio em 2011.",
+   "passos": [
+    0.4,
+    2.4
+   ],
+   "laterais": [
+    {
+     "t": 0.4,
+     "src": "media/v3img/card_sarandos.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.4,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 85.29
   },
   {
@@ -267,6 +341,26 @@
     }
    ],
    "fala": "08: Chris Anderson pergunta como eles tinham certeza de que valia a pena.",
+   "passos": [
+    0.36,
+    2.36
+   ],
+   "laterais": [
+    {
+     "t": 0.36,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.36,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 105.55
   },
   {
@@ -321,6 +415,11 @@
     }
    ],
    "fala": "09: [REGRAVAR] silêncio de 4.7 s estimado",
+   "passos": [
+    0.5,
+    2.5
+   ],
+   "laterais": [],
    "start": 118.06
   },
   {
@@ -379,6 +478,44 @@
     }
    ],
    "fala": "10: Quem é o dono da história é lembrado, quem só exibe, não. E a aposta cresceu. Em 2018, Hastings disse que quando a Netflix ia investir em conteúdo naquele ano.",
+   "passos": [
+    0.46,
+    2.36,
+    4.54,
+    6.54,
+    8.22,
+    10.06
+   ],
+   "laterais": [
+    {
+     "t": 0.46,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.36,
+     "src": "media/stills/poster_madmen.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    },
+    {
+     "t": 4.54,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 600
+    },
+    {
+     "t": 6.54,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 640
+    }
+   ],
    "start": 141.334
   },
   {
@@ -445,6 +582,27 @@
     }
    ],
    "fala": "12: House of Cards trouxe uma segunda aposta. Soltar todos os episódios de uma vez? De onde veio essa ideia?",
+   "passos": [
+    0.52,
+    2.32,
+    4.4
+   ],
+   "laterais": [
+    {
+     "t": 0.52,
+     "src": "media/v3img/card_boxset.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.32,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 163.094
   },
   {
@@ -488,6 +646,31 @@
     }
    ],
    "fala": "13: O que a TV linear não consegue fazer virou produto. Pesquisadores chamam isso de fluxo isolado, recursos como a reprodução automática do próximo episódio e o botão Pular Abertura que mantém você dentro da maratona.",
+   "passos": [
+    0.58,
+    2.32,
+    4.02,
+    6.02,
+    7.64,
+    9.54,
+    11.32
+   ],
+   "laterais": [
+    {
+     "t": 0.58,
+     "src": "media/stills/web_skipintro.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.32,
+     "src": "media/v3img/rec_controle.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 194.524
   },
   {
@@ -515,6 +698,13 @@
     }
    ],
    "fala": "14: Outro estudo descreve o mesmo. Alguns segundos depois do fim de um episódio, o próximo já começa. Ninguém precisa apertar nada.",
+   "passos": [
+    0.4,
+    2.18,
+    4.16,
+    5.88
+   ],
+   "laterais": [],
    "start": 207.374
   },
   {
@@ -534,6 +724,27 @@
     }
    ],
    "fala": "15: Esse botão é apertado 136 milhões de vezes num dia típico.",
+   "passos": [
+    0.34,
+    2.34,
+    3.98
+   ],
+   "laterais": [
+    {
+     "t": 0.34,
+     "src": "media/v3img/rec_controle.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.34,
+     "src": "media/stills/web_skipintro_tv.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 214.804
   },
   {
@@ -572,6 +783,48 @@
     }
    ],
    "fala": "16: Ele nasceu de uma pesquisa. Em cerca de 15 % das vezes, as pessoas adiantavam a série na mão nos primeiros 5 minutos. A Netflix testou em 250 séries, nos Estados Unidos, no Reino Unido e no Canadá. Primeiro na web e levou pra TV em agosto de 2017.",
+   "passos": [
+    0.54,
+    2.32,
+    3.98,
+    5.58,
+    7.68,
+    9.62,
+    10.98,
+    12.68,
+    14.5,
+    16.5
+   ],
+   "laterais": [
+    {
+     "t": 0.54,
+     "src": "media/stills/poster_strangerthings.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.32,
+     "src": "media/stills/poster_wednesday.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    },
+    {
+     "t": 3.98,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 600
+    },
+    {
+     "t": 5.58,
+     "src": "media/stills/poster_strangerthings.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 640
+    }
+   ],
    "start": 220.354
   },
   {
@@ -601,6 +854,30 @@
     }
    ],
    "fala": "17: Em 2022, a empresa calculou 195 anos economizados, somando o tempo de todo mundo. Um engenheiro resumiu, talvez nem um botão escrito Cupcake grátis tivesse mais cliques.",
+   "passos": [
+    1.3,
+    3.34,
+    5.88,
+    7.54,
+    9.2,
+    11.18
+   ],
+   "laterais": [
+    {
+     "t": 1.3,
+     "src": "media/stills/web_skipintro.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 3.34,
+     "src": "media/v3img/rec_controle.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 237.564
   },
   {
@@ -630,6 +907,26 @@
     }
    ],
    "fala": "18: Um botão que faz uma coisa só, esse é o produto, não deixar você esperar.",
+   "passos": [
+    0.48,
+    2.38
+   ],
+   "laterais": [
+    {
+     "t": 0.48,
+     "src": "media/v3img/rec_controle.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.38,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 250.044
   },
   {
@@ -671,6 +968,30 @@
     }
    ],
    "fala": "20: Por volta de 2007, segundo Hastings, a Netflix abriu o seu sistema de recomendação para o mundo, e ofereceu 1 milhão de dólares a quem conseguisse melhorá -lo em 10%, e nunca repetiu.",
+   "passos": [
+    0.42,
+    2.38,
+    4.44,
+    6.24,
+    8.1,
+    9.72
+   ],
+   "laterais": [
+    {
+     "t": 0.42,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.38,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 260.954
   },
   {
@@ -743,6 +1064,11 @@
     }
    ],
    "fala": "21: O que você diz é a sua versão ideal. O que você assiste é você.",
+   "passos": [
+    0.44,
+    2.58
+   ],
+   "laterais": [],
    "start": 289.504
   },
   {
@@ -800,6 +1126,29 @@
     }
    ],
    "fala": "22: Mas Hastings faz uma ressalva no mesmo palco, não dá para depender só do algoritmo. A Netflix se vê como um serviço com curadoria, e o algoritmo é uma ferramenta.",
+   "passos": [
+    0.46,
+    2.1,
+    4.98,
+    6.8,
+    8.4
+   ],
+   "laterais": [
+    {
+     "t": 0.46,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.1,
+     "src": "media/stills/web_jenner.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 304.154
   },
   {
@@ -840,6 +1189,27 @@
     }
    ],
    "fala": "24: Antes da Netflix, Hastings fundou outra empresa e aprendeu com ela o que não fazer.",
+   "passos": [
+    0.32,
+    2.0,
+    3.78
+   ],
+   "laterais": [
+    {
+     "t": 0.32,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.0,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 320.392
   },
   {
@@ -884,6 +1254,26 @@
     }
    ],
    "fala": "25: Na Netflix, ele quis o contrário, o mínimo de processo sem virar caos.",
+   "passos": [
+    1.08,
+    2.7
+   ],
+   "laterais": [
+    {
+     "t": 1.08,
+     "src": "media/stills/web_keeper.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.7,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 340.972
   },
   {
@@ -955,6 +1345,27 @@
     }
    ],
    "fala": "26: Em 2001, o dinheiro acabou. Hastings contou o que veio depois, numa aula em Stanford em 2015.",
+   "passos": [
+    1.26,
+    3.06,
+    4.82
+   ],
+   "laterais": [
+    {
+     "t": 1.26,
+     "src": "media/v3img/card_losgatos.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 3.06,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 358.852
   },
   {
@@ -999,6 +1410,27 @@
     }
    ],
    "fala": "27: Daí veio a densidade de talento, e uma pergunta que todo gestor tem que responder.",
+   "passos": [
+    0.64,
+    2.7,
+    4.52
+   ],
+   "laterais": [
+    {
+     "t": 0.64,
+     "src": "media/v3img/rec_hastings_2015.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.7,
+     "src": "media/stills/web_keeper.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 382.622
   },
   {
@@ -1066,6 +1498,36 @@
     }
    ],
    "fala": "28: No memorando oficial de cultura, isso tem nome, Keeper Test. Se a resposta for não, a empresa considera mais justo se separar rápido. A própria Netflix admite que, no papel, o teste pode assustar. E o nome vem de uma pescaria. Quando Hastings era criança, o pai dele dizia, ao ver um peixe bom, esse é um Keeper. Esse fica.",
+   "passos": [
+    0.32,
+    1.98,
+    4.3,
+    5.96,
+    7.58,
+    9.3,
+    11.18,
+    12.88,
+    14.56,
+    16.24,
+    17.86,
+    19.96
+   ],
+   "laterais": [
+    {
+     "t": 0.32,
+     "src": "media/stills/web_keeper.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 1.98,
+     "src": "media/v3img/rec_hastings_2014.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 413.172
   },
   {
@@ -1102,6 +1564,13 @@
     }
    ],
    "fala": "29: Num vídeo inteiro em preto e branco, só uma coisa tem cor. Não é efeito, é regra.",
+   "passos": [
+    0.48,
+    2.54,
+    4.22,
+    6.22
+   ],
+   "laterais": [],
    "start": 436.892
   },
   {
@@ -1134,6 +1603,14 @@
     }
    ],
    "fala": "30: No guia de Marco Oficial, a Netflix diz que, nos mercados onde é muito conhecida, lidera com o N. Existe poder em ser dono de uma letra do alfabeto.",
+   "passos": [
+    0.42,
+    2.2,
+    5.12,
+    6.84,
+    8.84
+   ],
+   "laterais": [],
    "start": 444.122
   },
   {
@@ -1149,6 +1626,14 @@
     }
    ],
    "fala": "31: Mas, sem o vermelho, o N poderia não ser lido como Netflix, por isso ele aparece sempre na cura assinatura, o vermelho Netflix, com o vermelho escuro de apoio.",
+   "passos": [
+    0.82,
+    2.6,
+    4.24,
+    6.2,
+    8.08
+   ],
+   "laterais": [],
    "start": 453.472
   },
   {
@@ -1174,6 +1659,20 @@
     }
    ],
    "fala": "32: O guia lista é o que é proibido. Esticar, girar, achatar numa cor só, pôr efeitos, colocar sobre fundo poluído ou sobre vermelho. E duas regras curiosas, o ele não pode ir no chão, onde alguém pise, nem em comida que possa ser mordida.",
+   "passos": [
+    0.52,
+    2.52,
+    4.52,
+    6.16,
+    8.08,
+    9.78,
+    12.12,
+    13.76,
+    15.42,
+    17.12,
+    18.78
+   ],
+   "laterais": [],
    "start": 463.182
   },
   {
@@ -1219,6 +1718,29 @@
     }
    ],
    "fala": "33: A identidade é fixa. A voz? Não. Um estudo comparou as redes da Netflix nos Estados Unidos e na Espanha, durante três meses. No Twitter, 60 % dos posts espanhóis tinham intenção de humor, contra 36 ,7 % dos americanos. A conta americana informa mais, a espanhola brinca mais e chama mais para a ação.",
+   "passos": [
+    0.36,
+    2.42,
+    4.04,
+    5.78,
+    7.78,
+    9.1,
+    11.28,
+    12.88,
+    14.78,
+    16.44,
+    18.54,
+    20.4
+   ],
+   "laterais": [
+    {
+     "t": 0.36,
+     "src": "media/stills/pazperez_p12-12.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    }
+   ],
    "start": 483.982
   },
   {
@@ -1272,6 +1794,31 @@
     }
    ],
    "fala": "34: Dezembro de 2015, quinto debate republicano, ao vivo na CNN. Horas antes, a conta oficial de House of Cards avisa. O presidente Underwood fará um anúncio especial durante o debate.",
+   "passos": [
+    0.64,
+    2.4,
+    4.1,
+    5.98,
+    7.64,
+    9.68,
+    11.34
+   ],
+   "laterais": [
+    {
+     "t": 0.64,
+     "src": "media/stills/web_drum.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.4,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 508.732
   },
   {
@@ -1322,6 +1869,31 @@
     }
    ],
    "fala": "35: No intervalo, entra um comercial de campanha. O candidato é Frank Underwood, o presidente da série, com o hashtag propria, um site de campanha falso e a data de estreia da quarta temporada, 4 de março.",
+   "passos": [
+    1.3,
+    3.0,
+    5.48,
+    7.36,
+    9.42,
+    11.74,
+    13.74
+   ],
+   "laterais": [
+    {
+     "t": 1.3,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 3.0,
+     "src": "media/stills/web_drum.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 540.962
   },
   {
@@ -1363,6 +1935,19 @@
     }
    ],
    "fala": "36: A série não interrompeu a conversa política. Entrou nela.",
+   "passos": [
+    0.4,
+    2.48
+   ],
+   "laterais": [
+    {
+     "t": 0.4,
+     "src": "media/stills/poster_houseofcards.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    }
+   ],
    "start": 558.682
   },
   {
@@ -1404,6 +1989,25 @@
     }
    ],
    "fala": "37: No Brasil, o caminho foi o das parcerias. Segundo o Meio Mensagem Sena, de 2024, foi a produção brasileira da Netflix com mais parcerias comerciais. Heineken, Guarana Antártica, Claro, McDonald's e outras.",
+   "passos": [
+    0.98,
+    2.76,
+    5.44,
+    6.44,
+    8.06,
+    10.0,
+    11.64,
+    13.3
+   ],
+   "laterais": [
+    {
+     "t": 0.98,
+     "src": "media/stills/web_mm_senna.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    }
+   ],
    "start": 562.652
   },
   {
@@ -1452,6 +2056,47 @@
     }
    ],
    "fala": "38: Em 2021, uma série coreana mudou a escala. Na carta aos acionistas, a Netflix chamou Round 6 de nosso maior programa de TV de todos os tempos. 142 milhões de domicílios nas 4 primeiras semanas, número 1 em 94 países.",
+   "passos": [
+    0.34,
+    2.14,
+    3.82,
+    6.22,
+    7.98,
+    9.6,
+    11.34,
+    13.4,
+    15.4
+   ],
+   "laterais": [
+    {
+     "t": 6.22,
+     "src": "media/v3img/card_squid_cosplay.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 7.98,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    },
+    {
+     "t": 9.6,
+     "src": "media/stills/carta_q3_21-03.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 600
+    },
+    {
+     "t": 11.34,
+     "src": "media/v3img/card_squid_cosplay.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 640
+    }
+   ],
    "start": 579.572
   },
   {
@@ -1486,6 +2131,30 @@
     }
    ],
    "fala": "39: No ranking oficial de hoje, que somam as visualizações dos primeiros 91 dias, a primeira temporada de Round 6 tem 265 milhões, é a série mais vista da história da plataforma.",
+   "passos": [
+    0.56,
+    2.22,
+    4.06,
+    5.84,
+    8.54,
+    10.2
+   ],
+   "laterais": [
+    {
+     "t": 5.84,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 8.54,
+     "src": "media/v3img/card_house_guard.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 595.452
   },
   {
@@ -1523,6 +2192,16 @@
     }
    ],
    "fala": "40: Antes dela, veio La Casa de Papel, na mesma carta, a Netflix diz que foi o primeiro título fora do inglês a provar que, com legenda e dublagem, grandes histórias podem vir de qualquer lugar e ser amadas em todo lugar.",
+   "passos": [
+    0.44,
+    2.36,
+    4.1,
+    5.7,
+    7.68,
+    9.5,
+    11.24
+   ],
+   "laterais": [],
    "start": 607.742
   },
   {
@@ -1546,6 +2225,13 @@
     }
    ],
    "fala": "41: Em inglês, Wednesday lidera, com 252 milhões, Stranger Things 4 soma 140 milhões.",
+   "passos": [
+    0.52,
+    2.22,
+    4.1,
+    5.96
+   ],
+   "laterais": [],
    "start": 620.932
   },
   {
@@ -1569,6 +2255,42 @@
     }
    ],
    "fala": "42: Uma pesquisadora chama isso de audiência transnacional, dividida entre fronteiras e não dentro delas.",
+   "passos": [
+    0.32,
+    2.1,
+    3.86,
+    5.86
+   ],
+   "laterais": [
+    {
+     "t": 0.32,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.1,
+     "src": "media/stills/poster_moneyheist.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    },
+    {
+     "t": 3.86,
+     "src": "media/stills/poster_wednesday.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 600
+    },
+    {
+     "t": 5.86,
+     "src": "media/stills/poster_squidgame.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 640
+    }
+   ],
    "start": 628.822
   },
   {
@@ -1626,6 +2348,29 @@
     }
    ],
    "fala": "44: Em fevereiro de 2023, a Netflix disse que mais de 100 milhões de domicílios compartilhavam contas e que isso prejudicava a capacidade de investir em séries e filmes.",
+   "passos": [
+    0.72,
+    2.34,
+    5.28,
+    7.28,
+    9.06
+   ],
+   "laterais": [
+    {
+     "t": 0.72,
+     "src": "media/stills/web_sharing.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.34,
+     "src": "media/stills/carta_q4_22-06.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 641.522
   },
   {
@@ -1653,6 +2398,12 @@
     }
    ],
    "fala": "45: A carta aos acionistas já previa cancelamentos em cada mercado.",
+   "passos": [
+    0.34,
+    2.08,
+    4.08
+   ],
+   "laterais": [],
    "start": 651.822
   },
   {
@@ -1680,6 +2431,15 @@
     }
    ],
    "fala": "46: Em maio, o compartilhamento pago chegou a mais de 100 países. Em julho, a carta dizia que a receita em cada região já era maior do que antes, e que as adesões superavam os cancelamentos.",
+   "passos": [
+    0.52,
+    2.2,
+    3.96,
+    5.58,
+    7.24,
+    9.26
+   ],
+   "laterais": [],
    "start": 656.472
   },
   {
@@ -1697,6 +2457,21 @@
     }
    ],
    "fala": "47: Foi um acerto? Pelos números da própria empresa, sim. Para quem dividia a senha, a conta mudou.",
+   "passos": [
+    0.52,
+    2.22,
+    3.94,
+    5.64
+   ],
+   "laterais": [
+    {
+     "t": 0.52,
+     "src": "media/stills/carta_q2_23-01.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    }
+   ],
    "start": 667.982
   },
   {
@@ -1737,6 +2512,36 @@
     }
    ],
    "fala": "48: Veio também o plano com anúncios em novembro de 2022, em 12 países, incluindo o Brasil, em média de 4 a 5 minutos de anúncio por hora. No fim de 2024, ele respondia por mais da metade das novas assinaturas nos países onde existe. E a carta daquele trimestre avisava, de tempos em tempos, a Netflix vai pedir que você pague um pouco mais.",
+   "passos": [
+    0.38,
+    2.16,
+    3.84,
+    5.64,
+    7.5,
+    9.2,
+    10.94,
+    12.66,
+    14.66,
+    15.46,
+    17.72,
+    19.58
+   ],
+   "laterais": [
+    {
+     "t": 0.38,
+     "src": "media/stills/web_ads.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.16,
+     "src": "media/stills/carta_q4_24-05.png",
+     "tipo": "print",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 675.542
   },
   {
@@ -1777,6 +2582,25 @@
     }
    ],
    "fala": "49: E a concorrência? Em 2019, a carta aos acionistas foi direta, competimos com o Fortnite e perdemos pra ele, mais do que pra HBO. Quando o YouTube caiu por alguns minutos, a audiência e os cadastros da Netflix subiram.",
+   "passos": [
+    0.5,
+    2.82,
+    5.08,
+    6.74,
+    8.42,
+    9.74,
+    11.86,
+    13.7
+   ],
+   "laterais": [
+    {
+     "t": 9.74,
+     "src": "media/stills/carta_q4_18-05.png",
+     "tipo": "print",
+     "lado": "esq",
+     "y": 150
+    }
+   ],
    "start": 697.402
   },
   {
@@ -1879,6 +2703,33 @@
     }
    ],
    "fala": "50: Em novembro de 2025, abriu a primeira Netflix House, perto da Filadélfia. Em dezembro, a de Dallas, mais de 9 mil metros quadrados, entrada grátis e experiências pagas de Stranger Things e Round 6. Uma terceira está prevista para Las Vegas em 2027.",
+   "passos": [
+    0.52,
+    2.28,
+    5.24,
+    6.92,
+    9.2,
+    11.74,
+    13.44,
+    15.28,
+    17.28
+   ],
+   "laterais": [
+    {
+     "t": 5.24,
+     "src": "media/v3img/card_house_kop.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 6.92,
+     "src": "media/v3img/card_house_guard.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 730.822
   },
   {
@@ -1913,6 +2764,29 @@
     }
    ],
    "fala": "51: A porta de entrada é um envelope vermelho gigante, nas palavras da própria Netflix, uma referência às origens do DVD pelo correio.",
+   "passos": [
+    0.46,
+    2.22,
+    3.92,
+    5.66,
+    7.66
+   ],
+   "laterais": [
+    {
+     "t": 0.46,
+     "src": "media/v3img/card_house_kop.jpg",
+     "tipo": "card",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.22,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 749.012
   },
   {
@@ -1964,6 +2838,32 @@
     }
    ],
    "fala": "52+53: Ela começou como um envelope vermelho que chegava a sua casa. Agora, o envelope vermelho é a porta da casa dela. Depois de quase 30 anos disputando seu tempo dentro de casa, a Netflix quer também o seu tempo fora dela.",
+   "passos": [
+    0.72,
+    2.66,
+    4.32,
+    5.92,
+    7.58,
+    10.14,
+    11.96,
+    13.68
+   ],
+   "laterais": [
+    {
+     "t": 0.72,
+     "src": "media/v3img/rec_envelope.png",
+     "tipo": "rec",
+     "lado": "esq",
+     "y": 150
+    },
+    {
+     "t": 2.66,
+     "src": "media/v3img/card_house_kop.jpg",
+     "tipo": "card",
+     "lado": "dir",
+     "y": 210
+    }
+   ],
    "start": 763.622
   },
   {
@@ -1981,6 +2881,13 @@
     }
    ],
    "fala": "54: Branch by Isoton. Até o próximo arquivo.",
+   "passos": [
+    1.02,
+    2.68,
+    4.68,
+    6.68
+   ],
+   "laterais": [],
    "start": 778.712
   }
  ],
@@ -1990,28 +2897,44 @@
    "som": "papel_0"
   },
   {
+   "t": 18.1,
+   "som": "papel_1"
+  },
+  {
+   "t": 19.88,
+   "som": "papel_2"
+  },
+  {
    "t": 27.61,
-   "som": "crt_on_1"
+   "som": "crt_on_3"
   },
   {
    "t": 37.63,
-   "som": "crt_off_2"
+   "som": "crt_off_0"
   },
   {
    "t": 49.78,
-   "som": "click_3"
+   "som": "click_1"
   },
   {
    "t": 53.02,
-   "som": "papel_0"
+   "som": "papel_2"
   },
   {
    "t": 53.57,
-   "som": "carimbo_1"
+   "som": "carimbo_3"
   },
   {
    "t": 65.55,
-   "som": "bip_2"
+   "som": "bip_0"
+  },
+  {
+   "t": 66.05,
+   "som": "papel_1"
+  },
+  {
+   "t": 67.69,
+   "som": "papel_2"
   },
   {
    "t": 70.5,
@@ -2026,16 +2949,32 @@
    "som": "bip_1"
   },
   {
+   "t": 85.69,
+   "som": "papel_2"
+  },
+  {
+   "t": 87.69,
+   "som": "papel_3"
+  },
+  {
    "t": 88.32,
-   "som": "crt_on_2"
+   "som": "crt_on_0"
   },
   {
    "t": 105.3,
-   "som": "crt_off_3"
+   "som": "crt_off_1"
   },
   {
    "t": 105.55,
-   "som": "bip_0"
+   "som": "bip_2"
+  },
+  {
+   "t": 105.91,
+   "som": "papel_3"
+  },
+  {
+   "t": 107.91,
+   "som": "papel_0"
   },
   {
    "t": 109.35,
@@ -2066,6 +3005,22 @@
    "som": "geiger_3"
   },
   {
+   "t": 141.794,
+   "som": "papel_0"
+  },
+  {
+   "t": 143.694,
+   "som": "papel_1"
+  },
+  {
+   "t": 145.874,
+   "som": "papel_2"
+  },
+  {
+   "t": 147.874,
+   "som": "papel_3"
+  },
+  {
    "t": 152.484,
    "som": "crt_on_0"
   },
@@ -2078,8 +3033,24 @@
    "som": "bip_2"
   },
   {
+   "t": 163.614,
+   "som": "papel_3"
+  },
+  {
+   "t": 165.414,
+   "som": "papel_0"
+  },
+  {
    "t": 194.524,
-   "som": "click_3"
+   "som": "click_1"
+  },
+  {
+   "t": 195.104,
+   "som": "papel_2"
+  },
+  {
+   "t": 196.844,
+   "som": "papel_3"
   },
   {
    "t": 207.374,
@@ -2094,28 +3065,60 @@
    "som": "click_2"
   },
   {
-   "t": 220.454,
-   "som": "bip_3"
+   "t": 215.144,
+   "som": "papel_3"
   },
   {
-   "t": 230.724,
+   "t": 217.144,
    "som": "papel_0"
   },
   {
+   "t": 220.454,
+   "som": "bip_1"
+  },
+  {
+   "t": 230.724,
+   "som": "papel_2"
+  },
+  {
    "t": 231.274,
-   "som": "carimbo_1"
+   "som": "carimbo_3"
+  },
+  {
+   "t": 220.894,
+   "som": "papel_0"
+  },
+  {
+   "t": 222.674,
+   "som": "papel_1"
+  },
+  {
+   "t": 224.334,
+   "som": "papel_2"
+  },
+  {
+   "t": 225.934,
+   "som": "papel_3"
   },
   {
    "t": 237.564,
-   "som": "sweep_2"
+   "som": "sweep_0"
   },
   {
    "t": 237.714,
-   "som": "tecla_3"
+   "som": "tecla_1"
   },
   {
    "t": 243.054,
-   "som": "bip_0"
+   "som": "bip_2"
+  },
+  {
+   "t": 238.864,
+   "som": "papel_3"
+  },
+  {
+   "t": 240.904,
+   "som": "papel_0"
   },
   {
    "t": 250.244,
@@ -2126,8 +3129,24 @@
    "som": "bip_2"
   },
   {
+   "t": 250.524,
+   "som": "papel_3"
+  },
+  {
+   "t": 252.424,
+   "som": "papel_0"
+  },
+  {
    "t": 261.554,
-   "som": "carimbo_3"
+   "som": "carimbo_1"
+  },
+  {
+   "t": 261.374,
+   "som": "papel_2"
+  },
+  {
+   "t": 263.334,
+   "som": "papel_3"
   },
   {
    "t": 271.924,
@@ -2166,8 +3185,24 @@
    "som": "bip_0"
   },
   {
+   "t": 304.614,
+   "som": "papel_1"
+  },
+  {
+   "t": 306.254,
+   "som": "papel_2"
+  },
+  {
    "t": 320.392,
-   "som": "bip_1"
+   "som": "bip_3"
+  },
+  {
+   "t": 320.712,
+   "som": "papel_0"
+  },
+  {
+   "t": 322.392,
+   "som": "papel_1"
   },
   {
    "t": 325.442,
@@ -2182,24 +3217,40 @@
    "som": "bip_0"
   },
   {
+   "t": 342.052,
+   "som": "papel_1"
+  },
+  {
+   "t": 343.672,
+   "som": "papel_2"
+  },
+  {
    "t": 346.052,
-   "som": "crt_on_1"
-  },
-  {
-   "t": 352.732,
-   "som": "crt_off_2"
-  },
-  {
-   "t": 352.982,
    "som": "crt_on_3"
   },
   {
-   "t": 358.602,
+   "t": 352.732,
    "som": "crt_off_0"
   },
   {
+   "t": 352.982,
+   "som": "crt_on_1"
+  },
+  {
+   "t": 358.602,
+   "som": "crt_off_2"
+  },
+  {
    "t": 359.252,
-   "som": "click_1"
+   "som": "click_3"
+  },
+  {
+   "t": 360.112,
+   "som": "papel_0"
+  },
+  {
+   "t": 361.912,
+   "som": "papel_1"
   },
   {
    "t": 365.452,
@@ -2214,28 +3265,44 @@
    "som": "bip_0"
   },
   {
+   "t": 383.262,
+   "som": "papel_1"
+  },
+  {
+   "t": 385.322,
+   "som": "papel_2"
+  },
+  {
    "t": 388.682,
-   "som": "crt_on_1"
+   "som": "crt_on_3"
   },
   {
    "t": 412.922,
-   "som": "crt_off_2"
+   "som": "crt_off_0"
   },
   {
    "t": 413.472,
-   "som": "carimbo_3"
-  },
-  {
-   "t": 417.162,
-   "som": "papel_0"
-  },
-  {
-   "t": 417.712,
    "som": "carimbo_1"
   },
   {
+   "t": 417.162,
+   "som": "papel_2"
+  },
+  {
+   "t": 417.712,
+   "som": "carimbo_3"
+  },
+  {
    "t": 425.282,
-   "som": "plin_2"
+   "som": "plin_0"
+  },
+  {
+   "t": 413.492,
+   "som": "papel_1"
+  },
+  {
+   "t": 415.152,
+   "som": "papel_2"
   },
   {
    "t": 448.662,
@@ -2266,140 +3333,220 @@
    "som": "carimbo_1"
   },
   {
-   "t": 508.732,
-   "som": "bip_2"
-  },
-  {
-   "t": 509.082,
-   "som": "bip_3"
-  },
-  {
-   "t": 514.142,
-   "som": "papel_0"
-  },
-  {
-   "t": 514.692,
-   "som": "carimbo_1"
-  },
-  {
-   "t": 521.062,
-   "som": "sweep_2"
-  },
-  {
-   "t": 540.712,
-   "som": "click_3"
-  },
-  {
-   "t": 540.962,
-   "som": "bip_0"
-  },
-  {
-   "t": 555.232,
-   "som": "sweep_1"
-  },
-  {
-   "t": 558.432,
-   "som": "click_2"
-  },
-  {
-   "t": 558.682,
-   "som": "bip_3"
-  },
-  {
-   "t": 562.652,
-   "som": "tecla_0"
-  },
-  {
-   "t": 568.702,
-   "som": "papel_1"
-  },
-  {
-   "t": 569.252,
-   "som": "carimbo_2"
-  },
-  {
-   "t": 579.572,
-   "som": "sweep_3"
-  },
-  {
-   "t": 585.462,
-   "som": "sweep_0"
-  },
-  {
-   "t": 585.612,
-   "som": "tecla_1"
-  },
-  {
-   "t": 595.452,
+   "t": 484.342,
    "som": "papel_2"
   },
   {
-   "t": 596.002,
-   "som": "carimbo_3"
+   "t": 508.732,
+   "som": "bip_3"
   },
   {
-   "t": 600.842,
-   "som": "sweep_0"
+   "t": 509.082,
+   "som": "bip_0"
   },
   {
-   "t": 600.992,
-   "som": "tecla_1"
+   "t": 514.142,
+   "som": "papel_1"
   },
   {
-   "t": 607.742,
-   "som": "sweep_2"
+   "t": 514.692,
+   "som": "carimbo_2"
   },
   {
-   "t": 613.092,
+   "t": 509.372,
    "som": "papel_3"
   },
   {
-   "t": 613.642,
-   "som": "carimbo_0"
+   "t": 511.132,
+   "som": "papel_0"
   },
   {
-   "t": 620.932,
+   "t": 521.062,
    "som": "sweep_1"
   },
   {
-   "t": 628.922,
-   "som": "bip_2"
+   "t": 540.712,
+   "som": "click_2"
   },
   {
-   "t": 641.522,
-   "som": "sweep_3"
+   "t": 540.962,
+   "som": "bip_3"
   },
   {
-   "t": 641.672,
-   "som": "tecla_0"
+   "t": 542.262,
+   "som": "papel_0"
   },
   {
-   "t": 645.892,
+   "t": 543.962,
    "som": "papel_1"
   },
   {
-   "t": 646.442,
-   "som": "carimbo_2"
+   "t": 555.232,
+   "som": "sweep_2"
   },
   {
-   "t": 651.822,
+   "t": 558.432,
+   "som": "click_3"
+  },
+  {
+   "t": 558.682,
+   "som": "bip_0"
+  },
+  {
+   "t": 559.082,
+   "som": "papel_1"
+  },
+  {
+   "t": 562.652,
+   "som": "tecla_2"
+  },
+  {
+   "t": 568.702,
    "som": "papel_3"
   },
   {
-   "t": 652.372,
+   "t": 569.252,
    "som": "carimbo_0"
   },
   {
-   "t": 656.472,
+   "t": 563.632,
    "som": "papel_1"
   },
   {
-   "t": 657.022,
+   "t": 579.572,
+   "som": "sweep_2"
+  },
+  {
+   "t": 585.462,
+   "som": "sweep_3"
+  },
+  {
+   "t": 585.612,
+   "som": "tecla_0"
+  },
+  {
+   "t": 585.792,
+   "som": "papel_1"
+  },
+  {
+   "t": 587.552,
+   "som": "papel_2"
+  },
+  {
+   "t": 589.172,
+   "som": "papel_3"
+  },
+  {
+   "t": 590.912,
+   "som": "papel_0"
+  },
+  {
+   "t": 595.452,
+   "som": "papel_1"
+  },
+  {
+   "t": 596.002,
    "som": "carimbo_2"
   },
   {
-   "t": 668.282,
+   "t": 600.842,
+   "som": "sweep_3"
+  },
+  {
+   "t": 600.992,
+   "som": "tecla_0"
+  },
+  {
+   "t": 601.292,
+   "som": "papel_1"
+  },
+  {
+   "t": 603.992,
+   "som": "papel_2"
+  },
+  {
+   "t": 607.742,
+   "som": "sweep_3"
+  },
+  {
+   "t": 613.092,
+   "som": "papel_0"
+  },
+  {
+   "t": 613.642,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 620.932,
+   "som": "sweep_2"
+  },
+  {
+   "t": 628.922,
+   "som": "bip_3"
+  },
+  {
+   "t": 629.142,
+   "som": "papel_0"
+  },
+  {
+   "t": 630.922,
+   "som": "papel_1"
+  },
+  {
+   "t": 632.682,
+   "som": "papel_2"
+  },
+  {
+   "t": 634.682,
+   "som": "papel_3"
+  },
+  {
+   "t": 641.522,
+   "som": "sweep_0"
+  },
+  {
+   "t": 641.672,
+   "som": "tecla_1"
+  },
+  {
+   "t": 645.892,
+   "som": "papel_2"
+  },
+  {
+   "t": 646.442,
    "som": "carimbo_3"
+  },
+  {
+   "t": 642.242,
+   "som": "papel_0"
+  },
+  {
+   "t": 643.862,
+   "som": "papel_1"
+  },
+  {
+   "t": 651.822,
+   "som": "papel_2"
+  },
+  {
+   "t": 652.372,
+   "som": "carimbo_3"
+  },
+  {
+   "t": 656.472,
+   "som": "papel_0"
+  },
+  {
+   "t": 657.022,
+   "som": "carimbo_1"
+  },
+  {
+   "t": 668.282,
+   "som": "carimbo_2"
+  },
+  {
+   "t": 668.502,
+   "som": "papel_3"
   },
   {
    "t": 675.542,
@@ -2422,72 +3569,108 @@
    "som": "bip_0"
   },
   {
-   "t": 697.402,
+   "t": 675.922,
    "som": "papel_1"
   },
   {
-   "t": 697.952,
-   "som": "carimbo_2"
+   "t": 677.702,
+   "som": "papel_2"
   },
   {
-   "t": 706.772,
-   "som": "geiger_3"
-  },
-  {
-   "t": 712.372,
-   "som": "crt_on_0"
-  },
-  {
-   "t": 725.472,
-   "som": "crt_off_1"
-  },
-  {
-   "t": 728.322,
-   "som": "sweep_2"
-  },
-  {
-   "t": 730.572,
-   "som": "click_3"
-  },
-  {
-   "t": 735.192,
-   "som": "sweep_0"
-  },
-  {
-   "t": 735.342,
-   "som": "tecla_1"
-  },
-  {
-   "t": 742.152,
-   "som": "bip_2"
-  },
-  {
-   "t": 749.012,
+   "t": 697.402,
    "som": "papel_3"
   },
   {
-   "t": 752.582,
+   "t": 697.952,
+   "som": "carimbo_0"
+  },
+  {
+   "t": 706.772,
+   "som": "geiger_1"
+  },
+  {
+   "t": 707.142,
+   "som": "papel_2"
+  },
+  {
+   "t": 712.372,
+   "som": "crt_on_3"
+  },
+  {
+   "t": 725.472,
+   "som": "crt_off_0"
+  },
+  {
+   "t": 728.322,
+   "som": "sweep_1"
+  },
+  {
+   "t": 730.572,
+   "som": "click_2"
+  },
+  {
+   "t": 735.192,
+   "som": "sweep_3"
+  },
+  {
+   "t": 735.342,
+   "som": "tecla_0"
+  },
+  {
+   "t": 742.152,
+   "som": "bip_1"
+  },
+  {
+   "t": 736.062,
+   "som": "papel_2"
+  },
+  {
+   "t": 737.742,
+   "som": "papel_3"
+  },
+  {
+   "t": 749.012,
    "som": "papel_0"
   },
   {
+   "t": 752.582,
+   "som": "papel_1"
+  },
+  {
    "t": 753.132,
-   "som": "carimbo_1"
+   "som": "carimbo_2"
+  },
+  {
+   "t": 749.472,
+   "som": "papel_3"
+  },
+  {
+   "t": 751.232,
+   "som": "papel_0"
   },
   {
    "t": 757.522,
-   "som": "sweep_2"
+   "som": "sweep_1"
   },
   {
    "t": 763.372,
-   "som": "click_3"
+   "som": "click_2"
   },
   {
    "t": 763.622,
-   "som": "bip_0"
+   "som": "bip_3"
+  },
+  {
+   "t": 764.342,
+   "som": "papel_0"
+  },
+  {
+   "t": 766.282,
+   "som": "papel_1"
   },
   {
    "t": 781.712,
-   "som": "crt_off_1"
+   "som": "crt_off_2"
   }
  ],
  "capitulos": [

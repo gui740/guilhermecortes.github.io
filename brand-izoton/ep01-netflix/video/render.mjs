@@ -98,3 +98,21 @@ if (modo === "v3a") {
     log(`${a} ok`);
   }
 }
+
+// node render.mjs partes <escala> <prefixo> -> EpisodioV3 em partes de ~200 s (pula as já prontas); depois junte com concat
+if (modo === "partes") {
+  const escala = Number(ids[0] || 0.5), pref = ids[1] || "ep540";
+  fs.mkdirSync("out/v3a/partes", { recursive: true });
+  const c = await comp("EpisodioV3");
+  const N = c.durationInFrames, passo = 6000;
+  for (let i = 0, k = 1; i < N; i += passo, k++) {
+    const out = `out/v3a/partes/${pref}_${String(k).padStart(2, "0")}.mp4`;
+    if (fs.existsSync(out)) { log(`${out} já existe`); continue; }
+    ultimo = -1;
+    await renderMedia({ composition: c, serveUrl, codec: "h264", crf: escala < 1 ? 20 : 17, scale: escala, frameRange: [i, Math.min(N, i + passo) - 1],
+      outputLocation: out + ".tmp.mp4", browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 3), imageFormat: "jpeg", jpegQuality: 90,
+      onProgress: progresso(`parte ${k}`), timeoutInMilliseconds: 120000, offthreadVideoCacheSizeInBytes: 2 * 1024 ** 3 });
+    fs.renameSync(out + ".tmp.mp4", out);
+    log(`parte ${k} ok`);
+  }
+}

@@ -3,17 +3,17 @@ A Netflix diz que não compete só com outros streamings. Compete com o seu temp
 Todas as afirmações do vídeo têm fonte; a lista completa está abaixo, em ABNT. Falas em inglês com legenda em português fiel ao original.
 
 CAPÍTULOS
-00:00 Abertura: a Netflix compete com o quê?
-00:45 Do DVD ao streaming
-01:42 A aposta no original: House of Cards
-03:23 O binge como produto (e o botão Pular abertura)
-05:12 O algoritmo que olha o que você faz
-06:12 Cultura: anti-Apple e keeper test
-08:17 Identidade: por que uma letra só
-09:43 Publicidade: #FU2016 e Senna
-11:03 Fenômenos: Round 6, La Casa de Papel, Wednesday
-12:13 A conta: senhas, anúncios e preço
-13:48 A Netflix saiu da tela: Netflix House
+00:00 Abertura: a Netflix compete com o seu sono
+00:15 Do DVD ao streaming
+01:02 A aposta no original: House of Cards
+02:38 O binge como produto (e o botão Pular abertura)
+04:14 O algoritmo que olha o que você faz
+05:13 Cultura: anti-Apple e keeper test
+07:14 Identidade: por que uma letra só
+08:26 Publicidade: #FU2016 e Senna
+09:36 Fenômenos: Round 6, La Casa de Papel, Wednesday
+10:35 A conta: senhas, anúncios e preço
+12:05 A casa: Netflix House
 
 FONTES (ABNT)
 BLITZSCALING 16: Reed Hastings on building a streaming empire. [S. l.]: Greylock, 2015. 1 vídeo. Disponível em: https://www.youtube.com/watch?v=jYhP08uuffs. Acesso em: 17 nov. 2026.
@@ -65,3 +65,8 @@ Logo Netflix na cor original, conforme o guia de marca oficial; uso editorial, s
 Trilha sonora e efeitos originais.
 
 #Netflix #Branding #Marketing #BrandByIzoton
+
+IMAGENS (Wikimedia Commons, licenças livres com atribuição)
+Reed Hastings (2014, 2015): cellanr / re:publica, CC BY-SA 2.0 · Envelope de DVD da Netflix: BlueMint, CC BY 2.5 · Box de DVD: BrokenSphere, CC BY-SA 3.0; Adam Brown, CC BY-SA 2.0 · Ted Sarandos (SXSW 2016): Daniel Benavides, CC BY 2.0 · 100 Winchester Circle (sede da Netflix): Coolcaesar, CC BY-SA 4.0 · Fita VHS: LoMit, CC BY-SA 4.0 · Controle remoto: Dmitry Makeev, CC BY-SA 4.0 · Netflix House (King of Prussia): Dough4872, CC BY-SA 4.0 · Netflix House Dallas: Violet Adazé, CC BY 4.0 · Cosplay do Front Man: Rose Abrams, CC BY 4.0.
+
+Narração: Guilherme Izoton.
