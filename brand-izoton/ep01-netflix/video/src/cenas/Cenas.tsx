@@ -192,7 +192,7 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
       </div>
       {temFrase && fraseK > 0 && (
         <Faixa style={{ opacity: fraseK }}>
-          <Kinetic texto={c.frase} size={50} delay={Math.round(dur * fps * 0.42)} passo={2} />
+          <A.AcoesTexto carimbo={c.carimbo ?? "DOC"} largura={480}><Kinetic texto={c.frase} size={50} delay={Math.round(dur * fps * 0.42)} passo={2} /></A.AcoesTexto>
         </Faixa>
       )}
     </AbsoluteFill>

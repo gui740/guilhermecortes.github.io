@@ -33,7 +33,7 @@ const Bate: React.FC<{ texto: string; prog: number; rot?: number; size?: number;
 
 /* ------------------------------------------------------------------ TEXTO: título, pergunta, citação */
 // 1 sublinha · 2 carimbo · 3 marca-texto atrás · 4 colchete na margem · 5+ o marca-texto troca de linha a cada ação
-const AcoesTexto: React.FC<{ children: React.ReactNode; carimbo: string; largura?: number }> = ({ children, carimbo, largura = 520 }) => {
+export const AcoesTexto: React.FC<{ children: React.ReactNode; carimbo: string; largura?: number }> = ({ children, carimbo, largura = 520 }) => {
   const { n, p } = useAcoes();
   const alt = n >= 5 ? (n - 5) % 2 : -1;
   return (
