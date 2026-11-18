@@ -9,7 +9,7 @@ const SNH: React.FC<{ id: string }> = ({ id }) => <ComHook shortId={id}><ShortN 
 import { ColdOpenV2, COLD_OPEN_V2_DUR, COLD_OPEN_GUI_DUR } from "./v3/Rodada1";
 import { Composition } from "remotion";
 import { Episodio } from "./Episodio";
-import { Capa } from "./Capa";
+import { Capa, CapaV3 } from "./Capa";
 import { HookShort } from "./HookShort";
 import { ColdOpen, Colagem, COLAGEM_GUI_DUR, FalaT04, TransicaoCap, Short02Hook } from "./v3/Amostra";
 import timeline from "./timeline.json";
@@ -37,6 +37,7 @@ export const Root: React.FC = () => {
       <Composition id="V3TransicaoCap" component={TransicaoCap} durationInFrames={Math.round(10.5 * fps)} fps={fps} width={1920} height={1080} />
       <Composition id="V3Short02Hook" component={Short02Hook} durationInFrames={Math.round(5.6 * fps)} fps={fps} width={1080} height={1920} />
       <Composition id="Capa" component={Capa} durationInFrames={1} fps={fps} width={1280} height={720} />
+      <Composition id="CapaV3" component={CapaV3} durationInFrames={1} fps={fps} width={1280} height={720} />
     </>
   );
 };
