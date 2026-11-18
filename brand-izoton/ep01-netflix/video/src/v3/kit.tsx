@@ -9,9 +9,25 @@ export const easeInOut = Easing.bezier(0.65, 0, 0.35, 1);
 const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
 
 /** Converte segundos (tempo de palavra) em quadro. */
+/**
+ * Mapa de tempo (ressincronização): converte os segundos escritos na cena (tempos da voz antiga) para os tempos da voz nova.
+ * Pares [antigo, novo] em ordem; entre os pares, linear; fora deles, inclinação 1.
+ */
+export const WarpCtx = React.createContext<[number, number][] | null>(null);
+export const warp = (pares: [number, number][] | null, s: number) => {
+  if (!pares || pares.length === 0) return s;
+  if (s <= pares[0][0]) return pares[0][1] + (s - pares[0][0]);
+  for (let i = 1; i < pares.length; i++) {
+    const [a0, b0] = pares[i - 1], [a1, b1] = pares[i];
+    if (s <= a1) return b0 + ((s - a0) * (b1 - b0)) / (a1 - a0);
+  }
+  const [aN, bN] = pares[pares.length - 1];
+  return bN + (s - aN);
+};
 export const useS = () => {
   const { fps } = useVideoConfig();
-  return (s: number) => Math.round(s * fps);
+  const pares = React.useContext(WarpCtx);
+  return (s: number) => Math.round(warp(pares, s) * fps);
 };
 
 /** Quadro "em três": a animação anda em degraus de 3 quadros (10 poses/s a 30 fps), como stop-motion. */
@@ -49,9 +65,16 @@ export const Grao: React.FC<{ opacidade?: number }> = ({ opacidade = 0.55 }) => 
   const f = useCurrentFrame();
   const i = Math.floor(f / 2) % 4;
   const ox = Math.floor(random(`g${f}`) * 400), oy = Math.floor(random(`h${f}`) * 400);
+  // As 4 texturas ficam montadas como <Img> (o Remotion espera carregar); sem isso, o fundo CSS às vezes
+  // não chega a tempo e o quadro sai claro (defeito de "pisca" visto na rodada 1).
   return (
-    <AbsoluteFill style={{ pointerEvents: "none", opacity: opacidade, mixBlendMode: "multiply",
-      backgroundImage: `url(${staticFile(`media/v3tex/grao_${i}.png`)})`, backgroundPosition: `${ox}px ${oy}px`, backgroundSize: "512px 512px" }} />
+    <>
+      <div style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0 }}>
+        {[0, 1, 2, 3].map((k) => <Img key={k} src={staticFile(`media/v3tex/grao_${k}.png`)} style={{ width: 1, height: 1 }} />)}
+      </div>
+      <AbsoluteFill style={{ pointerEvents: "none", opacity: opacidade, mixBlendMode: "multiply",
+        backgroundImage: `url(${staticFile(`media/v3tex/grao_${i}.png`)})`, backgroundPosition: `${ox}px ${oy}px`, backgroundSize: "512px 512px" }} />
+    </>
   );
 };
 

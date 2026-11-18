@@ -3,7 +3,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Img, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FAIXA, FONT, MONO } from "../theme";
 import { Legenda, LowerThird, NLogo, Picto } from "../cenas/bits";
-import { Camada, Camera, Card, Carimbo3, Contador, Cursor, Destaque, Dossie, Grao, PaginaEditorial, Papel, Recorte, Terminal, TituloDoisPesos, easeInOut, useEntrada, useS } from "./kit";
+import { WarpCtx, Camada, Camera, Card, Carimbo3, Contador, Cursor, Destaque, Dossie, Grao, PaginaEditorial, Papel, Recorte, Terminal, TituloDoisPesos, easeInOut, useEntrada, useS } from "./kit";
 import { Empurrao, Mascara, Painel, TelaCRT } from "./transicoes";
 
 export const LT_TED = { nome: "REED HASTINGS", cargo: "CEO DA NETFLIX", fonte: "TED · ABR. 2018" };
@@ -209,10 +209,17 @@ const Datilografa: React.FC<{ texto: string; s: number; x: number; y: number }> 
 };
 
 /** v2 = rodada 1 do FIXES: o começo ganha movimento (disco rolando em degraus + ficha datilografada em "formato"). */
-export const Colagem: React.FC<{ v2?: boolean }> = ({ v2 = false }) => {
+// palavras da voz antiga (n01b, Gacrux) → bloco 04 do Guilherme
+const WARP_COLAGEM_GUI: [number, number][] = [[0, 0], [1.18, 0.66], [1.82, 1.3], [2.34, 1.74], [3.2, 2.46], [4.28, 3.3], [5.36, 4.0], [5.78, 4.34],
+  [7.2, 5.64], [8.56, 6.68], [10.04, 7.92], [11.46, 8.96], [12.12, 9.62], [12.76, 10.28]];
+export const COLAGEM_GUI_DUR = 11.9;
+export const Colagem: React.FC<{ v2?: boolean; voz?: "gacrux" | "gui" }> = ({ v2 = false, voz = "gacrux" }) => (
+  <WarpCtx.Provider value={voz === "gui" ? WARP_COLAGEM_GUI : null}><ColagemCena v2={v2} voz={voz} /></WarpCtx.Provider>
+);
+const ColagemCena: React.FC<{ v2: boolean; voz: "gacrux" | "gui" }> = ({ v2, voz }) => {
   const S = useS();
   const f = useCurrentFrame();
-  const DUR = 13.9;
+  const DUR = voz === "gui" ? 12.76 + (COLAGEM_GUI_DUR - 10.28) : 13.9; // em tempo antigo (o mapa leva ao fim da cena)
   return (
     <FalaCtx.Provider value={[[0, 13.48]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
@@ -247,7 +254,7 @@ export const Colagem: React.FC<{ v2?: boolean }> = ({ v2 = false }) => {
       </AbsoluteFill>
       <PaginaEditorial capitulo="01 · DO DVD AO STREAMING" arquivo="ARQUIVO 01/10" />
       <Grao />
-      <Narr s={0} arq="media/v3audio/n01b.wav" />
+      <Narr s={0} arq={voz === "gui" ? "media/narr_gui/b04.wav" : "media/v3audio/n01b.wav"} />
       <Trilha de={70} vol={0.07} />
       <Sfx s={0} nome="papel_0" /><Sfx s={1.82} nome="carimbo_0" />{v2 && <Sfx s={1.18} nome="click_0" vol={0.25} />}<Sfx s={3.2} nome="bip_0" vol={0.25} /><Sfx s={4.1} nome="papel_2" vol={0.35} />
       <Sfx s={7.2} nome="papel_1" /><Sfx s={8.56} nome="papel_3" /><Sfx s={9.48} nome="click_0" vol={0.3} /><Sfx s={12.12} nome="carimbo_1" />
@@ -310,13 +317,14 @@ export const FalaT04: React.FC = () => {
 };
 
 /* ================================================================== 4 · TRANSIÇÃO DE CAPÍTULO 2 → 3 */
-export const TransicaoCap: React.FC = () => {
+export const TransicaoCap: React.FC<{ voz?: "gacrux" | "gui" }> = ({ voz = "gacrux" }) => {
   const S = useS();
   const f = useCurrentFrame();
   const T06_INI = 3.7, CAUDA = 1.9, PAINEL = 6.0, DEPOIS = 2.6;
   const P0 = CAUDA, P1 = CAUDA + PAINEL;
+  const gui = voz === "gui";
   return (
-    <FalaCtx.Provider value={[[0, CAUDA], [P0 + 0.2, P0 + 5.65], [P1, P1 + DEPOIS]]}>
+    <FalaCtx.Provider value={gui ? [[0, CAUDA], [P1, P1 + DEPOIS]] : [[0, CAUDA], [P0 + 0.2, P0 + 5.65], [P1, P1 + DEPOIS]]}>
     <AbsoluteFill style={{ backgroundColor: C.branco }}>
       <Sequence durationInFrames={S(CAUDA)}><TelaCRT clip="media/arquivo/T06.mp4" inicioClip={S(T06_INI)} dur={S(CAUDA)} liga={false} congelaFim /></Sequence>
       <Sequence durationInFrames={S(CAUDA)} layout="none"><LowerThird {...LT_TED} delay={0} /></Sequence>
@@ -345,8 +353,8 @@ export const TransicaoCap: React.FC = () => {
         </AbsoluteFill>
       </Sequence>
       <Narr s={0} arq="media/arquivo/T06.mp4" vol={0.95} inicio={T06_INI} dur={CAUDA} />
-      <Narr s={P0 + 0.2} arq="media/v3audio/l03a_107.wav" />
-      <Narr s={P1} arq="media/v3audio/n03a.wav" dur={DEPOIS} />
+      {!gui && <Narr s={P0 + 0.2} arq="media/v3audio/l03a_107.wav" />}
+      <Narr s={P1} arq={gui ? "media/narr_gui/b12.wav" : "media/v3audio/n03a.wav"} dur={DEPOIS} />
       <Sequence from={S(P0)} layout="none"><Trilha de={120} vol={0.08} /></Sequence>
       <Sfx s={CAUDA - 0.3} nome="crt_off_2" /><Sfx s={P0 + PAINEL * 0.25} nome="sweep_0" vol={0.35} /><Sfx s={P0 + PAINEL * 0.5} nome="sweep_1" vol={0.35} />
       <Sfx s={P0 + PAINEL * 0.75} nome="click_1" vol={0.35} /><Sfx s={P1} nome="papel_2" />
