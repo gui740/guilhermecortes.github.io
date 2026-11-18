@@ -91,7 +91,9 @@ export const Camera: React.FC<{ children: React.ReactNode; de?: number; ate?: nu
     const f = degrau ? Math.floor(f0 / 3) * 3 : f0; // degrau: pose a cada 3 quadros (stop-motion)
     const k = interpolate(f, [0, dur], [0, 1], clamp);
     const s = de + (ate - de) * k;
-    return <AbsoluteFill style={{ transform: `translate(${dx * k}px, ${dy * k}px) scale(${s})`, transformOrigin: "50% 45%" }}>{children}</AbsoluteFill>;
+    // degrau: além da aproximação, um vaivém lateral de 36 px a cada 4 s, para cena longa não parecer parada
+    const vai = degrau ? 36 * (Math.abs(((f / 120) % 2) - 1) * 2 - 1) : 0;
+    return <AbsoluteFill style={{ transform: `translate(${dx * k + vai}px, ${dy * k}px) scale(${s})`, transformOrigin: "50% 45%" }}>{children}</AbsoluteFill>;
   };
 
 /** Camada com parallax: cada camada desliza numa velocidade. */

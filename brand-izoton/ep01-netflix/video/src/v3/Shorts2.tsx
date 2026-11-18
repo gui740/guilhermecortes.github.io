@@ -70,7 +70,8 @@ const SegArq: React.FC<{ s: Extract<Seg, { tipo: "arq" }> }> = ({ s }) => {
   const cor = c.tipo !== "arquivo";
   return (
     <AbsoluteFill>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 260, height: 760 }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 260, height: 760, transformOrigin: "50% 50%",
+        transform: `scale(${1 + 0.08 * Math.floor(f / 3) * 3 / S(dur)}) translateX(${18 * (Math.abs(((Math.floor(f / 3) * 3 / 120) % 2) - 1) * 2 - 1)}px)` }}>
         {cor ? <Img src={staticFile("media/v3img/card_house_kop.jpg")} style={{ display: "none" }} /> : null}
         <TelaCRT clip={c.clip} inicioClip={0} dur={S(dur)} />
       </div>
