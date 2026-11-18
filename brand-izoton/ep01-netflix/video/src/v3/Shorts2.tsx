@@ -36,8 +36,16 @@ const Imagem: React.FC<{ im: Im; inicio: number; i: number }> = ({ im, inicio, i
   return (
     <Card x={(1080 - w) / 2} y={280} w={w} h={h} inicio={inicio} rotY={i % 2 ? -7 : 7} rotZ={rot} seed={im.src + i}>
       <Img src={staticFile(im.src)} style={{ width: "100%", height: "100%", objectFit: im.tipo === "print" ? "contain" : "cover", objectPosition: im.src.includes("guard") ? "50% 0%" : "50% 15%", background: C.branco }} />
+      {im.tipo === "print" && <Leitura h={h} />}
     </Card>
   );
+};
+
+// leitura do documento: um marca-texto desce pelas linhas em degraus de 3 quadros (o print é claro; sem isso a cena parece parada)
+const Leitura: React.FC<{ h: number }> = ({ h }) => {
+  const f = Math.floor(useCurrentFrame() / 3) * 3;
+  const y = 40 + ((f * 4) % Math.max(1, h - 120));
+  return <div style={{ position: "absolute", left: 30, right: 30, top: y, height: 46, background: "rgba(41,41,41,0.13)", mixBlendMode: "multiply" }} />;
 };
 
 const SegNarr: React.FC<{ s: Extract<Seg, { tipo: "narr" }> }> = ({ s }) => {
