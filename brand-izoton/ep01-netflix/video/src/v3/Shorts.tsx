@@ -7,6 +7,7 @@ import PAL from "./palavras_gui.json";
 import { C, FONT, MONO } from "../theme";
 import { Camera, Card, Carimbo3, Contador, Cursor, Destaque, Grao, Papel, Recorte, Terminal, useEntrada, useS } from "./kit";
 import { Mascara, TelaCRT } from "./transicoes";
+import { temHook } from "./hooks"; // com o hook gravado, a frase de abertura (bloco 01 / 15) sai também da legenda
 import { FalaCtx, LegendaPalavra, Narr, Sfx, Trilha, clamp } from "./Amostra";
 
 type W = [number, number, string];
@@ -73,7 +74,7 @@ const B15 = 0, B16 = 5.5, B17 = 22.6, B18 = 35.0;
 export const SHORT02_DUR = B18 + P["18"].dur + 0.8;
 export const Short02V3: React.FC = () => {
   const S = useS();
-  const palavras = [...pal("15", B15), ...pal("16", B16), ...pal("17", B17), ...pal("18", B18)];
+  const palavras = [...(temHook("SHORT02") ? [] : pal("15", B15)), ...pal("16", B16), ...pal("17", B17), ...pal("18", B18)];
   const T = {
     n136: t("15", B15, "136"), dia: t("15", B15, "dia"), pesquisa: t("16", B16, "pesquisa"), p15: t("16", B16, "15"), adiant: t("16", B16, "adiantavam"),
     min5: t("16", B16, "5"), n250: t("16", B16, "250"), eua: t("16", B16, "estados"), reino: t("16", B16, "reino"), canada: t("16", B16, "canad"),
@@ -202,7 +203,7 @@ export const SHORT01_DUR = A49 + P["49"].dur + 2.2;
 export const Short01V3: React.FC = () => {
   const S = useS();
   const f = useCurrentFrame();
-  const palavras = [...pal("01", A1), ...pal("02", A2, 2.5), ...pal("49", A49)];
+  const palavras = [...(temHook("SHORT01") ? [] : pal("01", A1)), ...pal("02", A2, 2.5), ...pal("49", A49)];
   const T = { y2017: t("01", A1, "2017"), ceo: t("01", A1, "ceo"), sono: t("01", A1, "sono"), hbo: t("02", A2, "hbo"), lista: t("02", A2, "lista"),
     y2019: t("49", A49, "2019"), fort: t("49", A49, "fortnite"), perd: t("49", A49, "perdemos"), hbo2: t("49", A49, "hbo"),
     yt: t("49", A49, "youtube"), aud: t("49", A49, "audi"), fim: A49 + P["49"].dur };

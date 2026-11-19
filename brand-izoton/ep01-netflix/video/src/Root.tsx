@@ -2,7 +2,7 @@ import React from "react";
 import { EpisodioV3, EPISODIO_V3_DUR } from "./v3/EpisodioV3";
 import { Short01V3, SHORT01_DUR, Short02V3, SHORT02_DUR } from "./v3/Shorts";
 import { ShortN, SHORTS_CFG, duracaoShort } from "./v3/Shorts2";
-import { ComHook, hookDur } from "./v3/hooks";
+import { ComHook, hookExtra } from "./v3/hooks";
 const S01H: React.FC = () => <ComHook shortId="SHORT01"><Short01V3 /></ComHook>;
 const S02H: React.FC = () => <ComHook shortId="SHORT02"><Short02V3 /></ComHook>;
 const SNH: React.FC<{ id: string }> = ({ id }) => <ComHook shortId={id}><ShortN id={id} /></ComHook>;
@@ -21,9 +21,9 @@ export const Root: React.FC = () => {
       <Composition id="Episodio" component={Episodio} durationInFrames={Math.ceil(timeline.duracao * fps)} fps={fps} width={1920} height={1080} />
       <Composition id="HookShort" component={HookShort} durationInFrames={1} fps={fps} width={1080} height={1920} defaultProps={{ texto: "TÍTULO", num: "SHORT 01" }} />
       <Composition id="V3ColdOpen" component={ColdOpen} durationInFrames={Math.round(28.6 * fps)} fps={fps} width={1920} height={1080} />
-      <Composition id="SHORT01-v3a" component={S01H} durationInFrames={Math.round((SHORT01_DUR + hookDur("SHORT01")) * fps)} fps={fps} width={1080} height={1920} />
-      <Composition id="SHORT02-v3a" component={S02H} durationInFrames={Math.round((SHORT02_DUR + hookDur("SHORT02")) * fps)} fps={fps} width={1080} height={1920} />
-      {SHORTS_CFG.map((c) => <Composition key={c.id} id={`${c.id}-v3`} component={SNH} defaultProps={{ id: c.id }} durationInFrames={Math.round((duracaoShort(c) + hookDur(c.id)) * fps)} fps={fps} width={1080} height={1920} />)}
+      <Composition id="SHORT01-v3a" component={S01H} durationInFrames={Math.round((SHORT01_DUR + hookExtra("SHORT01")) * fps)} fps={fps} width={1080} height={1920} />
+      <Composition id="SHORT02-v3a" component={S02H} durationInFrames={Math.round((SHORT02_DUR + hookExtra("SHORT02")) * fps)} fps={fps} width={1080} height={1920} />
+      {SHORTS_CFG.map((c) => <Composition key={c.id} id={`${c.id}-v3`} component={SNH} defaultProps={{ id: c.id }} durationInFrames={Math.round((duracaoShort(c) + hookExtra(c.id)) * fps)} fps={fps} width={1080} height={1920} />)}
       <Composition id="EpisodioV3" component={EpisodioV3} durationInFrames={Math.round(EPISODIO_V3_DUR * fps)} fps={fps} width={1920} height={1080} />
       {/* rodada 1 com a narração do Guilherme */}
       <Composition id="V3ColdOpen-v2-gui" component={ColdOpenV2} defaultProps={{ voz: "gui" as const }} durationInFrames={Math.round(COLD_OPEN_GUI_DUR * fps)} fps={fps} width={1920} height={1080} />

@@ -25,8 +25,14 @@ export const HOOK_TEXTO: Record<string, string[]> = {
 const GAP = 0.3;
 export const chaveHook = (shortId: string) => shortId.replace("SHORT", "S");
 export const temHook = (shortId: string) => !!P[chaveHook(shortId)];
-/** segundos que o hook gravado acrescenta no começo do Short (0 enquanto não foi gravado) */
+/** segundos que o hook gravado ocupa no começo do Short (0 enquanto não foi gravado) */
 export const hookDur = (shortId: string) => (temHook(shortId) ? P[chaveHook(shortId)].dur + GAP : 0);
+// SHORT01 e SHORT02 já abriam com a mesma frase do hook (bloco 01 / bloco 15): o hook gravado SUBSTITUI essa abertura
+// (o Short começa depois dela), para a frase não ser ouvida duas vezes seguidas
+const PULA: Record<string, number> = { S01: 5.0, S02: 5.5 };
+const pula = (shortId: string) => (temHook(shortId) ? PULA[chaveHook(shortId)] ?? 0 : 0);
+/** quanto o Short fica mais longo com o hook (hook menos a abertura substituída) */
+export const hookExtra = (shortId: string) => hookDur(shortId) - pula(shortId);
 
 export const ComHook: React.FC<{ shortId: string; children: React.ReactNode }> = ({ shortId, children }) => {
   const S = useS();
@@ -56,7 +62,7 @@ export const ComHook: React.FC<{ shortId: string; children: React.ReactNode }> =
           </AbsoluteFill>
         </FalaCtx.Provider>
       </Sequence>
-      <Sequence from={S(H)}>{children}</Sequence>
+      <Sequence from={S(H)}><Sequence from={-S(pula(shortId))}>{children}</Sequence></Sequence>
     </AbsoluteFill>
   );
 };
