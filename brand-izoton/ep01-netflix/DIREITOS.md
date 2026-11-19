@@ -60,3 +60,5 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 | Resposta de sala sintética (`sala_pequena.wav`) | Próprio (gerada no pipeline) | tratamento da voz | Próprio | sem impulso de terceiros |
 | Imagens geradas por IA (Gemini) | — | — | — | nenhuma no episódio até agora; os pedidos estão em GEMINI_PEDIDOS.md. Quando chegarem, entram marcadas em IMAGENS.md como "gerada por IA (Gemini), conceito, não é registro" |
 | Geração paga de imagem | — | — | — | não usada |
+| Prints do guia de marca: Color e Clearspace (gui_01, gui_02) | Netflix (brand.netflix.com) | cap. 6, 7:25–7:43, laterais | Editorial | página oficial, brand.netflix.com, print, mandado pelo Guilherme; em cor, sem distorção |
+| Objetos gui_03 a gui_10 | origem em confirmação | — | fora do vídeo | entram só depois de o gerente confirmar a origem (Gemini ou internet com licença) |

@@ -187,7 +187,9 @@ FRASES_FICHA = [["house", "of", "cards"], ["stranger", "things"], ["keeper", "te
                 ["pular", "abertura"], ["controle", "remoto"], ["densidade", "de", "talento"], ["netflix", "house"], ["mad", "men"]]
 UNIDADES = {"milhões": " MI", "%": "%", "anos": " ANOS", "dias": " DIAS", "países": " PAÍSES"}
 QUALIF = {"mais de": "MAIS DE ", "cerca de": "CERCA DE ", "quase": "QUASE "}
-TERMO_BLOCO = {}  # termo fixo por bloco, quando a fala não tem termo forte (preenchido na revisão)
+TERMO_BLOCO = {}
+LAT_EXTRA = {"n06b": [(0.6, "media/v3img/gui_brand_clearspace.png", "esq", 150, 4.4)],
+             "n06c": [(0.5, "media/v3img/gui_brand_cor.png", "esq", 150, -0.3), (2.0, "media/v3img/gui_brand_clearspace.png", "dir", 560, -0.3)]}  # termo fixo por bloco, quando a fala não tem termo forte (preenchido na revisão)
 SLOTS = [("esq", 150), ("dir", 210), ("esq", 600), ("dir", 640)]
 for b in beats:
     if b["tipo"] not in ("narr",):
@@ -282,6 +284,9 @@ for b in beats:
         if not rit or p - rit[-1] >= 0.5: rit.append(round(p, 2))
     b["ritmo"] = rit
     b.pop("_paltxt", None)
+    # prints oficiais do guia de marca (brand.netflix.com, mandados pelo Guilherme): cartão de documento na lateral, em cor (o logo nunca vai para P&B)
+    for (t_, src, lado, y, fim_) in LAT_EXTRA.get(b["id"], []):
+        lat.append({"t": t_, "src": src, "tipo": "print", "lado": lado, "y": y, "grande": False, "fim": round(fim_ if fim_ > 0 else b["dur"] + fim_, 2)})
     b["laterais"] = lat
 
 # efeitos (mesma regra da v2) e tempos absolutos

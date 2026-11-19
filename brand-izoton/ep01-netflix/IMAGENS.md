@@ -45,3 +45,11 @@ Recusadas na checagem: "CNN Republican Underdog Debate December 15, 2015" (é ca
 | card_mapa.jpg | cap. 8, audiência transnacional | [World blank map (grey & white).png](https://commons.wikimedia.org/wiki/File:World_blank_map_(grey_%26_white).png) | Mariomassone | CC BY-SA 3.0 |
 
 Pixabay: não usado. O site bloqueia acesso automático e a API exige chave.
+
+## Imagens mandadas pelo Guilherme (19 nov. 2026)
+
+| Arquivo no projeto | Original | Cena | Origem | Status | Tratamento |
+|---|---|---|---|---|---|
+| gui_brand_clearspace.png | gui_02_brand_clearspace.png | cap. 6, 7:25–7:29 (n06b, lateral esquerda) e 7:36–7:43 (n06c, lateral direita) | página oficial, brand.netflix.com, print | em uso (editorial) | cartão de documento recortado, em cor, sem distorcer o logo |
+| gui_brand_cor.png | gui_01_brand_cor.png | cap. 6, 7:35–7:43 (n06c, lateral esquerda) | página oficial, brand.netflix.com, print | em uso (editorial) | cartão de documento recortado, em cor (o vermelho fica intacto) |
+| — | gui_03_G07_regua.png … gui_10_G11_cama.png (régua, esquadro, compasso, TV, controle, claquete, computador, cama) | — | **origem em confirmação** (Gemini ou internet) | fora do vídeo até o gerente confirmar | recortes preparados; gui_07 (controle) provavelmente fica fora: mesmo em P&B, a silhueta é a de um controle de console conhecido |
