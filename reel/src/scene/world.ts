@@ -122,19 +122,20 @@ export class World {
       // neon (apagado, falha de vez em quando)
       const neon = card(neonP0, 1, {fog: 0.8}); grp.add(neon);
       const nglow = card(glowY, 1, {additive: true, opacity: 0, fog: 0.8}); grp.add(nglow);
+      grp.traverse((o: any) => { if (o.isMesh) o.renderOrder = -7; });
       this.segs.push({grp, posts, light, lglow, stack, vcr, tv, scr, tvShadow, tape, pop, neon, nglow, neonTex: [neonP0, neonP1, neonS0, neonS1], tvKeys, vcrKeys, tapeKeys, n: -9999});
     }
     // névoa rolando
     for (let i = 0; i < 10; i++) {
       const f = card(this.gen('cloud' + (i % 3), () => TX.cloudTex(40 + (i % 3))), 2, {opacity: 0.16, dof: 0});
-      f.scale.set(4.2, 1.6, 1); this.fogs.push(this.add(f) as Card);
+      f.scale.set(4.2, 1.6, 1); f.renderOrder = -6; this.fogs.push(this.add(f) as Card);
     }
     // poeira
     const N = 420; const pos = new Float32Array(N * 3); this.dustBase = new Float32Array(N * 4);
     for (let i = 0; i < N; i++) { this.dustBase[i * 4] = hash(i * 3.1); this.dustBase[i * 4 + 1] = hash(i * 7.3); this.dustBase[i * 4 + 2] = hash(i * 1.9); this.dustBase[i * 4 + 3] = hash(i * 5.7); }
     const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
     const pm = new THREE.PointsMaterial({color: 0xededed, size: 0.014, transparent: true, opacity: 0.55, depthWrite: false, sizeAttenuation: true, map: this.tex['glow'], alphaTest: 0.01});
-    this.dust = new THREE.Points(geo, pm); this.dust.frustumCulled = false; this.add(this.dust);
+    this.dust = new THREE.Points(geo, pm); this.dust.frustumCulled = false; this.dust.renderOrder = -6; this.add(this.dust);
     this.scene.fog = new THREE.FogExp2(0x1c1c1c, globals.fogDensity.value);
   }
   // ---------- agenda ----------
@@ -185,6 +186,7 @@ export class World {
       // número gigante no fundo (só ele), cresce
       const num = card(this.gen('num' + f.n, () => TX.numberTex(f.n)), 0, {dof: 0});
       num.aspect = this.aspects['num' + f.n];
+      num.renderOrder = -5; num.material.depthTest = false;
       this.push({obj: num, tIn: s.numberIn, tOut: titleIn - 0.1, enterDur: 1.2, exitDur: 0.6, sx: 0.15, sy: 0.36, d: 13, h: 0.62, anchor: 'world', anchorT: AT, grow: true, fadeTo: [kwAt - 0.2, kwAt + 0.4, 0.3], exitMode: 'fade'});
       // camadas do filme: cenário -> principal -> objeto de primeiro plano
       const [setC, setS] = this.imgCard(f.id + '_set');
@@ -231,9 +233,9 @@ export class World {
       this.push({obj: c, tIn: t0 + 0.95 + i * 0.12, tOut: out + 0.1 * i, sx, sy, d, w, anchor: 'cam', anchorT: 0, releaseT: out, exitMode: 'pass', exitDur: 0.55});
     });
     const hd = card(this.gen('handle', () => TX.smallTex('@talking_horror', '"Special Elite"', 64, TX.C.light)), 0, {}); hd.aspect = this.aspects['handle'];
-    this.push({obj: hd, tIn: t0 + 1.6, tOut: out, sx: 0.0, sy: -0.44, d: 3.0, w: 0.40, anchor: 'cam', anchorT: 0, releaseT: out, exitMode: 'pass', exitDur: 0.5});
+    this.push({obj: hd, tIn: t0 + 1.6, tOut: out, sx: 0.0, sy: -0.38, d: 3.0, w: 0.40, anchor: 'cam', anchorT: 0, releaseT: out, exitMode: 'pass', exitDur: 0.5});
     const qq = card(this.gen('question', () => TX.questionTex([{t: 'QUAL CÊ VAI VER ', c: TX.C.light}, {t: 'PRIMEIRO?', c: TX.C.yellow}])), 0, {}); qq.aspect = this.aspects['question'];
-    this.push({obj: qq, tIn: Math.max(qT - 0.05, t0 + 2.1), tOut: out, sx: -0.04, sy: -0.24, d: 3.0, w: 0.80, anchor: 'cam', anchorT: 0, releaseT: out, exitMode: 'pass', exitDur: 0.5});
+    this.push({obj: qq, tIn: Math.max(qT - 0.05, t0 + 2.1), tOut: out, sx: -0.04, sy: -0.20, d: 3.0, w: 0.80, anchor: 'cam', anchorT: 0, releaseT: out, exitMode: 'pass', exitDur: 0.5});
     for (const s of this.sched) if (s.anchor === 'cam') { s.obj.renderOrder = 100; s.obj.material.depthTest = false; }
     const vt = this.tex['vhs_front']; const a = this.aspects['vhs_front'];
     this.vhs2 = this.add(card(vt, a, {dof: 0})) as Card; this.vhs2.scale.set(0.6, 0.6 / a, 1);

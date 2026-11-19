@@ -1,6 +1,6 @@
 # Roteiro — "3 terrores escondidos no seu Prime Video"
 
-**Total falado: 90 palavras** (limite 75–90). Narração: edge-tts `pt-BR-AntonioNeural`, velocidade 1.0x, pausas naturais (≤400 ms) e pausa antes de cada título.
+**Total falado: 90 palavras** (limite 75–90). Narração: **Gemini TTS** (`gemini-3.8-flash-tts`, voz *Puck*) com notas de direção (descontraído, sem pressa, sorrisinho na voz). O roteiro foi gerado num take único e cortado frase a frase pelos timestamps do Whisper; o take foi desacelerado de leve (8–14%, sem mudar o tom) porque a voz acelerou no fim. Pausas naturais (≤400 ms) e pausa antes de cada título montadas na linha do tempo.
 
 ## Gancho — 5 opções escritas
 1. **Três terrores escondidos no seu Prime que ninguém te contou.** ← escolhido (versão principal / gancho_A)
@@ -30,6 +30,6 @@
 
 Sem spoiler, sem ano/país/diretor/elenco na fala (ano · país só na etiqueta da tela).
 
-### Notas de pronúncia (TTS)
+### Notas de pronúncia (versão anterior, edge-tts — mantidas como histórico)
 - "Ghostland" foi escrito foneticamente como *Gôustlând*; "Huesera" como *Uessêra*; "Talking Horror" como *Tólking Rórror*.
 - Trocas por clareza da voz sintética: "a noite vira pesadelo" → "vira inferno" (o TTS engolia o "-lo"); "filma uma xamã" → "grava uma xamã" (o TTS juntava "uma xamã").

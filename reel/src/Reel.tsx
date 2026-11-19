@@ -1,6 +1,25 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {AbsoluteFill, Audio, continueRender, delayRender, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {World} from './scene/world';
+import capG from './captions.json';
+import capB from './captions_gB.json';
+import capC from './captions_gC.json';
+const CAPS: Record<string, {text: string; start: number; end: number}[]> = {g: capG as any, gB: capB as any, gC: capC as any};
+
+// Legenda: Anton (mesma família das palavras-chave), pequena, centrada acima da margem inferior de 420 px
+const Caption: React.FC<{hook: string; t: number; scale: number}> = ({hook, t, scale}) => {
+  const c = (CAPS[hook] ?? []).find((x) => t >= x.start && t < x.end);
+  if (!c) return null;
+  const k = Math.min(1, (t - c.start) / 0.13); const out = Math.min(1, Math.max(0, (c.end - t) / 0.1));
+  const o = Math.min(k, out);
+  return (
+    <div style={{position: 'absolute', left: 140 * scale, right: 140 * scale, top: 1418 * scale, display: 'flex', justifyContent: 'center', pointerEvents: 'none'}}>
+      <div style={{fontFamily: 'Anton', fontSize: 58 * scale, lineHeight: 1.1, color: '#EDEDED', letterSpacing: 0.6 * scale, padding: `${6 * scale}px ${18 * scale}px`,
+        background: 'rgba(28,28,28,0.55)', borderRadius: 10 * scale, textShadow: `0 ${2 * scale}px ${8 * scale}px rgba(28,28,28,0.9)`, textAlign: 'center',
+        opacity: o, transform: `translateY(${(1 - k) * 10 * scale}px)`}}>{c.text}</div>
+    </div>
+  );
+};
 
 const IMAGES: Record<string, string> = {
   ghost_main: 'img/films/ghost_main.png', ghost_set: 'img/films/ghost_set.png', ghost_fg: 'img/films/ghost_fg.png',
@@ -47,6 +66,7 @@ export const Reel: React.FC<{hook: string}> = ({hook}) => {
   return (
     <AbsoluteFill style={{background: '#1C1C1C'}}>
       <canvas ref={ref} width={width} height={height} style={{width: '100%', height: '100%'}} />
+      {hook !== 'cover' && ready ? <Caption hook={hook} t={frame / fps} scale={width / 1080} /> : null}
       {audio ? <Audio src={staticFile(audio)} /> : null}
     </AbsoluteFill>
   );

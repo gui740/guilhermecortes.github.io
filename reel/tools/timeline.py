@@ -2,7 +2,8 @@
 import json,subprocess,sys
 def dur(k): return float(subprocess.check_output(['ffprobe','-v','0','-show_entries','format=duration','-of','csv=p=0',f'assets/vo/trim/{k}.wav']))
 hook=sys.argv[1] if len(sys.argv)>1 else 'g'
-clip={'g':f'{hook}_-2Hz','f3a':'t_a1_-2Hz','f3n':'f3n_sel','f3b':'f3b_-2Hz','p1':'p1_-2Hz','f2a':'t_b1_-2Hz','f2n':'f2n_-2Hz','f2b':'f2b_-2Hz','p2':'p2_-2Hz','f1a':'f1a_-2Hz','f1n':'f1n_sel','f1b':'f1b_-2Hz','fe1':'fe1_-2Hz','fe2':'fe2_sel'}
+clip={k:f'{k}_gems' for k in ['g','f3a','f3n','f3b','p1','f2a','f2n','f2b','p2','f1a','f1n','f1b','fe1','fe2']}
+clip['g']=f'{hook}_gems'
 D={k:dur(v) for k,v in clip.items()}
 vo=[];T={}
 def say(k,t): vo.append(dict(key=k,clip=clip[k],start=round(t,3),end=round(t+D[k],3))); return t+D[k]

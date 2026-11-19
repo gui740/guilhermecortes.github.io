@@ -1,154 +1,154 @@
 {
- "hookEnd": 3.9,
+ "hookEnd": 4.604229,
  "stations": [
   {
    "n": "3",
-   "start": 5.4,
-   "numberIn": 4.9,
-   "aIn": 6.3,
-   "aEnd": 10.675,
-   "titleIn": 11.025,
-   "bIn": 12.925,
-   "bEnd": 15.61,
-   "logoIn": 15.76,
-   "end": 17.46
+   "start": 6.104,
+   "numberIn": 5.604,
+   "aIn": 7.004,
+   "aEnd": 11.536,
+   "titleIn": 11.886,
+   "bIn": 13.786,
+   "bEnd": 16.654,
+   "logoIn": 16.804,
+   "end": 18.504
   },
   {
    "n": "2",
-   "start": 18.96,
-   "numberIn": 18.46,
-   "aIn": 19.86,
-   "aEnd": 23.271,
-   "titleIn": 23.621,
-   "bIn": 25.521,
-   "bEnd": 28.979,
-   "logoIn": 29.129,
-   "end": 30.829
+   "start": 20.004,
+   "numberIn": 19.504,
+   "aIn": 20.904,
+   "aEnd": 25.069,
+   "titleIn": 25.419,
+   "bIn": 27.319,
+   "bEnd": 30.011,
+   "logoIn": 30.161,
+   "end": 31.861
   },
   {
    "n": "1",
-   "start": 32.329,
-   "numberIn": 31.829,
-   "aIn": 33.229,
-   "aEnd": 35.843,
-   "titleIn": 36.693,
+   "start": 33.361,
+   "numberIn": 32.861,
+   "aIn": 34.261,
+   "aEnd": 36.917,
+   "titleIn": 37.767,
    "silence": [
-    36.243,
-    36.743
+    37.317,
+    37.817
    ],
-   "bIn": 38.593,
-   "bEnd": 40.937,
-   "logoIn": 41.087,
-   "end": 42.787
+   "bIn": 39.667,
+   "bEnd": 41.704,
+   "logoIn": 41.854,
+   "end": 43.554
   }
  ],
  "travs": [
   {
-   "start": 3.9,
-   "end": 5.4,
+   "start": 4.604,
+   "end": 6.104,
    "ponte": null
   },
   {
-   "start": 17.46,
-   "end": 18.96,
+   "start": 18.504,
+   "end": 20.004,
    "ponte": "p1"
   },
   {
-   "start": 30.829,
-   "end": 32.329,
+   "start": 31.861,
+   "end": 33.361,
    "ponte": "p2"
   }
  ],
- "outroStart": 42.787,
- "outroQuestionIn": 43.137,
- "handleIn": 47.525,
- "diveStart": 48.528,
- "end": 49.328,
+ "outroStart": 43.554,
+ "outroQuestionIn": 43.904,
+ "handleIn": 47.243,
+ "diveStart": 48.508,
+ "end": 49.308,
  "vo": [
   {
    "key": "g",
-   "clip": "gC_-2Hz",
+   "clip": "gC_gems",
    "start": 0.35,
-   "end": 3.31
+   "end": 4.154
   },
   {
    "key": "f3a",
-   "clip": "t_a1_-2Hz",
-   "start": 6.3,
-   "end": 10.675
+   "clip": "f3a_gems",
+   "start": 7.004,
+   "end": 11.536
   },
   {
    "key": "f3n",
-   "clip": "f3n_sel",
-   "start": 11.075,
-   "end": 11.766
+   "clip": "f3n_gems",
+   "start": 11.936,
+   "end": 12.81
   },
   {
    "key": "f3b",
-   "clip": "f3b_-2Hz",
-   "start": 12.925,
-   "end": 15.61
+   "clip": "f3b_gems",
+   "start": 13.786,
+   "end": 16.654
   },
   {
    "key": "p1",
-   "clip": "p1_-2Hz",
-   "start": 17.54,
-   "end": 18.933
+   "clip": "p1_gems",
+   "start": 18.584,
+   "end": 19.632
   },
   {
    "key": "f2a",
-   "clip": "t_b1_-2Hz",
-   "start": 19.86,
-   "end": 23.271
+   "clip": "f2a_gems",
+   "start": 20.904,
+   "end": 25.069
   },
   {
    "key": "f2n",
-   "clip": "f2n_-2Hz",
-   "start": 23.671,
-   "end": 24.352
+   "clip": "f2n_gems",
+   "start": 25.469,
+   "end": 26.156
   },
   {
    "key": "f2b",
-   "clip": "f2b_-2Hz",
-   "start": 25.521,
-   "end": 28.979
+   "clip": "f2b_gems",
+   "start": 27.319,
+   "end": 30.011
   },
   {
    "key": "p2",
-   "clip": "p2_-2Hz",
-   "start": 30.909,
-   "end": 31.721
+   "clip": "p2_gems",
+   "start": 31.941,
+   "end": 32.709
   },
   {
    "key": "f1a",
-   "clip": "f1a_-2Hz",
-   "start": 33.229,
-   "end": 35.843
+   "clip": "f1a_gems",
+   "start": 34.261,
+   "end": 36.917
   },
   {
    "key": "f1n",
-   "clip": "f1n_sel",
-   "start": 36.743,
-   "end": 37.453
+   "clip": "f1n_gems",
+   "start": 37.817,
+   "end": 38.687
   },
   {
    "key": "f1b",
-   "clip": "f1b_-2Hz",
-   "start": 38.593,
-   "end": 40.937
+   "clip": "f1b_gems",
+   "start": 39.667,
+   "end": 41.704
   },
   {
    "key": "fe1",
-   "clip": "fe1_-2Hz",
-   "start": 43.137,
-   "end": 47.225
+   "clip": "fe1_gems",
+   "start": 43.904,
+   "end": 46.943
   },
   {
    "key": "fe2",
-   "clip": "fe2_sel",
-   "start": 47.525,
-   "end": 48.978
+   "clip": "fe2_gems",
+   "start": 47.243,
+   "end": 48.958
   }
  ],
- "durationInFrames": 1480
+ "durationInFrames": 1479
 }

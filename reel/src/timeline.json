@@ -1,154 +1,154 @@
 {
- "hookEnd": 4.062667,
+ "hookEnd": 4.584125,
  "stations": [
   {
    "n": "3",
-   "start": 5.563,
-   "numberIn": 5.063,
-   "aIn": 6.463,
-   "aEnd": 10.838,
-   "titleIn": 11.188,
-   "bIn": 13.088,
-   "bEnd": 15.773,
-   "logoIn": 15.923,
-   "end": 17.623
+   "start": 6.084,
+   "numberIn": 5.584,
+   "aIn": 6.984,
+   "aEnd": 11.516,
+   "titleIn": 11.866,
+   "bIn": 13.766,
+   "bEnd": 16.634,
+   "logoIn": 16.784,
+   "end": 18.484
   },
   {
    "n": "2",
-   "start": 19.123,
-   "numberIn": 18.623,
-   "aIn": 20.023,
-   "aEnd": 23.434,
-   "titleIn": 23.784,
-   "bIn": 25.684,
-   "bEnd": 29.142,
-   "logoIn": 29.292,
-   "end": 30.992
+   "start": 19.984,
+   "numberIn": 19.484,
+   "aIn": 20.884,
+   "aEnd": 25.049,
+   "titleIn": 25.399,
+   "bIn": 27.299,
+   "bEnd": 29.991,
+   "logoIn": 30.141,
+   "end": 31.841
   },
   {
    "n": "1",
-   "start": 32.492,
-   "numberIn": 31.992,
-   "aIn": 33.392,
-   "aEnd": 36.006,
-   "titleIn": 36.856,
+   "start": 33.341,
+   "numberIn": 32.841,
+   "aIn": 34.241,
+   "aEnd": 36.897,
+   "titleIn": 37.747,
    "silence": [
-    36.406,
-    36.906
+    37.297,
+    37.797
    ],
-   "bIn": 38.756,
-   "bEnd": 41.1,
-   "logoIn": 41.25,
-   "end": 42.95
+   "bIn": 39.647,
+   "bEnd": 41.684,
+   "logoIn": 41.834,
+   "end": 43.534
   }
  ],
  "travs": [
   {
-   "start": 4.063,
-   "end": 5.563,
+   "start": 4.584,
+   "end": 6.084,
    "ponte": null
   },
   {
-   "start": 17.623,
-   "end": 19.123,
+   "start": 18.484,
+   "end": 19.984,
    "ponte": "p1"
   },
   {
-   "start": 30.992,
-   "end": 32.492,
+   "start": 31.841,
+   "end": 33.341,
    "ponte": "p2"
   }
  ],
- "outroStart": 42.95,
- "outroQuestionIn": 43.3,
- "handleIn": 47.688,
- "diveStart": 48.691,
- "end": 49.491,
+ "outroStart": 43.534,
+ "outroQuestionIn": 43.884,
+ "handleIn": 47.223,
+ "diveStart": 48.488,
+ "end": 49.288,
  "vo": [
   {
    "key": "g",
-   "clip": "g_-2Hz",
+   "clip": "g_gems",
    "start": 0.35,
-   "end": 3.613
+   "end": 4.134
   },
   {
    "key": "f3a",
-   "clip": "t_a1_-2Hz",
-   "start": 6.463,
-   "end": 10.838
+   "clip": "f3a_gems",
+   "start": 6.984,
+   "end": 11.516
   },
   {
    "key": "f3n",
-   "clip": "f3n_sel",
-   "start": 11.238,
-   "end": 11.929
+   "clip": "f3n_gems",
+   "start": 11.916,
+   "end": 12.79
   },
   {
    "key": "f3b",
-   "clip": "f3b_-2Hz",
-   "start": 13.088,
-   "end": 15.773
+   "clip": "f3b_gems",
+   "start": 13.766,
+   "end": 16.634
   },
   {
    "key": "p1",
-   "clip": "p1_-2Hz",
-   "start": 17.703,
-   "end": 19.096
+   "clip": "p1_gems",
+   "start": 18.564,
+   "end": 19.612
   },
   {
    "key": "f2a",
-   "clip": "t_b1_-2Hz",
-   "start": 20.023,
-   "end": 23.434
+   "clip": "f2a_gems",
+   "start": 20.884,
+   "end": 25.049
   },
   {
    "key": "f2n",
-   "clip": "f2n_-2Hz",
-   "start": 23.834,
-   "end": 24.515
+   "clip": "f2n_gems",
+   "start": 25.449,
+   "end": 26.136
   },
   {
    "key": "f2b",
-   "clip": "f2b_-2Hz",
-   "start": 25.684,
-   "end": 29.142
+   "clip": "f2b_gems",
+   "start": 27.299,
+   "end": 29.991
   },
   {
    "key": "p2",
-   "clip": "p2_-2Hz",
-   "start": 31.072,
-   "end": 31.884
+   "clip": "p2_gems",
+   "start": 31.921,
+   "end": 32.689
   },
   {
    "key": "f1a",
-   "clip": "f1a_-2Hz",
-   "start": 33.392,
-   "end": 36.006
+   "clip": "f1a_gems",
+   "start": 34.241,
+   "end": 36.897
   },
   {
    "key": "f1n",
-   "clip": "f1n_sel",
-   "start": 36.906,
-   "end": 37.616
+   "clip": "f1n_gems",
+   "start": 37.797,
+   "end": 38.667
   },
   {
    "key": "f1b",
-   "clip": "f1b_-2Hz",
-   "start": 38.756,
-   "end": 41.1
+   "clip": "f1b_gems",
+   "start": 39.647,
+   "end": 41.684
   },
   {
    "key": "fe1",
-   "clip": "fe1_-2Hz",
-   "start": 43.3,
-   "end": 47.388
+   "clip": "fe1_gems",
+   "start": 43.884,
+   "end": 46.923
   },
   {
    "key": "fe2",
-   "clip": "fe2_sel",
-   "start": 47.688,
-   "end": 49.141
+   "clip": "fe2_gems",
+   "start": 47.223,
+   "end": 48.938
   }
  ],
- "durationInFrames": 1485
+ "durationInFrames": 1479
 }

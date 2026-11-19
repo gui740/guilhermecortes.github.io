@@ -47,6 +47,11 @@ Legenda: ✅ confirmado · ⚠️ incerto
 - vcr_magnavox: [File:Magnavox CMWV-405 VCR.jpg](https://commons.wikimedia.org/wiki/File:Magnavox_CMWV-405_VCR.jpg) — CC BY-SA 4.0
 - vhs_stack: [File:Stackoftdkvhstapes.jpg](https://commons.wikimedia.org/wiki/File:Stackoftdkvhstapes.jpg) — CC0
 
+## Recortes refeitos
+
+- Ghostland: rosto agora vem inteiro, dentro do espelho oval antigo (TMDB backdrop do filme), recorte geométrico com borda suave.
+- A Médium: cenário em colagem de papel rasgado (estátua + oferendas) e xamã do primeiro plano recortada com a cabeça inteira.
+
 ## Logo
 
 - Prime Video (2024): [Wikimedia Commons — Prime_Video_logo_(2024).svg](https://commons.wikimedia.org/wiki/File:Prime_Video_logo_(2024).svg) (marca registrada da Amazon; usado só como selo de onde assistir).
@@ -57,6 +62,6 @@ Legenda: ✅ confirmado · ⚠️ incerto
 
 ## Áudio
 
-- Narração: edge-tts, voz `pt-BR-AntonioNeural` (não havia chave ElevenLabs nem Gemini no ambiente). ⚠️ voz sintética: vale regravar com voz humana.
+- Narração: Gemini TTS (`gemini-3.8-flash-tts`, voz Puck), chave do Google AI Studio fornecida pelo autor (não gravada no repositório).
 - Trilha: original, sintetizada para este vídeo (`tools/music.py`), synthwave sombrio 92 BPM em ré menor; sem direitos de terceiros.
 - Efeitos: sintetizados (`tools/sfx.py`): fita entrando no videocassete, cortina de tiras plásticas, chuvisco, impacto grave.
