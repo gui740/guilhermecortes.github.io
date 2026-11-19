@@ -47,7 +47,9 @@ export const ComHook: React.FC<{ shortId: string; children: React.ReactNode }> =
         <FalaCtx.Provider value={[[0, P[k].dur]]}>
           <AbsoluteFill style={{ backgroundColor: C.branco }}>
             <Papel />
-            <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
+            {/* o bloco do hook se aproxima em degraus de 3 quadros enquanto ele fala (sem quadro parado entre uma linha e outra) */}
+            <div style={{ position: "absolute", left: 60, right: 60, top: 420, display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
+              transform: `scale(${1 + 0.08 * Math.min(1, Math.floor(f / 3) * 3 / S(H))}) translateY(${-70 * Math.min(1, Math.floor(f / 3) * 3 / S(H))}px) translateX(${14 * (Math.abs(((Math.floor(f / 3) * 3 / 60) % 2) - 1) * 2 - 1)}px)` }}>
               {linhas.map((l, i) => {
                 // cada linha entra na palavra dele que a abre (ou em sequência, se não achar)
                 const w0 = l.split(" ")[0].toLowerCase().replace(/[.,?!%]/g, "");
