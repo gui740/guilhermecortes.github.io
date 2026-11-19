@@ -55,8 +55,8 @@ Legenda: **Próprio** = criado no projeto · **Editorial** = uso de terceiro em 
 
 | Material | Dono | Onde aparece | Status | Observação |
 |---|---|---|---|---|
-| Narração (voz do Guilherme), todos os blocos gravados (menos 09 e 11) | Próprio | episódio e Shorts | Próprio | limpeza e corte no pipeline (`pipeline/narracao_gui/`) |
-| Blocos 09 e 11 e hooks S01–S08 | Próprio | episódio (bloco 09 em 1:58; bloco 11 no regancho do cap. 3) e abertura dos Shorts | Próprio | ainda não gravados: silêncio com o texto do roteiro na tela; trocar com `trocar_audio.py` quando chegarem |
+| Narração (voz do Guilherme), todos os blocos, inclusive 09 e 11 | Próprio | episódio e Shorts | Próprio | limpeza e corte no pipeline (`pipeline/narracao_gui/`) |
+| Blocos 09 e 11 e hooks S01–S08 | Próprio | episódio (bloco 09 em 1:58; bloco 11 no painel do cap. 3) e abertura de cada Short | Próprio | recebidos em 19 nov. 2026 (arquivo frases-curtas-ep01), mesmo tratamento de voz; cortados com `trocar_lote.py` |
 | Resposta de sala sintética (`sala_pequena.wav`) | Próprio (gerada no pipeline) | tratamento da voz | Próprio | sem impulso de terceiros |
 | Imagens geradas por IA (Gemini) | — | — | — | nenhuma no episódio até agora; os pedidos estão em GEMINI_PEDIDOS.md. Quando chegarem, entram marcadas em IMAGENS.md como "gerada por IA (Gemini), conceito, não é registro" |
 | Geração paga de imagem | — | — | — | não usada |

@@ -7,13 +7,13 @@ CAPÍTULOS
 00:15 Do DVD ao streaming
 01:02 A aposta no original: House of Cards
 02:38 O binge como produto (e o botão Pular abertura)
-04:14 O algoritmo que olha o que você faz
-05:13 Cultura: anti-Apple e keeper test
-07:14 Identidade: por que uma letra só
-08:20 Publicidade: #FU2016 e Senna
-09:31 Fenômenos: Round 6, La Casa de Papel, Wednesday
-10:29 A conta: senhas, anúncios e preço
-11:59 A casa: Netflix House
+04:15 O algoritmo que olha o que você faz
+05:14 Cultura: anti-Apple e keeper test
+07:15 Identidade: por que uma letra só
+08:21 Publicidade: #FU2016 e Senna
+09:32 Fenômenos: Round 6, La Casa de Papel, Wednesday
+10:30 A conta: senhas, anúncios e preço
+12:00 A casa: Netflix House
 
 FONTES (ABNT)
 BLITZSCALING 16: Reed Hastings on building a streaming empire. [S. l.]: Greylock, 2015. 1 vídeo. Disponível em: https://www.youtube.com/watch?v=jYhP08uuffs. Acesso em: 17 nov. 2026.
