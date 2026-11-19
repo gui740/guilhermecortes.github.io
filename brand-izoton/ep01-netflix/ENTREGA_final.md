@@ -33,7 +33,7 @@
 
 ## 2. Episódio 1080p final
 
-*(em render; medidas na seção 2.2)*
+**Master: `video/out/v3a/EP01_v3e_1080.mp4`** (1920x1080, 30 fps, 782,9 s, 23.478 quadros, vídeo a 16 Mb/s, áudio AAC 320 kb/s).
 
 ### 2.1 O que mudou desde a montagem aprovada (v3b4)
 1. **Bloco 09** (1:58, 4,4 s) e **bloco 11** (narração sobre o painel do capítulo 3) com a voz dele. Antes, eram silêncio com o texto na tela.
@@ -44,11 +44,51 @@
 4. **Legendas** (`legendas/EP01_v3_ptBR.srt`, 312 linhas) refeitas com os blocos 09 e 11.
 5. **Capítulos novos** em `DESCRICAO_YOUTUBE.md`.
 
-### 2.2 Medidas
-*(preenchidas quando o render terminar)*
+6. **Prints do guia de marca** (gui_01 Color e gui_02 Clearspace, brand.netflix.com) nas laterais das cenas do guia, de 7:25 a 7:43, em cor e sem distorção.
+7. **Mais movimento** (necessário para passar na medida):
+   - as ações do objeto principal ficaram mais densas e com pose maior;
+   - entre uma ação e outra, o objeto continua a se aproximar em degraus;
+   - nos documentos, um marca-texto contínuo desce pelas linhas e o cartão tem um vaivém lento;
+   - a frase das citações se aproxima em rampas de 2 s.
 
-## 3. Shorts
-*(em render, depois do episódio)*
+### 2.2 Medidas (EP01_v3e_1080.mp4)
+
+| Medida | Resultado | Meta |
+|---|---|---|
+| Tempo parado (quadro inteiro, sem grão) | **3,5%** (27,3 s de 782,9 s) | abaixo de 5% |
+| Maior trecho parado | **1,8 s**; nenhum trecho de 2,2 s ou mais | até 2,5 s |
+| Auditoria "parado na narrativa" (faixa central, > 2,5 s) | **0** | 0 |
+| Quadros quebrados | **nenhum** (cada parte conferida antes de montar) | nenhum |
+| Loudness | **−14,0 LUFS**, LRA 4,7 LU, pico −1,4 | −14 LUFS, −1 dBTP |
+| Trocas fortes | 8,8 por minuto | — |
+
+### 2.3 Histórico das versões 1080p de hoje
+
+| Versão | O que é | Resultado |
+|---|---|---|
+| `EP01_v3b4_1080.mp4` | reserva, código da montagem aprovada | parado 4,8%; **1 quadro quebrado em 0:12,0**; não usar |
+| `EP01_v3c_1080.mp4` | 1º render com blocos 09/11, fichas novas e contadores | **parado 6,2%** (as fichas mais fortes e os contadores sem contagem tiraram movimento); reprovado |
+| `EP01_v3d_1080.mp4` | partes 1 e 3 re-renderizadas e emendadas na v3c | **defeituosa**: a emenda por cópia de fluxo deixou ~120 quadros a mais (dessincroniza som e imagem) e o parado ficou em 5,5%. **Não usar.** Tentei apagá-la para liberar disco e a regra de não apagar versões numeradas impediu; continua no disco |
+| `EP01_v3e_1080.mp4` | render completo com o movimento reforçado | **aprovada** pelas medidas (2.2) |
+
+Uma checagem de quadro quebrado acusou um quadro duas vezes, em partes diferentes: o início do clipe T02 (1:28) e o do T12b (4:55). Nas duas vezes a parte foi renderizada de novo e saiu limpa. Os dois pontos são o liga do efeito de TV.
+
+## 3. Shorts (1080x1920)
+
+| Short | Arquivo final | Duração | Parado | Maior trecho | Loudness | Pico |
+|---|---|---|---|---|---|---|
+| 01 · Sono | `shorts/SHORT01_v4.mp4` | 28,9 s | 0% | 0 s | −14,0 LUFS | −1,5 |
+| 02 · Pular abertura | `shorts/SHORT02_v4b.mp4` | 39,3 s | 0% | 0 s | −13,9 LUFS | −2,1 |
+| 03 · Algoritmo | `shorts/SHORT03_v4b.mp4` | 44,3 s | 0% | 0 s | −14,1 LUFS | −1,4 |
+| 04 · Keeper test | `shorts/SHORT04_v4.mp4` | 47,0 s | 2% | 1,0 s | −14,0 LUFS | −1,5 |
+| 05 · Uma letra | `shorts/SHORT05_v4.mp4` | 46,3 s | 0% | 0 s | −13,9 LUFS | −1,7 |
+| 06 · #FU2016 | `shorts/SHORT06_v4.mp4` | 51,6 s | 0% | 0 s | −14,0 LUFS | −1,5 |
+| 07 · Senhas | `shorts/SHORT07_v4.mp4` | 40,1 s | 0% | 0 s | −13,9 LUFS | −1,8 |
+| 08 · Netflix House | `shorts/SHORT08_v4b.mp4` | 45,2 s | 2% | 1,0 s | −13,9 LUFS | −1,8 |
+
+- Nenhum quadro quebrado. O teto do loudnorm é −1,5 dBTP; os picos da tabela são de amostra.
+- Os SHORT02, 03 e 08 saíram de novo (v4b) porque o SHORT03 v4 ficou em 5,2% parado, com a tela do hook parada entre uma linha e outra. A tela do hook agora se aproxima em degraus.
+- Conferência 9:16: quadros do hook (0,5, 2 e 4 s) e da passagem para o Short nos 8. Texto do hook, legenda e voz entram juntos, dentro da zona segura.
 
 Cada Short abre com o seu hook na voz do Guilherme, com o texto do hook na tela e legenda palavra a palavra; o resto continua igual.
 
@@ -56,3 +96,45 @@ Cada Short abre com o seu hook na voz do Guilherme, com o texto do hook na tela 
 - **SHORT01:** bloco 01, "Em 2017, o CEO da Netflix disse que a empresa compete com o seu sono".
 - **SHORT02:** bloco 15, "Esse botão é apertado 136 milhões de vezes num dia típico".
 - **O que fiz:** nesses dois, o hook gravado substitui essa abertura, para a mesma frase não ser ouvida duas vezes seguidas. O Short começa depois dela e a legenda também tira a frase. Nos Shorts 03 a 08, o hook entra antes e nada sai.
+
+
+## 4. Imagens do Guilherme (gui_01 a gui_10)
+
+- **gui_01 e gui_02** (Color e Clearspace, brand.netflix.com): em uso no episódio, de 7:25 a 7:43. Registro em `IMAGENS.md` e `DIREITOS.md`: "página oficial, brand.netflix.com, print".
+- **gui_03 a gui_10:** fora do vídeo. A origem ainda está em confirmação (Gemini ou internet). Os recortes em P&B estão prontos na área temporária, mas falta terminar dois ajustes:
+  - na TV (gui_06), a marca "Philco" ainda aparece;
+  - no esquadro (gui_04), parte do texto impresso continua visível.
+- **gui_07 (controle):** recomendo deixar fora. Mesmo em P&B, a silhueta é a de um controle de console conhecido.
+
+## 5. Documentos atualizados
+
+- **`DESCRICAO_YOUTUBE.md`:** capítulos novos
+  00:00, 00:15, 01:02, 02:38, 04:15, 05:14, 07:15, 08:21, 09:32, 10:30 e 12:00.
+- **`DESCRICAO_SHORTS.md`:** cada Short abre com o hook falado.
+- **`DIREITOS.md`:**
+  - voz do Guilherme em todos os blocos, inclusive 09 e 11, e nos hooks;
+  - prints do guia de marca;
+  - objetos gui_03 a gui_10 marcados como pendentes.
+- **`legendas/EP01_v3_ptBR.srt`:** 312 linhas, com os blocos 09 e 11.
+- **`IMAGENS.md`:** as 10 imagens do Guilherme.
+
+## 6. Artifact
+
+Episódio em 4 partes leves, 8 Shorts, capa, prints por capítulo e medidas (privado): https://claude.ai/artifact/6XiiHvN362rDVKE5n9yVhe
+
+## 7. Decisões tomadas sem consulta
+
+- **SHORT01 e SHORT02:** o hook gravado substitui a frase de abertura repetida (ver seção 3 do pedido; detalhes acima).
+- **Bitrate do master:** 16 Mb/s, para caber no disco. É o dobro da recomendação do YouTube para 1080p30.
+- **Arquivos intermediários apagados para liberar disco** (nenhuma versão numerada foi apagada):
+  - partes 1080p, depois de conferir cada master;
+  - cópias pré-loudnorm dos Shorts (`_raw`);
+  - trechos de teste;
+  - caches (modelo do Whisper, pip, uv);
+  - o download bruto do Blitzscaling (os clipes já estão cortados no projeto).
+- **Legenda corrigida à mão** em duas palavras que o Whisper errou ("CEO" e "para … outro").
+
+## 8. Pendente
+
+- Confirmação da origem de gui_03 a gui_10 (e decisão sobre o controle).
+- Nada no YouTube: a publicação fica com o Guilherme.
