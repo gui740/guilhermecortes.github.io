@@ -155,7 +155,7 @@ const SOMBRA_F = "10px 12px 22px rgba(0,0,0,0.18)";
 // somado à ação própria do objeto. Logo e cores da marca só deslocam (sem rotação, CLAUDE.md 2). Documento e pôsteres já têm lupa/holofote.
 const SEM_POSE = new Set(["evidencia", "posters"]);
 const SEM_GIRO = new Set(["logoN", "cores", "proibicoes"]);
-const POSES = [[0, 0, 0], [16, -8, 1.1], [-14, 6, -0.9], [10, 10, 0.7], [-16, -6, -1.2], [6, -12, 0.5]];
+const POSES = [[0, 0, 0], [24, -12, 1.4], [-22, 10, -1.2], [16, 16, 0.9], [-24, -10, -1.5], [10, -18, 0.7]];
 const Pose: React.FC<{ acoes: number[]; tipo: string; children: React.ReactNode }> = ({ acoes, tipo, children }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -166,7 +166,10 @@ const Pose: React.FC<{ acoes: number[]; tipo: string; children: React.ReactNode 
   const k = n === 0 ? 1 : Math.min(1, Math.floor((f - fr[n - 1]) / 2) * 2 / 4); // chega em degraus de 2 quadros
   const v = n === 0 ? POSES[0] : a.map((x, i) => x + (b[i] - x) * k);
   const giro = SEM_GIRO.has(tipo) ? 0 : v[2];
-  return <AbsoluteFill style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${giro}deg)`, transformOrigin: "50% 50%" }}>{children}</AbsoluteFill>;
+  // entre uma ação e outra o objeto continua a se aproximar devagar, em degraus de 3 quadros (nunca fica parado)
+  const desde = n === 0 ? f : f - fr[n - 1];
+  const z = 1 + 0.03 * Math.min(1, Math.floor(desde / 3) * 3 / 36);
+  return <AbsoluteFill style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${giro}deg) scale(${z})`, transformOrigin: "50% 50%" }}>{children}</AbsoluteFill>;
 };
 
 // tempos das ações do objeto principal: palavras dele (>= 0,95 s entre si, a partir de 0,9 s); pausas maiores que 1,6 s ganham ação a cada 1,05 s

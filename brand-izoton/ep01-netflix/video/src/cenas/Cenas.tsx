@@ -168,12 +168,14 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
   const cxImg = (tr[0] + tr[2] / 2 + lx * tr[2]) * iw, cyImg = (tr[1] + tr[3] / 2 + ly * tr[3]) * ih;
   const left = cw / 2 - cxImg * s, top = ch / 2 - cyImg * s;
   const sub = interpolate(f, [14, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: ease });
+  // vaivém lateral lento do cartão (±34 px a cada 3 s, em degraus de 3 quadros): documento longo não fica parado; a leitura não é afetada
+  const vaiDoc = 34 * (Math.abs(((Math.floor(f / 3) * 3 / 90) % 2) - 1) * 2 - 1);
   const temFrase = !!c.frase;
   const fraseK = temFrase ? interpolate(f, [dur * fps * 0.42, dur * fps * 0.42 + 14], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: ease }) : 0;
   return (
     <AbsoluteFill style={{ backgroundColor: C.branco, alignItems: "center", justifyContent: "center" }}>
       <div style={{ width: cw, height: ch, position: "relative", overflow: "hidden", background: "white", boxShadow: SOMBRA,
-        transform: `translateY(${(1 - entra) * 80}px) scale(${1 - fraseK * 0.06})`, opacity: Math.min(1, entra * 1.5) * (1 - fraseK * 0.9) }}>
+        transform: `translateY(${(1 - entra) * 80}px) translateX(${vaiDoc}px) scale(${1 - fraseK * 0.06})`, opacity: Math.min(1, entra * 1.5) * (1 - fraseK * 0.9) }}>
         <Img src={staticFile(c.img)} style={{ position: "absolute", left, top, width: iw * s, height: ih * s, maxWidth: "none" }} />
         <div style={{ position: "absolute", left: left + tr[0] * iw * s, top: top + tr[1] * ih * s - 6,
           width: tr[2] * iw * s, height: tr[3] * ih * s + 12, background: "rgba(41,41,41,0.06)" }} />
@@ -186,6 +188,8 @@ const Evidencia: React.FC<P> = ({ c, dur }) => {
           <div style={{ position: "absolute", left: left + tr[0] * iw * s - 14, top: top + tr[1] * ih * s - 18, width: tr[2] * iw * s + 28, height: tr[3] * ih * s + 36,
             border: `3px dashed ${C.tinta}`, opacity: ePasso, boxShadow: `0 0 0 ${2000 * ePasso}px rgba(255,255,255,${0.55 * ePasso})` }} />
         )}
+        {/* leitura contínua: um marca-texto claro desce pelas linhas em degraus de 3 quadros (documento longo nunca fica parado) */}
+        <div style={{ position: "absolute", left: 40, right: 40, top: 30 + ((Math.floor(f / 3) * 3 * 3) % (ch - 90)), height: 34, background: "rgba(41,41,41,0.11)", mixBlendMode: "multiply" }} />
       </div>
       <div style={{ position: "absolute", left: FAIXA.x + 12, top: 150 + (1 - entra) * 80 }}>
         <Carimbo texto={c.carimbo} />
@@ -209,8 +213,10 @@ const FrasePose: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const k = n === 0 ? 1 : Math.min(1, Math.floor(desde(n) / 2) * 2 / 4);
   const v = a.map((x, i) => x + (b[i] - x) * k);
   // entre uma ação e outra o cartão da frase continua a se aproximar devagar, em degraus de 3 quadros (nunca fica parado)
-  const d = Math.min(2.5, Math.floor((n === 0 ? desde(0) : desde(n)) / 3) * 3 / 60);
-  const z = 1 + 0.07 * d, dx = (b[0] >= 0 ? -1 : 1) * 22 * d;
+  // aproximação contínua em rampas de 2 s, sem teto: frase longa também não fica parada
+  const q = Math.floor((n === 0 ? desde(0) : desde(n)) / 3) * 3;
+  const d = (q % 60) / 60; // rampa de 2 s que recomeça (sem ponto de virada lento)
+  const z = 1 + 0.09 * d, dx = (b[0] >= 0 ? -1 : 1) * 26 * d;
   return <div style={{ transform: `translate(${v[0] + dx}px, ${v[1]}px) rotate(${v[2]}deg) scale(${z})` }}>{children}</div>;
 };
 
