@@ -1,0 +1,15 @@
+# Filmes já usados na página (não repetir)
+Leviticus
+Buddy
+Hokum
+It Follows
+Knife + Heart
+Spring
+Thirst
+Saint Maud
+Jennifer's Body
+Carrie
+# Reel "3 terrores escondidos no Prime Video" (18/11/2026)
+Ghostland (2018)
+A Médium / The Medium (2021)
+Huesera (2022)

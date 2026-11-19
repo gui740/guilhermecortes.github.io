@@ -1,0 +1,10 @@
+node_modules/
+out/test/
+out/frames/
+out/check/
+out/*_raw.mp4
+assets/vo/raw/
+assets/audio/gB/
+assets/audio/gC/
+assets/audio/stem_*.wav
+assets/audio/mix.wav

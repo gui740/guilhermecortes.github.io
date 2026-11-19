@@ -1,0 +1,9 @@
+[
+ {"src":"assets/films/ghostland/backdrop_07.jpg","out":"assets/cut/ghost_face.png","crop":[560,0,1360,1080],"model":"birefnet-portrait"},
+ {"src":"assets/films/ghostland/poster_00.jpg","out":"assets/cut/ghost_face2.png","crop":[0,0,2000,2300],"model":"birefnet-portrait"},
+ {"src":"assets/films/ghostland/poster_03.jpg","out":"assets/cut/ghost_dolls.png","crop":[60,380,740,1050]},
+ {"src":"assets/films/medium/backdrop_02.jpg","out":"assets/cut/medium_mink.png","crop":[700,500,1350,1152]},
+ {"src":"assets/films/medium/backdrop_02.jpg","out":"assets/cut/medium_statue.png","crop":[560,0,1500,1152]},
+ {"src":"assets/films/huesera/backdrop_05.jpg","out":"assets/cut/huesera_valeria.png","crop":[0,0,1100,1080]},
+ {"src":"assets/films/medium/poster_01.jpg","out":"assets/cut/medium_nim.png","crop":[800,1500,1905,2857]}
+]

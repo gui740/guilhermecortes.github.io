@@ -1,0 +1,87 @@
+{
+  "data_pesquisa": "2026-11-18",
+  "metodo": "JustWatch BR (API GraphQL, filtro pacote Prime Video + monetização FLATRATE) + AdoroCinema (bloco 'SVOD / Streaming · Amazon Prime Video · Por assinatura', catálogo BR) + página do título no primevideo.com (mesmo GTI informado pelo JustWatch BR).",
+  "limitacao_importante": "INCERTO: o container que gerou este vídeo sai pela internet com IP dos EUA; o primevideo.com sempre respondeu com currentTerritory=US (catálogo americano, onde os títulos aparecem como 'teste gratuito, alugar ou comprar'). amazon.com.br/gp/video bloqueou acesso automatizado. Ou seja: a página do primevideo.com EXISTE para os 3 GTIs, mas o selo 'Incluído no Prime' em região Brasil NÃO pôde ser lido daqui. Substituí essa checagem por uma 2ª fonte BR independente (AdoroCinema). Confirme no app em 10 segundos antes de postar.",
+  "filmes": [
+    {
+      "posicao": 3,
+      "titulo_br_justwatch": "Ghostland - A Casa do Terror",
+      "titulo_br_adorocinema": "A Casa do Medo - Incidente em Ghostland",
+      "titulo_na_tela": "Ghostland",
+      "titulo_original": "Ghostland / Incident in a Ghostland",
+      "ano": 2018,
+      "pais": "França · Canadá",
+      "subgenero": "thriller / invasão de casa",
+      "premissa": "Uma mãe e as duas filhas herdam a casa isolada de uma tia, e na primeira noite tudo vira pesadelo.",
+      "detalhe_que_fisga": "A casa é cheia de bonecas antigas (e o filme muda de rumo no meio).",
+      "fontes_fatos": [
+        "https://en.wikipedia.org/wiki/Incident_in_a_Ghostland",
+        "https://www.adorocinema.com/filmes/filme-246532/"
+      ],
+      "disponibilidade": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/ghostland-a-casa-do-terror",
+        "justwatch_resultado": "Amazon Prime Video FLATRATE + Prime Video with Ads FLATRATE (também aluguel/compra)",
+        "adorocinema": "https://www.adorocinema.com/filmes/filme-246532/vod/",
+        "adorocinema_resultado": "SVOD / Streaming · Amazon Prime Video · Por assinatura",
+        "primevideo": "https://www.primevideo.com/detail/amzn1.dv.gti.881a6aaa-c2ca-439f-9d54-fcfdf1bc544c",
+        "primevideo_resultado": "INCERTO — página existe; região BR não verificável deste IP (respondeu 521/US)"
+      },
+      "incertezas": ["Título oficial BR diverge entre fontes; na tela usamos só 'Ghostland', comum às duas."],
+      "tmdb_id": 476299, "imdb": "tt6195094"
+    },
+    {
+      "posicao": 2,
+      "titulo_br": "A Médium",
+      "titulo_original": "ร่างทรง (Rang Song) / The Medium",
+      "ano": 2021,
+      "pais": "Tailândia · Coreia do Sul",
+      "subgenero": "sobrenatural / folk horror em falso documentário",
+      "premissa": "Uma equipe de documentário acompanha uma xamã no nordeste da Tailândia, até a sobrinha dela começar a agir de forma estranha.",
+      "detalhe_que_fisga": "É todo filmado como pseudo-documentário (found footage).",
+      "fontes_fatos": [
+        "https://en.wikipedia.org/wiki/The_Medium_(2021_film)",
+        "https://www.adorocinema.com/filmes/filme-292992/"
+      ],
+      "disponibilidade": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/the-medium",
+        "justwatch_resultado": "Amazon Prime Video FLATRATE + Prime Video with Ads FLATRATE (também listado no canal Diamond Films, separado)",
+        "adorocinema": "https://www.adorocinema.com/filmes/filme-292992/vod/",
+        "adorocinema_resultado": "SVOD / Streaming · Amazon Prime Video · Por assinatura (e Diamond Films+ por assinatura)",
+        "primevideo": "https://www.primevideo.com/detail/amzn1.dv.gti.4be6b266-ebb1-4956-972e-de1a490502f0",
+        "primevideo_resultado": "INCERTO — página existe; região BR não verificável deste IP"
+      },
+      "incertezas": ["Também aparece no canal pago Diamond Films dentro do Prime; as duas fontes listam a oferta Prime 'por assinatura' separadamente."],
+      "tmdb_id": 745881, "imdb": "tt13446168"
+    },
+    {
+      "posicao": 1,
+      "titulo_br": "Huesera",
+      "titulo_original": "Huesera / Huesera: The Bone Woman",
+      "ano": 2022,
+      "pais": "México · Peru",
+      "subgenero": "body horror psicológico / autoral",
+      "premissa": "Valeria, grávida do primeiro filho, passa a ser assombrada por uma figura que estala os ossos.",
+      "detalhe_que_fisga": "Ela começa a estalar os dedos compulsivamente; o som de osso estalando é o terror do filme. (Ganhou Melhor Nova Diretora Narrativa e Prêmio Nora Ephron no Tribeca 2022 — não usado na fala.)",
+      "fontes_fatos": [
+        "https://en.wikipedia.org/wiki/Huesera:_The_Bone_Woman",
+        "https://www.adorocinema.com/filmes/filme-303837/",
+        "https://www.adorocinema.com/noticias/filmes/noticia-1000032408/"
+      ],
+      "disponibilidade": {
+        "justwatch_br": "https://www.justwatch.com/br/filme/huesera-the-bone-woman",
+        "justwatch_resultado": "Amazon Prime Video FLATRATE + Prime Video with Ads FLATRATE (também aluguel/compra)",
+        "adorocinema": "https://www.adorocinema.com/filmes/filme-303837/vod/",
+        "adorocinema_resultado": "SVOD / Streaming · Amazon Prime Video · Por assinatura",
+        "primevideo": "https://www.primevideo.com/detail/amzn1.dv.gti.9fd5f551-7203-48e0-ac98-c0369331d5b6",
+        "primevideo_resultado": "INCERTO — página carregou ('Prime Video: Huesera') mas com território US ('teste gratuito, alugar ou comprar')"
+      },
+      "incertezas": ["Ano: 2022 (estreia Tribeca); Prime US exibe 2023."],
+      "tmdb_id": 772515, "imdb": "tt11718516"
+    }
+  ],
+  "descartados": {
+    "proibidos_pelo_briefing": "todos da lista foram excluídos; usados.txt não existia",
+    "considerados": ["A Chorona (2019, Guatemala) — Prime por assinatura nas duas fontes, reserva", "Thelma (2017, Noruega) — reserva", "Relíquia Macabra (2020) — reserva"]
+  },
+  "imagens": "ver assets/sources.json (gerado no download)"
+}

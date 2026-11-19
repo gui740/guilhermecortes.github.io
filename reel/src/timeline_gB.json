@@ -1,0 +1,154 @@
+{
+ "hookEnd": 5.254833,
+ "stations": [
+  {
+   "n": "3",
+   "start": 6.755,
+   "numberIn": 6.255,
+   "aIn": 7.655,
+   "aEnd": 12.03,
+   "titleIn": 12.38,
+   "bIn": 14.28,
+   "bEnd": 16.965,
+   "logoIn": 17.115,
+   "end": 18.815
+  },
+  {
+   "n": "2",
+   "start": 20.315,
+   "numberIn": 19.815,
+   "aIn": 21.215,
+   "aEnd": 24.626,
+   "titleIn": 24.976,
+   "bIn": 26.876,
+   "bEnd": 30.334,
+   "logoIn": 30.484,
+   "end": 32.184
+  },
+  {
+   "n": "1",
+   "start": 33.684,
+   "numberIn": 33.184,
+   "aIn": 34.584,
+   "aEnd": 37.198,
+   "titleIn": 38.048,
+   "silence": [
+    37.598,
+    38.098
+   ],
+   "bIn": 39.948,
+   "bEnd": 42.292,
+   "logoIn": 42.442,
+   "end": 44.142
+  }
+ ],
+ "travs": [
+  {
+   "start": 5.255,
+   "end": 6.755,
+   "ponte": null
+  },
+  {
+   "start": 18.815,
+   "end": 20.315,
+   "ponte": "p1"
+  },
+  {
+   "start": 32.184,
+   "end": 33.684,
+   "ponte": "p2"
+  }
+ ],
+ "outroStart": 44.142,
+ "outroQuestionIn": 44.492,
+ "handleIn": 48.88,
+ "diveStart": 49.883,
+ "end": 50.683,
+ "vo": [
+  {
+   "key": "g",
+   "clip": "gB_-2Hz",
+   "start": 0.35,
+   "end": 4.805
+  },
+  {
+   "key": "f3a",
+   "clip": "t_a1_-2Hz",
+   "start": 7.655,
+   "end": 12.03
+  },
+  {
+   "key": "f3n",
+   "clip": "f3n_sel",
+   "start": 12.43,
+   "end": 13.121
+  },
+  {
+   "key": "f3b",
+   "clip": "f3b_-2Hz",
+   "start": 14.28,
+   "end": 16.965
+  },
+  {
+   "key": "p1",
+   "clip": "p1_-2Hz",
+   "start": 18.895,
+   "end": 20.288
+  },
+  {
+   "key": "f2a",
+   "clip": "t_b1_-2Hz",
+   "start": 21.215,
+   "end": 24.626
+  },
+  {
+   "key": "f2n",
+   "clip": "f2n_-2Hz",
+   "start": 25.026,
+   "end": 25.707
+  },
+  {
+   "key": "f2b",
+   "clip": "f2b_-2Hz",
+   "start": 26.876,
+   "end": 30.334
+  },
+  {
+   "key": "p2",
+   "clip": "p2_-2Hz",
+   "start": 32.264,
+   "end": 33.076
+  },
+  {
+   "key": "f1a",
+   "clip": "f1a_-2Hz",
+   "start": 34.584,
+   "end": 37.198
+  },
+  {
+   "key": "f1n",
+   "clip": "f1n_sel",
+   "start": 38.098,
+   "end": 38.808
+  },
+  {
+   "key": "f1b",
+   "clip": "f1b_-2Hz",
+   "start": 39.948,
+   "end": 42.292
+  },
+  {
+   "key": "fe1",
+   "clip": "fe1_-2Hz",
+   "start": 44.492,
+   "end": 48.58
+  },
+  {
+   "key": "fe2",
+   "clip": "fe2_sel",
+   "start": 48.88,
+   "end": 50.333
+  }
+ ],
+ "durationInFrames": 1520
+}
