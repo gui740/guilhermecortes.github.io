@@ -169,15 +169,15 @@ const Pose: React.FC<{ acoes: number[]; tipo: string; children: React.ReactNode 
   return <AbsoluteFill style={{ transform: `translate(${v[0]}px, ${v[1]}px) rotate(${giro}deg)`, transformOrigin: "50% 50%" }}>{children}</AbsoluteFill>;
 };
 
-// tempos das ações do objeto principal: palavras dele (>= 1,25 s entre si, a partir de 0,9 s); pausas maiores que 2,2 s ganham ação a cada 1,5 s
+// tempos das ações do objeto principal: palavras dele (>= 0,95 s entre si, a partir de 0,9 s); pausas maiores que 1,6 s ganham ação a cada 1,05 s
 const acoesDe = (ritmo: number[], dur: number): number[] => {
   const out: number[] = [];
-  const push = (t: number) => { if (t >= 0.9 && t <= dur - 0.5 && (!out.length || t - out[out.length - 1] >= 1.25)) out.push(Math.round(t * 100) / 100); };
+  const push = (t: number) => { if (t >= 0.9 && t <= dur - 0.5 && (!out.length || t - out[out.length - 1] >= 0.95)) out.push(Math.round(t * 100) / 100); };
   for (const t of ritmo) {
-    for (let g = 0; g < 20 && (out.length ? t - out[out.length - 1] > 2.2 : t > 2.6); g++) push((out.length ? out[out.length - 1] : 0.9 - 1.5) + 1.5);
+    for (let g = 0; g < 20 && (out.length ? t - out[out.length - 1] > 1.6 : t > 2.0); g++) push((out.length ? out[out.length - 1] : 0.9 - 1.05) + 1.05);
     push(t);
   }
-  while ((out.length ? out[out.length - 1] : 0) + 1.5 <= dur - 0.5) { const n0 = out.length; push((out.length ? out[out.length - 1] : -0.6) + 1.5); if (out.length === n0) break; }
+  while ((out.length ? out[out.length - 1] : 0) + 1.05 <= dur - 0.5) { const n0 = out.length; push((out.length ? out[out.length - 1] : -0.15) + 1.05); if (out.length === n0) break; }
   return out;
 };
 

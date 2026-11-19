@@ -148,3 +148,17 @@ if (modo === "shortsfinal") {
   log("shorts fim");
   process.exit(0);
 }
+
+// node render.mjs trechof <quadro_ini> <quadro_fim> <nome> -> out/v3a/partes/<nome>.mp4 (EpisodioV3 em 1080p, quadros [ini, fim), para trocar uma parte)
+if (modo === "trechof") {
+  const [a, b, nome] = [Number(ids[0]), Number(ids[1]), ids[2]];
+  const c = await comp("EpisodioV3");
+  const out = `out/v3a/partes/${nome}.mp4`;
+  ultimo = -1;
+  await renderMedia({ composition: c, serveUrl, codec: "h264", ...(process.env.BITRATE ? { videoBitrate: process.env.BITRATE } : { crf: 17 }), scale: 1,
+    frameRange: [a, Math.min(c.durationInFrames, b) - 1], outputLocation: out + ".tmp.mp4", browserExecutable: BROWSER, concurrency: Number(process.env.CONC || 4),
+    imageFormat: "jpeg", jpegQuality: 90, onProgress: progresso(nome), timeoutInMilliseconds: 120000, offthreadVideoCacheSizeInBytes: 2 * 1024 ** 3 });
+  fs.renameSync(out + ".tmp.mp4", out);
+  log(`${nome} ok`);
+  process.exit(0);
+}
