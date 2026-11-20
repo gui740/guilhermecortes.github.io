@@ -127,9 +127,6 @@
           "ESTÁDIO",
           "CAMPEONATO"
         ]
-      },
-      "image": {
-        "src": "img/palestra-1920.jpg"
       }
     },
     {
@@ -209,7 +206,8 @@
             "icon": "clipboard",
             "word": "abel",
             "image": "img/abel.jpg",
-            "credit": "Foto: Sepguilherme · CC BY-SA 4.0 / Wikimedia Commons"
+            "credit": "Foto: Sepguilherme · CC BY-SA 4.0 / Wikimedia Commons",
+            "objectPosition": "50% 8%"
           }
         ]
       }

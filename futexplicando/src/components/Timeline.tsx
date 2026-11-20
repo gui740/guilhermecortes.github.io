@@ -5,7 +5,7 @@ import { Icon } from "./Icons";
 import { PhotoCard } from "./PhotoCard";
 import { Sfx } from "./Sfx";
 
-export type TimelineItem = { year: string; label: string; icon: string; at: number; image?: string; credit?: string };
+export type TimelineItem = { year: string; label: string; icon: string; at: number; image?: string; credit?: string; objectPosition?: string };
 
 const GAP = 760;
 
@@ -30,7 +30,7 @@ export const Timeline: React.FC<{
           <div key={i} style={{ position: "absolute", left: x, top: 0 }}>
             <div style={{ position: "absolute", left: -360, top: 360, width: 720, display: "flex", justifyContent: "center", opacity: on }}>
               {it.image && (
-                <PhotoCard src={it.image} at={it.at} width={600} height={460} rotate={i % 2 ? 3 : -3} paper={colors.paper} ink={colors.ink} credit={it.credit} grayscale={i < 2} from={i % 2 ? "top" : "bottom"} />
+                <PhotoCard src={it.image} at={it.at} width={600} height={460} rotate={i % 2 ? 3 : -3} paper={colors.paper} ink={colors.ink} credit={it.credit} objectPosition={it.objectPosition} grayscale={i < 2} from={i % 2 ? "top" : "bottom"} />
               )}
             </div>
             <div style={{ position: "absolute", left: -60, top: 908, width: 120, height: 120, borderRadius: 999, background: active ? colors.secondary : colors.paper, border: `10px solid ${colors.ink}`, transform: `scale(${0.6 + on * 0.4})`, display: "flex", alignItems: "center", justifyContent: "center" }}>

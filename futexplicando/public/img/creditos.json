@@ -1,1 +1,66 @@
-[{"file":"img/escudo.png","title":"File:Palmeiras logo.svg","page":"https://commons.wikimedia.org/wiki/File:Palmeiras_logo.svg","license":"Public domain","author":"Sociedade Esportiva Palmeiras","licenseUrl":""}]
+[
+  {
+    "file": "img/escudo.png",
+    "title": "File:Palmeiras logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Palmeiras_logo.svg",
+    "license": "Public domain",
+    "author": "Sociedade Esportiva Palmeiras",
+    "licenseUrl": ""
+  },
+  {
+    "file": "img/palestra-1915.jpg",
+    "title": "File:Bianco-Palestra Itália.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bianco-Palestra_It%C3%A1lia.jpg",
+    "license": "Public domain",
+    "author": "Unknown authorUnknown author",
+    "licenseUrl": ""
+  },
+  {
+    "file": "img/campeao-1942.jpg",
+    "title": "File:Palmeiras Campeão Paulista 1942.tif",
+    "page": "https://commons.wikimedia.org/wiki/File:Palmeiras_Campe%C3%A3o_Paulista_1942.tif",
+    "license": "Public domain",
+    "author": "Unknown authorUnknown author",
+    "licenseUrl": ""
+  },
+  {
+    "file": "img/copa-rio-1951.jpg",
+    "title": "File:Palmeiras equipo 1951.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Palmeiras_equipo_1951.jpg",
+    "license": "Public domain",
+    "author": "Unknown authorUnknown author",
+    "licenseUrl": ""
+  },
+  {
+    "file": "img/ademir-1970.jpg",
+    "title": "File:Ademir da Guia no jogo Vasco X Palmeiras (1970).tif",
+    "page": "https://commons.wikimedia.org/wiki/File:Ademir_da_Guia_no_jogo_Vasco_X_Palmeiras_(1970).tif",
+    "license": "Public domain",
+    "author": "UnknownUnknown",
+    "licenseUrl": ""
+  },
+  {
+    "file": "img/trofeus-libertadores.jpg",
+    "title": "File:Trofeus-libertadores-palmeiras-2021.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Trofeus-libertadores-palmeiras-2021.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "NullReason",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "file": "img/abel.jpg",
+    "title": "File:Abel-Ferreira-Palmeiras-Liverpool-abr24 (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Abel-Ferreira-Palmeiras-Liverpool-abr24_(cropped).jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Sepguilherme",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "file": "img/estadio.jpg",
+    "title": "File:Allianz Parque 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Allianz_Parque_2025.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Leonef",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  }
+]

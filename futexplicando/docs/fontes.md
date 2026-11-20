@@ -34,7 +34,6 @@ Todas vêm do **Wikimedia Commons**, com licença que permite uso comercial; os 
 |---|---|---|
 | escudo.png | [File:Palmeiras logo.svg](https://commons.wikimedia.org/wiki/File:Palmeiras_logo.svg) | Domínio público no Commons (logotipo simples). **Atenção:** continua sendo **marca registrada** do clube. |
 | palestra-1915.jpg | [File:Bianco-Palestra Itália.jpg](https://commons.wikimedia.org/wiki/File:Bianco-Palestra_It%C3%A1lia.jpg) | Domínio público (1915) – retrato de Bianco, jogador do Palestra |
-| palestra-1920.jpg | [File:Palestra Italia 1920.jpg](https://commons.wikimedia.org/wiki/File:Palestra_Italia_1920.jpg) | Domínio público (1920) |
 | campeao-1942.jpg | [File:Palmeiras Campeão Paulista 1942.tif](https://commons.wikimedia.org/wiki/File:Palmeiras_Campe%C3%A3o_Paulista_1942.tif) | Domínio público (1942) – versão colorizada do time campeão |
 | copa-rio-1951.jpg | [File:Palmeiras equipo 1951.jpg](https://commons.wikimedia.org/wiki/File:Palmeiras_equipo_1951.jpg) | Domínio público (1951) |
 | ademir-1970.jpg | [File:Ademir da Guia no jogo Vasco X Palmeiras (1970).tif](https://commons.wikimedia.org/wiki/File:Ademir_da_Guia_no_jogo_Vasco_X_Palmeiras_(1970).tif) | Domínio público (Arquivo Nacional) |

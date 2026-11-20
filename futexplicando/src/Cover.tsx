@@ -18,8 +18,8 @@ export const Cover: React.FC = () => {
       <AbsoluteFill style={{ alignItems: "center", paddingTop: 330 }}>
         <Crest src={hook.props.crest as string} size={360} />
         <div style={{ fontFamily: SANS, fontWeight: 900, fontSize: 46, color: palette.paper, letterSpacing: 4, marginTop: 50 }}>{c.kicker}</div>
-        <div style={{ fontFamily: TITLE, fontSize: 230, lineHeight: 1, color: palette.paper, textAlign: "center", marginTop: 30, transform: "rotate(-3deg)", textShadow: `10px 10px 0 ${palette.ink}` }}>{c.lines[0]}</div>
-        <div style={{ fontFamily: TITLE, fontSize: 250, lineHeight: 1.05, color: palette.paper, background: palette.ink, padding: "0 40px", marginTop: 20, transform: "rotate(2deg)" }}>{c.lines[1]}</div>
+        <div style={{ fontFamily: TITLE, fontSize: 172, lineHeight: 1, color: palette.paper, textAlign: "center", whiteSpace: "nowrap", marginTop: 30, transform: "rotate(-3deg)", textShadow: `10px 10px 0 ${palette.ink}` }}>{c.lines[0]}</div>
+        <div style={{ fontFamily: TITLE, fontSize: 200, lineHeight: 1.05, color: palette.paper, background: palette.ink, padding: "0 40px", whiteSpace: "nowrap", marginTop: 20, transform: "rotate(2deg)" }}>{c.lines[1]}</div>
       </AbsoluteFill>
       <Badge still handle={episode.handle} ink={palette.ink} paper={palette.paper} accent={palette.primary} />
       <PaperGrain />
