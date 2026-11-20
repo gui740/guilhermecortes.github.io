@@ -1,7 +1,7 @@
 {
   "name": "futexplicando",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "@futexplicando – vídeos verticais explicativos (template Remotion)",
   "repository": {},
   "license": "UNLICENSED",
   "engines": {
@@ -10,6 +10,8 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.545",
+    "@remotion/fonts": "^4.0.545",
+    "@remotion/media": "^4.0.545",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.545"
@@ -26,7 +28,10 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "voz": "python3 scripts/gerar-voz.py src/data/ep01.json",
+    "render": "remotion render Episode out/ep01-historia-palmeiras.mp4 --codec=h264 --x264-preset=veryfast",
+    "capa": "remotion still Capa out/capa.png"
   },
   "allowScripts": {
     "esbuild": false

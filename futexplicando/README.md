@@ -1,54 +1,25 @@
-# Remotion video
+# @futexplicando – template de vídeo (Remotion)
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Vídeo vertical 1080x1920, 30 fps. **Todo texto, número, imagem e timing fica no JSON** (`src/data/ep01.json`).
 
-Welcome to your Remotion project!
-
-## Commands
-
-**Install Dependencies**
-
-```console
-npm i --loglevel=error
+## Comandos
+```bash
+npm i
+npm run dev      # Remotion Studio (preview)
+npm run voz      # gera public/voz.mp3 + timing palavra a palavra no JSON
+npm run render   # out/ep01-historia-palmeiras.mp4 (H.264, veryfast)
+npm run capa     # out/capa.png
 ```
+Voz: com `ELEVENLABS_API_KEY` no ambiente usa ElevenLabs (`voice.elevenVoiceId` no JSON); sem a chave usa Edge TTS (grátis).
 
-**Start Preview**
+## Novo episódio
+1. Copie `src/data/ep01.json` → `ep02.json` e troque o import em `src/lib/episode.ts`.
+2. Edite `scenes[]`: cada cena tem `type` (hook, foundation, nameswap, pitch, timeline, stat, cta), `narration`, `image` e `props`.
+   As animações sincronizam por **palavra falada** (`sync`/`syncWords`/`word`): é só apontar para uma palavra da narração.
+3. Troque paleta (`palette`), imagens (`public/img`) e rode `npm run voz` e `npm run render`.
+4. Ajuste os nomes de saída nos scripts `render` do `package.json`.
 
-```console
-npm run dev
-```
-
-**Render video**
-
-```console
-npx remotion render
-```
-
-**Upgrade Remotion**
-
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+## Estrutura
+- `src/scenes/` uma cena por arquivo (`index.ts` mapeia `type` → componente)
+- `src/components/` peças reutilizáveis: Hook, YearStamp, NameSwap, Pitch, Timeline, StatSlam, Captions, PhotoCard, Newspaper, Badge, Intro (vinheta 0,5s), PaperGrain…
+- `src/data/` JSON do episódio · `public/` fontes, sons, voz, imagens · `docs/fontes.md` checagem e licenças
