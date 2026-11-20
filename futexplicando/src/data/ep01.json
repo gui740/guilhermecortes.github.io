@@ -1,0 +1,1405 @@
+{
+  "episode": 1,
+  "slug": "ep01-historia-palmeiras",
+  "title": "A história do Palmeiras em 60 segundos",
+  "handle": "@futexplicando",
+  "factsCheckedOn": "2026-11-20",
+  "palette": {
+    "primary": "#0B6B3A",
+    "secondary": "#2FA84F",
+    "paper": "#F4EFE6",
+    "ink": "#111111",
+    "accent": "#C8102E",
+    "rival": "#FFFFFF"
+  },
+  "voice": {
+    "file": "voz.mp3",
+    "edgeVoice": "pt-BR-AntonioNeural",
+    "edgeRate": "+24%",
+    "edgePitch": "-2Hz",
+    "elevenVoiceId": "",
+    "leadInSeconds": 0.4,
+    "gapSeconds": 0.16,
+    "tailSeconds": 0.8
+  },
+  "audio": {
+    "music": {
+      "file": "music/trilha.mp3",
+      "volumeDb": -18
+    },
+    "ambience": {
+      "file": "sfx/estadio.mp3",
+      "volumeDb": -28
+    },
+    "whoosh": "sfx/whoosh.mp3",
+    "impact": "sfx/impacto.mp3",
+    "stamp": "sfx/carimbo.mp3",
+    "tear": "sfx/rasgo.mp3",
+    "whistle": "sfx/apito.mp3",
+    "sfxVolumeDb": -6
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "hook",
+      "narration": "O Palmeiras quase deixou de existir, por causa da Segunda Guerra Mundial.",
+      "props": {
+        "lines": [
+          "QUASE",
+          "ACABOU",
+          "NA GUERRA"
+        ],
+        "highlight": "NA GUERRA"
+      }
+    },
+    {
+      "id": "fundacao",
+      "type": "foundation",
+      "narration": "1914. Imigrantes italianos em São Paulo fundam o Palestra Italia. Verde, branco e vermelho: as cores da Itália.",
+      "props": {
+        "year": "1914",
+        "date": "26 DE AGOSTO",
+        "clubName": "PALESTRA ITALIA",
+        "flagColors": [
+          "#0B6B3A",
+          "#F4EFE6",
+          "#C8102E"
+        ],
+        "colorWords": [
+          "Verde",
+          "branco",
+          "vermelho"
+        ],
+        "cityLabel": "SÃO PAULO",
+        "originLabel": "ITÁLIA"
+      }
+    },
+    {
+      "id": "guerra",
+      "type": "nameswap",
+      "narration": "1942. O Brasil rompe com o Eixo, e Vargas proíbe nomes ligados à Itália. O clube vira Palestra de São Paulo... mas não adianta. Em agosto, o Brasil entra na guerra, e o clube pode perder o estádio e o campeonato.",
+      "props": {
+        "year": "1942",
+        "names": [
+          "PALESTRA ITALIA",
+          "PALESTRA DE SÃO PAULO",
+          "PALMEIRAS"
+        ],
+        "strikeWord": "ITALIA",
+        "syncWords": {
+          "strike": "proíbe",
+          "swap1": "vira",
+          "danger": "perder"
+        },
+        "dangerItems": [
+          "ESTÁDIO",
+          "CAMPEONATO"
+        ]
+      }
+    },
+    {
+      "id": "arrancada",
+      "type": "pitch",
+      "narration": "Dias antes da decisão, nasce o Palmeiras. Primeiro jogo com o novo nome: o jogo do título paulista, contra o São Paulo. O time entra com a bandeira do Brasil. 3 a 1. O rival abandona o campo. O Palmeiras já nasce campeão.",
+      "props": {
+        "date": "20/09/1942",
+        "home": "PAL",
+        "away": "SAO",
+        "score": [
+          3,
+          1
+        ],
+        "syncWords": {
+          "born": "nasce",
+          "flag": "bandeira",
+          "score": "3",
+          "leave": "abandona",
+          "champion": "campeão"
+        },
+        "label": "ARRANCADA HEROICA",
+        "championText": "CAMPEÃO PAULISTA 1942"
+      }
+    },
+    {
+      "id": "linha",
+      "type": "timeline",
+      "narration": "Depois vieram a Copa Rio de 1951, a Academia de Futebol, a Libertadores de 1999... e a era Abel Ferreira, com 11 títulos: o técnico mais vitorioso da história do clube.",
+      "props": {
+        "items": [
+          {
+            "year": "1951",
+            "label": "COPA RIO",
+            "icon": "trophy",
+            "word": "Copa"
+          },
+          {
+            "year": "ANOS 60/70",
+            "label": "ACADEMIA DE FUTEBOL",
+            "icon": "ball",
+            "word": "Academia"
+          },
+          {
+            "year": "1999",
+            "label": "LIBERTADORES",
+            "icon": "cup",
+            "word": "Libertadores"
+          },
+          {
+            "year": "2020–HOJE",
+            "label": "ERA ABEL: 11 TÍTULOS",
+            "icon": "clipboard",
+            "word": "Abel"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stat",
+      "type": "stat",
+      "narration": "Hoje, o Palmeiras é o maior campeão brasileiro: 12 Brasileirões.",
+      "props": {
+        "value": 12,
+        "label": "BRASILEIRÕES",
+        "kicker": "MAIOR CAMPEÃO BRASILEIRO",
+        "countFromWord": "maior"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "narration": "Qual time você quer que eu explique no próximo? Comenta aí.",
+      "props": {
+        "question": "QUAL TIME EU EXPLICO NO PRÓXIMO?",
+        "button": "COMENTA AÍ 👇",
+        "loopText": "QUASE"
+      }
+    }
+  ],
+  "cover": {
+    "frameScene": "hook",
+    "lines": [
+      "QUASE ACABOU",
+      "NA GUERRA"
+    ],
+    "kicker": "A HISTÓRIA DO PALMEIRAS EM 60s"
+  },
+  "timing": {
+    "engine": "edge-tts:pt-BR-AntonioNeural",
+    "totalSeconds": 70.062,
+    "scenes": [
+      {
+        "id": "hook",
+        "voiceStart": 0.45,
+        "voiceEnd": 5.034,
+        "start": 0.0,
+        "end": 5.144
+      },
+      {
+        "id": "fundacao",
+        "voiceStart": 5.254,
+        "voiceEnd": 13.942,
+        "start": 5.144,
+        "end": 14.052
+      },
+      {
+        "id": "guerra",
+        "voiceStart": 14.162,
+        "voiceEnd": 29.738,
+        "start": 14.052,
+        "end": 29.848
+      },
+      {
+        "id": "arrancada",
+        "voiceStart": 29.958,
+        "voiceEnd": 46.254,
+        "start": 29.848,
+        "end": 46.364
+      },
+      {
+        "id": "linha",
+        "voiceStart": 46.474,
+        "voiceEnd": 59.746,
+        "start": 46.364,
+        "end": 59.856
+      },
+      {
+        "id": "stat",
+        "voiceStart": 59.966,
+        "voiceEnd": 64.478,
+        "start": 59.856,
+        "end": 64.588
+      },
+      {
+        "id": "cta",
+        "voiceStart": 64.698,
+        "voiceEnd": 69.162,
+        "start": 64.588,
+        "end": 70.062
+      }
+    ],
+    "words": [
+      {
+        "text": "O",
+        "key": "o",
+        "start": 0.545,
+        "end": 0.656,
+        "scene": "hook"
+      },
+      {
+        "text": "Palmeiras",
+        "key": "palmeiras",
+        "start": 0.667,
+        "end": 1.125,
+        "scene": "hook"
+      },
+      {
+        "text": "quase",
+        "key": "quase",
+        "start": 1.136,
+        "end": 1.46,
+        "scene": "hook"
+      },
+      {
+        "text": "deixou",
+        "key": "deixou",
+        "start": 1.471,
+        "end": 1.828,
+        "scene": "hook"
+      },
+      {
+        "text": "de",
+        "key": "de",
+        "start": 1.839,
+        "end": 1.906,
+        "scene": "hook"
+      },
+      {
+        "text": "existir",
+        "key": "existir",
+        "start": 1.917,
+        "end": 2.319,
+        "scene": "hook"
+      },
+      {
+        "text": "por",
+        "key": "por",
+        "start": 2.52,
+        "end": 2.654,
+        "scene": "hook"
+      },
+      {
+        "text": "causa",
+        "key": "causa",
+        "start": 2.665,
+        "end": 2.966,
+        "scene": "hook"
+      },
+      {
+        "text": "da",
+        "key": "da",
+        "start": 2.978,
+        "end": 3.056,
+        "scene": "hook"
+      },
+      {
+        "text": "Segunda",
+        "key": "segunda",
+        "start": 3.067,
+        "end": 3.491,
+        "scene": "hook"
+      },
+      {
+        "text": "Guerra",
+        "key": "guerra",
+        "start": 3.502,
+        "end": 3.737,
+        "scene": "hook"
+      },
+      {
+        "text": "Mundial",
+        "key": "mundial",
+        "start": 3.748,
+        "end": 4.25,
+        "scene": "hook"
+      },
+      {
+        "text": "1914",
+        "key": "1914",
+        "start": 5.349,
+        "end": 6.699,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Imigrantes",
+        "key": "imigrantes",
+        "start": 6.755,
+        "end": 7.201,
+        "scene": "fundacao"
+      },
+      {
+        "text": "italianos",
+        "key": "italianos",
+        "start": 7.213,
+        "end": 7.726,
+        "scene": "fundacao"
+      },
+      {
+        "text": "em",
+        "key": "em",
+        "start": 7.737,
+        "end": 7.882,
+        "scene": "fundacao"
+      },
+      {
+        "text": "São",
+        "key": "são",
+        "start": 7.893,
+        "end": 8.072,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Paulo",
+        "key": "paulo",
+        "start": 8.083,
+        "end": 8.373,
+        "scene": "fundacao"
+      },
+      {
+        "text": "fundam",
+        "key": "fundam",
+        "start": 8.384,
+        "end": 8.742,
+        "scene": "fundacao"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 8.753,
+        "end": 8.786,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Palestra",
+        "key": "palestra",
+        "start": 8.797,
+        "end": 9.233,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Italia",
+        "key": "italia",
+        "start": 9.244,
+        "end": 9.623,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Verde",
+        "key": "verde",
+        "start": 10.388,
+        "end": 10.823,
+        "scene": "fundacao"
+      },
+      {
+        "text": "branco",
+        "key": "branco",
+        "start": 11.113,
+        "end": 11.426,
+        "scene": "fundacao"
+      },
+      {
+        "text": "e",
+        "key": "e",
+        "start": 11.437,
+        "end": 11.471,
+        "scene": "fundacao"
+      },
+      {
+        "text": "vermelho",
+        "key": "vermelho",
+        "start": 11.482,
+        "end": 11.973,
+        "scene": "fundacao"
+      },
+      {
+        "text": "as",
+        "key": "as",
+        "start": 12.174,
+        "end": 12.33,
+        "scene": "fundacao"
+      },
+      {
+        "text": "cores",
+        "key": "cores",
+        "start": 12.341,
+        "end": 12.62,
+        "scene": "fundacao"
+      },
+      {
+        "text": "da",
+        "key": "da",
+        "start": 12.631,
+        "end": 12.732,
+        "scene": "fundacao"
+      },
+      {
+        "text": "Itália",
+        "key": "itália",
+        "start": 12.743,
+        "end": 13.156,
+        "scene": "fundacao"
+      },
+      {
+        "text": "1942",
+        "key": "1942",
+        "start": 14.257,
+        "end": 15.674,
+        "scene": "guerra"
+      },
+      {
+        "text": "O",
+        "key": "o",
+        "start": 15.696,
+        "end": 15.719,
+        "scene": "guerra"
+      },
+      {
+        "text": "Brasil",
+        "key": "brasil",
+        "start": 15.73,
+        "end": 16.087,
+        "scene": "guerra"
+      },
+      {
+        "text": "rompe",
+        "key": "rompe",
+        "start": 16.098,
+        "end": 16.444,
+        "scene": "guerra"
+      },
+      {
+        "text": "com",
+        "key": "com",
+        "start": 16.455,
+        "end": 16.656,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 16.667,
+        "end": 16.712,
+        "scene": "guerra"
+      },
+      {
+        "text": "Eixo",
+        "key": "eixo",
+        "start": 16.723,
+        "end": 16.991,
+        "scene": "guerra"
+      },
+      {
+        "text": "e",
+        "key": "e",
+        "start": 17.292,
+        "end": 17.393,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 17.404,
+        "end": 17.437,
+        "scene": "guerra"
+      },
+      {
+        "text": "governo",
+        "key": "governo",
+        "start": 17.449,
+        "end": 17.884,
+        "scene": "guerra"
+      },
+      {
+        "text": "Vargas",
+        "key": "vargas",
+        "start": 17.895,
+        "end": 18.263,
+        "scene": "guerra"
+      },
+      {
+        "text": "proíbe",
+        "key": "proíbe",
+        "start": 18.275,
+        "end": 18.632,
+        "scene": "guerra"
+      },
+      {
+        "text": "nomes",
+        "key": "nomes",
+        "start": 18.643,
+        "end": 18.955,
+        "scene": "guerra"
+      },
+      {
+        "text": "ligados",
+        "key": "ligados",
+        "start": 18.966,
+        "end": 19.391,
+        "scene": "guerra"
+      },
+      {
+        "text": "à",
+        "key": "à",
+        "start": 19.402,
+        "end": 19.547,
+        "scene": "guerra"
+      },
+      {
+        "text": "Itália",
+        "key": "itália",
+        "start": 19.558,
+        "end": 19.971,
+        "scene": "guerra"
+      },
+      {
+        "text": "O",
+        "key": "o",
+        "start": 20.736,
+        "end": 20.858,
+        "scene": "guerra"
+      },
+      {
+        "text": "clube",
+        "key": "clube",
+        "start": 20.87,
+        "end": 21.193,
+        "scene": "guerra"
+      },
+      {
+        "text": "vira",
+        "key": "vira",
+        "start": 21.204,
+        "end": 21.416,
+        "scene": "guerra"
+      },
+      {
+        "text": "Palestra",
+        "key": "palestra",
+        "start": 21.428,
+        "end": 21.841,
+        "scene": "guerra"
+      },
+      {
+        "text": "de",
+        "key": "de",
+        "start": 21.852,
+        "end": 21.93,
+        "scene": "guerra"
+      },
+      {
+        "text": "São",
+        "key": "são",
+        "start": 21.941,
+        "end": 22.12,
+        "scene": "guerra"
+      },
+      {
+        "text": "Paulo",
+        "key": "paulo",
+        "start": 22.131,
+        "end": 22.466,
+        "scene": "guerra"
+      },
+      {
+        "text": "mas",
+        "key": "mas",
+        "start": 22.644,
+        "end": 22.879,
+        "scene": "guerra"
+      },
+      {
+        "text": "não",
+        "key": "não",
+        "start": 22.89,
+        "end": 23.102,
+        "scene": "guerra"
+      },
+      {
+        "text": "adianta",
+        "key": "adianta",
+        "start": 23.113,
+        "end": 23.593,
+        "scene": "guerra"
+      },
+      {
+        "text": "Em",
+        "key": "em",
+        "start": 24.363,
+        "end": 24.508,
+        "scene": "guerra"
+      },
+      {
+        "text": "agosto",
+        "key": "agosto",
+        "start": 24.519,
+        "end": 24.999,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 25.267,
+        "end": 25.323,
+        "scene": "guerra"
+      },
+      {
+        "text": "Brasil",
+        "key": "brasil",
+        "start": 25.334,
+        "end": 25.769,
+        "scene": "guerra"
+      },
+      {
+        "text": "entra",
+        "key": "entra",
+        "start": 25.78,
+        "end": 25.981,
+        "scene": "guerra"
+      },
+      {
+        "text": "na",
+        "key": "na",
+        "start": 25.992,
+        "end": 26.093,
+        "scene": "guerra"
+      },
+      {
+        "text": "guerra",
+        "key": "guerra",
+        "start": 26.104,
+        "end": 26.416,
+        "scene": "guerra"
+      },
+      {
+        "text": "e",
+        "key": "e",
+        "start": 26.684,
+        "end": 26.774,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 26.785,
+        "end": 26.852,
+        "scene": "guerra"
+      },
+      {
+        "text": "clube",
+        "key": "clube",
+        "start": 26.863,
+        "end": 27.198,
+        "scene": "guerra"
+      },
+      {
+        "text": "pode",
+        "key": "pode",
+        "start": 27.209,
+        "end": 27.432,
+        "scene": "guerra"
+      },
+      {
+        "text": "perder",
+        "key": "perder",
+        "start": 27.443,
+        "end": 27.733,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 27.745,
+        "end": 27.789,
+        "scene": "guerra"
+      },
+      {
+        "text": "estádio",
+        "key": "estádio",
+        "start": 27.8,
+        "end": 28.247,
+        "scene": "guerra"
+      },
+      {
+        "text": "e",
+        "key": "e",
+        "start": 28.258,
+        "end": 28.292,
+        "scene": "guerra"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 28.303,
+        "end": 28.347,
+        "scene": "guerra"
+      },
+      {
+        "text": "campeonato",
+        "key": "campeonato",
+        "start": 28.358,
+        "end": 28.961,
+        "scene": "guerra"
+      },
+      {
+        "text": "Dias",
+        "key": "dias",
+        "start": 30.053,
+        "end": 30.309,
+        "scene": "arrancada"
+      },
+      {
+        "text": "antes",
+        "key": "antes",
+        "start": 30.321,
+        "end": 30.689,
+        "scene": "arrancada"
+      },
+      {
+        "text": "da",
+        "key": "da",
+        "start": 30.7,
+        "end": 30.789,
+        "scene": "arrancada"
+      },
+      {
+        "text": "decisão",
+        "key": "decisão",
+        "start": 30.8,
+        "end": 31.303,
+        "scene": "arrancada"
+      },
+      {
+        "text": "nasce",
+        "key": "nasce",
+        "start": 31.47,
+        "end": 31.771,
+        "scene": "arrancada"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 31.783,
+        "end": 31.816,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Palmeiras",
+        "key": "palmeiras",
+        "start": 31.827,
+        "end": 32.352,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Primeiro",
+        "key": "primeiro",
+        "start": 33.117,
+        "end": 33.541,
+        "scene": "arrancada"
+      },
+      {
+        "text": "jogo",
+        "key": "jogo",
+        "start": 33.552,
+        "end": 33.875,
+        "scene": "arrancada"
+      },
+      {
+        "text": "com",
+        "key": "com",
+        "start": 33.887,
+        "end": 34.076,
+        "scene": "arrancada"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 34.087,
+        "end": 34.121,
+        "scene": "arrancada"
+      },
+      {
+        "text": "novo",
+        "key": "novo",
+        "start": 34.132,
+        "end": 34.411,
+        "scene": "arrancada"
+      },
+      {
+        "text": "nome",
+        "key": "nome",
+        "start": 34.422,
+        "end": 34.735,
+        "scene": "arrancada"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 35.081,
+        "end": 35.159,
+        "scene": "arrancada"
+      },
+      {
+        "text": "jogo",
+        "key": "jogo",
+        "start": 35.17,
+        "end": 35.483,
+        "scene": "arrancada"
+      },
+      {
+        "text": "do",
+        "key": "do",
+        "start": 35.494,
+        "end": 35.583,
+        "scene": "arrancada"
+      },
+      {
+        "text": "título",
+        "key": "título",
+        "start": 35.594,
+        "end": 35.951,
+        "scene": "arrancada"
+      },
+      {
+        "text": "paulista",
+        "key": "paulista",
+        "start": 35.962,
+        "end": 36.454,
+        "scene": "arrancada"
+      },
+      {
+        "text": "contra",
+        "key": "contra",
+        "start": 36.654,
+        "end": 36.989,
+        "scene": "arrancada"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 37.0,
+        "end": 37.023,
+        "scene": "arrancada"
+      },
+      {
+        "text": "São",
+        "key": "são",
+        "start": 37.034,
+        "end": 37.246,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Paulo",
+        "key": "paulo",
+        "start": 37.257,
+        "end": 37.592,
+        "scene": "arrancada"
+      },
+      {
+        "text": "O",
+        "key": "o",
+        "start": 38.362,
+        "end": 38.474,
+        "scene": "arrancada"
+      },
+      {
+        "text": "time",
+        "key": "time",
+        "start": 38.485,
+        "end": 38.797,
+        "scene": "arrancada"
+      },
+      {
+        "text": "entra",
+        "key": "entra",
+        "start": 38.808,
+        "end": 39.065,
+        "scene": "arrancada"
+      },
+      {
+        "text": "carregando",
+        "key": "carregando",
+        "start": 39.076,
+        "end": 39.512,
+        "scene": "arrancada"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 39.523,
+        "end": 39.556,
+        "scene": "arrancada"
+      },
+      {
+        "text": "bandeira",
+        "key": "bandeira",
+        "start": 39.567,
+        "end": 39.958,
+        "scene": "arrancada"
+      },
+      {
+        "text": "do",
+        "key": "do",
+        "start": 39.969,
+        "end": 40.036,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Brasil",
+        "key": "brasil",
+        "start": 40.047,
+        "end": 40.46,
+        "scene": "arrancada"
+      },
+      {
+        "text": "3 a",
+        "key": "3 a",
+        "start": 40.494,
+        "end": 40.873,
+        "scene": "arrancada"
+      },
+      {
+        "text": "1",
+        "key": "1",
+        "start": 40.884,
+        "end": 41.085,
+        "scene": "arrancada"
+      },
+      {
+        "text": "O",
+        "key": "o",
+        "start": 41.855,
+        "end": 41.945,
+        "scene": "arrancada"
+      },
+      {
+        "text": "rival",
+        "key": "rival",
+        "start": 41.956,
+        "end": 42.313,
+        "scene": "arrancada"
+      },
+      {
+        "text": "abandona",
+        "key": "abandona",
+        "start": 42.324,
+        "end": 42.759,
+        "scene": "arrancada"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 42.771,
+        "end": 42.815,
+        "scene": "arrancada"
+      },
+      {
+        "text": "campo",
+        "key": "campo",
+        "start": 42.826,
+        "end": 43.161,
+        "scene": "arrancada"
+      },
+      {
+        "text": "O",
+        "key": "o",
+        "start": 43.931,
+        "end": 44.032,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Palmeiras",
+        "key": "palmeiras",
+        "start": 44.043,
+        "end": 44.534,
+        "scene": "arrancada"
+      },
+      {
+        "text": "já",
+        "key": "já",
+        "start": 44.545,
+        "end": 44.657,
+        "scene": "arrancada"
+      },
+      {
+        "text": "nasce",
+        "key": "nasce",
+        "start": 44.668,
+        "end": 44.969,
+        "scene": "arrancada"
+      },
+      {
+        "text": "campeão",
+        "key": "campeão",
+        "start": 44.98,
+        "end": 45.471,
+        "scene": "arrancada"
+      },
+      {
+        "text": "Depois",
+        "key": "depois",
+        "start": 46.569,
+        "end": 47.06,
+        "scene": "linha"
+      },
+      {
+        "text": "vieram",
+        "key": "vieram",
+        "start": 47.071,
+        "end": 47.406,
+        "scene": "linha"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 47.417,
+        "end": 47.462,
+        "scene": "linha"
+      },
+      {
+        "text": "Copa",
+        "key": "copa",
+        "start": 47.473,
+        "end": 47.774,
+        "scene": "linha"
+      },
+      {
+        "text": "Rio",
+        "key": "rio",
+        "start": 47.785,
+        "end": 47.986,
+        "scene": "linha"
+      },
+      {
+        "text": "de",
+        "key": "de",
+        "start": 47.997,
+        "end": 48.087,
+        "scene": "linha"
+      },
+      {
+        "text": "1951",
+        "key": "1951",
+        "start": 48.098,
+        "end": 49.415,
+        "scene": "linha"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 49.727,
+        "end": 49.761,
+        "scene": "linha"
+      },
+      {
+        "text": "Academia",
+        "key": "academia",
+        "start": 49.772,
+        "end": 50.241,
+        "scene": "linha"
+      },
+      {
+        "text": "de",
+        "key": "de",
+        "start": 50.252,
+        "end": 50.341,
+        "scene": "linha"
+      },
+      {
+        "text": "Futebol",
+        "key": "futebol",
+        "start": 50.352,
+        "end": 50.843,
+        "scene": "linha"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 51.1,
+        "end": 51.156,
+        "scene": "linha"
+      },
+      {
+        "text": "Libertadores",
+        "key": "libertadores",
+        "start": 51.167,
+        "end": 51.848,
+        "scene": "linha"
+      },
+      {
+        "text": "de",
+        "key": "de",
+        "start": 51.859,
+        "end": 51.948,
+        "scene": "linha"
+      },
+      {
+        "text": "1999",
+        "key": "1999",
+        "start": 51.959,
+        "end": 53.433,
+        "scene": "linha"
+      },
+      {
+        "text": "e",
+        "key": "e",
+        "start": 54.197,
+        "end": 54.298,
+        "scene": "linha"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 54.309,
+        "end": 54.365,
+        "scene": "linha"
+      },
+      {
+        "text": "era",
+        "key": "era",
+        "start": 54.376,
+        "end": 54.532,
+        "scene": "linha"
+      },
+      {
+        "text": "Abel",
+        "key": "abel",
+        "start": 54.543,
+        "end": 54.755,
+        "scene": "linha"
+      },
+      {
+        "text": "Ferreira",
+        "key": "ferreira",
+        "start": 54.766,
+        "end": 55.191,
+        "scene": "linha"
+      },
+      {
+        "text": "com",
+        "key": "com",
+        "start": 55.447,
+        "end": 55.659,
+        "scene": "linha"
+      },
+      {
+        "text": "11 títulos",
+        "key": "11 títulos",
+        "start": 55.67,
+        "end": 56.429,
+        "scene": "linha"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 56.708,
+        "end": 56.798,
+        "scene": "linha"
+      },
+      {
+        "text": "técnico",
+        "key": "técnico",
+        "start": 56.809,
+        "end": 57.244,
+        "scene": "linha"
+      },
+      {
+        "text": "mais",
+        "key": "mais",
+        "start": 57.255,
+        "end": 57.478,
+        "scene": "linha"
+      },
+      {
+        "text": "vitorioso",
+        "key": "vitorioso",
+        "start": 57.49,
+        "end": 58.037,
+        "scene": "linha"
+      },
+      {
+        "text": "da",
+        "key": "da",
+        "start": 58.048,
+        "end": 58.115,
+        "scene": "linha"
+      },
+      {
+        "text": "história",
+        "key": "história",
+        "start": 58.126,
+        "end": 58.461,
+        "scene": "linha"
+      },
+      {
+        "text": "do",
+        "key": "do",
+        "start": 58.472,
+        "end": 58.561,
+        "scene": "linha"
+      },
+      {
+        "text": "clube",
+        "key": "clube",
+        "start": 58.572,
+        "end": 58.952,
+        "scene": "linha"
+      },
+      {
+        "text": "Hoje",
+        "key": "hoje",
+        "start": 60.061,
+        "end": 60.429,
+        "scene": "stat"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 60.596,
+        "end": 60.663,
+        "scene": "stat"
+      },
+      {
+        "text": "Palmeiras",
+        "key": "palmeiras",
+        "start": 60.675,
+        "end": 61.088,
+        "scene": "stat"
+      },
+      {
+        "text": "é",
+        "key": "é",
+        "start": 61.099,
+        "end": 61.21,
+        "scene": "stat"
+      },
+      {
+        "text": "o",
+        "key": "o",
+        "start": 61.221,
+        "end": 61.244,
+        "scene": "stat"
+      },
+      {
+        "text": "maior",
+        "key": "maior",
+        "start": 61.255,
+        "end": 61.523,
+        "scene": "stat"
+      },
+      {
+        "text": "campeão",
+        "key": "campeão",
+        "start": 61.534,
+        "end": 61.902,
+        "scene": "stat"
+      },
+      {
+        "text": "brasileiro",
+        "key": "brasileiro",
+        "start": 61.913,
+        "end": 62.404,
+        "scene": "stat"
+      },
+      {
+        "text": "12",
+        "key": "12",
+        "start": 62.639,
+        "end": 62.974,
+        "scene": "stat"
+      },
+      {
+        "text": "Brasileirões",
+        "key": "brasileirões",
+        "start": 62.985,
+        "end": 63.71,
+        "scene": "stat"
+      },
+      {
+        "text": "Qual",
+        "key": "qual",
+        "start": 64.793,
+        "end": 65.005,
+        "scene": "cta"
+      },
+      {
+        "text": "time",
+        "key": "time",
+        "start": 65.016,
+        "end": 65.284,
+        "scene": "cta"
+      },
+      {
+        "text": "você",
+        "key": "você",
+        "start": 65.295,
+        "end": 65.518,
+        "scene": "cta"
+      },
+      {
+        "text": "quer",
+        "key": "quer",
+        "start": 65.529,
+        "end": 65.753,
+        "scene": "cta"
+      },
+      {
+        "text": "que",
+        "key": "que",
+        "start": 65.764,
+        "end": 65.819,
+        "scene": "cta"
+      },
+      {
+        "text": "eu",
+        "key": "eu",
+        "start": 65.831,
+        "end": 65.909,
+        "scene": "cta"
+      },
+      {
+        "text": "explique",
+        "key": "explique",
+        "start": 65.92,
+        "end": 66.299,
+        "scene": "cta"
+      },
+      {
+        "text": "no",
+        "key": "no",
+        "start": 66.311,
+        "end": 66.411,
+        "scene": "cta"
+      },
+      {
+        "text": "próximo",
+        "key": "próximo",
+        "start": 66.422,
+        "end": 66.869,
+        "scene": "cta"
+      },
+      {
+        "text": "Comenta",
+        "key": "comenta",
+        "start": 67.633,
+        "end": 68.113,
+        "scene": "cta"
+      },
+      {
+        "text": "aí",
+        "key": "aí",
+        "start": 68.124,
+        "end": 68.381,
+        "scene": "cta"
+      }
+    ]
+  }
+}
