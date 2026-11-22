@@ -206,7 +206,20 @@ def pop():
     return np.sin(2 * np.pi * (300 + 900 * np.exp(-tt * 50)) * tt) * np.exp(-tt * 30)
 
 
+def flap_clatter(d=1.1, n=34):
+    """Letreiro de placas girando: cliques secos e rápidos."""
+    x = np.zeros(int(d * SR))
+    for k in range(n):
+        at = (k / n) ** 0.8 * (d - 0.08) + rng.uniform(-0.01, 0.01)
+        tt = t(0.03)
+        c = hp(rng.normal(0, 1, len(tt)), 0.5) * np.exp(-tt * 260) + 0.4 * np.sin(2 * np.pi * 1300 * tt) * np.exp(-tt * 200)
+        i = max(0, int(at * SR))
+        x[i:i + len(c)] += c[: len(x) - i] * rng.uniform(0.5, 1.0)
+    return x
+
+
 if __name__ == "__main__":
+    save("letreiro", flap_clatter())
     save("moeda-girando", coin_spin())
     save("moeda-quicando", coin_bounce_sequence())
     save("impacto", impact())

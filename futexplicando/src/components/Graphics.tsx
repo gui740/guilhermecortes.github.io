@@ -32,7 +32,7 @@ export const Hook: React.FC<{
               opacity: p > 0.01 ? 1 : 0,
               scale: `${interpolate(p, [0, 1], [2.2, 1])}`,
               rotate: `${interpolate(p, [0, 1], [i % 2 ? 6 : -6, i % 2 ? 1 : -1.2])}deg`,
-              textShadow: i === accentIndex ? "none" : `6px 6px 0 ${i === accentIndex ? C.black : "rgba(227,6,19,0.9)"}`,
+              textShadow: i === accentIndex ? "none" : `6px 6px 0 ${C.red}`,
               whiteSpace: "nowrap",
             }}
           >
@@ -85,7 +85,7 @@ export const YearStamp: React.FC<{ text: string; startFrame: number; color?: str
 /** Campo de futebol desenhado em traço (fundo). */
 export const Pitch: React.FC<{ color?: string; opacity?: number; draw?: number }> = ({ color = C.red, opacity = 0.18, draw = 1 }) => {
   const len = 4000;
-  const common = { fill: "none", stroke: color, strokeWidth: 6, strokeDasharray: len, strokeDashoffset: len * (1 - draw) } as const;
+  const common = { fill: "none", style: { stroke: color }, strokeWidth: 6, strokeDasharray: len, strokeDashoffset: len * (1 - draw) } as const;
   return (
     <AbsoluteFill style={{ opacity }}>
       <svg viewBox="0 0 1080 1920" width="100%" height="100%">

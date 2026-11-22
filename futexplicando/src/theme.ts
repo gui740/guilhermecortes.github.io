@@ -25,7 +25,8 @@ export const BEBAS = "'Bebas Neue', Impact, sans-serif";
 export const INTER = "Inter, Arial, sans-serif";
 
 export const C = {
-  red: "#E30613",
+  // cor de destaque do vídeo: definida por composição via CSS var --accent (padrão: vermelho SPFC)
+  red: "var(--accent, #E30613)",
   black: "#111111",
   white: "#F4EFE6",
   gray: "#8A8A8A",

@@ -1,0 +1,1008 @@
+{
+  "id": "Palmeiras",
+  "titulo": "A história do Palmeiras em 60 segundos",
+  "handle": "@futexplicando",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duracaoSegundos": 60,
+  "paleta": {
+    "verde": "#0B7A3E",
+    "verdeEscuro": "#00502A",
+    "preto": "#111111",
+    "branco": "#F4EFE6",
+    "cinza": "#8A8A8A"
+  },
+  "audio": {
+    "mix": "palmeiras/audio/mix-palmeiras.wav",
+    "narracao": "palmeiras/audio/narracao-gemini.wav",
+    "trilha": "palmeiras/audio/trilha-hip-hop-b-thick-beat.mp3",
+    "trilhaOffset": 6.0,
+    "narracaoCortes": [
+      {
+        "de": 0,
+        "ate": 57.4,
+        "em": 0.5
+      }
+    ],
+    "trilhaEntra": 5.15
+  },
+  "assets": {
+    "escudoAtual": "palmeiras/escudos/palmeiras-atual.svg",
+    "escudo1915": "palmeiras/escudos/palestra-1915.png",
+    "escudo1937": "palmeiras/escudos/palestra-1937.png",
+    "escudo1942": "palmeiras/escudos/palmeiras-1942.png",
+    "escudo1959": "palmeiras/escudos/palmeiras-1959.png",
+    "escudoSaoPaulo": "palmeiras/escudos/sao-paulo.svg",
+    "escudoSantos": "palmeiras/escudos/santos.svg",
+    "escudoFlamengo": "palmeiras/escudos/flamengo.svg",
+    "escudoEstudiantes": "palmeiras/escudos/estudiantes.svg",
+    "logoLibertadores": "sao-paulo/logos/logo-libertadores-spfc.png",
+    "fotoAbel": "palmeiras/fotos/abel-recorte.png",
+    "fotoAdemir": "palmeiras/fotos/ademir-recorte.png",
+    "fotoMarcos": "palmeiras/fotos/marcos-1999.jpg",
+    "fotoArrancada": "palmeiras/fotos/arrancada-1942.jpg",
+    "fotoAllianz": "palmeiras/fotos/allianz-aerea.jpg"
+  },
+  "letreiro": {
+    "inicial": [
+      "PALESTRA",
+      "ITÁLIA"
+    ],
+    "meio": [
+      "PALESTRA DE",
+      "SÃO PAULO"
+    ],
+    "final": [
+      "PALMEIRAS",
+      ""
+    ]
+  },
+  "cenas": {
+    "gancho": {
+      "inicio": 0,
+      "fim": 5.15,
+      "trocaEm": 2.5,
+      "kicker": "MUDOU DE NOME NA MARRA",
+      "carimbo": "1942",
+      "carimboEm": 4.2
+    },
+    "virada": {
+      "inicio": 5.15,
+      "fim": 7.75,
+      "linha1": "A HISTÓRIA DO",
+      "linha2": "PALMEIRAS",
+      "linha3": "EM 60 SEGUNDOS"
+    },
+    "nascimento": {
+      "inicio": 7.75,
+      "fim": 14.3,
+      "data": "26/08/1914",
+      "dataEm": 7.8,
+      "nota": "IMIGRANTES ITALIANOS",
+      "notaEm": 10.55,
+      "nome": "PALESTRA ITÁLIA",
+      "nomeEm": 13.0,
+      "legendaEscudo": "1º ESCUDO (1915)"
+    },
+    "guerra": {
+      "inicio": 14.3,
+      "fim": 24.2,
+      "ano": "1942",
+      "anoEm": 14.38,
+      "frases": [
+        {
+          "t": "SEGUNDA GUERRA",
+          "em": 16.05
+        },
+        {
+          "t": "NOMES DO EIXO PROIBIDOS",
+          "em": 17.3
+        }
+      ],
+      "trocaMeioEm": 20.55,
+      "trocaFinalEm": 22.75,
+      "data": "14/09/1942",
+      "nota": "DECRETO DO GOVERNO VARGAS VETOU NOMES LIGADOS A ALEMANHA, ITÁLIA E JAPÃO"
+    },
+    "arrancada": {
+      "inicio": 24.2,
+      "fim": 31.1,
+      "kicker": "6 DIAS DEPOIS",
+      "placarEm": 25.55,
+      "torneio": "FINAL DO PAULISTA · PACAEMBU",
+      "golsPal": 3,
+      "golsAdv": 1,
+      "data": "20/09/1942",
+      "bandeiraEm": 27.75,
+      "titulo": [
+        "ARRANCADA",
+        "HEROICA"
+      ],
+      "tituloEm": 29.75
+    },
+    "porco": {
+      "inicio": 31.1,
+      "fim": 37.8,
+      "ano1": "1969",
+      "ano1Em": 31.3,
+      "insulto": "PORCO!",
+      "insultoEm": 33.4,
+      "ano2": "1986",
+      "ano2Em": 34.3,
+      "virada": "DE XINGAMENTO A MASCOTE",
+      "viradaEm": 35.7
+    },
+    "glorias": {
+      "inicio": 37.8,
+      "fim": 47.75,
+      "academia": {
+        "em": 38.6,
+        "titulo": "AS ACADEMIAS",
+        "nome": "ADEMIR DA GUIA",
+        "sub": "ANOS 60 E 70"
+      },
+      "liberta99": {
+        "em": 40.2,
+        "ano": "1999",
+        "titulo": "LIBERTADORES",
+        "nome": "SÃO MARCOS",
+        "sub": "FELIPÃO NO BANCO"
+      },
+      "quedas": {
+        "em": 42.55,
+        "titulo": "SÉRIE B",
+        "anos": [
+          "2002",
+          "2012"
+        ]
+      },
+      "abel": {
+        "em": 44.3,
+        "nome": "ABEL FERREIRA",
+        "biEm": 46.2
+      },
+      "placares": [
+        {
+          "ano": "2020",
+          "adv": "SANTOS",
+          "escudoAdv": "escudoSantos",
+          "golsPal": 1,
+          "golsAdv": 0,
+          "detalhe": "MARACANÃ · BRENO LOPES 99'"
+        },
+        {
+          "ano": "2021",
+          "adv": "FLAMENGO",
+          "escudoAdv": "escudoFlamengo",
+          "golsPal": 2,
+          "golsAdv": 1,
+          "detalhe": "MONTEVIDÉU · PRORROGAÇÃO"
+        }
+      ]
+    },
+    "stat": {
+      "inicio": 47.75,
+      "fim": 54.75,
+      "numero": 12,
+      "numeroEm": 48.25,
+      "rotulo": "TÍTULOS BRASILEIROS",
+      "sub": "MAIOR CAMPEÃO DO PAÍS",
+      "subEm": 50.0,
+      "anos": "1960 · 67 (2×) · 69 · 72 · 73 · 93 · 94 · 2016 · 18 · 22 · 23",
+      "abel": {
+        "em": 51.4,
+        "titulo": "ABEL: 11 TÍTULOS",
+        "sub": "O TÉCNICO MAIS VITORIOSO DA HISTÓRIA DO CLUBE"
+      },
+      "estadio": "ALLIANZ PARQUE (2014), NO LUGAR DO VELHO PALESTRA ITÁLIA"
+    },
+    "cta": {
+      "inicio": 54.75,
+      "fim": 60,
+      "pergunta": [
+        "QUAL TIME VOCÊ",
+        "QUER VER EXPLICADO?"
+      ],
+      "acao": "COMENTA AÍ",
+      "acaoEm": 56.5,
+      "extra": "2026: MAIS UMA FINAL DE LIBERTADORES",
+      "letreiroVoltaEm": 58.2
+    }
+  },
+  "transicoesLetreiro": [
+    14.2,
+    31.0,
+    37.7,
+    47.65
+  ],
+  "capa": {
+    "texto": [
+      "MUDOU DE NOME",
+      "NA MARRA"
+    ],
+    "sub": "A HISTÓRIA DO PALMEIRAS"
+  },
+  "legendas": [
+    {
+      "text": "Um",
+      "start": 0.5,
+      "end": 0.84
+    },
+    {
+      "text": "clube",
+      "start": 0.84,
+      "end": 1.1
+    },
+    {
+      "text": "que",
+      "start": 1.1,
+      "end": 1.34
+    },
+    {
+      "text": "foi",
+      "start": 1.34,
+      "end": 1.66
+    },
+    {
+      "text": "obrigado",
+      "start": 1.66,
+      "end": 2.24
+    },
+    {
+      "text": "a",
+      "start": 2.24,
+      "end": 2.54
+    },
+    {
+      "text": "mudar",
+      "start": 2.54,
+      "end": 2.72
+    },
+    {
+      "text": "de",
+      "start": 2.72,
+      "end": 2.94
+    },
+    {
+      "text": "nome",
+      "start": 2.94,
+      "end": 3.22
+    },
+    {
+      "text": "por",
+      "start": 3.22,
+      "end": 3.68
+    },
+    {
+      "text": "causa",
+      "start": 3.68,
+      "end": 3.88
+    },
+    {
+      "text": "de",
+      "start": 3.88,
+      "end": 4.1
+    },
+    {
+      "text": "uma",
+      "start": 4.1,
+      "end": 4.24
+    },
+    {
+      "text": "guerra.",
+      "start": 4.24,
+      "end": 4.66
+    },
+    {
+      "text": "Essa",
+      "start": 5.24,
+      "end": 5.84
+    },
+    {
+      "text": "é",
+      "start": 5.84,
+      "end": 5.98
+    },
+    {
+      "text": "a",
+      "start": 5.98,
+      "end": 6.04
+    },
+    {
+      "text": "história",
+      "start": 6.04,
+      "end": 6.38
+    },
+    {
+      "text": "do",
+      "start": 6.38,
+      "end": 6.62
+    },
+    {
+      "text": "Palmeiras,",
+      "start": 6.62,
+      "end": 7.36
+    },
+    {
+      "text": "26",
+      "start": 7.8,
+      "end": 8.4
+    },
+    {
+      "text": "de",
+      "start": 8.4,
+      "end": 8.8
+    },
+    {
+      "text": "agosto",
+      "start": 8.8,
+      "end": 9.14
+    },
+    {
+      "text": "de",
+      "start": 9.14,
+      "end": 9.34
+    },
+    {
+      "text": "1914.",
+      "start": 9.34,
+      "end": 9.98
+    },
+    {
+      "text": "Imigrantes",
+      "start": 10.6,
+      "end": 11.14
+    },
+    {
+      "text": "italianos",
+      "start": 11.14,
+      "end": 11.66
+    },
+    {
+      "text": "fundam",
+      "start": 11.66,
+      "end": 12.02
+    },
+    {
+      "text": "em",
+      "start": 12.02,
+      "end": 12.18
+    },
+    {
+      "text": "São",
+      "start": 12.18,
+      "end": 12.32
+    },
+    {
+      "text": "Paulo",
+      "start": 12.32,
+      "end": 12.72
+    },
+    {
+      "text": "o",
+      "start": 12.72,
+      "end": 13.04
+    },
+    {
+      "text": "Palestra",
+      "start": 13.04,
+      "end": 13.3
+    },
+    {
+      "text": "Itália,",
+      "start": 13.3,
+      "end": 13.82
+    },
+    {
+      "text": "1942.",
+      "start": 14.38,
+      "end": 15.22
+    },
+    {
+      "text": "Segunda",
+      "start": 16.1,
+      "end": 16.56
+    },
+    {
+      "text": "Guerra,",
+      "start": 16.56,
+      "end": 16.9
+    },
+    {
+      "text": "nomes",
+      "start": 17.36,
+      "end": 17.58
+    },
+    {
+      "text": "ligados",
+      "start": 17.58,
+      "end": 17.96
+    },
+    {
+      "text": "à",
+      "start": 17.96,
+      "end": 18.18
+    },
+    {
+      "text": "Itália",
+      "start": 18.18,
+      "end": 18.64
+    },
+    {
+      "text": "são",
+      "start": 18.64,
+      "end": 18.86
+    },
+    {
+      "text": "proibidos",
+      "start": 18.86,
+      "end": 19.44
+    },
+    {
+      "text": "no",
+      "start": 19.44,
+      "end": 19.62
+    },
+    {
+      "text": "Brasil.",
+      "start": 19.62,
+      "end": 19.88
+    },
+    {
+      "text": "O",
+      "start": 20.5,
+      "end": 20.6
+    },
+    {
+      "text": "Palestra",
+      "start": 20.6,
+      "end": 20.9
+    },
+    {
+      "text": "vira",
+      "start": 20.9,
+      "end": 21.14
+    },
+    {
+      "text": "a",
+      "start": 21.14,
+      "end": 21.24
+    },
+    {
+      "text": "Palestra",
+      "start": 21.24,
+      "end": 21.52
+    },
+    {
+      "text": "de",
+      "start": 21.52,
+      "end": 21.68
+    },
+    {
+      "text": "São",
+      "start": 21.68,
+      "end": 21.86
+    },
+    {
+      "text": "Paulo",
+      "start": 21.86,
+      "end": 22.2
+    },
+    {
+      "text": "e",
+      "start": 22.2,
+      "end": 22.78
+    },
+    {
+      "text": "depois",
+      "start": 22.78,
+      "end": 23.02
+    },
+    {
+      "text": "Palmeiras.",
+      "start": 23.02,
+      "end": 23.6
+    },
+    {
+      "text": "Seis",
+      "start": 24.28,
+      "end": 24.62
+    },
+    {
+      "text": "dias",
+      "start": 24.62,
+      "end": 24.8
+    },
+    {
+      "text": "depois,",
+      "start": 24.8,
+      "end": 25.12
+    },
+    {
+      "text": "final",
+      "start": 25.62,
+      "end": 25.98
+    },
+    {
+      "text": "contra",
+      "start": 25.98,
+      "end": 26.22
+    },
+    {
+      "text": "o",
+      "start": 26.22,
+      "end": 26.3
+    },
+    {
+      "text": "São",
+      "start": 26.3,
+      "end": 26.42
+    },
+    {
+      "text": "Paulo,",
+      "start": 26.42,
+      "end": 26.72
+    },
+    {
+      "text": "o",
+      "start": 26.72,
+      "end": 27.24
+    },
+    {
+      "text": "time",
+      "start": 27.24,
+      "end": 27.4
+    },
+    {
+      "text": "entra",
+      "start": 27.4,
+      "end": 27.6
+    },
+    {
+      "text": "com",
+      "start": 27.6,
+      "end": 27.74
+    },
+    {
+      "text": "a",
+      "start": 27.74,
+      "end": 27.8
+    },
+    {
+      "text": "bandeira",
+      "start": 27.8,
+      "end": 28.08
+    },
+    {
+      "text": "do",
+      "start": 28.08,
+      "end": 28.2
+    },
+    {
+      "text": "Brasil",
+      "start": 28.2,
+      "end": 28.52
+    },
+    {
+      "text": "e",
+      "start": 28.52,
+      "end": 28.74
+    },
+    {
+      "text": "é",
+      "start": 28.74,
+      "end": 28.84
+    },
+    {
+      "text": "campeão,",
+      "start": 28.84,
+      "end": 29.24
+    },
+    {
+      "text": "a",
+      "start": 29.66,
+      "end": 29.78
+    },
+    {
+      "text": "Arrancada",
+      "start": 29.78,
+      "end": 30.14
+    },
+    {
+      "text": "Heroica!",
+      "start": 30.14,
+      "end": 30.54
+    },
+    {
+      "text": "Em",
+      "start": 31.18,
+      "end": 31.3
+    },
+    {
+      "text": "69,",
+      "start": 31.3,
+      "end": 31.86
+    },
+    {
+      "text": "rivais",
+      "start": 32.36,
+      "end": 32.54
+    },
+    {
+      "text": "chamam",
+      "start": 32.54,
+      "end": 32.78
+    },
+    {
+      "text": "o",
+      "start": 32.78,
+      "end": 32.98
+    },
+    {
+      "text": "palmeirense",
+      "start": 32.98,
+      "end": 33.32
+    },
+    {
+      "text": "de",
+      "start": 33.32,
+      "end": 33.5
+    },
+    {
+      "text": "porco.",
+      "start": 33.5,
+      "end": 33.84
+    },
+    {
+      "text": "Em",
+      "start": 34.22,
+      "end": 34.3
+    },
+    {
+      "text": "86,",
+      "start": 34.3,
+      "end": 34.92
+    },
+    {
+      "text": "a",
+      "start": 35.42,
+      "end": 35.46
+    },
+    {
+      "text": "torcida",
+      "start": 35.46,
+      "end": 35.72
+    },
+    {
+      "text": "transforma",
+      "start": 35.72,
+      "end": 36.16
+    },
+    {
+      "text": "o",
+      "start": 36.16,
+      "end": 36.28
+    },
+    {
+      "text": "xingamento",
+      "start": 36.28,
+      "end": 36.6
+    },
+    {
+      "text": "em",
+      "start": 36.6,
+      "end": 36.8
+    },
+    {
+      "text": "um",
+      "start": 36.8,
+      "end": 36.88
+    },
+    {
+      "text": "mascote.",
+      "start": 36.88,
+      "end": 37.34
+    },
+    {
+      "text": "Depois,",
+      "start": 37.9,
+      "end": 38.24
+    },
+    {
+      "text": "as",
+      "start": 38.62,
+      "end": 38.68
+    },
+    {
+      "text": "Academias",
+      "start": 38.68,
+      "end": 39.08
+    },
+    {
+      "text": "de",
+      "start": 39.08,
+      "end": 39.24
+    },
+    {
+      "text": "Ademir",
+      "start": 39.24,
+      "end": 39.52
+    },
+    {
+      "text": "da",
+      "start": 39.52,
+      "end": 39.64
+    },
+    {
+      "text": "Guia,",
+      "start": 39.64,
+      "end": 40.02
+    },
+    {
+      "text": "a",
+      "start": 40.2,
+      "end": 40.24
+    },
+    {
+      "text": "Libertadores",
+      "start": 40.24,
+      "end": 40.66
+    },
+    {
+      "text": "de",
+      "start": 40.66,
+      "end": 40.86
+    },
+    {
+      "text": "99",
+      "start": 40.86,
+      "end": 41.38
+    },
+    {
+      "text": "com",
+      "start": 41.38,
+      "end": 41.66
+    },
+    {
+      "text": "São",
+      "start": 41.66,
+      "end": 41.82
+    },
+    {
+      "text": "Marcos,",
+      "start": 41.82,
+      "end": 42.18
+    },
+    {
+      "text": "duas",
+      "start": 42.6,
+      "end": 42.8
+    },
+    {
+      "text": "quedas",
+      "start": 42.8,
+      "end": 43.24
+    },
+    {
+      "text": "para",
+      "start": 43.24,
+      "end": 43.38
+    },
+    {
+      "text": "a",
+      "start": 43.38,
+      "end": 43.46
+    },
+    {
+      "text": "Série",
+      "start": 43.46,
+      "end": 43.58
+    },
+    {
+      "text": "B",
+      "start": 43.58,
+      "end": 43.8
+    },
+    {
+      "text": "e",
+      "start": 43.8,
+      "end": 44.32
+    },
+    {
+      "text": "a",
+      "start": 44.32,
+      "end": 44.38
+    },
+    {
+      "text": "volta",
+      "start": 44.38,
+      "end": 44.54
+    },
+    {
+      "text": "por",
+      "start": 44.54,
+      "end": 44.76
+    },
+    {
+      "text": "cima",
+      "start": 44.76,
+      "end": 45.0
+    },
+    {
+      "text": "com",
+      "start": 45.0,
+      "end": 45.18
+    },
+    {
+      "text": "Abel",
+      "start": 45.18,
+      "end": 45.48
+    },
+    {
+      "text": "Ferreira:",
+      "start": 45.48,
+      "end": 45.78
+    },
+    {
+      "text": "bi",
+      "start": 46.24,
+      "end": 46.42
+    },
+    {
+      "text": "da",
+      "start": 46.42,
+      "end": 46.6
+    },
+    {
+      "text": "Libertadores!",
+      "start": 46.62,
+      "end": 47.16
+    },
+    {
+      "text": "Hoje",
+      "start": 47.82,
+      "end": 48.06
+    },
+    {
+      "text": "são",
+      "start": 48.06,
+      "end": 48.28
+    },
+    {
+      "text": "12",
+      "start": 48.28,
+      "end": 48.66
+    },
+    {
+      "text": "títulos",
+      "start": 48.66,
+      "end": 49.12
+    },
+    {
+      "text": "brasileiros,",
+      "start": 49.12,
+      "end": 49.72
+    },
+    {
+      "text": "o",
+      "start": 50.0,
+      "end": 50.1
+    },
+    {
+      "text": "maior",
+      "start": 50.1,
+      "end": 50.26
+    },
+    {
+      "text": "campeão",
+      "start": 50.26,
+      "end": 50.62
+    },
+    {
+      "text": "do",
+      "start": 50.62,
+      "end": 50.72
+    },
+    {
+      "text": "país,",
+      "start": 50.72,
+      "end": 50.94
+    },
+    {
+      "text": "e",
+      "start": 51.44,
+      "end": 51.54
+    },
+    {
+      "text": "Abel",
+      "start": 51.54,
+      "end": 51.78
+    },
+    {
+      "text": "virou",
+      "start": 51.78,
+      "end": 52.18
+    },
+    {
+      "text": "o",
+      "start": 52.18,
+      "end": 52.3
+    },
+    {
+      "text": "técnico",
+      "start": 52.3,
+      "end": 52.58
+    },
+    {
+      "text": "mais",
+      "start": 52.58,
+      "end": 52.82
+    },
+    {
+      "text": "vitorioso",
+      "start": 52.82,
+      "end": 53.34
+    },
+    {
+      "text": "da",
+      "start": 53.34,
+      "end": 53.54
+    },
+    {
+      "text": "história",
+      "start": 53.54,
+      "end": 53.8
+    },
+    {
+      "text": "do",
+      "start": 53.8,
+      "end": 53.94
+    },
+    {
+      "text": "clube.",
+      "start": 53.94,
+      "end": 54.18
+    },
+    {
+      "text": "Qual",
+      "start": 54.84,
+      "end": 55.14
+    },
+    {
+      "text": "time",
+      "start": 55.14,
+      "end": 55.4
+    },
+    {
+      "text": "você",
+      "start": 55.4,
+      "end": 55.7
+    },
+    {
+      "text": "quer",
+      "start": 55.7,
+      "end": 55.96
+    },
+    {
+      "text": "ver",
+      "start": 55.96,
+      "end": 56.08
+    },
+    {
+      "text": "explicado?",
+      "start": 56.08,
+      "end": 56.54
+    },
+    {
+      "text": "Comenta",
+      "start": 56.54,
+      "end": 57.24
+    },
+    {
+      "text": "aí.",
+      "start": 57.24,
+      "end": 57.4
+    }
+  ]
+}
