@@ -308,8 +308,11 @@ const SceneGlorias: React.FC = () => {
       <Sequence name="Libertadores 99" from={fr(s.liberta99.em)} durationInFrames={fr(s.quedas.em) - fr(s.liberta99.em)} layout="none">
         <Liberta99 />
       </Sequence>
-      <Sequence name="Série B" from={fr(s.quedas.em)} durationInFrames={fr(s.abel.em) - fr(s.quedas.em)} layout="none">
+      <Sequence name="Série B" from={fr(s.quedas.em)} durationInFrames={fr(s.reestruturacao.em) - fr(s.quedas.em)} layout="none">
         <Quedas />
+      </Sequence>
+      <Sequence name="Reestruturação" from={fr(s.reestruturacao.em)} durationInFrames={fr(s.abel.em) - fr(s.reestruturacao.em)} layout="none">
+        <Reestruturacao />
       </Sequence>
       <Sequence name="Abel" from={fr(s.abel.em)} layout="none">
         <AbelBi />
@@ -392,6 +395,57 @@ const Quedas: React.FC = () => {
   );
 };
 
+const Reestruturacao: React.FC = () => {
+  const r = D.cenas.glorias.reestruturacao;
+  const { abs, since, sp, fps } = useSceneClock(r.em);
+  const f = (t: number) => (t - r.em) * fps;
+  const title = sp(r.em, { damping: 11 });
+  const stad = sp(r.estadioEm, { damping: 12 });
+  return (
+    <AbsoluteFill>
+      <div style={{ position: "absolute", top: 190, left: 50, right: 50, textAlign: "left", scale: `${interpolate(title, [0, 1], [1.4, 1])}`, opacity: title, transformOrigin: "left top" }}>
+        <div style={{ fontFamily: ANTON, fontSize: 104, color: C.black, lineHeight: 0.95 }}>{r.titulo}</div>
+        <div style={{ fontFamily: ANTON, fontSize: 70, color: C.red, lineHeight: 1 }}>{r.sub}</div>
+      </div>
+      {abs >= r.nobreEm ? (
+        <div style={{ position: "absolute", right: -40, top: 420 }}>
+          <Cutout src={A.fotoNobre} width={520} height={860} startFrame={f(r.nobreEm)} from={{ x: 600, y: 40, r: 8, s: 0.9 }} outline />
+        </div>
+      ) : null}
+      {abs >= r.nobreEm ? (
+        <div style={{ position: "absolute", left: 50, top: 450 }}>
+          <NameTag kicker={r.nobreSub} name={r.nobre} startFrame={f(r.nobreEm) + 2} seed={11} />
+        </div>
+      ) : null}
+      {abs >= r.contasEm ? (
+        <div style={{ position: "absolute", left: 60, top: 650 }}>
+          <YearStamp text={r.contas} startFrame={f(r.contasEm)} size={60} rotate={-4} color={C.red} />
+          <div style={{ fontFamily: BEBAS, fontSize: 30, letterSpacing: 2, color: C.black, marginTop: 8, opacity: interpolate(since(r.contasEm + 0.2), [0, 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>{r.contasNota}</div>
+        </div>
+      ) : null}
+      {abs >= r.estadioEm ? (
+        <div style={{ position: "absolute", left: 50, top: 820, width: 560, background: C.white, padding: "14px 14px 50px", boxShadow: `10px 12px 0 ${C.black}`, rotate: `${interpolate(stad, [0, 1], [-12, -3])}deg`, scale: `${stad}` }}>
+          <Img src={staticFile(A.fotoAllianzInterno)} style={{ width: "100%", height: 230, objectFit: "cover" }} />
+          <div style={{ fontFamily: ANTON, fontSize: 40, color: C.black, marginTop: 6 }}>{r.estadio}</div>
+        </div>
+      ) : null}
+      <div style={{ position: "absolute", left: 50, right: 50, top: 1190, display: "flex", gap: 20, justifyContent: "center" }}>
+        {r.titulos.map((t) => {
+          const p = sp(t.em, { damping: 9, stiffness: 240 });
+          if (abs < t.em) return <div key={t.ano} style={{ width: 470 }} />;
+          return (
+            <div key={t.ano} style={{ width: 470, background: C.black, border: `5px solid ${C.white}`, boxShadow: `8px 8px 0 ${C.red}`, padding: "8px 14px", textAlign: "center", scale: `${interpolate(p, [0, 1], [1.8, 1])}`, rotate: "-1.5deg" }}>
+              <div style={{ fontFamily: ANTON, fontSize: 64, color: C.red, lineHeight: 1 }}>{t.ano}</div>
+              <div style={{ fontFamily: ANTON, fontSize: 40, color: C.white, lineHeight: 1.1 }}>{t.t}</div>
+              {"nota" in t && t.nota ? <div style={{ fontFamily: BEBAS, fontSize: 26, color: C.white, letterSpacing: 2 }}>{t.nota}</div> : null}
+            </div>
+          );
+        })}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const AbelBi: React.FC = () => {
   const s = D.cenas.glorias;
   const { abs, fps } = useSceneClock(s.abel.em);
@@ -402,7 +456,7 @@ const AbelBi: React.FC = () => {
         <Cutout src={A.fotoAbel} width={560} height={860} startFrame={0} from={{ x: 600, y: 60, r: 8, s: 0.9 }} outline />
       </div>
       <div style={{ position: "absolute", left: 50, top: 200 }}>
-        <NameTag kicker="A VOLTA POR CIMA" name={s.abel.nome} startFrame={2} seed={9} />
+        <NameTag kicker={s.abel.kicker} name={s.abel.nome} startFrame={2} seed={9} />
       </div>
       {abs >= s.abel.biEm ? (
         <div style={{ position: "absolute", left: 40, top: 620 }}>
@@ -418,10 +472,9 @@ const AbelBi: React.FC = () => {
 
 const SceneStat: React.FC = () => {
   const s = D.cenas.stat;
-  const { abs, since, sp, fps } = useSceneClock(s.inicio);
+  const { abs, since, fps } = useSceneClock(s.inicio);
   const f = (t: number) => (t - s.inicio) * fps;
   const sh = shake(since(s.numeroEm), 26, 0.2);
-  const abel = sp(s.abel.em, { damping: 12 });
   return (
     <AbsoluteFill style={{ backgroundColor: C.black, translate: `${sh.x}px ${sh.y}px` }}>
       <AbsoluteFill style={{ overflow: "hidden" }}>
@@ -437,12 +490,6 @@ const SceneStat: React.FC = () => {
             <div style={{ fontFamily: ANTON, fontSize: 68, color: VERDE }}>{s.sub}</div>
           </TornStrip>
           <div style={{ fontFamily: BEBAS, fontSize: 36, letterSpacing: 3, color: C.white, marginTop: 14 }}>{s.anos}</div>
-        </div>
-      ) : null}
-      {abs >= s.abel.em ? (
-        <div style={{ position: "absolute", top: 1110, left: 90, right: 90, background: C.white, border: `6px solid ${C.black}`, boxShadow: `10px 10px 0 ${VERDE}`, padding: "12px 24px", textAlign: "center", scale: `${abel}`, rotate: "1.5deg" }}>
-          <div style={{ fontFamily: ANTON, fontSize: 70, color: VERDE, lineHeight: 1 }}>{s.abel.titulo}</div>
-          <div style={{ fontFamily: ANTON, fontSize: 34, color: C.black }}>{s.abel.sub}</div>
         </div>
       ) : null}
       <div style={{ position: "absolute", bottom: 300, width: "100%", textAlign: "center", fontFamily: INTER, fontWeight: 600, fontSize: 22, color: "rgba(244,239,230,0.75)" }}>{s.estadio} · foto: palmeiras.com.br</div>

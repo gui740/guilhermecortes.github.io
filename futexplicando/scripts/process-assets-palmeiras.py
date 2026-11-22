@@ -29,6 +29,8 @@ PHOTOS = [  # (bruto, saída, recortar?, largura máx)
     ("marcos-libertadores-1999.jpg", "marcos-1999.jpg", False, 1000),
     ("arrancada-heroica-foto.jpg", "arrancada-1942.jpg", False, 900),
     ("allianz-aerea-2020.jpeg", "allianz-aerea.jpg", False, 2000),
+    ("nobre-2016-crop.jpg", "nobre-recorte.png", True, 1420),  # recorte da foto de 01/07/2016 (Cesar Greco)
+    ("allianz-parque-1.webp", "allianz-interno.jpg", False, 1600),
 ]
 
 for src, dst in CRESTS.items():

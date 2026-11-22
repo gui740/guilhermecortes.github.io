@@ -65,10 +65,13 @@ place(sfx, S("placar"), a["placarEm"], db(-6)); place(sfx, S("whoosh"), a["bande
 p = C["porco"]
 place(sfx, S("carimbo"), p["ano1Em"], db(-4)); place(sfx, S("pop"), p["insultoEm"], db(-4)); place(sfx, S("carimbo"), p["ano2Em"], db(-4)); place(sfx, S("impacto"), p["viradaEm"], db(-8))
 gl = C["glorias"]
-for k in ["academia", "liberta99", "quedas", "abel"]: place(sfx, S("whoosh"), gl[k]["em"] - 0.2, db(-9))
+for k in ["academia", "liberta99", "quedas", "reestruturacao", "abel"]: place(sfx, S("whoosh"), gl[k]["em"] - 0.2, db(-9))
+r = gl["reestruturacao"]
+place(sfx, S("whoosh"), r["nobreEm"] - 0.2, db(-10)); place(sfx, S("carimbo"), r["contasEm"], db(-5)); place(sfx, S("pop"), r["estadioEm"], db(-7))
+for t in r["titulos"]: place(sfx, S("carimbo"), t["em"], db(-4))
 place(sfx, S("placar"), gl["abel"]["biEm"], db(-6))
 st = C["stat"]
-place(sfx, S("impacto"), st["numeroEm"], db(-3)); place(sfx, S("whoosh"), st["abel"]["em"] - 0.2, db(-9))
+place(sfx, S("impacto"), st["numeroEm"], db(-3))
 ct = C["cta"]
 place(sfx, S("whoosh"), ct["inicio"] - 0.1, db(-9)); place(sfx, S("pop"), ct["acaoEm"], db(-6)); place(sfx, S("letreiro"), ct["letreiroVoltaEm"], db(-4))
 

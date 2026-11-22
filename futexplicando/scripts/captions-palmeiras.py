@@ -5,8 +5,9 @@ DATA = os.path.join(ROOT, "src", "data", "palmeiras.json")
 d = json.load(open(DATA))
 w = json.load(open(os.path.join(ROOT, "public", "palmeiras", "audio", "narracao-gemini.words.json")))
 off = d["audio"]["narracaoCortes"][0]["em"]
-FIX = {"palestra": "Palestra", "palmerense": "palmeirense", "academias": "Academias", "libertadores": "Libertadores",
-       "libertadores.": "Libertadores!", "arrancada": "Arrancada", "heroica.": "Heroica!", "guerra,": "Guerra,"}
+FIX = {"obrigada": "obrigado", "série": "Série", "brasileiro": "Brasileiro", "Comente": "Comenta", "Alliance": "Allianz", "Alianz": "Allianz", "Park": "Parque",
+       "corou": "coroa", "ao": "o", "segunda": "Segunda", "heroica.": "Heroica!", "palestra": "Palestra", "palmerense": "palmeirense", "academias": "Academias", "libertadores": "Libertadores",
+       "libertadores.": "Libertadores!", "arrancada": "Arrancada", "heroica.": "Heroica!"}
 out, i = [], 0
 while i < len(w):
     x = w[i]; nxt = w[i + 1] if i + 1 < len(w) else None
@@ -17,6 +18,8 @@ while i < len(w):
         else:
             out.append(("Abel", x["s"], nxt["e"]))
         i += 2; continue
+    if x["w"] == "B" and nxt and nxt["w"] == "da":
+        out.append(("bi", x["s"], x["e"])); i += 1; continue
     if x["w"] == "Bida,":
         mid = (x["s"] + x["e"]) / 2
         out += [("bi", x["s"], mid), ("da", mid, x["e"])]; i += 1; continue
