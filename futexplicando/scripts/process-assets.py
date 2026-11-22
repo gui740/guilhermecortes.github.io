@@ -26,6 +26,7 @@ CRESTS = {
     "escudo-spfc-1935-1981.png": "escudo-spfc-1935-1981.png",
     "escudo-spfc-1935-bsp-1000px.png": "escudo-casp-1935.png",
     "escudo-paulistano.svg": "escudo-paulistano.svg",
+    "escudo-paulistano-oficial.png": "escudo-paulistano-oficial.png",
     "escudo-aa-palmeiras.svg": "escudo-aa-palmeiras.svg",
     "escudo-barcelona.svg": "escudo-barcelona.svg",
     "escudo-milan.svg": "escudo-milan.svg",
