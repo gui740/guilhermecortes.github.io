@@ -1,0 +1,864 @@
+{
+  "id": "Corinthians",
+  "titulo": "A história do Corinthians em 60 segundos",
+  "handle": "@futexplicando",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duracaoSegundos": 56,
+  "paleta": {
+    "preto": "#111111",
+    "branco": "#F4EFE6",
+    "cinza": "#8A8A8A",
+    "luz": "#FFD27A"
+  },
+  "audio": {
+    "mix": "corinthians/audio/mix-corinthians.wav",
+    "narracao": "corinthians/audio/narracao-gemini.wav",
+    "trilha": "corinthians/audio/trilha-strength-of-the-titans.mp3",
+    "trilhaOffset": 2.0,
+    "narracaoCortes": [
+      {
+        "de": 0,
+        "ate": 53.1,
+        "em": 0.6
+      }
+    ],
+    "trilhaEntra": 4.75
+  },
+  "assets": {
+    "escudoAtual": "corinthians/escudos/corinthians.svg",
+    "escudoPonte": "corinthians/escudos/ponte-preta.svg",
+    "escudoVasco": "corinthians/escudos/vasco.svg",
+    "escudoChelsea": "corinthians/escudos/chelsea.png",
+    "escudoBoca": "corinthians/escudos/boca.png",
+    "logoLibertadores": "corinthians/escudos/libertadores.png",
+    "fotoSocrates": "corinthians/fotos/socrates-recorte.png",
+    "fotoBasilio": "corinthians/fotos/basilio-recorte.png",
+    "fotoDemocracia": "corinthians/fotos/democracia-dia15vote.jpg",
+    "fotoMundial2000": "corinthians/fotos/mundial-2000.jpg",
+    "quadroGol1977": "corinthians/fotos/quadro-gol-1977.jpg",
+    "fotoArena": "corinthians/fotos/arena.jpg"
+  },
+  "cenas": {
+    "gancho": {
+      "inicio": 0,
+      "fim": 4.75,
+      "acendeEm": 0.35,
+      "operariosEm": 2.15,
+      "lampiaoEm": 3.9,
+      "linhas": [
+        "FUNDADO POR OPERÁRIOS",
+        "DEBAIXO DE UM LAMPIÃO"
+      ]
+    },
+    "virada": {
+      "inicio": 4.75,
+      "fim": 7.0,
+      "linha1": "A HISTÓRIA DO",
+      "linha2": "CORINTHIANS",
+      "linha3": "EM 60 SEGUNDOS"
+    },
+    "nascimento": {
+      "inicio": 7.0,
+      "fim": 15.8,
+      "data": "01/09/1910",
+      "dataEm": 7.02,
+      "lugar": "BOM RETIRO · SÃO PAULO",
+      "lugarEm": 9.65,
+      "ingles": "CORINTHIAN F.C.",
+      "inglesSub": "O TIME INGLÊS QUE INSPIROU O NOME",
+      "inglesEm": 11.4,
+      "operariosEm": 13.3,
+      "titulo": "O TIME DO POVO",
+      "tituloEm": 14.8,
+      "nota": "Rua José Paulino × Rua Cônego Martins, à luz de um lampião"
+    },
+    "fila": {
+      "inicio": 15.8,
+      "fim": 25.1,
+      "contadorEm": 16.5,
+      "anos": [
+        1954,
+        1977
+      ],
+      "rotulo": "QUASE 23 ANOS SEM TÍTULO",
+      "basilioEm": 20.5,
+      "placarEm": 22.2,
+      "golsCor": 1,
+      "golsAdv": 0,
+      "torneio": "FINAL DO PAULISTA · MORUMBI",
+      "data": "13/10/1977 · GOL DE BASÍLIO",
+      "fimFilaEm": 23.7,
+      "fimFila": "A FILA ACABOU!"
+    },
+    "democracia": {
+      "inicio": 25.1,
+      "fim": 33.45,
+      "ditaduraEm": 27.5,
+      "ditadura": "PLENA DITADURA",
+      "socratesEm": 28.5,
+      "titulo": [
+        "DEMOCRACIA",
+        "CORINTHIANA"
+      ],
+      "tituloEm": 29.5,
+      "fotoEm": 30.9,
+      "voto": "TUDO DECIDIDO NO VOTO",
+      "votoEm": 32.5,
+      "nota": "1982–1984 · camisa \"Dia 15 vote\" nas eleições de 1982"
+    },
+    "mundo": {
+      "inicio": 33.45,
+      "fim": 45.05,
+      "m2000": {
+        "em": 33.45,
+        "ano": "2000",
+        "titulo": "1º MUNDIAL DE CLUBES DA FIFA",
+        "placar": {
+          "adv": "VASCO",
+          "escudoAdv": "escudoVasco",
+          "golsCor": 0,
+          "golsAdv": 0,
+          "detalhe": "MARACANÃ · 4×3 NOS PÊNALTIS"
+        }
+      },
+      "queda": {
+        "em": 36.9,
+        "ano": "2007",
+        "titulo": "SÉRIE B"
+      },
+      "volta": {
+        "em": 39.3,
+        "ano": "2012"
+      },
+      "placares": [
+        {
+          "em": 40.85,
+          "ano": "LIBERTADORES",
+          "adv": "BOCA",
+          "escudoAdv": "escudoBoca",
+          "golsCor": 2,
+          "golsAdv": 0,
+          "detalhe": "INVICTO · FINAL NO PACAEMBU"
+        },
+        {
+          "em": 42.35,
+          "ano": "MUNDIAL",
+          "adv": "CHELSEA",
+          "escudoAdv": "escudoChelsea",
+          "golsCor": 1,
+          "golsAdv": 0,
+          "detalhe": "YOKOHAMA · GOL DE GUERRERO"
+        }
+      ]
+    },
+    "stat": {
+      "inicio": 45.05,
+      "fim": 51.1,
+      "numero": 7,
+      "numeroEm": 45.55,
+      "rotulo": "TÍTULOS BRASILEIROS",
+      "anos": "1990 · 98 · 99 · 2005 · 11 · 15 · 17",
+      "mundiaisEm": 46.95,
+      "mundiais": "2 MUNDIAIS · 2000 E 2012",
+      "torcidaEm": 48.2,
+      "torcida": "2ª MAIOR TORCIDA DO PAÍS",
+      "fielEm": 50.1,
+      "fiel": "A FIEL",
+      "extra": "+ COPA DO BRASIL 2025 E SUPERCOPA 2026",
+      "estadio": "NEO QUÍMICA ARENA (2014) · foto: Mílton Jung / CC BY 2.0"
+    },
+    "cta": {
+      "inicio": 51.1,
+      "fim": 56,
+      "pergunta": [
+        "QUAL TIME VOCÊ",
+        "QUER VER EXPLICADO?"
+      ],
+      "acao": "COMENTA AÍ",
+      "acaoEm": 52.9,
+      "apagaEm": 54.6
+    }
+  },
+  "transicoesLampiao": [
+    15.7,
+    25.0,
+    33.35,
+    44.95
+  ],
+  "capa": {
+    "texto": [
+      "DEBAIXO DE",
+      "UM LAMPIÃO"
+    ],
+    "sub": "A HISTÓRIA DO CORINTHIANS"
+  },
+  "legendas": [
+    {
+      "text": "Um",
+      "start": 0.6,
+      "end": 0.96
+    },
+    {
+      "text": "time",
+      "start": 0.96,
+      "end": 1.3
+    },
+    {
+      "text": "fundado",
+      "start": 1.3,
+      "end": 1.9
+    },
+    {
+      "text": "por",
+      "start": 1.9,
+      "end": 2.2
+    },
+    {
+      "text": "operários",
+      "start": 2.2,
+      "end": 2.9
+    },
+    {
+      "text": "debaixo",
+      "start": 2.9,
+      "end": 3.7
+    },
+    {
+      "text": "de",
+      "start": 3.7,
+      "end": 3.86
+    },
+    {
+      "text": "um",
+      "start": 3.86,
+      "end": 3.96
+    },
+    {
+      "text": "lampião.",
+      "start": 3.96,
+      "end": 4.42
+    },
+    {
+      "text": "Essa",
+      "start": 4.78,
+      "end": 5.36
+    },
+    {
+      "text": "é",
+      "start": 5.36,
+      "end": 5.52
+    },
+    {
+      "text": "a",
+      "start": 5.52,
+      "end": 5.54
+    },
+    {
+      "text": "história",
+      "start": 5.54,
+      "end": 5.76
+    },
+    {
+      "text": "do",
+      "start": 5.76,
+      "end": 5.94
+    },
+    {
+      "text": "Corinthians!",
+      "start": 5.94,
+      "end": 6.3
+    },
+    {
+      "text": "Primeiro",
+      "start": 7.02,
+      "end": 7.54
+    },
+    {
+      "text": "de",
+      "start": 7.54,
+      "end": 7.66
+    },
+    {
+      "text": "setembro",
+      "start": 7.66,
+      "end": 8.18
+    },
+    {
+      "text": "de",
+      "start": 8.18,
+      "end": 8.38
+    },
+    {
+      "text": "1910,",
+      "start": 8.38,
+      "end": 9.28
+    },
+    {
+      "text": "no",
+      "start": 9.62,
+      "end": 9.7
+    },
+    {
+      "text": "Bom",
+      "start": 9.7,
+      "end": 9.88
+    },
+    {
+      "text": "Retiro.",
+      "start": 9.88,
+      "end": 10.28
+    },
+    {
+      "text": "Inspirados",
+      "start": 10.7,
+      "end": 11.26
+    },
+    {
+      "text": "num",
+      "start": 11.26,
+      "end": 11.46
+    },
+    {
+      "text": "time",
+      "start": 11.46,
+      "end": 11.7
+    },
+    {
+      "text": "inglês,",
+      "start": 11.7,
+      "end": 12.18
+    },
+    {
+      "text": "o",
+      "start": 12.44,
+      "end": 12.5
+    },
+    {
+      "text": "Corinthian,",
+      "start": 12.5,
+      "end": 12.84
+    },
+    {
+      "text": "cinco",
+      "start": 13.32,
+      "end": 13.76
+    },
+    {
+      "text": "operários",
+      "start": 13.76,
+      "end": 14.26
+    },
+    {
+      "text": "fundam",
+      "start": 14.26,
+      "end": 14.66
+    },
+    {
+      "text": "o",
+      "start": 14.66,
+      "end": 14.84
+    },
+    {
+      "text": "time",
+      "start": 14.84,
+      "end": 15.0
+    },
+    {
+      "text": "do",
+      "start": 15.0,
+      "end": 15.16
+    },
+    {
+      "text": "povo.",
+      "start": 15.16,
+      "end": 15.46
+    },
+    {
+      "text": "Mas",
+      "start": 15.84,
+      "end": 16.18
+    },
+    {
+      "text": "o",
+      "start": 16.18,
+      "end": 16.36
+    },
+    {
+      "text": "povo",
+      "start": 16.36,
+      "end": 16.58
+    },
+    {
+      "text": "sofre,",
+      "start": 16.58,
+      "end": 17.16
+    },
+    {
+      "text": "quase",
+      "start": 17.44,
+      "end": 17.7
+    },
+    {
+      "text": "23",
+      "start": 17.7,
+      "end": 18.48
+    },
+    {
+      "text": "anos",
+      "start": 18.48,
+      "end": 18.92
+    },
+    {
+      "text": "sem",
+      "start": 18.92,
+      "end": 19.1
+    },
+    {
+      "text": "título.",
+      "start": 19.1,
+      "end": 19.46
+    },
+    {
+      "text": "Até",
+      "start": 19.96,
+      "end": 20.24
+    },
+    {
+      "text": "que",
+      "start": 20.24,
+      "end": 20.4
+    },
+    {
+      "text": "em",
+      "start": 20.4,
+      "end": 20.5
+    },
+    {
+      "text": "77,",
+      "start": 20.5,
+      "end": 21.1
+    },
+    {
+      "text": "Basílio",
+      "start": 21.6,
+      "end": 21.9
+    },
+    {
+      "text": "faz",
+      "start": 21.9,
+      "end": 22.1
+    },
+    {
+      "text": "o",
+      "start": 22.1,
+      "end": 22.24
+    },
+    {
+      "text": "gol",
+      "start": 22.24,
+      "end": 22.38
+    },
+    {
+      "text": "contra",
+      "start": 22.38,
+      "end": 22.62
+    },
+    {
+      "text": "a",
+      "start": 22.62,
+      "end": 22.82
+    },
+    {
+      "text": "Ponte",
+      "start": 22.82,
+      "end": 22.96
+    },
+    {
+      "text": "Preta",
+      "start": 22.96,
+      "end": 23.88
+    },
+    {
+      "text": "e",
+      "start": 23.88,
+      "end": 24.2
+    },
+    {
+      "text": "a",
+      "start": 24.2,
+      "end": 24.34
+    },
+    {
+      "text": "fila",
+      "start": 24.34,
+      "end": 24.68
+    },
+    {
+      "text": "acaba!",
+      "start": 24.68,
+      "end": 25.12
+    },
+    {
+      "text": "Nos",
+      "start": 25.12,
+      "end": 26.12
+    },
+    {
+      "text": "anos",
+      "start": 26.12,
+      "end": 26.36
+    },
+    {
+      "text": "80,",
+      "start": 26.36,
+      "end": 26.76
+    },
+    {
+      "text": "em",
+      "start": 27.16,
+      "end": 27.22
+    },
+    {
+      "text": "plena",
+      "start": 27.22,
+      "end": 27.56
+    },
+    {
+      "text": "ditadura,",
+      "start": 27.56,
+      "end": 28.08
+    },
+    {
+      "text": "Sócrates",
+      "start": 28.56,
+      "end": 28.88
+    },
+    {
+      "text": "lidera",
+      "start": 28.88,
+      "end": 29.32
+    },
+    {
+      "text": "a",
+      "start": 29.32,
+      "end": 29.54
+    },
+    {
+      "text": "Democracia",
+      "start": 29.54,
+      "end": 29.92
+    },
+    {
+      "text": "Corinthiana:",
+      "start": 29.92,
+      "end": 30.48
+    },
+    {
+      "text": "No",
+      "start": 30.94,
+      "end": 31.04
+    },
+    {
+      "text": "Timão,",
+      "start": 31.04,
+      "end": 31.32
+    },
+    {
+      "text": "tudo",
+      "start": 31.64,
+      "end": 31.74
+    },
+    {
+      "text": "era",
+      "start": 31.74,
+      "end": 31.92
+    },
+    {
+      "text": "decidido",
+      "start": 31.92,
+      "end": 32.46
+    },
+    {
+      "text": "no",
+      "start": 32.46,
+      "end": 32.58
+    },
+    {
+      "text": "voto.",
+      "start": 32.58,
+      "end": 33.12
+    },
+    {
+      "text": "Em",
+      "start": 33.46,
+      "end": 33.68
+    },
+    {
+      "text": "2000,",
+      "start": 33.68,
+      "end": 34.0
+    },
+    {
+      "text": "campeão",
+      "start": 34.4,
+      "end": 34.8
+    },
+    {
+      "text": "do",
+      "start": 34.8,
+      "end": 34.9
+    },
+    {
+      "text": "primeiro",
+      "start": 34.9,
+      "end": 35.24
+    },
+    {
+      "text": "Mundial",
+      "start": 35.24,
+      "end": 35.64
+    },
+    {
+      "text": "de",
+      "start": 35.64,
+      "end": 35.8
+    },
+    {
+      "text": "Clubes",
+      "start": 35.8,
+      "end": 36.02
+    },
+    {
+      "text": "da",
+      "start": 36.02,
+      "end": 36.18
+    },
+    {
+      "text": "FIFA.",
+      "start": 36.18,
+      "end": 36.46
+    },
+    {
+      "text": "Em",
+      "start": 36.9,
+      "end": 37.02
+    },
+    {
+      "text": "2007,",
+      "start": 37.02,
+      "end": 37.5
+    },
+    {
+      "text": "a",
+      "start": 37.88,
+      "end": 37.92
+    },
+    {
+      "text": "queda",
+      "start": 37.92,
+      "end": 38.22
+    },
+    {
+      "text": "para",
+      "start": 38.22,
+      "end": 38.44
+    },
+    {
+      "text": "a",
+      "start": 38.44,
+      "end": 38.54
+    },
+    {
+      "text": "Série B...",
+      "start": 38.54,
+      "end": 38.8
+    },
+    {
+      "text": "E",
+      "start": 39.24,
+      "end": 39.3
+    },
+    {
+      "text": "a",
+      "start": 39.3,
+      "end": 39.38
+    },
+    {
+      "text": "volta.",
+      "start": 39.38,
+      "end": 39.56
+    },
+    {
+      "text": "Em",
+      "start": 39.98,
+      "end": 40.04
+    },
+    {
+      "text": "2012,",
+      "start": 40.04,
+      "end": 40.46
+    },
+    {
+      "text": "Libertadores",
+      "start": 40.88,
+      "end": 41.4
+    },
+    {
+      "text": "invicta",
+      "start": 41.4,
+      "end": 42.16
+    },
+    {
+      "text": "e",
+      "start": 42.16,
+      "end": 42.36
+    },
+    {
+      "text": "Mundial",
+      "start": 42.36,
+      "end": 42.8
+    },
+    {
+      "text": "contra",
+      "start": 42.8,
+      "end": 43.06
+    },
+    {
+      "text": "o",
+      "start": 43.06,
+      "end": 43.42
+    },
+    {
+      "text": "Chelsea.",
+      "start": 43.42,
+      "end": 43.42
+    },
+    {
+      "text": "Gol",
+      "start": 43.78,
+      "end": 44.0
+    },
+    {
+      "text": "de",
+      "start": 44.0,
+      "end": 44.18
+    },
+    {
+      "text": "Guerrero.",
+      "start": 44.18,
+      "end": 44.6
+    },
+    {
+      "text": "Hoje",
+      "start": 45.08,
+      "end": 45.32
+    },
+    {
+      "text": "são",
+      "start": 45.32,
+      "end": 45.56
+    },
+    {
+      "text": "sete",
+      "start": 45.56,
+      "end": 46.04
+    },
+    {
+      "text": "brasileiros,",
+      "start": 46.04,
+      "end": 46.62
+    },
+    {
+      "text": "dois",
+      "start": 46.98,
+      "end": 47.22
+    },
+    {
+      "text": "mundiais",
+      "start": 47.22,
+      "end": 47.82
+    },
+    {
+      "text": "e",
+      "start": 47.82,
+      "end": 48.12
+    },
+    {
+      "text": "a",
+      "start": 48.12,
+      "end": 48.2
+    },
+    {
+      "text": "segunda",
+      "start": 48.2,
+      "end": 48.52
+    },
+    {
+      "text": "maior",
+      "start": 48.52,
+      "end": 48.88
+    },
+    {
+      "text": "torcida",
+      "start": 48.88,
+      "end": 49.26
+    },
+    {
+      "text": "do",
+      "start": 49.26,
+      "end": 49.46
+    },
+    {
+      "text": "país.",
+      "start": 49.46,
+      "end": 49.66
+    },
+    {
+      "text": "a Fiel.",
+      "start": 50.12,
+      "end": 50.62
+    },
+    {
+      "text": "Qual",
+      "start": 51.12,
+      "end": 51.36
+    },
+    {
+      "text": "time",
+      "start": 51.36,
+      "end": 51.6
+    },
+    {
+      "text": "você",
+      "start": 51.6,
+      "end": 51.82
+    },
+    {
+      "text": "quer",
+      "start": 51.82,
+      "end": 52.0
+    },
+    {
+      "text": "ver",
+      "start": 52.0,
+      "end": 52.12
+    },
+    {
+      "text": "explicado?",
+      "start": 52.12,
+      "end": 52.6
+    },
+    {
+      "text": "Comenta",
+      "start": 52.94,
+      "end": 53.18
+    },
+    {
+      "text": "aí.",
+      "start": 53.18,
+      "end": 53.34
+    }
+  ]
+}

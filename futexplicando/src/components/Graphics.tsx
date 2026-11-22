@@ -393,7 +393,7 @@ export const Scoreboard: React.FC<{
         {cell(crestA, nameA, -1)}
         <div style={{ display: "flex", alignItems: "center" }}>
           {digit(a, 0)}
-          <div style={{ fontFamily: ANTON, fontSize: 90, color: C.red }}>×</div>
+          <div style={{ fontFamily: ANTON, fontSize: 90, color: "var(--accent2, var(--accent, #E30613))" }}>×</div>
           {digit(b, 4)}
         </div>
         {cell(crestB, nameB, 1)}

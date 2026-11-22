@@ -218,7 +218,24 @@ def flap_clatter(d=1.1, n=34):
     return x
 
 
+def lamp_flicker():
+    """Lampião acendendo: zumbido elétrico com estalos e chiado de gás."""
+    d = 1.2
+    tt = t(d)
+    hum = (np.sin(2 * np.pi * 60 * tt) + 0.5 * np.sin(2 * np.pi * 120 * tt)) * 0.3
+    gate = np.ones_like(tt)
+    for a, b in [(0.0, 0.08), (0.14, 0.2), (0.27, 0.3)]:
+        gate[int(a * SR):int(b * SR)] = 0
+    hiss = lp(rng.normal(0, 1, len(tt)), 0.6) * 0.15
+    x = (hum + hiss) * gate * np.minimum(1, (d - tt) / 0.3)
+    for at in [0.08, 0.2, 0.3]:
+        c = hp(rng.normal(0, 1, int(0.03 * SR)), 0.3) * np.exp(-t(0.03) * 150)
+        i = int(at * SR); x[i:i + len(c)] += c
+    return x
+
+
 if __name__ == "__main__":
+    save("lampiao", lamp_flicker())
     save("letreiro", flap_clatter())
     save("moeda-girando", coin_spin())
     save("moeda-quicando", coin_bounce_sequence())

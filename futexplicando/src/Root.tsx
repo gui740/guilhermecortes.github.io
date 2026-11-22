@@ -2,6 +2,8 @@ import React from "react";
 import { Composition, Still } from "remotion";
 import data from "./data/sao-paulo.json";
 import palm from "./data/palmeiras.json";
+import cor from "./data/corinthians.json";
+import { CapaCorinthians, Corinthians } from "./videos/Corinthians/Corinthians";
 import { CapaPalmeiras, Palmeiras } from "./videos/Palmeiras/Palmeiras";
 import { CapaSaoPaulo } from "./videos/SaoPaulo/Capa";
 import { SaoPaulo } from "./videos/SaoPaulo/SaoPaulo";
@@ -27,6 +29,15 @@ export const RemotionRoot: React.FC = () => {
         height={palm.height}
       />
       <Still id="CapaPalmeiras" component={CapaPalmeiras} width={palm.width} height={palm.height} />
+      <Composition
+        id="Corinthians"
+        component={Corinthians}
+        durationInFrames={Math.round(cor.duracaoSegundos * cor.fps)}
+        fps={cor.fps}
+        width={cor.width}
+        height={cor.height}
+      />
+      <Still id="CapaCorinthians" component={CapaCorinthians} width={cor.width} height={cor.height} />
     </>
   );
 };
