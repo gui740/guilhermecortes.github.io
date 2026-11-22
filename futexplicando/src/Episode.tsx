@@ -22,6 +22,16 @@ const SceneShell: React.FC<{ children: React.ReactNode; enter: boolean; dir: num
   return <AbsoluteFill style={{ clipPath: p < 1 ? clip : undefined }}>{children}</AbsoluteFill>;
 };
 
+/** Trilha com "ducking": abaixa enquanto a voz fala e sobe nas pausas (audio.music.gapBoostDb). */
+const musicVolume = (f: number, fps: number, total: number) => {
+  const music = episode.audio.music as { volumeDb: number; gapBoostDb?: number };
+  const t = f / fps;
+  const speaking = episode.timing.words.some((w) => t >= w.start - 0.25 && t <= w.end + 0.35);
+  const target = music.volumeDb + (speaking ? 0 : music.gapBoostDb ?? 0);
+  const fade = interpolate(f, [0, 8, total - 30, total], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return db(target) * fade;
+};
+
 export const Episode: React.FC = () => {
   const { durationInFrames, fps } = useVideoConfig();
   const t = episode.timing;
@@ -56,7 +66,7 @@ export const Episode: React.FC = () => {
       </Sequence>
 
       <Audio src={staticFile(episode.voice.file)} />
-      <Audio src={staticFile(music.file)} volume={(f) => db(music.volumeDb) * interpolate(f, [0, 10, durationInFrames - 30, durationInFrames], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+      <Audio src={staticFile(music.file)} volume={(f) => musicVolume(f, fps, durationInFrames)} />
       <Audio src={staticFile(amb.file)} volume={(f) => db(amb.volumeDb) * interpolate(f, [0, 20, durationInFrames - 20, durationInFrames], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
     </AbsoluteFill>
   );

@@ -29,7 +29,9 @@
   "audio": {
     "music": {
       "file": "music/trilha.mp3",
-      "volumeDb": -18
+      "volumeDb": -11,
+      "gapBoostDb": 5,
+      "credit": "Smoke - 1 Min. Hip Hop Loop – Cloud-10 (Freesound 634685, CC0)"
     },
     "ambience": {
       "file": "sfx/estadio.mp3",
