@@ -187,7 +187,7 @@ export const SceneMundo: React.FC = () => {
   return (
     <AbsoluteFill>
       <Pitch draw={interpolate(abs, [s.inicio, s.inicio + 1.2], [0, 1], { extrapolateRight: "clamp" })} />
-      <Sequence name="Telê" from={0} durationInFrames={fr(p[0].em)} layout="none">
+      <Sequence name="Telê"  durationInFrames={fr(p[0].em)} layout="none">
         <Tele />
       </Sequence>
       <Sequence name="Barcelona 92" from={fr(p[0].em)} durationInFrames={fr(p[0].ate) - fr(p[0].em)} layout="none">

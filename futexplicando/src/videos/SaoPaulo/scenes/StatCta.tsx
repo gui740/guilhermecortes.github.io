@@ -93,7 +93,7 @@ export const SceneStat: React.FC = () => {
   const cut = Math.round((s.ceni.em - s.inicio) * fps);
   return (
     <AbsoluteFill>
-      <Sequence name="12 títulos" from={0} durationInFrames={cut} layout="none">
+      <Sequence name="12 títulos"  durationInFrames={cut} layout="none">
         <Doze />
       </Sequence>
       <Sequence name="Rogério Ceni" from={cut} layout="none">
