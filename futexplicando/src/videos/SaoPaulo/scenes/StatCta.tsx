@@ -64,8 +64,8 @@ const Ceni: React.FC = () => {
   const sh = shake(since(c.golsEm + 1.3), 22, 0.25);
   return (
     <AbsoluteFill style={{ translate: `${sh.x}px ${sh.y}px` }}>
-      <div style={{ position: "absolute", right: -60, top: 330 }}>
-        <Cutout src={A.fotoCeni} width={720} height={1060} startFrame={0} from={{ x: 600, y: 0, r: 10, s: 1 }} outline />
+      <div style={{ position: "absolute", right: -140, top: 560 }}>
+        <Cutout src={A.fotoCeni} width={980} height={740} startFrame={0} from={{ x: 600, y: 0, r: 10, s: 1 }} outline />
       </div>
       <div style={{ position: "absolute", left: 50, top: 200, translate: `${interpolate(since(c.em), [0, 8], [-900, 0], { extrapolateRight: "clamp", easing: (x) => 1 - Math.pow(1 - x, 3) })}px 0` }}>
         <TornStrip color={C.black} seed={12} style={{ rotate: "-2deg" }}>

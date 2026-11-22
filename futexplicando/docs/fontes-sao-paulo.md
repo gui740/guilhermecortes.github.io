@@ -29,36 +29,34 @@ Checagem feita em 22/11/2026. Todo texto e número do vídeo está em `src/data/
 
 ## 2. Assets visuais (`public/sao-paulo/`)
 
-Arquivos brutos em `raw/`, tratados em `escudos/`, `logos/` e `fotos/` pelo script `scripts/process-assets.py`.
+Os brutos estão em `raw/`; os tratados, em `escudos/`, `logos/` e `fotos/` (gerados por `scripts/process-assets.py`).
+O Wikimedia Commons bloqueou o download a partir deste servidor (HTTP 429, `retry-after: 600`, por mais de 1h). Por isso as fotos vieram da **divulgação/acervo oficial do saopaulofc.net**, que era a prioridade do briefing, e os escudos dos adversários vieram do **ge.globo**.
 
-| Arquivo | Origem | Autor / crédito | Licença |
+| Arquivo usado no vídeo | Origem | Autor / crédito | Licença / observação |
 |---|---|---|---|
-| escudos/escudo-spfc-atual.svg | [Commons: Brasao do Sao Paulo Futebol Clube.svg](https://commons.wikimedia.org/wiki/File:Brasao_do_Sao_Paulo_Futebol_Clube.svg) | São Paulo FC (vetor do logo oficial) | Domínio público (logo de texto/forma simples), marca registrada do SPFC |
-| escudos/escudo-spfc-2022-site.svg | [Commons: São Paulo Futebol Clube logo (2022).svg](https://commons.wikimedia.org/wiki/File:S%C3%A3o_Paulo_Futebol_Clube_logo_(2022).svg); original em [saopaulofc.net](https://www.saopaulofc.net/wp-content/themes/spfc2022/assets/img/logo.svg) | São Paulo FC | Domínio público (Commons), marca registrada |
-| escudos/escudo-sp-floresta-1930.png | [BauDoSãoPaulo – Escudo 1930-1935](https://baudosaopaulo.wordpress.com/2016/12/20/escudo-1930-1935/) (versão de 1000 px; a mesma imagem está no [Commons](https://commons.wikimedia.org/wiki/File:Escudo_do_SPFC_1930-1935.png)) | BAUDOSAOPAULO | CC BY-SA 4.0 (licença declarada no Commons) |
-| escudos/escudo-casp-1935.png (não usado) | [BauDoSãoPaulo – Escudo 1935](https://baudosaopaulo.wordpress.com/2016/12/20/escudo-1935/) | BAUDOSAOPAULO | CC BY-SA 4.0 |
-| escudos/escudo-paulistano.svg | [Commons: Club Athletico Paulistano logo.svg](https://commons.wikimedia.org/wiki/File:Club_Athletico_Paulistano_logo.svg) | C.A. Paulistano (Guia de Identidade Visual, 2013) | Domínio público |
-| escudos/escudo-aa-palmeiras.svg | [Commons: AA das Palmeiras.svg](https://commons.wikimedia.org/wiki/File:AA_das_Palmeiras.svg) | Associação Atlética das Palmeiras (1902–30) | Domínio público |
-| escudos/escudo-barcelona.svg | [Wikipedia (en): FC Barcelona (crest).svg](https://en.wikipedia.org/wiki/File:FC_Barcelona_(crest).svg) | FC Barcelona | Marcado como PD na en.wiki; marca registrada (uso informativo) |
-| escudos/escudo-milan.svg | [Commons: Logo of AC Milan.svg](https://commons.wikimedia.org/wiki/File:Logo_of_AC_Milan.svg) | A.C. Milan | Domínio público (Commons), marca registrada |
-| escudos/escudo-liverpool.svg | [Wikipedia (en): Liverpool FC.svg](https://en.wikipedia.org/wiki/File:Liverpool_FC.svg) | Liverpool FC | **Uso aceitável (fair use)**, não livre |
-| escudos/escudo-flamengo.svg | [Commons: Clube de Regatas do Flamengo logo.svg](https://commons.wikimedia.org/wiki/File:Clube_de_Regatas_do_Flamengo_logo.svg) | C.R. Flamengo | Domínio público (Commons), marca registrada |
-| logos/logo-libertadores.svg | [Wikipedia (en): Copa Libertadores logo.svg](https://en.wikipedia.org/wiki/File:Copa_Libertadores_logo.svg) | CONMEBOL | **Uso aceitável (fair use)**, não livre |
-| logos/logo-conmebol-libertadores.svg (reserva) | [Commons: Conmebol-libertadores.svg](https://commons.wikimedia.org/wiki/File:Conmebol-libertadores.svg) | CONMEBOL | Domínio público (Commons), marca registrada |
-| logos/logo-mundial-clubes-fifa.svg | [Commons: FIFA Club World Cup logo.svg](https://commons.wikimedia.org/wiki/File:FIFA_Club_World_Cup_logo.svg) | FIFA | Domínio público (Commons), marca registrada |
-| logos/logo-copa-do-brasil.svg | [Commons: Copa do Brasil logo (2018).svg](https://commons.wikimedia.org/wiki/File:Copa_do_Brasil_logo_(2018).svg) | CBF | Domínio público (Commons), marca registrada |
-| fotos/morumbi-aerea.jpg | [Commons: Estádio do Morumbi.jpg](https://commons.wikimedia.org/wiki/File:Est%C3%A1dio_do_Morumbi.jpg) (4754×3560) | **Arne Müseler** / arne-mueseler.com (2022) | **CC BY-SA 3.0 DE**: crédito obrigatório (aparece na tela) |
-| fotos/time-1930.jpg | [Commons: SPFC squad - 1930 - 02.jpg](https://commons.wikimedia.org/wiki/File:SPFC_squad_-_1930_-_02.jpg) | São Paulo Futebol Clube (acervo) | Domínio público (foto de 1930) |
-| fotos/tele-santana-recorte.png | [Commons: Telê Santana da Silva 01.jpg](https://commons.wikimedia.org/wiki/File:Tel%C3%AA_Santana_da_Silva_01.jpg) (27/02/1993) | Tales.ebner | Domínio público (declarado pelo autor) |
-| fotos/rogerio-ceni-recorte.png | [Commons: Rogério Ceni 2008.jpg](https://commons.wikimedia.org/wiki/File:Rog%C3%A9rio_Ceni_2008.jpg) (07/12/2008, Bezerrão, tri brasileiro) | **Ramthum** | **CC BY-SA 4.0**: crédito obrigatório; o recorte derivado herda a licença |
-| fotos/rai-recorte.png | [Commons: Raí Souza Vieira de Oliveira 02.jpg](https://commons.wikimedia.org/wiki/File:Ra%C3%AD_Souza_Vieira_de_Oliveira_02.jpg) (27/02/1993) | Tales.ebner | Domínio público (declarado pelo autor) |
-| fotos/morumbi-fachada.jpg (reserva) | [Commons: Fachada do Estádio do Morumbi em 2023.jpg](https://commons.wikimedia.org/wiki/File:Fachada_do_Est%C3%A1dio_do_Morumbi_em_2023.jpg) | Mtvdanilo | CC BY-SA 4.0 |
+| escudos/escudo-spfc-atual.svg | [Commons: Brasao do Sao Paulo Futebol Clube.svg](https://commons.wikimedia.org/wiki/File:Brasao_do_Sao_Paulo_Futebol_Clube.svg) | São Paulo FC | Domínio público no Commons; marca registrada |
+| escudos/escudo-spfc-2022-site.svg (reserva) | [saopaulofc.net/…/logo.svg](https://www.saopaulofc.net/wp-content/themes/spfc2022/assets/img/logo.svg) | São Paulo FC | Logo oficial; marca registrada |
+| escudos/escudo-sp-floresta-1930.png | [BauDoSãoPaulo – Escudo 1930-1935](https://baudosaopaulo.wordpress.com/2016/12/20/escudo-1930-1935/) (1000 px) | BAUDOSAOPAULO | CC BY-SA 4.0 (conforme o Commons) |
+| escudos/escudo-paulistano-oficial.png | [Site oficial do C.A. Paulistano](https://www.paulistano.org.br/) (`Logo_Principal_CAP`) | Club Athletico Paulistano | Logo oficial; marca registrada |
+| escudos/escudo-barcelona-ge.png | [ge.globo – página do Barcelona](https://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/times/barcelona/) (s.sde.globo.com) | FC Barcelona | Marca registrada; uso informativo. **150 px** (resolução baixa) |
+| escudos/escudo-milan-ge.png | [ge.globo – página do Milan](https://ge.globo.com/futebol/futebol-internacional/futebol-italiano/times/milan/) | A.C. Milan | Marca registrada; uso informativo. **150 px** |
+| escudos/escudo-liverpool-ge.svg | [ge.globo – página do Liverpool](https://ge.globo.com/futebol/futebol-internacional/futebol-ingles/times/liverpool/) | Liverpool FC | Marca registrada; uso informativo (vetor) |
+| escudos/escudo-flamengo-ge.svg | [ge.globo – página do Flamengo](https://ge.globo.com/futebol/times/flamengo/) | C.R. Flamengo | Marca registrada; uso informativo (vetor) |
+| logos/logo-libertadores-spfc.png | saopaulofc.net (`copa-libertadores-logo`) | CONMEBOL | Marca registrada. 150 px |
+| logos/logo-copa-do-brasil-spfc.png | saopaulofc.net (`copa-do-brasil-logo-3`) | CBF | Marca registrada |
+| logos/trofeu-mundial.svg | **Desenhado por mim** (troféu genérico; o logo oficial do Mundial FIFA não pôde ser baixado) | — | Autoria própria |
+| fotos/tele-santana-recorte.png | [cdn.saopaulofc.net/2024/12/tele-santana.jpg](https://cdn.saopaulofc.net/2024/12/tele-santana.jpg) | Acervo São Paulo FC (fotógrafo não informado) | Divulgação oficial do clube |
+| fotos/rogerio-ceni-recorte.png | [cdn.saopaulofc.net/2026/03/rogerio_ceni100_38.jpg](https://cdn.saopaulofc.net/2026/03/rogerio_ceni100_38.jpg): SP x Corinthians, 27/03/2011, jogo do 100º gol | **Rubens Chiri / Perspectiva** (saopaulofc.net) | Divulgação oficial do clube; creditar o fotógrafo |
+| fotos/rai-recorte.png | [cdn.saopaulofc.net/…/rai-foi-eleito-o-melhor-jogador-do-mundial-em-1992](https://cdn.saopaulofc.net/2024/12/rai-foi-eleito-o-melhor-jogador-do-mundial-em-1992_001-scaled.jpg): Raí comemorando o Mundial Interclubes de 1992 | Acervo São Paulo FC (fotógrafo não informado) | Divulgação oficial do clube |
+| fotos/morumbi.jpg | [cdn.saopaulofc.net/…/background-estadio-morumbi](https://cdn.saopaulofc.net/2026/08/background-estadio-morumbi-10-pilares-do-pit-spfc.jpg) | São Paulo FC | Divulgação oficial do clube (crédito "saopaulofc.net" na tela) |
+| fotos/time-1930.jpg | [cdn.saopaulofc.net/…/1930-03-16 SPFC 0x0 Ypiranga](https://cdn.saopaulofc.net/2024/03/1930-03-16_2_spfc0x0ypiranga_oficial_nomeserradosnaimg.jpg): time do 1º jogo oficial, 16/03/1930 | Acervo São Paulo FC | Domínio público pela idade da foto; acervo do clube |
 
-**Tratamento das fotos:** recorte de fundo com `rembg` (modelo `u2net_human_seg`, alpha matting) nas fotos de pessoas. Em todas as fotos foi aplicado o mesmo filtro: contraste 1,28, saturação 0,88, nitidez 1,15 e granulado gaussiano (σ≈9) desfocado em 0,6 px. Por cima do vídeo inteiro ainda há um granulado animado de papel.
+**Ainda pendentes (o Commons não liberou):** escudo da **AA das Palmeiras**, que aparece como selo "AAP" desenhado, e os SVGs do Commons de Barcelona, Milan e Libertadores, que dariam resolução maior. Assim que o Commons liberar, basta rodar `python3 scripts/process-assets.py` e re-renderizar.
+
+**Tratamento das fotos:** recorte de fundo com `rembg` (`u2net_human_seg`, alpha matting) nas fotos de Telê, Ceni e Raí. Em todas as fotos foi aplicado o mesmo filtro: contraste 1,28, saturação 0,88, nitidez 1,15 e granulado gaussiano (σ≈9, desfoque de 0,6 px). Por cima do vídeo inteiro há um granulado animado de papel.
 
 **Moeda:** desenhada em código (`src/components/Coin.tsx`), com o escudo atual no anverso e "CLUBE DA FÉ" no verso.
-
-**Fontes tipográficas:** Anton, Bebas Neue e Inter (Google Fonts, SIL Open Font License), servidas localmente de `public/fonts/`.
+**Fontes tipográficas:** Anton, Bebas Neue e Inter (Google Fonts, SIL OFL), servidas localmente de `public/fonts/`.
 
 ## 3. Áudio
 

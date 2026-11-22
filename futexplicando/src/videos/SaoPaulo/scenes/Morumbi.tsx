@@ -68,7 +68,7 @@ export const SceneMorumbi: React.FC = () => {
         </div>
       </AbsoluteFill>
       <div style={{ position: "absolute", bottom: 300, right: 40, fontFamily: INTER, fontWeight: 500, fontSize: 20, color: "rgba(244,239,230,0.7)" }}>
-        Foto: Arne Müseler / CC BY-SA 3.0 DE
+        Foto: saopaulofc.net
       </div>
     </AbsoluteFill>
   );

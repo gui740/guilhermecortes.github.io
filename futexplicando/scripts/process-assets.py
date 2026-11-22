@@ -32,20 +32,28 @@ CRESTS = {
     "escudo-milan.svg": "escudo-milan.svg",
     "escudo-liverpool.svg": "escudo-liverpool.svg",
     "escudo-flamengo.svg": "escudo-flamengo.svg",
+    # fontes alternativas (ge.globo) usadas enquanto o Wikimedia bloqueava o download
+    "escudo-flamengo-ge.svg": "escudo-flamengo-ge.svg",
+    "escudo-liverpool-ge.svg": "escudo-liverpool-ge.svg",
+    "escudo-barcelona-ge.png": "escudo-barcelona-ge.png",
+    "escudo-milan-ge.png": "escudo-milan-ge.png",
 }
 LOGOS = {
     "logo-libertadores.svg": "logo-libertadores.svg",
     "logo-conmebol-libertadores.svg": "logo-conmebol-libertadores.svg",
     "logo-mundial-clubes-fifa.svg": "logo-mundial-clubes-fifa.svg",
     "logo-copa-do-brasil.svg": "logo-copa-do-brasil.svg",
+    "logo-libertadores-spfc.png": "logo-libertadores-spfc.png",
+    "logo-copa-do-brasil-spfc.png": "logo-copa-do-brasil-spfc.png",
 }
 # (arquivo bruto, saída, recortar fundo?, largura máx)
 PHOTOS = [
-    ("foto-tele-santana.jpg", "tele-santana-recorte.png", True, 1400),
-    ("foto-rogerio-ceni.jpg", "rogerio-ceni-recorte.png", True, 1600),
-    ("foto-rai.jpg", "rai-recorte.png", True, 1400),
-    ("foto-morumbi-aerea.jpg", "morumbi-aerea.jpg", False, 3000),
-    ("foto-time-1930.jpg", "time-1930.jpg", False, 2000),
+    # divulgação oficial / acervo saopaulofc.net
+    ("foto-tele-santana-spfc.jpg", "tele-santana-recorte.png", True, 1440),
+    ("foto-rogerio-ceni-spfc.jpg", "rogerio-ceni-recorte.png", True, 1800),
+    ("foto-rai-spfc.jpg", "rai-recorte.png", True, 1800),
+    ("foto-morumbi-spfc.jpg", "morumbi.jpg", False, 1920),
+    ("foto-time-1930-spfc.jpg", "time-1930.jpg", False, 1600),
 ]
 
 
