@@ -1,0 +1,968 @@
+{
+  "id": "SaoPaulo",
+  "titulo": "A história do São Paulo em 60 segundos",
+  "handle": "@futexplicando",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duracaoSegundos": 61,
+  "paleta": {
+    "vermelho": "#E30613",
+    "preto": "#111111",
+    "branco": "#F4EFE6",
+    "cinza": "#8A8A8A"
+  },
+  "audio": {
+    "mix": "sao-paulo/audio/mix-sao-paulo.wav",
+    "narracao": "sao-paulo/audio/narracao-gemini.wav",
+    "trilha": "sao-paulo/audio/trilha-hit-n-smash.mp3",
+    "narracaoCortes": [
+      {
+        "de": 0,
+        "ate": 1.28,
+        "em": 0.15
+      },
+      {
+        "de": 1.28,
+        "ate": 58.1,
+        "em": 2.78
+      }
+    ],
+    "trilhaEntra": 4.5
+  },
+  "assets": {
+    "escudoAtual": "sao-paulo/escudos/escudo-spfc-atual.svg",
+    "escudo1930": "sao-paulo/escudos/escudo-sp-floresta-1930.png",
+    "escudo1935": "sao-paulo/escudos/escudo-spfc-atual.svg",
+    "escudoPaulistano": "sao-paulo/escudos/escudo-paulistano.svg",
+    "escudoPalmeiras": "sao-paulo/escudos/escudo-aa-palmeiras.svg",
+    "escudoBarcelona": "sao-paulo/escudos/escudo-barcelona.svg",
+    "escudoMilan": "sao-paulo/escudos/escudo-milan.svg",
+    "escudoLiverpool": "sao-paulo/escudos/escudo-liverpool.svg",
+    "escudoFlamengo": "sao-paulo/escudos/escudo-flamengo.svg",
+    "logoLibertadores": "sao-paulo/logos/logo-libertadores.svg",
+    "logoMundial": "sao-paulo/logos/logo-mundial-clubes-fifa.svg",
+    "logoCopaDoBrasil": "sao-paulo/logos/logo-copa-do-brasil.svg",
+    "fotoMorumbi": "sao-paulo/fotos/morumbi-aerea.jpg",
+    "fotoTime1930": "sao-paulo/fotos/time-1930.jpg",
+    "fotoTele": "sao-paulo/fotos/tele-santana-recorte.png",
+    "fotoCeni": "sao-paulo/fotos/rogerio-ceni-recorte.png",
+    "fotoRai": "sao-paulo/fotos/rai-recorte.png"
+  },
+  "cenas": {
+    "gancho": {
+      "inicio": 0,
+      "fim": 4.5,
+      "texto": [
+        "ONDE A MOEDA",
+        "CAI EM PÉ"
+      ],
+      "kicker": "CLUBE DA FÉ",
+      "moeda": {
+        "quiques": [
+          1.5,
+          1.86,
+          2.1,
+          2.24
+        ],
+        "emPe": 2.34,
+        "textoEm": 2.8
+      }
+    },
+    "virada": {
+      "inicio": 4.5,
+      "fim": 6.95,
+      "linha1": "A HISTÓRIA DO",
+      "linha2": "SÃO PAULO",
+      "linha3": "EM 60 SEGUNDOS"
+    },
+    "nascimento": {
+      "inicio": 6.95,
+      "fim": 17.2,
+      "data": "25/01/1930",
+      "dataEm": 7.04,
+      "nota": "ANIVERSÁRIO DA CIDADE",
+      "notaEm": 9.6,
+      "paulistanoEm": 11.0,
+      "palmeirasEm": 12.0,
+      "fusaoEm": 14.2,
+      "nomeEm": 15.5,
+      "nomes": {
+        "a": "PAULISTANO",
+        "b": "AA DAS PALMEIRAS"
+      },
+      "resultado": "SÃO PAULO DA FLORESTA"
+    },
+    "morte": {
+      "inicio": 17.2,
+      "fim": 23.3,
+      "frases": [
+        {
+          "t": "CRISE FINANCEIRA",
+          "em": 17.32
+        },
+        {
+          "t": "BRIGA POLÍTICA",
+          "em": 18.84
+        }
+      ],
+      "ano": "1935",
+      "anoEm": 20.14,
+      "quebraEm": 22.2,
+      "rodape": "O FUTEBOL DO CLUBE É EXTINTO"
+    },
+    "fe": {
+      "inicio": 23.3,
+      "fim": 31.15,
+      "remontaEm": 23.5,
+      "data": "16/12/1935",
+      "dataEm": 25.38,
+      "refundadoEm": 27.46,
+      "apelido": "CLUBE DA FÉ",
+      "apelidoEm": 29.85,
+      "legenda": "REFUNDAÇÃO"
+    },
+    "morumbi": {
+      "inicio": 31.15,
+      "fim": 35.55,
+      "titulo": "MORUMBI",
+      "tituloEm": 34.45,
+      "subtitulo": "O MAIOR ESTÁDIO PARTICULAR DO BRASIL",
+      "subtituloEm": 32.1,
+      "marcos": [
+        {
+          "ano": "1960",
+          "txt": "INAUGURAÇÃO"
+        },
+        {
+          "ano": "1970",
+          "txt": "CONCLUSÃO"
+        }
+      ]
+    },
+    "mundo": {
+      "inicio": 35.55,
+      "fim": 48.5,
+      "tele": {
+        "em": 35.55,
+        "nome": "TELÊ SANTANA",
+        "biLibertaEm": 36.8,
+        "biMundialEm": 38.1
+      },
+      "placares": [
+        {
+          "em": 39.0,
+          "ate": 39.95,
+          "ano": "1992",
+          "torneio": "INTERCONTINENTAL · TÓQUIO",
+          "golsSP": 2,
+          "adv": "BARCELONA",
+          "golsAdv": 1,
+          "escudoAdv": "escudoBarcelona",
+          "destaque": "RAÍ 2X",
+          "foto": "fotoRai"
+        },
+        {
+          "em": 39.95,
+          "ate": 41.0,
+          "ano": "1993",
+          "torneio": "INTERCONTINENTAL · TÓQUIO",
+          "golsSP": 3,
+          "adv": "MILAN",
+          "golsAdv": 2,
+          "escudoAdv": "escudoMilan",
+          "destaque": "BI MUNDIAL"
+        },
+        {
+          "em": 43.9,
+          "ate": 45.0,
+          "ano": "2005",
+          "torneio": "MUNDIAL DE CLUBES FIFA · YOKOHAMA",
+          "golsSP": 1,
+          "adv": "LIVERPOOL",
+          "golsAdv": 0,
+          "escudoAdv": "escudoLiverpool",
+          "destaque": "GOL DE MINEIRO"
+        }
+      ],
+      "ano2005": {
+        "em": 41.0,
+        "ano": "2005",
+        "titulos": [
+          "LIBERTADORES",
+          "MUNDIAL FIFA"
+        ]
+      },
+      "tri": {
+        "em": 45.0,
+        "anos": [
+          "2006",
+          "2007",
+          "2008"
+        ],
+        "titulo": "PRIMEIRO TRI BRASILEIRO SEGUIDO",
+        "anosEm": [
+          45.6,
+          46.0,
+          46.4
+        ],
+        "totalBrasileiros": "6 BRASILEIROS: 77 · 86 · 91 · 06 · 07 · 08",
+        "extra": "+ COPA DO BRASIL 2023 (2×1 NO AGREGADO) · SUPERCOPA 2024",
+        "extraEm": 47.1
+      }
+    },
+    "stat": {
+      "inicio": 48.5,
+      "fim": 56.1,
+      "numero": 12,
+      "numeroEm": 48.8,
+      "rotulo": "TÍTULOS INTERNACIONAIS",
+      "sub": "RECORDE ENTRE CLUBES BRASILEIROS",
+      "subEm": 50.6,
+      "quebra": [
+        {
+          "n": 3,
+          "t": "LIBERTADORES"
+        },
+        {
+          "n": 3,
+          "t": "MUNDIAIS*"
+        },
+        {
+          "n": 1,
+          "t": "SUL-AMERICANA"
+        },
+        {
+          "n": 5,
+          "t": "OUTROS CONMEBOL"
+        }
+      ],
+      "nota": "*2 INTERCONTINENTAIS (92/93) + MUNDIAL FIFA 2005",
+      "ceni": {
+        "em": 52.6,
+        "nome": "ROGÉRIO CENI",
+        "gols": 131,
+        "golsEm": 53.9,
+        "rotulo": "GOLS",
+        "punch": "SENDO GOLEIRO.",
+        "punchEm": 55.4
+      }
+    },
+    "cta": {
+      "inicio": 56.1,
+      "fim": 61,
+      "pergunta": [
+        "QUAL TIME VOCÊ",
+        "QUER VER EXPLICADO?"
+      ],
+      "acao": "COMENTA AÍ",
+      "acaoEm": 58.6,
+      "moedaSobeEm": 59.4
+    }
+  },
+  "transicoesMoeda": [
+    16.95,
+    31.0,
+    35.4,
+    48.3
+  ],
+  "capa": {
+    "texto": [
+      "ONDE A MOEDA",
+      "CAI EM PÉ"
+    ],
+    "sub": "A HISTÓRIA DO SÃO PAULO"
+  },
+  "legendas": [
+    {
+      "text": "Clube",
+      "start": 0.15,
+      "end": 0.67
+    },
+    {
+      "text": "da",
+      "start": 0.67,
+      "end": 0.85
+    },
+    {
+      "text": "Fé,",
+      "start": 0.85,
+      "end": 1.17
+    },
+    {
+      "text": "onde",
+      "start": 2.82,
+      "end": 3.06
+    },
+    {
+      "text": "a",
+      "start": 3.06,
+      "end": 3.18
+    },
+    {
+      "text": "moeda",
+      "start": 3.18,
+      "end": 3.46
+    },
+    {
+      "text": "cai",
+      "start": 3.46,
+      "end": 3.82
+    },
+    {
+      "text": "em",
+      "start": 3.82,
+      "end": 4.02
+    },
+    {
+      "text": "pé.",
+      "start": 4.02,
+      "end": 4.3
+    },
+    {
+      "text": "Essa",
+      "start": 4.6,
+      "end": 5.08
+    },
+    {
+      "text": "é",
+      "start": 5.08,
+      "end": 5.16
+    },
+    {
+      "text": "a",
+      "start": 5.16,
+      "end": 5.22
+    },
+    {
+      "text": "história",
+      "start": 5.22,
+      "end": 5.58
+    },
+    {
+      "text": "do",
+      "start": 5.58,
+      "end": 5.78
+    },
+    {
+      "text": "São",
+      "start": 5.78,
+      "end": 5.96
+    },
+    {
+      "text": "Paulo.",
+      "start": 5.96,
+      "end": 6.38
+    },
+    {
+      "text": "25",
+      "start": 7.04,
+      "end": 7.62
+    },
+    {
+      "text": "de",
+      "start": 7.62,
+      "end": 7.86
+    },
+    {
+      "text": "janeiro",
+      "start": 7.86,
+      "end": 8.18
+    },
+    {
+      "text": "de",
+      "start": 8.18,
+      "end": 8.32
+    },
+    {
+      "text": "1930,",
+      "start": 8.32,
+      "end": 8.9
+    },
+    {
+      "text": "aniversário",
+      "start": 9.64,
+      "end": 10.02
+    },
+    {
+      "text": "da",
+      "start": 10.02,
+      "end": 10.14
+    },
+    {
+      "text": "cidade.",
+      "start": 10.14,
+      "end": 10.56
+    },
+    {
+      "text": "Paulistano",
+      "start": 11.12,
+      "end": 11.74
+    },
+    {
+      "text": "e",
+      "start": 11.74,
+      "end": 12.08
+    },
+    {
+      "text": "AA",
+      "start": 12.08,
+      "end": 12.7
+    },
+    {
+      "text": "das",
+      "start": 12.86,
+      "end": 12.86
+    },
+    {
+      "text": "Palmeiras",
+      "start": 12.86,
+      "end": 13.3
+    },
+    {
+      "text": "se",
+      "start": 13.3,
+      "end": 13.48
+    },
+    {
+      "text": "juntam",
+      "start": 13.48,
+      "end": 13.88
+    },
+    {
+      "text": "e",
+      "start": 13.88,
+      "end": 14.28
+    },
+    {
+      "text": "nasce",
+      "start": 14.28,
+      "end": 14.64
+    },
+    {
+      "text": "o",
+      "start": 14.64,
+      "end": 14.74
+    },
+    {
+      "text": "São",
+      "start": 14.74,
+      "end": 14.84
+    },
+    {
+      "text": "Paulo,",
+      "start": 14.84,
+      "end": 15.26
+    },
+    {
+      "text": "o",
+      "start": 15.56,
+      "end": 15.72
+    },
+    {
+      "text": "São",
+      "start": 15.72,
+      "end": 15.86
+    },
+    {
+      "text": "Paulo",
+      "start": 15.86,
+      "end": 16.22
+    },
+    {
+      "text": "da",
+      "start": 16.22,
+      "end": 16.4
+    },
+    {
+      "text": "Floresta.",
+      "start": 16.4,
+      "end": 16.94
+    },
+    {
+      "text": "Crise",
+      "start": 17.32,
+      "end": 17.7
+    },
+    {
+      "text": "financeira,",
+      "start": 17.7,
+      "end": 18.46
+    },
+    {
+      "text": "briga",
+      "start": 18.84,
+      "end": 19.04
+    },
+    {
+      "text": "política.",
+      "start": 19.04,
+      "end": 19.62
+    },
+    {
+      "text": "Em",
+      "start": 20.14,
+      "end": 20.28
+    },
+    {
+      "text": "1935,",
+      "start": 20.28,
+      "end": 21.46
+    },
+    {
+      "text": "o",
+      "start": 21.84,
+      "end": 22.08
+    },
+    {
+      "text": "clube",
+      "start": 22.08,
+      "end": 22.32
+    },
+    {
+      "text": "acaba.",
+      "start": 22.32,
+      "end": 22.62
+    },
+    {
+      "text": "Mas",
+      "start": 23.38,
+      "end": 23.54
+    },
+    {
+      "text": "os",
+      "start": 23.54,
+      "end": 23.68
+    },
+    {
+      "text": "sócios",
+      "start": 23.68,
+      "end": 23.98
+    },
+    {
+      "text": "não",
+      "start": 23.98,
+      "end": 24.28
+    },
+    {
+      "text": "desistem.",
+      "start": 24.28,
+      "end": 24.84
+    },
+    {
+      "text": "Em",
+      "start": 25.26,
+      "end": 25.38
+    },
+    {
+      "text": "dezembro",
+      "start": 25.38,
+      "end": 25.84
+    },
+    {
+      "text": "do",
+      "start": 25.84,
+      "end": 25.98
+    },
+    {
+      "text": "mesmo",
+      "start": 25.98,
+      "end": 26.16
+    },
+    {
+      "text": "ano,",
+      "start": 26.16,
+      "end": 26.54
+    },
+    {
+      "text": "o",
+      "start": 26.84,
+      "end": 26.9
+    },
+    {
+      "text": "São",
+      "start": 26.9,
+      "end": 27.02
+    },
+    {
+      "text": "Paulo",
+      "start": 27.02,
+      "end": 27.36
+    },
+    {
+      "text": "é",
+      "start": 27.36,
+      "end": 27.46
+    },
+    {
+      "text": "refundado.",
+      "start": 27.46,
+      "end": 28.18
+    },
+    {
+      "text": "Daí",
+      "start": 28.18,
+      "end": 28.94
+    },
+    {
+      "text": "vem",
+      "start": 28.94,
+      "end": 29.1
+    },
+    {
+      "text": "o",
+      "start": 29.1,
+      "end": 29.2
+    },
+    {
+      "text": "apelido.",
+      "start": 29.2,
+      "end": 29.58
+    },
+    {
+      "text": "Clube",
+      "start": 29.9,
+      "end": 30.28
+    },
+    {
+      "text": "da",
+      "start": 30.28,
+      "end": 30.46
+    },
+    {
+      "text": "Fé.",
+      "start": 30.46,
+      "end": 30.82
+    },
+    {
+      "text": "E",
+      "start": 31.26,
+      "end": 31.56
+    },
+    {
+      "text": "constrói",
+      "start": 31.56,
+      "end": 32.08
+    },
+    {
+      "text": "o",
+      "start": 32.08,
+      "end": 32.14
+    },
+    {
+      "text": "maior",
+      "start": 32.14,
+      "end": 32.34
+    },
+    {
+      "text": "estádio",
+      "start": 32.34,
+      "end": 32.94
+    },
+    {
+      "text": "particular",
+      "start": 32.94,
+      "end": 33.52
+    },
+    {
+      "text": "do",
+      "start": 33.52,
+      "end": 33.7
+    },
+    {
+      "text": "Brasil,",
+      "start": 33.7,
+      "end": 34.06
+    },
+    {
+      "text": "o",
+      "start": 34.36,
+      "end": 34.48
+    },
+    {
+      "text": "Morumbi.",
+      "start": 34.48,
+      "end": 35.14
+    },
+    {
+      "text": "Com",
+      "start": 35.66,
+      "end": 35.88
+    },
+    {
+      "text": "o",
+      "start": 35.88,
+      "end": 35.92
+    },
+    {
+      "text": "Telê",
+      "start": 35.92,
+      "end": 36.04
+    },
+    {
+      "text": "Santana,",
+      "start": 36.04,
+      "end": 36.58
+    },
+    {
+      "text": "bi",
+      "start": 36.86,
+      "end": 37.12
+    },
+    {
+      "text": "da",
+      "start": 37.12,
+      "end": 37.24
+    },
+    {
+      "text": "Libertadores",
+      "start": 37.24,
+      "end": 37.8
+    },
+    {
+      "text": "e",
+      "start": 37.8,
+      "end": 38.16
+    },
+    {
+      "text": "bi",
+      "start": 38.16,
+      "end": 38.34
+    },
+    {
+      "text": "Mundial,",
+      "start": 38.34,
+      "end": 38.78
+    },
+    {
+      "text": "em",
+      "start": 38.94,
+      "end": 39.12
+    },
+    {
+      "text": "92",
+      "start": 39.12,
+      "end": 39.6
+    },
+    {
+      "text": "e",
+      "start": 39.6,
+      "end": 39.96
+    },
+    {
+      "text": "93.",
+      "start": 39.96,
+      "end": 40.46
+    },
+    {
+      "text": "Em",
+      "start": 41.06,
+      "end": 41.24
+    },
+    {
+      "text": "2005",
+      "start": 41.24,
+      "end": 41.68
+    },
+    {
+      "text": "de",
+      "start": 41.68,
+      "end": 41.94
+    },
+    {
+      "text": "novo,",
+      "start": 41.94,
+      "end": 42.18
+    },
+    {
+      "text": "Libertadores",
+      "start": 42.56,
+      "end": 43.12
+    },
+    {
+      "text": "e",
+      "start": 43.12,
+      "end": 43.36
+    },
+    {
+      "text": "Mundial,",
+      "start": 43.36,
+      "end": 43.74
+    },
+    {
+      "text": "contra",
+      "start": 43.96,
+      "end": 44.14
+    },
+    {
+      "text": "o",
+      "start": 44.14,
+      "end": 44.28
+    },
+    {
+      "text": "Liverpool.",
+      "start": 44.28,
+      "end": 44.68
+    },
+    {
+      "text": "Depois,",
+      "start": 45.04,
+      "end": 45.4
+    },
+    {
+      "text": "o",
+      "start": 45.76,
+      "end": 45.82
+    },
+    {
+      "text": "primeiro",
+      "start": 45.82,
+      "end": 46.08
+    },
+    {
+      "text": "tri",
+      "start": 46.08,
+      "end": 46.42
+    },
+    {
+      "text": "brasileiro",
+      "start": 46.42,
+      "end": 47.02
+    },
+    {
+      "text": "seguido",
+      "start": 47.02,
+      "end": 47.48
+    },
+    {
+      "text": "da",
+      "start": 47.48,
+      "end": 47.66
+    },
+    {
+      "text": "história.",
+      "start": 47.66,
+      "end": 48.04
+    },
+    {
+      "text": "São",
+      "start": 48.6,
+      "end": 48.84
+    },
+    {
+      "text": "12",
+      "start": 48.84,
+      "end": 49.2
+    },
+    {
+      "text": "títulos",
+      "start": 49.2,
+      "end": 49.62
+    },
+    {
+      "text": "internacionais.",
+      "start": 49.62,
+      "end": 50.4
+    },
+    {
+      "text": "Recorde",
+      "start": 50.64,
+      "end": 51.2
+    },
+    {
+      "text": "entre",
+      "start": 51.2,
+      "end": 51.32
+    },
+    {
+      "text": "os",
+      "start": 51.32,
+      "end": 51.46
+    },
+    {
+      "text": "clubes",
+      "start": 51.46,
+      "end": 51.74
+    },
+    {
+      "text": "brasileiros.",
+      "start": 51.74,
+      "end": 52.32
+    },
+    {
+      "text": "E",
+      "start": 52.66,
+      "end": 52.84
+    },
+    {
+      "text": "Rogério",
+      "start": 52.84,
+      "end": 53.16
+    },
+    {
+      "text": "Ceni,",
+      "start": 53.16,
+      "end": 53.54
+    },
+    {
+      "text": "131",
+      "start": 53.94,
+      "end": 54.88
+    },
+    {
+      "text": "gols,",
+      "start": 54.88,
+      "end": 55.32
+    },
+    {
+      "text": "sendo",
+      "start": 55.44,
+      "end": 55.68
+    },
+    {
+      "text": "goleiro.",
+      "start": 55.68,
+      "end": 56.22
+    },
+    {
+      "text": "Qual",
+      "start": 56.22,
+      "end": 56.92
+    },
+    {
+      "text": "time",
+      "start": 56.92,
+      "end": 57.22
+    },
+    {
+      "text": "você",
+      "start": 57.22,
+      "end": 57.5
+    },
+    {
+      "text": "quer",
+      "start": 57.5,
+      "end": 57.78
+    },
+    {
+      "text": "ver",
+      "start": 57.78,
+      "end": 57.9
+    },
+    {
+      "text": "explicado?",
+      "start": 57.9,
+      "end": 58.42
+    },
+    {
+      "text": "Comenta",
+      "start": 58.66,
+      "end": 58.94
+    },
+    {
+      "text": "aí.",
+      "start": 58.94,
+      "end": 59.12
+    }
+  ]
+}
