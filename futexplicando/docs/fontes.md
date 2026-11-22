@@ -47,7 +47,7 @@ Todas vêm do **Wikimedia Commons**, com licença que permite uso comercial; os 
 
 | Arquivo | Uso | Origem | Licença |
 |---|---|---|---|
-| voz.mp3 | Narração | Microsoft Edge TTS, voz `pt-BR-AntonioNeural` (gerada por `scripts/gerar-voz.py`) | Voz sintética **provisória**; a ideia é trocar pela ElevenLabs/voz própria |
+| voz.mp3 | Narração | Google Gemini TTS (AI Studio), modelo `gemini-3.1-flash-tts-preview`, voz `Puck`, tom de resenha; acelerada 6% (`voice.tempo`). Timing palavra a palavra por alinhamento com faster-whisper. | Áudio gerado pela API do Gemini; conforme os termos da API Gemini, o conteúdo gerado pode ser usado pelo usuário (inclusive comercialmente) |
 | music/trilha.mp3 | Trilha (–18 dB) | ["Summer [Guitar Hip-Hop Beat]" – Seth_Makes_Sounds](https://freesound.org/s/820076/) | CC0 |
 | sfx/estadio.mp3 | Ambiente de estádio (–28 dB) | ["noise#01.aif" – huubjeroen](https://freesound.org/s/39733/) (torcida em estádio, trecho de 75s) | CC0 |
 | sfx/torcida-gol.mp3 | Torcida no 3x1 | ["19 Football Crowd - Reaction To Goal" – D.jones](https://freesound.org/s/528799/) | CC0 |

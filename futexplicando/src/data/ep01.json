@@ -20,7 +20,11 @@
     "elevenVoiceId": "",
     "leadInSeconds": 0.4,
     "gapSeconds": 0.16,
-    "tailSeconds": 0.8
+    "tailSeconds": 0.8,
+    "geminiModel": "gemini-3.1-flash-tts-preview",
+    "geminiVoice": "Puck",
+    "geminiStyle": "Leia como um narrador brasileiro de resenha de futebol no YouTube, enérgico, empolgado e rápido: ",
+    "tempo": 1.06
   },
   "audio": {
     "music": {
@@ -42,7 +46,7 @@
     {
       "id": "hook",
       "type": "hook",
-      "narration": "O Palmeiras quase deixou de existir, por causa da Segunda Guerra Mundial.",
+      "narration": "O Palmeiras quase deixou de existir, por causa da Segunda Guerra Mundial. Essa é a história do Palmeiras.",
       "props": {
         "lines": [
           "QUASE",
@@ -55,7 +59,11 @@
           "existir",
           "guerra"
         ],
-        "crest": "img/escudo.png"
+        "crest": "img/escudo.png",
+        "subtitle": {
+          "text": "A HISTÓRIA DO PALMEIRAS",
+          "word": "história"
+        }
       },
       "image": {
         "src": "img/campeao-1942.jpg"
@@ -256,1206 +264,1262 @@
     "kicker": "A HISTÓRIA DO PALMEIRAS EM 60s"
   },
   "timing": {
-    "engine": "edge-tts:pt-BR-AntonioNeural",
-    "totalSeconds": 62.328,
+    "engine": "gemini:gemini-3.1-flash-tts-preview:Puck",
+    "totalSeconds": 61.715,
     "scenes": [
       {
         "id": "hook",
         "voiceStart": 0.4,
-        "voiceEnd": 4.528,
+        "voiceEnd": 6.022,
         "start": 0.0,
-        "end": 4.608
+        "end": 6.102
       },
       {
         "id": "fundacao",
-        "voiceStart": 4.688,
-        "voiceEnd": 12.536,
-        "start": 4.608,
-        "end": 12.616
+        "voiceStart": 6.182,
+        "voiceEnd": 13.24,
+        "start": 6.102,
+        "end": 13.32
       },
       {
         "id": "guerra",
-        "voiceStart": 12.696,
-        "voiceEnd": 26.352,
-        "start": 12.616,
-        "end": 26.432
+        "voiceStart": 13.4,
+        "voiceEnd": 26.881,
+        "start": 13.32,
+        "end": 26.961
       },
       {
         "id": "arrancada",
-        "voiceStart": 26.512,
-        "voiceEnd": 40.96,
-        "start": 26.432,
-        "end": 41.04
+        "voiceStart": 27.041,
+        "voiceEnd": 40.852,
+        "start": 26.961,
+        "end": 40.932
       },
       {
         "id": "linha",
-        "voiceStart": 41.12,
-        "voiceEnd": 53.096,
-        "start": 41.04,
-        "end": 53.176
+        "voiceStart": 41.012,
+        "voiceEnd": 53.433,
+        "start": 40.932,
+        "end": 53.513
       },
       {
         "id": "stat",
-        "voiceStart": 53.256,
-        "voiceEnd": 57.336,
-        "start": 53.176,
-        "end": 57.416
+        "voiceStart": 53.593,
+        "voiceEnd": 58.004,
+        "start": 53.513,
+        "end": 58.084
       },
       {
         "id": "cta",
-        "voiceStart": 57.496,
-        "voiceEnd": 61.528,
-        "start": 57.416,
-        "end": 62.328
+        "voiceStart": 58.164,
+        "voiceEnd": 60.915,
+        "start": 58.084,
+        "end": 61.715
       }
     ],
     "words": [
       {
         "text": "O",
         "key": "o",
-        "start": 0.49,
-        "end": 0.591,
+        "start": 0.4,
+        "end": 0.5,
         "scene": "hook"
       },
       {
         "text": "Palmeiras",
         "key": "palmeiras",
-        "start": 0.601,
-        "end": 1.014,
+        "start": 0.5,
+        "end": 0.88,
         "scene": "hook"
       },
       {
         "text": "quase",
         "key": "quase",
-        "start": 1.025,
-        "end": 1.307,
+        "start": 0.88,
+        "end": 1.38,
         "scene": "hook"
       },
       {
         "text": "deixou",
         "key": "deixou",
-        "start": 1.317,
-        "end": 1.629,
+        "start": 1.38,
+        "end": 1.92,
         "scene": "hook"
       },
       {
         "text": "de",
         "key": "de",
-        "start": 1.639,
-        "end": 1.7,
+        "start": 1.92,
+        "end": 2.02,
         "scene": "hook"
       },
       {
-        "text": "existir",
+        "text": "existir,",
         "key": "existir",
-        "start": 1.71,
-        "end": 2.083,
+        "start": 2.02,
+        "end": 2.54,
         "scene": "hook"
       },
       {
         "text": "por",
         "key": "por",
-        "start": 2.275,
-        "end": 2.406,
+        "start": 2.62,
+        "end": 2.76,
         "scene": "hook"
       },
       {
         "text": "causa",
         "key": "causa",
-        "start": 2.416,
-        "end": 2.668,
+        "start": 2.76,
+        "end": 2.96,
         "scene": "hook"
       },
       {
         "text": "da",
         "key": "da",
-        "start": 2.678,
-        "end": 2.758,
+        "start": 2.96,
+        "end": 3.2,
         "scene": "hook"
       },
       {
         "text": "Segunda",
         "key": "segunda",
-        "start": 2.769,
-        "end": 3.142,
+        "start": 3.2,
+        "end": 3.7,
         "scene": "hook"
       },
       {
         "text": "Guerra",
         "key": "guerra",
-        "start": 3.152,
-        "end": 3.363,
+        "start": 3.7,
+        "end": 3.92,
         "scene": "hook"
       },
       {
-        "text": "Mundial",
+        "text": "Mundial.",
         "key": "mundial",
-        "start": 3.373,
-        "end": 3.817,
+        "start": 3.92,
+        "end": 4.34,
         "scene": "hook"
       },
       {
-        "text": "1914",
+        "text": "Essa",
+        "key": "essa",
+        "start": 4.5,
+        "end": 4.84,
+        "scene": "hook"
+      },
+      {
+        "text": "é",
+        "key": "é",
+        "start": 4.84,
+        "end": 5.04,
+        "scene": "hook"
+      },
+      {
+        "text": "a",
+        "key": "a",
+        "start": 5.04,
+        "end": 5.06,
+        "scene": "hook"
+      },
+      {
+        "text": "história",
+        "key": "história",
+        "start": 5.06,
+        "end": 5.3,
+        "scene": "hook"
+      },
+      {
+        "text": "do",
+        "key": "do",
+        "start": 5.3,
+        "end": 5.46,
+        "scene": "hook"
+      },
+      {
+        "text": "Palmeiras.",
+        "key": "palmeiras",
+        "start": 5.46,
+        "end": 5.88,
+        "scene": "hook"
+      },
+      {
+        "text": "1914.",
         "key": "1914",
-        "start": 4.778,
-        "end": 5.998,
+        "start": 6.882,
+        "end": 7.442,
         "scene": "fundacao"
       },
       {
         "text": "Imigrantes",
         "key": "imigrantes",
-        "start": 6.049,
-        "end": 6.452,
+        "start": 7.682,
+        "end": 8.182,
         "scene": "fundacao"
       },
       {
         "text": "italianos",
         "key": "italianos",
-        "start": 6.462,
-        "end": 6.926,
+        "start": 8.182,
+        "end": 8.662,
         "scene": "fundacao"
       },
       {
         "text": "em",
         "key": "em",
-        "start": 6.936,
-        "end": 7.067,
+        "start": 8.662,
+        "end": 8.722,
         "scene": "fundacao"
       },
       {
         "text": "São",
         "key": "são",
-        "start": 7.077,
-        "end": 7.238,
+        "start": 8.722,
+        "end": 8.862,
         "scene": "fundacao"
       },
       {
         "text": "Paulo",
         "key": "paulo",
-        "start": 7.248,
-        "end": 7.51,
+        "start": 8.862,
+        "end": 9.162,
         "scene": "fundacao"
       },
       {
         "text": "fundam",
         "key": "fundam",
-        "start": 7.52,
-        "end": 7.843,
+        "start": 9.162,
+        "end": 9.542,
         "scene": "fundacao"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 7.853,
-        "end": 7.883,
+        "start": 9.542,
+        "end": 9.642,
         "scene": "fundacao"
       },
       {
         "text": "Palestra",
         "key": "palestra",
-        "start": 7.893,
-        "end": 8.286,
+        "start": 9.642,
+        "end": 10.162,
         "scene": "fundacao"
       },
       {
-        "text": "Italia",
+        "text": "Italia.",
         "key": "italia",
-        "start": 8.296,
-        "end": 8.639,
+        "start": 10.162,
+        "end": 10.642,
         "scene": "fundacao"
       },
       {
-        "text": "Verde",
+        "text": "Verde,",
         "key": "verde",
-        "start": 9.325,
-        "end": 9.718,
+        "start": 10.782,
+        "end": 11.182,
         "scene": "fundacao"
       },
       {
         "text": "branco",
         "key": "branco",
-        "start": 9.98,
-        "end": 10.263,
+        "start": 11.222,
+        "end": 11.522,
         "scene": "fundacao"
       },
       {
         "text": "e",
         "key": "e",
-        "start": 10.273,
-        "end": 10.303,
+        "start": 11.522,
+        "end": 11.582,
         "scene": "fundacao"
       },
       {
-        "text": "vermelho",
+        "text": "vermelho:",
         "key": "vermelho",
-        "start": 10.313,
-        "end": 10.757,
+        "start": 11.582,
+        "end": 12.022,
         "scene": "fundacao"
       },
       {
         "text": "as",
         "key": "as",
-        "start": 10.938,
-        "end": 11.079,
+        "start": 12.142,
+        "end": 12.242,
         "scene": "fundacao"
       },
       {
         "text": "cores",
         "key": "cores",
-        "start": 11.089,
-        "end": 11.341,
+        "start": 12.242,
+        "end": 12.502,
         "scene": "fundacao"
       },
       {
         "text": "da",
         "key": "da",
-        "start": 11.351,
-        "end": 11.442,
+        "start": 12.502,
+        "end": 12.722,
         "scene": "fundacao"
       },
       {
-        "text": "Itália",
+        "text": "Itália.",
         "key": "itália",
-        "start": 11.452,
-        "end": 11.825,
+        "start": 12.722,
+        "end": 13.202,
         "scene": "fundacao"
       },
       {
-        "text": "1942",
+        "text": "1942.",
         "key": "1942",
-        "start": 12.786,
-        "end": 14.087,
+        "start": 14.42,
+        "end": 14.9,
         "scene": "guerra"
       },
       {
         "text": "O",
         "key": "o",
-        "start": 14.107,
-        "end": 14.127,
+        "start": 15.18,
+        "end": 15.28,
         "scene": "guerra"
       },
       {
         "text": "Brasil",
         "key": "brasil",
-        "start": 14.137,
-        "end": 14.46,
+        "start": 15.28,
+        "end": 15.56,
         "scene": "guerra"
       },
       {
         "text": "rompe",
         "key": "rompe",
-        "start": 14.47,
-        "end": 14.782,
+        "start": 15.56,
+        "end": 16.02,
         "scene": "guerra"
       },
       {
         "text": "com",
         "key": "com",
-        "start": 14.792,
-        "end": 14.984,
+        "start": 16.02,
+        "end": 16.16,
         "scene": "guerra"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 14.994,
-        "end": 15.044,
+        "start": 16.16,
+        "end": 16.28,
         "scene": "guerra"
       },
       {
-        "text": "Eixo",
+        "text": "Eixo,",
         "key": "eixo",
-        "start": 15.054,
-        "end": 15.306,
+        "start": 16.28,
+        "end": 16.52,
         "scene": "guerra"
       },
       {
         "text": "e",
         "key": "e",
-        "start": 15.559,
-        "end": 15.659,
+        "start": 16.68,
+        "end": 16.72,
         "scene": "guerra"
       },
       {
         "text": "Vargas",
         "key": "vargas",
-        "start": 15.669,
-        "end": 16.022,
+        "start": 16.72,
+        "end": 17.16,
         "scene": "guerra"
       },
       {
         "text": "proíbe",
         "key": "proíbe",
-        "start": 16.032,
-        "end": 16.355,
+        "start": 17.16,
+        "end": 17.64,
         "scene": "guerra"
       },
       {
         "text": "nomes",
         "key": "nomes",
-        "start": 16.365,
-        "end": 16.637,
+        "start": 17.64,
+        "end": 18.06,
         "scene": "guerra"
       },
       {
         "text": "ligados",
         "key": "ligados",
-        "start": 16.647,
-        "end": 17.01,
+        "start": 18.06,
+        "end": 18.44,
         "scene": "guerra"
       },
       {
         "text": "à",
         "key": "à",
-        "start": 17.02,
-        "end": 17.151,
+        "start": 18.44,
+        "end": 18.58,
         "scene": "guerra"
       },
       {
-        "text": "Itália",
+        "text": "Itália.",
         "key": "itália",
-        "start": 17.161,
-        "end": 17.534,
+        "start": 18.58,
+        "end": 18.98,
         "scene": "guerra"
       },
       {
         "text": "O",
         "key": "o",
-        "start": 18.22,
-        "end": 18.331,
+        "start": 19.24,
+        "end": 19.34,
         "scene": "guerra"
       },
       {
         "text": "clube",
         "key": "clube",
-        "start": 18.341,
-        "end": 18.634,
+        "start": 19.34,
+        "end": 19.58,
         "scene": "guerra"
       },
       {
         "text": "vira",
         "key": "vira",
-        "start": 18.644,
-        "end": 18.835,
+        "start": 19.58,
+        "end": 19.88,
         "scene": "guerra"
       },
       {
         "text": "Palestra",
         "key": "palestra",
-        "start": 18.845,
-        "end": 19.218,
+        "start": 19.88,
+        "end": 20.5,
         "scene": "guerra"
       },
       {
         "text": "de",
         "key": "de",
-        "start": 19.228,
-        "end": 19.299,
+        "start": 20.5,
+        "end": 20.6,
         "scene": "guerra"
       },
       {
         "text": "São",
         "key": "são",
-        "start": 19.309,
-        "end": 19.47,
+        "start": 20.6,
+        "end": 20.78,
         "scene": "guerra"
       },
       {
-        "text": "Paulo",
+        "text": "Paulo...",
         "key": "paulo",
-        "start": 19.48,
-        "end": 19.783,
+        "start": 20.78,
+        "end": 21.36,
         "scene": "guerra"
       },
       {
         "text": "mas",
         "key": "mas",
-        "start": 19.944,
-        "end": 20.156,
+        "start": 21.36,
+        "end": 21.58,
         "scene": "guerra"
       },
       {
         "text": "não",
         "key": "não",
-        "start": 20.166,
-        "end": 20.357,
+        "start": 21.58,
+        "end": 21.82,
         "scene": "guerra"
       },
       {
-        "text": "adianta",
+        "text": "adianta.",
         "key": "adianta",
-        "start": 20.367,
-        "end": 20.801,
+        "start": 21.82,
+        "end": 22.34,
         "scene": "guerra"
       },
       {
         "text": "Em",
         "key": "em",
-        "start": 21.496,
-        "end": 21.627,
+        "start": 22.54,
+        "end": 22.68,
         "scene": "guerra"
       },
       {
-        "text": "agosto",
+        "text": "agosto,",
         "key": "agosto",
-        "start": 21.638,
-        "end": 22.071,
+        "start": 22.68,
+        "end": 23.04,
         "scene": "guerra"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 22.313,
-        "end": 22.363,
+        "start": 23.18,
+        "end": 23.26,
         "scene": "guerra"
       },
       {
         "text": "Brasil",
         "key": "brasil",
-        "start": 22.373,
-        "end": 22.767,
+        "start": 23.26,
+        "end": 23.52,
         "scene": "guerra"
       },
       {
         "text": "entra",
         "key": "entra",
-        "start": 22.777,
-        "end": 22.958,
+        "start": 23.52,
+        "end": 23.82,
         "scene": "guerra"
       },
       {
         "text": "na",
         "key": "na",
-        "start": 22.968,
-        "end": 23.059,
+        "start": 23.82,
+        "end": 23.96,
         "scene": "guerra"
       },
       {
-        "text": "guerra",
+        "text": "guerra,",
         "key": "guerra",
-        "start": 23.069,
-        "end": 23.351,
+        "start": 23.96,
+        "end": 24.24,
         "scene": "guerra"
       },
       {
         "text": "e",
         "key": "e",
-        "start": 23.593,
-        "end": 23.674,
+        "start": 24.48,
+        "end": 24.5,
         "scene": "guerra"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 23.684,
-        "end": 23.744,
+        "start": 24.5,
+        "end": 24.56,
         "scene": "guerra"
       },
       {
         "text": "clube",
         "key": "clube",
-        "start": 23.754,
-        "end": 24.057,
+        "start": 24.56,
+        "end": 24.8,
         "scene": "guerra"
       },
       {
         "text": "pode",
         "key": "pode",
-        "start": 24.067,
-        "end": 24.269,
+        "start": 24.8,
+        "end": 25.06,
         "scene": "guerra"
       },
       {
         "text": "perder",
         "key": "perder",
-        "start": 24.279,
-        "end": 24.541,
+        "start": 25.06,
+        "end": 25.4,
         "scene": "guerra"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 24.551,
-        "end": 24.591,
+        "start": 25.4,
+        "end": 25.5,
         "scene": "guerra"
       },
       {
         "text": "estádio",
         "key": "estádio",
-        "start": 24.601,
-        "end": 25.004,
+        "start": 25.5,
+        "end": 25.92,
         "scene": "guerra"
       },
       {
         "text": "e",
         "key": "e",
-        "start": 25.015,
-        "end": 25.045,
+        "start": 25.92,
+        "end": 26.12,
         "scene": "guerra"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 25.055,
-        "end": 25.095,
+        "start": 26.12,
+        "end": 26.22,
         "scene": "guerra"
       },
       {
-        "text": "campeonato",
+        "text": "campeonato.",
         "key": "campeonato",
-        "start": 25.105,
-        "end": 25.65,
+        "start": 26.22,
+        "end": 26.8,
         "scene": "guerra"
       },
       {
         "text": "Dias",
         "key": "dias",
-        "start": 26.602,
-        "end": 26.834,
+        "start": 27.041,
+        "end": 27.401,
         "scene": "arrancada"
       },
       {
         "text": "antes",
         "key": "antes",
-        "start": 26.844,
-        "end": 27.177,
+        "start": 27.401,
+        "end": 27.601,
         "scene": "arrancada"
       },
       {
         "text": "da",
         "key": "da",
-        "start": 27.187,
-        "end": 27.268,
+        "start": 27.601,
+        "end": 27.761,
         "scene": "arrancada"
       },
       {
-        "text": "decisão",
+        "text": "decisão,",
         "key": "decisão",
-        "start": 27.278,
-        "end": 27.731,
+        "start": 27.761,
+        "end": 28.241,
         "scene": "arrancada"
       },
       {
         "text": "nasce",
         "key": "nasce",
-        "start": 27.883,
-        "end": 28.155,
+        "start": 28.401,
+        "end": 28.861,
         "scene": "arrancada"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 28.165,
-        "end": 28.195,
+        "start": 28.861,
+        "end": 28.941,
         "scene": "arrancada"
       },
       {
-        "text": "Palmeiras",
+        "text": "Palmeiras.",
         "key": "palmeiras",
-        "start": 28.205,
-        "end": 28.679,
+        "start": 28.941,
+        "end": 29.801,
         "scene": "arrancada"
       },
       {
         "text": "Primeiro",
         "key": "primeiro",
-        "start": 29.365,
-        "end": 29.748,
+        "start": 30.141,
+        "end": 30.501,
         "scene": "arrancada"
       },
       {
         "text": "jogo",
         "key": "jogo",
-        "start": 29.758,
-        "end": 30.05,
+        "start": 30.501,
+        "end": 30.681,
         "scene": "arrancada"
       },
       {
         "text": "com",
         "key": "com",
-        "start": 30.06,
-        "end": 30.232,
+        "start": 30.681,
+        "end": 30.901,
         "scene": "arrancada"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 30.242,
-        "end": 30.272,
+        "start": 30.901,
+        "end": 30.981,
         "scene": "arrancada"
       },
       {
         "text": "novo",
         "key": "novo",
-        "start": 30.282,
-        "end": 30.534,
+        "start": 30.981,
+        "end": 31.141,
         "scene": "arrancada"
       },
       {
-        "text": "nome",
+        "text": "nome:",
         "key": "nome",
-        "start": 30.544,
-        "end": 30.827,
+        "start": 31.141,
+        "end": 31.501,
         "scene": "arrancada"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 31.139,
-        "end": 31.21,
+        "start": 31.741,
+        "end": 31.801,
         "scene": "arrancada"
       },
       {
         "text": "jogo",
         "key": "jogo",
-        "start": 31.22,
-        "end": 31.502,
+        "start": 31.801,
+        "end": 32.061,
         "scene": "arrancada"
       },
       {
         "text": "do",
         "key": "do",
-        "start": 31.512,
-        "end": 31.593,
+        "start": 32.061,
+        "end": 32.221,
         "scene": "arrancada"
       },
       {
         "text": "título",
         "key": "título",
-        "start": 31.603,
-        "end": 31.925,
+        "start": 32.221,
+        "end": 32.541,
         "scene": "arrancada"
       },
       {
-        "text": "paulista",
+        "text": "paulista,",
         "key": "paulista",
-        "start": 31.935,
-        "end": 32.379,
+        "start": 32.541,
+        "end": 33.121,
         "scene": "arrancada"
       },
       {
         "text": "contra",
         "key": "contra",
-        "start": 32.56,
-        "end": 32.863,
+        "start": 33.161,
+        "end": 33.421,
         "scene": "arrancada"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 32.873,
-        "end": 32.893,
+        "start": 33.421,
+        "end": 33.541,
         "scene": "arrancada"
       },
       {
         "text": "São",
         "key": "são",
-        "start": 32.903,
-        "end": 33.095,
+        "start": 33.541,
+        "end": 33.661,
         "scene": "arrancada"
       },
       {
-        "text": "Paulo",
+        "text": "Paulo.",
         "key": "paulo",
-        "start": 33.105,
-        "end": 33.407,
+        "start": 33.661,
+        "end": 34.021,
         "scene": "arrancada"
       },
       {
         "text": "O",
         "key": "o",
-        "start": 34.103,
-        "end": 34.204,
+        "start": 34.341,
+        "end": 34.421,
         "scene": "arrancada"
       },
       {
         "text": "time",
         "key": "time",
-        "start": 34.214,
-        "end": 34.516,
+        "start": 34.421,
+        "end": 34.661,
         "scene": "arrancada"
       },
       {
         "text": "entra",
         "key": "entra",
-        "start": 34.526,
-        "end": 34.778,
+        "start": 34.661,
+        "end": 34.921,
         "scene": "arrancada"
       },
       {
         "text": "com",
         "key": "com",
-        "start": 34.788,
-        "end": 34.909,
+        "start": 34.921,
+        "end": 35.061,
         "scene": "arrancada"
       },
       {
         "text": "a",
         "key": "a",
-        "start": 34.919,
-        "end": 34.939,
+        "start": 35.061,
+        "end": 35.121,
         "scene": "arrancada"
       },
       {
         "text": "bandeira",
         "key": "bandeira",
-        "start": 34.95,
-        "end": 35.292,
+        "start": 35.121,
+        "end": 35.481,
         "scene": "arrancada"
       },
       {
         "text": "do",
         "key": "do",
-        "start": 35.302,
-        "end": 35.363,
+        "start": 35.481,
+        "end": 35.581,
         "scene": "arrancada"
       },
       {
-        "text": "Brasil",
+        "text": "Brasil.",
         "key": "brasil",
-        "start": 35.373,
-        "end": 35.756,
+        "start": 35.581,
+        "end": 35.901,
         "scene": "arrancada"
       },
       {
-        "text": "3 a",
-        "key": "3 a",
-        "start": 35.776,
-        "end": 36.099,
+        "text": "3",
+        "key": "3",
+        "start": 36.161,
+        "end": 36.441,
         "scene": "arrancada"
       },
       {
-        "text": "1",
+        "text": "a",
+        "key": "a",
+        "start": 36.441,
+        "end": 36.681,
+        "scene": "arrancada"
+      },
+      {
+        "text": "1.",
         "key": "1",
-        "start": 36.109,
-        "end": 36.29,
+        "start": 36.681,
+        "end": 36.921,
         "scene": "arrancada"
       },
       {
         "text": "O",
         "key": "o",
-        "start": 36.986,
-        "end": 37.066,
+        "start": 37.121,
+        "end": 37.221,
         "scene": "arrancada"
       },
       {
         "text": "rival",
         "key": "rival",
-        "start": 37.077,
-        "end": 37.399,
+        "start": 37.221,
+        "end": 37.421,
         "scene": "arrancada"
       },
       {
         "text": "abandona",
         "key": "abandona",
-        "start": 37.409,
-        "end": 37.802,
+        "start": 37.421,
+        "end": 38.081,
         "scene": "arrancada"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 37.812,
-        "end": 37.853,
+        "start": 38.081,
+        "end": 38.121,
         "scene": "arrancada"
       },
       {
-        "text": "campo",
+        "text": "campo.",
         "key": "campo",
-        "start": 37.863,
-        "end": 38.165,
+        "start": 38.121,
+        "end": 38.421,
         "scene": "arrancada"
       },
       {
         "text": "O",
         "key": "o",
-        "start": 38.861,
-        "end": 38.952,
+        "start": 38.701,
+        "end": 38.801,
         "scene": "arrancada"
       },
       {
         "text": "Palmeiras",
         "key": "palmeiras",
-        "start": 38.962,
-        "end": 39.405,
+        "start": 38.801,
+        "end": 39.321,
         "scene": "arrancada"
       },
       {
         "text": "já",
         "key": "já",
-        "start": 39.415,
-        "end": 39.516,
+        "start": 39.321,
+        "end": 39.561,
         "scene": "arrancada"
       },
       {
         "text": "nasce",
         "key": "nasce",
-        "start": 39.526,
-        "end": 39.798,
+        "start": 39.561,
+        "end": 40.121,
         "scene": "arrancada"
       },
       {
-        "text": "campeão",
+        "text": "campeão.",
         "key": "campeão",
-        "start": 39.808,
-        "end": 40.252,
+        "start": 40.121,
+        "end": 40.701,
         "scene": "arrancada"
       },
       {
         "text": "Depois",
         "key": "depois",
-        "start": 41.21,
-        "end": 41.654,
+        "start": 41.012,
+        "end": 41.312,
         "scene": "linha"
       },
       {
         "text": "vieram",
         "key": "vieram",
-        "start": 41.664,
-        "end": 41.966,
+        "start": 41.312,
+        "end": 41.652,
         "scene": "linha"
       },
       {
         "text": "a",
         "key": "a",
-        "start": 41.976,
-        "end": 42.017,
+        "start": 41.652,
+        "end": 41.732,
         "scene": "linha"
       },
       {
         "text": "Copa",
         "key": "copa",
-        "start": 42.027,
-        "end": 42.299,
+        "start": 41.732,
+        "end": 41.992,
         "scene": "linha"
       },
       {
         "text": "Rio",
         "key": "rio",
-        "start": 42.309,
-        "end": 42.491,
+        "start": 41.992,
+        "end": 42.192,
         "scene": "linha"
       },
       {
         "text": "de",
         "key": "de",
-        "start": 42.501,
-        "end": 42.581,
+        "start": 42.192,
+        "end": 42.312,
         "scene": "linha"
       },
       {
-        "text": "1951",
+        "text": "1951,",
         "key": "1951",
-        "start": 42.591,
-        "end": 43.781,
+        "start": 42.312,
+        "end": 43.652,
         "scene": "linha"
       },
       {
         "text": "a",
         "key": "a",
-        "start": 44.063,
-        "end": 44.093,
+        "start": 43.892,
+        "end": 43.952,
         "scene": "linha"
       },
       {
         "text": "Academia",
         "key": "academia",
-        "start": 44.103,
-        "end": 44.527,
+        "start": 43.952,
+        "end": 44.332,
         "scene": "linha"
       },
       {
         "text": "de",
         "key": "de",
-        "start": 44.537,
-        "end": 44.618,
+        "start": 44.332,
+        "end": 44.452,
         "scene": "linha"
       },
       {
-        "text": "Futebol",
+        "text": "Futebol,",
         "key": "futebol",
-        "start": 44.628,
-        "end": 45.071,
+        "start": 44.452,
+        "end": 44.912,
         "scene": "linha"
       },
       {
         "text": "a",
         "key": "a",
-        "start": 45.303,
-        "end": 45.354,
+        "start": 45.152,
+        "end": 45.192,
         "scene": "linha"
       },
       {
         "text": "Libertadores",
         "key": "libertadores",
-        "start": 45.364,
-        "end": 45.978,
+        "start": 45.192,
+        "end": 45.852,
         "scene": "linha"
       },
       {
         "text": "de",
         "key": "de",
-        "start": 45.989,
-        "end": 46.069,
+        "start": 45.852,
+        "end": 46.092,
         "scene": "linha"
       },
       {
-        "text": "1999",
+        "text": "1999...",
         "key": "1999",
-        "start": 46.079,
-        "end": 47.41,
+        "start": 46.092,
+        "end": 47.832,
         "scene": "linha"
       },
       {
         "text": "e",
         "key": "e",
-        "start": 48.096,
-        "end": 48.187,
+        "start": 47.832,
+        "end": 47.892,
         "scene": "linha"
       },
       {
         "text": "a",
         "key": "a",
-        "start": 48.197,
-        "end": 48.247,
+        "start": 47.892,
+        "end": 47.992,
         "scene": "linha"
       },
       {
         "text": "era",
         "key": "era",
-        "start": 48.257,
-        "end": 48.398,
+        "start": 47.992,
+        "end": 48.272,
         "scene": "linha"
       },
       {
         "text": "Abel",
         "key": "abel",
-        "start": 48.408,
-        "end": 48.6,
+        "start": 48.272,
+        "end": 48.672,
         "scene": "linha"
       },
       {
-        "text": "Ferreira",
+        "text": "Ferreira,",
         "key": "ferreira",
-        "start": 48.61,
-        "end": 48.993,
+        "start": 48.672,
+        "end": 49.352,
         "scene": "linha"
       },
       {
         "text": "com",
         "key": "com",
-        "start": 49.225,
-        "end": 49.416,
+        "start": 49.432,
+        "end": 49.532,
         "scene": "linha"
       },
       {
-        "text": "11 títulos",
-        "key": "11 títulos",
-        "start": 49.426,
-        "end": 50.112,
+        "text": "11",
+        "key": "11",
+        "start": 49.532,
+        "end": 49.972,
+        "scene": "linha"
+      },
+      {
+        "text": "títulos:",
+        "key": "títulos",
+        "start": 49.972,
+        "end": 50.552,
         "scene": "linha"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 50.364,
-        "end": 50.445,
+        "start": 50.792,
+        "end": 50.892,
         "scene": "linha"
       },
       {
         "text": "técnico",
         "key": "técnico",
-        "start": 50.455,
-        "end": 50.848,
+        "start": 50.892,
+        "end": 51.312,
         "scene": "linha"
       },
       {
         "text": "mais",
         "key": "mais",
-        "start": 50.858,
-        "end": 51.06,
+        "start": 51.312,
+        "end": 51.572,
         "scene": "linha"
       },
       {
         "text": "vitorioso",
         "key": "vitorioso",
-        "start": 51.07,
-        "end": 51.564,
+        "start": 51.572,
+        "end": 52.172,
         "scene": "linha"
       },
       {
         "text": "da",
         "key": "da",
-        "start": 51.574,
-        "end": 51.634,
+        "start": 52.172,
+        "end": 52.352,
         "scene": "linha"
       },
       {
         "text": "história",
         "key": "história",
-        "start": 51.644,
-        "end": 51.947,
+        "start": 52.352,
+        "end": 52.792,
         "scene": "linha"
       },
       {
         "text": "do",
         "key": "do",
-        "start": 51.957,
-        "end": 52.037,
+        "start": 52.792,
+        "end": 52.992,
         "scene": "linha"
       },
       {
-        "text": "clube",
+        "text": "clube.",
         "key": "clube",
-        "start": 52.047,
-        "end": 52.39,
+        "start": 52.992,
+        "end": 53.352,
         "scene": "linha"
       },
       {
-        "text": "Hoje",
+        "text": "Hoje,",
         "key": "hoje",
-        "start": 53.346,
-        "end": 53.679,
+        "start": 53.593,
+        "end": 53.853,
         "scene": "stat"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 53.83,
-        "end": 53.891,
+        "start": 53.933,
+        "end": 53.953,
         "scene": "stat"
       },
       {
         "text": "Palmeiras",
         "key": "palmeiras",
-        "start": 53.901,
-        "end": 54.274,
+        "start": 53.953,
+        "end": 54.373,
         "scene": "stat"
       },
       {
         "text": "é",
         "key": "é",
-        "start": 54.284,
-        "end": 54.385,
+        "start": 54.373,
+        "end": 54.493,
         "scene": "stat"
       },
       {
         "text": "o",
         "key": "o",
-        "start": 54.395,
-        "end": 54.415,
+        "start": 54.493,
+        "end": 54.573,
         "scene": "stat"
       },
       {
         "text": "maior",
         "key": "maior",
-        "start": 54.425,
-        "end": 54.667,
+        "start": 54.573,
+        "end": 54.933,
         "scene": "stat"
       },
       {
         "text": "campeão",
         "key": "campeão",
-        "start": 54.677,
-        "end": 55.01,
+        "start": 54.933,
+        "end": 55.633,
         "scene": "stat"
       },
       {
-        "text": "brasileiro",
+        "text": "brasileiro:",
         "key": "brasileiro",
-        "start": 55.02,
-        "end": 55.463,
+        "start": 55.633,
+        "end": 56.373,
         "scene": "stat"
       },
       {
         "text": "12",
         "key": "12",
-        "start": 55.675,
-        "end": 55.977,
+        "start": 56.613,
+        "end": 56.913,
         "scene": "stat"
       },
       {
-        "text": "Brasileirões",
+        "text": "Brasileirões.",
         "key": "brasileirões",
-        "start": 55.987,
-        "end": 56.643,
+        "start": 56.913,
+        "end": 57.713,
         "scene": "stat"
       },
       {
         "text": "Qual",
         "key": "qual",
-        "start": 57.586,
-        "end": 57.778,
+        "start": 58.164,
+        "end": 58.284,
         "scene": "cta"
       },
       {
         "text": "time",
         "key": "time",
-        "start": 57.788,
-        "end": 58.03,
+        "start": 58.344,
+        "end": 58.604,
         "scene": "cta"
       },
       {
         "text": "você",
         "key": "você",
-        "start": 58.04,
-        "end": 58.242,
+        "start": 58.604,
+        "end": 58.824,
         "scene": "cta"
       },
       {
         "text": "quer",
         "key": "quer",
-        "start": 58.252,
-        "end": 58.453,
+        "start": 58.824,
+        "end": 59.004,
         "scene": "cta"
       },
       {
         "text": "que",
         "key": "que",
-        "start": 58.463,
-        "end": 58.514,
+        "start": 59.004,
+        "end": 59.084,
         "scene": "cta"
       },
       {
         "text": "eu",
         "key": "eu",
-        "start": 58.524,
-        "end": 58.594,
+        "start": 59.084,
+        "end": 59.144,
         "scene": "cta"
       },
       {
         "text": "explique",
         "key": "explique",
-        "start": 58.604,
-        "end": 58.947,
+        "start": 59.144,
+        "end": 59.424,
         "scene": "cta"
       },
       {
         "text": "no",
         "key": "no",
-        "start": 58.957,
-        "end": 59.048,
+        "start": 59.424,
+        "end": 59.524,
         "scene": "cta"
       },
       {
-        "text": "próximo",
+        "text": "próximo?",
         "key": "próximo",
-        "start": 59.058,
-        "end": 59.461,
+        "start": 59.524,
+        "end": 59.864,
         "scene": "cta"
       },
       {
         "text": "Comenta",
         "key": "comenta",
-        "start": 60.147,
-        "end": 60.581,
+        "start": 60.064,
+        "end": 60.384,
         "scene": "cta"
       },
       {
-        "text": "aí",
+        "text": "aí.",
         "key": "aí",
-        "start": 60.591,
-        "end": 60.823,
+        "start": 60.384,
+        "end": 60.704,
         "scene": "cta"
       }
     ]

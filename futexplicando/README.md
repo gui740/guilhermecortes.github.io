@@ -10,7 +10,12 @@ npm run voz      # gera public/voz.mp3 + timing palavra a palavra no JSON
 npm run render   # out/ep01-historia-palmeiras.mp4 (H.264, veryfast)
 npm run capa     # out/capa.png
 ```
-Voz: com `ELEVENLABS_API_KEY` no ambiente usa ElevenLabs (`voice.elevenVoiceId` no JSON); sem a chave usa Edge TTS (grátis).
+Voz (ordem de preferência): `GEMINI_API_KEY` → Gemini TTS do AI Studio (`voice.geminiModel`, `geminiVoice`, `geminiStyle`, `tempo`), com timing por faster-whisper (`pip install faster-whisper edge-tts`); `ELEVENLABS_API_KEY` → ElevenLabs; sem chave → Edge TTS (grátis).
+O áudio do Gemini fica em cache em `.cache/tts/` (só gera de novo cena com texto alterado). O plano grátis do Gemini TTS permite **10 gerações por dia por modelo** (1 por cena).
+
+```bash
+GEMINI_API_KEY=sua-chave npm run voz
+```
 
 ## Novo episódio
 1. Copie `src/data/ep01.json` → `ep02.json` e troque o import em `src/lib/episode.ts`.
