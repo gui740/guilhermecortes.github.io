@@ -234,7 +234,22 @@ def lamp_flicker():
     return x
 
 
+def crowd(d=6.0):
+    """Torcida: ruído filtrado com ondas de grito e palmas (sintetizado)."""
+    tt = t(d)
+    base = lp(rng.normal(0, 1, len(tt)), 0.82) * 0.6
+    voz = hp(lp(rng.normal(0, 1, len(tt)), 0.55), 0.95) * 0.5
+    env = 0.6 + 0.4 * np.sin(2 * np.pi * 0.35 * tt) ** 2
+    x = (base + voz) * env
+    for _ in range(int(d * 14)):
+        at = rng.uniform(0, d - 0.05)
+        c = hp(rng.normal(0, 1, int(0.02 * SR)), 0.4) * np.exp(-t(0.02) * 220) * 0.6
+        i = int(at * SR); x[i:i + len(c)] += c
+    return x * np.minimum(1, tt / 0.3) * np.minimum(1, (d - tt) / 0.8)
+
+
 if __name__ == "__main__":
+    save("torcida", crowd())
     save("lampiao", lamp_flicker())
     save("letreiro", flap_clatter())
     save("moeda-girando", coin_spin())

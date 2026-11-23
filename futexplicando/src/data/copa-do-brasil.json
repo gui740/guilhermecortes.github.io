@@ -1,0 +1,1093 @@
+{
+ "id": "CopaDoBrasil",
+ "titulo": "A história da Copa do Brasil",
+ "handle": "@futexplicando",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duracaoSegundos": 79.0,
+ "audio": {
+  "mix": "copa-do-brasil/audio/mix-copa-do-brasil.wav",
+  "narracao": "copa-do-brasil/audio/narracao-gemini.wav",
+  "narracaoEm": 0.4,
+  "trilha": "copa-do-brasil/audio/trilha-energizing.mp3"
+ },
+ "escudos": {
+  "gremio": "copa-do-brasil/escudos/gremio.svg",
+  "sport": "copa-do-brasil/escudos/sport.svg",
+  "criciuma": "copa-do-brasil/escudos/criciuma.png",
+  "fluminense": "copa-do-brasil/escudos/fluminense.svg",
+  "cruzeiro": "copa-do-brasil/escudos/cruzeiro.svg",
+  "flamengo": "palmeiras/escudos/flamengo.svg",
+  "palmeiras": "palmeiras/escudos/palmeiras-atual.svg",
+  "corinthians": "corinthians/escudos/corinthians.svg",
+  "saoPaulo": "palmeiras/escudos/sao-paulo.svg"
+ },
+ "logos": {
+  "copaDoBrasil": "sao-paulo/logos/logo-copa-do-brasil-spfc.png",
+  "libertadores": "sao-paulo/logos/logo-libertadores-spfc.png"
+ },
+ "cenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.0,
+   "fim": 5.06,
+   "frase": "O torneio que hoje paga setenta e oito milhões de reais pro campeão..."
+  },
+  {
+   "id": "ameaca",
+   "inicio": 5.06,
+   "fim": 10.06,
+   "frase": "...nasceu com uma ameaça: quem não quisesse jogar, ia ser punido!"
+  },
+  {
+   "id": "fica",
+   "inicio": 10.06,
+   "fim": 12.0,
+   "frase": "Fica até o final que eu explico."
+  },
+  {
+   "id": "comecou",
+   "inicio": 12.0,
+   "fim": 14.78,
+   "frase": "Tudo começou em mil novecentos e oitenta e nove."
+  },
+  {
+   "id": "teixeira",
+   "inicio": 14.78,
+   "fim": 17.8,
+   "frase": "Ricardo Teixeira tinha acabado de assumir a CBF."
+  },
+  {
+   "id": "estados",
+   "inicio": 17.8,
+   "fim": 22.68,
+   "frase": "E os estados menores estavam bravos: tinham ficado fora da elite do Brasileirão."
+  },
+  {
+   "id": "matamata",
+   "inicio": 22.68,
+   "fim": 26.32,
+   "frase": "Aí ele inventou um mata-mata com campeões de todos os estados."
+  },
+  {
+   "id": "numeros",
+   "inicio": 26.32,
+   "fim": 32.18,
+   "frase": "Trinta e dois times, quarenta e seis dias e uma vaga na Libertadores pro campeão."
+  },
+  {
+   "id": "primeiro",
+   "inicio": 32.18,
+   "fim": 36.0,
+   "frase": "O primeiro campeão? O Grêmio, em cima do Sport."
+  },
+  {
+   "id": "pequenos",
+   "inicio": 36.0,
+   "fim": 38.6,
+   "frase": "E a Copa virou a chance dos pequenos."
+  },
+  {
+   "id": "criciuma",
+   "inicio": 38.6,
+   "fim": 42.14,
+   "frase": "Em noventa e um, o Criciúma foi campeão em cima do Grêmio."
+  },
+  {
+   "id": "santoandre",
+   "inicio": 42.14,
+   "fim": 46.34,
+   "frase": "Em dois mil e quatro, o Santo André calou o Maracanã contra o Flamengo."
+  },
+  {
+   "id": "paulista",
+   "inicio": 46.34,
+   "fim": 50.6,
+   "frase": "E em dois mil e cinco, o Paulista de Jundiaí bateu o Fluminense."
+  },
+  {
+   "id": "semlibertadores",
+   "inicio": 50.6,
+   "fim": 54.34,
+   "frase": "Mas até dois mil e doze, quem jogava a Libertadores nem participava."
+  },
+  {
+   "id": "oitavas",
+   "inicio": 54.34,
+   "fim": 60.06,
+   "frase": "Em dois mil e treze, os grandes passaram a entrar nas oitavas... e as zebras sumiram."
+  },
+  {
+   "id": "maiores",
+   "inicio": 60.06,
+   "fim": 65.48,
+   "frase": "O maior campeão é o Cruzeiro, com seis taças. Grêmio e Flamengo têm cinco."
+  },
+  {
+   "id": "hoje",
+   "inicio": 65.48,
+   "fim": 71.58,
+   "frase": "Hoje são cento e vinte e seis clubes, e a final de dois mil e vinte e seis é em jogo único, em Brasília."
+  },
+  {
+   "id": "impacto",
+   "inicio": 71.58,
+   "fim": 75.46,
+   "frase": "De torneio imposto na marra... à taça que vale uma fortuna."
+  },
+  {
+   "id": "cta",
+   "inicio": 75.46,
+   "fim": 79.0,
+   "frase": "Segue o arroba futexplicando!"
+  }
+ ],
+ "legendas": [
+  {
+   "text": "O",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "text": "torneio",
+   "start": 0.8,
+   "end": 1.26
+  },
+  {
+   "text": "que",
+   "start": 1.26,
+   "end": 1.46
+  },
+  {
+   "text": "hoje",
+   "start": 1.46,
+   "end": 1.7
+  },
+  {
+   "text": "paga",
+   "start": 1.7,
+   "end": 2.04
+  },
+  {
+   "text": "78",
+   "start": 2.04,
+   "end": 2.82
+  },
+  {
+   "text": "milhões",
+   "start": 2.82,
+   "end": 3.66
+  },
+  {
+   "text": "de",
+   "start": 3.66,
+   "end": 4.04
+  },
+  {
+   "text": "reais",
+   "start": 4.04,
+   "end": 4.34
+  },
+  {
+   "text": "para",
+   "start": 4.34,
+   "end": 4.58
+  },
+  {
+   "text": "o",
+   "start": 4.58,
+   "end": 4.64
+  },
+  {
+   "text": "campeão",
+   "start": 4.64,
+   "end": 5.16
+  },
+  {
+   "text": "nasceu",
+   "start": 5.16,
+   "end": 5.7
+  },
+  {
+   "text": "com",
+   "start": 5.7,
+   "end": 5.92
+  },
+  {
+   "text": "uma",
+   "start": 5.92,
+   "end": 6.18
+  },
+  {
+   "text": "ameaça.",
+   "start": 6.18,
+   "end": 6.9
+  },
+  {
+   "text": "Quem",
+   "start": 7.22,
+   "end": 7.4
+  },
+  {
+   "text": "não",
+   "start": 7.4,
+   "end": 7.6
+  },
+  {
+   "text": "quisesse",
+   "start": 7.6,
+   "end": 8.1
+  },
+  {
+   "text": "jogar",
+   "start": 8.1,
+   "end": 8.42
+  },
+  {
+   "text": "ia",
+   "start": 8.42,
+   "end": 8.8
+  },
+  {
+   "text": "ser",
+   "start": 8.8,
+   "end": 9.06
+  },
+  {
+   "text": "punido.",
+   "start": 9.06,
+   "end": 9.78
+  },
+  {
+   "text": "Fica",
+   "start": 10.16,
+   "end": 10.42
+  },
+  {
+   "text": "até",
+   "start": 10.42,
+   "end": 10.6
+  },
+  {
+   "text": "o",
+   "start": 10.6,
+   "end": 10.66
+  },
+  {
+   "text": "final",
+   "start": 10.66,
+   "end": 10.86
+  },
+  {
+   "text": "que",
+   "start": 10.86,
+   "end": 11.02
+  },
+  {
+   "text": "eu",
+   "start": 11.02,
+   "end": 11.08
+  },
+  {
+   "text": "explico.",
+   "start": 11.08,
+   "end": 11.46
+  },
+  {
+   "text": "Tudo",
+   "start": 12.1,
+   "end": 12.3
+  },
+  {
+   "text": "começou",
+   "start": 12.3,
+   "end": 12.72
+  },
+  {
+   "text": "em",
+   "start": 12.72,
+   "end": 12.96
+  },
+  {
+   "text": "1989.",
+   "start": 12.96,
+   "end": 13.86
+  },
+  {
+   "text": "Ricardo",
+   "start": 14.88,
+   "end": 15.16
+  },
+  {
+   "text": "Teixeira",
+   "start": 15.16,
+   "end": 15.7
+  },
+  {
+   "text": "tinha",
+   "start": 15.7,
+   "end": 15.9
+  },
+  {
+   "text": "acabado",
+   "start": 15.9,
+   "end": 16.6
+  },
+  {
+   "text": "de",
+   "start": 16.6,
+   "end": 16.76
+  },
+  {
+   "text": "assumir",
+   "start": 16.76,
+   "end": 17.08
+  },
+  {
+   "text": "a",
+   "start": 17.08,
+   "end": 17.18
+  },
+  {
+   "text": "CBF,",
+   "start": 17.18,
+   "end": 17.64
+  },
+  {
+   "text": "e",
+   "start": 17.9,
+   "end": 18.06
+  },
+  {
+   "text": "os",
+   "start": 18.06,
+   "end": 18.16
+  },
+  {
+   "text": "estados",
+   "start": 18.16,
+   "end": 18.48
+  },
+  {
+   "text": "menores",
+   "start": 18.48,
+   "end": 18.92
+  },
+  {
+   "text": "estavam",
+   "start": 18.92,
+   "end": 19.16
+  },
+  {
+   "text": "bravos.",
+   "start": 19.16,
+   "end": 19.72
+  },
+  {
+   "text": "tinham",
+   "start": 19.96,
+   "end": 20.22
+  },
+  {
+   "text": "ficado",
+   "start": 20.22,
+   "end": 20.56
+  },
+  {
+   "text": "fora",
+   "start": 20.56,
+   "end": 20.92
+  },
+  {
+   "text": "da",
+   "start": 20.92,
+   "end": 21.12
+  },
+  {
+   "text": "elite",
+   "start": 21.12,
+   "end": 21.52
+  },
+  {
+   "text": "do",
+   "start": 21.52,
+   "end": 21.74
+  },
+  {
+   "text": "Brasileirão.",
+   "start": 21.74,
+   "end": 22.32
+  },
+  {
+   "text": "Aí",
+   "start": 22.78,
+   "end": 23.14
+  },
+  {
+   "text": "ele",
+   "start": 23.14,
+   "end": 23.28
+  },
+  {
+   "text": "inventou",
+   "start": 23.28,
+   "end": 23.68
+  },
+  {
+   "text": "um",
+   "start": 23.68,
+   "end": 23.84
+  },
+  {
+   "text": "mata-mata",
+   "start": 23.84,
+   "end": 24.479999999999997
+  },
+  {
+   "text": "com",
+   "start": 24.48,
+   "end": 24.66
+  },
+  {
+   "text": "campeões",
+   "start": 24.66,
+   "end": 25.14
+  },
+  {
+   "text": "de",
+   "start": 25.14,
+   "end": 25.32
+  },
+  {
+   "text": "todos",
+   "start": 25.32,
+   "end": 25.68
+  },
+  {
+   "text": "os",
+   "start": 25.68,
+   "end": 25.96
+  },
+  {
+   "text": "estados.",
+   "start": 25.96,
+   "end": 26.42
+  },
+  {
+   "text": "32",
+   "start": 26.42,
+   "end": 27.18
+  },
+  {
+   "text": "times,",
+   "start": 27.18,
+   "end": 27.8
+  },
+  {
+   "text": "46",
+   "start": 28.08,
+   "end": 28.74
+  },
+  {
+   "text": "dias",
+   "start": 28.74,
+   "end": 29.18
+  },
+  {
+   "text": "e",
+   "start": 29.18,
+   "end": 29.52
+  },
+  {
+   "text": "uma",
+   "start": 29.52,
+   "end": 29.7
+  },
+  {
+   "text": "vaga",
+   "start": 29.7,
+   "end": 30.0
+  },
+  {
+   "text": "na",
+   "start": 30.0,
+   "end": 30.16
+  },
+  {
+   "text": "Libertadores",
+   "start": 30.16,
+   "end": 31.04
+  },
+  {
+   "text": "para",
+   "start": 31.04,
+   "end": 31.28
+  },
+  {
+   "text": "o",
+   "start": 31.28,
+   "end": 31.36
+  },
+  {
+   "text": "campeão.",
+   "start": 31.36,
+   "end": 31.86
+  },
+  {
+   "text": "O",
+   "start": 32.28,
+   "end": 32.64
+  },
+  {
+   "text": "primeiro",
+   "start": 32.64,
+   "end": 32.92
+  },
+  {
+   "text": "campeão?",
+   "start": 32.92,
+   "end": 33.44
+  },
+  {
+   "text": "O",
+   "start": 33.72,
+   "end": 33.82
+  },
+  {
+   "text": "Grêmio,",
+   "start": 33.82,
+   "end": 34.32
+  },
+  {
+   "text": "em",
+   "start": 34.44,
+   "end": 34.56
+  },
+  {
+   "text": "cima",
+   "start": 34.56,
+   "end": 34.86
+  },
+  {
+   "text": "do",
+   "start": 34.86,
+   "end": 35.02
+  },
+  {
+   "text": "Sport.",
+   "start": 35.02,
+   "end": 35.44
+  },
+  {
+   "text": "E",
+   "start": 36.1,
+   "end": 36.24
+  },
+  {
+   "text": "a",
+   "start": 36.24,
+   "end": 36.32
+  },
+  {
+   "text": "Copa",
+   "start": 36.32,
+   "end": 36.68
+  },
+  {
+   "text": "virou",
+   "start": 36.68,
+   "end": 36.92
+  },
+  {
+   "text": "a",
+   "start": 36.92,
+   "end": 37.04
+  },
+  {
+   "text": "chance",
+   "start": 37.04,
+   "end": 37.36
+  },
+  {
+   "text": "dos",
+   "start": 37.36,
+   "end": 37.64
+  },
+  {
+   "text": "pequenos.",
+   "start": 37.64,
+   "end": 38.12
+  },
+  {
+   "text": "Em",
+   "start": 38.7,
+   "end": 38.84
+  },
+  {
+   "text": "91,",
+   "start": 38.84,
+   "end": 39.3
+  },
+  {
+   "text": "o",
+   "start": 39.6,
+   "end": 39.66
+  },
+  {
+   "text": "Criciúma",
+   "start": 39.66,
+   "end": 40.24
+  },
+  {
+   "text": "foi",
+   "start": 40.24,
+   "end": 40.44
+  },
+  {
+   "text": "campeão",
+   "start": 40.44,
+   "end": 40.86
+  },
+  {
+   "text": "em",
+   "start": 40.86,
+   "end": 40.98
+  },
+  {
+   "text": "cima",
+   "start": 40.98,
+   "end": 41.26
+  },
+  {
+   "text": "do",
+   "start": 41.26,
+   "end": 41.42
+  },
+  {
+   "text": "Grêmio.",
+   "start": 41.42,
+   "end": 41.88
+  },
+  {
+   "text": "Em",
+   "start": 42.24,
+   "end": 42.4
+  },
+  {
+   "text": "2004,",
+   "start": 42.4,
+   "end": 42.98
+  },
+  {
+   "text": "o",
+   "start": 43.36,
+   "end": 43.42
+  },
+  {
+   "text": "Santo",
+   "start": 43.42,
+   "end": 43.62
+  },
+  {
+   "text": "André",
+   "start": 43.62,
+   "end": 43.94
+  },
+  {
+   "text": "calou",
+   "start": 43.94,
+   "end": 44.46
+  },
+  {
+   "text": "o",
+   "start": 44.46,
+   "end": 44.62
+  },
+  {
+   "text": "Maracanã",
+   "start": 44.62,
+   "end": 45.24
+  },
+  {
+   "text": "contra",
+   "start": 45.24,
+   "end": 45.5
+  },
+  {
+   "text": "o",
+   "start": 45.5,
+   "end": 45.62
+  },
+  {
+   "text": "Flamengo.",
+   "start": 45.62,
+   "end": 46.14
+  },
+  {
+   "text": "Em",
+   "start": 46.44,
+   "end": 46.72
+  },
+  {
+   "text": "2005,",
+   "start": 46.72,
+   "end": 47.28
+  },
+  {
+   "text": "o",
+   "start": 47.62,
+   "end": 47.72
+  },
+  {
+   "text": "Paulista",
+   "start": 47.72,
+   "end": 48.14
+  },
+  {
+   "text": "de",
+   "start": 48.14,
+   "end": 48.32
+  },
+  {
+   "text": "Jundiaí",
+   "start": 48.32,
+   "end": 48.86
+  },
+  {
+   "text": "bateu",
+   "start": 48.86,
+   "end": 49.38
+  },
+  {
+   "text": "o",
+   "start": 49.38,
+   "end": 49.5
+  },
+  {
+   "text": "Fluminense.",
+   "start": 49.5,
+   "end": 50.08
+  },
+  {
+   "text": "Mas",
+   "start": 50.7,
+   "end": 50.96
+  },
+  {
+   "text": "até",
+   "start": 50.96,
+   "end": 51.18
+  },
+  {
+   "text": "2012,",
+   "start": 51.18,
+   "end": 51.68
+  },
+  {
+   "text": "quem",
+   "start": 52.06,
+   "end": 52.16
+  },
+  {
+   "text": "jogava",
+   "start": 52.16,
+   "end": 52.5
+  },
+  {
+   "text": "Libertadores",
+   "start": 52.5,
+   "end": 53.14
+  },
+  {
+   "text": "nem",
+   "start": 53.14,
+   "end": 53.58
+  },
+  {
+   "text": "participava.",
+   "start": 53.58,
+   "end": 54.44
+  },
+  {
+   "text": "Em",
+   "start": 54.44,
+   "end": 55.08
+  },
+  {
+   "text": "2013,",
+   "start": 55.08,
+   "end": 55.76
+  },
+  {
+   "text": "os",
+   "start": 56.06,
+   "end": 56.16
+  },
+  {
+   "text": "grandes",
+   "start": 56.16,
+   "end": 56.4
+  },
+  {
+   "text": "passaram",
+   "start": 56.4,
+   "end": 56.92
+  },
+  {
+   "text": "a",
+   "start": 56.92,
+   "end": 57.02
+  },
+  {
+   "text": "entrar",
+   "start": 57.02,
+   "end": 57.26
+  },
+  {
+   "text": "nas",
+   "start": 57.26,
+   "end": 57.42
+  },
+  {
+   "text": "oitavas",
+   "start": 57.42,
+   "end": 58.02
+  },
+  {
+   "text": "e",
+   "start": 58.02,
+   "end": 58.5
+  },
+  {
+   "text": "as",
+   "start": 58.5,
+   "end": 58.72
+  },
+  {
+   "text": "zebras",
+   "start": 58.72,
+   "end": 58.96
+  },
+  {
+   "text": "sumiram.",
+   "start": 58.96,
+   "end": 59.52
+  },
+  {
+   "text": "O",
+   "start": 60.16,
+   "end": 60.36
+  },
+  {
+   "text": "maior",
+   "start": 60.36,
+   "end": 60.62
+  },
+  {
+   "text": "campeão",
+   "start": 60.62,
+   "end": 61.16
+  },
+  {
+   "text": "é",
+   "start": 61.16,
+   "end": 61.26
+  },
+  {
+   "text": "o",
+   "start": 61.26,
+   "end": 61.34
+  },
+  {
+   "text": "Cruzeiro,",
+   "start": 61.34,
+   "end": 61.94
+  },
+  {
+   "text": "com",
+   "start": 62.08,
+   "end": 62.16
+  },
+  {
+   "text": "seis",
+   "start": 62.16,
+   "end": 62.52
+  },
+  {
+   "text": "taças.",
+   "start": 62.52,
+   "end": 63.04
+  },
+  {
+   "text": "Grêmio",
+   "start": 63.48,
+   "end": 63.84
+  },
+  {
+   "text": "e",
+   "start": 63.84,
+   "end": 63.9
+  },
+  {
+   "text": "Flamengo",
+   "start": 63.9,
+   "end": 64.28
+  },
+  {
+   "text": "têm",
+   "start": 64.28,
+   "end": 64.48
+  },
+  {
+   "text": "cinco.",
+   "start": 64.48,
+   "end": 64.98
+  },
+  {
+   "text": "Hoje",
+   "start": 65.58,
+   "end": 65.84
+  },
+  {
+   "text": "são",
+   "start": 65.84,
+   "end": 66.04
+  },
+  {
+   "text": "126",
+   "start": 66.04,
+   "end": 67.14
+  },
+  {
+   "text": "clubes",
+   "start": 67.14,
+   "end": 67.64
+  },
+  {
+   "text": "e",
+   "start": 67.64,
+   "end": 67.86
+  },
+  {
+   "text": "a",
+   "start": 67.86,
+   "end": 67.94
+  },
+  {
+   "text": "final",
+   "start": 67.94,
+   "end": 68.14
+  },
+  {
+   "text": "de",
+   "start": 68.14,
+   "end": 68.32
+  },
+  {
+   "text": "2026",
+   "start": 68.32,
+   "end": 69.16
+  },
+  {
+   "text": "é",
+   "start": 69.16,
+   "end": 69.4
+  },
+  {
+   "text": "em",
+   "start": 69.4,
+   "end": 69.54
+  },
+  {
+   "text": "jogo",
+   "start": 69.54,
+   "end": 69.72
+  },
+  {
+   "text": "único,",
+   "start": 69.72,
+   "end": 70.1
+  },
+  {
+   "text": "em",
+   "start": 70.4,
+   "end": 70.48
+  },
+  {
+   "text": "Brasília.",
+   "start": 70.48,
+   "end": 71.12
+  },
+  {
+   "text": "De",
+   "start": 71.68,
+   "end": 71.86
+  },
+  {
+   "text": "torneio",
+   "start": 71.86,
+   "end": 72.28
+  },
+  {
+   "text": "imposto",
+   "start": 72.28,
+   "end": 72.66
+  },
+  {
+   "text": "na",
+   "start": 72.66,
+   "end": 72.84
+  },
+  {
+   "text": "marra,",
+   "start": 72.84,
+   "end": 73.34
+  },
+  {
+   "text": "a",
+   "start": 73.48,
+   "end": 73.52
+  },
+  {
+   "text": "taça",
+   "start": 73.52,
+   "end": 73.88
+  },
+  {
+   "text": "que",
+   "start": 73.88,
+   "end": 74.02
+  },
+  {
+   "text": "vale",
+   "start": 74.02,
+   "end": 74.24
+  },
+  {
+   "text": "uma",
+   "start": 74.24,
+   "end": 74.4
+  },
+  {
+   "text": "fortuna.",
+   "start": 74.4,
+   "end": 75.14
+  },
+  {
+   "text": "Segue",
+   "start": 75.56,
+   "end": 75.94
+  },
+  {
+   "text": "o",
+   "start": 75.94,
+   "end": 76.06
+  },
+  {
+   "text": "@futexplicando!",
+   "start": 76.06,
+   "end": 77.28
+  }
+ ]
+}

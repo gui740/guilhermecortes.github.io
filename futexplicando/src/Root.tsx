@@ -3,6 +3,8 @@ import { Composition, Still } from "remotion";
 import data from "./data/sao-paulo.json";
 import palm from "./data/palmeiras.json";
 import cor from "./data/corinthians.json";
+import cdb from "./data/copa-do-brasil.json";
+import { CopaDoBrasil } from "./videos/CopaDoBrasil/CopaDoBrasil";
 import { CapaCorinthians, Corinthians } from "./videos/Corinthians/Corinthians";
 import { CapaPalmeiras, Palmeiras } from "./videos/Palmeiras/Palmeiras";
 import { CapaSaoPaulo } from "./videos/SaoPaulo/Capa";
@@ -38,6 +40,14 @@ export const RemotionRoot: React.FC = () => {
         height={cor.height}
       />
       <Still id="CapaCorinthians" component={CapaCorinthians} width={cor.width} height={cor.height} />
+      <Composition
+        id="CopaDoBrasil"
+        component={CopaDoBrasil}
+        durationInFrames={Math.round(cdb.duracaoSegundos * cdb.fps)}
+        fps={cdb.fps}
+        width={cdb.width}
+        height={cdb.height}
+      />
     </>
   );
 };
