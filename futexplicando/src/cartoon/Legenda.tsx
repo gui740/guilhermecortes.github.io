@@ -41,11 +41,11 @@ export const Legenda: React.FC<{ palavras: Palavra[]; y?: number; max?: number }
         style={{
           fontFamily: "'Baloo 2', Nunito, Arial, sans-serif",
           fontWeight: 800,
-          fontSize: longo ? 96 : 118,
+          fontSize: longo ? 78 : 92,
           lineHeight: 1.0,
           color: "#FFFFFF",
           textAlign: "center",
-          WebkitTextStroke: "12px #000",
+          WebkitTextStroke: "11px #000",
           paintOrder: "stroke fill",
           textShadow: "0 10px 0 rgba(0,0,0,0.55), 0 14px 22px rgba(0,0,0,0.45)",
           scale: `${k}`,

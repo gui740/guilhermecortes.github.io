@@ -10,7 +10,7 @@
   "mix": "copa-do-brasil/audio/mix-copa-do-brasil.wav",
   "narracao": "copa-do-brasil/audio/narracao-gemini.wav",
   "narracaoEm": 0.4,
-  "trilha": "copa-do-brasil/audio/trilha-energizing.mp3"
+  "trilha": "copa-do-brasil/audio/trilha-downtown-boogie.mp3"
  },
  "escudos": {
   "gremio": "copa-do-brasil/escudos/gremio.svg",

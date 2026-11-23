@@ -30,7 +30,7 @@ export const CopaDoBrasil: React.FC = () => {
           </Sequence>
         );
       })}
-      <Legenda palavras={D.legendas} y={890} />
+      <Legenda palavras={D.legendas} y={1160} />
       <Audio src={staticFile(D.audio.mix)} />
     </AbsoluteFill>
   );

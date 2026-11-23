@@ -190,7 +190,7 @@ const Trofeu3D: React.FC<{ y?: number }> = ({ y = 0 }) => {
         <meshStandardMaterial color="#F2C443" metalness={0.35} roughness={0.35} emissive="#7A5208" emissiveIntensity={0.45} />
       </mesh>
       {[-1, 1].map((s) => (
-        <mesh key={s} position={[s * 3.0, 5.6, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <mesh key={s} position={[s * 3.0, 5.6, 0]} rotation={[0, 0, (-s * Math.PI) / 2]}>
           <torusGeometry args={[1.0, 0.25, 10, 20, Math.PI]} />
           <meshStandardMaterial color="#F2C443" metalness={0.35} roughness={0.35} emissive="#7A5208" emissiveIntensity={0.45} />
         </mesh>
@@ -200,7 +200,7 @@ const Trofeu3D: React.FC<{ y?: number }> = ({ y = 0 }) => {
 };
 
 /** Estádio 3D simples: gramado, arquibancada em anel, torcida, refletores, faixa e troféu. */
-export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boolean; ceu?: string }> = ({ keys, faixa = ["COPA DO BRASIL", ""], trofeu = true, ceu = "#7EC8FF" }) => {
+export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boolean; trofeuFoco?: boolean; ceu?: string }> = ({ keys, faixa = ["COPA DO BRASIL", ""], trofeu = true, trofeuFoco = false, ceu = "#7EC8FF" }) => {
   const { width, height } = useVideoConfig();
   return (
     <ThreeCanvas width={width} height={height} style={{ background: ceu }} camera={{ fov: 55, near: 0.5, far: 800, position: [0, 30, 120] }}>
@@ -209,12 +209,12 @@ export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boo
       <ambientLight intensity={0.9} />
       <directionalLight position={[60, 120, 40]} intensity={2.4} />
       <directionalLight position={[-60, 80, -40]} intensity={1.0} />
-      <Cena faixa={faixa} trofeu={trofeu} />
+      <Cena faixa={faixa} trofeu={trofeu || trofeuFoco} foco={trofeuFoco} />
     </ThreeCanvas>
   );
 };
 
-const Cena: React.FC<{ faixa: string[]; trofeu: boolean }> = ({ faixa, trofeu }) => {
+const Cena: React.FC<{ faixa: string[]; trofeu: boolean; foco?: boolean }> = ({ faixa, trofeu, foco = false }) => {
   const pitch = usePitchTexture();
   const banner = useBannerTexture(faixa);
   const standSegs = 64;
@@ -269,16 +269,34 @@ const Cena: React.FC<{ faixa: string[]; trofeu: boolean }> = ({ faixa, trofeu })
           </mesh>
         </group>
       ))}
-      {/* faixa da torcida */}
-      <mesh position={[0, 9, -46.5]}>
+      {/* faixa da torcida (escondida no plano de foco do troféu) */}
+      <mesh position={[0, 9, -46.5]} visible={!foco}>
         <planeGeometry args={[40, 10]} />
         <meshStandardMaterial map={banner} side={THREE.DoubleSide} />
       </mesh>
       {trofeu ? (
-        <group position={[0, 1.6, 0]} scale={1.3}>
+        <group position={[0, 3.2 * (foco ? 1.25 : 1.0), 0]} scale={foco ? 1.25 : 1.0}>
           <Trofeu3D />
+          {foco ? <pointLight position={[0, 6, 10]} intensity={60} distance={40} color="#FFE7A0" /> : null}
         </group>
       ) : null}
+      {/* telão */}
+      <mesh position={[0, 30, -98]}>
+        <boxGeometry args={[46, 16, 2]} />
+        <meshStandardMaterial color="#151515" emissive="#0b1a12" />
+      </mesh>
+      {/* prédios da cidade ao fundo */}
+      {Array.from({ length: 34 }).map((_, i) => {
+        const a = (i / 34) * Math.PI * 2;
+        const r = 150 + ((i * 37) % 50);
+        const h = 18 + ((i * 53) % 46);
+        return (
+          <mesh key={i} position={[Math.cos(a) * r, h / 2, Math.sin(a) * r]}>
+            <boxGeometry args={[14 + (i % 3) * 6, h, 14]} />
+            <meshStandardMaterial color={["#B9C6D6", "#A8B6C8", "#C9D3DF"][i % 3]} />
+          </mesh>
+        );
+      })}
     </group>
   );
 };

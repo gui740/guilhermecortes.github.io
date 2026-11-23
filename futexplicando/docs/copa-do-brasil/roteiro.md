@@ -46,3 +46,19 @@ Fatos conferidos em [pesquisa.md](pesquisa.md).
 | Trilha "Energizing" | FreePD (domínio público / CC0), espelho archive.org | Volume baixo, abaixa sob a voz |
 | SFX (whoosh, torcida, carimbo, placar, contagem, pop, impacto) | Sintetizados em `scripts/sfx.py` | Autoria própria |
 | Fontes Baloo 2 ExtraBold e Nunito Black | Google Fonts (OFL), servidas localmente | — |
+
+## Versão 2 (refeita a partir do vídeo de referência)
+- **Visual:**
+  - Closes com a cabeça ocupando a tela e cortes de ~1 s.
+  - Luz quente de lustre e vinheta escura.
+  - Sala com cortina de veludo, janela, quadro, rádio aceso, tapete e mesa de reunião com papéis.
+  - Porta com placa "CBF".
+  - Vareta em primeira pessoa sobre o mapa.
+- **Personagem:** contorno mais grosso, olhos brancos grandes no espanto, opções de cabelo "capacete" e grisalho.
+- **Legenda:** menor, a 60% da altura (padrão da referência).
+- **Troféu 3D:** as duas alças agora aparecem (uma estava escondida dentro da taça), a base fica apoiada no gramado e a câmera mantém a taça inteira no quadro.
+- **Braço erguido:** desenhado por cima da cabeça, acenando.
+- **Áudio:**
+  - Trilha "Downtown Boogie" (FreePD/CC0, 103 BPM, o mesmo andamento da referência), audível a cerca de −9 dB da voz.
+  - Torcida gravada de verdade (SSE Library – CROWDS, CC0, archive.org).
+  - Saíram os whooshes e a torcida sintetizados com ruído, que soavam como chiado.

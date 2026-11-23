@@ -13,7 +13,7 @@ export type PersonagemProps = {
   oculos?: boolean;
   bigode?: boolean;
   chapeu?: boolean;
-  cabelo?: "careca" | "lados" | "topete";
+  cabelo?: "careca" | "lados" | "topete" | "capacete" | "grisalho";
   corCabelo?: string;
   /** cachecol com cor de time */
   cachecol?: string;
@@ -28,7 +28,7 @@ export type PersonagemProps = {
   style?: React.CSSProperties;
 };
 
-const OUTLINE = "#2A1A12";
+const OUTLINE = "#1A110C";
 
 /**
  * Personagem cartoon: cabeça redonda enorme, corpinho de terno, pernas de palito.
@@ -65,10 +65,12 @@ export const Personagem: React.FC<PersonagemProps> = ({
       case "espanto":
         return (
           <>
+            <circle cx="106" cy="148" r="26" fill="#FFFFFF" stroke={OUTLINE} strokeWidth="6" />
+            <circle cx="194" cy="148" r="26" fill="#FFFFFF" stroke={OUTLINE} strokeWidth="6" />
             <circle cx="108" cy="150" r="11" fill={OUTLINE} />
             <circle cx="192" cy="150" r="11" fill={OUTLINE} />
-            <path d="M86 112 Q108 96 128 108" stroke={OUTLINE} strokeWidth="6" fill="none" strokeLinecap="round" />
-            <path d="M172 108 Q192 96 214 112" stroke={OUTLINE} strokeWidth="6" fill="none" strokeLinecap="round" />
+            <path d="M80 104 Q106 86 130 100" stroke={OUTLINE} strokeWidth="6" fill="none" strokeLinecap="round" />
+            <path d="M170 100 Q194 86 220 104" stroke={OUTLINE} strokeWidth="6" fill="none" strokeLinecap="round" />
           </>
         );
       case "triste":
@@ -101,8 +103,8 @@ export const Personagem: React.FC<PersonagemProps> = ({
       default:
         return (
           <>
-            <circle cx="108" cy="150" r="8" fill={OUTLINE} />
-            <circle cx="192" cy="150" r="8" fill={OUTLINE} />
+            <ellipse cx="108" cy="150" rx="9" ry="13" fill={OUTLINE} />
+            <ellipse cx="192" cy="150" rx="9" ry="13" fill={OUTLINE} />
             <path d="M90 126 Q108 116 126 124" stroke={OUTLINE} strokeWidth="5" fill="none" strokeLinecap="round" />
             <path d="M174 124 Q192 116 210 126" stroke={OUTLINE} strokeWidth="5" fill="none" strokeLinecap="round" />
           </>
@@ -151,21 +153,23 @@ export const Personagem: React.FC<PersonagemProps> = ({
         {/* sombra no chão */}
         <ellipse cx="150" cy="512" rx="78" ry="9" fill="rgba(0,0,0,0.25)" />
         {/* pernas de palito */}
-        <path d="M134 400 L128 496" stroke={OUTLINE} strokeWidth="7" strokeLinecap="round" />
-        <path d="M166 400 L172 496" stroke={OUTLINE} strokeWidth="7" strokeLinecap="round" />
+        <path d="M134 400 L128 496" stroke={OUTLINE} strokeWidth="9" strokeLinecap="round" />
+        <path d="M166 400 L172 496" stroke={OUTLINE} strokeWidth="9" strokeLinecap="round" />
         <path d="M112 500 Q122 488 134 496 L134 504 L110 504 Z" fill={OUTLINE} />
         <path d="M188 500 Q178 488 166 496 L166 504 L190 504 Z" fill={OUTLINE} />
         {/* braços */}
-        <g style={{ transformOrigin: "106px 300px", rotate: `${bracoErguido ? -130 + arm * 0.6 : 18 + arm}deg` }}>
-          <path d="M106 300 L74 372" stroke={OUTLINE} strokeWidth="7" strokeLinecap="round" />
-          <circle cx="72" cy="377" r="9" fill={pele} stroke={OUTLINE} strokeWidth="3" />
-        </g>
+        {!bracoErguido ? (
+          <g style={{ transformOrigin: "106px 300px", rotate: `${18 + arm}deg` }}>
+            <path d="M106 300 L74 372" stroke={OUTLINE} strokeWidth="7" strokeLinecap="round" />
+            <circle cx="72" cy="377" r="9" fill={pele} stroke={OUTLINE} strokeWidth="3" />
+          </g>
+        ) : null}
         <g style={{ transformOrigin: "194px 300px", rotate: `${-18 - arm}deg` }}>
           <path d="M194 300 L226 372" stroke={OUTLINE} strokeWidth="7" strokeLinecap="round" />
           <circle cx="228" cy="377" r="9" fill={pele} stroke={OUTLINE} strokeWidth="3" />
         </g>
         {/* corpo de terno */}
-        <path d="M104 282 Q150 268 196 282 L190 406 L110 406 Z" fill={`url(#terno${id})`} stroke={OUTLINE} strokeWidth="3.5" strokeLinejoin="round" />
+        <path d="M104 282 Q150 268 196 282 L190 406 L110 406 Z" fill={`url(#terno${id})`} stroke={OUTLINE} strokeWidth="6" strokeLinejoin="round" />
         <path d="M134 280 L150 316 L166 280 Z" fill="#F7F2E8" stroke={OUTLINE} strokeWidth="2.5" />
         <path d="M150 292 L143 304 L150 352 L157 304 Z" fill={gravata} stroke={OUTLINE} strokeWidth="2" />
         <path d="M134 280 L150 330 L128 300 Z" fill="rgba(0,0,0,0.18)" />
@@ -178,7 +182,8 @@ export const Personagem: React.FC<PersonagemProps> = ({
         ) : null}
         {/* cabeça (balança levemente) */}
         <g style={{ transformOrigin: "150px 270px", rotate: `${bob}deg` }}>
-          <circle cx="150" cy="150" r="128" fill={`url(#pele${id})`} stroke={OUTLINE} strokeWidth="4" />
+          <circle cx="150" cy="150" r="128" fill={`url(#pele${id})`} stroke={OUTLINE} strokeWidth="7" />
+          <ellipse cx="150" cy="236" rx="96" ry="34" fill="rgba(60,25,10,0.22)" />
           {/* orelhas */}
           <circle cx="24" cy="160" r="16" fill={pele} stroke={OUTLINE} strokeWidth="3.5" />
           <circle cx="276" cy="160" r="16" fill={pele} stroke={OUTLINE} strokeWidth="3.5" />
@@ -187,6 +192,14 @@ export const Personagem: React.FC<PersonagemProps> = ({
             <>
               <path d="M30 120 Q34 80 60 64 Q50 100 52 140 Z" fill={corCabelo} stroke={OUTLINE} strokeWidth="3" />
               <path d="M270 120 Q266 80 240 64 Q250 100 248 140 Z" fill={corCabelo} stroke={OUTLINE} strokeWidth="3" />
+            </>
+          ) : null}
+          {cabelo === "capacete" ? <path d="M24 150 Q14 30 150 22 Q286 30 276 150 Q262 92 210 74 Q150 96 86 70 Q36 96 24 150 Z" fill={corCabelo} stroke={OUTLINE} strokeWidth="5" /> : null}
+          {cabelo === "grisalho" ? (
+            <>
+              <path d="M26 150 Q22 80 70 54 Q60 100 64 150 Z" fill="#C9CCD1" stroke={OUTLINE} strokeWidth="4" />
+              <path d="M274 150 Q278 80 230 54 Q240 100 236 150 Z" fill="#C9CCD1" stroke={OUTLINE} strokeWidth="4" />
+              <path d="M70 54 Q150 10 230 54 Q190 40 150 44 Q110 40 70 54 Z" fill="#C9CCD1" stroke={OUTLINE} strokeWidth="4" />
             </>
           ) : null}
           {cabelo === "topete" ? <path d="M70 70 Q120 0 210 40 Q240 60 236 80 Q190 40 120 66 Q90 74 70 70 Z" fill={corCabelo} stroke={OUTLINE} strokeWidth="3" /> : null}
@@ -217,6 +230,12 @@ export const Personagem: React.FC<PersonagemProps> = ({
             </g>
           ) : null}
         </g>
+        {bracoErguido ? (
+          <g>
+            <path d={`M106 300 L28 246 L${-16 + arm * 1.6} ${104 - Math.abs(arm)}`} stroke={OUTLINE} strokeWidth="9" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx={-16 + arm * 1.6} cy={96 - Math.abs(arm)} r="15" fill={pele} stroke={OUTLINE} strokeWidth="4" />
+          </g>
+        ) : null}
       </svg>
     </div>
   );
