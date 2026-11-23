@@ -4,6 +4,8 @@ import data from "./data/sao-paulo.json";
 import palm from "./data/palmeiras.json";
 import cor from "./data/corinthians.json";
 import cdb from "./data/copa-do-brasil.json";
+import fla from "./data/flamengo.json";
+import { Flamengo } from "./videos/Flamengo/Flamengo";
 import { CopaDoBrasil } from "./videos/CopaDoBrasil/CopaDoBrasil";
 import { CapaCorinthians, Corinthians } from "./videos/Corinthians/Corinthians";
 import { CapaPalmeiras, Palmeiras } from "./videos/Palmeiras/Palmeiras";
@@ -47,6 +49,14 @@ export const RemotionRoot: React.FC = () => {
         fps={cdb.fps}
         width={cdb.width}
         height={cdb.height}
+      />
+      <Composition
+        id="Flamengo"
+        component={Flamengo}
+        durationInFrames={Math.round(fla.duracaoSegundos * fla.fps)}
+        fps={fla.fps}
+        width={fla.width}
+        height={fla.height}
       />
     </>
   );

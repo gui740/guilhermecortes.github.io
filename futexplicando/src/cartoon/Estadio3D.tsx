@@ -54,15 +54,15 @@ const usePitchTexture = () =>
     return t;
   }, []);
 
-const useBannerTexture = (linhas: string[]) =>
+const useBannerTexture = (linhas: string[], cor: [string, string] = ["#0B6E3A", "#FEDD00"]) =>
   useMemo(() => {
     const c = document.createElement("canvas");
     c.width = 1024;
     c.height = 256;
     const g = c.getContext("2d")!;
-    g.fillStyle = "#0B6E3A";
+    g.fillStyle = cor[0];
     g.fillRect(0, 0, c.width, c.height);
-    g.strokeStyle = "#FEDD00";
+    g.strokeStyle = cor[1];
     g.lineWidth = 14;
     g.strokeRect(8, 8, c.width - 16, c.height - 16);
     g.fillStyle = "#FFFFFF";
@@ -70,15 +70,15 @@ const useBannerTexture = (linhas: string[]) =>
     g.font = "900 96px 'Baloo 2', Arial";
     g.fillText(linhas[0], c.width / 2, 120);
     g.font = "800 60px 'Baloo 2', Arial";
-    g.fillStyle = "#FEDD00";
+    g.fillStyle = cor[1];
     g.fillText(linhas[1] ?? "", c.width / 2, 200);
     const t = new THREE.CanvasTexture(c);
     t.colorSpace = THREE.SRGBColorSpace;
     return t;
-  }, [linhas]);
+  }, [linhas, cor]);
 
 /** Torcida: dezenas/centenas de mini-personagens de cabeça redonda (instanciados). */
-const Torcida3D: React.FC = () => {
+const Torcida3D: React.FC<{ cores?: string[] }> = ({ cores = CORES_TIME }) => {
   const frame = useCurrentFrame();
   const { heads, bodies } = useMemo(() => {
     const hs: { p: THREE.Vector3; c: string; ph: number }[] = [];
@@ -96,13 +96,13 @@ const Torcida3D: React.FC = () => {
         if (rnd < 0.08) continue;
         const x = Math.cos(a) * rx;
         const z = Math.sin(a) * rz;
-        const team = CORES_TIME[Math.floor(rnd * 997) % CORES_TIME.length];
+        const team = cores[Math.floor(rnd * 997) % cores.length];
         hs.push({ p: new THREE.Vector3(x, y + 1.25, z), c: PELES[Math.floor(rnd * 131) % PELES.length], ph: rnd * 6.28 });
         bs.push({ p: new THREE.Vector3(x, y + 0.35, z), c: team, ph: rnd * 6.28 });
       }
     }
     return { heads: hs, bodies: bs };
-  }, []);
+  }, [cores]);
   const headRef = React.useRef<THREE.InstancedMesh>(null);
   const eyeRef = React.useRef<THREE.InstancedMesh>(null);
   const bodyRef = React.useRef<THREE.InstancedMesh>(null);
@@ -200,7 +200,7 @@ const Trofeu3D: React.FC<{ y?: number }> = ({ y = 0 }) => {
 };
 
 /** Estádio 3D simples: gramado, arquibancada em anel, torcida, refletores, faixa e troféu. */
-export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boolean; trofeuFoco?: boolean; ceu?: string }> = ({ keys, faixa = ["COPA DO BRASIL", ""], trofeu = true, trofeuFoco = false, ceu = "#7EC8FF" }) => {
+export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boolean; trofeuFoco?: boolean; ceu?: string; cores?: string[]; faixaCor?: [string, string] }> = ({ keys, faixa = ["COPA DO BRASIL", ""], trofeu = true, trofeuFoco = false, ceu = "#7EC8FF", cores, faixaCor }) => {
   const { width, height } = useVideoConfig();
   return (
     <ThreeCanvas width={width} height={height} style={{ background: ceu }} camera={{ fov: 55, near: 0.5, far: 800, position: [0, 30, 120] }}>
@@ -209,14 +209,14 @@ export const Estadio3D: React.FC<{ keys: Ponto[]; faixa?: string[]; trofeu?: boo
       <ambientLight intensity={0.9} />
       <directionalLight position={[60, 120, 40]} intensity={2.4} />
       <directionalLight position={[-60, 80, -40]} intensity={1.0} />
-      <Cena faixa={faixa} trofeu={trofeu || trofeuFoco} foco={trofeuFoco} />
+      <Cena faixa={faixa} trofeu={trofeu || trofeuFoco} foco={trofeuFoco} cores={cores} faixaCor={faixaCor} />
     </ThreeCanvas>
   );
 };
 
-const Cena: React.FC<{ faixa: string[]; trofeu: boolean; foco?: boolean }> = ({ faixa, trofeu, foco = false }) => {
+const Cena: React.FC<{ faixa: string[]; trofeu: boolean; foco?: boolean; cores?: string[]; faixaCor?: [string, string] }> = ({ faixa, trofeu, foco = false, cores, faixaCor }) => {
   const pitch = usePitchTexture();
-  const banner = useBannerTexture(faixa);
+  const banner = useBannerTexture(faixa, faixaCor);
   const standSegs = 64;
   return (
     <group>
@@ -250,7 +250,7 @@ const Cena: React.FC<{ faixa: string[]; trofeu: boolean; foco?: boolean }> = ({ 
         <ringGeometry args={[78, 97, standSegs]} />
         <meshStandardMaterial color="#F4F6F8" side={THREE.DoubleSide} />
       </mesh>
-      <Torcida3D />
+      <Torcida3D cores={cores} />
       {/* refletores */}
       {[
         [80, 60],

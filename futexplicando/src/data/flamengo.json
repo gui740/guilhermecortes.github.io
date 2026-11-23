@@ -1,0 +1,822 @@
+{
+ "id": "Flamengo",
+ "titulo": "A história do Flamengo",
+ "handle": "@futexplicando",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duracaoSegundos": 68.6,
+ "audio": {
+  "mix": "flamengo/audio/mix-flamengo.wav",
+  "narracao": "flamengo/audio/narracao-gemini.wav",
+  "narracaoEm": 0.4,
+  "trilha": "flamengo/audio/trilha-funkeriffic.mp3"
+ },
+ "escudos": {
+  "flamengo": "flamengo/escudos/flamengo.svg",
+  "fluminense": "flamengo/escudos/fluminense.svg",
+  "liverpool": "flamengo/escudos/liverpool.svg",
+  "river": "flamengo/escudos/river.svg",
+  "athletico": "flamengo/escudos/athletico.svg",
+  "palmeiras": "flamengo/escudos/palmeiras.svg"
+ },
+ "logos": {
+  "libertadores": "sao-paulo/logos/logo-libertadores-spfc.png"
+ },
+ "fotos": {
+  "zico": "flamengo/fotos/zico-recorte.png",
+  "zicoRetrato": "flamengo/fotos/zico-retrato.jpg",
+  "gabigolTaca": "flamengo/fotos/gabigol-taca-2019.jpg",
+  "final2019": "flamengo/fotos/final-2019-river.jpg",
+  "festa2019": "flamengo/fotos/festa-2019.jpg",
+  "danilo": "flamengo/fotos/danilo-recorte.png",
+  "danilo2025": "flamengo/fotos/danilo-2025.jpg",
+  "maracana": "flamengo/fotos/maracana-torcida.jpg",
+  "torcida": "flamengo/fotos/torcida-maracana.jpg"
+ },
+ "cenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.0,
+   "fim": 6.31,
+   "frase": "O time com a maior torcida do Brasil nasceu sem bola. Nasceu num barco!"
+  },
+  {
+   "id": "fica",
+   "inicio": 6.31,
+   "fim": 8.57,
+   "frase": "Fica até o final que eu explico."
+  },
+  {
+   "id": "fundacao",
+   "inicio": 8.57,
+   "fim": 15.85,
+   "frase": "Em mil oitocentos e noventa e cinco, um grupo de remadores fundou, na praia do Flamengo, um clube de regatas."
+  },
+  {
+   "id": "pherusa",
+   "inicio": 15.85,
+   "fim": 21.11,
+   "frase": "O primeiro barco, o Pherusa, virou no mar... e depois ainda foi roubado!"
+  },
+  {
+   "id": "futebol",
+   "inicio": 21.11,
+   "fim": 26.39,
+   "frase": "Futebol? Só em mil novecentos e onze, com jogadores que saíram brigados do Fluminense."
+  },
+  {
+   "id": "flaflu",
+   "inicio": 26.39,
+   "fim": 30.21,
+   "frase": "No ano seguinte, nascia o Fla-Flu."
+  },
+  {
+   "id": "zico",
+   "inicio": 30.21,
+   "fim": 39.29,
+   "frase": "Em mil novecentos e oitenta e um, com Zico, o Flamengo conquistou a América... e o mundo: três a zero no Liverpool, em Tóquio."
+  },
+  {
+   "id": "gabigol",
+   "inicio": 39.29,
+   "fim": 49.63,
+   "frase": "Depois, trinta e oito anos de espera pela Libertadores... até dois mil e dezenove: Gabigol fez dois gols no fim, contra o River, e virou o jogo!"
+  },
+  {
+   "id": "tri_tetra",
+   "inicio": 49.63,
+   "fim": 54.19,
+   "frase": "Vieram mais duas: em dois mil e vinte e dois e em dois mil e vinte e cinco."
+  },
+  {
+   "id": "nacao",
+   "inicio": 54.19,
+   "fim": 62.27,
+   "frase": "Hoje são quatro Libertadores, recorde entre os brasileiros, e a maior torcida do país: a Nação rubro-negra."
+  },
+  {
+   "id": "cta",
+   "inicio": 62.27,
+   "fim": 68.6,
+   "frase": "Qual time você quer ver explicado? Comenta aí e segue o arroba futexplicando!"
+  }
+ ],
+ "legendas": [
+  {
+   "text": "O",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "text": "time",
+   "start": 0.8,
+   "end": 1.06
+  },
+  {
+   "text": "com",
+   "start": 1.06,
+   "end": 1.32
+  },
+  {
+   "text": "a",
+   "start": 1.32,
+   "end": 1.5
+  },
+  {
+   "text": "maior",
+   "start": 1.5,
+   "end": 1.98
+  },
+  {
+   "text": "torcida",
+   "start": 1.98,
+   "end": 2.48
+  },
+  {
+   "text": "do",
+   "start": 2.48,
+   "end": 2.7
+  },
+  {
+   "text": "Brasil",
+   "start": 2.7,
+   "end": 3.02
+  },
+  {
+   "text": "nasceu",
+   "start": 3.02,
+   "end": 3.74
+  },
+  {
+   "text": "sem",
+   "start": 3.74,
+   "end": 4.14
+  },
+  {
+   "text": "bola,",
+   "start": 4.14,
+   "end": 4.58
+  },
+  {
+   "text": "nasceu",
+   "start": 4.86,
+   "end": 5.2
+  },
+  {
+   "text": "num",
+   "start": 5.2,
+   "end": 5.34
+  },
+  {
+   "text": "barco!",
+   "start": 5.34,
+   "end": 5.96
+  },
+  {
+   "text": "Fica",
+   "start": 6.46,
+   "end": 6.78
+  },
+  {
+   "text": "até",
+   "start": 6.78,
+   "end": 7.04
+  },
+  {
+   "text": "o",
+   "start": 7.04,
+   "end": 7.1
+  },
+  {
+   "text": "final",
+   "start": 7.1,
+   "end": 7.34
+  },
+  {
+   "text": "que",
+   "start": 7.34,
+   "end": 7.56
+  },
+  {
+   "text": "eu",
+   "start": 7.56,
+   "end": 7.62
+  },
+  {
+   "text": "explico.",
+   "start": 7.62,
+   "end": 8.08
+  },
+  {
+   "text": "Em",
+   "start": 8.72,
+   "end": 8.92
+  },
+  {
+   "text": "1895,",
+   "start": 8.92,
+   "end": 10.16
+  },
+  {
+   "text": "um",
+   "start": 10.84,
+   "end": 10.98
+  },
+  {
+   "text": "grupo",
+   "start": 10.98,
+   "end": 11.24
+  },
+  {
+   "text": "de",
+   "start": 11.24,
+   "end": 11.44
+  },
+  {
+   "text": "remadores",
+   "start": 11.44,
+   "end": 11.94
+  },
+  {
+   "text": "fundou,",
+   "start": 11.94,
+   "end": 12.46
+  },
+  {
+   "text": "na",
+   "start": 12.72,
+   "end": 12.8
+  },
+  {
+   "text": "praia",
+   "start": 12.8,
+   "end": 13.18
+  },
+  {
+   "text": "do",
+   "start": 13.18,
+   "end": 13.3
+  },
+  {
+   "text": "Flamengo,",
+   "start": 13.3,
+   "end": 13.76
+  },
+  {
+   "text": "um",
+   "start": 14.02,
+   "end": 14.16
+  },
+  {
+   "text": "clube",
+   "start": 14.16,
+   "end": 14.52
+  },
+  {
+   "text": "de",
+   "start": 14.52,
+   "end": 14.72
+  },
+  {
+   "text": "regatas.",
+   "start": 14.72,
+   "end": 15.3
+  },
+  {
+   "text": "O",
+   "start": 16.0,
+   "end": 16.14
+  },
+  {
+   "text": "primeiro",
+   "start": 16.14,
+   "end": 16.4
+  },
+  {
+   "text": "barco,",
+   "start": 16.4,
+   "end": 16.88
+  },
+  {
+   "text": "o",
+   "start": 17.04,
+   "end": 17.12
+  },
+  {
+   "text": "Pherusa,",
+   "start": 17.12,
+   "end": 17.68
+  },
+  {
+   "text": "virou",
+   "start": 18.02,
+   "end": 18.28
+  },
+  {
+   "text": "no",
+   "start": 18.28,
+   "end": 18.42
+  },
+  {
+   "text": "mar",
+   "start": 18.42,
+   "end": 18.68
+  },
+  {
+   "text": "e",
+   "start": 18.68,
+   "end": 19.04
+  },
+  {
+   "text": "depois",
+   "start": 19.04,
+   "end": 19.34
+  },
+  {
+   "text": "ainda",
+   "start": 19.34,
+   "end": 19.62
+  },
+  {
+   "text": "foi",
+   "start": 19.62,
+   "end": 19.86
+  },
+  {
+   "text": "roubado.",
+   "start": 19.86,
+   "end": 20.54
+  },
+  {
+   "text": "Futebol?",
+   "start": 21.26,
+   "end": 21.76
+  },
+  {
+   "text": "Só",
+   "start": 21.76,
+   "end": 22.3
+  },
+  {
+   "text": "em",
+   "start": 22.3,
+   "end": 22.54
+  },
+  {
+   "text": "1911,",
+   "start": 22.54,
+   "end": 23.68
+  },
+  {
+   "text": "com",
+   "start": 23.96,
+   "end": 24.14
+  },
+  {
+   "text": "jogadores",
+   "start": 24.14,
+   "end": 24.6
+  },
+  {
+   "text": "que",
+   "start": 24.6,
+   "end": 24.78
+  },
+  {
+   "text": "saíram",
+   "start": 24.78,
+   "end": 25.1
+  },
+  {
+   "text": "brigados",
+   "start": 25.1,
+   "end": 25.8
+  },
+  {
+   "text": "do",
+   "start": 25.8,
+   "end": 25.98
+  },
+  {
+   "text": "Fluminense.",
+   "start": 25.98,
+   "end": 26.54
+  },
+  {
+   "text": "No",
+   "start": 26.54,
+   "end": 27.42
+  },
+  {
+   "text": "ano",
+   "start": 27.42,
+   "end": 27.62
+  },
+  {
+   "text": "seguinte,",
+   "start": 27.62,
+   "end": 27.92
+  },
+  {
+   "text": "nascia",
+   "start": 28.34,
+   "end": 28.82
+  },
+  {
+   "text": "o",
+   "start": 28.82,
+   "end": 28.98
+  },
+  {
+   "text": "Fla-Flu!",
+   "start": 28.98,
+   "end": 29.68
+  },
+  {
+   "text": "Em",
+   "start": 30.36,
+   "end": 30.82
+  },
+  {
+   "text": "1981,",
+   "start": 30.82,
+   "end": 31.8
+  },
+  {
+   "text": "com",
+   "start": 32.56,
+   "end": 32.68
+  },
+  {
+   "text": "Zico,",
+   "start": 32.68,
+   "end": 33.16
+  },
+  {
+   "text": "o",
+   "start": 33.42,
+   "end": 33.44
+  },
+  {
+   "text": "Flamengo",
+   "start": 33.44,
+   "end": 33.82
+  },
+  {
+   "text": "conquistou",
+   "start": 33.82,
+   "end": 34.42
+  },
+  {
+   "text": "a",
+   "start": 34.42,
+   "end": 34.56
+  },
+  {
+   "text": "América",
+   "start": 34.56,
+   "end": 35.02
+  },
+  {
+   "text": "e",
+   "start": 35.02,
+   "end": 35.56
+  },
+  {
+   "text": "o",
+   "start": 35.56,
+   "end": 35.72
+  },
+  {
+   "text": "mundo,",
+   "start": 35.72,
+   "end": 36.2
+  },
+  {
+   "text": "3",
+   "start": 36.5,
+   "end": 36.88
+  },
+  {
+   "text": "a 0",
+   "start": 36.88,
+   "end": 37.3
+  },
+  {
+   "text": "no",
+   "start": 37.3,
+   "end": 37.48
+  },
+  {
+   "text": "Liverpool,",
+   "start": 37.48,
+   "end": 38.04
+  },
+  {
+   "text": "em",
+   "start": 38.18,
+   "end": 38.22
+  },
+  {
+   "text": "Tóquio.",
+   "start": 38.22,
+   "end": 38.74
+  },
+  {
+   "text": "Depois,",
+   "start": 39.44,
+   "end": 39.9
+  },
+  {
+   "text": "38",
+   "start": 40.36,
+   "end": 40.84
+  },
+  {
+   "text": "anos",
+   "start": 40.84,
+   "end": 41.3
+  },
+  {
+   "text": "de",
+   "start": 41.3,
+   "end": 41.54
+  },
+  {
+   "text": "espera",
+   "start": 41.54,
+   "end": 41.94
+  },
+  {
+   "text": "pela",
+   "start": 41.94,
+   "end": 42.24
+  },
+  {
+   "text": "Libertadores.",
+   "start": 42.24,
+   "end": 42.84
+  },
+  {
+   "text": "Até",
+   "start": 43.36,
+   "end": 43.72
+  },
+  {
+   "text": "2019,",
+   "start": 43.72,
+   "end": 44.56
+  },
+  {
+   "text": "Gabigol",
+   "start": 45.32,
+   "end": 45.72
+  },
+  {
+   "text": "fez",
+   "start": 45.72,
+   "end": 45.94
+  },
+  {
+   "text": "dois",
+   "start": 45.94,
+   "end": 46.32
+  },
+  {
+   "text": "gols",
+   "start": 46.32,
+   "end": 46.74
+  },
+  {
+   "text": "no",
+   "start": 46.74,
+   "end": 46.84
+  },
+  {
+   "text": "fim",
+   "start": 46.84,
+   "end": 47.1
+  },
+  {
+   "text": "contra",
+   "start": 47.1,
+   "end": 47.38
+  },
+  {
+   "text": "o",
+   "start": 47.38,
+   "end": 47.5
+  },
+  {
+   "text": "River",
+   "start": 47.5,
+   "end": 47.78
+  },
+  {
+   "text": "e",
+   "start": 47.78,
+   "end": 48.12
+  },
+  {
+   "text": "virou",
+   "start": 48.12,
+   "end": 48.54
+  },
+  {
+   "text": "o",
+   "start": 48.54,
+   "end": 48.74
+  },
+  {
+   "text": "jogo!",
+   "start": 48.74,
+   "end": 49.0
+  },
+  {
+   "text": "Vieram",
+   "start": 49.78,
+   "end": 50.28
+  },
+  {
+   "text": "mais",
+   "start": 50.28,
+   "end": 50.52
+  },
+  {
+   "text": "duas,",
+   "start": 50.52,
+   "end": 50.9
+  },
+  {
+   "text": "em",
+   "start": 51.18,
+   "end": 51.34
+  },
+  {
+   "text": "2022",
+   "start": 51.34,
+   "end": 51.94
+  },
+  {
+   "text": "e",
+   "start": 51.94,
+   "end": 52.54
+  },
+  {
+   "text": "em",
+   "start": 52.54,
+   "end": 52.68
+  },
+  {
+   "text": "2025.",
+   "start": 52.68,
+   "end": 53.58
+  },
+  {
+   "text": "Hoje",
+   "start": 54.34,
+   "end": 54.72
+  },
+  {
+   "text": "são",
+   "start": 54.72,
+   "end": 54.96
+  },
+  {
+   "text": "quatro",
+   "start": 54.96,
+   "end": 55.5
+  },
+  {
+   "text": "Libertadores,",
+   "start": 55.5,
+   "end": 56.2
+  },
+  {
+   "text": "recorde",
+   "start": 56.56,
+   "end": 57.12
+  },
+  {
+   "text": "entre",
+   "start": 57.12,
+   "end": 57.24
+  },
+  {
+   "text": "os",
+   "start": 57.24,
+   "end": 57.34
+  },
+  {
+   "text": "brasileiros",
+   "start": 57.34,
+   "end": 57.94
+  },
+  {
+   "text": "e",
+   "start": 57.94,
+   "end": 58.28
+  },
+  {
+   "text": "a",
+   "start": 58.28,
+   "end": 58.38
+  },
+  {
+   "text": "maior",
+   "start": 58.38,
+   "end": 58.8
+  },
+  {
+   "text": "torcida",
+   "start": 58.8,
+   "end": 59.38
+  },
+  {
+   "text": "do",
+   "start": 59.38,
+   "end": 59.54
+  },
+  {
+   "text": "país,",
+   "start": 59.54,
+   "end": 59.94
+  },
+  {
+   "text": "a",
+   "start": 60.34,
+   "end": 60.4
+  },
+  {
+   "text": "Nação",
+   "start": 60.4,
+   "end": 60.88
+  },
+  {
+   "text": "rubro-negra!",
+   "start": 60.88,
+   "end": 61.74
+  },
+  {
+   "text": "Qual",
+   "start": 62.42,
+   "end": 62.76
+  },
+  {
+   "text": "time",
+   "start": 62.76,
+   "end": 63.06
+  },
+  {
+   "text": "você",
+   "start": 63.06,
+   "end": 63.3
+  },
+  {
+   "text": "quer",
+   "start": 63.3,
+   "end": 63.48
+  },
+  {
+   "text": "ver",
+   "start": 63.48,
+   "end": 63.6
+  },
+  {
+   "text": "explicado?",
+   "start": 63.6,
+   "end": 64.14
+  },
+  {
+   "text": "Comenta",
+   "start": 64.52,
+   "end": 64.96
+  },
+  {
+   "text": "aí",
+   "start": 64.96,
+   "end": 65.24
+  },
+  {
+   "text": "e",
+   "start": 65.24,
+   "end": 65.48
+  },
+  {
+   "text": "segue",
+   "start": 65.48,
+   "end": 65.66
+  },
+  {
+   "text": "o",
+   "start": 65.66,
+   "end": 65.82
+  },
+  {
+   "text": "@futexplicando!",
+   "start": 65.82,
+   "end": 67.3
+  }
+ ]
+}
