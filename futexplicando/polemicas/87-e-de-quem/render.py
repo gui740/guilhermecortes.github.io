@@ -480,9 +480,14 @@ def chunks(text, n=4):
     return out
 
 def caption(txt):
-    f = F(ANTON, 92)
     words = txt.split()
-    tw = sum(f.getlength(x + " ") for x in words)
+    size = 92
+    while True:  # encolhe a fonte se a frase não couber na largura (margem de 50 px de cada lado)
+        f = F(ANTON, size)
+        tw = sum(f.getlength(x.upper() + " ") for x in words)
+        if tw <= W - 100 or size <= 56:
+            break
+        size -= 4
     im = Image.new("RGBA", (W, 170), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     x = (W - tw) / 2
