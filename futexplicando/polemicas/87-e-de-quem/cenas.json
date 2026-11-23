@@ -1,0 +1,52 @@
+[
+ {
+  "cena": 1,
+  "id": "gancho",
+  "texto": "O Flamengo ganhou a final, levantou a taça... e a Justiça diz que o campeão é OUTRO. 87 é de quem?"
+ },
+ {
+  "cena": 2,
+  "id": "contexto",
+  "texto": "1987. A CBF tá sem dinheiro pra organizar o Brasileirão. Aí os grandes criam o Clube dos 13 e fazem o próprio campeonato: a Copa União."
+ },
+ {
+  "cena": 3,
+  "id": "modulos",
+  "texto": "A CBF aceita, mas divide tudo em dois módulos. O Verde, com os grandes, e o Amarelo."
+ },
+ {
+  "cena": 4,
+  "id": "final",
+  "texto": "No Verde, o Flamengo de Zico, Bebeto e Renato bate o Inter na final."
+ },
+ {
+  "cena": 5,
+  "id": "recusa",
+  "texto": "Só que o regulamento mandava fazer um quadrangular com os dois melhores do Amarelo: Sport e Guarani. Flamengo e Inter se recusam a jogar."
+ },
+ {
+  "cena": 6,
+  "id": "sport",
+  "texto": "O Sport bate o Guarani por 1 a 0, em fevereiro de 88... e a CBF declara: campeão é o SPORT."
+ },
+ {
+  "cena": 7,
+  "id": "ladoA",
+  "texto": "O Flamengo diz: a Copa União era a elite de verdade. Os maiores do país tavam ali, e ele venceu TODOS."
+ },
+ {
+  "cena": 8,
+  "id": "ladoB",
+  "texto": "O Sport diz: regra é regra. O cruzamento tava no regulamento, e quem não entra em campo... perde."
+ },
+ {
+  "cena": 9,
+  "id": "desfecho",
+  "texto": "Em 2011, a CBF tentou dividir o título. Em 2017, o STF bateu o martelo: o Sport é o ÚNICO campeão. E em 2026 a Justiça do Rio negou de novo o pedido do Flamengo."
+ },
+ {
+  "cena": 10,
+  "id": "cta",
+  "texto": "E aí: 87 é do Fla ou do Sport? Comenta aí. Segue o @futexplicando pra próxima."
+ }
+]
