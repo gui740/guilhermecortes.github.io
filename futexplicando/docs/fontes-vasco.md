@@ -46,7 +46,7 @@ Vídeo vertical 1080×1920, 30 fps, 78 s. Usa a mesma mistura de estilos do Flam
 ⚠️ Não foi encontrada uma foto do Romário com a camisa do Vasco em fonte acessível, então o nome dele aparece só em texto. Fotos de agência e de jornal têm direitos reservados: para uso comercial, é preciso licenciar.
 
 ## Áudio
-- **Trilha:** "Gotta Keep On Movin'" (FreePD, CC0), a cerca de −9 dB da voz.
+- **Trilha:** "Gotta Keep On Movin'" (FreePD, CC0), começando aos 38 s da faixa (a introdução é baixa demais), com volume nivelado, a cerca de −6 dB da voz.
 - **Torcida:** gravação real (SSE Library, CC0).
 - **Efeitos:** só pop e batida em senoide.
 - **Mixagem:** `scripts/mix-vasco.py`, cerca de −14 LUFS.

@@ -27,10 +27,13 @@ voice = sosfilt(butter(2, 90, "hp", fs=SR, output="sos"), voice, axis=0)
 voice = np.tanh(voice * 1.4) / np.tanh(1.4)
 # trilha: loop se precisar, volume ~ -9 dB em relação à voz, ducking leve
 mus = load(os.path.join(PUB, D["audio"]["trilha"]))
-off = int(2.5 * SR); mus = mus[off:]
+off = int(38 * SR); mus = mus[off:]   # a faixa tem 20 s de introdução baixa: começa na parte cheia
+# nivela o volume da trilha (janela de 3 s) para ela ficar audível o vídeo todo
+_w = int(3 * SR); _e = np.sqrt(np.convolve((mus ** 2).mean(1), np.ones(_w) / _w, mode="same")) + 1e-6
+mus = mus * (np.median(_e) / _e)[:, None] ** 0.8
 while len(mus) < N: mus = np.concatenate([mus, mus])
 music = mus[:N].copy()
-music *= rms(voice[voice.any(1)]) / rms(music) * db(-9)
+music *= rms(voice[voice.any(1)]) / rms(music) * db(-6)
 env = np.convolve(np.abs(voice).mean(1), np.ones(int(0.2 * SR)) / int(0.2 * SR), mode="same")
 music *= (1 - 0.3 * np.clip(env / 0.06, 0, 1))[:, None]
 music *= np.clip(tt / 0.6, 0, 1)[:, None] * np.clip((DUR - tt) / 1.2, 0, 1)[:, None]
