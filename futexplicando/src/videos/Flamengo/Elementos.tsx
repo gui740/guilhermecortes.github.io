@@ -99,7 +99,7 @@ export const Mar: React.FC<{ children?: React.ReactNode; horizonte?: number; tar
 };
 
 /** Barco a remo com remadores de cabeça redonda; remos batem no ritmo. */
-export const Barco: React.FC<{ largura?: number; nome?: string; remadores?: number; inclina?: number; ritmo?: number }> = ({ largura = 860, nome = "PHERUSA", remadores = 4, inclina = 0, ritmo = 1 }) => {
+export const Barco: React.FC<{ largura?: number; nome?: string; remadores?: number; inclina?: number; ritmo?: number; cores?: [string, string] }> = ({ largura = 860, nome = "PHERUSA", remadores = 4, inclina = 0, ritmo = 1, cores = [RUBRO, NEGRO] }) => {
   const f = useCurrentFrame();
   const peles = ["#F2C29B", "#E8A877", "#F8E2CC", "#D9A27A", "#C68B5F"];
   const bob = Math.sin(f / 7) * 6;
@@ -114,11 +114,11 @@ export const Barco: React.FC<{ largura?: number; nome?: string; remadores?: numb
               {/* remo */}
               <g transform={`rotate(${a * 22} ${x} 250)`}>
                 <line x1={x} y1={250} x2={x - 70} y2={400} stroke="#8A5A30" strokeWidth="10" strokeLinecap="round" />
-                <path d={`M${x - 64} 380 L${x - 96} 446 L${x - 66} 452 L${x - 50} 388 Z`} fill={i % 2 ? NEGRO : RUBRO} stroke={OUT} strokeWidth="4" />
+                <path d={`M${x - 64} 380 L${x - 96} 446 L${x - 66} 452 L${x - 50} 388 Z`} fill={i % 2 ? cores[1] : cores[0]} stroke={OUT} strokeWidth="4" />
               </g>
               {/* corpo listrado */}
               <path d={`M${x - 34} 236 Q${x} 196 ${x + 34} 236 L${x + 30} 276 L${x - 30} 276 Z`} fill="#fff" stroke={OUT} strokeWidth="5" />
-              <path d={`M${x - 32} 246 L${x + 32} 246 M${x - 31} 262 L${x + 31} 262`} stroke={RUBRO} strokeWidth="8" />
+              <path d={`M${x - 32} 246 L${x + 32} 246 M${x - 31} 262 L${x + 31} 262`} stroke={cores[0]} strokeWidth="8" />
               <circle cx={x} cy={168} r={44} fill={peles[i % peles.length]} stroke={OUT} strokeWidth="5" />
               <path d={`M${x - 42} 158 Q${x} 104 ${x + 42} 158 Q${x} 136 ${x - 42} 158 Z`} fill="#2B1B10" />
               <circle cx={x - 15} cy={170} r={6} fill={OUT} />

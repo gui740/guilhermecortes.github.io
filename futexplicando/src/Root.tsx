@@ -5,6 +5,8 @@ import palm from "./data/palmeiras.json";
 import cor from "./data/corinthians.json";
 import cdb from "./data/copa-do-brasil.json";
 import fla from "./data/flamengo.json";
+import vas from "./data/vasco.json";
+import { Vasco } from "./videos/Vasco/Vasco";
 import { Flamengo } from "./videos/Flamengo/Flamengo";
 import { CopaDoBrasil } from "./videos/CopaDoBrasil/CopaDoBrasil";
 import { CapaCorinthians, Corinthians } from "./videos/Corinthians/Corinthians";
@@ -57,6 +59,14 @@ export const RemotionRoot: React.FC = () => {
         fps={fla.fps}
         width={fla.width}
         height={fla.height}
+      />
+      <Composition
+        id="Vasco"
+        component={Vasco}
+        durationInFrames={Math.round(vas.duracaoSegundos * vas.fps)}
+        fps={vas.fps}
+        width={vas.width}
+        height={vas.height}
       />
     </>
   );
