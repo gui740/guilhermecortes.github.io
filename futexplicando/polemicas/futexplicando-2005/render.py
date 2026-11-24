@@ -559,7 +559,7 @@ def cbf_plate():
 # ------------------------------------------------------------------ cenas
 TITLE = ("2005 FOI", "DO INTER?!")
 SCENES = [
-    dict(id="gancho", bg="stadium", cam=(1.10, 1.0, 0, 30), text="O próprio juiz confessou: ele mudou o campeão brasileiro. 2005 foi do Inter?"),
+    dict(id="gancho", bg="stadium", cam=(1.03, 1.0, 0, 20), text="O próprio juiz confessou: ele mudou o campeão brasileiro. 2005 foi do Inter?"),
     dict(id="contexto", bg="newsroom", cam=(1.0, 1.08, -20, 0), text="2005. Estoura a Máfia do Apito: o árbitro Edílson Pereira de Carvalho manipulava jogos pra apostadores."),
     dict(id="decisao", bg="court", label="STJD", cam=(1.08, 1.0, 0, -20), text="O STJD anula os 11 jogos que ele apitou e manda jogar tudo de novo."),
     dict(id="virada", bg="stadium", cam=(1.0, 1.07, 20, 0), text="Nos jogos refeitos, o Corinthians soma quatro pontos: vence o Santos e empata com o São Paulo."),
@@ -568,7 +568,7 @@ SCENES = [
     dict(id="ladoA", bg="stadium", cam=(1.0, 1.06, 0, -30), text="O Inter diz: sem a máfia, o campeão era ele. O próprio Edílson admitiu isso em documentário, e até o ex-presidente corintiano Alberto Dualib aparece num áudio dizendo o mesmo."),
     dict(id="ladoB", bg="stadium", cam=(1.0, 1.06, 0, 30), text="O Corinthians diz: os jogos foram refeitos e ele ganhou dentro de campo. E especialista em direito desportivo lembra: título não se divide."),
     dict(id="desfecho", bg="court", label="CBF", cam=(1.1, 1.0, 0, 0), text="Em maio de 2026 o Inter pediu à CBF pra dividir o título, sem tirar a taça do Corinthians. E até agora... nada de decisão."),
-    dict(id="cta", bg="stadium", cam=(1.0, 1.06, 0, 0), text="E aí: 2005 é do Corinthians ou do Inter? Comenta aí. Segue o @futexplicando pra próxima."),
+    dict(id="cta", bg="stadium", cam=(1.0, 1.03, 0, 0), text="E aí: 2005 é do Corinthians ou do Inter? Comenta aí. Segue o @futexplicando pra próxima."),
 ]
 WPS = 3.3
 PAD_ANTES = 0.15  # mesmo respiro usado no finalizar.py
