@@ -11,7 +11,7 @@ import { COR, PELE, TomPele, TRACO } from "../estilo/tokens";
 export type Olhos = "aberto" | "fechado" | "chocado" | "bravo" | "triste" | "convencido" | "feliz";
 export type Boca = "neutra" | "aberta" | "o" | "dentes" | "triste" | "sorriso_lado" | "grito" | "sorriso";
 export type Sobrancelha = "normal" | "brava" | "triste" | "erguida" | "convencida";
-export type Pose = "baixo" | "cruzados" | "apontando" | "comemorando" | "maos_cabeca" | "ombros" | "segurando" | "martelo" | "acenando";
+export type Pose = "baixo" | "cruzados" | "apontando" | "comemorando" | "maos_cabeca" | "ombros" | "segurando" | "martelo" | "acenando" | "aperto" | "suor" | "telefone";
 export type Expressao = "neutro" | "boca_aberta" | "olhos_fechados" | "bravo" | "triste" | "chocado" | "convencido" | "comemorando" | "apontando" | "bracos_cruzados";
 export type Cabelo = "espetado" | "liso" | "cacheado" | "raspado" | "grisalho" | "penteado";
 
@@ -104,6 +104,9 @@ const POSES: Record<Pose, { e: [number, number][]; d: [number, number][]; frente
   segurando: { e: [[158, 430], [140, 520], [212, 560]], d: [[342, 430], [360, 520], [288, 560]], frente: true },
   martelo: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [416, 380], [430, 280]] },
   acenando: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 360], [440, 250]] },
+  aperto: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 500], [520, 520]] },
+  suor: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [400, 300], [330, 170]], frente: true },
+  telefone: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 400], [420, 300]], frente: true },
 };
 
 const OlhoUm: React.FC<{ cx: number; tipo: Olhos; lado: -1 | 1; id: string }> = ({ cx, tipo, lado, id }) => {

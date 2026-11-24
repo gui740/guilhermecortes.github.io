@@ -1,0 +1,1016 @@
+{
+ "id": "lusa2013",
+ "titulo": "CAIU POR 15 MINUTOS?!",
+ "clubeCentral": "portuguesa",
+ "legendaPost": "Caiu por 15 minutos em campo. ⏱️⚖️ A Lusa foi punida ou foi roubada? Comenta 👇 #futebol #portuguesa #fluminense #brasileirao #polemica",
+ "fatos": "Conferidos em 24/11/2026: ver videos/lusa2013/FONTES.md",
+ "cenas": [
+  {
+   "id": "gancho",
+   "transicao": "whip",
+   "texto": "A Portuguesa empatou, se salvou dentro de campo... e caiu por causa de quinze minutos. Foi justo?",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "relogio",
+       "x": 540,
+       "y": 700,
+       "tam": 280,
+       "minuto": 32,
+       "em": 0.3
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "chocado",
+       "x": 260,
+       "pe": 1880,
+       "alt": 1150,
+       "entra": "queda",
+       "em": 0.1
+      },
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "convencido",
+       "x": 830,
+       "pe": 1880,
+       "alt": 1120,
+       "espelhar": true,
+       "entra": "lado",
+       "em": 0.25
+      },
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "CAIU POR",
+        "15 MINUTOS?!"
+       ],
+       "y": 280,
+       "em": 0.2
+      }
+     ]
+    },
+    {
+     "de": "Foi",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.08
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "chocado",
+       "x": 540,
+       "pe": 2330,
+       "alt": 2050,
+       "entra": "nenhum",
+       "reacao": "tremor"
+      },
+      {
+       "tipo": "poeira",
+       "em": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "salva",
+   "transicao": "zoom",
+   "texto": "Dezembro de 2013, última rodada do Brasileirão. Portuguesa e Grêmio empatam em zero a zero no Canindé. A Lusa tava salva.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "carimbo",
+       "texto": "DEZ/2013",
+       "sub": "ÚLTIMA RODADA",
+       "cor": "#FFD400",
+       "x": 540,
+       "y": 330,
+       "rot": -6,
+       "em": "2013"
+      },
+      {
+       "tipo": "placar",
+       "a": "portuguesa",
+       "b": "gremio",
+       "siglaA": "POR",
+       "siglaB": "GRE",
+       "ga": 0,
+       "gb": 0,
+       "rotulo": "CANINDÉ · 08/12/2013",
+       "x": 540,
+       "y": 820,
+       "em": 0.25
+      }
+     ]
+    },
+    {
+     "de": "Portuguesa",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.07
+      ],
+      "pan": [
+       -30,
+       0
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "placar",
+       "a": "portuguesa",
+       "b": "gremio",
+       "siglaA": "POR",
+       "siglaB": "GRE",
+       "ga": 0,
+       "gb": 0,
+       "x": 540,
+       "y": 400,
+       "escala": 0.7,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "neutro",
+       "pose": "aperto",
+       "x": 330,
+       "pe": 1880,
+       "alt": 1150,
+       "entra": "lado",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "GREMIO",
+       "expr": "neutro",
+       "pose": "aperto",
+       "x": 750,
+       "pe": 1880,
+       "alt": 1150,
+       "espelhar": true,
+       "entra": "lado",
+       "em": 0.1
+      }
+     ]
+    },
+    {
+     "de": "Lusa",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "flashes",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "comemorando",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "queda",
+       "reacao": "pulo",
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "LUSA SALVA!",
+       "cor": "#1FB35A",
+       "x": 540,
+       "y": 420,
+       "rot": -8,
+       "em": "salva"
+      },
+      {
+       "tipo": "confete",
+       "em": "salva"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suspenso",
+   "transicao": "wipe",
+   "texto": "Só que dois dias antes, o meia Héverton tinha sido suspenso pelo STJD. E aos 32 do segundo tempo... ele entra em campo.",
+   "planos": [
+    {
+     "fundo": "mesa",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.1
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "jornal",
+       "manchete": "SUSPENSO!",
+       "linha": "STJD suspende meia da Portuguesa · 06/12/2013",
+       "x": 540,
+       "y": 860,
+       "em": 0.1
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "2 DIAS ANTES",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 330,
+       "rot": -7,
+       "em": "dois"
+      },
+      {
+       "tipo": "martelo",
+       "x": 830,
+       "y": 1330,
+       "batidas": 1,
+       "em": "suspenso"
+      }
+     ]
+    },
+    {
+     "de": "aos",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.04,
+       1.12
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "placaSubst",
+       "texto": "32'",
+       "x": 540,
+       "y": 820,
+       "em": 0.05
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "2º TEMPO",
+       "cor": "#FFD400",
+       "x": 540,
+       "y": 1330,
+       "rot": 5,
+       "em": "segundo"
+      }
+     ]
+    },
+    {
+     "de": "ele",
+     "fundo": "contraluz",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.08
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "silhueta",
+       "x": 540,
+       "pe": 1880,
+       "alt": 1250,
+       "em": 0
+      },
+      {
+       "tipo": "poeira",
+       "em": "entra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pontos",
+   "transicao": "whip",
+   "texto": "O STJD tira quatro pontos da Lusa: três pela irregularidade e mais o ponto do empate.",
+   "planos": [
+    {
+     "fundo": "tribunal",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "JUIZ",
+       "expr": "bravo",
+       "pose": "martelo",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum"
+      },
+      {
+       "tipo": "martelo",
+       "x": 790,
+       "y": 760,
+       "batidas": 3,
+       "mao": true,
+       "em": "tira"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "-4 PONTOS",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 330,
+       "rot": -6,
+       "em": "quatro"
+      }
+     ]
+    },
+    {
+     "de": "três",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "triste",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum",
+       "reacao": "balanco"
+      },
+      {
+       "tipo": "bloco",
+       "texto": "-3",
+       "x": 330,
+       "y": 560,
+       "em": "três"
+      },
+      {
+       "tipo": "bloco",
+       "texto": "-1",
+       "x": 760,
+       "y": 560,
+       "em": "ponto"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "queda",
+   "transicao": "zoom",
+   "texto": "A Lusa despenca do 12º pro 17º lugar e cai pra Série B. E o Fluminense, que tinha terminado no Z4, se salva.",
+   "planos": [
+    {
+     "fundo": "escuro",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.04
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "tabela",
+       "y": 300,
+       "em": 0,
+       "trocaLusa": "despenca",
+       "trocaFlu": "17º",
+       "antes": [
+        [
+         "11",
+         "FLAMENGO",
+         49
+        ],
+        [
+         "12",
+         "PORTUGUESA",
+         48
+        ],
+        [
+         "13",
+         "CORITIBA",
+         48
+        ],
+        [
+         "14",
+         "BAHIA",
+         48
+        ],
+        [
+         "15",
+         "INTERNACIONAL",
+         48
+        ],
+        [
+         "16",
+         "CRICIÚMA",
+         46
+        ],
+        [
+         "17",
+         "FLUMINENSE",
+         46
+        ],
+        [
+         "18",
+         "VASCO",
+         44
+        ]
+       ],
+       "depois": [
+        [
+         "11",
+         "CORITIBA",
+         48
+        ],
+        [
+         "12",
+         "BAHIA",
+         48
+        ],
+        [
+         "13",
+         "INTERNACIONAL",
+         48
+        ],
+        [
+         "14",
+         "CRICIÚMA",
+         46
+        ],
+        [
+         "15",
+         "FLUMINENSE",
+         46
+        ],
+        [
+         "16",
+         "FLAMENGO",
+         45
+        ],
+        [
+         "17",
+         "PORTUGUESA",
+         44
+        ],
+        [
+         "18",
+         "VASCO",
+         44
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "de": "cai",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "buraco",
+       "texto": "SÉRIE B",
+       "x": 540,
+       "y": 1560,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "chocado",
+       "x": 540,
+       "pe": 1500,
+       "alt": 900,
+       "entra": "nenhum",
+       "cai": true
+      }
+     ]
+    },
+    {
+     "de": "Fluminense,",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.07
+      ],
+      "pan": [
+       20,
+       0
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "olhos_fechados",
+       "boca": "sorriso",
+       "pose": "suor",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "FLU SALVO",
+       "cor": "#1FB35A",
+       "x": 540,
+       "y": 380,
+       "rot": 7,
+       "em": "salva."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "flamengo",
+   "transicao": "whip",
+   "texto": "Detalhe: o Flamengo também escalou um suspenso, o André Santos, e também perdeu quatro pontos. Mas tinha gordura e ficou.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "FLA",
+       "expr": "convencido",
+       "pose": "ombros",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "queda",
+       "em": 0.1
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "TAMBÉM SUSPENSO",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 330,
+       "rot": -6,
+       "em": "suspenso,"
+      },
+      {
+       "tipo": "bloco",
+       "texto": "-4",
+       "x": 860,
+       "y": 760,
+       "em": "quatro"
+      }
+     ]
+    },
+    {
+     "de": "Mas",
+     "fundo": "escuro",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "gordura",
+       "y": 470,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "-4... E FICOU",
+       "cor": "#FFD400",
+       "x": 540,
+       "y": 300,
+       "rot": 6,
+       "em": "ficou."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ladoA",
+   "transicao": "wipe",
+   "texto": "A Lusa diz: o clube não foi avisado a tempo pelo próprio advogado, e cair por um erro de papel é punição pesada demais.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "banner",
+       "texto": "LADO DA LUSA",
+       "cor": "#D7262E",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 470,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "fala": true,
+       "reacao": "tremor",
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "NINGUÉM AVISOU",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 560,
+       "rot": -6,
+       "em": "avisado"
+      }
+     ]
+    },
+    {
+     "de": "cair",
+     "fundo": "escritorio",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.08
+      ],
+      "pan": [
+       -20,
+       0
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "ADVOGADO",
+       "expr": "triste",
+       "pose": "telefone",
+       "x": 560,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum"
+      },
+      {
+       "tipo": "relogioParede",
+       "x": 830,
+       "y": 380,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "PENA PESADA DEMAIS",
+       "cor": "#E1251B",
+       "x": 500,
+       "y": 420,
+       "rot": 6,
+       "em": "pesada"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ladoB",
+   "transicao": "wipe",
+   "texto": "Do outro lado: regra é regra. A suspensão foi julgada na sexta, o advogado da Lusa estava lá, e o Flamengo levou a mesma pena.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "banner",
+       "texto": "O OUTRO LADO",
+       "cor": "#7A1A34",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "convencido",
+       "pose": "segurando",
+       "objeto": "regulamento",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "fala": true,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "REGRA É REGRA",
+       "cor": "#111111",
+       "x": 540,
+       "y": 560,
+       "rot": -6,
+       "em": "regra"
+      }
+     ]
+    },
+    {
+     "de": "advogado",
+     "fundo": "tribunal",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.07
+      ],
+      "pan": [
+       20,
+       0
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "ADVOGADO",
+       "expr": "neutro",
+       "pose": "segurando",
+       "objeto": "maleta",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "ADVOGADO TAVA LÁ",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 400,
+       "rot": 6,
+       "em": "lá,"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "FLA: MESMA PENA",
+       "cor": "#111111",
+       "x": 540,
+       "y": 600,
+       "rot": -5,
+       "em": "mesma"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "serieD",
+   "transicao": "zoom",
+   "clima": "chuva",
+   "texto": "A Lusa até ganhou uma liminar na Justiça comum, mas ela caiu. E 13 anos depois, a Portuguesa ainda tá na Série D.",
+   "planos": [
+    {
+     "fundo": "mesa",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "papel",
+       "texto": "LIMINAR",
+       "x": 540,
+       "y": 880,
+       "rasga": "caiu.",
+       "em": 0.05
+      }
+     ]
+    },
+    {
+     "de": "13",
+     "fundo": "chuva",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.1
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "placa",
+       "texto": "SÉRIE D",
+       "x": 800,
+       "y": 640,
+       "em": "Série"
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "triste",
+       "x": 380,
+       "pe": 1880,
+       "alt": 1150,
+       "entra": "nenhum",
+       "reacao": "balanco"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "13 ANOS DEPOIS",
+       "cor": "#9FB4D8",
+       "x": 540,
+       "y": 360,
+       "rot": -5,
+       "em": "13"
+      },
+      {
+       "tipo": "chuva"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "transicao": "whip",
+   "texto": "E aí: a Lusa foi punida ou foi roubada? Comenta aí. Segue o @futexplicando pra próxima.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "faiscas",
+       "x": 540,
+       "y": 1240,
+       "em": 0.2
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 290,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "reacao": "tremor",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 800,
+       "pe": 1900,
+       "alt": 1250,
+       "espelhar": true,
+       "entra": "lado",
+       "reacao": "tremor",
+       "em": 0.05
+      },
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "PUNIDA OU",
+        "ROUBADA?!"
+       ],
+       "y": 250,
+       "em": 0.15
+      }
+     ]
+    },
+    {
+     "de": "Comenta",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.07
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "PUNIDA OU",
+        "ROUBADA?!"
+       ],
+       "y": 200,
+       "em": -5
+      },
+      {
+       "tipo": "pulsa",
+       "texto": "COMENTA AÍ",
+       "x": 540,
+       "y": 640,
+       "em": 0
+      },
+      {
+       "tipo": "logo",
+       "x": 540,
+       "y": 800,
+       "em": "Segue"
+      },
+      {
+       "tipo": "faiscas",
+       "x": 540,
+       "y": 1150,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "LUSA",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 330,
+       "pe": 1540,
+       "alt": 620,
+       "entra": "nenhum",
+       "reacao": "tremor"
+      },
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "convencido",
+       "x": 750,
+       "pe": 1540,
+       "alt": 620,
+       "espelhar": true,
+       "entra": "nenhum"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
