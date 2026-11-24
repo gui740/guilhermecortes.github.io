@@ -1,0 +1,52 @@
+[
+ {
+  "cena": 1,
+  "id": "gancho",
+  "texto": "O próprio juiz confessou: ele mudou o campeão brasileiro. 2005 foi do Inter?"
+ },
+ {
+  "cena": 2,
+  "id": "contexto",
+  "texto": "2005. Estoura a Máfia do Apito: o árbitro Edílson Pereira de Carvalho manipulava jogos pra apostadores."
+ },
+ {
+  "cena": 3,
+  "id": "decisao",
+  "texto": "O STJD anula os 11 jogos que ele apitou e manda jogar tudo de novo."
+ },
+ {
+  "cena": 4,
+  "id": "virada",
+  "texto": "Nos jogos refeitos, o Corinthians soma quatro pontos: vence o Santos e empata com o São Paulo."
+ },
+ {
+  "cena": 5,
+  "id": "lance",
+  "texto": "E no confronto direto, o Tinga cai na área, o juiz não dá pênalti e ainda expulsa o Tinga."
+ },
+ {
+  "cena": 6,
+  "id": "resultado",
+  "texto": "No fim, Corinthians campeão, três pontos na frente do Inter."
+ },
+ {
+  "cena": 7,
+  "id": "ladoA",
+  "texto": "O Inter diz: sem a máfia, o campeão era ele. O próprio Edílson admitiu isso em documentário, e até o ex-presidente corintiano Alberto Dualib aparece num áudio dizendo o mesmo."
+ },
+ {
+  "cena": 8,
+  "id": "ladoB",
+  "texto": "O Corinthians diz: os jogos foram refeitos e ele ganhou dentro de campo. E especialista em direito desportivo lembra: título não se divide."
+ },
+ {
+  "cena": 9,
+  "id": "desfecho",
+  "texto": "Em maio de 2026 o Inter pediu à CBF pra dividir o título, sem tirar a taça do Corinthians. E até agora... nada de decisão."
+ },
+ {
+  "cena": 10,
+  "id": "cta",
+  "texto": "E aí: 2005 é do Corinthians ou do Inter? Comenta aí. Segue o @futexplicando pra próxima."
+ }
+]
