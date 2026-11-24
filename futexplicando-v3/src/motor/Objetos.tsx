@@ -239,7 +239,7 @@ export const impactoBloco = (t0: number) => t0 + 0.32;
 type Linha = [string, string, number];
 export const Tabela: React.FC<{ antes: Linha[]; depois: Linha[]; y: number; u: number; tLusa: number; tFlu: number }> = ({ antes, depois, y, u, tLusa, tFlu }) => {
   if (u < 0) return null;
-  const H = 128;
+  const H = 116;
   const nomes = antes.map((l) => l[1]);
   const posAntes = (n: string) => antes.findIndex((l) => l[1] === n);
   const posDepois = (n: string) => depois.findIndex((l) => l[1] === n);

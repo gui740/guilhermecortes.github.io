@@ -179,3 +179,16 @@ export const ContatoCena: React.FC<{ historia: Historia; tempos: TemposCena[]; c
     </AbsoluteFill>
   );
 };
+
+/* ----------------------------------------------------------- capa */
+export const Capa: React.FC<{ historia: Historia; tempos: TemposCena[]; cena?: number; plano?: number; t?: number }> = ({ historia, tempos, cena = 0, plano = 0, t = 3 }) => {
+  const c = historia.cenas[cena];
+  const tp = tempos[cena];
+  const ini = iniciosPlanos(tp.palavras, c.planos);
+  const fim = plano < ini.length - 1 ? ini[plano + 1] : tp.dur;
+  return (
+    <AbsoluteFill>
+      <Plano p={c.planos[plano]} pal={tp.palavras} tIni={ini[plano]} tFim={fim} t={Math.min(t, fim - ini[plano] - 0.05)} />
+    </AbsoluteFill>
+  );
+};
