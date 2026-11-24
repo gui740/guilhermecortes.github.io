@@ -24,3 +24,9 @@ Todos vêm da coleção **SSE Library** no archive.org (licença indicada: https
 | *record scratch* | Gerado em `tools/mixar.py` a partir da própria trilha (vinil indo e voltando) |
 
 A Pixabay, sugerida no briefing, recusou o acesso automatizado daqui (HTTP 403), por isso foi usado o acervo CC0 acima.
+
+## Adições do vídeo "O Palmeiras tem Mundial?!"
+| Arquivo | Origem | Licença |
+|---|---|---|
+| `musica/vintage-party.mp3` ("Vintage Party", trilha anos 50 das cenas 2–4) | FreePD, espelho no archive.org: https://archive.org/download/freepd/comedy/Vintage%20Party.mp3 | CC0 / domínio público |
+| `sfx/tecla.wav` (máquina de escrever) | SSE_Library_COMMUNICATIONS · "COMTelm_Teletype or printing machine" (recorte de uma batida) | CC0 |

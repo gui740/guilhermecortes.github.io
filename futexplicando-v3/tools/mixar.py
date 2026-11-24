@@ -49,7 +49,7 @@ def place(bus, clip, at, g=1.0, fade=0.0):
     if i >= len(bus): return
     n = min(len(c), len(bus) - i); bus[i:i + n] += c[:n] * g
 
-S = {k: load(f"{B}/sfx/{k}.wav") for k in ["boom", "whoosh", "impacto", "martelo", "ding", "torcida_festa", "torcida_amb", "chuva"]}
+S = {k: load(f"{B}/sfx/{k}.wav") for k in ["boom", "whoosh", "impacto", "martelo", "ding", "torcida_festa", "torcida_amb", "chuva", "tecla"]}
 for k in S: S[k] = S[k] / rms(S[k])
 
 # narração
@@ -78,11 +78,30 @@ for k, (cena, tc) in enumerate(zip(H["cenas"], T)):
             if tipo in ("placar", "logo", "relogio"): eventos.append((g + 0.25, "ding"))
             if tipo == "confete": eventos.append((g, "festa"))
             if tipo == "chuva": eventos.append((base + ini[i], f"chuva:{fim - ini[i]}"))
+            if tipo == "datilografa":
+                for j in range(len(c["texto"])): eventos.append((g + j * 0.16, "tecla"))
+            if tipo == "mapa":
+                for j in range(8): eventos.append((g + 0.4 + j * c.get("ritmo", 0.32), "pop"))
+            if tipo == "lista":
+                for j in range(len(c["itens"])): eventos.append((g + 0.2 + j * 0.28, "ding"))
+                eventos.append((base + quando(pal, c.get("risca"), ini[i], ini[i]), "whoosh_leve"))
+            if tipo == "contadorAno": eventos.append((g, "whoosh_leve")); eventos.append((g + 1.1, "impacto"))
+            if tipo == "carimboTroca": eventos.append((g + 0.12, "impacto")); eventos.append((base + quando(pal, c.get("troca"), ini[i], ini[i]) + 0.3, "impacto"))
+            if tipo == "recorte": eventos.append((g + 0.1, "impacto_leve"))
+            if tipo == "placarManual": eventos.append((g + 0.3, "impacto"))
+            if tipo == "taca": eventos.append((g + 0.2, "ding"))
+            if tipo == "carimbador":
+                for j in range(c.get("batidas", 1)): eventos.append((g + j * 0.5 + 0.12, "impacto"))
+            if tipo == "interrogacao": eventos.append((g + 0.12, "impacto"))
+            if tipo == "ataBanida": eventos.append((base + quando(pal, c.get("carimbo"), ini[i], ini[i]) + 0.12, "impacto"))
+            if tipo == "relatorio": eventos.append((g, "whoosh_leve"))
+            if tipo == "congela": eventos.append((g, "impacto_leve"))
             if tipo == "silhueta":
                 silencio.append((base + ini[i] - 0.5, base + ini[i])); eventos.append((base + ini[i], "boom"))
-        if p["fundo"] in ("estadio", "contraluz"):
+        if p["fundo"] in ("estadio", "contraluz", "maracana_antigo"):
             place(amb, S["torcida_amb"][int(5 * SR):int((5 + fim - ini[i]) * SR)], base + ini[i], db(-26) * VR, fade=0.25)
     if cena["id"] == "flamengo": eventos.append((base + 0.05, "scratch"))
+    if cena.get("scratch"): eventos.append((base + quando(pal, cena["scratch"], 0) - 0.05, "scratch"))
 
 for t, tipo in eventos:
     if tipo == "boom": place(sfx, S["boom"], t, db(-6) * VR)
@@ -93,31 +112,41 @@ for t, tipo in eventos:
     elif tipo == "martelo": place(sfx, S["martelo"], t, db(-5) * VR)
     elif tipo == "ding": place(sfx, S["ding"], t, db(-16) * VR)
     elif tipo == "festa": place(sfx, S["torcida_festa"], t - 0.4, db(-9) * VR, fade=0.3)
+    elif tipo == "tecla": place(sfx, S["tecla"], t, db(-12) * VR)
+    elif tipo == "pop": place(sfx, S["ding"][: int(0.25 * SR)], t, db(-20) * VR, fade=0.01)
     elif tipo.startswith("chuva:"): place(amb, S["chuva"][: int(float(tipo[6:]) * SR)], t, db(-14) * VR, fade=0.5)
 
 # ---------------- trilha
-mus = load(f"{B}/musica/hiphop-dark-shot.mp3")
-while len(mus) < N: mus = np.concatenate([mus, mus])
-music = mus[:N] / rms(mus[: int(60 * SR)])
-triste = load(f"{B}/musica/urban-sad-demo.mp3"); triste = triste / rms(triste[: int(60 * SR)])
-kd = next(k for k, c in enumerate(H["cenas"]) if c.get("clima") == "chuva")
-a, b = int(ini_cena[kd] * SR), int((ini_cena[kd] + T[kd]["dur"]) * SR)
-cross = int(0.6 * SR)
-env_t = np.zeros(N); env_t[a:b] = 1
-env_t = np.convolve(env_t, np.ones(cross) / cross, mode="same")
-tri = np.zeros((N, 2)); seg = triste[int(30 * SR): int(30 * SR) + (b - a) + cross * 2]; tri[a - cross: a - cross + len(seg)] = seg[: N - (a - cross)]
-music = music * (1 - env_t)[:, None] + tri * env_t[:, None] * 1.1
+MUS = H.get("musica", {"padrao": f"{B}/musica/hiphop-dark-shot.mp3"})
+def faixa(path, off=0.0):
+    x = load(path); x = x / rms(x[: int(min(60, len(x) / SR) * SR)])
+    x = x[int(off * SR):]
+    while len(x) < N: x = np.concatenate([x, x])
+    return x[:N]
+music = faixa(MUS["padrao"])
+def troca(music, path, cenas_idx, off, ganho=1.0):
+    if not cenas_idx: return music
+    a = int(ini_cena[min(cenas_idx)] * SR); b = int((ini_cena[max(cenas_idx)] + T[max(cenas_idx)]["dur"]) * SR)
+    cross = int(0.5 * SR); env_t = np.zeros(N); env_t[a:b] = 1
+    env_t = np.convolve(env_t, np.ones(cross) / cross, mode="same")
+    alt = np.zeros((N, 2)); src = faixa(path, off); alt[a - cross: b + cross] = src[: b - a + 2 * cross]
+    return music * (1 - env_t)[:, None] + alt * env_t[:, None] * ganho
+c50 = [k for k, c in enumerate(H["cenas"]) if any(p.get("look") == "1951" for p in c["planos"])]
+if "anos50" in MUS: music = troca(music, MUS["anos50"], c50, 0.0, 1.0)
+cch = [k for k, c in enumerate(H["cenas"]) if c.get("clima") == "chuva"]
+if cch: music = troca(music, f"{B}/musica/urban-sad-demo.mp3", cch, 30.0, 1.1)
 for s0, s1 in silencio:  # silêncio dramático
     i0, i1 = int(s0 * SR), int(s1 * SR); f = int(0.06 * SR)
     music[i0:i1] *= 0; music[i0 - f:i0] *= np.linspace(1, 0, f)[:, None]
-# record scratch com a própria trilha (vinil indo e voltando), no "Detalhe"
-ks = next(k for k, c in enumerate(H["cenas"]) if c["id"] == "flamengo"); ts = ini_cena[ks] + 0.02
-src = music[int((ts - 0.6) * SR): int(ts * SR)].mean(1)
-n = int(0.42 * SR); ph = np.cumsum(np.sin(np.linspace(0, 3 * np.pi, n)) * 2.2 + 0.4); ph = (ph - ph.min()) / (ph.max() - ph.min() + 1e-9) * (len(src) - 2)
-scr = np.interp(ph, np.arange(len(src)), src) * np.hanning(n) * 1.6
-music[int(ts * SR): int(ts * SR) + n] *= 0.0
-place(sfx, np.stack([scr, scr], 1), ts, 1.0)
-music[int(ts * SR) + n: int((ts + 0.5) * SR)] *= np.linspace(0, 1, int((ts + 0.5) * SR) - int(ts * SR) - n)[:, None]
+# record scratch com a própria trilha (vinil indo e voltando)
+for ts, tipo in [e for e in eventos if e[1] == "scratch"][:1]:
+    src = music[int((ts - 0.6) * SR): int(ts * SR)].mean(1)
+    n = int(0.42 * SR); ph = np.cumsum(np.sin(np.linspace(0, 3 * np.pi, n)) * 2.2 + 0.4); ph = (ph - ph.min()) / (ph.max() - ph.min() + 1e-9) * (len(src) - 2)
+    scr = np.interp(ph, np.arange(len(src)), src) * np.hanning(n) * 1.6
+    music[int(ts * SR): int(ts * SR) + n] *= 0.0
+    place(sfx, np.stack([scr, scr], 1), ts, 1.0)
+    k1 = int((ts + 0.5) * SR) - int(ts * SR) - n
+    music[int(ts * SR) + n: int((ts + 0.5) * SR)] *= np.linspace(0, 1, k1)[:, None]
 # ducking ~10 dB quando há voz
 env = np.convolve(np.abs(voz).mean(1), np.ones(int(0.25 * SR)) / int(0.25 * SR), mode="same")
 duck = 1 - (1 - db(-10)) * np.clip(env / (np.percentile(env[env > 1e-4], 40) + 1e-9), 0, 1)

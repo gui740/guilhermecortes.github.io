@@ -1,0 +1,1080 @@
+{
+ "id": "palmeiras1951",
+ "titulo": "O PALMEIRAS TEM MUNDIAL?!",
+ "clubeCentral": "palmeiras",
+ "legendaPost": "A FIFA já disse que sim. Depois disse que não. 🏆🤔 O Palmeiras tem Mundial? Comenta 👇 #palmeiras #mundial #futebol #copario #polemica",
+ "musica": {
+  "padrao": "biblioteca/musica/hiphop-dark-shot.mp3",
+  "anos50": "biblioteca/musica/vintage-party.mp3"
+ },
+ "capa": {
+  "cena": 0,
+  "plano": 0,
+  "t": 3.2
+ },
+ "cenas": [
+  {
+   "id": "gancho",
+   "transicao": "whip",
+   "texto": "A Fifa já disse que o Palmeiras é o primeiro campeão do mundo... e depois disse que não é. Afinal, o Palmeiras tem Mundial?",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "comemorando",
+       "pose": "taca_alto",
+       "objeto": "taca",
+       "x": 300,
+       "pe": 1880,
+       "alt": 1120,
+       "entra": "queda",
+       "reacao": "pulo",
+       "em": 0.1
+      },
+      {
+       "tipo": "personagem",
+       "quem": "COR",
+       "expr": "comemorando",
+       "pose": "apontando",
+       "x": 810,
+       "pe": 1880,
+       "alt": 1100,
+       "espelhar": true,
+       "entra": "lado",
+       "reacao": "tremor",
+       "em": 0.25
+      },
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "O PALMEIRAS",
+        "TEM MUNDIAL?!"
+       ],
+       "y": 220,
+       "em": 0.15
+      },
+      {
+       "tipo": "carimboTroca",
+       "de": "SIM",
+       "para": "NÃO",
+       "corDe": "#1FB35A",
+       "corPara": "#E1251B",
+       "x": 540,
+       "y": 640,
+       "em": "primeiro",
+       "troca": "não"
+      },
+      {
+       "tipo": "poeira",
+       "em": 0.3
+      }
+     ]
+    },
+    {
+     "de": "Afinal,",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.1
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "taca",
+       "x": 540,
+       "y": 980,
+       "s": 2.3,
+       "em": 0
+      },
+      {
+       "tipo": "faiscas",
+       "x": 540,
+       "y": 760,
+       "em": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "copaRio",
+   "transicao": "zoom",
+   "texto": "1951. Um ano depois do Maracanaço, o Brasil organiza a Copa Rio: oito clubes de peso da Europa e da América do Sul, com dirigentes da Fifa envolvidos.",
+   "planos": [
+    {
+     "fundo": "mesa",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.07
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "datilografa",
+       "texto": "1951",
+       "x": 540,
+       "y": 380,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "1 ANO APÓS O MARACANAÇO",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 640,
+       "rot": 5,
+       "em": "Maracanaço,"
+      },
+      {
+       "tipo": "recorte",
+       "manchete": "COPA RIO",
+       "sub": "Torneio internacional de clubes",
+       "x": 540,
+       "y": 980,
+       "rot": -4,
+       "em": "Copa"
+      }
+     ]
+    },
+    {
+     "de": "oito",
+     "fundo": "escuro",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "mapa",
+       "y": 300,
+       "em": 0,
+       "ritmo": 0.36
+      }
+     ]
+    },
+    {
+     "de": "com",
+     "fundo": "radio",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.08
+      ],
+      "pan": [
+       20,
+       0
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "LOCUTOR",
+       "expr": "comemorando",
+       "pose": "segurando",
+       "objeto": "microfone",
+       "x": 470,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "fala": true,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "DIRIGENTES DA FIFA",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 380,
+       "rot": -5,
+       "em": "Fifa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "juventus",
+   "transicao": "whip",
+   "texto": "O Palmeiras leva de quatro da Juventus na fase de grupos... e mesmo assim chega à final. Contra quem? A própria Juventus.",
+   "planos": [
+    {
+     "fundo": "maracana_antigo",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "carimbo",
+       "texto": "FASE DE GRUPOS",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 320,
+       "rot": -5,
+       "em": 0.1
+      },
+      {
+       "tipo": "placarManual",
+       "a": "PAL",
+       "b": "JUV",
+       "ga": 0,
+       "gb": 4,
+       "escA": "palmeiras",
+       "escB": "juventus_generico",
+       "x": 540,
+       "y": 800,
+       "em": "quatro"
+      }
+     ]
+    },
+    {
+     "de": "mesmo",
+     "fundo": "maracana_antigo",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL1951",
+       "expr": "triste",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum",
+       "reacao": "balanco"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "E MESMO ASSIM...",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 400,
+       "rot": 6,
+       "em": "final."
+      }
+     ]
+    },
+    {
+     "de": "Contra",
+     "fundo": "tunel",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.16
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL1951",
+       "expr": "bravo",
+       "x": 300,
+       "pe": 1900,
+       "alt": 1180,
+       "entra": "lado",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "JUV1951",
+       "expr": "convencido",
+       "x": 790,
+       "pe": 1900,
+       "alt": 1180,
+       "espelhar": true,
+       "entra": "lado",
+       "em": 0.1
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "FINAL: PAL × JUV",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 400,
+       "rot": -5,
+       "em": "própria"
+      }
+     ]
+    }
+   ],
+   "scratch": "mesmo"
+  },
+  {
+   "id": "final",
+   "transicao": "whip",
+   "texto": "No Maracanã, mais de 80 mil pessoas. Vitória por 1 a 0 na ida, 2 a 2 na volta. O Palmeiras é campeão.",
+   "planos": [
+    {
+     "fundo": "maracana_antigo",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.08
+      ],
+      "pan": [
+       0,
+       -30
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "carimbo",
+       "texto": "+80 MIL NO MARACANÃ",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 380,
+       "rot": -5,
+       "em": "80"
+      },
+      {
+       "tipo": "confete",
+       "em": 0.2
+      }
+     ]
+    },
+    {
+     "de": "Vitória",
+     "fundo": "mesa",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "recorte",
+       "manchete": "PAL 1 × 0 JUV",
+       "sub": "Ida · 18/07/1951",
+       "x": 520,
+       "y": 560,
+       "rot": -5,
+       "em": "1"
+      },
+      {
+       "tipo": "recorte",
+       "manchete": "PAL 2 × 2 JUV",
+       "sub": "Volta · 22/07/1951",
+       "x": 560,
+       "y": 930,
+       "rot": 4,
+       "em": "2"
+      }
+     ]
+    },
+    {
+     "de": "Palmeiras",
+     "fundo": "maracana_antigo",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL1951",
+       "expr": "comemorando",
+       "pose": "taca_alto",
+       "objeto": "taca",
+       "x": 520,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "queda",
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "CAMPEÃO!",
+       "cor": "#8A2A20",
+       "x": 540,
+       "y": 380,
+       "rot": -6,
+       "em": "campeão."
+      },
+      {
+       "tipo": "confete",
+       "em": 0
+      },
+      {
+       "tipo": "congela",
+       "em": "campeão."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ata2014",
+   "transicao": "fade",
+   "texto": "Em 2014, uma ata do Comitê Executivo da Fifa reconhece a Copa Rio como a primeira competição mundial de clubes. Festa verde.",
+   "planos": [
+    {
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       3.0,
+       1.04
+      ],
+      "origem": "50% 47%"
+     },
+     "camadas": [
+      {
+       "tipo": "portaRetrato",
+       "cena": 3,
+       "plano": 2,
+       "t": 9,
+       "x": 540,
+       "y": 1000,
+       "rot": -3
+      },
+      {
+       "tipo": "contadorAno",
+       "de": 1951,
+       "ate": 2014,
+       "x": 540,
+       "y": 330,
+       "em": 0.5
+      }
+     ]
+    },
+    {
+     "de": "ata",
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "DIRIGENTE",
+       "expr": "neutro",
+       "pose": "martelo",
+       "x": 470,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum"
+      },
+      {
+       "tipo": "carimbador",
+       "x": 720,
+       "y": 900,
+       "batidas": 2,
+       "em": "reconhece"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "RECONHECIDO",
+       "cor": "#1FB35A",
+       "x": 540,
+       "y": 380,
+       "rot": -6,
+       "em": "primeira"
+      }
+     ]
+    },
+    {
+     "de": "Festa",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "comemorando",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "queda",
+       "reacao": "pulo",
+       "em": 0
+      },
+      {
+       "tipo": "confete",
+       "em": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conselho2017",
+   "transicao": "whip",
+   "texto": "Só que em 2017 o Conselho da Fifa decide: campeão mundial é só quem venceu o Intercontinental ou o Mundial da Fifa. A Copa Rio ficou de fora.",
+   "planos": [
+    {
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "contadorAno",
+       "de": 2014,
+       "ate": 2017,
+       "x": 540,
+       "y": 330,
+       "em": 0.2
+      },
+      {
+       "tipo": "personagem",
+       "quem": "DIRIGENTE",
+       "expr": "bravo",
+       "pose": "segurando",
+       "objeto": "pasta",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "CONSELHO DA FIFA",
+       "cor": "#2A6BD8",
+       "x": 540,
+       "y": 560,
+       "rot": 5,
+       "em": "Conselho"
+      }
+     ]
+    },
+    {
+     "de": "campeão",
+     "fundo": "escuro",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.04
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "lista",
+       "y": 240,
+       "em": 0,
+       "risca": "Copa",
+       "itens": [
+        [
+         "santos",
+         "SANTOS"
+        ],
+        [
+         "flamengo",
+         "FLAMENGO"
+        ],
+        [
+         "gremio",
+         "GRÊMIO"
+        ],
+        [
+         "sao-paulo",
+         "SÃO PAULO"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "de": "ficou",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.04,
+       1.12
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "chocado",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum",
+       "reacao": "tremor"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "FICOU DE FORA",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 400,
+       "rot": -6,
+       "em": "fora."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ladoA",
+   "transicao": "wipe",
+   "texto": "O Palmeiras diz: era um torneio entre continentes, com a Fifa ajudando a organizar, a imprensa chamava de Mundial, e existe um documento da própria Fifa.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "banner",
+       "texto": "LADO DO PALMEIRAS",
+       "cor": "#0B6B3A",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "convencido",
+       "pose": "segurando",
+       "objeto": "ata",
+       "x": 700,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "fala": true,
+       "espelhar": true,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "ENTRE CONTINENTES",
+       "cor": "#0B6B3A",
+       "x": 540,
+       "y": 520,
+       "rot": -6,
+       "em": "continentes,"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "TINHA A FIFA",
+       "cor": "#0B6B3A",
+       "x": 540,
+       "y": 520,
+       "rot": 6,
+       "em": "ajudando"
+      }
+     ]
+    },
+    {
+     "de": "imprensa",
+     "fundo": "mesa",
+     "look": "1951",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.07
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "recorte",
+       "manchete": "O MUNDIAL É NOSSO!",
+       "destaque": "MUNDIAL",
+       "sub": "Imprensa de 1951",
+       "x": 540,
+       "y": 640,
+       "rot": -4,
+       "em": "imprensa"
+      },
+      {
+       "tipo": "recorte",
+       "manchete": "CAMPEÃO MUNDIAL",
+       "destaque": "MUNDIAL",
+       "x": 540,
+       "y": 960,
+       "rot": 5,
+       "em": "Mundial,"
+      }
+     ]
+    },
+    {
+     "de": "existe",
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "convencido",
+       "pose": "segurando",
+       "objeto": "ata",
+       "x": 540,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum",
+       "fala": true
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "ATA OFICIAL",
+       "cor": "#0B6B3A",
+       "x": 540,
+       "y": 400,
+       "rot": -6,
+       "em": "documento"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ladoB",
+   "transicao": "wipe",
+   "texto": "Os rivais dizem: foi um torneio de convidados, organizado pela CBD, sem campeões continentais. E a ata de 2014 foi assinada pelo Valcke, que depois foi banido do futebol.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "banner",
+       "texto": "O OUTRO LADO",
+       "cor": "#111111",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "COR",
+       "expr": "convencido",
+       "pose": "segurando",
+       "objeto": "convite",
+       "x": 360,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "fala": true,
+       "em": 0
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "CONVIDADOS",
+       "cor": "#111111",
+       "x": 540,
+       "y": 520,
+       "rot": 6,
+       "em": "convidados,"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "SEM CAMPEÕES",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 540,
+       "rot": -4,
+       "em": "continentais.",
+       "sub": "CONTINENTAIS"
+      }
+     ]
+    },
+    {
+     "de": "E",
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.07
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "carimbo",
+       "texto": "ASSINATURA POLÊMICA",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 300,
+       "rot": -5,
+       "em": "assinada"
+      },
+      {
+       "tipo": "ataBanida",
+       "x": 540,
+       "y": 900,
+       "em": 0,
+       "carimbo": "banido"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "relatorio2025",
+   "transicao": "zoom",
+   "texto": "Em 2025, um relatório da Fifa colocou a Copa Rio na lista de copas entre confederações. Mas o reconhecimento oficial? Continua sem mudar.",
+   "planos": [
+    {
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "contadorAno",
+       "de": 2017,
+       "ate": 2025,
+       "x": 540,
+       "y": 300,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "FLU",
+       "expr": "convencido",
+       "x": 880,
+       "pe": 1560,
+       "alt": 760,
+       "espelhar": true,
+       "entra": "lado",
+       "em": 0.6
+      },
+      {
+       "tipo": "relatorio",
+       "x": 500,
+       "y": 900,
+       "em": "relatório"
+      }
+     ]
+    },
+    {
+     "de": "Mas",
+     "fundo": "salao",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.06
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "relogioParede",
+       "x": 830,
+       "y": 420,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "triste",
+       "x": 420,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "nenhum",
+       "reacao": "balanco"
+      },
+      {
+       "tipo": "interrogacao",
+       "x": 840,
+       "y": 820,
+       "em": "oficial?"
+      },
+      {
+       "tipo": "carimbo",
+       "texto": "SEM MUDANÇA",
+       "cor": "#E1251B",
+       "x": 540,
+       "y": 330,
+       "rot": -5,
+       "em": "mudar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "transicao": "whip",
+   "texto": "E aí: o Palmeiras tem Mundial ou não tem? Comenta aí. Segue o @futexplicando pra próxima.",
+   "planos": [
+    {
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.0,
+       1.05
+      ]
+     },
+     "camadas": [
+      {
+       "tipo": "faiscas",
+       "x": 540,
+       "y": 900,
+       "em": 0.2
+      },
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 290,
+       "pe": 1900,
+       "alt": 1250,
+       "entra": "lado",
+       "reacao": "tremor",
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "COR",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 800,
+       "pe": 1900,
+       "alt": 1250,
+       "espelhar": true,
+       "entra": "lado",
+       "reacao": "tremor",
+       "em": 0.05
+      },
+      {
+       "tipo": "taca",
+       "x": 540,
+       "y": 700,
+       "s": 0.85,
+       "em": 0.3
+      },
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "TEM OU",
+        "NÃO TEM?!"
+       ],
+       "y": 220,
+       "em": 0.15
+      }
+     ]
+    },
+    {
+     "de": "Comenta",
+     "fundo": "estadio",
+     "camera": {
+      "zoom": [
+       1.02,
+       1.07
+      ],
+      "punch": true
+     },
+     "camadas": [
+      {
+       "tipo": "titulo",
+       "linhas": [
+        "TEM OU",
+        "NÃO TEM?!"
+       ],
+       "y": 180,
+       "em": -5
+      },
+      {
+       "tipo": "pulsa",
+       "texto": "COMENTA AÍ",
+       "x": 540,
+       "y": 640,
+       "em": 0
+      },
+      {
+       "tipo": "logo",
+       "x": 540,
+       "y": 800,
+       "em": "Segue"
+      },
+      {
+       "tipo": "faiscas",
+       "x": 540,
+       "y": 1150,
+       "em": 0
+      },
+      {
+       "tipo": "personagem",
+       "quem": "PAL",
+       "expr": "bravo",
+       "pose": "apontando",
+       "x": 330,
+       "pe": 1540,
+       "alt": 620,
+       "entra": "nenhum",
+       "reacao": "tremor"
+      },
+      {
+       "tipo": "personagem",
+       "quem": "COR",
+       "expr": "comemorando",
+       "pose": "apontando",
+       "x": 750,
+       "pe": 1540,
+       "alt": 620,
+       "espelhar": true,
+       "entra": "nenhum"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

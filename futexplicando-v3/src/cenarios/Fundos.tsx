@@ -155,6 +155,95 @@ export const fundo = (tipo: string): CamadasFundo => {
           </AbsoluteFill>
         ),
       };
+    case "maracana_antigo":
+      return {
+        longe: (
+          <AbsoluteFill style={{ background: "linear-gradient(180deg,#C9C1A0 0%,#E4DCC0 55%,#D8CFAE 100%)" }}>
+            <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+              {[0, 1, 2, 3].map((i) => (
+                <path key={i} d={`M-40 ${300 + i * 34} Q540 ${250 + i * 34} 1120 ${300 + i * 34}`} stroke="#8A8466" strokeWidth={4} fill="none" opacity={0.5} />
+              ))}
+              <path d="M-40 270 Q540 200 1120 270 L1120 330 Q540 262 -40 330 Z" fill="#7A745A" />
+            </svg>
+          </AbsoluteFill>
+        ),
+        meio: <Arquibancada cores={["#3A3326", "#F2EEE2", "#5A5240", "#2A2418", "#8A8270", "#F2EEE2"]} />,
+        chao: (
+          <AbsoluteFill>
+            <Gramado />
+          </AbsoluteFill>
+        ),
+      };
+    case "radio":
+      return {
+        longe: (
+          <AbsoluteFill>
+            <Madeira cor1="#6B4A2E" cor2="#5E4026" ripas={8} />
+            <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+              <rect x={600} y={260} width={380} height={300} rx={40} fill="#8A5A30" stroke={COR.contorno} strokeWidth={9} />
+              <circle cx={700} cy={410} r={80} fill="#3A2A1A" stroke={COR.contorno} strokeWidth={7} />
+              {Array.from({ length: 6 }).map((_, i) => (
+                <line key={i} x1={640} y1={350 + i * 22} x2={760} y2={350 + i * 22} stroke="#6B4A2E" strokeWidth={6} />
+              ))}
+              <rect x={810} y={330} width={130} height={60} rx={10} fill="#FFE2A8" stroke={COR.contorno} strokeWidth={6} />
+              <circle cx={840} cy={470} r={22} fill="#D9B060" stroke={COR.contorno} strokeWidth={5} />
+              <circle cx={910} cy={470} r={22} fill="#D9B060" stroke={COR.contorno} strokeWidth={5} />
+              <rect x={0} y={1420} width={1080} height={500} fill="#3A2414" />
+            </svg>
+            <AbsoluteFill style={{ background: "radial-gradient(ellipse 60% 40% at 50% 15%, rgba(255,214,140,0.45), rgba(0,0,0,0) 70%)" }} />
+          </AbsoluteFill>
+        ),
+      };
+    case "tunel":
+      return {
+        longe: (
+          <AbsoluteFill style={{ background: "#14120E" }}>
+            <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+              <defs>
+                <radialGradient id="saidaT" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stopColor="#FFF4D6" />
+                  <stop offset="0.6" stopColor="#E8D9A8" />
+                  <stop offset="1" stopColor="#8A7A50" />
+                </radialGradient>
+              </defs>
+              {[0, 1, 2, 3, 4].map((i) => {
+                const k = 1 - i * 0.17;
+                return <path key={i} d={`M${540 - 520 * k} ${1700 - 0 * i} L${540 - 520 * k} ${900 - 500 * k} Q540 ${400 - 600 * k} ${540 + 520 * k} ${900 - 500 * k} L${540 + 520 * k} 1700`} fill={i % 2 ? "#2A261E" : "#36302A"} stroke={COR.contorno} strokeWidth={6} />;
+              })}
+              <path d="M330 1700 L330 980 Q540 760 750 980 L750 1700 Z" fill="url(#saidaT)" />
+              <rect x={0} y={1650} width={1080} height={270} fill="#22201A" />
+            </svg>
+          </AbsoluteFill>
+        ),
+      };
+    case "salao":
+      return {
+        longe: (
+          <AbsoluteFill style={{ background: "linear-gradient(180deg,#26324C,#1A2338)" }}>
+            <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+              {[0, 1, 2].map((i) => (
+                <g key={i}>
+                  <rect x={60 + i * 340} y={180} width={300} height={700} rx={8} fill="#0D1530" stroke={COR.contorno} strokeWidth={8} />
+                  {Array.from({ length: 22 }).map((_, j) => (
+                    <rect key={j} x={80 + i * 340 + rnd(i * 50 + j) * 250} y={500 + rnd(i * 70 + j) * 340} width={12} height={18} fill="#FFD98A" opacity={0.4 + rnd(j + i) * 0.6} />
+                  ))}
+                </g>
+              ))}
+              <rect x={0} y={1000} width={1080} height={920} fill="#2E3954" />
+            </svg>
+            <AbsoluteFill style={{ background: "radial-gradient(ellipse 70% 30% at 50% 0%, rgba(220,235,255,0.35), rgba(0,0,0,0) 70%)" }} />
+          </AbsoluteFill>
+        ),
+        chao: (
+          <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+            <path d="M-60 1380 L1140 1380 L1140 1560 L-60 1560 Z" fill="#4A2E1E" stroke={COR.contorno} strokeWidth={9} />
+            <path d="M-60 1380 L1140 1380 L1140 1410 L-60 1410 Z" fill="#6B4430" />
+            {[120, 380, 700].map((x) => (
+              <rect key={x} x={x} y={1330} width={200} height={60} rx={4} fill="#F4F1E8" stroke={COR.contorno} strokeWidth={5} transform={`rotate(${(x % 7) - 3} ${x + 100} 1360)`} />
+            ))}
+          </svg>
+        ),
+      };
     case "estadio":
     default:
       return {

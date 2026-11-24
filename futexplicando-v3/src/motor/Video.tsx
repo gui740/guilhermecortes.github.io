@@ -4,7 +4,7 @@ import { Audio } from "@remotion/media";
 import { linearTiming, TransitionPresentation, TransitionPresentationComponentProps, TransitionSeries } from "@remotion/transitions";
 import { Caption, createTikTokStyleCaptions } from "@remotion/captions";
 import { COR, FONTE } from "../estilo/tokens";
-import { Plano, PlanoCfg } from "./Plano";
+import { HistoriaCtx, Plano, PlanoCfg } from "./Plano";
 import { iniciosPlanos, TemposCena } from "./tempo";
 import { mola } from "./Objetos";
 
@@ -43,7 +43,11 @@ const ZoomComp: React.FC<TransitionPresentationComponentProps<Vazio>> = ({ child
   return <AbsoluteFill style={{ transform: `scale(${s})`, opacity: o, filter: `blur(${(sai ? p : 1 - p) * 10}px)` }}>{children}</AbsoluteFill>;
 };
 const zoomThrough = (): TransitionPresentation<Vazio> => ({ component: ZoomComp, props: {} });
-const apresentacao = (tipo?: string) => (tipo === "wipe" ? wipe() : tipo === "zoom" ? zoomThrough() : whip());
+const FadeComp: React.FC<TransitionPresentationComponentProps<Vazio>> = ({ children, presentationDirection, presentationProgress: p }) => (
+  <AbsoluteFill style={{ opacity: presentationDirection === "exiting" ? 1 : p }}>{children}</AbsoluteFill>
+);
+const fade = (): TransitionPresentation<Vazio> => ({ component: FadeComp, props: {} });
+const apresentacao = (tipo?: string) => (tipo === "wipe" ? wipe() : tipo === "zoom" ? zoomThrough() : tipo === "fade" ? fade() : whip());
 
 /* ----------------------------------------------------------- cena */
 export const Cena: React.FC<{ cena: Historia["cenas"][number]; tempos: TemposCena }> = ({ cena, tempos }) => {
@@ -140,6 +144,7 @@ export const Video: React.FC<{ historia: Historia; tempos: TemposCena[]; trilha?
   const { fps } = useVideoConfig();
   return (
     <AbsoluteFill style={{ background: "#000", filter: "contrast(1.04) saturate(1.06)" }}>
+      <HistoriaCtx.Provider value={{ cenas: historia.cenas, tempos }}>
       <TransitionSeries>
         {historia.cenas.map((c, k) => (
           <React.Fragment key={c.id}>
@@ -150,6 +155,7 @@ export const Video: React.FC<{ historia: Historia; tempos: TemposCena[]; trilha?
           </React.Fragment>
         ))}
       </TransitionSeries>
+      </HistoriaCtx.Provider>
       <Acabamento />
       <Legenda tempos={tempos} />
       {trilha && <Audio src={staticFile(trilha)} />}
@@ -163,6 +169,7 @@ export const ContatoCena: React.FC<{ historia: Historia; tempos: TemposCena[]; c
   const tp = tempos[cena];
   const ini = iniciosPlanos(tp.palavras, c.planos);
   return (
+    <HistoriaCtx.Provider value={{ cenas: historia.cenas, tempos }}>
     <AbsoluteFill style={{ background: "#111", display: "flex", flexDirection: "row", gap: 12, padding: 12 }}>
       {c.planos.map((p, i) => {
         const fim = i < ini.length - 1 ? ini[i + 1] : tp.dur;
@@ -177,6 +184,7 @@ export const ContatoCena: React.FC<{ historia: Historia; tempos: TemposCena[]; c
         );
       })}
     </AbsoluteFill>
+    </HistoriaCtx.Provider>
   );
 };
 

@@ -26,6 +26,6 @@ for k, c in enumerate(H["cenas"]):
     for i, w in enumerate(words):
         fimw = t[i + 1] if i + 1 < len(t) else fim
         pal.append({"w": w, "t": round(t[i] + ANTES, 3), "f": round(fimw + ANTES, 3)})
-    out.append({"id": c["id"], "fala": round(fala, 3), "dur": round(fala + ANTES + DEPOIS, 3), "audio": f"lusa2013/cena_{k+1:02d}.wav", "palavras": pal})
+    out.append({"id": c["id"], "fala": round(fala, 3), "dur": round(fala + ANTES + DEPOIS, 3), "audio": f"{H['id']}/cena_{k+1:02d}.wav", "palavras": pal})
 json.dump(out, open(os.path.join(base, "tempos.json"), "w"), ensure_ascii=False, indent=1)
 print("total", round(sum(c["dur"] for c in out), 2), "s")

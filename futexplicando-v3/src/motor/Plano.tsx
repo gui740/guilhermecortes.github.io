@@ -7,10 +7,15 @@ import { LuzFrente } from "../cenarios/EstadioNoite";
 import { Boca, Chibi, ELENCO, Expressao, Olhos, Pose, PRESETS } from "../personagens/Chibi";
 import { easeInOut, Palavra, quando } from "./tempo";
 import * as Ob from "./Objetos";
+import * as O2 from "./Objetos2";
+import { Ata, Convite, Look1951, MicrofoneAntigo, Pasta, TacaAntigaG } from "../personagens/Props";
+
+/** Contexto com a história inteira (para o porta-retrato do match cut renderizar outra cena). */
+export const HistoriaCtx = React.createContext<{ cenas?: { planos: PlanoCfg[] }[]; tempos?: { dur: number; palavras: Palavra[]; audio: string }[] }>({});
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type Camada = Record<string, any> & { tipo: string };
-export type PlanoCfg = { de?: string; fundo: string; camera?: { zoom?: [number, number]; pan?: [number, number]; punch?: boolean }; camadas: Camada[] };
+export type PlanoCfg = { de?: string; fundo: string; look?: string; camera?: { zoom?: [number, number]; pan?: [number, number]; punch?: boolean; origem?: string }; camadas: Camada[] };
 
 const FPS = 30;
 
@@ -66,6 +71,11 @@ const Personagem: React.FC<{ c: Camada; u: number; t: number; amp: number }> = (
   let objeto: React.ReactNode = null;
   if (c.objeto === "regulamento") objeto = <Ob.Regulamento />;
   if (c.objeto === "maleta") objeto = <Ob.Maleta />;
+  if (c.objeto === "taca") objeto = <TacaAntigaG x={436} y={120} s={0.56} brilho={0.4} />;
+  if (c.objeto === "ata") objeto = <Ata />;
+  if (c.objeto === "convite") objeto = <Convite />;
+  if (c.objeto === "pasta") objeto = <Pasta />;
+  if (c.objeto === "microfone") objeto = <MicrofoneAntigo />;
   if (c.pose === "telefone") objeto = <Ob.Telefone />;
   if (c.pose === "suor") objeto = <Ob.Suor t={t} />;
   const chibi = <Chibi {...ficha} expressao={c.expr} olhos={olhos} boca={boca} pose={c.pose as Pose | undefined} altura={c.alt} espelhar={c.espelhar} objeto={objeto} cabeca={Math.sin(t * 1.3) * 0.25} />;
@@ -95,12 +105,20 @@ const impactos = (camadas: Camada[], t0: (c: Camada) => number) => {
     if (c.tipo === "martelo") out.push(...Ob.impactosMartelo(s, c.batidas ?? 1));
     if (c.tipo === "bloco") out.push(Ob.impactoBloco(s));
     if (c.tipo === "personagem" && c.entra === "queda") out.push(s + 0.34);
+    if (c.tipo === "recorte" || c.tipo === "interrogacao") out.push(s + 0.14);
+    if (c.tipo === "placarManual") out.push(s + 0.32);
+    if (c.tipo === "carimbador") out.push(...O2.impactosCarimbador(s, c.batidas ?? 1));
   });
   return out;
 };
 
-export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: number; t: number; audio?: string }> = ({ p, pal, tIni, tFim, t, audio }) => {
+export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: number; t: number; audio?: string }> = ({ p, pal, tIni, tFim, t: tIn, audio }) => {
+  const hist = React.useContext(HistoriaCtx);
   const dur = Math.max(0.5, tFim - tIni);
+  const cong = p.camadas.find((c) => c.tipo === "congela");
+  const tCong = cong ? quando(pal, cong.em, tIni, tIni) - tIni : Infinity;
+  const t = Math.min(tIn, tCong);
+  const uCong = tIn - tCong;
   const tc = tIni + t; // tempo na cena
   const t0 = (c: Camada) => quando(pal, c.em, tIni, tIni) - tIni;
   const imps = impactos(p.camadas, t0);
@@ -127,7 +145,7 @@ export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: 
   const py = pan[1] * (easeInOut(t / dur) - 0.5) * 2;
   const L = (f: number, filtro?: string): React.CSSProperties => ({
     transform: `translate(${(px + sx) * f}px, ${(py + sy) * f}px) scale(${1 + (z - 1) * f})`,
-    transformOrigin: "50% 50%",
+    transformOrigin: p.camera?.origem ?? "50% 50%",
     filter: filtro,
   });
   const F = fundo(p.fundo);
@@ -171,6 +189,47 @@ export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: 
         return <Ob.Papel key={i} texto={c.texto} x={c.x} y={c.y} u={u} uRasga={t - (quando(pal, c.rasga, tIni) - tIni)} />;
       case "placa":
         return <Ob.Placa key={i} texto={c.texto} x={c.x} y={c.y} u={u} />;
+      case "carimboTroca":
+        return <O2.CarimboTroca key={i} de={c.de} para={c.para} corDe={c.corDe} corPara={c.corPara} x={c.x} y={c.y} u={u} uTroca={t - (quando(pal, c.troca, tIni) - tIni)} />;
+      case "datilografa":
+        return <O2.Datilografa key={i} texto={c.texto} x={c.x} y={c.y} u={u} />;
+      case "mapa":
+        return <O2.MapaPinos key={i} y={c.y} u={u} ritmo={c.ritmo} />;
+      case "placarManual":
+        return <O2.PlacarManual key={i} {...(c as any)} u={u} />;
+      case "recorte":
+        return <O2.Recorte key={i} manchete={c.manchete} sub={c.sub} x={c.x} y={c.y} rot={c.rot} destaque={c.destaque} u={u} />;
+      case "taca":
+        return <O2.Taca key={i} x={c.x} y={c.y} s={c.s} u={u} />;
+      case "contadorAno":
+        return <O2.ContadorAno key={i} de={c.de} ate={c.ate} x={c.x} y={c.y} u={u} />;
+      case "lista":
+        return <O2.ListaCampeoes key={i} y={c.y} itens={c.itens} u={u} uRisco={t - (quando(pal, c.risca, tIni) - tIni)} />;
+      case "relatorio":
+        return <O2.Relatorio key={i} x={c.x} y={c.y} u={u} />;
+      case "interrogacao":
+        return <O2.Interrogacao key={i} x={c.x} y={c.y} u={u} />;
+      case "ataBanida":
+        return <O2.AtaBanida key={i} x={c.x} y={c.y} u={u} uCarimbo={t - (quando(pal, c.carimbo, tIni) - tIni)} />;
+      case "carimbador":
+        return <O2.Carimbador key={i} x={c.x} y={c.y} u={u} batidas={c.batidas} />;
+      case "portaRetrato": {
+        const cn = hist.cenas?.[c.cena];
+        const tp = hist.tempos?.[c.cena];
+        if (!cn || !tp) return null;
+        const pl = cn.planos[c.plano];
+        return (
+          <div key={i} style={{ position: "absolute", left: c.x - 190, top: c.y - 300, width: 380, height: 520, background: "#6B4430", border: "10px solid #2B1A10", padding: 20, boxShadow: "16px 20px 0 rgba(0,0,0,0.45)", transform: `rotate(${c.rot ?? -3}deg)` }}>
+            <div style={{ width: 320, height: 460, background: "#EFE6CF", padding: 12, overflow: "hidden", position: "relative" }}>
+              <div style={{ width: 296, height: 436, overflow: "hidden", position: "relative" }}>
+                <div style={{ width: 1080, height: 1920, transform: `scale(${296 / 1080})`, transformOrigin: "0 0", position: "absolute", top: -60 }}>
+                  <Plano p={pl} pal={tp.palavras} tIni={0} tFim={c.t + 1} t={c.t} />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
       case "silhueta":
         return (
           <Ob.Silhueta key={i} x={c.x} pe={c.pe} alt={c.alt} u={u}>
@@ -198,7 +257,7 @@ export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: 
         return null;
     }
   };
-  return (
+  const quadro = (
     <AbsoluteFill style={{ overflow: "hidden", background: "#0B1433" }}>
       <AbsoluteFill style={L(0.3, "blur(2px)")}>{F.longe}</AbsoluteFill>
       {F.meio && <AbsoluteFill style={L(0.6)}>{F.meio}</AbsoluteFill>}
@@ -207,7 +266,17 @@ export const Plano: React.FC<{ p: PlanoCfg; pal: Palavra[]; tIni: number; tFim: 
       <AbsoluteFill style={L(0.6)}>{p.camadas.filter((c) => c.tipo === "flashes").map(renderFrente)}</AbsoluteFill>
       <AbsoluteFill style={L(1)}>{p.camadas.filter((c) => !frente.includes(c.tipo)).map(render)}</AbsoluteFill>
       <AbsoluteFill style={L(1.3)}>{p.camadas.filter((c) => frente.includes(c.tipo) && c.tipo !== "flashes").map(renderFrente)}</AbsoluteFill>
-      <LuzFrente />
+      {p.look !== "1951" && <LuzFrente />}
+    </AbsoluteFill>
+  );
+  const comLook = p.look === "1951" ? <Look1951 frame={Math.round((tIni + t) * FPS)}>{quadro}</Look1951> : quadro;
+  if (!cong || uCong < 0) return comLook;
+  // congela como foto antiga: moldura branca, desbota e encolhe
+  const k = Math.min(1, uCong / 0.45);
+  return (
+    <AbsoluteFill style={{ background: `rgb(${30 + 200 * k * 0.0},${24},${18})` }}>
+      <AbsoluteFill style={{ transform: `scale(${1 - 0.14 * k}) rotate(${-3 * k}deg)`, boxShadow: `0 0 0 ${28 * k}px #F3EBD6, 20px 26px 0 ${28 * k}px rgba(0,0,0,0.5)`, filter: `sepia(${0.4 * k}) contrast(${1 - 0.08 * k}) brightness(${1 + 0.06 * k})` }}>{comLook}</AbsoluteFill>
+      <AbsoluteFill style={{ background: "#fff", opacity: Math.max(0, 0.8 - uCong * 4) }} />
     </AbsoluteFill>
   );
 };
