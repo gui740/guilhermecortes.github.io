@@ -1,0 +1,20 @@
+{
+  "titulo": "5 EXPULSOS EM 37 MINUTOS?!",
+  "clube_central": "atletico-mg",
+  "pasta_assets": "videos/galo1981/assets",
+  "modelo_imagem": "gemini-3-pro-image-preview",
+  "imagens": [
+    {
+      "id": "teste_api",
+      "arquivo": "teste_api.png",
+      "proporcao": "1:1",
+      "prompt": "A cute chibi cartoon football on fresh green grass under stadium floodlights, thick clean dark outlines, flat cel shading, premium 2D animation style."
+    },
+    {
+      "id": "ficha_mestre",
+      "arquivo": "elenco/ficha_mestre.png",
+      "proporcao": "16:9",
+      "prompt": "Character model sheet for a premium 2D cartoon sports animation channel. Three original chibi characters standing side by side, full body, front view, same scale, on a flat solid pure green background (#00FF00) with no shadows. Chibi proportions (head about 45% of total height), big expressive eyes with glossy highlights, thick clean dark-brown outlines, flat cel shading with one soft shadow tone plus a thin warm rim light, saturated harmonious colors, high polish like a top YouTube animation studio. Left: Brazilian football player from 1981, black and white VERTICAL stripes kit, black shorts, white socks, short curly dark hair, determined face. Center: Brazilian football player from 1981, red and black HORIZONTAL stripes kit, white shorts, black and red socks, short dark hair with a small mustache, cheeky smile. Right: football referee from 1981, all-black uniform with white collar, whistle on a cord, stern face, red card at his side. Shirts have a plain empty chest: no crest, no logo, no numbers, no text. Not based on any real person."
+    }
+  ]
+}
