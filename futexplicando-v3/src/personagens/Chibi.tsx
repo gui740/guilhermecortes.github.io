@@ -11,9 +11,9 @@ import { COR, PELE, TomPele, TRACO } from "../estilo/tokens";
 export type Olhos = "aberto" | "fechado" | "chocado" | "bravo" | "triste" | "convencido" | "feliz";
 export type Boca = "neutra" | "aberta" | "o" | "dentes" | "triste" | "sorriso_lado" | "grito" | "sorriso";
 export type Sobrancelha = "normal" | "brava" | "triste" | "erguida" | "convencida";
-export type Pose = "baixo" | "cruzados" | "apontando" | "comemorando" | "maos_cabeca" | "ombros" | "segurando" | "martelo" | "acenando" | "aperto" | "suor" | "telefone";
+export type Pose = "baixo" | "cruzados" | "apontando" | "comemorando" | "maos_cabeca" | "ombros" | "segurando" | "martelo" | "acenando" | "aperto" | "suor" | "telefone" | "taca_alto";
 export type Expressao = "neutro" | "boca_aberta" | "olhos_fechados" | "bravo" | "triste" | "chocado" | "convencido" | "comemorando" | "apontando" | "bracos_cruzados";
-export type Cabelo = "espetado" | "liso" | "cacheado" | "raspado" | "grisalho" | "penteado";
+export type Cabelo = "espetado" | "liso" | "cacheado" | "raspado" | "grisalho" | "penteado" | "brilhantina" | "degrade";
 
 export type Uniforme = {
   tipo: "liso" | "listras_v" | "listras_h" | "toga" | "terno";
@@ -24,6 +24,9 @@ export type Uniforme = {
   meiaoFaixa?: string;
   escudo?: string; // caminho em public/
   gravata?: string;
+  gola?: "v" | "cordao"; // "cordao" = gola de cordão (camisa de época)
+  estrela?: string; // cor da estrela acima do escudo (ex.: estrela vermelha do Palmeiras)
+  cracha?: boolean; // crachá sem logo (terno)
 };
 
 export const PRESETS: Record<Expressao, { olhos: Olhos; boca: Boca; sobr: Sobrancelha; pose: Pose }> = {
@@ -58,6 +61,8 @@ export type ChibiProps = {
   cabeca?: number;
   /** objeto na mão (pose segurando/martelo) */
   objeto?: React.ReactNode;
+  /** acessório na cabeça */
+  acessorio?: "fone";
   style?: React.CSSProperties;
 };
 
@@ -106,6 +111,7 @@ const POSES: Record<Pose, { e: [number, number][]; d: [number, number][]; frente
   acenando: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 360], [440, 250]] },
   aperto: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 500], [520, 520]] },
   suor: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [400, 300], [330, 170]], frente: true },
+  taca_alto: { e: [[158, 430], [92, 330], [72, 222]], d: [[342, 430], [422, 344], [436, 206]] },
   telefone: { e: [[158, 430], [126, 520], [132, 600]], d: [[342, 430], [420, 400], [420, 300]], frente: true },
 };
 
@@ -261,6 +267,23 @@ const CabeloUm: React.FC<{ tipo: Cabelo; cor: string; frente: boolean }> = ({ ti
           <path d="M434 270 Q440 190 400 170 Q390 230 396 290 Z" fill={cor} stroke={O} strokeWidth={TRACO} strokeLinejoin="round" />
         </g>
       );
+    case "brilhantina":
+      return (
+        <g>
+          <path d="M66 236 Q58 70 260 56 Q446 74 434 236 Q420 140 330 118 Q200 104 120 150 Q84 176 66 236 Z" fill={cor} stroke={O} strokeWidth={TRACO} strokeLinejoin="round" />
+          <path d="M150 80 Q260 50 370 96" stroke="rgba(255,255,255,0.45)" strokeWidth={14} fill="none" strokeLinecap="round" />
+          <path d="M170 104 Q260 80 350 112" stroke="rgba(255,255,255,0.22)" strokeWidth={9} fill="none" strokeLinecap="round" />
+          <path d="M136 120 Q150 80 200 66" stroke={O} strokeWidth={5} fill="none" opacity={0.6} />
+        </g>
+      );
+    case "degrade":
+      return (
+        <g>
+          <path d="M80 220 Q72 120 120 100 L124 150 Q100 170 80 220 Z M420 220 Q428 120 380 100 L376 150 Q400 170 420 220 Z" fill={cor} opacity={0.55} />
+          <path d="M118 150 Q110 60 250 44 Q392 60 382 150 Q360 116 320 120 Q300 92 250 104 Q200 90 180 120 Q140 116 118 150 Z" fill={cor} stroke={O} strokeWidth={TRACO} strokeLinejoin="round" />
+          <path d="M180 76 Q240 58 300 70" stroke="rgba(255,255,255,0.25)" strokeWidth={10} fill="none" strokeLinecap="round" />
+        </g>
+      );
     case "penteado":
       return (
         <g>
@@ -287,6 +310,7 @@ export const Chibi: React.FC<ChibiProps> = ({
   espelhar,
   cabeca = 0,
   objeto,
+  acessorio,
   style,
 }) => {
   const id = useId().replace(/:/g, "");
@@ -364,14 +388,37 @@ export const Chibi: React.FC<ChibiProps> = ({
       <path d={toga ? torsoToga : torso} fill="none" stroke={O} strokeWidth={TRACO} strokeLinejoin="round" />
       {!toga && !terno && (
         <g>
-          <path d="M204 400 L250 450 L296 400" stroke={O} strokeWidth={22} fill="none" strokeLinejoin="round" strokeLinecap="round" />
-          <path d="M204 400 L250 450 L296 400" stroke={u.detalhe} strokeWidth={12} fill="none" strokeLinejoin="round" strokeLinecap="round" />
+          {u.gola === "cordao" ? (
+            <g>
+              <path d="M196 398 Q250 420 304 398 L300 412 Q250 432 200 412 Z" fill={u.detalhe} stroke={O} strokeWidth={5} />
+              <path d="M250 418 L250 488" stroke={O} strokeWidth={6} />
+              {[432, 452, 472].map((y) => (
+                <path key={y} d={`M238 ${y} L262 ${y + 10} M262 ${y} L238 ${y + 10}`} stroke="#F2E6C8" strokeWidth={4} />
+              ))}
+            </g>
+          ) : (
+            <>
+              <path d="M204 400 L250 450 L296 400" stroke={O} strokeWidth={22} fill="none" strokeLinejoin="round" strokeLinecap="round" />
+              <path d="M204 400 L250 450 L296 400" stroke={u.detalhe} strokeWidth={12} fill="none" strokeLinejoin="round" strokeLinecap="round" />
+            </>
+          )}
           <path d="M146 618 Q250 632 354 618" stroke={u.detalhe} strokeWidth={7} fill="none" opacity={0.9} />
         </g>
       )}
       {toga && <path d="M206 398 L250 470 L294 398" stroke="#FFFFFF" strokeWidth={14} fill="none" strokeLinejoin="round" />}
       {u.escudo && !toga && !terno && (
         <image href={staticFile(u.escudo)} x={ESCUDO_ANCORA.x - ESCUDO_ANCORA.tam / 2} y={ESCUDO_ANCORA.y - ESCUDO_ANCORA.tam / 2} width={ESCUDO_ANCORA.tam} height={ESCUDO_ANCORA.tam} preserveAspectRatio="xMidYMid meet" />
+      )}
+      {u.estrela && !toga && !terno && (
+        <path transform={`translate(${ESCUDO_ANCORA.x} ${ESCUDO_ANCORA.y - ESCUDO_ANCORA.tam / 2 - 16}) scale(0.9)`} d="M0 -14 L4 -4 L14 -4 L6 3 L9 13 L0 7 L-9 13 L-6 3 L-14 -4 L-4 -4 Z" fill={u.estrela} stroke={O} strokeWidth={2.5} />
+      )}
+      {terno && u.cracha && (
+        <g>
+          <path d="M226 400 L278 520 M274 400 L278 520" stroke="#2A6BD8" strokeWidth={6} />
+          <rect x={256} y={516} width={48} height={64} rx={6} fill="#FFFFFF" stroke={O} strokeWidth={5} />
+          <rect x={264} y={526} width={32} height={22} rx={3} fill="#C9D3E6" />
+          <path d="M264 558 L296 558 M264 568 L288 568" stroke="#8A93A6" strokeWidth={4} />
+        </g>
       )}
     </g>
   );
@@ -402,6 +449,14 @@ export const Chibi: React.FC<ChibiProps> = ({
       <path d="M244 318 Q250 324 256 318" stroke={p.sombra} strokeWidth={5} fill="none" strokeLinecap="round" />
       <BocaUm tipo={bo} />
       <CabeloUm tipo={cabelo} cor={corCabelo} frente />
+      {acessorio === "fone" && (
+        <g>
+          <path d="M74 250 Q70 40 250 36 Q430 40 426 250" stroke={O} strokeWidth={30} fill="none" strokeLinecap="round" />
+          <path d="M74 250 Q70 40 250 36 Q430 40 426 250" stroke="#5A4A3A" strokeWidth={16} fill="none" strokeLinecap="round" />
+          <rect x={36} y={230} width={66} height={110} rx={26} fill="#3A2E24" stroke={O} strokeWidth={TRACO} />
+          <rect x={398} y={230} width={66} height={110} rx={26} fill="#3A2E24" stroke={O} strokeWidth={TRACO} />
+        </g>
+      )}
     </g>
   );
 
@@ -426,6 +481,30 @@ export const Chibi: React.FC<ChibiProps> = ({
 /* ----------------------------------------------------------- elenco deste canal */
 
 export const ELENCO: Record<string, Omit<ChibiProps, "expressao">> = {
+  PAL: {
+    uniforme: { tipo: "liso", cores: ["#0B6B3A"], detalhe: "#FFFFFF", calcao: "#FFFFFF", meiao: "#0B6B3A", meiaoFaixa: "#FFFFFF", escudo: "escudos/palmeiras.png", estrela: "#E1251B" },
+    pele: "media", cabelo: "degrade", corCabelo: "#24160E",
+  },
+  PAL1951: {
+    uniforme: { tipo: "liso", cores: ["#2F6B3E"], detalhe: "#F2E6C8", calcao: "#F2E6C8", meiao: "#2F6B3E", meiaoFaixa: "#F2E6C8", escudo: "escudos/palmeiras.png", gola: "cordao" },
+    pele: "clara", cabelo: "brilhantina", corCabelo: "#1E140C",
+  },
+  JUV1951: {
+    uniforme: { tipo: "listras_v", cores: ["#141414", "#F2EEE2"], detalhe: "#F2EEE2", calcao: "#F2EEE2", meiao: "#141414", escudo: "escudos/juventus_generico.png", gola: "cordao" },
+    pele: "clara", cabelo: "brilhantina", corCabelo: "#4A3020",
+  },
+  COR: {
+    uniforme: { tipo: "liso", cores: ["#F7F7F7"], detalhe: "#141414", calcao: "#141414", meiao: "#141414", meiaoFaixa: "#F7F7F7", escudo: "escudos/corinthians.png" },
+    pele: "clara", cabelo: "penteado", corCabelo: "#6B4426",
+  },
+  DIRIGENTE: {
+    uniforme: { tipo: "terno", cores: ["#3B3F4A"], detalhe: "#3B3F4A", calcao: "#30333C", meiao: "#30333C", gravata: "#2A6BD8", cracha: true },
+    pele: "clara", cabelo: "grisalho", corCabelo: "#C9C9C9",
+  },
+  LOCUTOR: {
+    uniforme: { tipo: "terno", cores: ["#6B5236"], detalhe: "#6B5236", calcao: "#5A4630", meiao: "#5A4630", gravata: "#8A2A20" },
+    pele: "media", cabelo: "brilhantina", corCabelo: "#1A120C", acessorio: "fone",
+  },
   LUSA: {
     uniforme: { tipo: "liso", cores: ["#D7262E"], detalhe: "#138A44", calcao: "#FFFFFF", meiao: "#D7262E", meiaoFaixa: "#138A44", escudo: "escudos/portuguesa.png" },
     pele: "clara", cabelo: "espetado", corCabelo: "#3A2418",
