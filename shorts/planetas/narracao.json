@@ -1,46 +1,22 @@
 [
- {
-  "t": 0.05,
-  "text": "A Terra parece grande?"
- },
- {
-  "t": 1.8,
-  "text": "Perto dos vizinhos, até que sim..."
- },
- {
-  "t": 3.75,
-  "text": "Mas aí chegam os gigantes. Netuno."
- },
- {
-  "t": 6.75,
-  "text": "Urano."
- },
- {
-  "t": 8.65,
-  "text": "Saturno."
- },
- {
-  "t": 10.55,
-  "text": "E Júpiter: onze Terras!"
- },
- {
-  "t": 12.5,
-  "text": "Agora... olha o Sol."
- },
- {
-  "t": 15.65,
-  "text": "Cento e nove vezes maior que a Terra!"
- },
- {
-  "t": 17.8,
-  "text": "E você está aqui."
- },
- {
-  "t": 19.95,
-  "text": "Dentro dele cabem um vírgula três milhão de Terras."
- },
- {
-  "t": 22.65,
-  "text": "Qual a próxima comparação?"
- }
+ {"id": "hook",     "pause": 0.15, "text": "A Terra parece enorme, né?"},
+ {"id": "km",       "pause": 0.35, "text": "São doze mil e setecentos quilômetros de diâmetro."},
+ {"id": "viz",      "pause": 0.25, "text": "Perto dos vizinhos, ela até se garante."},
+ {"id": "merc",     "pause": 0.15, "text": "Mercúrio tem pouco mais de um terço do tamanho dela."},
+ {"id": "marte",    "pause": 0.15, "text": "Marte, só a metade."},
+ {"id": "venus",    "pause": 0.45, "text": "E Vênus é quase uma gêmea."},
+ {"id": "gigantes", "pause": 0.30, "text": "Mas aí... chegam os gigantes."},
+ {"id": "netuno",   "pause": 0.45, "text": "Netuno: quase quatro Terras, lado a lado."},
+ {"id": "urano",    "pause": 0.45, "text": "Urano, um pouquinho maior: quatro Terras."},
+ {"id": "saturno",  "pause": 0.45, "text": "Saturno: nove Terras. E com os anéis, mais de vinte!"},
+ {"id": "jupiter",  "pause": 0.20, "text": "Júpiter, o rei dos planetas: onze Terras."},
+ {"id": "mancha",   "pause": 0.40, "text": "Só a mancha vermelha dele já é maior que a Terra inteira."},
+ {"id": "sol",      "pause": 2.60, "text": "Mas agora... olha o Sol."},
+ {"id": "s109",     "pause": 0.60, "text": "Pra atravessar o Sol de ponta a ponta, precisa de cento e nove Terras."},
+ {"id": "encher",   "pause": 0.10, "text": "E pra encher ele por dentro?"},
+ {"id": "milhao",   "pause": 0.90, "text": "Um milhão e trezentas mil Terras!"},
+ {"id": "aqui",     "pause": 0.80, "text": "E você... está aqui."},
+ {"id": "estrela",  "pause": 0.15, "text": "Mas o Sol é só uma estrela comum."},
+ {"id": "betel",    "pause": 0.50, "text": "Perto de Betelgeuse, ele vira um grãozinho."},
+ {"id": "cta",      "pause": 0.30, "text": "Qual a próxima comparação? Comenta aí!"}
 ]

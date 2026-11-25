@@ -1,18 +1,25 @@
-"""Trilha + efeitos sintetizados + narração. Uso: python audio.py <pasta_narracao> -> out/audio.wav
-A pasta de narração tem n00.mp3, n01.mp3... na ordem de narracao.json."""
+"""Trilha + efeitos sintetizados + narração, sincronizados com a linha do tempo do vídeo.
+Uso: NARR=out/narr_gemini python audio.py -> out/audio.wav"""
 import os, sys, json, subprocess, wave
 import numpy as np
 from scipy import signal
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import render as RV
+
 SR = 44100
-DUR = 25.0
-N = int(SR * DUR)
+DUR = RV.DUR
+N = int(round(SR * DUR))
 BPM = 110
 BEAT = 60 / BPM
 rng = np.random.default_rng(42)
+EV = RV.sound_events()
+SEC = EV["sections"]
 
-T_RISER, T_SUN, T_ARROW, T_FINAL, T_Q, T_LOOP = 12.4, 15.4, 17.6, 19.8, 22.4, 24.0
+
+def in_sec(t, *names):
+    return any(SEC[n][0] <= t < SEC[n][1] for n in names)
 
 
 def tt(n):
@@ -68,13 +75,7 @@ BAR = 4 * BEAT
 
 
 def drums_on(t):
-    if T_RISER <= t < T_SUN:
-        return 0.0
-    if T_SUN <= t < T_ARROW:
-        return 0.0
-    if t >= T_LOOP:
-        return 0.0
-    return 1.0
+    return 0.0 if in_sec(t, "riser1", "calm", "riser2", "loop") else 1.0
 
 
 def kick():
@@ -125,12 +126,13 @@ def music():
     zi = None
     for i in range(0, N, blk):
         tc = i / SR
-        if T_RISER <= tc < T_SUN:
-            fc = 900 + 5000 * ((tc - T_RISER) / (T_SUN - T_RISER)) ** 2
-        elif T_SUN <= tc < T_ARROW:
+        fc = 1300
+        for nm in ("riser1", "riser2"):
+            a_, b_ = SEC[nm]
+            if a_ <= tc < b_:
+                fc = 900 + 5000 * ((tc - a_) / (b_ - a_)) ** 2
+        if in_sec(tc, "calm"):
             fc = 2600
-        else:
-            fc = 1300
         b, a = signal.butter(2, fc / (SR / 2), "low")
         if zi is None:
             zi = signal.lfilter_zi(b, a) * 0
@@ -150,9 +152,7 @@ def music():
         tl = tt(n)
         f = mtof(m)
         x = (np.sin(2 * np.pi * f * tl) + 0.3 * saw(f, tl)) * np.exp(-tl * 11)
-        g = 0.10 if not (T_SUN <= tc < T_ARROW) else 0.05
-        if T_RISER <= tc < T_SUN:
-            g = 0.06
+        g = 0.05 if in_sec(tc, "calm", "riser1", "riser2") else 0.10
         place(arp, lp(x, 3500, 1) * g, tc)
         k += 1
         tc += step
@@ -187,12 +187,14 @@ def music():
             place(dr, Hc if i % 4 != 3 else Ho, tb + BEAT / 2, 0.8)
             if i % 2 == 0:
                 place(dr, Hc, tb + BEAT * 0.75, 0.4)
-    # virada de caixa acelerando no riser
-    tc = T_RISER + 1.0
-    while tc < T_SUN - 0.02:
-        u = (tc - T_RISER - 1.0) / (T_SUN - T_RISER - 1.0)
-        place(dr, C, tc, 0.25 + 0.6 * u)
-        tc += BEAT / 2 if u < 0.4 else (BEAT / 4 if u < 0.75 else BEAT / 8)
+    # virada de caixa acelerando nos risers
+    for nm in ("riser1", "riser2"):
+        a_, b_ = SEC[nm]
+        tc = a_ + 0.6
+        while tc < b_ - 0.02:
+            u = (tc - a_ - 0.6) / max(b_ - a_ - 0.6, 0.1)
+            place(dr, C, tc, 0.25 + 0.6 * u)
+            tc += BEAT / 2 if u < 0.4 else (BEAT / 4 if u < 0.75 else BEAT / 8)
     mus = (pad + arp) * pump + bass * pump + dr
     # estéreo simples
     L = mus + 0.3 * arp * pump
@@ -265,34 +267,45 @@ def boom():
     return np.stack([y + tail, y - tail * 0.5 + tail * 0.5], 1)
 
 
+def pop_snd(k):
+    """'plop' com tom subindo a cada Terra"""
+    n = int(0.12 * SR)
+    t = tt(n)
+    f0 = 520 * 2 ** (min(k, 24) / 12 * 1.0)
+    f = f0 * (1 + 0.8 * np.exp(-t * 60))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    y = np.sin(ph) * env_ad(n, 0.002, 0.035)
+    return np.stack([y, y], 1)
+
+
+def swarm(dur):
+    n = int(dur * SR)
+    t = tt(n)
+    u = t / dur
+    y = bp(rng.standard_normal(n), 300, 3000) * (0.2 + 0.8 * np.sin(np.pi * np.clip(u, 0, 1)) ** 0.7)
+    y *= 1 + 0.5 * np.sin(2 * np.pi * 9 * t) * np.sin(2 * np.pi * 0.7 * t)
+    return np.stack([y, np.roll(y, 300)], 1) * 0.35
+
+
 def sfx():
     S = np.zeros((N, 2))
-    for tp in [1.75, 4.35, 6.2, 8.2, 10.2]:      # picos de movimento de câmera
-        place(S, whoosh(0.9, 0.55), tp - 0.5, 0.7)
-    place(S, whoosh(1.6, 0.8, lo=150, hi=2500), T_SUN - 1.3, 0.6)
-    for tb in [1.70, 1.85, 2.00]:
-        place(S, blip(700, 1100), tb, 0.35)
-    for tb in [4.9, 6.9, 8.9, 10.9, T_ARROW, T_FINAL, T_Q]:
-        place(S, blip(), tb, 0.45)
-    # ticks dos km
-    for tb in [4.9, 6.9, 8.9, 10.9]:
-        tc = tb + 0.05
-        while tc < tb + 0.9:
-            place(S, tick(3200, 0.5), tc, 0.25)
-            tc += 0.055 + 0.08 * (tc - tb)
-    # ticks do contador 1x -> 109x (mesma curva do vídeo)
-    last, lt = 1, -1
-    for i in range(int(T_SUN * SR), int((T_SUN + 1.8) * SR), int(SR * 0.005)):
-        tc = i / SR
-        u = min(max((tc - T_SUN - 0.1) / 1.5, 0), 1)
-        n = 1 + int(round(108 * (1 - (1 - u) ** 2.2)))
-        if n != last and tc - lt > 0.032:
-            place(S, tick(2200 + 8 * n, 0.8), tc, 0.35)
-            last, lt = n, tc
-    place(S, riser(T_SUN - T_RISER), T_RISER, 0.9)
-    place(S, boom(), T_SUN, 1.0)
-    place(S, whoosh(1.0, 0.95, reverse=False, lo=200, hi=4000), T_LOOP, 0.0)
-    place(S, whoosh(1.0, 0.3, reverse=True, lo=200, hi=4000), T_LOOP, 1.6)  # whoosh reverso
+    for tp in EV["whoosh"]:
+        place(S, whoosh(0.9, 0.55), tp - 0.5, 0.65)
+    for tp, k in EV["pop"]:
+        place(S, pop_snd(k), tp, 0.5)
+    for tb in EV["blip"]:
+        place(S, blip(), tb, 0.4)
+    for tc, g in EV["tick"]:
+        place(S, tick(2400 + 1200 * g, 0.8), tc, 0.3 * g + 0.1)
+    for a_, b_ in EV["riser"]:
+        place(S, riser(b_ - a_), a_, 0.9)
+        place(S, whoosh(1.4, 0.85, lo=150, hi=2500), b_ - 1.2, 0.55)
+    for tb, g in EV["boom"]:
+        place(S, boom(), tb, g)
+    for a_, b_ in EV["swarm"]:
+        place(S, swarm(b_ - a_ + 0.5), a_, 1.0)
+    for tl in EV["rwhoosh"]:
+        place(S, whoosh(DUR - tl, 0.3, reverse=True, lo=200, hi=4000), tl, 1.6)
     return S
 
 
@@ -307,31 +320,18 @@ def load_mono(path):
     return x / (np.abs(x).max() + 1e-9) * 0.9
 
 
-def narration(folder):
-    lines = json.load(open(os.path.join(HERE, "narracao.json")))
+def narration():
     V = np.zeros(N)
-    for i, l in enumerate(lines):
-        p = None
-        for ext in ("wav", "mp3"):
-            c = os.path.join(folder, f"n{i:02d}.{ext}")
-            if os.path.exists(c):
-                p = c; break
-        if p is None:
-            continue
-        x = load_mono(p)
-        end = l["t"] + len(x) / SR
-        nxt = lines[i + 1]["t"] if i + 1 < len(lines) else DUR
-        if end > nxt - 0.05:
-            print(f"aviso: fala {i} invade a próxima ({end:.2f} > {nxt:.2f})")
-        place(V, x, l["t"])
+    for l in RV.P["lines"]:
+        x = load_mono(l["file"])
+        place(V, x, l["start"])
     return V
 
 
 def main():
-    folder = sys.argv[1]
     M = music()
     S = sfx()
-    V = narration(folder)
+    V = narration()
     # ducking da música sob a voz
     env = np.abs(V)
     b, a = signal.butter(1, 6 / (SR / 2))
