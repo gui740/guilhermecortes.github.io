@@ -462,7 +462,7 @@ def draw_body(canvas, name, cx, cy, R, t, scale=1.0, clip_x1=None, light=None, g
             else:
                 if name == "TERRA":
                     oc = sample(TEX["TERRA_oc"], u, v)
-                    cl = sample(TEX["TERRA_cl"], (u + t / 25.0) % 1.0, v)
+                    cl = sample(TEX["TERRA_cl"], (u + t / DUR) % 1.0, v)
                     hx, hy, hz = LIGHT_[0], LIGHT_[1], LIGHT_[2] + 1
                     hn = math.sqrt(hx * hx + hy * hy + hz * hz)
                     ndh = np.clip((Xi * hx - Yi * hy + Zi * hz) / hn, 0, 1)

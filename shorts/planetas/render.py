@@ -99,9 +99,9 @@ def build_keys():
     left, right = XS[0] - R_KM[0], XS[3] + R_KM[3]
     s1 = 860 / (right - left)
     mid = (left + right) / 2
-    for line, tgt in [("merc", XS[0]), ("marte", XS[1]), ("venus", XS[2])]:
-        x = mid + (tgt - mid) * 0.22
-        K.append((S[line] + 0.45, s1 * 1.04, x, 1000.0, "soft"))
+    for line, tgt, zf, sh in [("merc", XS[0], 1.16, 0.38), ("marte", XS[1], 1.08, 0.32), ("venus", XS[2], 1.0, 0.25)]:
+        x = mid + (tgt - mid) * sh
+        K.append((S[line] + 0.45, s1 * zf, x, 1000.0, "soft"))
     K.append((S["gigantes"] + 0.2, s1 * 0.97, mid + 2000, 1000.0, "soft"))
     for line, n, d in [("netuno", "NETUNO", 500), ("urano", "URANO", 470), ("saturno", "SATURNO", 300),
                        ("jupiter", "JÚPITER", 400)]:
@@ -417,6 +417,8 @@ def build_chunks():
     CHUNKS.clear()
     cur, line = [], None
     for w in P["words"]:
+        if w["line"] == "hook":      # o título já mostra; deixa o frame 0 igual ao último
+            continue
         if cur and (w["line"] != line or len(cur) >= 3 or sum(len(x["w"]) + 1 for x in cur) + len(w["w"]) > 16):
             CHUNKS.append(cur); cur = []
         cur.append(w); line = w["line"]
