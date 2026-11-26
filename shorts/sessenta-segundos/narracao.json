@@ -1,0 +1,15 @@
+[
+ {"id": "hook",     "pause": 0.3, "text": "Nos próximos sessenta segundos, sem sair do lugar, você vai fazer o impossível."},
+ {"id": "coracao",  "pause": 0.3, "text": "Seu coração já bateu umas cinco vezes. E está acelerando."},
+ {"id": "piscadas", "pause": 0.3, "text": "Você piscou... e nem percebeu."},
+ {"id": "respira",  "pause": 0.3, "text": "Respirou sem nem pensar."},
+ {"id": "celulas",  "pause": 0.3, "text": "Quase quatro milhões de células suas morreram e foram trocadas. Por segundo."},
+ {"id": "raios",    "pause": 0.3, "text": "No planeta, caem quarenta e quatro raios a cada segundo."},
+ {"id": "bebes",    "pause": 0.3, "text": "E nascem mais de quatro bebês por segundo."},
+ {"id": "rotacao",  "pause": 0.3, "text": "A Terra gira e te leva junto: quase meio quilômetro por segundo."},
+ {"id": "orbita",   "pause": 0.3, "text": "Em volta do Sol, ela voa a trinta quilômetros por segundo."},
+ {"id": "sol",      "pause": 0.3, "text": "E o Sol arrasta tudo pela galáxia a duzentos e trinta por segundo."},
+ {"id": "galaxia",  "pause": 0.3, "text": "E a Via Láctea inteira? Seiscentos quilômetros por segundo."},
+ {"id": "sofa",     "pause": 0.9, "text": "Tudo isso... e você nem saiu do sofá."},
+ {"id": "cta",      "pause": 0.2, "text": "Pera, oi? Assiste de novo e conta as piscadas."}
+]
