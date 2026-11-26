@@ -1,0 +1,57 @@
+[
+ {
+  "id": "hook",
+  "pause": 0.15,
+  "text": "Se a história da Terra fosse um dia de vinte e quatro horas..."
+ },
+ {
+  "id": "lava",
+  "pause": 0.1,
+  "text": "Meia-noite: a Terra é lava pura."
+ },
+ {
+  "id": "vida",
+  "pause": 0.1,
+  "text": "Quatro da manhã: os primeiros micróbios."
+ },
+ {
+  "id": "plantas",
+  "pause": 0.1,
+  "text": "Nove e meia da noite: as plantas chegam à terra firme."
+ },
+ {
+  "id": "dinos",
+  "pause": 0.1,
+  "text": "Quase onze: dinossauros!"
+ },
+ {
+  "id": "asteroide",
+  "pause": 0.95,
+  "text": "Vinte pra meia-noite..."
+ },
+ {
+  "id": "humanos",
+  "pause": 0.35,
+  "text": "E os humanos?"
+ },
+ {
+  "id": "sapiens",
+  "pause": 0.1,
+  "text": "Só nos últimos seis segundos."
+ },
+ {
+  "id": "historia",
+  "pause": 0.1,
+  "text": "Das pirâmides até hoje? Um décimo de segundo."
+ },
+ {
+  "id": "suavida",
+  "pause": 0.25,
+  "text": "E a sua vida inteira? Um milésimo e meio de segundo."
+ },
+ {
+  "id": "cta",
+  "pause": 0.1,
+  "text": "Pera, oi? Qual outra escala eu faço?"
+ }
+]
