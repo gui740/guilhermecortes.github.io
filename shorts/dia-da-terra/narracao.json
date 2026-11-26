@@ -1,57 +1,18 @@
 [
- {
-  "id": "hook",
-  "pause": 0.15,
-  "text": "Se a história da Terra fosse um dia de vinte e quatro horas..."
- },
- {
-  "id": "lava",
-  "pause": 0.1,
-  "text": "Meia-noite: a Terra é lava pura."
- },
- {
-  "id": "vida",
-  "pause": 0.1,
-  "text": "Quatro da manhã: os primeiros micróbios."
- },
- {
-  "id": "plantas",
-  "pause": 0.1,
-  "text": "Nove e meia da noite: as plantas chegam à terra firme."
- },
- {
-  "id": "dinos",
-  "pause": 0.1,
-  "text": "Quase onze: dinossauros!"
- },
- {
-  "id": "asteroide",
-  "pause": 0.95,
-  "text": "Vinte pra meia-noite..."
- },
- {
-  "id": "humanos",
-  "pause": 0.35,
-  "text": "E os humanos?"
- },
- {
-  "id": "sapiens",
-  "pause": 0.1,
-  "text": "Só nos últimos seis segundos."
- },
- {
-  "id": "historia",
-  "pause": 0.1,
-  "text": "Das pirâmides até hoje? Um décimo de segundo."
- },
- {
-  "id": "suavida",
-  "pause": 0.25,
-  "text": "E a sua vida inteira? Um milésimo e meio de segundo."
- },
- {
-  "id": "cta",
-  "pause": 0.1,
-  "text": "Pera, oi? Qual outra escala eu faço?"
- }
+ {"id": "hook",     "pause": 0.15, "text": "A humanidade inteira cabe nesses últimos seis segundos. Duvida?"},
+ {"id": "rewind",   "pause": 0.15, "text": "Imagina a história da Terra espremida em um dia de vinte e quatro horas."},
+ {"id": "lava",     "pause": 0.10, "text": "Meia-noite: a Terra nasce. Uma bola de lava."},
+ {"id": "lua",      "pause": 0.20, "text": "Minutos depois, um planeta do tamanho de Marte bate nela... e os destroços viram a Lua."},
+ {"id": "vida",     "pause": 0.10, "text": "Quatro da manhã: aparece a primeira vida. Micróbios."},
+ {"id": "so",       "pause": 0.10, "text": "E por mais de quinze horas, a vida foi basicamente isso."},
+ {"id": "oxigenio", "pause": 0.10, "text": "Perto do meio-dia, eles enchem o ar de oxigênio."},
+ {"id": "animais",  "pause": 0.10, "text": "Nove da noite: explodem os primeiros animais nos oceanos."},
+ {"id": "plantas",  "pause": 0.10, "text": "Nove e meia: as plantas conquistam a terra firme."},
+ {"id": "dinos",    "pause": 0.10, "text": "Quinze pras onze: os dinossauros. Eles reinam por quase uma hora inteira."},
+ {"id": "asteroide","pause": 1.00, "text": "Até que, vinte pra meia-noite..."},
+ {"id": "humanos",  "pause": 0.30, "text": "E a gente?"},
+ {"id": "sapiens",  "pause": 0.15, "text": "O Homo sapiens só aparece nos últimos seis segundos."},
+ {"id": "historia", "pause": 0.20, "text": "Pirâmides, Roma, a internet: toda a história escrita cabe em um décimo de segundo."},
+ {"id": "suavida",  "pause": 0.25, "text": "E a sua vida inteira? Um milésimo e meio de segundo."},
+ {"id": "cta",      "pause": 0.10, "text": "Pera, oi? Comenta qual escala você quer ver agora."}
 ]

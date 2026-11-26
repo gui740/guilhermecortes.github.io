@@ -54,6 +54,7 @@ def saw(f, t, ph=0.0):
 
 
 T_SLOWMO = EV["boom"]          # depois do boom: tudo desacelera
+EV["flip"] = EV["loop"]
 
 
 # ---------------------------------------------------------------- música
@@ -82,7 +83,7 @@ def music():
     k, tc = 0, 0.0
     while tc < DUR:
         root, notes = CHORDS[int(tc // BAR) % 4]
-        on = tc < EV["ast"] or tc >= EV["cta"]
+        on = (EV["rw"][1] <= tc < EV["ast"]) or EV["cta"] <= tc < EV["loop"]
         if on:
             m = notes[[0, 2, 1, 3, 2, 1, 3, 2][k % 8]] + 12
             n = int(0.3 * SR); tl = tt(n)
@@ -96,7 +97,7 @@ def music():
     K = kick(); Hh = hat()
     for i in range(int(DUR / BEAT) + 1):
         tb = i * BEAT
-        if tb < EV["ast"] - 0.05:
+        if EV["rw"][1] <= tb < EV["ast"] - 0.05:
             place(dr, K, tb, 0.75)
             place(dr, Hh, tb + BEAT / 2, 0.5)
             if tb >= EV["eras"][1]:
@@ -104,13 +105,15 @@ def music():
             if i % 2 == 1:
                 place(dr, clap(), tb, 0.6)
     # câmera lenta: batida de coração lenta
+    for tc in np.arange(0.0, EV["rw"][0], 1.25):     # gancho: coração lento
+        place(dr, kick(0.6), tc, 0.55); place(dr, kick(0.6), tc + 0.28, 0.35)
     tc = EV["slow"] + 0.3
-    while tc < EV["flip"] - 0.2:
+    while tc < EV["loop"] - 0.2:
         place(dr, kick(0.6), tc, 0.55); place(dr, kick(0.6), tc + 0.28, 0.35)
         tc += 1.25
     # mistura por seção
     t = tt(N)
-    fast = (t < T_SLOWMO).astype(float)
+    fast = ((t >= EV["rw"][1]) & (t < T_SLOWMO)).astype(float)
     xf = np.clip((t - T_SLOWMO) / 0.6, 0, 1)
     mus = pad * (fast + (1 - fast) * (1 - xf)) + pad_lo * (1 - fast) * xf * 1.3 + arp + bass + dr
     return st(mus)
@@ -149,17 +152,21 @@ def ticks():
     out = np.zeros((N, 2))
     t, k = 0.02, 0
     while t < DUR:
-        if t < EV["slow"]:
-            v = RV.clock_speed(t)
+        rw = any(a <= t < b for a, b in (EV["rw"], (EV["loop"], DUR)))
+        if t < EV["rw"][0]:
+            place(out, tick(900 if k % 2 == 0 else 700, 1.0, 60), t, 0.5)
+            t += 0.9
+        elif rw:
+            place(out, tick(3400 if k % 2 == 0 else 2800, 0.4), t, 0.4)
+            t += 1 / 22
+        elif t < EV["slow"]:
+            v = abs(RV.clock_speed(t))
             rate = 2.0 + 13.0 * min(1.0, math.log10(1 + v) / 4.6)
             place(out, tick(2900 if k % 2 == 0 else 2200, 0.55), t, 0.6)
             t += 1 / rate
-        elif t < EV["flip"]:
+        else:
             place(out, tick(900 if k % 2 == 0 else 700, 1.0, 60), t, 0.5)
             t += 0.9
-        else:
-            place(out, tick(2900 if k % 2 == 0 else 2200, 0.55), t, 0.6)
-            t += 0.5
         k += 1
     return out
 
@@ -220,6 +227,15 @@ def slow_drone(dur):
     return st(y * env * 0.5)
 
 
+def tape_rewind(dur):
+    n = int(dur * SR); t = tt(n); u = t / dur
+    f = 900 + 2600 * np.sin(np.pi * u) ** 0.7
+    y = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.15
+    y = bp(y + rng.standard_normal(n) * 0.4, 600, 6000) * np.sin(np.pi * u) ** 0.5
+    y *= 1 + 0.5 * np.sin(2 * np.pi * 31 * t)
+    return st(y * 0.5)
+
+
 def sfx():
     S = np.zeros((N, 2))
     S += ticks()
@@ -234,8 +250,11 @@ def sfx():
     place(S, ding(1318.5), EV["dec"] + 0.25, 0.9)           # revelação: 0,1 segundo
     place(S, ding(1567.98, 1.2), EV["card"] + 0.05, 1.0)    # cartão final
     place(S, ding(1046.5, 0.8), EV["cta"], 0.9)
-    place(S, whoosh(0.9, 0.3, lo=200, hi=4500, reverse=True), EV["flip"] - 0.85, 1.4)   # whoosh reverso no loop
-    place(S, tick(1800, 1.5, 90), EV["flip"], 1.0)
+    for a, b in (EV["rw"], (EV["loop"], DUR)):          # rebobinar: fita voltando + whoosh reverso
+        place(S, tape_rewind(b - a), a, 1.0)
+        place(S, whoosh(b - a, 0.3, lo=200, hi=4500, reverse=True), a, 1.2)
+    place(S, boom(), EV["theia"], 0.6)                    # Theia
+    place(S, falling(1.4), EV["theia"] - 1.4, 0.5)
     return S
 
 

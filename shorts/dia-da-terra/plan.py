@@ -4,7 +4,7 @@ import json, os, subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FPS = 30
-LOOP_LEN = 0.9         # relógio vira 00:00:00
+LOOP_LEN = 0.9         # rebobina até 23:59:54 (frame 0)
 T0 = 0.05
 
 
