@@ -40,23 +40,29 @@ window.renderFrame = function (t) {
   const only = new URLSearchParams(location.search).get("cena");
   const list = only ? timeline.filter((x) => x.cfg.id === only).map((x) => ({ ...x, t0: 0 })) : timeline;
   let leg = [];
+  const visibles = [];
   list.forEach((item, i) => {
-    const lt = t - item.t0;
+    // relógio da cena: começa quando o rasgo da cena anterior começa a revelá-la
+    const pre = !only && i > 0 ? TRANSICAO : 0;
+    const c = t - item.t0 + pre;
+    const end = item.cfg.dur + pre;
     const sc = sceneFor(item.cfg);
     const next = list[i + 1];
-    const visible = lt >= -TRANSICAO && lt < item.cfg.dur;
+    const visible = c >= 0 && c < end;
     sc.el.setAttribute("display", visible ? "inline" : "none");
     if (!visible) return;
-    sc.update(Math.max(0, lt));
-    if (lt >= 0) leg = item.cfg.legendas.map(([ts, tx]) => [ts, tx]), legT = lt;
-    // rasgo: nos últimos TRANSICAO s, a cena atual rasga revelando a próxima (que fica por baixo)
+    sc.update(c);
+    const front = !next || c < end - TRANSICAO;   // a cena "da frente" é a que manda na legenda
+    if (front || !leg.length) { leg = item.cfg.legendas; legT = c; }
     if (next) {
       if (!tears[item.cfg.id]) tears[item.cfg.id] = new TornTransition(stage, i + 1);
-      const u = K.clamp((lt - (item.cfg.dur - TRANSICAO)) / TRANSICAO);
-      tears[item.cfg.id].apply(sc.el, stage.root, u);
-      stage.root.appendChild(sc.el);   // cena que sai fica por cima
+      tears[item.cfg.id].apply(sc.el, stage.root, K.clamp((c - (end - TRANSICAO)) / TRANSICAO));
     }
+    visibles.push(sc.el);
   });
+  // ordem de desenho: a cena que entra fica por baixo, a que sai (rasgando) por cima
+  for (let k = visibles.length - 1; k >= 0; k--) stage.root.appendChild(visibles[k]);
+  Object.values(tears).forEach((tr) => { if (tr.fiber.parentNode) { stage.root.appendChild(tr.shadow); stage.root.appendChild(tr.fiber); } });
   caption.update(typeof legT === "number" ? legT : 0, leg);
 };
 let legT = 0;
