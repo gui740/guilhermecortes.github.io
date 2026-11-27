@@ -36,8 +36,8 @@ class Stage {
         <feTurbulence type="fractalNoise" baseFrequency="${0.035 + i * 0.006}" numOctaves="2" seed="${i * 7 + 3}" result="n"/>
         <feDisplacementMap in="d" in2="n" scale="${12 + (i % 2) * 6}" xChannelSelector="R" yChannelSelector="G" result="edge"/>
         <feFlood flood-color="#fbf7ec"/><feComposite in2="edge" operator="in" result="paper"/>
-        <feGaussianBlur in="edge" stdDeviation="7" result="b"/><feOffset dx="7" dy="11" result="o"/>
-        <feFlood flood-color="#2a1d10" flood-opacity="0.38"/><feComposite in2="o" operator="in" result="shadow"/>
+        <feOffset in="edge" dx="9" dy="13" result="o"/>
+        <feFlood flood-color="#120d08" flood-opacity="0.92"/><feComposite in2="o" operator="in" result="shadow"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="${i}" result="grain"/>
         <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.28  0 0 0 0.22 0" result="g2"/>
         <feComposite in="g2" in2="SourceGraphic" operator="in" result="g3"/>
@@ -162,10 +162,15 @@ class RansomText {
     const pares = [[P.papel, P.tinta], [P.tinta, P.papel], [P.tomate, P.papel], [P.mostarda, P.tinta],
       [P.petroleo, P.papel], ["#ffffff", P.tomate], ["#d8d0bd", P.tinta], [P.creme, P.petroleo], [P.papel, P.tomate]];
     const lines = this.o.text.split("\n");
-    const S = this.o.size;
+    let S = this.o.size;
+    // larguras de cada letra; se a linha mais longa passar de maxW, tudo encolhe para caber
+    const wsAll = lines.map((line) => [...line].map((c) => (c === " " ? 0.35 : 0.62 + r() * 0.22)));
+    const widest = Math.max(...wsAll.map((ws) => ws.reduce((a, b) => a + b, 0))) * S;
+    if (this.o.maxW && widest > this.o.maxW) S *= this.o.maxW / widest;
+    this.size = S;
     let idx = 0;
     lines.forEach((line, li) => {
-      const ws = [...line].map((c) => (c === " " ? S * 0.35 : S * (0.62 + r() * 0.22)));
+      const ws = wsAll[li].map((k) => k * S);
       const total = ws.reduce((a, b) => a + b, 0);
       let cx = this.o.x - (this.o.align === "middle" ? total / 2 : 0);
       const cy = this.o.y + (li - (lines.length - 1) / 2) * S * this.o.lineGap;
@@ -271,37 +276,47 @@ class TornTransition {
 
 // ---------------------------------------------------------------------------
 class Caption {
-  // legenda: sans-serif bold mostarda com contorno preto, terço inferior
+  // legenda: sans-serif bold mostarda com contorno preto, numa tira de papel preto, no terço inferior
   constructor(stage) {
     this.stage = stage;
     const u = stage.u;
+    this.y = stage.vertical ? stage.safe.y1 - 80 * u : stage.H * 0.88;
+    this.strip = K.el("rect", { fill: PALETA.tinta, filter: "url(#cut2)" }, stage.svg);
     this.el = K.el("text", {
-      x: stage.cx, y: stage.vertical ? stage.safe.y1 - 70 : stage.H * 0.90, "text-anchor": "middle", "dominant-baseline": "central",
-      "font-family": "Montserrat", "font-weight": 900, "font-size": 66 * u, fill: PALETA.mostarda,
-      stroke: PALETA.tinta, "stroke-width": 12 * u, "stroke-linejoin": "round", "paint-order": "stroke",
+      x: stage.cx, y: this.y, "text-anchor": "middle", "dominant-baseline": "central",
+      "font-family": "Montserrat", "font-weight": 900, "font-size": 64 * u, fill: PALETA.mostarda,
+      stroke: PALETA.tinta, "stroke-width": 10 * u, "stroke-linejoin": "round", "paint-order": "stroke",
     }, stage.svg);
-    this.base = 66 * u;
+    this.base = 64 * u;
   }
   update(t, legendas) {
     let cur = null, t0 = 0;
     for (const [ts, txt] of legendas) if (t >= ts) { cur = txt; t0 = ts; }
-    if (!cur) { this.el.textContent = ""; return; }
+    if (!cur) { this.el.textContent = ""; this.strip.setAttribute("display", "none"); return; }
+    this.strip.removeAttribute("display");
     if (this.el.textContent !== cur) {
       this.el.textContent = cur;
       this.el.setAttribute("font-size", this.base);
-      const max = (this.stage.safe.x1 - this.stage.safe.x0) - 40 * this.stage.u;
+      const max = (this.stage.safe.x1 - this.stage.safe.x0) - 90 * this.stage.u;
       const len = this.el.getComputedTextLength();
       if (len > max) this.el.setAttribute("font-size", this.base * max / len);   // encolhe para caber
+      this.len = Math.min(len, max);
     }
     const s = K.pop(t, t0, 0.3) || 0;
-    const { W, H } = this.stage;
-    this.el.setAttribute("transform", `translate(${W / 2} ${H * 0.86}) scale(${s}) rotate(${K.boil(t, 99, 0.8)}) translate(${-W / 2} ${-H * 0.90})`);
+    const x = this.stage.cx, y = this.y;
+    const fs = +this.el.getAttribute("font-size");
+    const pw = this.len + 60 * this.stage.u, ph = fs * 1.5;
+    this.strip.setAttribute("x", x - pw / 2); this.strip.setAttribute("y", y - ph / 2);
+    this.strip.setAttribute("width", pw); this.strip.setAttribute("height", ph);
+    const tr = `translate(${x} ${y}) scale(${s}) rotate(${-1.5 + K.boil(t, 99, 0.6)}) translate(${-x} ${-y})`;
+    this.el.setAttribute("transform", tr);
+    this.strip.setAttribute("transform", tr);
   }
 }
 
 // ---------------------------------------------------------------------------
 class PaperBackground {
-  constructor(stage, layer, seed = 1, tint = PALETA.creme) {
+  constructor(stage, layer, seed = 1, tint = PALETA.creme, opts = {}) {
     const { W, H } = stage;
     const r = K.rng(seed * 7 + 1);
     const g = K.el("g", {}, layer.el);
@@ -311,14 +326,14 @@ class PaperBackground {
       const x = W * (0.25 + r() * 0.5);
       const a = (r() - 0.5) * 0.3;
       const x1 = x + Math.tan(a) * H * 0.7, x2 = x - Math.tan(a) * H * 0.7;
-      K.el("line", { x1, y1: -H * 0.2, x2, y2: H * 1.2, stroke: "#fffaf0", "stroke-width": 3 * stage.u, opacity: 0.5 }, g);
-      K.el("line", { x1: x1 + 4, y1: -H * 0.2, x2: x2 + 4, y2: H * 1.2, stroke: "#6b5236", "stroke-width": 2.5 * stage.u, opacity: 0.18 }, g);
+      K.el("line", { x1, y1: -H * 0.2, x2, y2: H * 1.2, stroke: "#fffaf0", "stroke-width": 3 * stage.u, opacity: 0.14 }, g);
+      K.el("line", { x1: x1 + 4, y1: -H * 0.2, x2: x2 + 4, y2: H * 1.2, stroke: "#2a1808", "stroke-width": 2.5 * stage.u, opacity: 0.14 }, g);
     }
     // manchas de café
     for (let i = 0; i < 3; i++) {
       const cx = W * (0.1 + r() * 0.8), cy = H * (0.1 + r() * 0.8), rr = (60 + r() * 90) * stage.u;
-      K.el("circle", { cx, cy, r: rr, fill: "#8a5a2b", opacity: 0.06, filter: "url(#stain)" }, g);
-      K.el("circle", { cx, cy, r: rr, fill: "none", stroke: "#7a4a20", "stroke-width": 5 * stage.u, opacity: 0.2, filter: "url(#stain)" }, g);
+      K.el("circle", { cx, cy, r: rr, fill: "#3a2410", opacity: 0.07, filter: "url(#stain)" }, g);
+      K.el("circle", { cx, cy, r: rr, fill: "none", stroke: "#2a1808", "stroke-width": 5 * stage.u, opacity: 0.16, filter: "url(#stain)" }, g);
     }
     K.el("rect", { x: -W * 0.15, y: -H * 0.15, width: W * 1.3, height: H * 1.3, fill: "url(#vinheta)" }, g);
     this.el = g;
@@ -355,4 +370,40 @@ class Scene {
     this.updaters.forEach((f) => f(t, cam));          // primeiro a lógica da cena (posições, desenhos)...
     this.layerList.forEach((L) => { L.apply(cam); L.items.forEach((it) => it.update(t)); });   // ...depois aplica
   }
+}
+
+// ---------------------------------------------------------------------------
+class Sunburst {
+  // raios de sol em retícula girando atrás do assunto (efeito pop/xilogravura)
+  constructor(stage, layer, o) {
+    this.o = Object.assign({ x: stage.W / 2, y: stage.H / 2, r: 1700, rays: 22, color: PALETA.mostarda, opacity: 0.5, speed: 6 }, o);
+    const { r, rays, color, opacity } = this.o;
+    this.el = K.el("g", {}, layer.el);
+    const g = K.el("g", { opacity }, this.el);
+    let d = "";
+    for (let i = 0; i < rays; i++) {
+      const a0 = (i / rays) * 2 * Math.PI, a1 = ((i + 0.5) / rays) * 2 * Math.PI;
+      d += `M0,0 L${(Math.cos(a0) * r).toFixed(1)},${(Math.sin(a0) * r).toFixed(1)} L${(Math.cos(a1) * r).toFixed(1)},${(Math.sin(a1) * r).toFixed(1)} Z `;
+    }
+    K.el("path", { d, fill: color }, g);
+    K.el("path", { d, fill: "url(#dots)", opacity: 0.3 }, g);
+    this.g = g;
+    if (layer.items) layer.items.push(this);
+  }
+  update(t) {
+    this.g.setAttribute("transform", `translate(${this.o.x} ${this.o.y}) rotate(${((t * this.o.speed) % 360).toFixed(2)})`);
+  }
+}
+
+// mancha de papel rasgado (polígono irregular) para pôr atrás do assunto principal
+function tornBlob(w, h, seed, color) {
+  const r = K.rng(seed * 13 + 5);
+  const n = 28;
+  let pts = "";
+  for (let i = 0; i < n; i++) {
+    const a = (i / n) * 2 * Math.PI;
+    const k = 0.86 + r() * 0.16;
+    pts += `${(w / 2 + Math.cos(a) * w / 2 * k).toFixed(1)},${(h / 2 + Math.sin(a) * h / 2 * k).toFixed(1)} `;
+  }
+  return `<polygon points="${pts}" fill="${color}"/><polygon points="${pts}" fill="url(#dots)" opacity="0.07"/>`;
 }
