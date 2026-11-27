@@ -57,4 +57,9 @@ const K = {
   fmt(v, dec = 0) {
     return v.toFixed(dec).replace(".", ",");
   },
+  // instante (relógio da cena) em que a narração diz uma palavra; fallback se não houver narração
+  quando(cfg, frag, fallback, nth = 0) {
+    const ws = (cfg.palavras || []).filter((w) => w[0].startsWith(frag));
+    return ws.length > nth ? ws[nth][1] : fallback;
+  },
 };

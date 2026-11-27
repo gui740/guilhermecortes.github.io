@@ -2,6 +2,7 @@
 // esqueleto de gravura espiando pela borda. Fundo petróleo com raios mostarda.
 SCENES.cena1 = function (stage, cfg) {
   const sc = new Scene(stage, cfg);
+  const tCav = K.quando(cfg, "provavelmente", 3.2), tHoje = K.quando(cfg, "hoje", 7.0);
   const { W, H, u } = stage;
   const P = PALETA, V = stage.vertical, L_ = (h, v) => (V ? v : h), cx = stage.cx;
   const [L0, L1, L2, L3, L4] = sc.layers([0.02, 0.3, 0.6, 0.78, 1.0]);
@@ -22,8 +23,8 @@ SCENES.cena1 = function (stage, cfg) {
   new RansomText(L3, { maxW: (stage.safe.x1 - stage.safe.x0) * 0.78, text: L_("45 ANOS", "45\nANOS"), x: L_(W * 0.47, cx), y: H * L_(0.13, 0.21), size: L_(140, 200) * u, t0: 0.5, stagger: 0.1, seed: 7 });
 
   const caveira = new PaperCutout(L4, { art: ART.caveira(), w: 360, h: 420, x: W + 300 * u, y: H * L_(0.62, 0.43), scale: 0.95 * u, pivot: "center", rot: -14, seed: 4, sway: [2.6, 3, 1], boil: 1.5 });
-  new PaperCutout(L4, { art: ART.maoOsso(), w: 260, h: 200, x: W - 60 * u, y: H * L_(0.86, 0.56), scale: 0.9 * u, pivot: "center", rot: -8, seed: 9, sway: [2.2, 2, 0], t0: 3.8 });
-  const aponta = new PaperCutout(L4, { art: ART.maoAponta(), w: 340, h: 170, x: -300 * u, y: H * L_(0.70, 0.66), scale: u, pivot: "center", rot: -10, seed: 11, sway: [2.4, 3, 2], t0: 7.0 });
+  new PaperCutout(L4, { art: ART.maoOsso(), w: 260, h: 200, x: W - 60 * u, y: H * L_(0.86, 0.56), scale: 0.9 * u, pivot: "center", rot: -8, seed: 9, sway: [2.2, 2, 0], t0: tCav + 0.5 });
+  const aponta = new PaperCutout(L4, { art: ART.maoAponta(), w: 340, h: 170, x: -300 * u, y: H * L_(0.70, 0.66), scale: u, pivot: "center", rot: -10, seed: 11, sway: [2.4, 3, 2], t0: tHoje });
   if (V) new PaperCutout(L4, { art: ART.jornal(), w: 1200, h: 260, x: W * 0.5, y: H + 40 * u, scale: u, seed: 13, rot: -3, sway: [4, 1, 0] });
   const confetes = makeConfetti(L4, stage, 14, 700);
 
@@ -33,12 +34,12 @@ SCENES.cena1 = function (stage, cfg) {
     const blink = [2.2, 5.9, 8.6].some((b) => tq >= b && tq < b + 0.25) ? 1 : 0;
     lua.setArt(ART.lua() + `<g transform="translate(70 90)">${ART.olho(blink, Math.sin(t * 0.8))}</g>`);
     nuvens.forEach((n, i) => (n.o.x = W * L_(i ? 0.64 : 0.14, i ? 0.3 : 0.2) + Math.sin(t * 0.4 + i * 2) * 30 * u));
-    const peek = K.ease.outBack(K.clamp((tq - 3.2) / 0.7), 1.4);
+    const peek = K.ease.outBack(K.clamp((tq - tCav) / 0.7), 1.4);
     caveira.o.x = W + 300 * u - peek * 440 * u;
-    const jaw = tq > 4.0 && tq < 6.0 ? 0.5 + 0.5 * Math.sin(tq * 30) : 0.1;
+    const jaw = tq > tCav + 0.8 && tq < tCav + 2.8 ? 0.5 + 0.5 * Math.sin(tq * 30) : 0.1;
     const lid = [6.8, 9.0].some((b) => tq >= b && tq < b + 0.25) ? 1 : 0;
     caveira.setArt(ART.caveira(jaw, lid, -0.9));
-    aponta.o.x = -300 * u + K.ease.outBack(K.clamp((tq - 7.0) / 0.5)) * L_(520, 460) * u;
+    aponta.o.x = -300 * u + K.ease.outBack(K.clamp((tq - tHoje) / 0.5)) * L_(520, 460) * u;
     confetes(t);
   });
   return sc;

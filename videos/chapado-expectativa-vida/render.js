@@ -81,8 +81,13 @@ async function renderRange(browser, a, b, file, fps) {
   await browser.close();
   fs.writeFileSync(path.join(OUT, "segs.txt"), segs.map((s) => `file '${s}'`).join("\n"));
   const name = args.out || (args.cena ? `preview_${args.cena}.mp4` : "video.mp4");
+  // com out/audio.wav (narração + trilha, gerado por audio.py) ele entra no vídeo; sem ele, faixa de áudio vazia
+  const audio = path.join(OUT, "audio.wav");
+  const useAudio = !args.cena && !args.mudo && fs.existsSync(audio);
+  const ain = useAudio ? ["-i", audio] : ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo"];
+  const af = useAudio ? ["-af", "loudnorm=I=-14:TP=-1.5:LRA=9", "-ar", "48000"] : [];
   await new Promise((r) => spawn("ffmpeg", ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", path.join(OUT, "segs.txt"),
-    "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest",
+    ...ain, "-map", "0:v", "-map", "1:a", "-c:v", "copy", ...af, "-c:a", "aac", "-b:a", "192k", "-shortest",
     "-movflags", "+faststart", path.join(OUT, name)], { stdio: "inherit" }).on("close", r));
   console.log(`pronto: out/${name}  (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
 })();
