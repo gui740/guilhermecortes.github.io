@@ -2,12 +2,12 @@
 //  CONFIGURAÇÃO DO VÍDEO — edite aqui
 // ============================================================================
 
-// Troque para FORMATOS.SHORTS para gerar em 1080x1920.
+// Formato padrão do canal: vertical (Shorts). Troque para FORMATOS.YOUTUBE para 1920x1080.
 const FORMATOS = {
   YOUTUBE: { w: 1920, h: 1080 },
   SHORTS: { w: 1080, h: 1920 },
 };
-const FORMATO = FORMATOS.YOUTUBE;
+const FORMATO = FORMATOS.SHORTS;
 const FPS = 30;
 
 // Paleta do canal (colagem de papel)

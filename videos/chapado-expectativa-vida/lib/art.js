@@ -195,6 +195,20 @@ const ART = {
     return `<polygon points="${p}" fill="${cor}" stroke="${INK()}" stroke-width="3"/>`;
   },
 
+  // 1200 x 260 — tira de jornal velho rasgada (texto ilegível em linhas + manchete)
+  jornal() {
+    const k = INK();
+    let lines = "";
+    for (let c = 0; c < 4; c++) for (let i = 0; i < 7; i++) {
+      const w = 230 - (i === 6 ? 90 : (i * 37) % 50);
+      lines += `<rect x="${40 + c * 290}" y="${118 + i * 18}" width="${w}" height="7" fill="#7d7464"/>`;
+    }
+    return `<path d="M0,30 L60,18 L140,34 L230,12 L330,30 L420,16 L520,34 L640,14 L760,32 L860,12 L980,30 L1080,16 L1200,28 L1200,260 L0,260 Z" fill="#e3dccb"/>
+      <rect x="40" y="52" width="1120" height="44" fill="${k}"/>
+      <text x="600" y="83" text-anchor="middle" font-family="DejaVu Serif" font-weight="700" font-size="34" fill="#e3dccb" letter-spacing="6">A GAZETA DO TEMPO · EDIÇÃO EXTRA</text>
+      ${lines}<rect x="0" y="0" width="1200" height="260" fill="url(#dots)" opacity="0.06"/>`;
+  },
+
   // 70 x 30 — tira de confete
   confete(cor) {
     return `<rect x="2" y="4" width="66" height="22" fill="${cor}"/><rect x="2" y="4" width="66" height="22" fill="url(#dots)" opacity="0.15"/>`;

@@ -15,6 +15,10 @@ class Stage {
   constructor(svg, W, H) {
     this.svg = svg; this.W = W; this.H = H;
     this.u = Math.min(W, H) / 1080;           // unidade relativa (1 = 1px em 1080p)
+    this.vertical = H > W;
+    // área segura: no vertical, nada importante nos 300 px de baixo nem nos 120 px da direita
+    this.safe = this.vertical ? { x0: 40, x1: W - 120, y0: 120, y1: H - 300 } : { x0: 60, x1: W - 60, y0: 60, y1: H - 60 };
+    this.cx = (this.safe.x0 + this.safe.x1) / 2;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     svg.setAttribute("width", W); svg.setAttribute("height", H);
     this.defs = K.el("defs", {}, svg);
@@ -272,16 +276,23 @@ class Caption {
     this.stage = stage;
     const u = stage.u;
     this.el = K.el("text", {
-      x: stage.W / 2, y: stage.H * 0.90, "text-anchor": "middle", "dominant-baseline": "central",
+      x: stage.cx, y: stage.vertical ? stage.safe.y1 - 70 : stage.H * 0.90, "text-anchor": "middle", "dominant-baseline": "central",
       "font-family": "Montserrat", "font-weight": 900, "font-size": 66 * u, fill: PALETA.mostarda,
       stroke: PALETA.tinta, "stroke-width": 12 * u, "stroke-linejoin": "round", "paint-order": "stroke",
     }, stage.svg);
+    this.base = 66 * u;
   }
   update(t, legendas) {
     let cur = null, t0 = 0;
     for (const [ts, txt] of legendas) if (t >= ts) { cur = txt; t0 = ts; }
     if (!cur) { this.el.textContent = ""; return; }
-    this.el.textContent = cur;
+    if (this.el.textContent !== cur) {
+      this.el.textContent = cur;
+      this.el.setAttribute("font-size", this.base);
+      const max = (this.stage.safe.x1 - this.stage.safe.x0) - 40 * this.stage.u;
+      const len = this.el.getComputedTextLength();
+      if (len > max) this.el.setAttribute("font-size", this.base * max / len);   // encolhe para caber
+    }
     const s = K.pop(t, t0, 0.3) || 0;
     const { W, H } = this.stage;
     this.el.setAttribute("transform", `translate(${W / 2} ${H * 0.86}) scale(${s}) rotate(${K.boil(t, 99, 0.8)}) translate(${-W / 2} ${-H * 0.90})`);
