@@ -1,0 +1,64 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: "Anton"; src: url("fonts/Anton-Regular.ttf"); }
+  @font-face { font-family: "Montserrat"; src: url("fonts/Montserrat.ttf"); font-weight: 100 900; }
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  svg { display: block; }
+</style></head>
+<body>
+<svg id="stage" xmlns="http://www.w3.org/2000/svg"></svg>
+<script src="config.js"></script>
+<script src="lib/core.js"></script>
+<script src="lib/components.js"></script>
+<script src="lib/art.js"></script>
+<script>const SCENES = {};</script>
+<script src="scenes/cena1.js"></script>
+<script>
+// Linha do tempo: cenas em sequência com transição de papel rasgando entre elas.
+let stage, caption, built = {}, timeline = [], tears = {};
+function startTimes() {
+  let t = 0;
+  timeline = CENAS.filter((c) => SCENES[c.id]).map((c) => { const o = { cfg: c, t0: t }; t += c.dur; return o; });
+  window.TOTAL = t;
+}
+function sceneFor(cfg) {
+  if (!built[cfg.id]) built[cfg.id] = SCENES[cfg.id](stage, cfg);
+  return built[cfg.id];
+}
+// renderiza o instante t (s) do vídeo inteiro, ou de uma cena só (?cena=cena1)
+window.renderFrame = function (t) {
+  const only = new URLSearchParams(location.search).get("cena");
+  const list = only ? timeline.filter((x) => x.cfg.id === only).map((x) => ({ ...x, t0: 0 })) : timeline;
+  let leg = [];
+  list.forEach((item, i) => {
+    const lt = t - item.t0;
+    const sc = sceneFor(item.cfg);
+    const next = list[i + 1];
+    const visible = lt >= -TRANSICAO && lt < item.cfg.dur;
+    sc.el.setAttribute("display", visible ? "inline" : "none");
+    if (!visible) return;
+    sc.update(Math.max(0, lt));
+    if (lt >= 0) leg = item.cfg.legendas.map(([ts, tx]) => [ts, tx]), legT = lt;
+    // rasgo: nos últimos TRANSICAO s, a cena atual rasga revelando a próxima (que fica por baixo)
+    if (next) {
+      if (!tears[item.cfg.id]) tears[item.cfg.id] = new TornTransition(stage, i + 1);
+      const u = K.clamp((lt - (item.cfg.dur - TRANSICAO)) / TRANSICAO);
+      tears[item.cfg.id].apply(sc.el, stage.root, u);
+      stage.root.appendChild(sc.el);   // cena que sai fica por cima
+    }
+  });
+  caption.update(typeof legT === "number" ? legT : 0, leg);
+};
+let legT = 0;
+window.setup = async function () {
+  await document.fonts.load('400 100px "Anton"');
+  await document.fonts.load('900 100px "Montserrat"');
+  await document.fonts.ready;
+  stage = new Stage(document.getElementById("stage"), FORMATO.w, FORMATO.h);
+  caption = new Caption(stage);
+  startTimes();
+  return { total: window.TOTAL, w: FORMATO.w, h: FORMATO.h, fps: FPS };
+};
+</script>
+</body></html>
